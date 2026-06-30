@@ -631,9 +631,16 @@ a:hover {
 .education-header h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--gold); }
 .education-header p { font-size: 1.1rem; max-width: 700px; margin: 0 auto; color: rgba(251, 247, 240, 0.8); }
 .modules-section { padding: 4rem 0; background: var(--cream); }
-.module-card { background: #fff; padding: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--gold); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-.module-card h2 { color: var(--navy); font-size: 1.5rem; margin-bottom: 0.5rem; }
-.module-card p { color: #555; margin-bottom: 1.5rem; }
+.module-accordion { background: #fff; margin-bottom: 1rem; border-left: 4px solid var(--gold); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.module-accordion summary { padding: 1.5rem 2rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
+.module-accordion summary::-webkit-details-marker { display: none; }
+.module-accordion summary:hover, .module-accordion summary:focus { background: var(--cream); }
+.module-accordion summary h2 { color: var(--navy); font-size: 1.25rem; margin-bottom: 0; transition: color 0.2s; }
+.module-accordion summary:hover h2 { color: var(--gold); }
+.accordion-icon { width: 12px; height: 12px; border-right: 2px solid var(--navy); border-bottom: 2px solid var(--navy); transform: rotate(45deg); transition: transform 0.3s; }
+.module-accordion[open] .accordion-icon { transform: rotate(-135deg); }
+.accordion-content { padding: 0 2rem 2rem 2rem; border-top: 1px solid rgba(11,29,58,0.05); margin-top: 1rem; padding-top: 1rem; }
+.accordion-content p { color: #555; margin-bottom: 1.5rem; }
 .article-list { list-style: none; padding: 0; }
 .article-list li { padding: 0.75rem 0; border-bottom: 1px dashed rgba(11,29,58,0.1); }
 .article-list li:last-child { border-bottom: none; }
