@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investing 101: How the DSE Works | Amana Capital</title>
-    <link rel="stylesheet" href="style.css">
+$dir = "C:\Users\tmalu\.gemini\antigravity\scratch\amana-repo\amana-capital-ea-main"
 
-    <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-            <nav class="navbar">
+$navTemplate = @'
+    <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="brand-link">
                 <svg viewBox="0 0 32 44" class="brand-icon" aria-hidden="true"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"/><rect x="21" y="0" width="8" height="44" fill="currentColor"/><rect x="0" y="19" width="21" height="4" fill="currentColor"/></svg>
@@ -22,57 +14,16 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="market-intelligence.html">Market Intelligence</a></li>
-                <li><a href="education.html" class="active">Investor Education</a></li>
+                <li><a href="education.html">Investor Education</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
+'@
 
-    <main>
-            <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="brand-link">
-                <svg viewBox="0 0 32 44" class="brand-icon" aria-hidden="true"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"/><rect x="21" y="0" width="8" height="44" fill="currentColor"/><rect x="0" y="19" width="21" height="4" fill="currentColor"/></svg>
-                <div class="brand-text">
-                    <div class="brand-title">AMANA CAPITAL</div>
-                    <div class="brand-sub">EAST AFRICA</div>
-                </div>
-            </a>
-            <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">&#9776;</button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="market-intelligence.html">Market Intelligence</a></li>
-                <li><a href="education.html" class="active">Investor Education</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-        <div class="container section">
-            <div class="card-content-block">
-                <p>The Dar es Salaam Stock Exchange (DSE) is a central marketplace where buyers and sellers trade shares of public companies. It provides liquidity and price discovery for Tanzania's capital markets.</p>
-                
-                <h2>The Ecosystem</h2>
-                <ul>
-                    <li><strong>The Exchange (DSE):</strong> The platform where trading occurs.</li>
-                    <li><strong>The Regulator (CMSA):</strong> The Capital Markets and Securities Authority ensures fair practice and protects investors.</li>
-                    <li><strong>Brokers:</strong> Licensed intermediaries who execute trades on behalf of clients. You cannot buy shares directly; you must use a broker.</li>
-                    <li><strong>The Depository (CSD):</strong> The Central Securities Depository holds electronic records of who owns which shares.</li>
-                </ul>
-                
-                <h2>Trading and Settlement</h2>
-                <p>When you buy a stock, the transaction follows a T+3 settlement cycle. This means the trade is officially settled and ownership transfers three business days after the transaction occurs.</p>
-
-                <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--table-header);">
-                    <a href="education.html" class="btn btn-outline">&larr; Back to Education Hub</a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-            <footer class="footer">
+$footerHtml = @'
+    <footer class="footer">
         <div class="container">
             <div class="footer-disclaimer">This document is for general informational and educational purposes only. Nothing contained herein constitutes financial, investment, legal, or tax advice and should not be relied upon as such. Any investment decision you make is solely your own responsibility. The value of investments and the income from them can go down as well as up, and you may not get back the amount originally invested. Past performance is not a reliable indicator of future results. Capital is at risk, and you may incur losses &mdash; including the total loss of your invested capital &mdash; which you alone will bear. Amana Capital East Africa Limited is a registered investment advisory and fund management firm under the Capital Markets and Securities Authority (CMSA), Tanzania. Licence number: [pending]. Our registration does not imply that CMSA approves or endorses the contents of this material.</div>
             <div class="footer-links">
@@ -82,9 +33,54 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+'@
 
+$exclude = @("index.html", "education.html")
+$files = Get-ChildItem -Path $dir -Filter "*.html" | Where-Object { $exclude -notcontains $_.Name }
 
+$updatedCount = 0
 
+foreach ($file in $files) {
+    $content = Get-Content -Path $file.FullName -Raw -Encoding UTF8
+    $originalContent = $content
+    $name = $file.Name
+
+    # Determine which nav link should be active
+    $activeNav = $navTemplate
+
+    if ($name -eq "about.html") {
+        $activeNav = $activeNav -replace '<a href="about.html">About</a>', '<a href="about.html" class="active">About</a>'
+    }
+    elseif ($name -eq "contact.html") {
+        $activeNav = $activeNav -replace '<a href="contact.html">Contact</a>', '<a href="contact.html" class="active">Contact</a>'
+    }
+    elseif ($name -eq "market-intelligence.html" -or $name -like "dse-wrap-*" -or $name -eq "current-prices.html") {
+        $activeNav = $activeNav -replace '<a href="market-intelligence.html">Market Intelligence</a>', '<a href="market-intelligence.html" class="active">Market Intelligence</a>'
+    }
+    elseif ($name -like "article-*" -or $name -like "investing-101-*") {
+        $activeNav = $activeNav -replace '<a href="education.html">Investor Education</a>', '<a href="education.html" class="active">Investor Education</a>'
+    }
+    # else: privacy, terms, cookies, stationery, footer -> no active link
+
+    # Replace <nav ...>...</nav> (single-line mode with (?s))
+    $content = [regex]::Replace($content, '(?s)<nav\b[^>]*>.*?</nav>', $activeNav)
+
+    # Replace <header ...>...</header> for files that use <header> instead of <nav>
+    if ($content -match '(?s)<header\b[^>]*>.*?</header>') {
+        $content = [regex]::Replace($content, '(?s)<header\b[^>]*>.*?</header>', $activeNav)
+    }
+
+    # Replace <footer ...>...</footer>
+    $content = [regex]::Replace($content, '(?s)<footer\b[^>]*>.*?</footer>', $footerHtml)
+
+    if ($content -ne $originalContent) {
+        # Write back using .NET to preserve encoding without BOM issues
+        [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.UTF8Encoding]::new($false))
+        $updatedCount++
+        Write-Host "Updated: $name"
+    } else {
+        Write-Host "SKIPPED (no change): $name"
+    }
+}
+
+Write-Host "`n=== DONE: $updatedCount files updated ==="
