@@ -43,14 +43,17 @@
                 <!-- Left Column: Contact Form -->
                 <div class="card" style="padding: 2.5rem; border-top: 3px solid var(--navy);">
                     <h3 style="margin-top: 0; margin-bottom: 2rem;">Send an Enquiry</h3>
-                    <form action="mailto:info@amana-capital-ea.co.tz" method="POST" enctype="text/plain">
+                    <form action="https://formsubmit.co/info@amana-capital-ea.co.tz" method="POST">
+                        <input type="hidden" name="_subject" value="New Contact Enquiry from Website">
+                        <input type="hidden" name="_next" value="https://www.amana-capital-ea.co.tz/contact.html">
+                        <input type="hidden" name="_captcha" value="false">
                         <div class="form-group">
                             <label for="name" style="font-size: 0.9rem; color: var(--navy);">Full Name</label>
                             <input type="text" id="name" name="name" class="form-control" style="background: transparent; border: 1px solid var(--mist);" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email" style="font-size: 0.9rem; color: var(--navy);">Institutional Email</label>
+                            <label for="email" style="font-size: 0.9rem; color: var(--navy);">Email</label>
                             <input type="email" id="email" name="email" class="form-control" style="background: transparent; border: 1px solid var(--mist);" required>
                         </div>
                         
