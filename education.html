@@ -188,5 +188,17 @@
         </div>
     </footer>
 
+    <script>
+        // Allow only one accordion open at a time
+        document.querySelectorAll('.module-accordion').forEach(detail => {
+            detail.addEventListener('toggle', function() {
+                if (this.open) {
+                    document.querySelectorAll('.module-accordion').forEach(other => {
+                        if (other !== this) other.open = false;
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
