@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Amana Capital East Africa — Concept IV: The Alef brand stationery pack. Business cards, letterhead, envelope and email signature."/>
+<title>The Alef — Brand Stationery Pack | Amana Capital East Africa</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#0B1A2E;--stone:#E8E2D9;--mist:#9A9490;--cream:#F5F2EE;--ff-serif:'Cormorant Garamond',Georgia,serif;--ff-sans:'Inter',sans-serif}
+body{background:var(--cream);font-family:var(--ff-sans);font-weight:300;color:var(--ink)}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 2.5rem;background:#fff;border-bottom:1px solid rgba(11,26,46,.08);position:sticky;top:0;z-index:100}
+.topnav-brand{display:flex;align-items:center;gap:.8rem;text-decoration:none;color:var(--ink)}
+.tn-firm{font-family:var(--ff-serif);font-size:1rem;font-weight:500;letter-spacing:.08em}
+.tn-sub{font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mist);margin-top:2px}
+.topnav-links{display:flex;gap:2rem}
+.topnav-links a{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--mist);transition:color .2s}
+.topnav-links a:hover,.topnav-links a.active{color:var(--ink)}
+.page-header{padding:4rem 2.5rem 2rem;border-bottom:1px solid rgba(11,26,46,.08);background:#fff}
+.page-header .eyebrow{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mist);display:block;margin-bottom:1rem}
+.page-header h1{font-family:var(--ff-serif);font-size:2.6rem;font-weight:400;line-height:1.15}
+.page-header p{font-size:.85rem;color:var(--mist);margin-top:.75rem;max-width:480px;line-height:1.7}
+.concept-meaning{background:var(--ink);color:var(--stone);padding:2rem 2.5rem;font-family:var(--ff-serif);font-size:1.1rem;font-weight:300;font-style:italic;line-height:1.7;margin:0 2.5rem 3rem;border-left:2px solid var(--stone)}
+.section{padding:4rem 2.5rem;border-bottom:1px solid rgba(11,26,46,.06)}
+.section-label{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mist);margin-bottom:2.5rem;display:flex;align-items:center;gap:1rem}
+.section-label::after{content:'';flex:1;height:1px;background:rgba(11,26,46,.08)}
+.cards-row{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:860px}
+.card-label{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);margin-bottom:1rem}
+.card{width:100%;aspect-ratio:1.75/1;background:var(--ink);padding:2rem 2.2rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 16px 48px rgba(0,0,0,.2)}
+.card-back{background:#0F2237}
+.card-logo-row{display:flex;align-items:center;gap:.9rem}
+.c-firm{font-family:var(--ff-serif);font-size:1.05rem;font-weight:500;letter-spacing:.08em;color:var(--stone)}
+.c-sub{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mist);margin-top:3px}
+.card-divider{height:1px;background:rgba(232,226,217,.1)}
+.card-details{display:flex;justify-content:space-between;align-items:flex-end}
+.c-name{font-family:var(--ff-serif);font-size:1rem;color:var(--stone);font-weight:500}
+.c-title{font-size:.55rem;letter-spacing:.1em;color:var(--mist);text-transform:uppercase;margin-top:3px}
+.c-contact{font-size:.58rem;color:rgba(232,226,217,.45);letter-spacing:.04em;text-align:right;line-height:1.8}
+.card-back-content{display:flex;flex-direction:column;justify-content:center;align-items:center;height:100%;gap:1.5rem}
+.card-back-mark{opacity:.15}
+.card-back-tagline{font-family:var(--ff-serif);font-size:.72rem;font-style:italic;color:var(--mist);letter-spacing:.05em}
+.letterhead-wrap{max-width:620px;background:#fff;box-shadow:0 8px 40px rgba(0,0,0,.1);padding:3rem}
+.lh-top{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:1.5rem;border-bottom:1px solid rgba(11,26,46,.1);margin-bottom:2rem}
+.lh-brand{display:flex;align-items:center;gap:1rem}
+.lh-firm{font-family:var(--ff-serif);font-size:1.1rem;font-weight:500;letter-spacing:.08em}
+.lh-sub{font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mist);margin-top:4px}
+.lh-addr{font-size:.58rem;color:var(--mist);text-align:right;line-height:1.8}
+.lh-body{margin-bottom:3rem}
+.lh-line{height:1px;background:rgba(11,26,46,.06);margin:6px 0}
+.lh-line.s{width:55%}.lh-line.xs{width:35%}
+.lh-footer-bar{border-top:1px solid rgba(11,26,46,.07);padding-top:1rem;display:flex;justify-content:space-between;align-items:center}
+.lh-footer-text{font-size:.5rem;color:var(--mist);letter-spacing:.05em}
+.envelope-wrap{max-width:560px;background:#fff;box-shadow:0 8px 40px rgba(0,0,0,.1);padding:2rem 2.5rem;aspect-ratio:2.15/1;display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(11,26,46,.06)}
+.env-top{display:flex;align-items:center;gap:.8rem}
+.env-firm{font-family:var(--ff-serif);font-size:.85rem;font-weight:500;letter-spacing:.08em}
+.env-sub{font-size:.42rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mist);margin-top:2px}
+.env-addr{font-size:.65rem;color:var(--mist);line-height:1.9;padding-left:1rem;border-left:1px solid rgba(11,26,46,.1)}
+.env-stamp{width:40px;height:48px;border:1px solid rgba(11,26,46,.12);margin-left:auto}
+.email-wrap{max-width:500px;background:#fff;border:1px solid #e9e9e9;padding:1.5rem 2rem}
+.email-quote{font-family:var(--ff-serif);font-style:italic;font-size:.85rem;color:var(--mist);margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1px solid rgba(11,26,46,.07)}
+.sig-name{font-family:var(--ff-serif);font-size:1.1rem;font-weight:500}
+.sig-role{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);margin-top:3px}
+.sig-line{height:1px;background:rgba(11,26,46,.07);margin:.9rem 0}
+.sig-info{font-size:.62rem;color:var(--mist);line-height:2;letter-spacing:.03em}
+.sig-logo-row{display:flex;align-items:center;gap:.7rem;margin-top:1rem;padding-top:.9rem;border-top:1px solid rgba(11,26,46,.07)}
+.sig-co{font-family:var(--ff-serif);font-size:.75rem;letter-spacing:.06em;color:rgba(11,26,46,.4)}
+</style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="topnav">
+  <a href="index.html" class="topnav-brand">
+    <svg width="16" height="22" viewBox="0 0 32 44" fill="none"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"/><rect x="21" y="0" width="8" height="44" fill="currentColor"/><rect x="0" y="19" width="21" height="4" fill="currentColor"/></svg>
+    <div><div class="tn-firm">AMANA CAPITAL</div><div class="tn-sub">EAST AFRICA</div></div>
+  </a>
+  <div class="topnav-links">
+    <a href="index.html">← Website</a>
+    <a href="stationery.html" class="active">Stationery</a>
+  </div>
+</nav>
+<div class="page-header">
+  <span class="eyebrow">Concept IV — The Alef</span>
+  <h1>Brand Stationery Pack</h1>
+  <p>The first letter of "Amana" in Arabic (أ), abstracted into a geometric mark that reads simultaneously as both A and Alef — bridging East and West, Arabic heritage and global capital.</p>
+</div>
+<div class="concept-meaning">"Amana begins with Alef — أ — the first breath of the word trust. A mark that carries two alphabets, two cultures, one unbreakable principle."</div>
+<div class="section">
+  <div class="section-label">Business Card</div>
+  <div class="cards-row">
+    <div>
+      <div class="card-label">Front</div>
+      <div class="card">
+        <div class="card-logo-row">
+          <svg width="16" height="22" viewBox="0 0 32 44" fill="none"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="#E8E2D9"/><rect x="21" y="0" width="8" height="44" fill="#E8E2D9"/><rect x="0" y="19" width="21" height="4" fill="#E8E2D9"/></svg>
+          <div><div class="c-firm">AMANA CAPITAL</div><div class="c-sub">EAST AFRICA</div></div>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-details">
+          <div><div class="c-name">Theophil C. Malundi</div><div class="c-title">Chief Investment Officer</div></div>
+          <div class="c-contact">info@amanacapital.co.tz<br/>www.amanacapital.co.tz</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card-label">Back</div>
+      <div class="card card-back">
+        <div class="card-back-content">
+          <svg class="card-back-mark" width="55" height="75" viewBox="0 0 32 44" fill="none"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="#E8E2D9"/><rect x="21" y="0" width="8" height="44" fill="#E8E2D9"/><rect x="0" y="19" width="21" height="4" fill="#E8E2D9"/></svg>
+          <div class="card-back-tagline">Capital intelligence for the African century.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <div class="section-label">A4 Letterhead</div>
+  <div class="letterhead-wrap">
+    <div class="lh-top">
+      <div class="lh-brand">
+        <svg width="14" height="19" viewBox="0 0 32 44" fill="none"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="#0B1A2E"/><rect x="21" y="0" width="8" height="44" fill="#0B1A2E"/><rect x="0" y="19" width="21" height="4" fill="#0B1A2E"/></svg>
+        <div><div class="lh-firm">AMANA CAPITAL</div><div class="lh-sub">EAST AFRICA</div></div>
+      </div>
+      <div class="lh-addr">Dar es Salaam, Tanzania<br/>info@amanacapital.co.tz<br/>www.amanacapital.co.tz</div>
+    </div>
+    <div class="lh-body">
+      <div class="lh-line"></div><div class="lh-line s"></div><div class="lh-line"></div><br/>
+      <div class="lh-line"></div><div class="lh-line"></div><div class="lh-line s"></div><div class="lh-line xs"></div><br/>
+      <div class="lh-line"></div><div class="lh-line s"></div>
+    </div>
+    <div class="lh-footer-bar">
+      <div class="lh-footer-text">AMANA CAPITAL EAST AFRICA · info@amanacapital.co.tz</div>
+      <svg width="11" height="15" viewBox="0 0 32 44" fill="none"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="#9A9490"/><rect x="21" y="0" width="8" height="44" fill="#9A9490"/><rect x="0" y="19" width="21" height="4" fill="#9A9490"/></svg>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <div class="section-label">DL Envelope</div>
+  <div class="envelope-wrap">
+    <div class="env-top">
+      <svg width="12" height="17" viewBox="0 0 32 44" fill="none"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="#0B1A2E"/><rect x="21" y="0" width="8" height="44" fill="#0B1A2E"/><rect x="0" y="19" width="21" height="4" fill="#0B1A2E"/></svg>
+      <div><div class="env-firm">AMANA CAPITAL</div><div class="env-sub">EAST AFRICA</div></div>
+      <div class="env-stamp"></div>
+    </div>
+    <div class="env-addr">Recipient Name<br/>Organisation<br/>City, Country</div>
+  </div>
+</div>
+<div class="section">
+  <div class="section-label">Email Signature</div>
+  <div class="email-wrap">
+    <div class="email-quote">Capital intelligence for the African century.</div>
+    <div class="sig-name">Theophil C. Malundi</div>
+    <div class="sig-role">Chief Investment Officer</div>
+    <div class="sig-line"></div>
+    <div class="sig-info">T: +255 000 000 000<br/>E: theophil@amanacapital.co.tz<br/>W: www.amanacapital.co.tz</div>
+    <div class="sig-logo-row">
+      <svg width="11" height="15" viewBox="0 0 32 44" fill="none"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="#0B1A2E"/><rect x="21" y="0" width="8" height="44" fill="#0B1A2E"/><rect x="0" y="19" width="21" height="4" fill="#0B1A2E"/></svg>
+      <div class="sig-co">AMANA CAPITAL EAST AFRICA</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
