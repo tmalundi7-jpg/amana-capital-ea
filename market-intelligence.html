@@ -6,7 +6,7 @@
     <title>Market Intelligence | Amana Capital East Africa</title>
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
             <nav class="navbar">
@@ -30,25 +30,99 @@
     </nav>
 
     <main>
-            
-
-        <div class="filter-bar">
+        <div class="page-header" style="background-color: var(--navy); color: var(--cream); padding: 3rem 0; text-align: center;">
             <div class="container">
-                <a href="current-prices.html" class="btn btn-outline">View Current Prices &rarr;</a>
+                <h1 style="color: var(--cream); margin-bottom: 0.5rem;">Market Intelligence</h1>
+                <p style="font-size: 1.1rem; color: rgba(251, 247, 240, 0.85); max-width: 600px; margin: 0 auto;">Institutional-grade research and disciplined investment perspectives for East African equities.</p>
             </div>
         </div>
 
-        <div class="container" style="max-width: 850px; margin-bottom: 4rem;">
-            
-            <div class="card" style="margin-bottom: 2rem;">
-                <span style="font-size: 0.85rem; color: var(--navy); text-transform: uppercase; font-weight: 600;">29 June 2026</span>
-                <h3>Banking Sector Leads Volume & NMB Block Trade</h3>
-                <p>The banking sector drove market volumes today, highlighted by a significant block trade in NMB of 108,000 shares.</p>
-                <a href="dse-wrap-2026-06-29.html">Read Full Wrap &rarr;</a>
+        <div class="container" style="max-width: 950px; margin-top: -2rem; margin-bottom: 4rem;">
+            <!-- DSE Snapshot Card -->
+            <div class="snapshot-card" style="margin-bottom: 2.5rem; position: relative; z-index: 10;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <h2 style="margin: 0; font-size: 1.25rem;">Live DSE Snapshot</h2>
+                    <span style="font-size: 0.8rem; color: var(--mist); font-weight: 600; text-transform: uppercase;">29 June 2026</span>
+                </div>
+                <div class="snapshot-grid">
+                    <div>
+                        <div class="snapshot-label">DSEI</div>
+                        <div class="snapshot-value">2,245.30 <span class="up">&#9650; 0.4%</span></div>
+                    </div>
+                    <div>
+                        <div class="snapshot-label">TSI</div>
+                        <div class="snapshot-value">4,198.12 <span class="up">&#9650; 0.2%</span></div>
+                    </div>
+                    <div>
+                        <div class="snapshot-label">Turnover (TZS)</div>
+                        <div class="snapshot-value">1.2B</div>
+                    </div>
+                    <div>
+                        <div class="snapshot-label">Top Gainer</div>
+                        <div class="snapshot-mover">CRDB <span class="text-success">+4.2%</span></div>
+                    </div>
+                    <div>
+                        <div class="snapshot-label">Top Loser</div>
+                        <div class="snapshot-mover">VODA <span class="text-danger">-1.8%</span></div>
+                    </div>
+                </div>
             </div>
 
+            <!-- Two Column Layout for Archive & Quick Links -->
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                
+                <!-- Daily Wrap Archive -->
+                <div>
+                    <h3 style="margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--stone);">Daily DSE Wrap Archive</h3>
+                    <div class="card" style="padding: 0; overflow: hidden; border-radius: 4px;">
+                        <table class="data-table" style="margin: 0;">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 25%; font-weight: 600; color: var(--mist); font-size: 0.85rem; text-transform: uppercase;">29 June 2026</td>
+                                    <td><strong>Banking Sector Leads Volume & NMB Block Trade</strong></td>
+                                    <td style="text-align: right;"><a href="dse-wrap-2026-06-29.html" class="gold-link">Read &rarr;</a></td>
+                                </tr>
+                                <tr style="background-color: var(--cream);">
+                                    <td style="width: 25%; font-weight: 600; color: var(--mist); font-size: 0.85rem; text-transform: uppercase;">28 June 2026</td>
+                                    <td><strong>Quiet Start to the Week; TBL Dips Slightly</strong></td>
+                                    <td style="text-align: right;"><a href="dse-wrap-2026-06-28.html" class="gold-link">Read &rarr;</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 25%; font-weight: 600; color: var(--mist); font-size: 0.85rem; text-transform: uppercase;">27 June 2026</td>
+                                    <td><em>Weekend (Market Closed)</em></td>
+                                    <td style="text-align: right; color: var(--mist);">&mdash;</td>
+                                </tr>
+                                <tr style="background-color: var(--cream);">
+                                    <td style="width: 25%; font-weight: 600; color: var(--mist); font-size: 0.85rem; text-transform: uppercase;">26 June 2026</td>
+                                    <td><strong>Weekly Summary: Equities Consolidate, Bonds Rally</strong></td>
+                                    <td style="text-align: right;"><a href="#" class="gold-link" style="opacity:0.5; pointer-events:none;">Read &rarr;</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
+                <!-- Sidebar: Quick Links & Education -->
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    
+                    <div class="card" style="padding: 1.5rem; border-top: 2px solid var(--navy);">
+                        <h4 style="margin-bottom: 1rem; font-size: 1.05rem;">Quick Links</h4>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+                            <li><a href="current-prices.html" style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; background: var(--cream); font-weight: 600;">Current Prices <span>&rarr;</span></a></li>
+                            <li><a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; background: var(--cream); font-weight: 600;">Bond Market <span>&rarr;</span></a></li>
+                            <li><a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; background: var(--cream); font-weight: 600;">ETF Activity <span>&rarr;</span></a></li>
+                        </ul>
+                    </div>
 
+                    <div class="card" style="padding: 1.5rem; background: var(--navy); color: var(--white); border-top: 2px solid var(--gold);">
+                        <h4 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 1.05rem;">New to the DSE?</h4>
+                        <p style="font-size: 0.85rem; color: rgba(251, 247, 240, 0.85); margin-bottom: 1.25rem;">Build your foundational knowledge with our free investor curriculum.</p>
+                        <a href="education.html" class="btn btn-gold-solid" style="width: 100%; display: block;">Start Learning</a>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </main>
 
@@ -65,6 +139,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 

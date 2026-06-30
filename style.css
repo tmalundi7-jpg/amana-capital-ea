@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap');
 
 :root {
   --navy: #0B1D3A;
@@ -11,8 +11,8 @@
   --loss: #DC2626;
   --white: #FFFFFF;
   --table-header: #EAEAEA;
-  --heading-font: 'Alef', sans-serif;
-  --body-font: 'Alef', sans-serif;
+  --heading-font: 'Merriweather', serif;
+  --body-font: 'Inter', sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
