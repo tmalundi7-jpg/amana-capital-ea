@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LinkedIn Banner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0; padding: 0; width: 100%; height: 100%;
+            display: flex; justify-content: center; align-items: center;
+            background-color: #f0f0f0;
+        }
+        .linkedin-banner-canvas {
+            width: 1128px; height: 191px;
+            background-color: #0B1D3A;
+            display: flex; flex-direction: column; justify-content: center;
+            padding: 0 60px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-pattern {
+            position: absolute;
+            right: -20px;
+            top: -50px;
+            opacity: 0.05;
+            width: 300px;
+            height: auto;
+            color: #FBF7F0;
+            transform: rotate(15deg);
+        }
+        .banner-title {
+            font-family: 'Merriweather', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #FBF7F0; /* Cream */
+            margin: 0;
+            z-index: 10;
+        }
+        .gold-line {
+            width: 80px;
+            height: 3px;
+            background-color: #C8962E; /* Gold */
+            margin: 16px 0;
+            z-index: 10;
+        }
+        .banner-tagline {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            color: #FBF7F0;
+            opacity: 0.9;
+            margin: 0;
+            letter-spacing: 0.5px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="linkedin-banner-canvas">
+        <!-- Abstract background geometric mark derived from the logo -->
+        <svg viewBox="0 0 32 44" class="bg-pattern" aria-hidden="true">
+            <path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"/>
+            <rect x="21" y="0" width="8" height="44" fill="currentColor"/>
+            <rect x="0" y="19" width="21" height="4" fill="currentColor"/>
+        </svg>
+
+        <h1 class="banner-title">Amana Capital East Africa</h1>
+        <div class="gold-line"></div>
+        <p class="banner-tagline">Capital intelligence for the African century.</p>
+    </div>
+</body>
+</html>
