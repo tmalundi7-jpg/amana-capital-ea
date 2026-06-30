@@ -144,10 +144,7 @@
             <div class="container">
                 <h2 style="color: var(--white); margin-bottom: 0.5rem;">Join Our Intelligence Briefing</h2>
                 <p style="color: rgba(251,247,240,0.7); margin-bottom: 1.5rem; font-size: 0.95rem;">Exclusive institutional research delivered to your inbox weekly.</p>
-                <form class="newsletter-form" action="https://formsubmit.co/info@amana-capital-ea.co.tz" method="POST">
-                    <input type="hidden" name="_subject" value="New Intelligence Briefing Subscription">
-                    <input type="hidden" name="_next" value="https://www.amana-capital-ea.co.tz/">
-                    <input type="hidden" name="_captcha" value="false">
+                <form class="newsletter-form" onsubmit="window.location.href = 'mailto:info@amana-capital-ea.co.tz?subject=New Intelligence Briefing Subscription&body=Please add my email to the subscription list: ' + this.email.value; return false;">
                     <input type="email" name="email" placeholder="Your email address" required>
                     <button type="submit">Subscribe</button>
                 </form>

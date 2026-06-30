@@ -43,10 +43,7 @@
                 <!-- Left Column: Contact Form -->
                 <div class="card" style="padding: 2.5rem; border-top: 3px solid var(--navy);">
                     <h3 style="margin-top: 0; margin-bottom: 2rem;">Send an Enquiry</h3>
-                    <form action="https://formsubmit.co/info@amana-capital-ea.co.tz" method="POST">
-                        <input type="hidden" name="_subject" value="New Contact Enquiry from Website">
-                        <input type="hidden" name="_next" value="https://www.amana-capital-ea.co.tz/contact.html">
-                        <input type="hidden" name="_captcha" value="false">
+                    <form onsubmit="window.location.href = 'mailto:info@amana-capital-ea.co.tz?subject=New Enquiry: ' + encodeURIComponent(this.subject.value) + '&body=Name: ' + encodeURIComponent(this.name.value) + '%0AEmail: ' + encodeURIComponent(this.email.value) + '%0AMessage: ' + encodeURIComponent(this.message.value); return false;">
                         <div class="form-group">
                             <label for="name" style="font-size: 0.9rem; color: var(--navy);">Full Name</label>
                             <input type="text" id="name" name="name" class="form-control" style="background: transparent; border: 1px solid var(--mist);" required>
