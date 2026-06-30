@@ -63,7 +63,6 @@ a:hover { color: var(--gold); }
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(251, 247, 240, 0.1);
 }
 .nav-container {
   display: flex;
@@ -190,22 +189,6 @@ a:hover { color: var(--gold); }
   margin-bottom: 1.5rem;
 }
 
-/* ── Borders & Separators ── */
-.border-box {
-  border: 1px solid rgba(11, 29, 58, 0.15);
-}
-.border-gold {
-  border: 1px solid rgba(200, 150, 46, 0.5);
-}
-.border-gold-top {
-  border-top: 1px solid rgba(200, 150, 46, 0.3);
-}
-.section-divider {
-  height: 1px;
-  background-color: rgba(11, 29, 58, 0.1);
-  margin: 2rem 0;
-}
-
 /* ── Page Header (sub-pages) ── */
 .page-header {
   padding: 2.5rem 0 1.5rem;
@@ -238,20 +221,19 @@ a:hover { color: var(--gold); }
 
 /* ── Footer ── */
 .footer {
-  background-color: var(--navy);
-  color: var(--cream);
-  border-top: 1px solid var(--gold);
+  background-color: var(--cream);
+  color: var(--navy);
+  border-top: 1px solid var(--navy);
   padding: 2rem 0 1.5rem;
   margin-top: 0;
 }
 .footer-disclaimer {
-  background: var(--navy-alt);
-  color: rgba(251, 247, 240, 0.8);
+  background: var(--navy);
+  color: #E0E6ED;
   font-size: 0.8rem;
   line-height: 1.4;
   padding: 1.25rem 1.5rem;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(200, 150, 46, 0.2);
   border-radius: 4px;
   text-align: left;
 }
@@ -266,7 +248,7 @@ a:hover { color: var(--gold); }
 .footer-links a { color: var(--gold); }
 .footer-links a:hover { text-decoration: underline; }
 .social-links { display: flex; gap: 0.75rem; }
-.social-links svg { width: 18px; height: 18px; fill: var(--cream); transition: fill 0.2s ease; }
+.social-links svg { width: 18px; height: 18px; fill: var(--navy); transition: fill 0.2s ease; }
 .social-links a:hover svg { fill: var(--gold); }
 
 /* ── Hero Section ── */
@@ -468,22 +450,6 @@ a:hover { color: var(--gold); }
   transition: background 0.2s;
 }
 .module-accordion summary::-webkit-details-marker { display: none; }
-.module-accordion summary::marker { display: none; }
-.module-accordion summary:hover,
-.module-accordion summary:focus { background: var(--cream); }
-.module-accordion summary h2 {
-  color: var(--navy);
-  font-size: 1.1rem;
-  margin-bottom: 0;
-  transition: color 0.2s;
-  white-space: normal;
-  overflow: visible;
-  text-overflow: unset;
-  word-wrap: break-word;
-  flex: 1;
-  padding-right: 1rem;
-  margin-left: 0.25rem; /* Fix text clipping on the left */
-}
 .module-accordion summary::marker { display: none; }
 .module-accordion summary:hover,
 .module-accordion summary:focus { background: var(--cream); }
