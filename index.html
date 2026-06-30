@@ -1,18 +1,26 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Amana Capital East Africa: Institutional grade DSE research and long-horizon investment perspectives for investors in Tanzania and across the global diaspora.">
-    <title>Amana Capital East Africa Limited</title>
+    <title>Amana Capital East Africa | DSE Market Intelligence & Investment Education</title>
+    <meta name="description" content="Daily Dar es Salaam Stock Exchange (DSE) analysis, institutional research, and long‑horizon investment perspectives for Tanzanians at home and across the diaspora. Registered investment advisory & fund management.">
+    <!-- GA4 tag placeholder -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
     <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar sticky-nav">
         <div class="container nav-container">
             <a href="index.html" class="brand-link">
-                <svg viewBox="0 0 32 44" class="brand-icon"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"/><rect x="21" y="0" width="8" height="44" fill="currentColor"/><rect x="0" y="19" width="21" height="4" fill="currentColor"/></svg>
+                <svg viewBox="0 0 32 44" class="brand-icon" aria-hidden="true"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"/><rect x="21" y="0" width="8" height="44" fill="currentColor"/><rect x="0" y="19" width="21" height="4" fill="currentColor"/></svg>
                 <div class="brand-text">
                     <div class="brand-title">AMANA CAPITAL</div>
                     <div class="brand-sub">EAST AFRICA</div>
@@ -30,80 +38,220 @@
     </nav>
 
     <main>
-        <header class="hero">
-            <div class="container">
-                <div class="hero-card">
-                    <h1>Capital intelligence for the African century.</h1>
-                    <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px;">Institutional grade DSE research and long-horizon investment perspectives for investors in Tanzania and across the global diaspora.</p>
-                    <a href="market-intelligence.html" class="btn btn-primary">Today's DSE Wrap</a>
+        <section class="hero-video-section">
+            <video class="hero-bg-video" autoplay loop muted playsinline preload="none" poster="images/hero-fallback.jpg">
+                <source src="videos/hero-bg.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <h1 class="hero-tagline">Capital intelligence for the African century.</h1>
+                <hr style="border-color: #C8962E; width: 60px; margin: 1.5rem 0; border-width: 2px;">
+                <p class="hero-subheadline">Daily DSE market intelligence and long‑horizon investment perspectives — rooted in integrity, regional depth, and disciplined conviction. For Tanzanians at home and across the diaspora.</p>
+                <div class="hero-cta-group">
+                    <a href="market-intelligence.html" class="btn btn-gold-solid">Today's DSE Wrap</a>
+                    <a href="education.html" class="btn btn-cream-outline">Start Learning</a>
+                </div>
+                <div class="trust-badge">
+                    Registered with CMSA, Tanzania. Investment advisory & fund management – stockbroking pending.
+                </div>
+                <div class="scroll-cue" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </div>
             </div>
-        </header>
+        </section>
 
-        <div class="container">
-            <div class="snapshot-card">
-                <div class="snapshot-header">
-                    <span>DSE Market Snapshot</span>
-                    <span id="snapshot-date"></span>
-                </div>
-                <div class="snapshot-data" id="dse-snapshot-data">
-                    <!-- Injected via script.js -->
-                </div>
-                <div class="snapshot-footer">Data provided for illustrative and educational purposes only. Not real-time execution data.</div>
-            </div>
-        </div>
-
+        <!-- 1. DSE Market Dashboard -->
         <section class="section">
             <div class="container">
-                <div class="grid-3">
-                    <div class="card">
-                        <h3>Market Intelligence</h3>
-                        <p>Daily analysis, market wraps, and institutional insights on the DSE. Cut through the noise with data-driven clarity.</p>
-                        <a href="market-intelligence.html">Read Analysis &rarr;</a>
+                <div class="market-dashboard-card">
+                    <div class="snapshot-header">
+                        <h2>DSE Market Snapshot</h2>
+                        <span class="snapshot-date">End‑of‑day, 29 June 2026. For educational purposes only.</span>
                     </div>
-                    <div class="card">
-                        <h3>Investor Education</h3>
-                        <p>Foundational knowledge, financial literacy, and deep-dives into the mechanics of East African capital markets.</p>
-                        <a href="education.html">Start Learning &rarr;</a>
+                    <div class="dashboard-metrics">
+                        <div class="metric">
+                            <span class="metric-label">DSEI</span>
+                            <span class="metric-value">2,245.30 <span class="trend up">▲ 0.4%</span></span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">TSI</span>
+                            <span class="metric-value">4,198.12 <span class="trend up">▲ 0.2%</span></span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Turnover (TZS)</span>
+                            <span class="metric-value">1.2B</span>
+                        </div>
                     </div>
-                    <div class="card">
-                        <h3>Our Firm</h3>
-                        <p>Integrity without exception. Long-horizon thinking. Deep regional intelligence and disciplined conviction.</p>
-                        <a href="about.html">About Us &rarr;</a>
+                    <div class="dashboard-movers">
+                        <div class="movers-column">
+                            <h3>Top Gainers</h3>
+                            <ul>
+                                <li><span class="ticker">CRDB</span> <span class="trend up">+4.2%</span></li>
+                                <li><span class="ticker">NMB</span> <span class="trend up">+2.1%</span></li>
+                                <li><span class="ticker">TCCL</span> <span class="trend up">+1.5%</span></li>
+                            </ul>
+                        </div>
+                        <div class="movers-column">
+                            <h3>Top Losers</h3>
+                            <ul>
+                                <li><span class="ticker">VODA</span> <span class="trend down">-1.8%</span></li>
+                                <li><span class="ticker">TICL</span> <span class="trend down">-1.2%</span></li>
+                                <li><span class="ticker">TTP</span> <span class="trend down">-0.5%</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dashboard-footer">
+                        <a href="market-intelligence.html" class="gold-link">View Full Market Intelligence &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <div class="container grid-2">
-                <div>
-                    <h2>Latest Intelligence</h2>
-                    <div class="card">
-                        <span style="font-size: 0.8rem; color: var(--navy); text-transform: uppercase; font-weight: 600;">29 June 2026</span>
-                        <h3 style="margin: 0.5rem 0;">Banking Sector Leads Volume & NMB Block Trade</h3>
-                        <p style="margin-bottom: 1.5rem;">The banking sector drove market volumes today, highlighted by a significant block trade in NMB of 108,000 shares.</p>
-                        <a href="dse-wrap-2026-06-29.html" class="btn btn-outline" style="margin-top: 1rem;">Read Wrap</a>
+        <!-- 2. The Four Pillars -->
+        <section class="section pillars-section">
+            <div class="container">
+                <div class="grid-4">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <!-- Shield Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#C8962E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3>Integrity</h3>
+                        <p>Uncompromising ethical standards in all our dealings.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <!-- Compass Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#C8962E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                        </div>
+                        <h3>Long-horizon</h3>
+                        <p>Focusing on compounding wealth across generations.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <!-- Map Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#C8962E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+                        </div>
+                        <h3>Regional Intelligence</h3>
+                        <p>Deep proprietary insights into East African markets.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <!-- Balance Scale Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#C8962E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14h18"></path><path d="M12 2v20"></path><path d="M8 6h8"></path><path d="M5 18l-3-4h6l-3 4z"></path><path d="M19 18l-3-4h6l-3 4z"></path></svg>
+                        </div>
+                        <h3>Disciplined Conviction</h3>
+                        <p>Data-driven decisions unswayed by market noise.</p>
                     </div>
                 </div>
-                <div>
-                    <h2>Newsletter</h2>
-                    <form action="#" class="card">
-                        <p style="margin-bottom: 1.5rem;">Receive the Daily DSE Wrap and our monthly Fund Manager's Letter directly to your inbox.</p>
-                        <div class="form-group">
-                            <label for="email">Institutional Email Address</label>
-                            <input type="email" id="email" class="form-control" placeholder="name@firm.com" required>
+            </div>
+        </section>
+
+        <!-- 3. Core Services -->
+        <section class="section services-section">
+            <div class="container">
+                <div class="grid-3">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#C8962E" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                        <h3>Market Intelligence</h3>
+                        <p>Daily analysis, market wraps, and institutional insights on the DSE. Cut through the noise with data-driven clarity.</p>
+                        <a href="market-intelligence.html" class="btn btn-gold-solid">Read Analysis</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#C8962E" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        </div>
+                        <h3>Investor Education</h3>
+                        <p>Foundational knowledge, financial literacy, and deep-dives into the mechanics of East African capital markets.</p>
+                        <a href="education.html" class="btn btn-gold-solid">Start Learning</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#C8962E" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h3>Our Firm</h3>
+                        <p>Integrity without exception. Long-horizon thinking. Deep regional intelligence and disciplined conviction.</p>
+                        <a href="about.html" class="btn btn-gold-solid">About Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Latest Intelligence Teaser -->
+        <section class="section">
+            <div class="container">
+                <div class="latest-teaser-card">
+                    <div class="teaser-content">
+                        <span class="teaser-date">29 June 2026</span>
+                        <h2 class="teaser-title">Banking Sector Leads Volume & NMB Block Trade</h2>
+                        <p>The banking sector drove market volumes today, highlighted by a significant block trade in NMB of 108,000 shares.</p>
+                    </div>
+                    <div class="teaser-action">
+                        <a href="dse-wrap-2026-06-29.html" class="gold-link">Read Wrap &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Community & Trust Block -->
+        <section class="section community-section">
+            <div class="container">
+                <div class="community-header">
+                    <h2>Join the Conversation</h2>
+                    <p>Thousands of professionals, diaspora investors, and institutions rely on the DSE wrap.</p>
+                    <div class="subscriber-counter">
+                        <span class="counter-number">2,478</span>
+                        <span class="counter-text">and growing</span>
+                    </div>
+                    <form action="#" class="subscribe-form">
+                        <input type="email" placeholder="name@firm.com" required aria-label="Email address">
+                        <button type="submit" class="btn btn-gold-solid">Subscribe</button>
                     </form>
                 </div>
+                <div class="grid-3 testimonials-grid">
+                    <div class="testimonial-card">
+                        <svg class="quote-icon" viewBox="0 0 24 24" fill="#C8962E" aria-hidden="true"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        <p class="testimonial-text">[Testimonials will appear here. The DSE daily wrap provides unmatched clarity.]</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <svg class="quote-icon" viewBox="0 0 24 24" fill="#C8962E" aria-hidden="true"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        <p class="testimonial-text">[Testimonials will appear here. Highly recommended for any serious investor in Tanzania.]</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <svg class="quote-icon" viewBox="0 0 24 24" fill="#C8962E" aria-hidden="true"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        <p class="testimonial-text">[Testimonials will appear here. The educational resources have completely changed my approach.]</p>
+                    </div>
+                </div>
+                <div class="featured-in">
+                    <span>As featured in</span>
+                    <span class="featured-logos">The Citizen &bull; Bloomberg Africa</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Diaspora Investor Guide CTA -->
+        <section class="diaspora-strip">
+            <div class="container diaspora-content">
+                <h2>Investing from Abroad? We’ve Built the Guide for You.</h2>
+                <a href="education.html" class="btn btn-gold-solid">Read the Diaspora Guide</a>
+            </div>
+        </section>
+
+        <!-- 7. Final CTA Banner -->
+        <section class="final-cta-strip">
+            <div class="container final-cta-content">
+                <h2>Ready to invest with confidence? Explore our Investor Education Series.</h2>
+                <a href="education.html" class="btn btn-gold-solid">Start Learning Now</a>
             </div>
         </section>
     </main>
 
+    <!-- 8. Footer -->
     <footer class="footer">
         <div class="container">
-                        <div class="footer-disclaimer" style="margin-bottom: 2rem; font-size: 0.9rem; color: #9ca3af; line-height: 1.6;">
+            <div class="footer-disclaimer" style="margin-bottom: 2rem; font-size: 0.9rem; color: #9ca3af; line-height: 1.6;">
                 <strong>Regulatory Disclaimer:</strong> This document is for general informational and educational purposes only. 
                 Nothing contained herein constitutes financial, investment, legal, or tax 
                 advice and should not be relied upon as such. Any investment decision you 
@@ -131,6 +279,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
-
