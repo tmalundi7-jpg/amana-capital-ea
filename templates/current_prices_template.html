@@ -1,0 +1,28 @@
+﻿<!-- PRICES_TABLE_START -->
+<table class="data-table" style="margin: 0; width: 100%; border-collapse: collapse;">
+    <thead>
+        <tr style="background-color: var(--navy); color: var(--white); text-align: left;">
+            <th style="padding: 1rem;">Ticker</th>
+            <th style="padding: 1rem;">Sector</th>
+            <th style="padding: 1rem; text-align: right;">Last Price</th>
+            <th style="padding: 1rem; text-align: right;">Change</th>
+            <th style="padding: 1rem; text-align: right;">Volume</th>
+            <th style="padding: 1rem; text-align: right;">Turnover (TZS)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for eq in data.equities %}
+        <tr style="{% if loop.index0 % 2 == 1 %}background-color: var(--cream);{% endif %}">
+            <td style="padding: 1rem; font-weight: 600;">{{ eq.ticker }}</td>
+            <td style="padding: 1rem; font-size: 0.9rem; color: var(--mist);">{{ eq.sector }}</td>
+            <td style="padding: 1rem; text-align: right; font-weight: 600;">{{ "{:,.0f}".format(eq.close) }}</td>
+            <td style="padding: 1rem; text-align: right; font-weight: 600; {% if eq.change_pct > 0 %}color: var(--gain);{% elif eq.change_pct < 0 %}color: var(--loss);{% endif %}">
+                {% if eq.change_pct > 0 %}+{{ "%.1f"|format(eq.change_pct) }}%{% elif eq.change_pct < 0 %}{{ "%.1f"|format(eq.change_pct) }}%{% else %}0.0%{% endif %}
+            </td>
+            <td style="padding: 1rem; text-align: right;">{{ eq.volume }}</td>
+            <td style="padding: 1rem; text-align: right;">{{ eq.turnover }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<!-- PRICES_TABLE_END -->

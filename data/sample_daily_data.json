@@ -1,0 +1,112 @@
+﻿{
+  "trade_date": "2026-07-01",
+  "publication_date": "1 July 2026",
+  "market_snapshot": {
+    "dsei": 4057.22,
+    "tsi": 8858.61,
+    "equity_turnover": "TZS 5.14 bn",
+    "shares_traded": "949,502",
+    "deals": "3,522",
+    "bond_turnover": "TZS 21.79 bn",
+    "etf_turnover": "-"
+  },
+  "foreign_flow": {
+    "buying": "11.43%",
+    "selling": "5.88%",
+    "comment": "Foreign buying surged, returning as a marginal bid."
+  },
+  "indices": {
+    "bi": 20026.90,
+    "ia": 5120.30,
+    "cs": 2100.10,
+    "total_market_cap": "16,500.20"
+  },
+  "exchange_rates": {
+    "usd": "2,625",
+    "gbp": "3,310",
+    "kes": "20.10"
+  },
+  "bond_activity_summary": "Government bond trading remained active, with combined two-day turnover of TZS 52.16 billion. The 25-year bonds with coupons of 13.25% and 15.95% were the most heavily traded.",
+  "analysis": {
+    "in_focus_title": "In Focus: CRDB — A Rally with Fundamentals and Flow Behind It",
+    "in_focus_body": "CRDB's move from 2,630 to 2,730 on Wednesday was significant not just for its size but for the quality of the trading behind it. Three factors aligned to drive the advance...",
+    "today_concept_title": "Today's Concept: What Is a 5% Daily Price Band and Why Does It Matter?",
+    "today_concept_body": "Every listed stock on the Dar es Salaam Stock Exchange is subject to a daily price movement limit. For most actively traded equities, this limit is ±5% of the previous day's closing price.",
+    "multi_year_framework": "The two-day data tells a story that transcends the daily fluctuations: the foreign exit that defined the DSE for much of 2025 and early 2026 is over.",
+    "strategic_outlook": {
+      "near_term": "NMB ex-dividend date approaches. VODA FY2025 results expected within days.",
+      "medium_term": "Foreign flow trend: If buying remains above 10%, we could see a re-rating toward 4,100.",
+      "long_term": "Discipline, not timing, remains the foundation of long-term investment success."
+    },
+    "professional_approach": "Our daily wraps aim to distill complex market movements into actionable intelligence.",
+    "author_notes": ""
+  },
+  "equities": [
+    {
+      "ticker": "CRDB",
+      "name": "CRDB Bank Plc",
+      "sector": "Banks, Finance & Investment",
+      "open": 2630,
+      "close": 2730,
+      "high": 2760,
+      "low": 2630,
+      "volume": "507,991",
+      "turnover": "1,386,082,140"
+    },
+    {
+      "ticker": "NMB",
+      "name": "NMB Bank Plc",
+      "sector": "Banks, Finance & Investment",
+      "open": 16210,
+      "close": 16250,
+      "high": 16310,
+      "low": 16210,
+      "volume": "206,438",
+      "turnover": "3,354,617,500"
+    },
+    {
+      "ticker": "VODA",
+      "name": "Vodacom Tanzania",
+      "sector": "Commercial Services",
+      "open": 790,
+      "close": 780,
+      "high": 795,
+      "low": 780,
+      "volume": "43,257",
+      "turnover": "33,683,320"
+    },
+    {
+      "ticker": "MCB",
+      "name": "Mwalimu Commercial Bank",
+      "sector": "Banks, Finance & Investment",
+      "open": 890,
+      "close": 970,
+      "high": 970,
+      "low": 890,
+      "volume": "18,492",
+      "turnover": "17,937,240"
+    },
+    {
+      "ticker": "TBL",
+      "name": "Tanzania Breweries Limited",
+      "sector": "Industrials & Allied",
+      "open": 9610,
+      "close": 9630,
+      "high": 9630,
+      "low": 9610,
+      "volume": "2,166",
+      "turnover": "20,880,570"
+    },
+    {
+      "ticker": "TPCC",
+      "name": "Tanzania Portland Cement",
+      "sector": "Industrials & Allied",
+      "open": 6480,
+      "close": 6460,
+      "high": 6480,
+      "low": 6460,
+      "volume": "3,419",
+      "turnover": "22,093,790"
+    }
+  ]
+}

@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily DSE Wrap: {{ in_focus.title }} | Amana Capital</title>
+    <title>Daily DSE Wrap: {{ data.analysis.in_focus_title }} | Amana Capital</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,80 +26,89 @@
             </ul>
         </div>
     </nav>
-
     <main>
-        <header class="page-header">
-            <div class="container">
-                <span style="font-size: 0.9rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; display: block; margin-bottom: 1rem;">Daily DSE Wrap | {{ display_date }}</span>
-                <h1>{{ in_focus.title }}</h1>
+<div class="container section-pad">
+    <a href="/market-intelligence" style="color: var(--gold); text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-block; margin-bottom: 1.5rem;">&larr; Back to Market Intelligence</a>
+    <div class="card" style="padding: 3rem;">
+        <h1 style="margin-top: 0; color: var(--navy); font-size: 2.2rem; margin-bottom: 0.5rem;">{{ data.analysis.in_focus_title }}</h1>
+        <p style="font-size: 1.1rem; color: var(--mist); margin-bottom: 2rem; font-weight: 600;">Daily DSE Wrap | {{ data.publication_date }}</p>
+        
+        <div style="font-size: 1.05rem; line-height: 1.8; color: #333;">
+            <p>{{ data.analysis.in_focus_body }}</p>
+            
+            <h2 style="color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;">1. Market Snapshot</h2>
+            <div style="overflow-x: auto; margin-bottom: 2rem;">
+                <table class="data-table" style="width: 100%; border-collapse: collapse;">
+                    <tr style="background-color: var(--navy); color: var(--white); text-align: left;">
+                        <th style="padding: 1rem;">Metric</th>
+                        <th style="padding: 1rem;">Value</th>
+                    </tr>
+                    <tr><td style="padding: 1rem;">DSEI</td><td style="padding: 1rem;">{{ data.market_snapshot.dsei }}</td></tr>
+                    <tr style="background-color: var(--cream);"><td style="padding: 1rem;">TSI</td><td style="padding: 1rem;">{{ data.market_snapshot.tsi }}</td></tr>
+                    <tr><td style="padding: 1rem;">Equity Turnover</td><td style="padding: 1rem;">{{ data.market_snapshot.equity_turnover }}</td></tr>
+                    <tr style="background-color: var(--cream);"><td style="padding: 1rem;">Shares Traded</td><td style="padding: 1rem;">{{ data.market_snapshot.shares_traded }}</td></tr>
+                    <tr><td style="padding: 1rem;">Deals</td><td style="padding: 1rem;">{{ data.market_snapshot.deals }}</td></tr>
+                    <tr style="background-color: var(--cream);"><td style="padding: 1rem;">Bond Turnover</td><td style="padding: 1rem;">{{ data.market_snapshot.bond_turnover }}</td></tr>
+                    <tr><td style="padding: 1rem;">Foreign Buying</td><td style="padding: 1rem;">{{ data.foreign_flow.buying }}</td></tr>
+                    <tr style="background-color: var(--cream);"><td style="padding: 1rem;">Foreign Selling</td><td style="padding: 1rem;">{{ data.foreign_flow.selling }}</td></tr>
+                </table>
             </div>
-        </header>
-
-        <div class="container section">
-            <div class="card-content-block">
-                <h2>Market Snapshot</h2>
-                <ul>
-                    <li><strong>DSE All Share Index (DSEI):</strong> {{ "{:,.2f}".format(dsei) }} <span class="{% if dsei_change >= 0 %}text-success{% else %}text-danger{% endif %}">({% if dsei_change >= 0 %}+{% endif %}{{ dsei_change }} pts)</span></li>
-                    <li><strong>Tanzania Share Index (TSI):</strong> {{ "{:,.2f}".format(tsi) }}</li>
-                    <li><strong>Equity Turnover:</strong> TZS {{ equity_turnover_bn }} bn</li>
-                    <li><strong>Volume:</strong> {{ volume_mn }} mn shares across {{ deals }} deals</li>
-                    <li><strong>Bond Turnover:</strong> TZS {{ bond_turnover_bn }} bn</li>
-                    <li><strong>Foreign Flow:</strong> Buying {{ foreign_buy_pct }}%, Selling {{ foreign_sell_pct }}% of equity turnover.</li>
-                </ul>
-
-                <h2>Top Movers</h2>
-                <div class="table-responsive">
-                    <table class="data-table">
-                        <thead><tr><th>Ticker</th><th>Close (TZS)</th><th>Change</th><th>Volume</th></tr></thead>
-                        <tbody>
-                            {% for stock in gainers %}
-                            <tr><td>{{ stock.ticker }}</td><td>{{ "{:,.0f}".format(stock.close) }}</td><td class="text-success">+{{ "%.2f"|format(stock.change_pct) }}%</td><td>{{ "{:,.0f}".format(stock.volume) }}</td></tr>
-                            {% endfor %}
-                            {% for stock in losers %}
-                            <tr><td>{{ stock.ticker }}</td><td>{{ "{:,.0f}".format(stock.close) }}</td><td class="text-danger">{{ "%.2f"|format(stock.change_pct) }}%</td><td>{{ "{:,.0f}".format(stock.volume) }}</td></tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-
-                <h2>In Focus</h2>
-                <p>{{ in_focus.text }}</p>
-
-                <div class="framework-box">
-                    <h3>Considerations for a Multi-Year Framework</h3>
-                    <p>{{ framework }}</p>
-                </div>
-
-                <div class="concept-box">
-                    <h3>
-                        <svg viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>
-                        Today's Concept: {{ concept.title }}
-                    </h3>
-                    <p>{{ concept.text }}</p>
-                </div>
-
-                <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--table-header);">
-                    <a href="/market-intelligence" class="btn btn-outline">&larr; Back to Intelligence</a>
-                </div>
+            
+            <p>{{ data.foreign_flow.comment }}</p>
+            
+            <h2 style="color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;">2. Top Movers</h2>
+            <div style="overflow-x: auto; margin-bottom: 2rem;">
+                <table class="data-table" style="width: 100%; border-collapse: collapse;">
+                    <tr style="background-color: var(--navy); color: var(--white); text-align: left;">
+                        <th style="padding: 1rem;">Ticker</th>
+                        <th style="padding: 1rem;">Close (TZS)</th>
+                        <th style="padding: 1rem;">Change</th>
+                        <th style="padding: 1rem;">Volume</th>
+                    </tr>
+                    {% for p in gainers %}
+                    <tr style="{% if loop.index0 % 2 == 1 %}background-color: var(--cream);{% endif %}"><td style="padding: 1rem; font-weight: 600;">{{ p.ticker }}</td><td style="padding: 1rem;">{{ "{:,.0f}".format(p.close) }}</td><td style="padding: 1rem; color: var(--gain); font-weight: 600;">+{{ "%.1f"|format(p.change_pct) }}%</td><td style="padding: 1rem;">{{ p.volume }}</td></tr>
+                    {% endfor %}
+                    {% for p in losers %}
+                    <tr style="{% if (gainers|length + loop.index0) % 2 == 1 %}background-color: var(--cream);{% endif %}"><td style="padding: 1rem; font-weight: 600;">{{ p.ticker }}</td><td style="padding: 1rem;">{{ "{:,.0f}".format(p.close) }}</td><td style="padding: 1rem; color: var(--loss); font-weight: 600;">{{ "%.1f"|format(p.change_pct) }}%</td><td style="padding: 1rem;">{{ p.volume }}</td></tr>
+                    {% endfor %}
+                </table>
+            </div>
+            
+            <h2 style="color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;">3. Bond Market Activity</h2>
+            <p>{{ data.bond_activity_summary }}</p>
+            
+            <h2 style="color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;">4. {{ data.analysis.today_concept_title }}</h2>
+            <p>{{ data.analysis.today_concept_body }}</p>
+            
+            <h2 style="color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;">5. Strategic Outlook</h2>
+            <ul style="margin-bottom: 1.5rem;">
+                <li><strong>Near Term:</strong> {{ data.analysis.strategic_outlook.near_term }}</li>
+                <li><strong>Medium Term:</strong> {{ data.analysis.strategic_outlook.medium_term }}</li>
+                <li><strong>Long Term:</strong> {{ data.analysis.strategic_outlook.long_term }}</li>
+            </ul>
+            
+            <div style="background: var(--cream); border-left: 4px solid var(--gold); padding: 2rem; border-radius: 4px; margin-top: 3rem;">
+                <h3 style="color: var(--navy); margin-top: 0; font-size: 1.4rem;">Considerations for a Multi-Year Framework</h3>
+                <p style="margin-bottom: 0;">{{ data.analysis.multi_year_framework }}</p>
+            </div>
+            
+            <div style="margin-top: 2rem; font-style: italic; color: var(--mist);">
+                <p>{{ data.analysis.professional_approach }}</p>
+                {% if data.analysis.author_notes %}<p>{{ data.analysis.author_notes }}</p>{% endif %}
             </div>
         </div>
+    </div>
+</div>
     </main>
-
     <footer class="footer">
         <div class="container">
-            <div class="footer-disclaimer">
-                <strong>Disclaimer:</strong> This content is for informational and educational purposes only and does not constitute investment advice. Capital is at risk. Amana Capital East Africa Limited is a registered investment advisory and fund management firm in Tanzania. Licence number: [pending].
-            </div>
+            <div class="footer-disclaimer">This document is for general informational and educational purposes only. Nothing contained herein constitutes financial, investment, legal, or tax advice and should not be relied upon as such. Any investment decision you make is solely your own responsibility. The value of investments and the income from them can go down as well as up, and you may not get back the amount originally invested. Past performance is not a reliable indicator of future results. Capital is at risk, and you may incur losses &mdash; including the total loss of your invested capital &mdash; which you alone will bear. Amana Capital East Africa Limited is a registered investment advisory and fund management firm under the Capital Markets and Securities Authority (CMSA), Tanzania. Licence number: [pending]. Our registration does not imply that CMSA approves or endorses the contents of this material.</div>
             <div class="footer-links">
                 <div>&copy; 2026 Amana Capital East Africa Limited.</div>
-                <div style="display: flex; gap: 1.5rem;">
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/terms">Terms of Use</a>
-                </div>
+                <div style="display:flex; gap:1.5rem;"><a href="/privacy">Privacy Policy</a> <a href="/terms">Terms of Use</a> <a href="/cookies">Cookie Policy</a></div>
             </div>
         </div>
     </footer>
     <script src="script.js"></script>
 </body>
 </html>
-

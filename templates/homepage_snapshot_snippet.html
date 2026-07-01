@@ -1,0 +1,25 @@
+﻿<!-- SNAPSHOT_CARD_START -->
+<div class="snapshot-grid">
+    <div>
+        <div class="snapshot-label">DSEI</div>
+        <div class="snapshot-value" id="home-dsei">{{ data.market_snapshot.dsei }}</div>
+    </div>
+    <div>
+        <div class="snapshot-label">TSI</div>
+        <div class="snapshot-value" id="home-tsi">{{ data.market_snapshot.tsi }}</div>
+    </div>
+    <div>
+        <div class="snapshot-label">Turnover</div>
+        <div class="snapshot-value" id="home-turnover">{{ data.market_snapshot.equity_turnover }}</div>
+    </div>
+    <div>
+        <div class="snapshot-label">Top Gainers</div>
+        <div class="snapshot-mover" id="home-gainers">{% for g in gainers %}{{ g.ticker }} <span style="color:var(--gain)">+{{ g.change_pct }}%</span>{% if not loop.last %}<br>{% endif %}{% endfor %}</div>
+    </div>
+    <div>
+        <div class="snapshot-label">Top Losers</div>
+        <div class="snapshot-mover" id="home-losers">{% for l in losers %}{{ l.ticker }} <span style="color:var(--loss)">{{ l.change_pct }}%</span>{% if not loop.last %}<br>{% endif %}{% endfor %}</div>
+    </div>
+</div>
+<div class="snapshot-note" id="home-snapshot-date">End&#8209;of&#8209;day, {{ data.publication_date }}. For educational purposes only.</div>
+<!-- SNAPSHOT_CARD_END -->
