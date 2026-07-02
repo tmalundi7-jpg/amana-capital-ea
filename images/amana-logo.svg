@@ -1,0 +1,21 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60" width="260" height="60">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&amp;family=Merriweather:wght@700&amp;display=swap');
+      .icon { fill: #C8962E; }
+      .title { font-family: 'Merriweather', serif; font-size: 19px; font-weight: 700; fill: #0B1D3A; letter-spacing: 0.05em; }
+      .sub { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; fill: #C8962E; letter-spacing: 0.15em; }
+    </style>
+  </defs>
+  
+  <!-- Logo Graphic -->
+  <g transform="translate(10, 8)">
+    <path class="icon" d="M0,44 L13,0 L19,0 L6,44Z"/>
+    <rect class="icon" x="21" y="0" width="8" height="44"/>
+    <rect class="icon" x="0" y="19" width="21" height="4"/>
+  </g>
+  
+  <!-- Logo Text -->
+  <text x="55" y="32" class="title">AMANA CAPITAL</text>
+  <text x="57" y="47" class="sub">EAST AFRICA</text>
+</svg>
