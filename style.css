@@ -345,13 +345,17 @@ a:hover { color: var(--gold); }
 
 /* ── Pillars ── */
 .section-alt { background-color: var(--navy-alt); }
+.pillars-wrapper {
+  background: var(--navy);
+  padding: 1.75rem 2rem;
+  border-left: 3px solid var(--gold);
+}
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
 .pillar-card {
-  background: var(--navy);
   padding: 1rem 1.25rem;
   border-top: 2px solid var(--gold);
   border-radius: 2px;
