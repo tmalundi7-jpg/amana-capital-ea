@@ -1,145 +1,26 @@
+import os
 import re
 
-data = """AFRIPRISE: open 650, close 665, high 675, low 645, volume 87,996, turnover 58,468,530
-CRDB: open 2,580, close 2,590, high 2,600, low 2,580, volume 928,067, turnover 2,406,357,400
-DCB: open 510, close 510, volume 22,218, turnover 11,315,810
-DSE: open 6,410, close 6,410, volume 1,597, turnover 10,238,430
-KCB: open 1,940, close 1,950, high 2,030, low 1,930, volume 336,813, turnover 657,329,690
-MBP: open 1,910, close 2,010, volume 2,405, turnover 4,812,830
-MCB: open 985, close 945, volume 8,965, turnover 8,429,310
-MKCB: open 4,160, close 4,400, volume 2,274, turnover 9,961,500
-MUCOBA: open 490, close 490, volume 676, turnover 332,630
-NICO: open 3,600, close 3,600, volume 27,437, turnover 98,845,630
-NMB: open 16,110, close 16,160, high 16,200, low 16,120, volume 228,782, turnover 3,667,964,130
-NMG: open 260, close 270, volume 20, turnover 5,200
-PAL: open 360, close 355, volume 11,033, turnover 3,896,385
-SWIS: open 2,710, close 2,700, volume 2,525, turnover 6,817,230
-TBL: open 9,780, close 9,710, volume 3,813, turnover 37,028,510
-TCC: open 12,450, close 12,460, volume 597, turnover 7,437,800
-TCCL: open 3,300, close 3,300, volume 10,685, turnover 35,213,790
-TOL: open 1,420, close 1,450, volume 6,605, turnover 9,595,670
-TPCC: open 6,610, close 6,490, volume 2,638, turnover 17,135,110
-TTP: open 500, close 480, volume 576, turnover 274,965
-VODA: open 745, close 770, high 780, low 745, volume 48,755, turnover 37,516,390
-USL: close 25, no volume
-YETL: close 510, no volume"""
+dir_path = r"C:\Users\tmalu\.gemini\antigravity\scratch\amana-repo\amana-capital-ea-main"
 
-companies = {
-    "AFRIPRISE": "Afriprise",
-    "CRDB": "CRDB Bank Plc",
-    "DCB": "DCB Commercial Bank",
-    "DSE": "Dar es Salaam Stock Exchange",
-    "KCB": "KCB Group",
-    "MBP": "Mkombozi Commercial Bank",
-    "MCB": "Mwalimu Commercial Bank",
-    "MKCB": "Mkombozi Commercial Bank", 
-    "MUCOBA": "Mucoba Bank",
-    "NICO": "National Investments Co",
-    "NMB": "NMB Bank Plc",
-    "NMG": "Nation Media Group",
-    "PAL": "PricewaterhouseCoopers",
-    "SWIS": "Swissport Tanzania",
-    "TBL": "Tanzania Breweries",
-    "TCC": "Tanzania Cigarette Co",
-    "TCCL": "Tanga Cement",
-    "TOL": "TOL Gases",
-    "TPCC": "Tanzania Portland Cement",
-    "TTP": "Tatepa",
-    "VODA": "Vodacom Tanzania",
-    "USL": "Uchumi Supermarkets",
-    "YETL": "YETL"
-}
-
-sectors = {
-    "Banks & Finance": ["CRDB", "NMB", "DCB", "KCB", "MKCB", "MCB", "MUCOBA", "NICO", "MBP"],
-    "Industrials & Allied": ["TBL", "TCC", "TCCL", "TPCC", "TOL", "PAL"],
-    "Commercial Services": ["SWIS", "VODA", "NMG", "DSE", "AFRIPRISE", "TTP", "USL", "YETL"]
-}
-
-def get_sector(ticker):
-    for s, ticks in sectors.items():
-        if ticker in ticks:
-            return s
-    return "Unknown"
-
-rows = []
-for line in data.split("\n"):
-    parts = line.split(":")
-    ticker = parts[0].strip()
-    rest = parts[1]
-    
-    close_match = re.search(r'close ([\d,]+)', rest)
-    if not close_match: continue
-    close_price = int(close_match.group(1).replace(",", ""))
-    
-    open_match = re.search(r'open ([\d,]+)', rest)
-    if open_match:
-        open_price = int(open_match.group(1).replace(",", ""))
-        change = ((close_price - open_price) / open_price) * 100
-        change_str = f"{change:+.2f}%"
-        if change > 0:
-            change_class = ' class="text-success"'
-        elif change < 0:
-            change_class = ' class="text-danger"'
-        else:
-            change_class = ""
-    else:
-        change_str = "—"
-        change_class = ""
-        
-    vol_match = re.search(r'volume ([\d,]+)', rest)
-    vol_str = vol_match.group(1) if vol_match else "0"
-    
-    turn_match = re.search(r'turnover ([\d,]+)', rest)
-    turn_str = turn_match.group(1) if turn_match else "0"
-    
-    sec = get_sector(ticker)
-    comp = companies.get(ticker, ticker)
-    
-    rows.append(f"<tr><td>{ticker}</td><td>{comp}</td><td><span class=\"sector-badge\">{sec}</span></td><td>{close_price:,}</td><td{change_class}>{change_str}</td><td>{vol_str}</td><td>{turn_str}</td></tr>")
-
-with open('current-prices.html', 'r', encoding='utf-8') as f:
-    content = f.read()
-
-# Replace table
-table_html = """<table class="data-table">
-                    <thead>
-                        <tr><th>Ticker</th><th>Company Name</th><th>Sector</th><th>Last Price (TZS)</th><th>Change</th><th>Volume</th><th>Turnover (TZS)</th></tr>
-                    </thead>
-                    <tbody>
-                        """ + "\n                        ".join(rows) + """
-                    </tbody>
-                </table>"""
-
-content = re.sub(r'<table class="data-table">.*?</table>', table_html, content, flags=re.DOTALL)
-content = content.replace("Data Status:</strong> End-of-day, 29 June 2026. For educational purposes only. Not real-time data. (Live API integration planned for future release).", "Data Status:</strong> End-of-day data, 29 June 2026. For educational purposes only. Not real-time data.")
-
-with open('current-prices.html', 'w', encoding='utf-8') as f:
-    f.write(content)
-
-# Update Market Intelligence
-with open('market-intelligence.html', 'r', encoding='utf-8') as f:
-    mi = f.read()
-
-new_card = """<div class="card" style="margin-bottom: 2rem;">
-                <span style="font-size: 0.85rem; color: var(--navy); text-transform: uppercase; font-weight: 600;">29 June 2026</span>
-                <h3>Banking Sector Leads Volume & NMB Block Trade</h3>
-                <p>The banking sector drove market volumes today, highlighted by a significant block trade in NMB of 108,000 shares.</p>
-                <a href="dse-wrap-2026-06-29.html">Read Full Wrap &rarr;</a>
+new_social_links = """<div class="social-links">
+                <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                <a href="#" aria-label="X (Twitter)"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
             </div>"""
+
+pattern = re.compile(r'<div class="social-links">.*?</div>', re.DOTALL)
+
+for root, dirs, files in os.walk(dir_path):
+    for file in files:
+        if file.endswith('.html'):
+            filepath = os.path.join(root, file)
+            with open(filepath, 'r', encoding='utf-8') as f:
+                content = f.read()
             
-mi = re.sub(r'<div class="card" style="margin-bottom: 2rem;">.*?Read Full Wrap &rarr;</a>\n            </div>', new_card, mi, count=1, flags=re.DOTALL)
-
-with open('market-intelligence.html', 'w', encoding='utf-8') as f:
-    f.write(mi)
-
-# Update index.html
-with open('index.html', 'r', encoding='utf-8') as f:
-    idx = f.read()
-    
-idx = re.sub(r'<!-- SNAPSHOT_DATE -->.*?<!-- SNAPSHOT_DATE_END -->', '<!-- SNAPSHOT_DATE -->29 June 2026<!-- SNAPSHOT_DATE_END -->', idx, flags=re.DOTALL)
-idx = idx.replace('4,040.04', '4,040.04') # just in case, wait it's already 4040.04 in index maybe
-idx = idx.replace('8,734.37', '8,734.37')
-
-with open('index.html', 'w', encoding='utf-8') as f:
-    f.write(idx)
+            new_content, count = pattern.subn(new_social_links, content)
+            
+            if count > 0:
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    f.write(new_content)
+                print(f"Updated {filepath}")

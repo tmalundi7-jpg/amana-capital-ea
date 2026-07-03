@@ -1,0 +1,139 @@
+const fs = require('fs');
+
+const templateHtml = fs.readFileSync('dse-wrap-2026-07-02.html', 'utf8');
+
+const newContent = `
+        <h1 style="margin-top: 0; color: var(--navy); font-size: 2.2rem; margin-bottom: 0.5rem;">Daily DSE Wrap | Friday, 3rd July 2026</h1>
+        <p style="font-size: 1.1rem; color: var(--mist); margin-bottom: 2rem; font-weight: 600;">DSEI Surges Past 4,100 as Banking Sector and Block Trades Drive Rally</p>
+        
+        <div style="font-size: 1.05rem; line-height: 1.8; color: #333;">
+            <p>The Dar es Salaam Stock Exchange capped the week with a powerful broad-based rally, pushing the All-Share Index firmly through the 4,100 barrier for the first time since early June. Heavy block trades in NMB and the IEACLC ETF, combined with strong demand for CRDB and VODA, lifted turnover to its highest level of the week. The market is no longer simply recovering &mdash; it is accelerating, and it is doing so on the back of deep, institutional-quality liquidity.</p>
+            
+            <h2 style="color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;">1. Market Snapshot</h2>
+            <div style="overflow-x: auto; margin-bottom: 2rem;">
+                <table class="data-table" style="width: 100%; border-collapse: collapse;">
+                    <tr style="background-color: var(--navy); color: var(--white); text-align: left;">
+                        <th style="padding: 1rem;">Metric</th>
+                        <th style="padding: 1rem;">Value</th>
+                    </tr>
+                    <tr><td style="padding: 1rem;">DSEI</td><td style="padding: 1rem;">4,116.73 (+26.62 pts, +0.65%)</td></tr>
+                    <tr style="background-color: var(--cream);"><td style="padding: 1rem;">TSI</td><td style="padding: 1rem;">8,997.09 (+85.12 pts)</td></tr>
+                    <tr><td style="padding: 1rem;">Equity Turnover</td><td style="padding: 1rem;">TZS 6.85 billion</td></tr>
+                    <tr style="background-color: var(--cream);"><td style="padding: 1rem;">Shares Traded</td><td style="padding: 1rem;">1,055,587</td></tr>
+                    <tr><td style="padding: 1rem;">Deals</td><td style="padding: 1rem;">3,727</td></tr>
+                    <tr style="background-color: var(--cream);"><td style="padding: 1rem;">Bond Turnover</td><td style="padding: 1rem;">TZS 26.85 billion</td></tr>
+                    <tr><td style="padding: 1rem;">ETF Turnover</td><td style="padding: 1rem;">TZS 364.95 million</td></tr>
+                    <tr style="background-color: var(--cream);"><td style="padding: 1rem;">Foreign Buying (Equities)</td><td style="padding: 1rem;">0.18%</td></tr>
+                    <tr><td style="padding: 1rem;">Foreign Selling (Equities)</td><td style="padding: 1rem;">18.36%</td></tr>
+                </table>
+            </div>
+            
+            <p>The equity market operated in a high-liquidity regime for the third consecutive session. Bond market activity eased from Thursday’s elevated levels, suggesting that institutional capital is gradually rotating from fixed income into equities as the recovery broadens. Foreign selling ticked up to 18.36% &mdash; a normal ebb and flow after the recent strong run &mdash; but local demand continues to absorb the supply comfortably.</p>
+            
+            <h2 style="color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;">2. Top Movers</h2>
+            <div style="overflow-x: auto; margin-bottom: 2rem;">
+                <table class="data-table" style="width: 100%; border-collapse: collapse;">
+                    <tr style="background-color: var(--navy); color: var(--white); text-align: left;">
+                        <th style="padding: 1rem;">Ticker</th>
+                        <th style="padding: 1rem;">2 Jul Close</th>
+                        <th style="padding: 1rem;">3 Jul Close</th>
+                        <th style="padding: 1rem;">Change</th>
+                        <th style="padding: 1rem;">Volume</th>
+                    </tr>
+                    <tr><td style="padding: 1rem; font-weight: 600;">NMB</td><td style="padding: 1rem;">16,350</td><td style="padding: 1rem; font-weight: 600;">16,440</td><td style="padding: 1rem; color: var(--gain); font-weight: 600;">+0.55%</td><td style="padding: 1rem;">108,045 (normal) + 200,000 (block)</td></tr>
+                    <tr style="background-color: var(--cream);"><td style="padding: 1rem; font-weight: 600;">VODA</td><td style="padding: 1rem;">795</td><td style="padding: 1rem; font-weight: 600;">805</td><td style="padding: 1rem; color: var(--gain); font-weight: 600;">+1.26%</td><td style="padding: 1rem;">73,519</td></tr>
+                    <tr><td style="padding: 1rem; font-weight: 600;">CRDB</td><td style="padding: 1rem;">2,730</td><td style="padding: 1rem; font-weight: 600;">2,800</td><td style="padding: 1rem; color: var(--gain); font-weight: 600;">+2.56%</td><td style="padding: 1rem;">484,535</td></tr>
+                    <tr style="background-color: var(--cream);"><td style="padding: 1rem; font-weight: 600;">AFRIPRISE</td><td style="padding: 1rem;">650</td><td style="padding: 1rem; font-weight: 600;">675</td><td style="padding: 1rem; color: var(--gain); font-weight: 600;">+3.85%</td><td style="padding: 1rem;">58,391</td></tr>
+                    <tr><td style="padding: 1rem; font-weight: 600;">SWIS</td><td style="padding: 1rem;">2,700</td><td style="padding: 1rem; font-weight: 600;">2,870</td><td style="padding: 1rem; color: var(--gain); font-weight: 600;">+6.30%</td><td style="padding: 1rem;">1,651</td></tr>
+                    <tr style="background-color: var(--cream);"><td style="padding: 1rem; font-weight: 600;">NICO</td><td style="padding: 1rem;">3,630</td><td style="padding: 1rem; font-weight: 600;">3,830</td><td style="padding: 1rem; color: var(--gain); font-weight: 600;">+5.51%</td><td style="padding: 1rem;">15,401</td></tr>
+                    <tr><td style="padding: 1rem; font-weight: 600;">MBP</td><td style="padding: 1rem;">1,970</td><td style="padding: 1rem; font-weight: 600;">1,830</td><td style="padding: 1rem; color: var(--loss); font-weight: 600;">&ndash;7.11%</td><td style="padding: 1rem;">1,915</td></tr>
+                    <tr style="background-color: var(--cream);"><td style="padding: 1rem; font-weight: 600;">MCB</td><td style="padding: 1rem;">885</td><td style="padding: 1rem; font-weight: 600;">910</td><td style="padding: 1rem; color: var(--gain); font-weight: 600;">+2.82%</td><td style="padding: 1rem;">5,963</td></tr>
+                    <tr><td style="padding: 1rem; font-weight: 600;">TCCL</td><td style="padding: 1rem;">3,020</td><td style="padding: 1rem; font-weight: 600;">3,260</td><td style="padding: 1rem; color: var(--gain); font-weight: 600;">+7.95%</td><td style="padding: 1rem;">23,990</td></tr>
+                </table>
+            </div>
+            
+            <p><strong>Notable:</strong> CRDB rallied to a psychologically important 2,800, while VODA continued its pre-dividend ascent past 805. TCCL surged nearly 8% on strong volume, hinting at a re-rating of the counter. NMB added another 90 shillings, with a 200,000-share block trade underscoring institutional conviction.</p>
+            
+            <h2 style="color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;">3. In Focus: Banking Sector &mdash; The Engine Hits Full Throttle</h2>
+            <p>The Banks, Finance &amp; Investment (BI) index closed at <strong>20,389.16</strong>, a fresh cycle high and a clear signal that the banking sector is leading the market&rsquo;s advance. Three developments on Friday highlight the depth and breadth of the move.</p>
+            <p><strong>CRDB</strong> surged to 2,800 on volume of 484,535 shares, the highest single-day volume for the counter in weeks. The stock touched an intraday high of 2,840 before settling, and the bid-side depth of the order book remained heavily skewed toward buyers throughout the session. CRDB&rsquo;s valuation &mdash; a price-to-earnings ratio around 10.8 at the current price, and a price-to-book ratio approaching 1.9 &mdash; remains reasonable for a bank generating mid-teen returns on equity in a growing economy. For a detailed walk-through of how to evaluate a bank, see our case study <a href="/education" class="gold-link">CRDB Bank &ndash; A Fundamental Walk-Through</a>.</p>
+            <p><strong>NMB</strong> continued its quiet, powerful grind higher, adding 90 shillings to close at 16,440. A pre-arranged block trade of 200,000 shares &mdash; executed smoothly and without disrupting the price &mdash; demonstrates the depth of institutional demand at these levels. The pending TZS 610.15 per share dividend, approved by the AGM, remains a powerful anchor for long-term holders. Understanding how dividends impact stock prices is covered in <a href="/education" class="gold-link">Corporate Actions Beyond Dividends</a>.</p>
+            <p><strong>NICO</strong> and <strong>TCCL</strong> posted strong gains, broadening the rally beyond the traditional large-cap leaders. This is a healthy sign: a rally that lifts multiple counters and sectors is more sustainable than one driven by a single stock.</p>
+            <p>The banking sector&rsquo;s performance is not an isolated event. It reflects the broader macroeconomic story: a growing Tanzanian economy, expanding credit, and a stable interest rate environment. To understand the economic forces that drive bank profitability, see our article <a href="/education" class="gold-link">The Bank of Tanzania and the Price of Money</a>.</p>
+            
+            <h2 style="color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;">4. Today&rsquo;s Concept: The 5% Daily Price Band &mdash; How It Shapes Every Trade</h2>
+            <p>Every stock listed on the DSE is subject to a daily price movement limit. For large, actively traded equities, the limit is <strong>&plusmn;5%</strong> of the previous day&rsquo;s closing price. The rule exists to prevent extreme intraday swings and to give the market time to absorb new information in an orderly manner. If you submit an order at a price outside this band, the exchange&rsquo;s trading system will reject it.</p>
+            <p>Let&rsquo;s apply this to Friday&rsquo;s market. CRDB closed on Thursday at TZS 2,760. On Friday, its permissible trading range was:</p>
+            <ul style="margin-bottom: 1.5rem;">
+                <li><strong>Upper limit:</strong> 2,760 &times; 1.05 = <strong>2,898.00</strong></li>
+                <li><strong>Lower limit:</strong> 2,760 &times; 0.95 = <strong>2,622.00</strong></li>
+            </ul>
+            <p>CRDB traded between 2,760 and 2,840 all day &mdash; comfortably inside the band. Any order submitted at, say, 2,900 would have been rejected because it was above the upper cap.</p>
+            <p>Now consider VODA, which closed Thursday at 795. Its Friday band was:</p>
+            <ul style="margin-bottom: 1.5rem;">
+                <li><strong>Upper limit:</strong> 795 &times; 1.05 = <strong>834.75</strong></li>
+                <li><strong>Lower limit:</strong> 795 &times; 0.95 = <strong>755.25</strong></li>
+            </ul>
+            <p>VODA&rsquo;s intraday high was 830 &mdash; just below the upper cap. If you had submitted a sell order at 840, it would not have executed, because the price could not reach that level on Friday under the band constraint.</p>
+            <p>The practical lesson is simple but important: always calculate the daily band before placing a limit order. If your target price is outside the band, either wait for the following trading day (when the band will shift based on the new closing price) or adjust your order to fall within the permissible range. This is especially critical after large single-day moves or corporate announcements, when the band may be temporarily widened (for example, to 10% for five trading days following a dividend approval).</p>
+            <p>For more on how the DSE&rsquo;s trading mechanics work, see <a href="/education" class="gold-link">Understanding Market Data: Turnover, Volume, and Deals</a>.</p>
+
+            <h2 style="color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;">5. Bond Market: Demand Normalises as Equity Rotation Accelerates</h2>
+            <p>Government bond turnover eased to TZS 26.85 billion, with the 20-year 15.49% bond and the 25-year 13.25% bond attracting the most activity. Yields on long-dated paper remain around 10.5&ndash;11.5%, still attractive for pension funds and insurance companies, but the declining turnover suggests that the fierce competition for bonds is moderating. This is consistent with the rotation signal we have been tracking: institutional money is gradually shifting from fixed income into equities, drawn by improving market sentiment and attractive valuations in the banking and telecom sectors.</p>
+            
+            <h2 style="color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;">6. Strategic Outlook: What to Anticipate</h2>
+            <h3 style="color: var(--navy);">Near-Term (July 2026)</h3>
+            <ul style="margin-bottom: 1.5rem;">
+                <li><strong>VODA dividend announcement:</strong> Expected any day. A strong dividend proposal (TZS 30 or above) could push the stock through the 830&ndash;850 resistance zone. A disappointment would likely trigger a retreat toward 780. The pre-announcement accumulation pattern is clear, and income-focused investors should watch this closely.</li>
+                <li><strong>NMB ex-dividend date:</strong> The books close in July, and the ex-dividend date will follow shortly. Stocks typically rally into the ex-date and then adjust downward by approximately the dividend amount.</li>
+                <li><strong>CRDB momentum:</strong> The stock is testing the 2,800 level. A sustained break above this level, supported by volume, would be a bullish signal.</li>
+            </ul>
+            <h3 style="color: var(--navy);">Medium-Term (Q3 2026)</h3>
+            <ul style="margin-bottom: 1.5rem;">
+                <li><strong>Bank of Tanzania policy:</strong> The central bank has maintained a stable monetary stance. Any hint of a rate change &mdash; particularly in response to food or fuel inflation &mdash; would be the most significant macro event for both equities and bonds.</li>
+                <li><strong>Budget implementation:</strong> Infrastructure spending will directly affect construction, cement, and logistics companies.</li>
+            </ul>
+            <h3 style="color: var(--navy);">Long-Term</h3>
+            <p>The structural drivers of Tanzania&rsquo;s economy &mdash; urbanisation, financial inclusion, mobile money, and regional integration &mdash; remain firmly in place. The current market strength is not a speculative bubble; it is a recovery grounded in improving fundamentals and returning institutional confidence. For long-horizon investors, the discipline to remain invested through short-term volatility is consistently rewarded.</p>
+
+            <h2 style="color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;">7. Professional Approach: How to Use This Intelligence</h2>
+            <p>This analysis is a tool for understanding market dynamics, not a set of trading instructions. We encourage you to:</p>
+            <ul style="margin-bottom: 1.5rem;">
+                <li>Integrate the Daily Wrap with our Investor Education Series. If today&rsquo;s In Focus was banking, pair it with <a href="/education" class="gold-link">How to Analyse a Sector: Banking</a> and the <a href="/education" class="gold-link">CRDB case study</a>. If the 5% price band is new to you, review <a href="/education" class="gold-link">Understanding Market Data</a>.</li>
+                <li>Maintain a diversified portfolio. Even the strongest sector can reverse. Diversification across banks, industrials, consumer goods, telecoms, and bonds reduces risk.</li>
+                <li>Always consider liquidity. Large percentage moves on low-volume counters can be misleading.</li>
+                <li>Remember the risk. All equity investment carries the possibility of loss. Past performance is not a guide to future returns.</li>
+            </ul>
+
+            <div style="background: var(--cream); border-left: 4px solid var(--gold); padding: 2rem; border-radius: 4px; margin-top: 3rem;">
+                <h3 style="color: var(--navy); margin-top: 0; font-size: 1.4rem;">Considerations for a Multi-Year Framework</h3>
+                <p style="margin-bottom: 0;">The DSEI&rsquo;s surge past 4,100, the heavy block trades in NMB and the IEACLC ETF, and the steady return of institutional confidence are not isolated events. They are the visible expression of a deeper structural shift: a market that has absorbed a year of foreign selling and emerged stronger, more liquid, and more anchored by local capital. The banking sector, as the primary proxy for Tanzania&rsquo;s economic growth, continues to be the most direct way for long-horizon investors to participate in that story. The 5% daily bands, the dividend catalysts, and the week-to-week ebb and flow of sentiment are the texture of the journey. The enduring trend is the gradual, compounding wealth creation that comes from owning well-managed, competitively advantaged businesses in a steadily growing economy.</p>
+            </div>
+`;
+
+let resultHtml = templateHtml;
+
+// Update Title and Meta
+resultHtml = resultHtml.replace(
+    '<title>Daily DSE Wrap | Thursday, 2nd July 2026 | Amana Capital East Africa</title>', 
+    '<title>Daily DSE Wrap | Friday, 3rd July 2026 | Amana Capital East Africa</title>'
+);
+resultHtml = resultHtml.replace(
+    '<meta name="description" content="Read our daily Dar es Salaam Stock Exchange (DSE) wrap for 2nd July 2026.', 
+    '<meta name="description" content="Read our daily Dar es Salaam Stock Exchange (DSE) wrap for 3rd July 2026.'
+);
+resultHtml = resultHtml.replace(
+    '<link rel="canonical" href="https://www.amana-capital-ea.co.tz/dse-wrap-2026-07-02.html" />',
+    '<link rel="canonical" href="https://www.amana-capital-ea.co.tz/dse-wrap-2026-07-03.html" />'
+);
+
+// Replace content inside card
+const startIndex = resultHtml.indexOf('<h1 style="margin-top: 0; color: var(--navy); font-size: 2.2rem; margin-bottom: 0.5rem;">Daily DSE Wrap');
+const endIndex = resultHtml.indexOf('        </div>\n    </div>\n</div>\n</main>');
+if (startIndex !== -1 && endIndex !== -1) {
+    resultHtml = resultHtml.substring(0, startIndex) + newContent + resultHtml.substring(endIndex);
+    fs.writeFileSync('dse-wrap-2026-07-03.html', resultHtml);
+    console.log('dse-wrap-2026-07-03.html generated successfully.');
+} else {
+    console.error('Failed to find replace block');
+}

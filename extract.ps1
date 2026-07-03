@@ -1,22 +1,38 @@
-$transcriptPath = 'C:\Users\tmalu\.gemini\antigravity\brain\64377198-9119-4b02-a3fb-ed4757da256e\.system_generated\logs\transcript_full.jsonl'
-$outputPath = 'C:\Users\tmalu\.gemini\antigravity\scratch\amana-repo\amana-capital-ea-main\batch1.txt'
+Add-Type -AssemblyName System.IO.Compression.FileSystem
 
-$reader = [System.IO.StreamReader]::new($transcriptPath)
-try {
-    while ($null -ne ($line = $reader.ReadLine())) {
-        if ([string]::IsNullOrWhiteSpace($line)) { continue }
-        
-        # Simple string matching is faster than parsing JSON for every line
-        if ($line.Contains('"type":"USER_INPUT"') -and $line.Contains('Article 1.1') -and $line.Contains('Article 1.5')) {
-            # Convert JSON back to object
-            $data = ConvertFrom-Json $line
-            if ($data.content -and $data.content.Contains('Article 1.1')) {
-                [System.IO.File]::WriteAllText($outputPath, $data.content)
-                Write-Host "Extracted batch 1 successfully."
-                break
-            }
-        }
+$docx1 = "C:\Users\tmalu\OneDrive\Documents\Current Prices - 3rd July 2026.docx"
+$docx2 = "C:\Users\tmalu\OneDrive\Documents\Daily DSE Wrap 3rd July 2026.docx"
+$out = "C:\Users\tmalu\.gemini\antigravity\scratch\amana-repo\amana-capital-ea-main\extracted_data.json"
+
+function Extract-DocxText($path) {
+    if (-not (Test-Path $path)) { return "File not found: $path" }
+    
+    $tempDir = Join-Path $env:TEMP ([guid]::NewGuid().ToString())
+    New-Item -ItemType Directory -Path $tempDir | Out-Null
+    
+    [System.IO.Compression.ZipFile]::ExtractToDirectory($path, $tempDir)
+    
+    $xmlPath = Join-Path $tempDir "word\document.xml"
+    $xmlContent = Get-Content -Path $xmlPath -Raw
+    
+    # Very simple regex to extract text from <w:t> tags
+    $matches = [regex]::Matches($xmlContent, '(?<=<w:t[^>]*>).*?(?=</w:t>)')
+    $text = @()
+    foreach ($m in $matches) {
+        $text += $m.Value
     }
-} finally {
-    $reader.Close()
+    
+    Remove-Item -Path $tempDir -Recurse -Force
+    return ($text -join " ")
 }
+
+$text1 = Extract-DocxText $docx1
+$text2 = Extract-DocxText $docx2
+
+$data = @{
+    prices = $text1
+    wrap = $text2
+}
+
+$data | ConvertTo-Json -Depth 3 | Set-Content -Path $out
+Write-Host "Extraction successful."
