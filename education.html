@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -63,6 +63,7 @@
                     <div class="brand-sub">EAST AFRICA</div>
                 </div>
             </a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
             <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">&#9776;</button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="/">Home</a></li>
@@ -86,6 +87,54 @@
     <section class="bg-navy section-pad" style="padding-top: 1rem; padding-bottom: 4rem;">
         <div class="container" style="max-width: 900px;" id="accordion-container">
             
+            <!-- Wealth Calculator -->
+            <div class="calc-card">
+                <h3 style="margin-bottom: 1.5rem; color: var(--navy);">Wealth Calculator</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                    <div>
+                        <label style="font-weight: 600; font-size: 0.9rem; color: var(--navy);">Initial Investment (TZS)</label>
+                        <input type="number" id="calc-initial" class="calc-input" value="1000000">
+                    </div>
+                    <div>
+                        <label style="font-weight: 600; font-size: 0.9rem; color: var(--navy);">Monthly Contribution (TZS)</label>
+                        <input type="number" id="calc-monthly" class="calc-input" value="100000">
+                    </div>
+                    <div>
+                        <label style="font-weight: 600; font-size: 0.9rem; color: var(--navy);">Expected Annual Return (%)</label>
+                        <input type="number" id="calc-return" class="calc-input" value="10">
+                    </div>
+                    <div>
+                        <label style="font-weight: 600; font-size: 0.9rem; color: var(--navy);">Years to Grow</label>
+                        <input type="number" id="calc-years" class="calc-input" value="10">
+                    </div>
+                </div>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <button onclick="calculateWealth()" class="btn btn-gold-solid">Calculate Future Value</button>
+                </div>
+                <div class="calc-result">
+                    <span style="font-size: 1rem; color: var(--mist); text-transform: uppercase; font-weight: 700;">Future Compound Value</span>
+                    <div id="calc-output" style="font-size: 1.75rem; font-weight: 700; color: var(--navy); margin-top: 0.25rem;">TZS 0</div>
+                </div>
+            </div>
+            <script>
+                function calculateWealth() {
+                    let P = parseFloat(document.getElementById('calc-initial').value) || 0;
+                    let PMT = parseFloat(document.getElementById('calc-monthly').value) || 0;
+                    let r = (parseFloat(document.getElementById('calc-return').value) || 0) / 100 / 12;
+                    let n = (parseFloat(document.getElementById('calc-years').value) || 0) * 12;
+                    
+                    let futureValue = P * Math.pow(1 + r, n);
+                    if (r > 0) {
+                        futureValue += PMT * ((Math.pow(1 + r, n) - 1) / r);
+                    } else {
+                        futureValue += PMT * n;
+                    }
+                    
+                    document.getElementById('calc-output').innerText = 'TZS ' + futureValue.toLocaleString('en-US', {maximumFractionDigits: 0});
+                }
+                document.addEventListener('DOMContentLoaded', calculateWealth);
+            </script>
+
             <!-- Module 1 -->
             <details class="module-accordion" style="margin-bottom: 1.5rem; background: var(--cream); border-radius: 8px; border: 1px solid var(--gold); overflow: hidden;">
                 <summary>
@@ -247,6 +296,8 @@
             });
         });
     </script>
+    <script src="/js/theme-toggle.js"></script>
 </body>
 </html>
+
 

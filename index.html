@@ -35,6 +35,7 @@
                     <div class="brand-sub">EAST AFRICA</div>
                 </div>
             </a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
             <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">&#9776;</button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="/" class="active">Home</a></li>
@@ -172,7 +173,7 @@
                 <div class="bounded-card" style="text-align: center;">
                     <h2 style="color: var(--white); margin-bottom: 0.5rem;">Join Our Intelligence Briefing</h2>
                     <p style="color: rgba(251,247,240,0.7); margin-bottom: 1.5rem; font-size: 0.95rem;">Exclusive institutional research delivered to your inbox weekly.</p>
-                    <form class="newsletter-form" onsubmit="window.location.href = 'mailto:info@amana-capital-ea.co.tz?subject=New Intelligence Briefing Subscription&body=Please add my email to the subscription list: ' + this.email.value; return false;">
+                    <form class="newsletter-form" action="YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
                         <input type="email" name="email" placeholder="Your email address" required>
                         <button type="submit">Subscribe</button>
                     </form>
@@ -200,8 +201,10 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="/js/theme-toggle.js"></script>
 </body>
 </html>
+
 
 
 

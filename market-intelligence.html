@@ -20,6 +20,7 @@
                     <div class="brand-sub">EAST AFRICA</div>
                 </div>
             </a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
             <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">&#9776;</button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="/">Home</a></li>
@@ -40,6 +41,47 @@
         </div>
 
         <div class="container" style="max-width: 950px; margin-top: -2rem; margin-bottom: 4rem;">
+            <!-- DSEI 30-Day Trend Chart -->
+            <div class="bounded-card" style="margin-bottom: 2.5rem; background: var(--white); padding: 1.5rem 2rem; border-top: 3px solid var(--gold);">
+                <h3 style="margin-bottom: 1rem;">DSEI 30-Day Trend</h3>
+                <canvas id="dseiChart" style="max-height: 300px;"></canvas>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const ctx = document.getElementById('dseiChart').getContext('2d');
+                    const dummyData = Array.from({length: 30}, () => 1800 + Math.random() * 100 - 50);
+                    const labels = Array.from({length: 30}, (_, i) => `Day ${i+1}`);
+                    new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: labels,
+                            datasets: [{
+                                label: 'DSEI',
+                                data: dummyData,
+                                borderColor: '#C8962E',
+                                backgroundColor: 'rgba(200, 150, 46, 0.1)',
+                                tension: 0.4,
+                                fill: true
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: { display: false }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: false,
+                                    suggestedMin: 1700,
+                                    suggestedMax: 1900
+                                }
+                            }
+                        }
+                    });
+                });
+            </script>
             <!-- DSE Snapshot Card -->
             <div class="snapshot-card" style="margin-bottom: 2.5rem; position: relative; z-index: 10;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
@@ -142,8 +184,10 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="/js/theme-toggle.js"></script>
 </body>
 </html>
+
 
 
 
