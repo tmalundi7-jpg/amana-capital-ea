@@ -98,7 +98,7 @@
         <!-- Four Pillars -->
         <section style="padding: 2rem 0;">
             <div class="container">
-                <div class="pillars-wrapper">
+                <div class="bounded-card">
                     <div class="pillars-grid">
                         <div class="pillar-card">
                             <h3>Integrity</h3>
@@ -167,14 +167,16 @@
         </section>
 
         <!-- Newsletter -->
-        <section class="section-alt" style="padding: 2.5rem 0; text-align: center;">
+        <section style="padding: 2.5rem 0;">
             <div class="container">
-                <h2 style="color: var(--white); margin-bottom: 0.5rem;">Join Our Intelligence Briefing</h2>
-                <p style="color: rgba(251,247,240,0.7); margin-bottom: 1.5rem; font-size: 0.95rem;">Exclusive institutional research delivered to your inbox weekly.</p>
-                <form class="newsletter-form" onsubmit="window.location.href = 'mailto:info@amana-capital-ea.co.tz?subject=New Intelligence Briefing Subscription&body=Please add my email to the subscription list: ' + this.email.value; return false;">
-                    <input type="email" name="email" placeholder="Your email address" required>
-                    <button type="submit">Subscribe</button>
-                </form>
+                <div class="bounded-card" style="text-align: center;">
+                    <h2 style="color: var(--white); margin-bottom: 0.5rem;">Join Our Intelligence Briefing</h2>
+                    <p style="color: rgba(251,247,240,0.7); margin-bottom: 1.5rem; font-size: 0.95rem;">Exclusive institutional research delivered to your inbox weekly.</p>
+                    <form class="newsletter-form" onsubmit="window.location.href = 'mailto:info@amana-capital-ea.co.tz?subject=New Intelligence Briefing Subscription&body=Please add my email to the subscription list: ' + this.email.value; return false;">
+                        <input type="email" name="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
