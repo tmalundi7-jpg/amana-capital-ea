@@ -358,7 +358,7 @@ a:hover { color: var(--gold); }
 .pillar-card {
   background: var(--navy);
   padding: 1rem 1.25rem;
-  border-top: 2px solid var(--gold);
+  border: 2px solid var(--gold);
   border-radius: 2px;
 }
 .pillar-card h3 {
