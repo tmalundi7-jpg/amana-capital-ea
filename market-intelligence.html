@@ -41,55 +41,7 @@
         </div>
 
         <div class="container" style="max-width: 950px; margin-top: -2rem; margin-bottom: 4rem;">
-            <!-- DSEI 30-Day Trend Chart -->
-            <div class="bounded-card" style="margin-bottom: 2.5rem; background: var(--white); padding: 1.5rem 2rem; border-top: 3px solid var(--gold);">
-                <h3 style="margin-bottom: 1rem;">DSEI 30-Day Trend</h3>
-                <canvas id="dseiChart" style="max-height: 300px;"></canvas>
-            </div>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    const ctx = document.getElementById('dseiChart').getContext('2d');
-                    const chartData = [
-                        3950.12, 3955.34, 3952.10, 3960.45, 3968.22, 3975.11, 3970.50, 3978.88, 3985.40, 3992.15,
-                        3988.70, 3995.20, 4002.34, 4010.50, 4015.60, 4012.30, 4020.15, 4028.90, 4035.45, 4042.10,
-                        4038.50, 4045.25, 4055.60, 4068.30, 4075.20, 4072.10, 4085.40, 4095.50, 4105.20, 4116.73
-                    ];
-                    const chartLabels = [
-                        'Jun 4', 'Jun 5', 'Jun 6', 'Jun 7', 'Jun 8', 'Jun 9', 'Jun 10', 'Jun 11', 'Jun 12', 'Jun 13',
-                        'Jun 14', 'Jun 15', 'Jun 16', 'Jun 17', 'Jun 18', 'Jun 19', 'Jun 20', 'Jun 21', 'Jun 22', 'Jun 23',
-                        'Jun 24', 'Jun 25', 'Jun 26', 'Jun 27', 'Jun 28', 'Jun 29', 'Jun 30', 'Jul 1', 'Jul 2', 'Jul 3'
-                    ];
-                    new Chart(ctx, {
-                        type: 'line',
-                        data: {
-                            labels: chartLabels,
-                            datasets: [{
-                                label: 'DSEI',
-                                data: chartData,
-                                borderColor: '#C8962E',
-                                backgroundColor: 'rgba(200, 150, 46, 0.1)',
-                                tension: 0.4,
-                                fill: true
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                            maintainAspectRatio: false,
-                            plugins: {
-                                legend: { display: false }
-                            },
-                            scales: {
-                                y: {
-                                    beginAtZero: false,
-                                    suggestedMin: 3900,
-                                    suggestedMax: 4200
-                                }
-                            }
-                        }
-                    });
-                });
-            </script>
+
             <!-- DSE Snapshot Card -->
             <div class="snapshot-card" style="margin-bottom: 2.5rem; position: relative; z-index: 10;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
