@@ -1,0 +1,159 @@
+﻿
+
+Current Prices — EndofDay, Monday 6th July 2026
+Ticker
+Company
+Sector
+Last Price (TZS)
+Change (%)
+Volume
+Turnover (TZS)
+AFRIPRISE
+African Pride
+Commercial Services
+650
+–3.7%
+63,877
+41,617,375
+CRDB
+CRDB Bank
+Banks &amp; Finance
+2,770
+–1.1%
+675,061
+1,867,288,300
+DCB
+Dar es Salaam Community Bank
+Banks &amp; Finance
+495
+–2.0%
+26,935
+13,406,495
+DSE
+Dar es Salaam Stock Exchange
+Commercial Services
+6,340
++0.5%
+6,235
+39,540,570
+KCB
+KCB Group (crosslisted)
+Banks &amp; Finance
+1,920
+0.0%
+14,638
+28,153,660
+MBP
+Maendeleo Bank
+Banks &amp; Finance
+1,840
++0.5%
+4,108
+7,536,450
+MCB
+Mwanga Community Bank
+Banks &amp; Finance
+905
+–0.5%
+11,639
+10,559,055
+MKCB
+Mkamba Commercial Bank
+Banks &amp; Finance
+4,260
+–1.2%
+4,432
+18,822,720
+MUCOBA
+Mucoba Bank
+Banks &amp; Finance
+460
++1.1%
+3,825
+1,777,810
+NICO
+NICO Holdings
+Banks &amp; Finance
+3,850
++0.5%
+26,739
+103,065,240
+NMB
+NMB Bank
+Banks &amp; Finance
+16,480
++0.2%
+356,659¹
+5,836,765,410
+NMG
+Nation Media Group (crosslisted)
+Commercial Services
+260
++2.0%
+219
+58,035
+PAL
+Pal Holdings
+Industrials
+385
++11.6%
+5,703
+2,171,625
+SWIS
+Swissport Tanzania
+Commercial Services
+2,790
+–2.8%
+1,227
+3,423,450
+TBL
+Tanzania Breweries
+Industrials
+9,670
++0.3%
+1,173
+11,351,280
+TCC
+Tanga Cement
+Industrials
+12,400
++0.5%
+484
+5,992,700
+TCCL
+Tanzania Cigarette Company
+Industrials
+3,120
+–4.3%
+405,829²
+1,138,151,660
+TOL
+TOL Gases
+Industrials
+1,450
+–0.7%
+10,238
+14,859,320
+TPCC
+Tanga Portland Cement
+Industrials
+6,360
+0.0%
+6,937
+44,109,390
+TTP
+TTT Pesa
+Commercial Services
+455
+–7.1%
+2,881
+1,336,250
+VODA
+Vodacom Tanzania
+Commercial Services
+820
++1.9%
+28,381
+23,204,520
+¹ Includes 229,000share block trade. ² Includes 400,000share block trade.Change (%) is calculated from opening to closing price. Counters with no opening price (or zero trades) are omitted.
+
