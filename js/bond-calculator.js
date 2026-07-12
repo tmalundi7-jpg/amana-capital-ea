@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    let progChart = null;
+    
     // Inputs
     const fvInput = document.getElementById('fv');
     const crInput = document.getElementById('cr');
@@ -218,6 +220,10 @@ document.addEventListener('DOMContentLoaded', () => {
             let cumNominal = 0;
             let cumReal = 0;
             
+            let chartLabels = [];
+            let chartCumNom = [];
+            let chartCumReal = [];
+            
             for (let year = 1; year <= my; year++) {
                 let nominalCashFlow = yearlyCouponIncome;
                 
@@ -254,6 +260,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 tr.appendChild(tdCumNom);
                 tr.appendChild(tdCumReal);
                 progressionTable.appendChild(tr);
+                
+                chartLabels.push('Year ' + year);
+                chartCumNom.push(cumNominal);
+                chartCumReal.push(cumReal);
             }
             
             outStartCap.innerText = invAmt.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0});
@@ -262,6 +272,60 @@ document.addEventListener('DOMContentLoaded', () => {
             const profitPct = (profit / invAmt) * 100;
             outTotalProfit.innerText = profit.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0}) + ' (' + profitPct.toFixed(1) + '%)';
             outTotalProfit.style.color = profit >= 0 ? 'var(--gain)' : 'var(--loss)';
+
+            // Render Chart
+            const ctx = document.getElementById('progressionChart').getContext('2d');
+            if (progChart) {
+                progChart.destroy();
+            }
+            progChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: chartLabels,
+                    datasets: [
+                        {
+                            label: 'Cum. Nominal Cash (TZS)',
+                            data: chartCumNom,
+                            borderColor: '#818cf8', // light indigo for contrast on dark
+                            backgroundColor: 'rgba(129, 140, 248, 0.1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.2
+                        },
+                        {
+                            label: 'Cum. Real Value (TZS)',
+                            data: chartCumReal,
+                            borderColor: '#d4af37', // gold
+                            backgroundColor: 'rgba(212, 175, 55, 0.1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.2
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    interaction: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                    plugins: {
+                        legend: {
+                            labels: { color: '#f8fafc' }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#94a3b8' },
+                            grid: { color: 'rgba(255,255,255,0.05)' }
+                        },
+                        y: {
+                            ticks: { color: '#94a3b8' },
+                            grid: { color: 'rgba(255,255,255,0.05)' }
+                        }
+                    }
+                }
+            });
         }
     }
 

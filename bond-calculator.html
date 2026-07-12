@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         Weglot.initialize({
             api_key: 'wg_22a6f434974df4dee513e25f34fc5e009'
@@ -177,6 +178,11 @@
                                 <div style="color:var(--mist); font-size:0.75rem; text-transform:uppercase;">Total Profit</div>
                                 <div id="out-total-profit" style="color:var(--gain); font-size:1.2rem; font-weight:700;">0</div>
                             </div>
+                        </div>
+
+                        <!-- Chart Container -->
+                        <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 4px; margin-bottom: 2rem;">
+                            <canvas id="progressionChart" width="400" height="200"></canvas>
                         </div>
 
                         <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
