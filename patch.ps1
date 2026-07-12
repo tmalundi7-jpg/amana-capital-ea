@@ -1,4 +1,4 @@
-$env:PATH += ";C:\Program Files\Git\cmd"
-git add index.html style.css videos/ images/
-git commit -m "Deploy complete homepage architectural overhaul"
+$env:Path += ";C:\Program Files\Git\cmd"
+git add .
+git commit -m "Fix mobile responsiveness and layout overflow for Bond Calculator"
 git push origin main
