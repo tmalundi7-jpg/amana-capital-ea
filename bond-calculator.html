@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institutional Bond Analytics Engine | Amana Capital EA</title>
+    <meta name="description" content="Calculate Yield to Worst, Accrued Interest, and Interest Rate Stress Matrix for Tanzanian government bonds using Amana Capital's analytics engine.">
+    <link rel="canonical" href="https://www.amana-capital-ea.co.tz/bond-calculator" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+    <script>
+        Weglot.initialize({
+            api_key: 'wg_22a6f434974df4dee513e25f34fc5e009'
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="brand-link">
+                <svg viewBox="0 0 32 44" class="brand-icon" aria-hidden="true"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"/><rect x="21" y="0" width="8" height="44" fill="currentColor"/><rect x="0" y="19" width="21" height="4" fill="currentColor"/></svg>
+                <div class="brand-text">
+                    <div class="brand-title">AMANA CAPITAL</div>
+                    <div class="brand-sub">EAST AFRICA</div>
+                </div>
+            </a>
+            
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/market-intelligence">Market Intelligence</a></li>
+                <li><a href="/education">Investor Education</a></li>
+                <li><a href="/bond-calculator" class="active">Bond Calculator</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header section-alt">
+            <div class="container">
+                <h1 style="color:var(--white); margin-bottom: 0.5rem;">Institutional Bond Analytics Engine</h1>
+                <p style="color:var(--gold); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Live Yield to Worst, Accrued Interest, and Stress Matrix calculations.</p>
+            </div>
+        </section>
+
+        <section style="padding: 3rem 0;">
+            <div class="container">
+                <div class="grid-2">
+                    <!-- Calculator Inputs -->
+                    <div class="calc-card">
+                        <h2 style="font-size: 1.3rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--stone); padding-bottom: 0.5rem;">Bond Parameters</h2>
+                        <form id="bond-form">
+                            <div class="form-group">
+                                <label for="fv">Face Value (TZS)</label>
+                                <input type="number" id="fv" class="calc-input" value="100" step="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="cr">Coupon Rate (% p.a.)</label>
+                                <input type="number" id="cr" class="calc-input" value="12.25" step="0.01">
+                            </div>
+                            <div class="form-group">
+                                <label for="my">Maturity (Years)</label>
+                                <input type="number" id="my" class="calc-input" value="20" step="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="ppy">Payments per Year</label>
+                                <select id="ppy" class="calc-input">
+                                    <option value="2" selected>Semi-Annual (2)</option>
+                                    <option value="1">Annual (1)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="mp">Quoted Clean Price (TZS)</label>
+                                <input type="number" id="mp" class="calc-input" value="100.00" step="0.01">
+                            </div>
+                            <div class="form-group">
+                                <label for="dslc">Days Since Last Coupon</label>
+                                <input type="number" id="dslc" class="calc-input" value="0" step="1">
+                            </div>
+                            
+                            <!-- Call Option details -->
+                            <div class="form-group" style="margin-top: 1.5rem; background: var(--cream); padding: 1rem; border-left: 3px solid var(--navy);">
+                                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
+                                    <input type="checkbox" id="isCall"> 
+                                    <strong>Is this bond callable?</strong>
+                                </label>
+                                <div id="call-inputs" style="display: none; margin-top: 1rem;">
+                                    <div class="form-group">
+                                        <label for="cy">Years to Call</label>
+                                        <input type="number" id="cy" class="calc-input" value="5" step="1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cp">Call Price</label>
+                                        <input type="number" id="cp" class="calc-input" value="100" step="0.01">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Analytics Output -->
+                    <div class="calc-card" style="background-color: var(--navy);">
+                        <h2 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">Analytics Report</h2>
+                        
+                        <div class="grid-2" style="gap: 1rem; margin-bottom: 1.5rem;">
+                            <div class="calc-result" style="background: rgba(255,255,255,0.05); border: none;">
+                                <div style="color:var(--mist); font-size:0.8rem; text-transform:uppercase;">Accrued Interest</div>
+                                <div id="out-ai" style="color:var(--white); font-size:1.4rem; font-weight:700;">0.0000</div>
+                            </div>
+                            <div class="calc-result" style="background: rgba(255,255,255,0.05); border: none;">
+                                <div style="color:var(--mist); font-size:0.8rem; text-transform:uppercase;">Total Dirty Price</div>
+                                <div id="out-dp" style="color:var(--white); font-size:1.4rem; font-weight:700;">100.0000</div>
+                            </div>
+                        </div>
+
+                        <div class="calc-result" style="background: var(--gold); border: none; margin-bottom: 1.5rem;">
+                            <div style="color:var(--navy); font-size:0.9rem; text-transform:uppercase; font-weight: 700;">Yield to Worst (YTW)</div>
+                            <div id="out-ytw" style="color:var(--navy); font-size:2rem; font-weight:700;">12.2500%</div>
+                        </div>
+
+                        <div style="display:flex; justify-content:space-between; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                            <div>
+                                <div style="color:var(--mist); font-size:0.8rem; text-transform:uppercase;">Yield to Maturity</div>
+                                <div id="out-ytm" style="color:var(--white); font-weight:600;">12.2500%</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="color:var(--mist); font-size:0.8rem; text-transform:uppercase;">Yield to Call</div>
+                                <div id="out-ytc" style="color:var(--white); font-weight:600;">N/A</div>
+                            </div>
+                        </div>
+
+                        <h3 style="color: var(--white); font-size:1rem; margin-bottom:0.75rem;">Stress Testing Matrix</h3>
+                        <table class="data-table" style="background: transparent; color: var(--white); font-size: 0.9rem;">
+                            <thead>
+                                <tr>
+                                    <th style="background: rgba(255,255,255,0.1); color: var(--gold);">Rate Shock</th>
+                                    <th style="background: rgba(255,255,255,0.1); color: var(--gold); text-align:right;">Price Impact</th>
+                                    <th style="background: rgba(255,255,255,0.1); color: var(--gold); text-align:right;">Est. Price</th>
+                                </tr>
+                            </thead>
+                            <tbody id="stress-matrix">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-disclaimer">This document is for general informational and educational purposes only. Nothing contained herein constitutes financial, investment, legal, or tax advice and should not be relied upon as such. Any investment decision you make is solely your own responsibility. The value of investments and the income from them can go down as well as up, and you may not get back the amount originally invested. Past performance is not a reliable indicator of future results. Capital is at risk, and you may incur losses &mdash; including the total loss of your invested capital &mdash; which you alone will bear. Amana Capital East Africa Limited is a registered investment advisory and fund management firm under the Capital Markets and Securities Authority (CMSA), Tanzania.</div>
+            <div class="footer-links">
+                <div>&copy; 2026 Amana Capital East Africa Limited.</div>
+                <div style="display:flex; gap:1.5rem;">
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Use</a>
+                    <a href="/cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="/js/bond-calculator.js"></script>
+</body>
+</html>
