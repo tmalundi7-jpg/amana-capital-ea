@@ -507,6 +507,8 @@ a:hover { color: var(--gold); }
 
 /* ── Mobile ── */
 @media (max-width: 768px) {
+  .container { padding: 0 1rem; }
+  .calc-card { padding: 1rem; }
   .nav-links {
     display: none;
     flex-direction: column;
