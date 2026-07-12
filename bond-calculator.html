@@ -98,6 +98,17 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <!-- Progression Inputs -->
+                            <h2 style="font-size: 1.1rem; margin: 1.5rem 0 1rem; border-bottom: 1px solid var(--stone); padding-bottom: 0.5rem;">Investment Progression</h2>
+                            <div class="form-group">
+                                <label for="invAmt">Initial Investment Amount (TZS)</label>
+                                <input type="number" id="invAmt" class="calc-input" value="1000000" step="10000">
+                            </div>
+                            <div class="form-group">
+                                <label for="infl">Expected Inflation (% p.a.)</label>
+                                <input type="number" id="infl" class="calc-input" value="5.00" step="0.1">
+                            </div>
                         </form>
                     </div>
 
@@ -121,7 +132,7 @@
                             <div id="out-ytw" style="color:var(--navy); font-size:2rem; font-weight:700;">12.2500%</div>
                         </div>
 
-                        <div style="display:flex; justify-content:space-between; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                        <div style="display:flex; justify-content:space-between; margin-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
                             <div>
                                 <div style="color:var(--mist); font-size:0.8rem; text-transform:uppercase;">Yield to Maturity</div>
                                 <div id="out-ytm" style="color:var(--white); font-weight:600;">12.2500%</div>
@@ -132,8 +143,13 @@
                             </div>
                         </div>
 
+                        <div class="calc-result" style="background: rgba(255,255,255,0.05); border: none; margin-bottom: 2rem;">
+                            <div style="color:var(--mist); font-size:0.8rem; text-transform:uppercase;">Real Yield (Inflation-Adjusted)</div>
+                            <div id="out-real-yield" style="color:var(--gold); font-size:1.6rem; font-weight:700;">0.0000%</div>
+                        </div>
+
                         <h3 style="color: var(--white); font-size:1rem; margin-bottom:0.75rem;">Stress Testing Matrix</h3>
-                        <table class="data-table" style="background: transparent; color: var(--white); font-size: 0.9rem;">
+                        <table class="data-table" style="background: transparent; color: var(--white); font-size: 0.9rem; margin-bottom: 2rem;">
                             <thead>
                                 <tr>
                                     <th style="background: rgba(255,255,255,0.1); color: var(--gold);">Rate Shock</th>
@@ -145,6 +161,23 @@
                                 <!-- Populated by JS -->
                             </tbody>
                         </table>
+
+                        <h3 style="color: var(--white); font-size:1rem; margin-bottom:0.75rem;">Investment Progression (Cash Taken)</h3>
+                        <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                            <table class="data-table" style="background: transparent; color: var(--white); font-size: 0.85rem; width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th style="background: rgba(255,255,255,0.1); color: var(--gold); position: sticky; top: 0;">Year</th>
+                                        <th style="background: rgba(255,255,255,0.1); color: var(--gold); text-align:right; position: sticky; top: 0;">Nominal Income</th>
+                                        <th style="background: rgba(255,255,255,0.1); color: var(--gold); text-align:right; position: sticky; top: 0;">Cum. Nominal</th>
+                                        <th style="background: rgba(255,255,255,0.1); color: var(--gold); text-align:right; position: sticky; top: 0;">Cum. Real Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="progression-table">
+                                    <!-- Populated by JS -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

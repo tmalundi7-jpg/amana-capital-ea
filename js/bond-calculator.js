@@ -20,6 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const outYtc = document.getElementById('out-ytc');
     const outYtw = document.getElementById('out-ytw');
     const stressMatrix = document.getElementById('stress-matrix');
+    
+    // Phase 6 Additions
+    const invAmtInput = document.getElementById('invAmt');
+    const inflInput = document.getElementById('infl');
+    const outRealYield = document.getElementById('out-real-yield');
+    const progressionTable = document.getElementById('progression-table');
 
     // Toggle Call Inputs
     isCallCheckbox.addEventListener('change', () => {
@@ -28,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Attach listeners
-    const inputs = [fvInput, crInput, myInput, ppyInput, mpInput, dslcInput, cyInput, cpInput];
+    const inputs = [fvInput, crInput, myInput, ppyInput, mpInput, dslcInput, cyInput, cpInput, invAmtInput, inflInput];
     inputs.forEach(input => {
         input.addEventListener('input', calculateAnalytics);
     });
@@ -113,6 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const cy = parseInt(cyInput.value) || 0;
         const cp = parseFloat(cpInput.value) || 0;
 
+        const invAmt = parseFloat(invAmtInput.value) || 0;
+        const infl = (parseFloat(inflInput.value) || 0) / 100.0;
+
         // Base Calculations
         const dicp = 180;
         const couponPayment = (fv * cr) / ppy;
@@ -147,6 +156,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         outYtw.innerText = (ytw * 100).toFixed(4) + '%';
+
+        // Real Yield
+        const realYield = ((1 + ytw) / (1 + infl)) - 1;
+        outRealYield.innerText = (realYield * 100).toFixed(4) + '%';
+        outRealYield.style.color = realYield < 0 ? 'var(--loss)' : 'var(--gold)';
 
         // Stress Matrix
         const metrics = calculateRiskMetrics(ytw, activePeriods, activeRedemption, fv, cr, ppy, dslc, dirtyPrice);
@@ -183,6 +197,57 @@ document.addEventListener('DOMContentLoaded', () => {
             tr.appendChild(tdImpact);
             tr.appendChild(tdPrice);
             stressMatrix.appendChild(tr);
+        }
+
+        // Progression Table
+        progressionTable.innerHTML = '';
+        if (invAmt > 0 && my > 0 && dirtyPrice > 0) {
+            // Assume quoted price is per 100 of Face Value. Number of bonds = Investment / dirtyPrice.
+            // Face Value Owned = (Investment / dirtyPrice) * 100
+            // But since 'fv' is customizable, we do (Investment / dirtyPrice) * fv
+            const fvOwned = (invAmt / dirtyPrice) * fv;
+            
+            const yearlyCouponIncome = fvOwned * cr;
+            let cumNominal = 0;
+            let cumReal = 0;
+            
+            for (let year = 1; year <= my; year++) {
+                let nominalCashFlow = yearlyCouponIncome;
+                
+                if (year === my) {
+                    nominalCashFlow += fvOwned;
+                }
+                
+                cumNominal += nominalCashFlow;
+                
+                const realCashFlow = nominalCashFlow / Math.pow(1 + infl, year);
+                cumReal += realCashFlow;
+                
+                const tr = document.createElement('tr');
+                if (year % 2 === 0) tr.style.background = 'rgba(255,255,255,0.02)';
+                
+                const tdYear = document.createElement('td');
+                tdYear.innerText = 'Year ' + year;
+                
+                const tdIncome = document.createElement('td');
+                tdIncome.style.textAlign = 'right';
+                tdIncome.innerText = nominalCashFlow.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                
+                const tdCumNom = document.createElement('td');
+                tdCumNom.style.textAlign = 'right';
+                tdCumNom.innerText = cumNominal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                
+                const tdCumReal = document.createElement('td');
+                tdCumReal.style.textAlign = 'right';
+                tdCumReal.style.fontWeight = '600';
+                tdCumReal.innerText = cumReal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                
+                tr.appendChild(tdYear);
+                tr.appendChild(tdIncome);
+                tr.appendChild(tdCumNom);
+                tr.appendChild(tdCumReal);
+                progressionTable.appendChild(tr);
+            }
         }
     }
 
