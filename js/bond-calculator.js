@@ -274,58 +274,68 @@ document.addEventListener('DOMContentLoaded', () => {
             outTotalProfit.style.color = profit >= 0 ? 'var(--gain)' : 'var(--loss)';
 
             // Render Chart
-            const ctx = document.getElementById('progressionChart').getContext('2d');
-            if (progChart) {
-                progChart.destroy();
-            }
-            progChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: chartLabels,
-                    datasets: [
-                        {
-                            label: 'Cum. Nominal Cash (TZS)',
-                            data: chartCumNom,
-                            borderColor: '#818cf8', // light indigo for contrast on dark
-                            backgroundColor: 'rgba(129, 140, 248, 0.1)',
-                            borderWidth: 2,
-                            fill: true,
-                            tension: 0.2
-                        },
-                        {
-                            label: 'Cum. Real Value (TZS)',
-                            data: chartCumReal,
-                            borderColor: '#d4af37', // gold
-                            backgroundColor: 'rgba(212, 175, 55, 0.1)',
-                            borderWidth: 2,
-                            fill: true,
-                            tension: 0.2
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    interaction: {
-                        mode: 'index',
-                        intersect: false,
-                    },
-                    plugins: {
-                        legend: {
-                            labels: { color: '#f8fafc' }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            ticks: { color: '#94a3b8' },
-                            grid: { color: 'rgba(255,255,255,0.05)' }
-                        },
-                        y: {
-                            ticks: { color: '#94a3b8' },
-                            grid: { color: 'rgba(255,255,255,0.05)' }
-                        }
+            const chartEl = document.getElementById('progressionChart');
+            if (chartEl) {
+                try {
+                    if (typeof Chart === 'undefined') {
+                        throw new Error('Chart library failed to load. Your firewall or adblocker may be blocking it.');
                     }
+                    const ctx = chartEl.getContext('2d');
+                    if (progChart) {
+                        progChart.destroy();
+                    }
+                    progChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: chartLabels,
+                            datasets: [
+                                {
+                                    label: 'Cum. Nominal Cash (TZS)',
+                                    data: chartCumNom,
+                                    borderColor: '#818cf8', // light indigo for contrast on dark
+                                    backgroundColor: 'rgba(129, 140, 248, 0.1)',
+                                    borderWidth: 2,
+                                    fill: true,
+                                    tension: 0.2
+                                },
+                                {
+                                    label: 'Cum. Real Value (TZS)',
+                                    data: chartCumReal,
+                                    borderColor: '#d4af37', // gold
+                                    backgroundColor: 'rgba(212, 175, 55, 0.1)',
+                                    borderWidth: 2,
+                                    fill: true,
+                                    tension: 0.2
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            interaction: {
+                                mode: 'index',
+                                intersect: false,
+                            },
+                            plugins: {
+                                legend: {
+                                    labels: { color: '#f8fafc' }
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    ticks: { color: '#94a3b8' },
+                                    grid: { color: 'rgba(255,255,255,0.05)' }
+                                },
+                                y: {
+                                    ticks: { color: '#94a3b8' },
+                                    grid: { color: 'rgba(255,255,255,0.05)' }
+                                }
+                            }
+                        }
+                    });
+                } catch (e) {
+                    chartEl.parentElement.innerHTML = '<div style="color:var(--loss); text-align:center; padding: 2rem;">Graph could not be rendered: ' + e.message + '</div>';
                 }
-            });
+            }
         }
     }
 
