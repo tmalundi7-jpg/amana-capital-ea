@@ -21,11 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const outYtw = document.getElementById('out-ytw');
     const stressMatrix = document.getElementById('stress-matrix');
     
-    // Phase 6 Additions
     const invAmtInput = document.getElementById('invAmt');
     const inflInput = document.getElementById('infl');
     const outRealYield = document.getElementById('out-real-yield');
     const progressionTable = document.getElementById('progression-table');
+    
+    const outStartCap = document.getElementById('out-start-cap');
+    const outTotalCash = document.getElementById('out-total-cash');
+    const outTotalProfit = document.getElementById('out-total-profit');
 
     // Toggle Call Inputs
     isCallCheckbox.addEventListener('change', () => {
@@ -201,6 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Progression Table
         progressionTable.innerHTML = '';
+        outStartCap.innerText = '0';
+        outTotalCash.innerText = '0';
+        outTotalProfit.innerText = '0';
+        
         if (invAmt > 0 && my > 0 && dirtyPrice > 0) {
             // Assume quoted price is per 100 of Face Value. Number of bonds = Investment / dirtyPrice.
             // Face Value Owned = (Investment / dirtyPrice) * 100
@@ -248,6 +255,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 tr.appendChild(tdCumReal);
                 progressionTable.appendChild(tr);
             }
+            
+            outStartCap.innerText = invAmt.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0});
+            outTotalCash.innerText = cumNominal.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0});
+            const profit = cumNominal - invAmt;
+            const profitPct = (profit / invAmt) * 100;
+            outTotalProfit.innerText = profit.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0}) + ' (' + profitPct.toFixed(1) + '%)';
+            outTotalProfit.style.color = profit >= 0 ? 'var(--gain)' : 'var(--loss)';
         }
     }
 
