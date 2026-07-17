@@ -83,8 +83,11 @@
     </nav>
 
     <!-- Header Section -->
-    <section class="bg-navy section-pad" style="padding-bottom: 4rem; padding-top: 4rem;">
-        <div class="container text-center">
+    <section class="bg-navy section-pad" style="padding-bottom: 4rem; padding-top: 5rem; position: relative; overflow: hidden;">
+        <!-- Subtle gold background glow emanating from behind the box -->
+        <div style="position: absolute; top: -20%; left: 50%; transform: translateX(-50%); width: 1000px; height: 1000px; background: radial-gradient(circle, rgba(200,150,46,0.15) 0%, rgba(11,29,58,0) 60%); border-radius: 50%; pointer-events: none; z-index: 0;"></div>
+        
+        <div class="container text-center" style="position: relative; z-index: 1; max-width: 850px; margin: 0 auto; background-color: var(--navy); border: 2px solid var(--gold); border-radius: 12px; padding: 4rem 2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
             <div style="display: inline-block; padding: 0.4rem 1.2rem; background-color: rgba(200, 150, 46, 0.1); border: 1px solid rgba(200, 150, 46, 0.3); border-radius: 30px; margin-bottom: 1.5rem;">
                 <span style="color: var(--gold); font-size: 0.85rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Master The Markets</span>
             </div>
