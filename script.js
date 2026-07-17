@@ -185,7 +185,15 @@ window.initBondCalculator = function() {
         
         if (progChart) progChart.destroy();
         
-        if (typeof Chart === 'undefined') return;
+        if (typeof Chart === 'undefined') {
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js';
+            script.onload = () => {
+                renderProgressionChart(labels, principalData, incomeData);
+            };
+            document.head.appendChild(script);
+            return;
+        }
 
         progChart = new Chart(ctx, {
             type: 'line',
