@@ -169,11 +169,14 @@ window.initBondCalculator = function() {
             const bps = s * 10000;
             const sign = bps > 0 ? '+' : '';
             
+            const bpsColor = bps < 0 ? 'var(--loss)' : 'var(--gain)';
+            const impactColor = s > 0 ? 'var(--loss)' : 'var(--gain)'; // positive yield shock = negative price impact
+            
             const rowBg = i % 2 !== 0 ? 'background: rgba(255,255,255,0.02);' : 'background: transparent;';
             html += `<tr style="${rowBg}">
-                <td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--white);">${sign}${bps} bps</td>
-                <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--white); font-weight:600;">${sign}${(s * 100).toFixed(1)}%</td>
-                <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--white);">${pctPriceStr}</td>
+                <td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: ${bpsColor};">${sign}${bps} bps</td>
+                <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: ${impactColor}; font-weight:600;">${sign}${(s * 100).toFixed(1)}%</td>
+                <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain);">${pctPriceStr}</td>
             </tr>`;
         });
         return html;
@@ -350,10 +353,10 @@ window.initBondCalculator = function() {
 
                 const rowBg = year % 2 === 0 ? 'background: rgba(255,255,255,0.02);' : 'background: transparent;';
                 tableHtml += `<tr style="${rowBg}">
-                    <td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--white);">${year}${isMaturityYear ? ' (Mat/Call)' : ''}</td>
-                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--white);">TZS ${formatCurrency(thisYearIncome)}</td>
-                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--white);">TZS ${formatCurrency(cumIncome)}</td>
-                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--white); font-weight:600;">TZS ${formatCurrency(currentRealValue)}</td>
+                    <td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain);">${year}${isMaturityYear ? ' (Mat/Call)' : ''}</td>
+                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain);">TZS ${formatCurrency(thisYearIncome)}</td>
+                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain);">TZS ${formatCurrency(cumIncome)}</td>
+                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain); font-weight:600;">TZS ${formatCurrency(currentRealValue)}</td>
                 </tr>`;
             }
 
