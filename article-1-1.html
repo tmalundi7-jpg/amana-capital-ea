@@ -7,19 +7,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .article-container { max-width: 800px; margin: 4rem auto; padding: 2rem; background: var(--cream); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .article-content { font-family: 'Alef', sans-serif; color: var(--navy); }
-        .article-content h1 { color: var(--navy); margin-bottom: 0.5rem; font-size: 2.2rem; }
-        .article-content h2, .article-content h3, .article-content h4 { color: var(--navy); margin-top: 2rem; margin-bottom: 1rem; }
-        .article-content p { line-height: 1.7; margin-bottom: 1.5rem; font-size: 1.1rem; }
-        .article-content ul, .article-content ol { margin-bottom: 1.5rem; padding-left: 2rem; }
-        .article-content li { margin-bottom: 0.5rem; line-height: 1.6; font-size: 1.1rem; }
-        .article-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
-        .article-content th, .article-content td { border: 1px solid #d1d5db; padding: 0.75rem; text-align: left; }
-        .article-content th { background-color: var(--navy); color: white; }
-        .apply-it { background: var(--cream); border-left: 4px solid var(--gold); padding: 1.5rem; margin: 2rem 0; font-style: italic; }
-        .breadcrumb { margin-bottom: 2rem; font-size: 0.9rem; }
-        .breadcrumb a { color: var(--gold); text-decoration: none; }
+
+        .article-container { max-width: 800px; margin: 4rem auto; padding: 3rem; background: #ffffff; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08), 0 1px 8px rgba(0,0,0,0.03); border-top: 5px solid var(--gold); }
+        body { background-color: #f4f6f8; }
+        .article-content { font-family: 'Inter', sans-serif; color: #334155; }
+        .article-content h1 { color: var(--navy); margin-bottom: 0.5rem; font-size: 2.5rem; font-family: 'Merriweather', serif; font-weight: 700; line-height: 1.2; letter-spacing: -0.5px; }
+        .article-content h2, .article-content h3, .article-content h4 { color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.2rem; font-family: 'Merriweather', serif; font-weight: 700; }
+        .article-content p { line-height: 1.8; margin-bottom: 1.8rem; font-size: 1.15rem; color: #475569; }
+        .article-content ul, .article-content ol { margin-bottom: 1.8rem; padding-left: 2rem; }
+        .article-content li { margin-bottom: 0.8rem; line-height: 1.7; font-size: 1.15rem; color: #475569; }
+        .article-content table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .article-content th, .article-content td { border: 1px solid #e2e8f0; padding: 1rem; text-align: left; }
+        .article-content th { background-color: var(--navy); color: white; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+        .article-content tr:nth-child(even) { background-color: #f8fafc; }
+        .apply-it { background: transparent; border: 2px solid var(--gold); padding: 2rem; margin: 3rem 0; border-radius: 8px; box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.05); position: relative; }
+        .apply-it p { margin-bottom: 0; }
+        .apply-it p:first-child strong { color: var(--gold); text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.9rem; display: block; margin-bottom: 0.5rem; }
+        .breadcrumb { margin-bottom: 3rem; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+        .breadcrumb a { color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; transition: all 0.2s ease; }
+        .breadcrumb a:hover { color: var(--navy); transform: translateX(-5px); }
+        .article-crosslink { color: var(--navy); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--gold); transition: all 0.2s ease; }
+        .article-crosslink:hover { background-color: rgba(212, 175, 55, 0.1); color: var(--navy); }
+        .article-disclaimer { border: 2px solid var(--gold); padding: 2rem; margin-top: 4rem; color: var(--gold); font-size: 0.9rem; line-height: 1.6; text-align: justify; border-radius: 8px; background: transparent; }
+
     </style>
     <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
     <script>
@@ -111,14 +121,14 @@ In the most recent data, Tanzania’s economy has been growing at roughly 5–6%
 <p>Combine these with the market data we provide every trading day, and you will begin to see patterns — for example, that a falling interest rate often precedes a rally in banking stocks.</p>
 <p><strong>6. From Macro to Market: The Daily DSE Wrap Connection</strong></p>
 <p>In every Daily DSE Wrap, we start with the <strong>Market Pulse</strong> — a snapshot of the day’s turnover, indices, and foreign flow. That snapshot is the heartbeat of the Tanzanian economy as expressed through its listed companies. When we say “the banking sector led the market higher,” the reason is embedded in the economic story you now understand.</p>
-<ul><li><strong>Next time you read the Daily Wrap</strong>, ask yourself: What is the economy doing that might explain this move?</li><li>If you want to go deeper into how to analyse a specific banking stock, proceed to our article  (Module 4.3).</li></ul>
+<ul><li><strong>Next time you read the Daily Wrap</strong>, ask yourself: What is the economy doing that might explain this move?</li><li>If you want to go deeper into how to analyse a specific banking stock, proceed to our article <a href="/article-4-3" class="article-crosslink"><strong>“How to Analyse a Sector: Banking”</strong></a> (Module 4.3).</li></ul>
 <p><strong>Key Takeaway</strong></p>
 <p>An economy is not a mysterious force. It is the total of millions of everyday transactions. By understanding its direction, you gain a powerful lens through which to view every company, every sector, and every market movement. The economy provides the context; the Daily DSE Wrap provides the daily translation.</p>
 <p><strong>Put It </strong><strong>Into</strong><strong> Practice</strong></p>
 <p>Open today’s Daily DSE Wrap and identify <strong>one piece of data</strong> that you can now explain using the economic concepts you have just learned. Write down your observation. In time, this small daily habit will build your ability to connect macroeconomics to market movements effortlessly.</p>
 <p><strong>Further Reading</strong></p>
-<p>Now that you understand what an economy is, learn who controls its temperature in .</p>
-<p>This document is for general informational and educational purposes only. Nothing contained herein constitutes financial, investment, legal, or tax advice and should not be relied upon as such. Any investment decision you make is solely your own responsibility. The value of investments and the income from them can go down as well as up, and you may not get back the amount originally invested. Past performance is not a reliable indicator of future results. Capital is at risk, and you may incur losses — including the total loss of your invested capital — which you alone will bear. Amana Capital East Africa Limited is a registered investment advisory and fund management firm under the Capital Markets and Securities Authority (CMSA), Tanzania. Licence number: [pending]. Our registration does not imply that CMSA approves or endorses the contents of this material.</p>
+<p>Now that you understand what an economy is, learn who controls its temperature in <a href="/article-1-2" class="article-crosslink"><strong>Article 1.2 – The Bank of Tanzania and the Price of Money</strong></a>.</p>
+<div class="article-disclaimer">This document is for general informational and educational purposes only. Nothing contained herein constitutes financial, investment, legal, or tax advice and should not be relied upon as such. Any investment decision you make is solely your own responsibility. The value of investments and the income from them can go down as well as up, and you may not get back the amount originally invested. Past performance is not a reliable indicator of future results. Capital is at risk, and you may incur losses — including the total loss of your invested capital — which you alone will bear. Amana Capital East Africa Limited is a registered investment advisory and fund management firm under the Capital Markets and Securities Authority (CMSA), Tanzania. Licence number: [pending]. Our registration does not imply that CMSA approves or endorses the contents of this material.</div>
             </div>
         </div>
     </main>

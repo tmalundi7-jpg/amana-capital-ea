@@ -7,19 +7,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .article-container { max-width: 800px; margin: 4rem auto; padding: 2rem; background: var(--cream); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .article-content { font-family: 'Alef', sans-serif; color: var(--navy); }
-        .article-content h1 { color: var(--navy); margin-bottom: 0.5rem; font-size: 2.2rem; }
-        .article-content h2, .article-content h3, .article-content h4 { color: var(--navy); margin-top: 2rem; margin-bottom: 1rem; }
-        .article-content p { line-height: 1.7; margin-bottom: 1.5rem; font-size: 1.1rem; }
-        .article-content ul, .article-content ol { margin-bottom: 1.5rem; padding-left: 2rem; }
-        .article-content li { margin-bottom: 0.5rem; line-height: 1.6; font-size: 1.1rem; }
-        .article-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
-        .article-content th, .article-content td { border: 1px solid #d1d5db; padding: 0.75rem; text-align: left; }
-        .article-content th { background-color: var(--navy); color: white; }
-        .apply-it { background: var(--cream); border-left: 4px solid var(--gold); padding: 1.5rem; margin: 2rem 0; font-style: italic; }
-        .breadcrumb { margin-bottom: 2rem; font-size: 0.9rem; }
-        .breadcrumb a { color: var(--gold); text-decoration: none; }
+
+        .article-container { max-width: 800px; margin: 4rem auto; padding: 3rem; background: #ffffff; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08), 0 1px 8px rgba(0,0,0,0.03); border-top: 5px solid var(--gold); }
+        body { background-color: #f4f6f8; }
+        .article-content { font-family: 'Inter', sans-serif; color: #334155; }
+        .article-content h1 { color: var(--navy); margin-bottom: 0.5rem; font-size: 2.5rem; font-family: 'Merriweather', serif; font-weight: 700; line-height: 1.2; letter-spacing: -0.5px; }
+        .article-content h2, .article-content h3, .article-content h4 { color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.2rem; font-family: 'Merriweather', serif; font-weight: 700; }
+        .article-content p { line-height: 1.8; margin-bottom: 1.8rem; font-size: 1.15rem; color: #475569; }
+        .article-content ul, .article-content ol { margin-bottom: 1.8rem; padding-left: 2rem; }
+        .article-content li { margin-bottom: 0.8rem; line-height: 1.7; font-size: 1.15rem; color: #475569; }
+        .article-content table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .article-content th, .article-content td { border: 1px solid #e2e8f0; padding: 1rem; text-align: left; }
+        .article-content th { background-color: var(--navy); color: white; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+        .article-content tr:nth-child(even) { background-color: #f8fafc; }
+        .apply-it { background: transparent; border: 2px solid var(--gold); padding: 2rem; margin: 3rem 0; border-radius: 8px; box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.05); position: relative; }
+        .apply-it p { margin-bottom: 0; }
+        .apply-it p:first-child strong { color: var(--gold); text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.9rem; display: block; margin-bottom: 0.5rem; }
+        .breadcrumb { margin-bottom: 3rem; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+        .breadcrumb a { color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; transition: all 0.2s ease; }
+        .breadcrumb a:hover { color: var(--navy); transform: translateX(-5px); }
+        .article-crosslink { color: var(--navy); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--gold); transition: all 0.2s ease; }
+        .article-crosslink:hover { background-color: rgba(212, 175, 55, 0.1); color: var(--navy); }
+        .article-disclaimer { border: 2px solid var(--gold); padding: 2rem; margin-top: 4rem; color: var(--gold); font-size: 0.9rem; line-height: 1.6; text-align: justify; border-radius: 8px; background: transparent; }
+
     </style>
     <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
     <script>
@@ -116,17 +126,17 @@
 <p>We track inflation closely in the Daily DSE Wrap. Whenever the National Bureau of Statistics releases the monthly CPI figure, or whenever the BOT issues a monetary policy statement, we analyse the implications for the market. Those updates are your direct bridge between the macro concepts in this article and the practical investment decisions you face.</p>
 <p><strong>6. How to Track the BOT’s Actions Yourself</strong></p>
 <p>You don’t need inside access. Use these free public sources:</p>
-<ul><li><strong>BOT website (</strong><strong>):</strong> Monetary policy statements, auction results, and the monthly economic review. Bookmark it.</li><li><strong>DSE daily reports:</strong> Already on your site. The bond turnover data tells you if institutions are chasing yield or parking cash.</li><li><strong>News media:</strong> Major BOT decisions are covered by The Citizen, Daily News, and Bloomberg Africa.</li><li><strong>Our Daily DSE Wrap:</strong> We explicitly connect BOT policy shifts to the day’s equity and bond market movements.</li></ul>
+<ul><li><strong>BOT website (</strong><span class="article-crosslink"><strong>www.bot.go.tz</strong></span><strong>):</strong> Monetary policy statements, auction results, and the monthly economic review. Bookmark it.</li><li><strong>DSE daily reports:</strong> Already on your site. The bond turnover data tells you if institutions are chasing yield or parking cash.</li><li><strong>News media:</strong> Major BOT decisions are covered by The Citizen, Daily News, and Bloomberg Africa.</li><li><strong>Our Daily DSE Wrap:</strong> We explicitly connect BOT policy shifts to the day’s equity and bond market movements.</li></ul>
 <p><strong>7. From Macro to Market: The Daily DSE Wrap Connection</strong></p>
 <p>In every Daily DSE Wrap, the <strong>Market Pulse</strong> section gives you the day’s bond activity, foreign flow, and index movements. When you see a spike in bond turnover or a sudden rally in banking stocks, the root cause is often a BOT action or a shift in rate expectations. By understanding how the central bank operates, you can anticipate these moves rather than just observe them.</p>
-<ul><li><strong>Next time you read the Daily Wrap</strong>, ask yourself: What did the BOT do recently that might explain this sector’s performance?</li><li>If you want to learn how to apply this to individual banking stocks, proceed to our article  (Module 4.3).</li></ul>
+<ul><li><strong>Next time you read the Daily Wrap</strong>, ask yourself: What did the BOT do recently that might explain this sector’s performance?</li><li>If you want to learn how to apply this to individual banking stocks, proceed to our article <a href="/article-4-3" class="article-crosslink"><strong>“How to Analyse a Sector: Banking”</strong></a> (Module 4.3).</li></ul>
 <p><strong>Key Takeaway</strong></p>
 <p>The Bank of Tanzania controls the price of money. When money is cheap, businesses grow, consumers spend, and stock markets tend to rise. When money becomes expensive, the opposite happens. As an investor, you cannot control these cycles, but you can understand them — and that understanding gives you an enormous edge over those who simply guess.</p>
 <p><strong>Put It </strong><strong>Into</strong><strong> Practice</strong></p>
 <p>Open today’s Daily DSE Wrap and identify the bond turnover figure. Now ask yourself: What does this tell me about where the big money is flowing — into fixed income or equities? The answer is often the key to the next market move.</p>
 <p><strong>Further Reading</strong></p>
-<p>Now that you understand the central bank’s role, examine the silent force that can undo your hard work in .</p>
-<p>This document is for general informational and educational purposes only. Nothing contained herein constitutes financial, investment, legal, or tax advice and should not be relied upon as such. Any investment decision you make is solely your own responsibility. The value of investments and the income from them can go down as well as up, and you may not get back the amount originally invested. Past performance is not a reliable indicator of future results. Capital is at risk, and you may incur losses — including the total loss of your invested capital — which you alone will bear. Amana Capital East Africa Limited is a registered investment advisory and fund management firm under the Capital Markets and Securities Authority (CMSA), Tanzania. Licence number: [pending]. Our registration does not imply that CMSA approves or endorses the contents of this material.</p>
+<p>Now that you understand the central bank’s role, examine the silent force that can undo your hard work in <a href="/article-1-3" class="article-crosslink"><strong>Article 1.3 – Inflation: The Silent Erosion of Your Wealth</strong></a>.</p>
+<div class="article-disclaimer">This document is for general informational and educational purposes only. Nothing contained herein constitutes financial, investment, legal, or tax advice and should not be relied upon as such. Any investment decision you make is solely your own responsibility. The value of investments and the income from them can go down as well as up, and you may not get back the amount originally invested. Past performance is not a reliable indicator of future results. Capital is at risk, and you may incur losses — including the total loss of your invested capital — which you alone will bear. Amana Capital East Africa Limited is a registered investment advisory and fund management firm under the Capital Markets and Securities Authority (CMSA), Tanzania. Licence number: [pending]. Our registration does not imply that CMSA approves or endorses the contents of this material.</div>
             </div>
         </div>
     </main>

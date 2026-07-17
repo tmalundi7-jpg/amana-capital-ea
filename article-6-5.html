@@ -7,19 +7,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .article-container { max-width: 800px; margin: 4rem auto; padding: 2rem; background: var(--cream); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .article-content { font-family: 'Alef', sans-serif; color: var(--navy); }
-        .article-content h1 { color: var(--navy); margin-bottom: 0.5rem; font-size: 2.2rem; }
-        .article-content h2, .article-content h3, .article-content h4 { color: var(--navy); margin-top: 2rem; margin-bottom: 1rem; }
-        .article-content p { line-height: 1.7; margin-bottom: 1.5rem; font-size: 1.1rem; }
-        .article-content ul, .article-content ol { margin-bottom: 1.5rem; padding-left: 2rem; }
-        .article-content li { margin-bottom: 0.5rem; line-height: 1.6; font-size: 1.1rem; }
-        .article-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
-        .article-content th, .article-content td { border: 1px solid #d1d5db; padding: 0.75rem; text-align: left; }
-        .article-content th { background-color: var(--navy); color: white; }
-        .apply-it { background: var(--cream); border-left: 4px solid var(--gold); padding: 1.5rem; margin: 2rem 0; font-style: italic; }
-        .breadcrumb { margin-bottom: 2rem; font-size: 0.9rem; }
-        .breadcrumb a { color: var(--gold); text-decoration: none; }
+
+        .article-container { max-width: 800px; margin: 4rem auto; padding: 3rem; background: #ffffff; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08), 0 1px 8px rgba(0,0,0,0.03); border-top: 5px solid var(--gold); }
+        body { background-color: #f4f6f8; }
+        .article-content { font-family: 'Inter', sans-serif; color: #334155; }
+        .article-content h1 { color: var(--navy); margin-bottom: 0.5rem; font-size: 2.5rem; font-family: 'Merriweather', serif; font-weight: 700; line-height: 1.2; letter-spacing: -0.5px; }
+        .article-content h2, .article-content h3, .article-content h4 { color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.2rem; font-family: 'Merriweather', serif; font-weight: 700; }
+        .article-content p { line-height: 1.8; margin-bottom: 1.8rem; font-size: 1.15rem; color: #475569; }
+        .article-content ul, .article-content ol { margin-bottom: 1.8rem; padding-left: 2rem; }
+        .article-content li { margin-bottom: 0.8rem; line-height: 1.7; font-size: 1.15rem; color: #475569; }
+        .article-content table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .article-content th, .article-content td { border: 1px solid #e2e8f0; padding: 1rem; text-align: left; }
+        .article-content th { background-color: var(--navy); color: white; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+        .article-content tr:nth-child(even) { background-color: #f8fafc; }
+        .apply-it { background: transparent; border: 2px solid var(--gold); padding: 2rem; margin: 3rem 0; border-radius: 8px; box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.05); position: relative; }
+        .apply-it p { margin-bottom: 0; }
+        .apply-it p:first-child strong { color: var(--gold); text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.9rem; display: block; margin-bottom: 0.5rem; }
+        .breadcrumb { margin-bottom: 3rem; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+        .breadcrumb a { color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; transition: all 0.2s ease; }
+        .breadcrumb a:hover { color: var(--navy); transform: translateX(-5px); }
+        .article-crosslink { color: var(--navy); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--gold); transition: all 0.2s ease; }
+        .article-crosslink:hover { background-color: rgba(212, 175, 55, 0.1); color: var(--navy); }
+        .article-disclaimer { border: 2px solid var(--gold); padding: 2rem; margin-top: 4rem; color: var(--gold); font-size: 0.9rem; line-height: 1.6; text-align: justify; border-radius: 8px; background: transparent; }
+
     </style>
     <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
     <script>
@@ -65,10 +75,10 @@ Instead of investing a large lump sum at once, you invest a fixed amount at regu
 <p>Even TZS 100,000 per month will compound into substantial wealth over decades.</p>
 <p><strong>The Psychological Benefit</strong>
 Monthly investing removes constant decision-making. You are no longer asking, “Is now a good time to buy?” because the answer is always yes — you’re investing for 2035, not next week. The Daily DSE Wrap becomes a source of information and comfort, not a trigger for action.</p>
-<p><strong>Further Reading:</strong> Master the art of reading the Daily Wrap with .</p>
+<p><strong>Further Reading:</strong> Master the art of reading the Daily Wrap with <a href="/article-7-1" class="article-crosslink">How to Read the Daily DSE Wrap Like an Analyst</a>.</p>
 <p><strong>APPLY IT NOW</strong>
 If you haven’t already, set up a standing order this week for a monthly investment amount. Start small if necessary. The habit itself is more important than the amount.</p>
-<p>This document is for general informational and educational purposes only. Nothing contained herein constitutes financial, investment, legal, or tax advice and should not be relied upon as such. Any investment decision you make is solely your own responsibility. The value of investments and the income from them can go down as well as up, and you may not get back the amount originally invested. Past performance is not a reliable indicator of future results. Capital is at risk, and you may incur losses — including the total loss of your invested capital — which you alone will bear. Amana Capital East Africa Limited is a registered investment advisory and fund management firm under the Capital Markets and Securities Authority (CMSA), Tanzania. Licence number: [pending]. Our registration does not imply that CMSA approves or endorses the contents of this material.</p>
+<div class="article-disclaimer">This document is for general informational and educational purposes only. Nothing contained herein constitutes financial, investment, legal, or tax advice and should not be relied upon as such. Any investment decision you make is solely your own responsibility. The value of investments and the income from them can go down as well as up, and you may not get back the amount originally invested. Past performance is not a reliable indicator of future results. Capital is at risk, and you may incur losses — including the total loss of your invested capital — which you alone will bear. Amana Capital East Africa Limited is a registered investment advisory and fund management firm under the Capital Markets and Securities Authority (CMSA), Tanzania. Licence number: [pending]. Our registration does not imply that CMSA approves or endorses the contents of this material.</div>
             </div>
         </div>
     </main>
