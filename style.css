@@ -620,3 +620,38 @@ a:hover { color: var(--gold); }
 .theme-toggle:hover {
   transform: scale(1.1);
 }
+
+/* ── SPA Page Transitions (Swup) ── */
+.transition-fade {
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+/* ── Premium Interactions ── */
+.btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(200, 150, 46, 0.3);
+}
+
+.nav-links a {
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--gold);
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after, .nav-links a.active::after {
+  width: 100%;
+}
