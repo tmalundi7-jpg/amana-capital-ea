@@ -623,14 +623,12 @@ a:hover { color: var(--gold); }
 
 /* ── SPA Page Transitions (Swup) ── */
 .transition-fade {
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  transition: opacity 0.1s ease-out;
   opacity: 1;
-  transform: translateY(0);
 }
 
 html.is-animating .transition-fade {
-  opacity: 0;
-  transform: translateY(15px);
+  opacity: 0.3;
 }
 
 /* ── Premium Interactions ── */
