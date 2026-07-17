@@ -18,9 +18,11 @@ def iter_block_items(parent):
         elif isinstance(child, CT_Tbl): yield Table(child, parent)
 
 def get_html_from_paragraph(p):
-    html = ""
+    # Returns a list of lines since a paragraph can contain \n
+    lines = []
+    current_line = ""
     raw_text = p.text.strip()
-    if not raw_text: return ""
+    if not raw_text: return []
     
     bold_len = sum(len(run.text) for run in p.runs if run.bold)
     keep_bold = bold_len < len(raw_text) * 0.5
@@ -28,12 +30,25 @@ def get_html_from_paragraph(p):
     for run in p.runs:
         text = run.text.replace("<", "&lt;").replace(">", "&gt;")
         if not text: continue
-        if run.bold and keep_bold:
-            text = f"<strong>{text}</strong>"
-        if run.italic:
-            text = f"<em>{text}</em>"
-        html += text
-    return html.strip()
+        
+        parts = text.split('\n')
+        for i, part in enumerate(parts):
+            if i > 0:
+                lines.append(current_line.strip())
+                current_line = ""
+            
+            if part.strip():
+                if run.bold and keep_bold:
+                    current_line += f"<strong>{part}</strong>"
+                elif run.italic:
+                    current_line += f"<em>{part}</em>"
+                else:
+                    current_line += part
+                    
+    if current_line.strip():
+        lines.append(current_line.strip())
+        
+    return lines
 
 in_list = False
 found_article = False
@@ -49,49 +64,51 @@ for block in iter_block_items(doc):
             lines_content.append(f"<h1>Article 1.7 - {title}</h1>")
             continue
             
-        # If we reach another Article, break
-        if found_article and re.match(r'^Article \d\.\d', text):
+        if found_article and (re.match(r'^Article \d\.\d', text) or "Article 6.6" in text):
             if in_list:
                 lines_content.append("</ul>")
                 in_list = False
             break
             
         if found_article:
-            html_text = get_html_from_paragraph(block)
-            if not html_text: continue
-            
-            is_bullet = False
-            if html_text.startswith("- ") or html_text.startswith("• "):
-                is_bullet = True
-                html_text = html_text[2:].strip()
+            html_lines = get_html_from_paragraph(block)
+            for html_text in html_lines:
+                if not html_text: continue
                 
-            if is_bullet:
-                if not in_list:
-                    lines_content.append("<ul>")
-                    in_list = True
-                lines_content.append(f"<li>{html_text}</li>")
-                continue
-            else:
-                if in_list:
-                    lines_content.append("</ul>")
-                    in_list = False
+                is_bullet = False
+                if html_text.startswith("- ") or html_text.startswith("• "):
+                    is_bullet = True
+                    html_text = html_text[2:].strip()
+                    
+                if is_bullet:
+                    if not in_list:
+                        lines_content.append("<ul>")
+                        in_list = True
+                    lines_content.append(f"<li>{html_text}</li>")
+                    continue
+                else:
+                    if in_list:
+                        lines_content.append("</ul>")
+                        in_list = False
 
-            if html_text.startswith("By Amana Capital"):
-                lines_content.append(f"<p><em><strong>{html_text}</strong></em></p>")
-            elif html_text.startswith("This document is for general") or "This content is for informational" in html_text:
-                lines_content.append(f'<div class="article-disclaimer"><p>{html_text}</p></div>')
-            elif "Further Reading" in html_text:
-                lines_content.append(f'<div class="further-reading"><p><strong>Further Reading</strong></p><p>{html_text.replace("Further Reading: ", "").replace("<strong>Further Reading</strong>", "")}</p></div>')
-            elif "Put It Into Practice" in html_text:
-                lines_content.append(f'<div class="apply-it"><p><strong>Put It Into Practice</strong></p>')
-            elif "Open today" in html_text or ("daily DSE wrap" in html_text.lower() and "practice" in "".join(lines_content[-2:]).lower()):
-                 lines_content.append(f'<p>{html_text}</p></div>')
-            elif re.match(r'^<strong>\d\.\s', html_text) or re.match(r'^\d\.\s', html_text):
-                lines_content.append(f"<h3>{html_text.replace('<strong>', '').replace('</strong>', '')}</h3>")
-            elif html_text.lower() == "key takeaway":
-                lines_content.append(f"<h3>Key Takeaway</h3>")
-            else:
-                lines_content.append(f"<p>{html_text}</p>")
+                if html_text.startswith("By Amana Capital"):
+                    lines_content.append(f"<p><em><strong>{html_text}</strong></em></p>")
+                elif html_text.startswith("This document is for general") or "This content is for informational" in html_text:
+                    lines_content.append(f'<div class="article-disclaimer"><p>{html_text}</p></div>')
+                elif "Further Reading" in html_text:
+                    if html_text == "Further Reading":
+                        continue
+                    lines_content.append(f'<div class="further-reading"><p><strong>Further Reading</strong></p><p>{html_text.replace("Further Reading: ", "").replace("<strong>Further Reading</strong>", "")}</p></div>')
+                elif "Put It Into Practice" in html_text:
+                    lines_content.append(f'<div class="apply-it"><p><strong>Put It Into Practice</strong></p>')
+                elif "Open today" in html_text or ("daily DSE wrap" in html_text.lower() and "practice" in "".join(lines_content[-2:]).lower()):
+                     lines_content.append(f'<p>{html_text}</p></div>')
+                elif re.match(r'^<strong>\d\.\s', html_text) or re.match(r'^\d\.\s', html_text):
+                    lines_content.append(f"<h3>{html_text.replace('<strong>', '').replace('</strong>', '')}</h3>")
+                elif html_text.lower() == "key takeaway":
+                    lines_content.append(f"<h3>Key Takeaway</h3>")
+                else:
+                    lines_content.append(f"<p>{html_text}</p>")
                 
     elif isinstance(block, Table):
         if found_article:
@@ -102,7 +119,7 @@ for block in iter_block_items(doc):
             for row_idx, row in enumerate(block.rows):
                 table_html.append("  <tr>")
                 for cell in row.cells:
-                    cell_html = "<br/>".join([get_html_from_paragraph(p) for p in cell.paragraphs if p.text.strip()])
+                    cell_html = "<br/>".join([" ".join(get_html_from_paragraph(p)) for p in cell.paragraphs if p.text.strip()])
                     if row_idx == 0:
                         table_html.append(f"    <th><strong>{cell_html.replace('<strong>','').replace('</strong>','')}</strong></th>")
                     else:
