@@ -13,7 +13,7 @@ for article in articles:
         mod_num = match.group(1)
         art_num = match.group(2)
         base_title = match.group(3).strip()
-        url = f'/article-{mod_num}-{art_num}'
+        url = f'article-{mod_num}-{art_num}.html'
         
         # Clean the base title for matching
         clean_base = re.sub(r'<[^>]+>', '', base_title).replace('\ufffd', '-').replace('\u2013', '-').replace('\u2014', '-')
@@ -64,7 +64,7 @@ wow_factor_css = """
         .breadcrumb a { color: #b8962e; text-decoration: none; display: inline-flex; align-items: center; transition: all 0.2s ease; }
         .breadcrumb a:hover { color: var(--navy); transform: translateX(-5px); }
         .article-crosslink { color: #9c8024; font-weight: 400; text-decoration: none; border-bottom: 2px solid rgba(184, 150, 46, 0.3); transition: all 0.2s ease; }
-        .article-crosslink:hover { background-color: rgba(184, 150, 46, 0.1); border-bottom-color: #9c8024; color: var(--navy); }
+        .article-crosslink:hover { background-color: transparent; border-bottom-color: #9c8024; color: #9c8024; }
         .article-disclaimer { border: 1px solid #b8962e; background-color: #f8fafc; padding: 2rem; margin-top: 4rem; color: #64748b; font-size: 0.9rem; line-height: 1.6; text-align: justify; border-radius: 8px; }
 """
 
