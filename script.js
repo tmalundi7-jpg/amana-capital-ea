@@ -1,29 +1,9 @@
 // Amana Capital East Africa - Main Application Script
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Initialize SPA Router (Swup)
-    const swup = new Swup({
-        animationSelector: '[class*="transition-"]',
-        cache: true
-    });
-
-    // 2. Initialize modules on first load
+    // Initialize modules on standard page load
     initMobileMenu();
     initBondCalculator();
-
-    // 3. Re-initialize modules after every page transition
-    swup.hooks.on('page:view', () => {
-        initMobileMenu();
-        initBondCalculator();
-        
-        // Re-initialize Weglot if present
-        if (typeof Weglot !== 'undefined') {
-            Weglot.initialize({ api_key: 'wg_22a6f434974df4dee513e25f34fc5e009' });
-        }
-        
-        // Scroll to top on transition
-        window.scrollTo(0, 0);
-    });
 });
 
 // --- Mobile Navigation Logic ---
