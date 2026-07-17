@@ -154,7 +154,7 @@ window.initBondCalculator = function() {
         const dicp = 180;
         const w = 1.0 - (dslc / dicp);
         
-        shocks.forEach(s => {
+        shocks.forEach((s, i) => {
             const shockedYield = baseYield + s;
             const shockedPeriodYield = shockedYield / ppy;
             let p = 0.0;
@@ -169,9 +169,10 @@ window.initBondCalculator = function() {
             const sign = bps > 0 ? '+' : '';
             const color = bps > 0 ? 'var(--loss)' : 'var(--gain)';
             
-            html += `<tr>
+            const rowBg = i % 2 !== 0 ? 'background: rgba(255,255,255,0.02);' : '';
+            html += `<tr style="${rowBg}">
                 <td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05);">${sign}${bps} bps</td>
-                <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color:${color}">${(s * 100).toFixed(1)}%</td>
+                <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color:${color}; font-weight:600;">${sign}${(s * 100).toFixed(1)}%</td>
                 <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05);">${pctPriceStr}</td>
             </tr>`;
         });
@@ -339,11 +340,12 @@ window.initBondCalculator = function() {
                 principalData.push(nominalValue);
                 incomeData.push(cumIncome);
 
-                tableHtml += `<tr>
+                const rowBg = year % 2 === 0 ? 'background: rgba(255,255,255,0.02);' : '';
+                tableHtml += `<tr style="${rowBg}">
                     <td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05);">${year}${isMaturityYear ? ' (Mat/Call)' : ''}</td>
-                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color:var(--gain);">TZS ${formatCurrency(thisYearIncome)}</td>
+                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05);">TZS ${formatCurrency(thisYearIncome)}</td>
                     <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05);">TZS ${formatCurrency(cumIncome)}</td>
-                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05);">TZS ${formatCurrency(currentRealValue)}</td>
+                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); font-weight:600;">TZS ${formatCurrency(currentRealValue)}</td>
                 </tr>`;
             }
 
