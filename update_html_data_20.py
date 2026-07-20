@@ -6,7 +6,7 @@ cp_doc = docx.Document(r'C:\Users\tmalu\OneDrive\Documents\Current Prices 20 Jul
 cp_tables = cp_doc.tables
 cp_rows = []
 for row in cp_tables[0].rows[1:]: # Skip header
-    cells = [c.text.strip().replace('', '-').replace('\ufffd', '-').replace('—', '-') for c in row.cells]
+    cells = [c.text.strip().replace('\ufffd', '-').replace('—', '-') for c in row.cells]
     cp_rows.append(cells)
 
 # Generate HTML for the current-prices table rows
