@@ -1,0 +1,46 @@
+**Daily DSE Wrap | Monday, 20th July 2026**
+**CRDB Block Wave Subsides as VODA Block Surprises and NMB Hits a New Peak**
+The Dar es Salaam Stock Exchange opened the new week with a change of pace. After two weeks dominated by massive CRDB block trades, Monday delivered a more varied session. A large 600,000-share VODA block took centre stage, while CRDB’s block activity shrank dramatically to just 200,000 shares — the smallest in July. The number of individual deals jumped to 3,701, the highest in over a week, showing that everyday investors and local institutions are increasingly driving the market. Meanwhile, NMB briefly surged to a new high of 17,050 before settling back.
+**1. Market Snapshot**
+Equity turnover returned to a normal, healthy level of TZS 4.6 billion after the extraordinary block-trade spikes of recent weeks. The jump in the number of deals — to 3,701 — is a clear sign of broad participation: many small and medium-sized orders, not just institutional giants. The DSEI eased slightly as CRDB and VODA gave back a few shillings, but the overall market remains well above its early-July levels.
+Foreign selling ticked up to 14.02% of turnover, a modest rise from Friday’s near-zero reading. This likely reflects some institutional repositioning, including the large VODA block, but it remains far below the 30-60% levels that defined the foreign exit earlier in the year. Local investors are firmly in control.
+**2. Top Movers**
+Gainers: DSE (+2.4%), TCCL (+0.9%), PAL (+5.4%).
+Losers: TTP (–2.2%), DCB (–5.0%), MCB (–3.5%), MBP (–9.8%).
+**NMB** was the standout performer, briefly touching 17,050 during the session — its highest price ever — before closing at 16,750. **VODA** attracted a 600,000-share block, the largest VODA trade in recent memory, yet the price eased only slightly. **CRDB** continued its tight consolidation around the 2,680-2,700 area, with the block trade shrinking to a modest 200,000 shares — a strong signal that the massive ownership transfer of recent weeks may be winding down.
+**3. In Focus: What the VODA Block Trade Tells Us**
+Monday’s 600,000-share VODA block was the largest single transaction in the telecom stock for months. Block trades of this size do not happen randomly. A large institution — either a seller looking to reduce its holding, or a buyer accumulating a new position — negotiated this deal privately, away from the public order book, to avoid disturbing the market price.
+Why VODA, and why now? The company’s full-year results and dividend proposal have been expected for weeks. The market is clearly positioning ahead of the announcement. If the dividend is strong, the stock could rally rapidly; if it disappoints, it could retreat. A block trade on the eve of an announcement often indicates that a large investor has a strong view and is acting on it.
+For everyday investors, the key takeaway is not to chase a stock simply because a block trade appears. Instead, use these events as signals to do your own analysis: review the company’s financial health, its competitive position, and the dividend outlook. Block trades are a clue, not a recommendation.
+To learn how to analyse a company like VODA from scratch, see our case study .
+**4. Today’s Concept: The 5% Daily Price Band — Your Safety Net, Now More Than Ever**
+With the series of large CRDB block trades subsiding, many investors are wondering why the stock did not swing wildly in either direction. The answer lies in a fundamental rule that protects every DSE investor: the **5% daily price band**.
+On Monday, CRDB closed at 2,680. That means on Tuesday, the stock cannot be traded outside a range of **±5%** around that level. The limits are:
+**Upper limit:** 2,680 × 1.05 = **2,814.00**
+**Lower limit:** 2,680 × 0.95 = **2,546.00**
+Any order placed above or below those bounds will be automatically rejected by the DSE’s trading system. This rule is the reason CRDB’s price remained stable even as over 116 million shares changed hands in block trades this month. It acts like a pressure valve: it allows orderly price discovery while preventing panic-driven swings.
+Here are Tuesday’s bands for widely held stocks, based on Monday’s closing prices:
+¹ DCB trades under a wider 15% band; the table shows 15% limits.
+Knowing these bands helps you set realistic limit orders. Before placing any trade, check the previous day’s closing price, calculate the 5% range, and set your price within that window. This small habit ensures your order is executable from the moment it is placed.
+For more on how to read market data, see our guide .
+**5. Bond Market: Institutions Continue Locking in Tax****-Free Income**
+Government bond turnover moderated to TZS 26.8 billion, with the 20-year 12.25% bond once again the busiest instrument. Institutions bought over TZS 24.9 billion face value of this paper, locking in yields of approximately 11.0–11.6% per year, entirely free of withholding tax. Pension funds and insurance companies continue to build long-duration positions, and the simultaneous strength in both bonds and equities confirms that local institutions have ample liquidity for both markets.
+For individual investors, bonds offer a way to earn steady, predictable returns. Accessible through unit trusts like the UTT AMIS Bond Fund, they are a valuable part of a diversified portfolio.
+**6. Strategic Outlook: What to Anticipate**
+**Near****-Term (Late July):**
+The CRDB block trades appear to be winding down. With the foreign overhang largely absorbed, the stock is likely to find its feet and begin reflecting its underlying fundamentals.
+**VODA’s full****-year results and dividend proposal** remain the most pressing catalyst. The large block trade on Monday suggests that an announcement may be very close. A positive surprise could trigger a sharp move within the stock’s 5% daily band.
+**NMB** has demonstrated its strength by touching 17,050. The ex-dividend date is still pending; the stock’s ability to hold near these levels after the books close will be an important signal.
+**Medium****-Term (Q3 2026):**
+The Bank of Tanzania’s steady policy stance continues to support both equities and bonds. Any change in the benchmark rate would be the most significant macroeconomic event.
+Government infrastructure spending will directly benefit cement, construction, and logistics companies.
+**Long****-Term:**
+The events of July — the historic transfer of CRDB ownership from foreign to local hands, the stability of the market through enormous volume, and the broadening of participation — represent a genuine maturation of the DSE. A market anchored by patient, domestic institutions is better equipped to reflect the long-term growth of Tanzania’s economy.
+**7. Professional Approach: How to Use This Intelligence**
+**Pair the Daily Wrap with our education series.** If the concepts of block trades or price bands are new to you, read  and .
+**Maintain a diversified portfolio.** Spread your capital across banks, industrials, consumer goods, and bonds — no single stock or sector should dominate your holdings.
+**Think in years, not days.** Block trades and daily price swings are fascinating, but lasting wealth is built by owning well-managed companies through economic cycles.
+**Remember the risk.** All equity investment carries the possibility of loss. Past performance does not guarantee future results.
+**8. Considerations for a Multi****-Year Framework**
+Monday’s session signalled a shift: the massive CRDB block transfers are subsiding, a large VODA trade hints at an imminent catalyst, and NMB touched a new high. For the patient, multi-year investor, these are the details of a maturing market — one in which local institutions are firmly in control, ownership is becoming more stable, and the daily price band continues to ensure orderly trading. The foundations laid this month will support the DSE for years to come.
+This document is for general informational and educational purposes only. Nothing contained herein constitutes financial, investment, legal, or tax advice and should not be relied upon as such. Any investment decision you make is solely your own responsibility. The value of investments and the income from them can go down as well as up, and you may not get back the amount originally invested. Past performance is not a reliable indicator of future results. Capital is at risk, and you may incur losses — including the total loss of your invested capital — which you alone will bear. Amana Capital East Africa Limited is a registered investment advisory and fund management firm under the Capital Markets and Securities Authority (CMSA), Tanzania. Licence number: [pending]. Our registration does not imply that CMSA approves or endorses the contents of this material.
