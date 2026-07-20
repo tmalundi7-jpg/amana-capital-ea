@@ -16,7 +16,7 @@ idx_html = re.sub(
 )
 idx_html = re.sub(
     r'<p class="teaser-body">.*?</p>',
-    '<p class="teaser-body">The Dar es Salaam Stock Exchange opened the new week with a change of pace. After two weeks dominated by massive CRDB block trades, Monday delivered a more varied session. A large 600,000-share VODA block took centre stage, while CRDB\\'s block activity shrank dramatically to just 200,000 shares — the smallest in July. The number of individual deals jumped to 3,701, the highest in over a week, showing that everyday investors and local institutions are increasingly driving the market. Meanwhile, NMB briefly surged to a new high of 17,050 before settling back.</p>',
+    '<p class="teaser-body">The Dar es Salaam Stock Exchange opened the new week with a change of pace. After two weeks dominated by massive CRDB block trades, Monday delivered a more varied session. A large 600,000-share VODA block took centre stage, while CRDB\\'s block activity shrank dramatically to just 200,000 shares - the smallest in July. The number of individual deals jumped to 3,701, the highest in over a week, showing that everyday investors and local institutions are increasingly driving the market. Meanwhile, NMB briefly surged to a new high of 17,050 before settling back.</p>',
     idx_html,
     flags=re.DOTALL
 )
