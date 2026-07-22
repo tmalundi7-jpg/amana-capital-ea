@@ -1,0 +1,44 @@
+**Daily DSE Wrap | Tuesday, 21st July 2026**
+**Block Trade Wave Recedes as Foreign Sellers Fall Completely Silent**
+Tuesday’s session at the Dar es Salaam Stock Exchange was the quietest in weeks — and in its stillness, it delivered a powerful message. For the first time in months, not a single share was sold by a foreign investor. The enormous CRDB block trades that dominated July came to an abrupt halt. The market settled into a calm, orderly rhythm, with prices barely moving and the index edging just slightly lower. This was a day for reflection, not reaction.
+**1. Market Snapshot**
+Turnover returned to a normal, unhurried pace, below the TZS 2 billion mark. No pre-arranged block trades were reported — a striking contrast to the daily mega-blocks of the previous two weeks. Deal count, while lower than Monday’s surge, remained comfortably above 2,400, indicating that small and medium-sized investors were still participating actively, if quietly.
+The headline that matters most is the foreign flow. Foreign selling registered **zero percent** for the first time in over a year. The prolonged exit of international funds that began in 2025 and peaked in June has now fully ceased. Local investors — pension funds, institutions, and retail traders — are the sole drivers of price discovery.
+**2. Top Movers**
+Gainers: AFRIPRISE (+0.8%), DCB (+5.6%), MCB (+0.6%).
+Losers: TTP (–2.2%), PAL (–1.3%), SWIS (–5.3%).
+**CRDB** closed completely unchanged at 2,680 for the second consecutive day — a remarkable stability given that just days ago it was trading in blocks of millions of shares. **VODA** recovered 10 shillings to 805, reversing Monday’s small dip and returning to a level that suggests the market is patiently awaiting the company’s dividend announcement. **NMB** held its ground at 16,750, consolidating after last week’s surge to 17,050.
+**3. In Focus: Why a Day with Zero Foreign Selling Is a Landmark**
+For months, the dominant narrative on the DSE was the persistent exit of foreign investors. In the first quarter of 2026, foreign selling accounted for over 40% of turnover. As recently as 10 July, it hit 97.38% — entirely driven by a single block trade. Then it fell to 14.02% on Monday, and on Tuesday it dropped to **zero**.
+This does not mean that international capital has abandoned Tanzania. It means that the large, specific foreign institutions that had been steadily reducing their DSE holdings — particularly in CRDB — have now fully executed their exit. The 116 million CRDB shares that changed hands in July were absorbed not by more foreign sellers, but by local institutions with deep pockets and a multi-year horizon.
+When a seller disappears, the pressure on the price is lifted. That is the situation now for CRDB. The stock has stabilised at 2,680, free from the daily overhang that capped it for weeks. For long-term investors, this structural change is far more important than any single day’s price movement. A market that is anchored by domestic institutions is more resilient and better able to reflect the genuine, long-term growth of the companies listed on it.
+To learn more about how foreign flows affect your portfolio, see our article .
+**4. Today’s Concept: The 5% Daily Price Band — Stability in Action**
+Tuesday’s absolute calm was also a testament to a rule that protects every DSE investor: the **5% daily price band**. With no block trades to challenge it, the band ensured that prices moved only within a narrow, predictable range.
+On Tuesday, CRDB closed at 2,680. That means on Wednesday, the stock cannot trade outside:
+**Upper limit:** 2,680 × 1.05 = **2,814.00**
+**Lower limit:** 2,680 × 0.95 = **2,546.00**
+Here are the Wednesday bands for key stocks, based on Tuesday’s closing prices:
+¹ DCB trades under a wider 15% band.
+This mechanism is the reason the market absorbed over 116 million CRDB shares this month without a single day of chaos. It forces orderly trading and gives investors time to think. Before placing any order, check the previous day’s closing price and calculate the allowed range.
+For a deeper dive into the numbers behind the market, read our guide .
+**5. Bond Market: Steady Demand for Tax****-Free Income**
+Government bond turnover was TZS 22.3 billion, with the 20-year 12.25% bond once again the most actively traded instrument. Institutions purchased TZS 18.6 billion face value of this paper, locking in yields of roughly 11.0–11.6%, entirely free of withholding tax. The bond market continues to function as a deep, liquid reservoir of local capital — complementary to, not in competition with, the equity market.
+**6. Strategic Outlook: What to Anticipate**
+**Near****-Term (Late July):**
+The cessation of block trades and the disappearance of foreign selling suggest that the market is entering a period of calm, fundamentals-driven trading. CRDB, freed from the foreign overhang, may slowly drift toward the 2,760 area.
+**VODA’s full****-year results and dividend proposal** remain the most immediate catalyst. The stock is holding steady; any announcement could trigger a sharp move within the 5% daily band.
+**NMB** is consolidating after touching 17,050. The ex-dividend date is still pending; its ability to hold near current levels after the books close will be an important signal.
+**Medium****-Term (Q3 2026):**
+The Bank of Tanzania’s stable policy stance supports both equities and bonds. Any change in the benchmark rate would be the most significant macroeconomic event.
+Government infrastructure spending will directly benefit cement, construction, and logistics companies.
+**Long****-Term:**
+July 2026 will be remembered as the month the DSE completed a historic transition. The transfer of over 116 million CRDB shares from foreign to local hands, the complete cessation of foreign selling, and the broadening of local participation have made the market more stable and self-reliant. For patient investors, this is a stronger foundation on which to build lasting wealth.
+**7. Professional Approach: How to Use This Intelligence**
+**Pair the Daily Wrap with our education series.** If the concepts of block trades or price bands are new to you, start with  and .
+**Maintain a diversified portfolio.** Spread your capital across banks, industrials, consumer goods, and bonds — no single stock or sector should dominate your holdings.
+**Think in years, not days.** Daily price moves are noise; the slow, steady growth of well-managed companies over many years is what builds real wealth.
+**Remember the risk.** All equity investment carries the possibility of loss. Past performance does not guarantee future results.
+**8. Considerations for a Multi****-Year Framework**
+Tuesday’s session will not make headlines for its turnover or its price movements. But for the careful observer, it marks the quiet end of a historic chapter. The foreign exit that defined the DSE for the first half of 2026 is now fully absorbed. The block trades have stopped. Local institutions have taken firm control. In its silence, the market spoke: the handover is complete, and the next chapter belongs to patient, domestic capital.
+This document is for general informational and educational purposes only. Nothing contained herein constitutes financial, investment, legal, or tax advice and should not be relied upon as such. Any investment decision you make is solely your own responsibility. The value of investments and the income from them can go down as well as up, and you may not get back the amount originally invested. Past performance is not a reliable indicator of future results. Capital is at risk, and you may incur losses — including the total loss of your invested capital — which you alone will bear. Amana Capital East Africa Limited is a registered investment advisory and fund management firm under the Capital Markets and Securities Authority (CMSA), Tanzania. Licence number: [pending]. Our registration does not imply that CMSA approves or endorses the contents of this material.
