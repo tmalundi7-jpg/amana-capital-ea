@@ -729,3 +729,47 @@ html.is-animating .transition-fade {
 .article-crosslink:hover { background-color: transparent; border-bottom-color: var(--navy); color: var(--navy); }
 .article-disclaimer p { margin-bottom: 0; color: var(--navy); font-size: 0.9rem; line-height: 1.6; text-align: justify; }
 
+
+
+/* --- Current Prices Table --- */
+.current-prices-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    margin: 0;
+    min-width: 800px;
+}
+.current-prices-table th, .current-prices-table td {
+    padding: 1rem;
+    text-align: right;
+}
+.current-prices-table th:nth-child(1), .current-prices-table th:nth-child(2), .current-prices-table th:nth-child(3),
+.current-prices-table td:nth-child(1), .current-prices-table td:nth-child(2), .current-prices-table td:nth-child(3) {
+    text-align: left;
+}
+.current-prices-table th {
+    background-color: var(--navy);
+    color: var(--white);
+    font-weight: 600;
+}
+.current-prices-table td:nth-child(1) { font-weight: 600; }
+.current-prices-table tr:nth-child(even) {
+    background-color: var(--cream);
+}
+.current-prices-table td.gain {
+    color: var(--gain);
+    font-weight: 600;
+}
+.current-prices-table td.loss {
+    color: var(--loss);
+    font-weight: 600;
+}
+.data-note {
+    padding: 1rem 1.5rem;
+    font-size: 0.85rem;
+    color: #666;
+    background: var(--cream);
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+
