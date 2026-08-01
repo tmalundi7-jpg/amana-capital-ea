@@ -305,8 +305,8 @@ window.initBondCalculator = function() {
         outRealYield.textContent = (realYield * 100).toFixed(2) + '%';
 
         if (invAmt > 0) {
-            const bondsPurchased = invAmt / (dirtyPrice / 100.0 * 100); 
-            const annualIncome = bondsPurchased * 100 * cr;
+            const bondsPurchased = invAmt / (dirtyPrice / 100.0 * fv); 
+            const annualIncome = bondsPurchased * fv * cr;
             let totalCashReturned = 0;
             let totalProfit = 0;
             let currentRealValue = invAmt;
@@ -339,13 +339,14 @@ window.initBondCalculator = function() {
                 totalCashReturned += thisYearIncome;
                 
                 let nominalValue = invAmt + cumIncome;
-                currentRealValue = (invAmt) / Math.pow(1 + infl, year) + cumIncome;
                 
                 if (isMaturityYear) {
-                    const redemp = bondsPurchased * 100 * (isCall && cy > 0 && cy < my ? cp/100.0 : 1.0);
+                    const redemp = bondsPurchased * fv * (isCall && cy > 0 && cy < my ? cp/100.0 : 1.0);
                     totalCashReturned += redemp;
                     nominalValue += redemp - invAmt; 
                 }
+
+                currentRealValue = nominalValue / Math.pow(1 + infl, year);
 
                 labels.push(`Year ${year}`);
                 principalData.push(nominalValue);
