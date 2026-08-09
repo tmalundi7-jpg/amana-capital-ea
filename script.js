@@ -249,7 +249,8 @@ window.initBondCalculator = function() {
     }
 
     function calculateAnalytics() {
-        const fv = parseFloat(fvInput.value) || 0;
+        try {
+            const fv = parseFloat(fvInput.value) || 0;
         const cr = parseFloat(crInput.value) / 100.0;
         const my = parseFloat(myInput.value) || 0;
         const ppy = parseInt(ppyInput.value) || 2;
@@ -382,6 +383,12 @@ window.initBondCalculator = function() {
                 progChart.destroy();
                 progChart = null;
             }
+            }
+        } catch (e) {
+            console.error('Calculator encountered an error:', e);
+            outStartCap.textContent = "Error";
+            outTotalCash.textContent = "Error";
+            outTotalProfit.textContent = "Error";
         }
     }
 

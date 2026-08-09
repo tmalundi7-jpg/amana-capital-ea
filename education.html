@@ -7,7 +7,7 @@
     <meta name="description" content="Learn how to invest in the Tanzania stock market. Free educational modules covering DSE basics, bonds, ETFs, and portfolio construction from Amana Capital EA.">
     <link rel="canonical" href="https://www.amana-capital-ea.co.tz/education.html" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2.1">
+    <link rel="stylesheet" href="style.css?v=2.2">
     <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
     <script>
         Weglot.initialize({
@@ -92,19 +92,34 @@
             </div>
             <script>
                 function calculateWealth() {
-                    let P = parseFloat(document.getElementById('calc-initial').value) || 0;
-                    let PMT = parseFloat(document.getElementById('calc-monthly').value) || 0;
-                    let r = (parseFloat(document.getElementById('calc-return').value) || 0) / 100 / 12;
-                    let n = (parseFloat(document.getElementById('calc-years').value) || 0) * 12;
-                    
-                    let futureValue = P * Math.pow(1 + r, n);
-                    if (r > 0) {
-                        futureValue += PMT * ((Math.pow(1 + r, n) - 1) / r);
-                    } else {
-                        futureValue += PMT * n;
+                    try {
+                        let initialInput = document.getElementById('calc-initial').value;
+                        let monthlyInput = document.getElementById('calc-monthly').value;
+                        let returnInput = document.getElementById('calc-return').value;
+                        let yearsInput = document.getElementById('calc-years').value;
+
+                        let P = Math.max(0, parseFloat(initialInput) || 0);
+                        let PMT = Math.max(0, parseFloat(monthlyInput) || 0);
+                        let rawReturn = parseFloat(returnInput) || 0;
+                        rawReturn = Math.max(-100, Math.min(1000, rawReturn));
+                        let r = rawReturn / 100 / 12;
+                        let n = Math.max(0, Math.min(100, parseFloat(yearsInput) || 0)) * 12;
+                        
+                        let futureValue = P * Math.pow(1 + r, n);
+                        if (r !== 0) {
+                            futureValue += PMT * ((Math.pow(1 + r, n) - 1) / r);
+                        } else {
+                            futureValue += PMT * n;
+                        }
+                        
+                        if (isNaN(futureValue) || !isFinite(futureValue)) {
+                            document.getElementById('calc-output').innerText = 'Invalid Input';
+                        } else {
+                            document.getElementById('calc-output').innerText = 'TZS ' + futureValue.toLocaleString('en-US', {maximumFractionDigits: 0});
+                        }
+                    } catch (e) {
+                        document.getElementById('calc-output').innerText = 'Error in Calculation';
                     }
-                    
-                    document.getElementById('calc-output').innerText = 'TZS ' + futureValue.toLocaleString('en-US', {maximumFractionDigits: 0});
                 }
                 document.addEventListener('DOMContentLoaded', calculateWealth);
             </script>
@@ -243,7 +258,7 @@
     <!-- Standard Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-disclaimer">This document is for general informational and educational purposes only. Nothing contained herein constitutes financial, investment, legal, or tax advice and should not be relied upon as such. Any investment decision you make is solely your own responsibility. The value of investments and the income from them can go down as well as up, and you may not get back the amount originally invested. Past performance is not a reliable indicator of future results. Capital is at risk, and you may incur losses &mdash; including the total loss of your invested capital &mdash; which you alone will bear. Amana Capital East Africa Limited is a registered investment advisory and fund management firm under the Capital Markets and Securities Authority (CMSA), Tanzania. Licence number: [pending]. Our registration does not imply that CMSA approves or endorses the contents of this material.</div>
+            <div class="footer-disclaimer">For general informational and educational purposes only; not financial, legal, or tax advice. All investment decisions are solely your responsibility. Capital is at risk, and past performance does not guarantee future results. Amana Capital East Africa Limited is registered under CMSA, Tanzania (Licence: pending). Registration does not imply CMSA endorsement.</div>
             <div class="footer-links">
                 <div>&copy; 2026 Amana Capital East Africa Limited.</div>
                 <div style="display:flex; gap:1.5rem;"><a href="/privacy">Privacy Policy</a> <a href="/terms">Terms of Use</a> <a href="/cookies">Cookie Policy</a></div>

@@ -7,7 +7,7 @@
     <meta name="description" content="Amana Capital East Africa offers institutional DSE analysis and Tanzania investment advisory services. Build lasting wealth in frontier capital markets.">
     <link rel="canonical" href="https://www.amana-capital-ea.co.tz/" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2.1">
+    <link rel="stylesheet" href="style.css?v=2.2">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -84,7 +84,7 @@
                     <a href="/market-intelligence" class="btn btn-gold-solid">Today's DSE Wrap</a>
                     <a href="/education" class="btn btn-cream-outline">Start Learning</a>
                 </div>
-                <div class="trust-badge">Registered with CMSA, Tanzania. Investment advisory &amp; fund management &ndash; stockbroking pending.</div>
+                <div class="trust-badge">Registration with CMSA Pending</div>
             </div>
         </section>
         <!-- DSE Snapshot -->
@@ -96,22 +96,10 @@
     <div class="snapshot-item">
         <div class="snapshot-label">DSEI</div>
         <div class="snapshot-value" id="home-dsei">4,182.69</div>
-        <div class="snapshot-sparkline">
-            <svg viewBox="0 0 100 30" preserveAspectRatio="none">
-                <path d="M0,25 Q10,20 20,25 T40,15 T60,20 T80,5 T100,10 L100,30 L0,30 Z" fill="rgba(200,150,46,0.15)"></path>
-                <path d="M0,25 Q10,20 20,25 T40,15 T60,20 T80,5 T100,10" fill="none" stroke="var(--gold)" stroke-width="2"></path>
-            </svg>
-        </div>
     </div>
     <div class="snapshot-item">
         <div class="snapshot-label">TSI</div>
         <div class="snapshot-value" id="home-tsi">9,179.14</div>
-        <div class="snapshot-sparkline">
-            <svg viewBox="0 0 100 30" preserveAspectRatio="none">
-                <path d="M0,15 Q10,20 20,10 T40,15 T60,5 T80,15 T100,5 L100,30 L0,30 Z" fill="rgba(200,150,46,0.15)"></path>
-                <path d="M0,15 Q10,20 20,10 T40,15 T60,5 T80,15 T100,5" fill="none" stroke="var(--gold)" stroke-width="2"></path>
-            </svg>
-        </div>
     </div>
     <div class="snapshot-item">
         <div class="snapshot-label">Turnover</div>
@@ -126,7 +114,7 @@
     </div>
     <div class="snapshot-item marquee-container">
         <div class="snapshot-label">Top Gainers</div>
-        <div class="snapshot-mover marquee-content" id="home-gainers">
+        <div class="snapshot-mover" id="home-gainers">
             <span>VODA <span style="color:var(--gain)">+1.0%</span></span>
             <span>TCCL <span style="color:var(--gain)">+2.5%</span></span>
             <span>PAL <span style="color:var(--gain)">+1.6%</span></span>
@@ -134,7 +122,7 @@
     </div>
     <div class="snapshot-item marquee-container">
         <div class="snapshot-label">Top Losers</div>
-        <div class="snapshot-mover marquee-content" id="home-losers">
+        <div class="snapshot-mover" id="home-losers">
             <span>CRDB <span style="color:var(--loss)">-0.8%</span></span>
             <span>MCB <span style="color:var(--loss)">-12.3%</span></span>
             <span>DCB <span style="color:var(--loss)">-5.6%</span></span>
@@ -155,28 +143,24 @@
                     <div class="pillars-grid">
                         <div class="pillar-card">
                             <div class="pillar-number">01</div>
-                            <div class="pillar-icon">&#9670;</div>
                             <h3>Integrity</h3>
                             <p>Uncompromising ethical standards.</p>
                             <div class="pillar-line"></div>
                         </div>
                         <div class="pillar-card">
                             <div class="pillar-number">02</div>
-                            <div class="pillar-icon">&#9670;</div>
                             <h3>Long-horizon</h3>
                             <p>Compounding wealth across generations.</p>
                             <div class="pillar-line"></div>
                         </div>
                         <div class="pillar-card">
                             <div class="pillar-number">03</div>
-                            <div class="pillar-icon">&#9670;</div>
                             <h3>Regional Intelligence</h3>
                             <p>Deep East African market insight.</p>
                             <div class="pillar-line"></div>
                         </div>
                         <div class="pillar-card">
                             <div class="pillar-number">04</div>
-                            <div class="pillar-icon">&#9670;</div>
                             <h3>Disciplined Conviction</h3>
                             <p>Data-driven, unswayed by noise.</p>
                             <div class="pillar-line"></div>
@@ -253,9 +237,9 @@
         <!-- Newsletter -->
         <section style="padding: 2.5rem 0;">
             <div class="container">
-                <div class="bounded-card" style="text-align: center;">
-                    <h2 style="color: #FFFFFF; margin-bottom: 0.5rem;">Join Our Intelligence Briefing</h2>
-                    <p style="color: #E2E8F0; margin-bottom: 1.5rem; font-size: 0.95rem;">Exclusive institutional research delivered to your inbox weekly.</p>
+                <div class="newsletter-box reveal-up">
+                    <h2>Join Our Intelligence Briefing</h2>
+                    <p>Exclusive institutional research delivered to your inbox weekly.</p>
                     <form class="newsletter-form" action="https://formspree.io/f/mvzjdqnv" method="POST">
                         <input type="email" name="email" placeholder="Your email address" required>
                         <button type="submit">Subscribe</button>
@@ -267,7 +251,7 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-disclaimer">This document is for general informational and educational purposes only. Nothing contained herein constitutes financial, investment, legal, or tax advice and should not be relied upon as such. Any investment decision you make is solely your own responsibility. The value of investments and the income from them can go down as well as up, and you may not get back the amount originally invested. Past performance is not a reliable indicator of future results. Capital is at risk, and you may incur losses &mdash; including the total loss of your invested capital &mdash; which you alone will bear. Amana Capital East Africa Limited is a registered investment advisory and fund management firm under the Capital Markets and Securities Authority (CMSA), Tanzania. Licence number: [pending]. Our registration does not imply that CMSA approves or endorses the contents of this material.</div>
+            <div class="footer-disclaimer">For general informational and educational purposes only; not financial, legal, or tax advice. All investment decisions are solely your responsibility. Capital is at risk, and past performance does not guarantee future results. Amana Capital East Africa Limited is registered under CMSA, Tanzania (Licence: pending). Registration does not imply CMSA endorsement.</div>
             <div class="footer-links">
                 <div>&copy; 2026 Amana Capital East Africa Limited.</div>
                 <div style="display:flex; gap:1.5rem;">
@@ -286,7 +270,7 @@
     
     <script src="https://unpkg.com/swup@4"></script>
     <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
-    <script src="script.js?v=1.6"></script>
+    <script src="script.js?v=1.7"></script>
     <script src="/js/theme-toggle.js"></script>
 </body>
 </html>
