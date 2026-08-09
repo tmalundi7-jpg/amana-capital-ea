@@ -7,7 +7,7 @@
     <meta name="description" content="Amana Capital East Africa offers institutional DSE analysis and Tanzania investment advisory services. Build lasting wealth in frontier capital markets.">
     <link rel="canonical" href="https://www.amana-capital-ea.co.tz/" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="stylesheet" href="style.css?v=2.1">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,7 +45,26 @@
             <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">&#9776;</button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="/" class="active">Home</a></li>
-                <li><a href="/market-intelligence">Market Intelligence</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="/market-intelligence">Market Intelligence <span class="dropdown-arrow">&#9662;</span></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-grid">
+                            <div class="mega-col">
+                                <h4>Research & Analysis</h4>
+                                <a href="/market-intelligence">Daily DSE Wraps</a>
+                                <a href="#">Weekly Macro Briefings</a>
+                                <a href="#">Monthly Strategy Outlook</a>
+                            </div>
+                            <div class="mega-col featured-col">
+                                <div class="featured-card">
+                                    <div class="featured-badge">Featured</div>
+                                    <h5>Institutional Intelligence</h5>
+                                    <p>Deep-dive analysis of Tanzanian equities and debt markets.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
                 <li><a href="/education">Investor Education</a></li>
                 <li><a href="/bond-calculator">Bond Calculator</a></li>
                 <li><a href="/about">About</a></li>
@@ -72,30 +91,57 @@
         <section style="padding: 2rem 0;">
             <div class="container">
                 <div class="snapshot-card">
-                    <!-- SNAPSHOT_CARD_START -->
+<!-- SNAPSHOT_CARD_START -->
 <div class="snapshot-grid">
-    <div>
+    <div class="snapshot-item">
         <div class="snapshot-label">DSEI</div>
         <div class="snapshot-value" id="home-dsei">4,182.69</div>
+        <div class="snapshot-sparkline">
+            <svg viewBox="0 0 100 30" preserveAspectRatio="none">
+                <path d="M0,25 Q10,20 20,25 T40,15 T60,20 T80,5 T100,10 L100,30 L0,30 Z" fill="rgba(200,150,46,0.15)"></path>
+                <path d="M0,25 Q10,20 20,25 T40,15 T60,20 T80,5 T100,10" fill="none" stroke="var(--gold)" stroke-width="2"></path>
+            </svg>
+        </div>
     </div>
-    <div>
+    <div class="snapshot-item">
         <div class="snapshot-label">TSI</div>
         <div class="snapshot-value" id="home-tsi">9,179.14</div>
+        <div class="snapshot-sparkline">
+            <svg viewBox="0 0 100 30" preserveAspectRatio="none">
+                <path d="M0,15 Q10,20 20,10 T40,15 T60,5 T80,15 T100,5 L100,30 L0,30 Z" fill="rgba(200,150,46,0.15)"></path>
+                <path d="M0,15 Q10,20 20,10 T40,15 T60,5 T80,15 T100,5" fill="none" stroke="var(--gold)" stroke-width="2"></path>
+            </svg>
+        </div>
     </div>
-    <div>
+    <div class="snapshot-item">
         <div class="snapshot-label">Turnover</div>
         <div class="snapshot-value" id="home-turnover">TZS 5.06 bn</div>
+        <div class="snapshot-bar-chart">
+            <div class="bar" style="height: 40%"></div>
+            <div class="bar" style="height: 60%"></div>
+            <div class="bar" style="height: 30%"></div>
+            <div class="bar" style="height: 80%"></div>
+            <div class="bar" style="height: 100%"></div>
+        </div>
     </div>
-    <div>
+    <div class="snapshot-item marquee-container">
         <div class="snapshot-label">Top Gainers</div>
-        <div class="snapshot-mover" id="home-gainers">VODA <span style="color:var(--gain)">+1.0%</span><br>TCCL <span style="color:var(--gain)">+2.5%</span><br>PAL <span style="color:var(--gain)">+1.6%</span></div>
+        <div class="snapshot-mover marquee-content" id="home-gainers">
+            <span>VODA <span style="color:var(--gain)">+1.0%</span></span>
+            <span>TCCL <span style="color:var(--gain)">+2.5%</span></span>
+            <span>PAL <span style="color:var(--gain)">+1.6%</span></span>
+        </div>
     </div>
-    <div>
+    <div class="snapshot-item marquee-container">
         <div class="snapshot-label">Top Losers</div>
-        <div class="snapshot-mover" id="home-losers">CRDB <span style="color:var(--loss)">-0.8%</span><br>MCB <span style="color:var(--loss)">-12.3%</span><br>DCB <span style="color:var(--loss)">-5.6%</span></div>
+        <div class="snapshot-mover marquee-content" id="home-losers">
+            <span>CRDB <span style="color:var(--loss)">-0.8%</span></span>
+            <span>MCB <span style="color:var(--loss)">-12.3%</span></span>
+            <span>DCB <span style="color:var(--loss)">-5.6%</span></span>
+        </div>
     </div>
 </div>
-<div class="snapshot-note" id="home-snapshot-date">End-of-day, 4 August 2026. For educational purposes only.</div>
+<div class="snapshot-note" id="home-snapshot-date">Live Terminal Feed | End-of-day, 4 August 2026</div>
 <!-- SNAPSHOT_CARD_END -->
                     <div class="snapshot-footer-link"><a href="/market-intelligence" class="gold-link">View Full Market Intelligence &rarr;</a></div>
                 </div>
@@ -104,7 +150,7 @@
         <!-- Four Pillars -->
         <section style="padding: 2rem 0;">
             <div class="container">
-                <div class="bounded-card">
+                <div class="bounded-card reveal-up" style="transition-delay: 100ms;">
                     <div class="pillars-label">Our Core Principles</div>
                     <div class="pillars-grid">
                         <div class="pillar-card">
@@ -143,21 +189,30 @@
         <!-- Core Services -->
         <section style="padding: 2rem 0;">
             <div class="container">
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Market Intelligence</h3>
-                        <p>Daily analysis and institutional insights on the DSE.</p>
-                        <a href="/market-intelligence" class="btn btn-gold-solid">Read Analysis</a>
+                <div class="services-expand-grid">
+                    <div class="service-expand-card reveal-up" style="transition-delay: 100ms;">
+                        <div class="card-bg" style="background: linear-gradient(to top, rgba(11,29,58,1) 0%, rgba(11,29,58,0) 100%);"></div>
+                        <div class="card-content">
+                            <h3>Market Intelligence</h3>
+                            <p>Daily analysis and institutional insights on the DSE.</p>
+                            <a href="/market-intelligence" class="btn btn-gold-solid">Read Analysis</a>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <h3>Investor Education</h3>
-                        <p>Foundational knowledge for East African markets.</p>
-                        <a href="/education" class="btn btn-gold-solid">Start Learning</a>
+                    <div class="service-expand-card reveal-up" style="transition-delay: 200ms;">
+                        <div class="card-bg" style="background: linear-gradient(to top, rgba(11,29,58,1) 0%, rgba(11,29,58,0) 100%);"></div>
+                        <div class="card-content">
+                            <h3>Investor Education</h3>
+                            <p>Foundational knowledge for East African markets.</p>
+                            <a href="/education" class="btn btn-gold-solid">Start Learning</a>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <h3>Our Firm</h3>
-                        <p>Integrity. Regional intelligence. Conviction.</p>
-                        <a href="/about" class="btn btn-gold-solid">About Us</a>
+                    <div class="service-expand-card reveal-up" style="transition-delay: 300ms;">
+                        <div class="card-bg" style="background: linear-gradient(to top, rgba(11,29,58,1) 0%, rgba(11,29,58,0) 100%);"></div>
+                        <div class="card-content">
+                            <h3>Our Firm</h3>
+                            <p>Integrity. Regional intelligence. Conviction.</p>
+                            <a href="/about" class="btn btn-gold-solid">About Us</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -167,7 +222,7 @@
         <section style="padding: 2rem 0;">
             <div class="container">
                 <!-- TEASER_CARD_START -->
-                <div class="teaser-card">
+                <div class="teaser-card reveal-up" style="transition-delay: 200ms;">
                     <div class="teaser-bg-accent"></div>
                     <div class="teaser-left">
                         <div class="teaser-eyebrow">
@@ -231,7 +286,7 @@
     
     <script src="https://unpkg.com/swup@4"></script>
     <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
-    <script src="script.js?v=1.5"></script>
+    <script src="script.js?v=1.6"></script>
     <script src="/js/theme-toggle.js"></script>
 </body>
 </html>

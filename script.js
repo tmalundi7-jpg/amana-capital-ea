@@ -24,7 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Scroll to top on transition
         window.scrollTo(0, 0);
+        
+        initScrollReveal();
     });
+
+    // Initial call for Scroll Reveal
+    initScrollReveal();
 });
 
 // --- Mobile Navigation Logic ---
@@ -382,4 +387,28 @@ window.initBondCalculator = function() {
 
     // Trigger initial calculation
     calculateAnalytics();
+};
+
+// --- Scroll Reveal Animation Logic ---
+window.initScrollReveal = function() {
+    const revealElements = document.querySelectorAll('.reveal-up');
+    
+    if (revealElements.length === 0) return;
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
 };
