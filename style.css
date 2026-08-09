@@ -613,12 +613,12 @@ a:hover {
   transform: translateY(-4px);
 }
 .pillar-card h3 {
-  color: #9ca3af;
+  color: #0B1D3A;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 .pillar-card p {
-  color: #9ca3af;
+  color: #0B1D3A;
   font-size: 0.88rem;
   line-height: 1.5;
   margin: 0;
@@ -646,12 +646,12 @@ a:hover {
   border-color: rgba(200, 150, 46, 0.3);
 }
 .service-card h3 {
-  color: #9ca3af;
+  color: #0B1D3A;
   font-size: 1.4rem;
   margin-bottom: 0.75rem;
 }
 .service-card p {
-  color: #9ca3af;
+  color: #0B1D3A;
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -679,20 +679,20 @@ a:hover {
   border-color: rgba(200, 150, 46, 0.3);
 }
 .teaser-date {
-  color: #9ca3af;
+  color: #0B1D3A;
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 0.08em;
 }
 .teaser-title {
-  color: #9ca3af;
+  color: #0B1D3A;
   font-size: 1.65rem;
   margin: 0.4rem 0 0.75rem;
   line-height: 1.3;
 }
 .teaser-body {
-  color: #9ca3af;
+  color: #0B1D3A;
   font-size: 0.98rem;
   line-height: 1.6;
   margin: 0;
