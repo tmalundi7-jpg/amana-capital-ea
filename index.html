@@ -95,15 +95,17 @@
 <div class="snapshot-grid">
     <div class="snapshot-item">
         <div class="snapshot-label">DSEI</div>
-        <div class="snapshot-value" id="home-dsei">4,182.69</div>
+        <div class="snapshot-value" id="home-dsei">4,195.20 <span class="up">&#9650;</span></div>
+        <canvas id="dseiChart" width="100" height="40" style="margin-top:0.5rem;"></canvas>
     </div>
     <div class="snapshot-item">
         <div class="snapshot-label">TSI</div>
-        <div class="snapshot-value" id="home-tsi">9,179.14</div>
+        <div class="snapshot-value" id="home-tsi">9,201.10 <span class="up">&#9650;</span></div>
+        <canvas id="tsiChart" width="100" height="40" style="margin-top:0.5rem;"></canvas>
     </div>
     <div class="snapshot-item">
         <div class="snapshot-label">Turnover</div>
-        <div class="snapshot-value" id="home-turnover">TZS 5.06 bn</div>
+        <div class="snapshot-value" id="home-turnover">TZS 5.25 bn</div>
         <div class="snapshot-bar-chart">
             <div class="bar" style="height: 40%"></div>
             <div class="bar" style="height: 60%"></div>
@@ -112,24 +114,24 @@
             <div class="bar" style="height: 100%"></div>
         </div>
     </div>
-    <div class="snapshot-item marquee-container">
+    <div class="snapshot-item">
         <div class="snapshot-label">Top Gainers</div>
-        <div class="snapshot-mover" id="home-gainers">
-            <span>VODA <span style="color:var(--gain)">+1.0%</span></span>
-            <span>TCCL <span style="color:var(--gain)">+2.5%</span></span>
-            <span>PAL <span style="color:var(--gain)">+1.6%</span></span>
+        <div class="snapshot-mover" id="home-gainers" style="display: flex; flex-direction: column; gap: 0.25rem;">
+            <span>MCB <span style="color:var(--gain)">+14.6%</span></span>
+            <span>PAL <span style="color:var(--gain)">+3.3%</span></span>
+            <span>SWIS <span style="color:var(--gain)">+2.7%</span></span>
         </div>
     </div>
-    <div class="snapshot-item marquee-container">
+    <div class="snapshot-item">
         <div class="snapshot-label">Top Losers</div>
-        <div class="snapshot-mover" id="home-losers">
-            <span>CRDB <span style="color:var(--loss)">-0.8%</span></span>
-            <span>MCB <span style="color:var(--loss)">-12.3%</span></span>
-            <span>DCB <span style="color:var(--loss)">-5.6%</span></span>
+        <div class="snapshot-mover" id="home-losers" style="display: flex; flex-direction: column; gap: 0.25rem;">
+            <span>TCCL <span style="color:var(--loss)">-11.7%</span></span>
+            <span>MBP <span style="color:var(--loss)">-6.4%</span></span>
+            <span>MKCB <span style="color:var(--loss)">-3.7%</span></span>
         </div>
     </div>
 </div>
-<div class="snapshot-note" id="home-snapshot-date">Live Terminal Feed | End-of-day, 4 August 2026</div>
+<div class="snapshot-note" id="home-snapshot-date">Live Terminal Feed | End-of-day, 7 August 2026</div>
 <!-- SNAPSHOT_CARD_END -->
                     <div class="snapshot-footer-link"><a href="/market-intelligence" class="gold-link">View Full Market Intelligence &rarr;</a></div>
                 </div>
@@ -213,20 +215,20 @@
                             <span class="teaser-dot"></span>
                             <span class="teaser-label">Daily DSE Wrap</span>
                         </div>
-                        <div class="teaser-date">4 August 2026</div>
-                        <h3 class="teaser-title">Block Trades Lift Turnover as CRDB Tests New Lows and VODA Edges Higher</h3>
-                        <p class="teaser-body">The Dar es Salaam Stock Exchange began the new week on a mixed note. Total equity turnover remained comfortably above TZS 5 billion, boosted by a large pre-arranged block trade in VODA and heavy volume in CRDB...</p>
+                        <div class="teaser-date">7 August 2026</div>
+                        <h3 class="teaser-title">Turnover Surges Past TZS 5bn on NMB and CRDB Volume as MCB Rallies</h3>
+                        <p class="teaser-body">The Dar es Salaam Stock Exchange closed the week on a high note. Total equity turnover exceeded TZS 5.25 billion, driven by massive institutional block trades in NMB and CRDB, while MCB recorded a stellar 14.6% gain...</p>
                         <div class="teaser-stats">
-                            <div class="teaser-stat"><span class="teaser-stat-label">DSEI</span><span class="teaser-stat-value">4,182.69</span></div>
-                            <div class="teaser-stat"><span class="teaser-stat-label">Turnover</span><span class="teaser-stat-value">TZS 5.06bn</span></div>
-                            <div class="teaser-stat"><span class="teaser-stat-label">Top Gainer</span><span class="teaser-stat-value gain">VODA +1.0%</span></div>
+                            <div class="teaser-stat"><span class="teaser-stat-label">DSEI</span><span class="teaser-stat-value">4,195.20</span></div>
+                            <div class="teaser-stat"><span class="teaser-stat-label">Turnover</span><span class="teaser-stat-value">TZS 5.25bn</span></div>
+                            <div class="teaser-stat"><span class="teaser-stat-label">Top Gainer</span><span class="teaser-stat-value gain">MCB +14.6%</span></div>
                         </div>
                     </div>
                     <div class="teaser-right">
                         <div class="teaser-cta-box">
                             <div class="teaser-cta-icon">&#9656;</div>
                             <p class="teaser-cta-text">Read the full institutional analysis</p>
-                            <a href="/dse-wrap-2026-08-04" class="btn btn-gold-solid">Read the Full Wrap &rarr;</a>
+                            <a href="/dse-wrap-2026-08-07" class="btn btn-gold-outline" style="width:100%; justify-content:center;">Read the Full Wrap &rarr;</a>
                         </div>
                     </div>
                 </div>

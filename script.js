@@ -11,11 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Initialize modules on first load
     initMobileMenu();
     initBondCalculator();
+    initSnapshotCharts();
 
     // 3. Re-initialize modules after every page transition
     swup.hooks.on('page:view', () => {
         initMobileMenu();
         initBondCalculator();
+        initSnapshotCharts();
         
         // Re-initialize Weglot if present
         if (typeof Weglot !== 'undefined') {
@@ -44,6 +46,82 @@ window.initMobileMenu = function() {
         
         newToggle.addEventListener('click', () => {
             nav.classList.toggle('active');
+        });
+    }
+};
+
+// --- Snapshot Charts Logic ---
+window.initSnapshotCharts = function() {
+    const dseiCanvas = document.getElementById('dseiChart');
+    const tsiCanvas = document.getElementById('tsiChart');
+    
+    if (!dseiCanvas && !tsiCanvas) return;
+
+    if (typeof Chart === 'undefined') {
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js';
+        script.onload = () => {
+            initSnapshotCharts();
+        };
+        document.head.appendChild(script);
+        return;
+    }
+
+    const commonOptions = {
+        responsive: false,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { enabled: false } },
+        scales: {
+            x: { display: false },
+            y: { display: false, min: 0 }
+        },
+        elements: { point: { radius: 0 } },
+        layout: { padding: 0 }
+    };
+
+    if (dseiCanvas) {
+        const ctxD = dseiCanvas.getContext('2d');
+        const gradD = ctxD.createLinearGradient(0, 0, 0, 40);
+        gradD.addColorStop(0, 'rgba(200, 150, 46, 0.4)');
+        gradD.addColorStop(1, 'rgba(200, 150, 46, 0.0)');
+        
+        new Chart(ctxD, {
+            type: 'line',
+            data: {
+                labels: ['M', 'T', 'W', 'T', 'F'],
+                datasets: [{
+                    data: [4150, 4172, 4165, 4182, 4195],
+                    borderColor: '#C8962E',
+                    borderWidth: 2,
+                    backgroundColor: gradD,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: commonOptions
+        });
+    }
+
+    if (tsiCanvas) {
+        const ctxT = tsiCanvas.getContext('2d');
+        const gradT = ctxT.createLinearGradient(0, 0, 0, 40);
+        gradT.addColorStop(0, 'rgba(22, 163, 74, 0.4)');
+        gradT.addColorStop(1, 'rgba(22, 163, 74, 0.0)');
+
+        new Chart(ctxT, {
+            type: 'line',
+            data: {
+                labels: ['M', 'T', 'W', 'T', 'F'],
+                datasets: [{
+                    data: [9100, 9120, 9150, 9179, 9201],
+                    borderColor: '#16A34A',
+                    borderWidth: 2,
+                    backgroundColor: gradT,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: commonOptions
         });
     }
 };
