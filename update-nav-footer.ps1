@@ -18,7 +18,6 @@ $navTemplate = @'
                 <li><a href="/bond-calculator">Bond Calculator</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
-                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">&#x1F319;</button></li>
             </ul>
         </div>
     </nav>
