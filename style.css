@@ -1046,19 +1046,36 @@ html.is-animating .transition-fade {
 }
 
 /* --- Mobile / Responsiveness --- */
+
+/* Tablet: 1024px */
 @media (max-width: 1024px) {
   .snapshot-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
 }
 
+/* Mobile: 768px */
 @media (max-width: 768px) {
-  .container { padding: 0 1.5rem; }
-  .calc-card { padding: 2rem 1.5rem; }
-  
-  .navbar {
-    height: 64px;
-  }
+  /* Global */
+  .container { padding: 0 1.25rem; }
+  html, body { overflow-x: hidden; }
+
+  /* Typography */
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.65rem; }
+  h3 { font-size: 1.35rem; }
+
+  /* Navbar */
+  .navbar { height: 64px; }
   .nav-links {
     display: none;
     flex-direction: column;
@@ -1075,76 +1092,139 @@ html.is-animating .transition-fade {
     border-bottom: 1px solid var(--border-navbar);
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
   }
-  .nav-links.active {
-    display: flex;
-  }
-  .mobile-toggle {
-    display: block;
-  }
-  .theme-toggle {
-    margin-left: auto;
-    margin-right: 1rem;
-  }
-  
-  .hero-tagline { font-size: 2.25rem; }
-  .hero-subheadline { font-size: 1.05rem; }
-  
-  .snapshot-card {
-    margin-top: -1rem;
-    padding: 1.5rem;
-  }
-  .snapshot-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  .pillars-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .services-grid, .grid-3, .grid-2 {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
+  .nav-links.active { display: flex; }
+  .mobile-toggle { display: block; }
+  .theme-toggle { margin-left: auto; margin-right: 1rem; }
+
+  /* Hero */
+  .hero-section { padding: 4rem 0 3.5rem; }
+  .hero-tagline { font-size: 2.1rem; line-height: 1.2; }
+  .hero-subheadline { font-size: 1rem; }
+  .hero-cta-group { flex-direction: column; gap: 0.75rem; }
+  .hero-cta-group .btn { width: 100%; text-align: center; }
+  .trust-badge { font-size: 0.8rem; }
+
+  /* DSE Snapshot */
+  .snapshot-card { margin-top: -1rem; padding: 1.5rem 1.25rem; }
+  .snapshot-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .snapshot-value { font-size: 1.2rem; }
+
+  /* Pillars */
+  .pillars-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .pillar-card { padding: 1.25rem; }
+  .bounded-card { padding: 1.75rem 1.25rem; }
+
+  /* Services */
+  .services-grid, .grid-3, .grid-2 { grid-template-columns: 1fr; gap: 1.25rem; }
+  .service-card { padding: 2rem 1.5rem; }
+
+  /* Teaser Card */
   .teaser-card {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
-    padding: 2rem 1.5rem;
+    gap: 1.25rem;
+    padding: 1.75rem 1.25rem;
   }
-  .hero-cta-group {
-    flex-direction: column;
-  }
-  .newsletter-form {
-    flex-direction: column;
-  }
-  .newsletter-form button {
-    width: 100%;
-  }
-  .footer-links {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
-  .article-container {
-    padding: 2.5rem 1.5rem;
-    margin: 2rem 0;
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-  }
-  .article-content h1 {
-    font-size: 2.2rem;
-  }
+  .teaser-card .btn { width: 100%; text-align: center; }
+  .teaser-title { font-size: 1.4rem; }
+
+  /* Newsletter */
+  .newsletter-form { flex-direction: column; border-radius: var(--radius-md); }
+  .newsletter-form input { border-radius: var(--radius-sm) var(--radius-sm) 0 0; padding: 1rem 1.25rem; }
+  .newsletter-form button { width: 100%; border-radius: 0 0 var(--radius-sm) var(--radius-sm); padding: 1rem; }
+
+  /* Cards */
+  .card, .card-content-block, .concept-box, .framework-box { padding: 1.75rem 1.25rem; }
+
+  /* Market Intelligence Page */
+  .snapshot-card[style*="margin-bottom"] { margin: 0 0 1.5rem 0 !important; }
+  .data-table th, .data-table td { padding: 0.75rem 0.6rem; font-size: 0.82rem; }
+  .table-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .table-container table { min-width: 520px; }
+
+  /* Archive table */
+  .data-table tr td:first-child { width: auto; font-size: 0.75rem; }
+
+  /* DSE Wrap Article Pages */
+  .article-container { padding: 2rem 1.25rem; margin: 1.5rem 0; border-radius: 0; border-left: none; border-right: none; }
+  .article-content h1 { font-size: 1.85rem; }
+  .article-content h2 { font-size: 1.4rem; }
+  .article-content table { font-size: 0.82rem; }
+  .article-content th, .article-content td { padding: 0.65rem 0.5rem; }
+
+  /* Page Headers */
+  .page-header { padding: 2.5rem 0 1.5rem; }
+  .page-title { font-size: 2rem; }
+  .section-pad { padding: 2rem 0; }
+
+  /* Calc card */
+  .calc-card { padding: 2rem 1.25rem; }
+
+  /* Footer */
+  .footer { padding: 2rem 0 1.5rem; }
+  .footer-disclaimer { padding: 1.25rem 1rem; font-size: 0.79rem; }
+  .footer-links { flex-direction: column; text-align: center; gap: 1rem; }
+  .social-links { justify-content: center; }
+
+  /* Module Accordion */
+  .module-accordion summary { padding: 1.25rem 1.5rem; }
+  .module-accordion summary h2 { font-size: 1.15rem; }
+
+  /* Snapshot in market-intelligence */
+  .snapshot-card .snapshot-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Small Mobile: 480px */
 @media (max-width: 480px) {
-  .snapshot-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-  .pillars-grid {
-    grid-template-columns: 1fr;
-  }
-  .page-title {
-    font-size: 2rem;
-  }
+  .container { padding: 0 1rem; }
+
+  /* Typography */
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.45rem; }
+  h3 { font-size: 1.2rem; }
+
+  /* Snapshot: single column */
+  .snapshot-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .snapshot-card { padding: 1.25rem 1rem; }
+
+  /* Pillars: single column */
+  .pillars-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+  .bounded-card { padding: 1.5rem 1rem; }
+
+  /* Hero */
+  .hero-section { padding: 3rem 0 2.5rem; }
+  .hero-tagline { font-size: 1.8rem; }
+
+  /* Tables horizontal scroll always on small screens */
+  .table-container { overflow-x: auto; -webkit-overflow-scrolling: touch; display: block; width: 100%; }
+  .table-container table { min-width: 480px; }
+
+  /* Article */
+  .article-container { padding: 1.5rem 1rem; }
+  .article-content h1 { font-size: 1.6rem; }
+  .article-content h2 { font-size: 1.25rem; }
+
+  /* Page title */
+  .page-title { font-size: 1.75rem; }
+
+  /* Cards */
+  .card, .card-content-block { padding: 1.5rem 1rem; }
+
+  /* Teaser */
+  .teaser-title { font-size: 1.25rem; }
+
+  /* Market Intelligence archive table */
+  .data-table td, .data-table th { padding: 0.6rem 0.5rem; font-size: 0.78rem; }
+
+  /* Fix any wide inline-styled elements */
+  [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+}
+
+/* Extra small: 360px (e.g. older Android phones) */
+@media (max-width: 360px) {
+  .container { padding: 0 0.75rem; }
+  .hero-tagline { font-size: 1.6rem; }
+  .snapshot-value { font-size: 1.05rem; }
+  .btn { padding: 0.65rem 1.25rem; font-size: 0.85rem; }
+  .article-container { padding: 1.25rem 0.75rem; }
 }
