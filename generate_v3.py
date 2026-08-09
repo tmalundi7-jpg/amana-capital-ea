@@ -33,35 +33,35 @@ def replace_doc_link(match):
     else:
         return f'<span class="article-crosslink">{link_html}</span>'
 
-with open('article-1-1.html', 'r', encoding='windows-1252', errors='replace') as f:
+with open('article-1-1.html', 'r', encoding='utf-8', errors='replace') as f:
     template_html = f.read()
 
 template_html = re.sub(r'<title>.*?</title>', r'<title>{page_title}</title>', template_html)
 
 wow_factor_css = """
-        .article-container { max-width: 800px; margin: 4rem auto; padding: 3rem; background: var(--white); border-radius: 12px; box-shadow: 0 10px 30px rgba(11,29,58,0.08), 0 1px 8px rgba(11,29,58,0.03); border-top: 5px solid var(--gold); }
-        body { background-color: var(--cream); }
-        .article-content { font-family: 'Inter', sans-serif; color: var(--navy); }
-        .article-content h1 { color: var(--navy); margin-bottom: 0.5rem; font-size: 2.5rem; font-family: 'Merriweather', serif; font-weight: 700; line-height: 1.2; letter-spacing: -0.5px; }
-        .article-content h2, .article-content h3, .article-content h4 { color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.2rem; font-family: 'Merriweather', serif; font-weight: 700; }
-        .article-content p { line-height: 1.8; margin-bottom: 1.8rem; font-size: 1.15rem; color: var(--navy); }
-        .article-content ul, .article-content ol { margin-bottom: 1.8rem; padding-left: 2rem; color: var(--navy); }
-        .article-content li { margin-bottom: 0.8rem; line-height: 1.7; font-size: 1.15rem; color: var(--navy); }
-        .article-content table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(11,29,58,0.05); }
-        .article-content th, .article-content td { border: 1px solid var(--stone); padding: 1rem; text-align: left; color: var(--navy); }
-        .article-content th { background-color: var(--navy); color: var(--white); font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
-        .article-content tr:nth-child(even) { background-color: var(--cream); }
-        .apply-it, .further-reading, .article-disclaimer { background-color: var(--stone); border: 1px solid var(--gold); padding: 2rem; margin: 3rem 0; border-radius: 8px; position: relative; }
-        .apply-it p, .further-reading p { color: var(--navy); }
+        .article-container { max-width: 820px; margin: 3rem auto; padding: 3.5rem 3rem; background: var(--bg-card); border-radius: var(--radius-md); box-shadow: var(--shadow-card-hover); border: 1px solid var(--border-card); border-top: 5px solid var(--gold); }
+        body { background-color: var(--bg-body); }
+        .article-content { font-family: var(--body-font); color: var(--text-body); }
+        .article-content h1 { color: var(--text-heading); margin-bottom: 0.75rem; font-size: 2.75rem; font-family: var(--heading-font); font-weight: 700; line-height: 1.2; letter-spacing: -0.5px; }
+        .article-content h2, .article-content h3, .article-content h4 { color: var(--text-heading); margin-top: 2.5rem; margin-bottom: 1rem; font-family: var(--heading-font); font-weight: 700; }
+        .article-content p { line-height: 1.8; margin-bottom: 1.8rem; font-size: 1.08rem; color: var(--text-body); }
+        .article-content ul, .article-content ol { margin-bottom: 1.8rem; padding-left: 2rem; }
+        .article-content li { margin-bottom: 0.6rem; line-height: 1.7; font-size: 1.08rem; }
+        .article-content table { width: 100%; border-collapse: collapse; margin: 2rem 0; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-card); border: 1px solid var(--border-color); }
+        .article-content th, .article-content td { border: 1px solid var(--border-color); padding: 1rem; text-align: left; font-size: 0.95rem; }
+        .article-content th { background-color: var(--table-header); color: var(--text-heading); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; }
+        .article-content tr:nth-child(even) { background-color: rgba(200, 150, 46, 0.01); }
+        .apply-it, .further-reading, .article-disclaimer { background-color: rgba(200, 150, 46, 0.03); border: 1px solid var(--border-card); border-left: 4px solid var(--gold); padding: 2rem; margin: 3rem 0; border-radius: var(--radius-md); position: relative; }
+        .apply-it p, .further-reading p { color: var(--text-body); }
         .apply-it p:last-child, .further-reading p:last-child { margin-bottom: 0; }
-        .apply-it p:first-child, .further-reading p:first-child { margin-bottom: 0.5rem; }
-        .apply-it p:first-child strong, .further-reading p:first-child strong { color: var(--gold); text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
-        .breadcrumb { margin-bottom: 3rem; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
-        .breadcrumb a { color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; transition: all 0.2s ease; }
-        .breadcrumb a:hover { color: var(--navy); transform: translateX(-5px); }
-        .article-crosslink { color: var(--gold); font-weight: 400; text-decoration: none; border-bottom: 2px solid var(--gold); transition: all 0.2s ease; }
-        .article-crosslink:hover { background-color: transparent; border-bottom-color: var(--navy); color: var(--navy); }
-        .article-disclaimer p { margin-bottom: 0; color: var(--navy); font-size: 0.9rem; line-height: 1.6; text-align: justify; }
+        .apply-it p:first-child, .further-reading p:first-child { margin-bottom: 0.75rem; }
+        .apply-it p:first-child strong, .further-reading p:first-child strong { color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85rem; font-weight: 800; }
+        .breadcrumb { margin-bottom: 2.5rem; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+        .breadcrumb a { color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; transition: all 0.2s ease; }
+        .breadcrumb a:hover { color: var(--text-heading); transform: translateX(-4px); }
+        .article-crosslink { color: var(--gold); font-weight: 600; text-decoration: none; border-bottom: 1.5px solid var(--gold); transition: all 0.2s ease; }
+        .article-crosslink:hover { border-bottom-color: var(--text-heading); color: var(--text-heading); }
+        .article-disclaimer p { margin-bottom: 0; color: var(--text-body); font-size: 0.88rem; line-height: 1.6; }
 """
 
 template_html = re.sub(r'<style>.*?</style>', f'<style>\n{wow_factor_css}\n    </style>', template_html, flags=re.DOTALL)
