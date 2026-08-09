@@ -1,0 +1,81 @@
+--- DUMP OF C:\Users\tmalu\GitHub\amana-capital-ea\temp_04_check.docx ---
+
+P: Daily DSE Wrap | Wednesday, 5th August 2026
+P: ETF Block Trade Steals the Spotlight as the Equity Market Drifts Sideways
+P: The Dar es Salaam Stock Exchange delivered a session of two halves on Wednesday. While regular equity trading was subdued — with turnover slipping below TZS 5 billion for the first time in weeks — a single, enormous transaction in the iTrust ETF board pushed total reported market turnover sharply higher and provided a valuable lesson in how large, institutional money moves without disturbing the prices of the underlying shares.
+P: 1. Market Snapshot
+
+--- TABLE 0 ---
+Metric | Tuesday 4 Aug | Wednesday 5 Aug | Change
+DSEI | 4,182.69 | 4,188.97 | +6.28 pts (+0.2%)
+TSI | — | 9,173.10 | —
+Equity Turnover | TZS 5.06 bn | TZS 4.53 bn | –10.5%
+Shares Traded | 1,899,818 | 1,002,056 | –47.3%
+Deals | 2,567 | 2,692 | +4.9%
+Bond Turnover | TZS 18.56 bn | TZS 3.51 bn | –81.1%
+ETF Turnover | TZS 0.11 bn | TZS 3.22 bn¹ | —
+Foreign Buying | 2.26% | 0.47% | —
+Foreign Selling | 18.74% | 2.72% | —
+
+P: ¹ Includes a single pre-arranged block trade of 2,330,000 IEACLC-ETF shares, worth approximately TZS 3.15 billion.
+P: Equity activity on the normal board continued to moderate, but the number of individual deals actually rose, indicating that small and mid-sized investors remain engaged. The All-Share Index edged fractionally higher, consolidating its August base.
+P: The star of the day was not a stock but an Exchange-Traded Fund. The IEACLC-ETF saw a pre-arranged block trade of over 2.3 million shares change hands between two large institutions. This single transaction accounted for almost all the day’s ETF turnover and was significant enough to push the total market turnover figure into an entirely different league. Because the trade was negotiated privately and reported on the pre-arranged board, the underlying shares held by the ETF were not affected, and the equity market itself remained calm.
+P: Foreign participation remained minimal. Both buying and selling by international investors were negligible, confirming that the market is now firmly anchored by domestic capital.
+P: 2. Top Movers
+
+--- TABLE 1 ---
+Ticker | Closing Price (TZS) | Change | Volume
+NMB | 17,600 | +0.2% | 172,957²
+VODA | 1,000 | 0.0% | 281,103
+CRDB | 2,580 | 0.0% | 366,364
+TBL | 10,090 | +1.0% | 998
+TCC | 12,340 | +0.3% | 2,720
+
+P: ² Includes a 17,000-share block trade.
+P: Gainers: NMB (+0.2%), TBL (+1.0%), TCC (+0.3%), DCB (+1.1%).
+Losers: TCCL (–5.2%), TPCC (–0.2%), PAL (–6.5%), MCB (–0.6%).
+P: Among the widely held counters, NMB inched up to 17,600, extending its run of all-time highs as the market waits for the formal announcement of its ex-dividend date. VODA held the 1,000 level, consolidating after its late-July surge and retreat. CRDB was unchanged at 2,580, continuing the quiet drift that has characterised the stock since July’s historic block trades were completed. Trading remained heavily concentrated in these three names, though the volumes were lighter than in recent weeks.
+P: 3. In Focus: The 2.3-Million-Share ETF Block Trade — What It Teaches Us
+P: Wednesday’s session saw a trade of 2,330,000 shares of the IEACLC-ETF, valued at roughly TZS 3.15 billion. That is an enormous transaction, larger than the total daily equity turnover in many sessions. Yet the price of the ETF barely moved, and the prices of the individual stocks held inside the ETF were not disturbed at all. How is that possible?
+P: The answer lies in two important features of how the DSE operates. The first is the pre-arranged block trade. This is a privately negotiated transaction between two large institutions — perhaps a pension fund selling a large position to another institution, or a fund manager rebalancing its portfolio. By agreeing on a price and quantity privately, and then reporting the trade to the exchange through the pre-arranged board, the parties avoid flooding the open market with a huge order that could push prices sharply up or down.
+P: The second is the nature of an ETF itself. An Exchange-Traded Fund is a basket of securities — typically shares or bonds — that trades on the stock exchange like a single stock. The IEACLC-ETF holds a diversified portfolio of Tanzanian equities. When an institution buys or sells a large block of the ETF, it is effectively buying or selling a tiny slice of every company in the fund. The individual companies are not affected because the trade happens at the ETF level, not in the shares of CRDB, NMB, or VODA directly.
+P: For the everyday investor, a block trade like this is a signal of deep institutional activity, but not a reason to change course. It tells you that professional money is moving, and that the market’s infrastructure is robust enough to handle transactions worth billions of shillings without fuss. That quiet capability is a sign of a maturing exchange.
+P: To understand more about ETFs, see our guide Stocks, Bonds, and ETFs: The Three Building Blocks. For a walk-through of how a trade happens from order to settlement, read How a Trade Happens: From Your Phone to the Market.
+P: 4. Today’s Concept: The 5% Daily Price Band — Your Safety Net
+P: On Wednesday, CRDB closed at 2,580. On Thursday, the stock cannot trade at any price outside a band of ±5% around that closing level. The limits are:
+P: Upper limit: 2,580 × 1.05 = 2,709
+P: Lower limit: 2,580 × 0.95 = 2,451
+P: Any order to buy above 2,709 or to sell below 2,451 will be rejected by the exchange’s automated trading system. This rule is not a restriction designed to frustrate — it is a safety net that prevents extreme, panic-driven moves and ensures orderly price discovery, even on days when a giant block trade is taking place elsewhere.
+P: Based on Wednesday’s closing prices, here are the allowed trading ranges for Thursday, 6 August 2026, for key stocks:
+
+--- TABLE 2 ---
+Counter | Wednesday Close (TZS) | Thursday Upper Limit (TZS) | Thursday Lower Limit (TZS)
+CRDB | 2,580 | 2,709.00 | 2,451.00
+NMB | 17,600 | 18,480.00 | 16,720.00
+VODA | 1,000 | 1,050.00 | 950.00
+TBL | 10,090 | 10,594.50 | 9,585.50
+DCB¹ | 425 | 488.75 | 361.25
+
+P: ¹ DCB trades under a wider 15% band; the table shows 15% limits.
+P: Before placing any order, it is a useful habit to check the previous day’s closing price, calculate the 5% band, and ensure your limit price falls within it. This simple step prevents the frustration of submitting an order that the exchange will automatically reject.
+P: For a complete guide to interpreting market data, read our article Understanding Market Data.
+P: 5. Bond Market: Institutions Pause After a Busy Start to August
+P: Government bond turnover fell sharply to just TZS 3.5 billion, the quietest day in weeks. Activity was concentrated in the 20-year maturity, where the 12.25% bond and high-coupon 15.49% bonds changed hands in modest amounts. Yields remain stable, with long-dated paper offering around 10.5–11.7%, entirely free of withholding tax. After a heavy period of institutional trading at the end of July, the bond market is taking a natural breather. The deep local appetite for tax-free income remains intact and will return as August progresses.
+P: 6. Strategic Outlook: What to Anticipate
+P: Near-Term (August):
+P: The market appears to be settling into a quieter, post-July rhythm. Trading is likely to remain concentrated in the large banking counters, with CRDB and NMB continuing to dominate volumes.
+P: NMB is trading close to its all-time high. The ex-dividend date for the approved TZS 610.15 dividend has still not been published but is expected at any time. When it is announced, the share price may adjust downward by an amount roughly equal to the dividend.
+P: VODA has stabilised near 1,000. The company’s full-year results and dividend proposal have been absorbed by the market, and the stock is likely to trade in a range as investors assess the longer-term growth outlook for mobile money and data services.
+P: Medium-Term (Q3 2026):
+P: The Bank of Tanzania’s policy stance remains supportive. Any shift in the benchmark interest rate would be the most significant macroeconomic event for both equities and bonds.
+P: The implementation of the government’s infrastructure spending will directly benefit cement, construction, and logistics companies.
+P: Long-Term:
+A market that can absorb a TZS 3.15 billion ETF block trade without a ripple in the underlying equity prices is a market that has matured. The deep local institutional liquidity that was built during the July handover is now the bedrock of daily trading. For the patient investor, that quiet resilience is the foundation for decades of sustainable wealth creation.
+P: 7. Professional Approach: How to Use This Intelligence
+P: Combine the Daily Wrap with our education series. If the block trade or price-band concepts are new to you, read How a Trade Happens and Understanding Market Data.
+P: Maintain a diversified portfolio. Spread your capital across banks, industrials, consumer goods, and bonds.
+P: Think in years, not days. Daily price swings and institutional block trades are interesting, but lasting wealth is built by owning well-managed companies through economic cycles.
+P: Remember the risk. All equity investment carries the possibility of loss. Past performance does not guarantee future results.
+P: 8. Considerations for a Multi-Year Framework
+P: The quiet absorption of a 2.3-million-share ETF block, with barely a flicker in the prices of the stocks held inside it, is a milestone that deserves more attention than it will receive. It signals that the DSE now possesses the institutional depth to handle the largest trades without disruption, and that the market’s centre of gravity has shifted firmly to patient, domestic capital. For the multi-year investor, that structural improvement is the real story of August — one that will quietly compound into better returns, lower volatility, and a more resilient East African capital market.
+P: This document is for general informational and educational purposes only. Nothing contained herein constitutes financial, investment, legal, or tax advice and should not be relied upon as such. Any investment decision you make is solely your own responsibility. The value of investments and the income from them can go down as well as up, and you may not get back the amount originally invested. Past performance is not a reliable indicator of future results. Capital is at risk, and you may incur losses — including the total loss of your invested capital — which you alone will bear. Amana Capital East Africa Limited is a registered investment advisory and fund management firm under the Capital Markets and Securities Authority (CMSA), Tanzania. Licence number: [pending]. Our registration does not imply that CMSA approves or endorses the contents of this material.
