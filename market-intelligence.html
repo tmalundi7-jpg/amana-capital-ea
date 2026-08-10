@@ -11,8 +11,8 @@
     <link rel="canonical" href="https://www.amana-capital-ea.co.tz/market-intelligence" />
     <link rel="stylesheet" href="style.min.css?v=20260810k">
     <!-- Chart.js in head so it's available immediately -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@2.0.2"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -147,37 +147,10 @@
     }
 
     /* Snapshot card */
-    .mi-snapshot-card {
-        background: var(--navy);
-        border-radius: 14px;
-        padding: 1.75rem 2rem;
-        margin-bottom: 2rem;
-        border: 1px solid rgba(200,150,46,0.18);
-        position: relative;
-        overflow: hidden;
-    }
-    .mi-snapshot-card::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0;
-        height: 3px;
-        background: linear-gradient(90deg, var(--gold), rgba(200,150,46,0.2));
-    }
-    .mi-snapshot-hdr {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1.5rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid rgba(200,150,46,0.15);
-    }
-    .mi-snapshot-hdr h2 {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: var(--cream);
-        margin: 0;
-    }
+    
+    
+    
+    
     .live-badge {
         display: inline-flex;
         align-items: center;
@@ -199,30 +172,10 @@
         background: #22c55e;
         animation: pulseMI 1.5s infinite;
     }
-    .snapshot-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 1.25rem;
-    }
-    .snapshot-label {
-        font-size: 0.72rem;
-        color: rgba(251,247,240,0.85);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-    }
-    .snapshot-value {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--cream);
-    }
-    .snapshot-mover span {
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: var(--cream);
-    }
+    
+    
+    
+    
 
     /* Archive section */
     .mi-archive-title {
@@ -433,15 +386,15 @@
         .mi-hero-inner { grid-template-columns: 1fr; gap: 1.5rem; }
         .mi-hero h1 { font-size: 2.4rem; }
         .mi-subscribe-inner { grid-template-columns: 1fr; gap: 2rem; }
-        .snapshot-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        
     }
     @media (max-width: 540px) {
         .mi-hero { padding: 2rem 0 1.5rem; }
         .archive-row { grid-template-columns: 70px 1fr; padding: 1rem; }
         .archive-cta { display: none; }
         .mi-hero h1 { font-size: 2rem; }
-        .snapshot-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-        .mi-snapshot-card { padding: 1.25rem; }
+        
+        
         .mi-heatmap-section { padding: 1.25rem; margin-top: 1rem; }
     }
     </style>

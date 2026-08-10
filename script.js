@@ -830,7 +830,7 @@ window.ensureChartLoaded = function(callback) {
             callback();
         } else {
             const script2 = document.createElement('script');
-            script2.src = 'https://cdn.jsdelivr.net/npm/chartjs-chart-treemap';
+            script2.src = 'https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@2.0.2';
             script2.onload = callback;
             document.head.appendChild(script2);
         }
