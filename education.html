@@ -53,23 +53,29 @@
     <main id="swup" class="transition-fade">
 
     <!-- Header Section -->
-    <section class="bg-navy section-pad" style="padding-bottom: 2rem; padding-top: 2rem; text-align: center;">
-    <div class="container" style="max-width: 800px; margin: 0 auto;">
-        <h2 style="color: var(--cream); margin-bottom: 0; font-size: 1.2rem;">Master The Markets</h2>
-        <div style="color: var(--gold); text-transform: uppercase; font-weight: 700; font-size: 0.7rem; margin-bottom: 0.25rem;">Investor Education Series</div>
-        <p style="color: rgba(251, 247, 240, 0.85); font-size: 0.8rem; margin: 0 auto;">A comprehensive 7-module curriculum designed to take you from market fundamentals to advanced portfolio strategy.</p>
-    </div>
-</div>
+    <section class="bg-navy section-pad" style="padding-bottom: 2rem; padding-top: 3rem; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -20%; left: 50%; transform: translateX(-50%); width: 1000px; height: 1000px; background: radial-gradient(circle, rgba(200,150,46,0.1) 0%, rgba(11,29,58,0) 60%); border-radius: 50%; pointer-events: none; z-index: 0;"></div>
+        
+        <div class="container text-center" style="position: relative; z-index: 1; max-width: 700px; margin: 0 auto; background-color: var(--navy); border: 1px solid var(--gold); border-radius: 8px; padding: 2rem 1.5rem; box-shadow: 0 10px 20px rgba(0,0,0,0.3);">
+            <div style="display: inline-block; padding: 0.3rem 1rem; background-color: rgba(200, 150, 46, 0.1); border: 1px solid rgba(200, 150, 46, 0.3); border-radius: 20px; margin-bottom: 1rem;">
+                <span style="color: var(--gold); font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">Master The Markets</span>
+            </div>
+            <h1 style="color: var(--cream); font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 1rem; line-height: 1.2;">Investor Education Series</h1>
+            <p style="color: var(--stone); font-size: 0.95rem; max-width: 600px; margin: 0 auto; line-height: 1.6; font-weight: 400;">
+                A comprehensive <span style="color: var(--gold); font-weight: 600;">7-module curriculum</span> designed to take you from market fundamentals to <span style="color: var(--gold); border-bottom: 1px solid rgba(200, 150, 46, 0.4); padding-bottom: 1px;">advanced portfolio strategy</span>.
+            </p>
+        </div>
+                </div>
         </div>
     </section>
 
     <!-- Accordion Section -->
     <section class="bg-navy section-pad" style="padding-top: 1rem; padding-bottom: 4rem;">
-        <div class="container grid-2" style="max-width: 1200px; align-items: start;" id="accordion-container">
+        <div class="container" style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;" id="accordion-container">
             
             <!-- Wealth Calculator -->
-            <div class="calc-card">
-                <h3 style="margin-bottom: 1.5rem; color: var(--navy);">Wealth Calculator</h3>
+            <div class="calc-card" style="width: 100%; max-width: 1000px; margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 1.5rem; color: var(--navy); text-align: center;">Wealth Calculator</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
                     <div>
                         <label style="font-weight: 600; font-size: 0.9rem; color: var(--navy);">Initial Investment (TZS)</label>
@@ -96,8 +102,8 @@
                     <div id="calc-output" style="font-size: 1.75rem; font-weight: 700; color: var(--navy); margin-top: 0.25rem;">TZS 0</div>
                 </div>
             </div>
-            </div>            <div class="modules-column">
             <!-- Module 1 -->
+            <div style="width: 100%; max-width: 750px; margin: 0 auto;">
             <details class="module-accordion" style="margin-bottom: 1.5rem; background: var(--cream); border-radius: 8px; border: 1px solid var(--gold); overflow: hidden;">
                 <summary>
                     Module 1: Macroeconomics & The Market
@@ -224,7 +230,7 @@
             </details>
 
         </div>
-    </div>
+                </div>
         </div>
     </section>
 
