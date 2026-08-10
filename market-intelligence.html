@@ -517,7 +517,7 @@
                                 <h3>DSE Market Heatmap</h3>
                                 <span class="live-badge">End of Day</span>
                             </div>
-                            <div style="height: 220px; position: relative; width: 100%;">
+                            <div style="height: 300px; position: relative; width: 100%;">
                                 <canvas id="dseHeatmap"></canvas>
                             </div>
                             <p style="font-size: 0.75rem; color: rgba(251,247,240,0.4); margin-top: 0.75rem; margin-bottom: 0; font-style: italic;">Block size = relative Market Cap. Colour = daily % change (Green positive, Red negative).</p>
@@ -614,65 +614,7 @@
             </div>
         </section>
 
-    <!-- Heatmap init: fires on both direct load and Swup navigation -->
-    <script>
-    window.initDSEHeatmap = function() {
-        var canvas = document.getElementById('dseHeatmap');
-        if (!canvas) return;
-        if (typeof Chart === 'undefined' || !window['chartjs-chart-treemap']) {
-            setTimeout(window.initDSEHeatmap, 300); return;
-        }
-        // Destroy existing instance if any
-        var existing = Chart.getChart(canvas);
-        if (existing) existing.destroy();
-        var data = [
-            { symbol: 'TBL', marketCap: 3200, change: 0.00 },
-            { symbol: 'NMB', marketCap: 2675, change: -0.93 },
-            { symbol: 'CRDB', marketCap: 1515, change: 1.75 },
-            { symbol: 'VODA', marketCap: 1200, change: 2.67 },
-            { symbol: 'TPCC', marketCap: 900, change: -0.47 },
-            { symbol: 'TWIGA', marketCap: 800, change: 0.00 },
-            { symbol: 'TICL', marketCap: 250, change: 3.45 },
-            { symbol: 'DSE', marketCap: 150, change: 0.88 },
-            { symbol: 'TCCL', marketCap: 120, change: -1.2 },
-            { symbol: 'SWIS', marketCap: 100, change: 0.00 }
-        ];
-        new Chart(canvas, {
-            type: 'treemap',
-            data: { datasets: [{
-                tree: data, key: 'marketCap', groups: ['symbol'], spacing: 2, borderWidth: 0,
-                backgroundColor: function(c) {
-                    if (c.type !== 'data') return 'transparent';
-                    var v = c.raw._data.change;
-                    if (v > 1.5) return 'rgba(22,163,74,1)';
-                    if (v > 0) return 'rgba(22,163,74,0.75)';
-                    if (v < -1.5) return 'rgba(220,38,38,1)';
-                    if (v < 0) return 'rgba(220,38,38,0.75)';
-                    return 'rgba(100,116,139,0.55)';
-                },
-                labels: { display: true, color: '#ffffff',
-                    font: { family: "'Plus Jakarta Sans', sans-serif", size: 12, weight: 'bold' },
-                    formatter: function(c) {
-                        var item = c.raw._data;
-                        return [item.symbol, (item.change > 0 ? '+' : '') + item.change.toFixed(2) + '%'];
-                    }
-                }
-            }]},
-            options: { maintainAspectRatio: false, plugins: { legend: { display: false },
-                tooltip: { callbacks: {
-                    title: function(items) { return items[0].raw._data.symbol; },
-                    label: function(item) { var d = item.raw._data; return ['Change: ' + (d.change > 0 ? '+' : '') + d.change + '%', 'Market Cap: ' + d.marketCap]; }
-                }}
-            }}
-        });
-    };
-    // Fire on initial page load
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', window.initDSEHeatmap);
-    } else {
-        window.initDSEHeatmap();
-    }
-    </script>
+
     </main>
 
     <footer class="footer" style="background-color: var(--navy); padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.05);">

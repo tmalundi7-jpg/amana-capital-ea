@@ -82,15 +82,9 @@ window.initSnapshotCharts = function() {
     
     if (!dseiCanvas && !tsiCanvas) return;
 
-    if (typeof Chart === 'undefined') {
-        const script = document.createElement('script');
-        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js';
-        script.onload = () => {
-            initSnapshotCharts();
-        };
-        document.head.appendChild(script);
-        return;
-    }
+    window.ensureChartLoaded(() => {
+        // Continue drawing charts
+
 
     const commonOptions = {
         responsive: false,
@@ -149,6 +143,7 @@ window.initSnapshotCharts = function() {
             options: commonOptions
         });
     }
+    });
 };
 
 // --- Bond Calculator Logic ---
@@ -822,4 +817,84 @@ window.initCompoundWealth = function() {
     // Initial render
     if(cwChartInstance) { cwChartInstance.destroy(); cwChartInstance = null; }
     updateCompoundWealth();
+};
+
+window.ensureChartLoaded = function(callback) {
+    if (typeof Chart !== 'undefined' && window['chartjs-chart-treemap']) {
+        callback();
+        return;
+    }
+    
+    const loadTreemap = () => {
+        if (window['chartjs-chart-treemap']) {
+            callback();
+        } else {
+            const script2 = document.createElement('script');
+            script2.src = 'https://cdn.jsdelivr.net/npm/chartjs-chart-treemap';
+            script2.onload = callback;
+            document.head.appendChild(script2);
+        }
+    };
+
+    if (typeof Chart === 'undefined') {
+        const script1 = document.createElement('script');
+        script1.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js';
+        script1.onload = loadTreemap;
+        document.head.appendChild(script1);
+    } else {
+        loadTreemap();
+    }
+};
+
+window.initDSEHeatmap = function() {
+    const canvas = document.getElementById('dseHeatmap');
+    if (!canvas) return;
+
+    window.ensureChartLoaded(() => {
+        // Destroy existing instance if any
+        const existing = Chart.getChart(canvas);
+        if (existing) existing.destroy();
+        
+        const data = [
+            { symbol: 'TBL', marketCap: 3200, change: 0.00 },
+            { symbol: 'NMB', marketCap: 2675, change: -0.93 },
+            { symbol: 'CRDB', marketCap: 1515, change: 1.75 },
+            { symbol: 'VODA', marketCap: 1200, change: 2.67 },
+            { symbol: 'TPCC', marketCap: 900, change: -0.47 },
+            { symbol: 'TWIGA', marketCap: 800, change: 0.00 },
+            { symbol: 'TICL', marketCap: 250, change: 3.45 },
+            { symbol: 'DSE', marketCap: 150, change: 0.88 },
+            { symbol: 'TCCL', marketCap: 120, change: -1.2 },
+            { symbol: 'SWIS', marketCap: 100, change: 0.00 }
+        ];
+        
+        new Chart(canvas, {
+            type: 'treemap',
+            data: { datasets: [{
+                tree: data, key: 'marketCap', groups: ['symbol'], spacing: 2, borderWidth: 0,
+                backgroundColor: function(c) {
+                    if (c.type !== 'data') return 'transparent';
+                    var v = c.raw._data.change;
+                    if (v > 1.5) return 'rgba(22,163,74,1)';
+                    if (v > 0) return 'rgba(22,163,74,0.75)';
+                    if (v < -1.5) return 'rgba(220,38,38,1)';
+                    if (v < 0) return 'rgba(220,38,38,0.75)';
+                    return 'rgba(100,116,139,0.55)';
+                },
+                labels: { display: true, color: '#ffffff',
+                    font: { family: "'Plus Jakarta Sans', sans-serif", size: 14, weight: 'bold' },
+                    formatter: function(c) {
+                        var item = c.raw._data;
+                        return [item.symbol, (item.change > 0 ? '+' : '') + item.change.toFixed(2) + '%'];
+                    }
+                }
+            }]},
+            options: { maintainAspectRatio: false, plugins: { legend: { display: false },
+                tooltip: { callbacks: {
+                    title: function(items) { return items[0].raw._data.symbol; },
+                    label: function(item) { var d = item.raw._data; return ['Change: ' + (d.change > 0 ? '+' : '') + d.change + '%', 'Market Cap: ' + d.marketCap]; }
+                }}
+            }}
+        });
+    });
 };
