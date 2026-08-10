@@ -328,11 +328,20 @@ window.initBondCalculator = function() {
                 maintainAspectRatio: false,
                 interaction: { mode: 'index', intersect: false },
                 plugins: {
-                    legend: { labels: { color: '#E8E2D9' } }
+                    legend: { labels: { color: '#E8E2D9', font: { family: "'Inter', sans-serif", weight: '600' } } },
+                    tooltip: {
+                        backgroundColor: 'rgba(11, 29, 58, 0.95)',
+                        titleColor: '#C8962E',
+                        bodyColor: '#FBF7F0',
+                        borderColor: '#C8962E',
+                        borderWidth: 1,
+                        padding: 12,
+                        cornerRadius: 4
+                    }
                 },
                 scales: {
-                    x: { ticks: { color: '#9A9490' }, grid: { color: 'rgba(255,255,255,0.05)' } },
-                    y: { ticks: { color: '#9A9490' }, grid: { color: 'rgba(255,255,255,0.05)' } }
+                    x: { ticks: { color: '#9A9490' }, grid: { display: false } },
+                    y: { ticks: { color: '#9A9490' }, grid: { display: false } }
                 }
             }
         });
@@ -557,3 +566,29 @@ window.initScrollReveal = function() {
         revealObserver.observe(el);
     });
 };
+
+// --- Theme Toggle Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    const initTheme = () => {
+        const toggleBtn = document.getElementById('theme-toggle');
+        if (!toggleBtn) return;
+        
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        toggleBtn.innerHTML = currentTheme === 'dark' ? '☀️' : '🌙';
+        
+        toggleBtn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            let newTheme = theme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            toggleBtn.innerHTML = newTheme === 'dark' ? '☀️' : '🌙';
+        });
+    };
+    
+    initTheme();
+    // Re-init on swup navigation
+    if (typeof swup !== 'undefined') {
+        swup.hooks.on('page:view', initTheme);
+    }
+});

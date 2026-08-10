@@ -21,8 +21,8 @@
   
   --bg-card: var(--white);
   --border-card: rgba(200, 150, 46, 0.12);
-  --shadow-card: 0 10px 30px rgba(11, 29, 58, 0.04), 0 1px 8px rgba(11, 29, 58, 0.02);
-  --shadow-card-hover: 0 20px 40px rgba(11, 29, 58, 0.1), 0 1px 12px rgba(11, 29, 58, 0.04);
+  --shadow-card: 0 4px 6px -1px rgba(11, 29, 58, 0.08), 0 2px 4px -1px rgba(11, 29, 58, 0.04);
+  --shadow-card-hover: 0 10px 15px -3px rgba(11, 29, 58, 0.1), 0 4px 6px -2px rgba(11, 29, 58, 0.05);
   
   --bg-card-dark: var(--navy);
   --text-card-dark: var(--cream);
@@ -61,8 +61,8 @@
   
   --bg-card: #0F172A;
   --border-card: rgba(212, 175, 55, 0.15);
-  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.3), 0 1px 8px rgba(0, 0, 0, 0.2);
-  --shadow-card-hover: 0 20px 40px rgba(0, 0, 0, 0.5), 0 1px 12px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-card-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
   
   --bg-card-dark: #0F172A;
   --text-card-dark: #F1F5F9;
@@ -187,7 +187,7 @@ a:hover {
   font-size: 0.92rem;
   text-decoration: none;
   padding: 0.25rem 0;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-block;
   line-height: 1.4;
   position: relative;
@@ -223,7 +223,7 @@ a:hover {
   bottom: -4px;
   left: 0;
   background-color: var(--gold);
-  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .nav-links a:hover::after, .nav-links a.active::after {
   width: 100%;
@@ -250,7 +250,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   margin-left: 0.5rem;
 }
 .theme-toggle:hover {
@@ -265,7 +265,7 @@ a:hover {
   text-align: center;
   cursor: pointer;
   border-radius: var(--radius-sm);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
   line-height: 1.4;
   border: none;
@@ -341,7 +341,7 @@ a:hover {
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   margin-bottom: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .card:hover, .card-content-block:hover, .concept-box:hover, .framework-box:hover {
   transform: translateY(-4px);
@@ -429,7 +429,7 @@ a:hover {
   color: var(--text-body);
   font-family: var(--body-font);
   font-size: 0.95rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .form-control:focus {
   outline: none;
@@ -443,7 +443,7 @@ a:hover {
   color: var(--text-body);
   border-top: 1px solid var(--border-color);
   padding: 3rem 0 2rem;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .footer-disclaimer {
   background: var(--navy);
@@ -578,7 +578,7 @@ a:hover {
   box-shadow: 0 15px 35px rgba(11, 29, 58, 0.08);
   position: relative;
   z-index: 10;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .snapshot-card:hover {
   transform: translateY(-2px);
@@ -696,7 +696,7 @@ a:hover {
   border: 1px solid rgba(200, 150, 46, 0.18);
   border-bottom: 2px solid var(--gold);
   border-radius: var(--radius-md);
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
 }
@@ -772,7 +772,7 @@ a:hover {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .service-card:hover {
   transform: translateY(-6px);
@@ -805,7 +805,7 @@ a:hover {
   align-items: stretch;
   position: relative;
   overflow: hidden;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .teaser-card:hover {
   transform: translateY(-5px);
@@ -1021,7 +1021,7 @@ a:hover {
   font-size: 0.95rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .newsletter-form button:hover {
   background: var(--gold-hover);
@@ -1093,7 +1093,7 @@ a:hover {
 .caret {
   color: var(--gold);
   font-size: 1.5rem;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-block;
   line-height: 1;
 }
@@ -1550,7 +1550,7 @@ html.is-animating .transition-fade {
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
-  width: 600px;
+  width: 800px;
   background: var(--navy);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius-md);
@@ -1558,7 +1558,7 @@ html.is-animating .transition-fade {
   box-shadow: 0 20px 40px rgba(0,0,0,0.3);
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 1000;
   pointer-events: none;
 }
@@ -1803,4 +1803,20 @@ html.is-animating .transition-fade {
 .archive-scroll-container::-webkit-scrollbar-thumb {
     background-color: var(--gold);
     border-radius: 4px;
+}
+
+/* --- Theme Toggle & Client Login --- */
+.btn-theme-toggle {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-body);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.4rem 0.6rem;
+    border-radius: var(--radius-sm);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-theme-toggle:hover {
+    border-color: var(--gold);
+    color: var(--gold);
 }
