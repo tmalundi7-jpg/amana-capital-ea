@@ -32,8 +32,21 @@
                 <li><a href="/market-intelligence" class="active">Market Intelligence</a></li>
                 <li><a href="/education">Investor Education</a></li>
                 <li><a href="/bond-calculator">Bond Calculator</a></li>
+                        <li><a href="/risk-profiler">Risk Profiler</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
+                  <li class="currency-toggle-li" style="display: flex; align-items: center; margin-left: 1rem;">
+                      <div style="display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.05); padding: 0.4rem 0.8rem; border-radius: 20px; border: 1px solid rgba(200, 150, 46, 0.3);">
+                          <span class="label-tzs" style="color: var(--gold); font-size: 0.75rem; font-weight: bold; transition: color 0.3s;">TZS</span>
+                          <label style="position: relative; display: inline-block; width: 34px; height: 18px; margin: 0;">
+                              <input type="checkbox" class="global-currency-switch" style="opacity: 0; width: 0; height: 0;" onchange="toggleCurrency(this)">
+                              <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255,255,255,0.2); transition: .4s; border-radius: 34px;">
+                                  <span class="currency-slider" style="position: absolute; content: ''; height: 14px; width: 14px; left: 2px; bottom: 2px; background-color: var(--mist); transition: .4s; border-radius: 50%;"></span>
+                              </span>
+                          </label>
+                          <span class="label-usd" style="color: var(--mist); font-size: 0.75rem; transition: color 0.3s;">USD</span>
+                      </div>
+                  </li>
                   </ul>
         </div>
     </nav>
@@ -68,7 +81,7 @@
                     </div>
                     <div>
                         <div class="snapshot-label">Turnover (TZS)</div>
-                              <div class="snapshot-value" id="mi-turnover">5.25 bn</div>
+                              <div class="snapshot-value" id="mi-turnover" data-tzs-value="5250000000" data-format-type="bn">5.25 bn</div>
                     </div>
                     <div>
                         <div class="snapshot-label">Top Gainers</div>
@@ -134,7 +147,17 @@
         </div>
     </main>
 
-                                                                <section class="lead-gen-section" style="background: var(--navy); padding: 4rem 0; border-top: 1px solid rgba(200, 150, 46, 0.1);">
+                                                                
+              <!-- Interactive DSE Market Heatmap -->
+              <div class="card" style="margin-bottom: 2.5rem; position: relative; z-index: 10; border-top: 2px solid var(--gold);">
+                  <h3 style="margin-top: 0; margin-bottom: 1rem; font-size: 1.15rem; color: var(--cream);">DSE Market Heatmap</h3>
+                  <div style="height: 350px; position: relative; width: 100%;">
+                      <canvas id="dseHeatmap"></canvas>
+                  </div>
+                  <p style="font-size: 0.8rem; color: var(--mist); margin-top: 1rem; margin-bottom: 0; font-style: italic;">Block size represents relative Market Capitalization. Color represents daily % change (Green = Positive, Red = Negative).</p>
+              </div>
+              
+              <section class="lead-gen-section" style="background: var(--navy); padding: 4rem 0; border-top: 1px solid rgba(200, 150, 46, 0.1);">
         <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
             <h2 style="color: var(--gold); margin-bottom: 1rem; font-family: var(--heading-font);">Subscribe to Institutional Intelligence</h2>
             <p style="color: var(--mist); margin-bottom: 2rem; max-width: 600px; line-height: 1.6;">Join Tanzanian professionals, corporate treasurers, and global institutional investors receiving our daily DSE wraps and macroeconomic briefings directly in their inbox.</p>
@@ -162,6 +185,7 @@
                         <li><a href="/market-intelligence">Daily DSE Wraps</a></li>
                         <li><a href="/market-intelligence-archive">Historical Archive</a></li>
                         <li><a href="/bond-calculator">Bond Calculator</a></li>
+                        <li><a href="/risk-profiler">Risk Profiler</a></li>
                         <li><a href="/education">Investor Education</a></li>
                     </ul>
                 </div>
@@ -226,6 +250,84 @@
             }
         });
     </script>
+
+    <!-- Heatmap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctx = document.getElementById('dseHeatmap');
+            if (ctx && typeof Chart !== 'undefined' && window['chartjs-chart-treemap']) {
+                const data = [
+                    { symbol: 'TBL', marketCap: 3200, change: 0.00 },
+                    { symbol: 'NMB', marketCap: 2675, change: -0.93 },
+                    { symbol: 'CRDB', marketCap: 1515, change: 1.75 },
+                    { symbol: 'VODA', marketCap: 1200, change: 2.67 },
+                    { symbol: 'TPCC', marketCap: 900, change: -0.47 },
+                    { symbol: 'TWIGA', marketCap: 800, change: 0.00 },
+                    { symbol: 'TICL', marketCap: 250, change: 3.45 },
+                    { symbol: 'DSE', marketCap: 150, change: 0.88 },
+                    { symbol: 'TCCL', marketCap: 120, change: -1.2 },
+                    { symbol: 'SWIS', marketCap: 100, change: 0.00 },
+                ];
+
+                new Chart(ctx, {
+                    type: 'treemap',
+                    data: {
+                        datasets: [{
+                            tree: data,
+                            key: 'marketCap',
+                            groups: ['symbol'],
+                            spacing: 2,
+                            borderWidth: 0,
+                            backgroundColor: (ctx) => {
+                                if (ctx.type !== 'data') return 'transparent';
+                                const value = ctx.raw._data.change;
+                                if (value > 1.5) return 'rgba(22, 163, 74, 1)'; // Strong Green
+                                if (value > 0) return 'rgba(22, 163, 74, 0.7)'; // Light Green
+                                if (value < -1.5) return 'rgba(220, 38, 38, 1)'; // Strong Red
+                                if (value < 0) return 'rgba(220, 38, 38, 0.7)'; // Light Red
+                                return 'rgba(100, 116, 139, 0.5)'; // Neutral Slate
+                            },
+                            labels: {
+                                display: true,
+                                color: '#ffffff',
+                                font: {
+                                    family: "'Inter', sans-serif",
+                                    size: 14,
+                                    weight: 'bold'
+                                },
+                                formatter: (ctx) => {
+                                    const item = ctx.raw._data;
+                                    const sign = item.change > 0 ? '+' : '';
+                                    return [item.symbol, sign + item.change.toFixed(2) + '%'];
+                                }
+                            }
+                        }]
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                callbacks: {
+                                    title: (items) => items[0].raw._data.symbol,
+                                    label: (item) => {
+                                        const data = item.raw._data;
+                                        return [
+                                            `Change: ${data.change > 0 ? '+' : ''}${data.change}%`,
+                                            `Market Cap Weight: ${data.marketCap}`
+                                        ];
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+
 </body>
 </html>
 

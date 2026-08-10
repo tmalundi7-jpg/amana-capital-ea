@@ -592,3 +592,68 @@ document.addEventListener('DOMContentLoaded', () => {
         swup.hooks.on('page:view', initTheme);
     }
 });
+
+// --- Currency Toggle Logic ---
+const EXCHANGE_RATE = 2750;
+
+function toggleCurrency(checkbox) {
+    const isUSD = checkbox.checked;
+    
+    // Sync all switches on the page if multiple exist
+    document.querySelectorAll('.global-currency-switch').forEach(el => {
+        if(el !== checkbox) el.checked = isUSD;
+    });
+    
+    // Update labels visually
+    document.querySelectorAll('.label-tzs').forEach(el => el.style.color = isUSD ? 'var(--mist)' : 'var(--gold)');
+    document.querySelectorAll('.label-usd').forEach(el => el.style.color = isUSD ? 'var(--gold)' : 'var(--mist)');
+    document.querySelectorAll('.currency-slider').forEach(el => {
+        el.style.transform = isUSD ? 'translateX(16px)' : 'translateX(0)';
+        el.style.backgroundColor = isUSD ? 'var(--gold)' : 'var(--mist)';
+    });
+
+    // Store preference
+    localStorage.setItem('preferredCurrency', isUSD ? 'USD' : 'TZS');
+    
+    convertDataElements(isUSD);
+}
+
+function convertDataElements(toUSD) {
+    const elements = document.querySelectorAll('[data-tzs-value]');
+    elements.forEach(el => {
+        const rawValue = parseFloat(el.getAttribute('data-tzs-value'));
+        const formatType = el.getAttribute('data-format-type');
+        
+        if (formatType === 'pts') {
+            // Index points don't convert currency
+            return;
+        }
+
+        if (toUSD) {
+            const usdValue = rawValue / EXCHANGE_RATE;
+            if (formatType === 'bn') {
+                el.innerText = '$' + (usdValue / 1000000).toFixed(2) + ' m';
+            } else {
+                el.innerText = '$' + usdValue.toFixed(2);
+            }
+        } else {
+            // Revert to TZS
+            if (formatType === 'bn') {
+                el.innerText = (rawValue / 1000000000).toFixed(2) + ' bn';
+            } else {
+                el.innerText = rawValue.toLocaleString();
+            }
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const stored = localStorage.getItem('preferredCurrency');
+    if (stored === 'USD') {
+        const switchEl = document.querySelector('.global-currency-switch');
+        if (switchEl) {
+            switchEl.checked = true;
+            toggleCurrency(switchEl);
+        }
+    }
+});
