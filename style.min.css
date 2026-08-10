@@ -11,3 +11,98 @@
 @media (max-width:540px){.snapshot-grid{grid-template-columns:repeat(2, 1fr);gap:1rem;}.mi-snapshot-card{padding:1.25rem;}}
 
 .mi-snapshot-card .snapshot-mover {color:#ffffff !important;}
+
+/* =========================================
+   EXPERT INVESTMENT FIRM UPGRADE
+   ========================================= */
+:root {
+    --shadow-premium: 0 20px 40px -10px rgba(11,29,58, 0.25);
+    --shadow-premium-hover: 0 30px 60px -15px rgba(11,29,58, 0.4);
+}
+[data-theme="dark"] {
+    --shadow-premium: 0 20px 40px -10px rgba(0,0,0, 0.6);
+    --shadow-premium-hover: 0 30px 60px -15px rgba(0,0,0, 0.8);
+}
+
+/* 1. Global Typography Polish */
+h1, h2, h3, .page-title, .hero-tagline { letter-spacing: -0.02em; }
+p { letter-spacing: 0.01em; line-height: 1.75; }
+
+/* 2. Premium Navy Cards */
+.snapshot-card, .mi-snapshot-card, .bounded-card, .service-card, .teaser-card, .newsletter-box, .module-accordion, .calc-card {
+    background: var(--navy) !important;
+    border: 1px solid rgba(200,150,46, 0.25) !important;
+    box-shadow: var(--shadow-premium) !important;
+    position: relative;
+}
+
+/* Ensure text visibility inside Navy Cards */
+.snapshot-card h1, .snapshot-card h2, .snapshot-card h3, .snapshot-card h4,
+.mi-snapshot-card h1, .mi-snapshot-card h2, .mi-snapshot-card h3, .mi-snapshot-card h4,
+.bounded-card h1, .bounded-card h2, .bounded-card h3, .bounded-card h4,
+.service-card h1, .service-card h2, .service-card h3, .service-card h4,
+.teaser-card h1, .teaser-card h2, .teaser-card h3, .teaser-card h4,
+.module-accordion h1, .module-accordion h2, .module-accordion h3, .module-accordion h4,
+.calc-card h1, .calc-card h2, .calc-card h3, .calc-card h4 {
+    color: var(--cream) !important;
+}
+
+.snapshot-card p, .mi-snapshot-card p, .bounded-card p, .service-card p, .teaser-card p, .module-accordion p, .calc-card p,
+.snapshot-card span:not([style]), .mi-snapshot-card span:not([style]), .bounded-card span:not([style]), .service-card span:not([style]), .teaser-card span:not([style]), .module-accordion span:not([style]), .calc-card span:not([style]),
+.snapshot-card div:not([style]):not(.snapshot-value):not(.snapshot-mover), .service-card div:not([style]), .teaser-card div:not([style]) {
+    color: rgba(251,247,240, 0.85);
+}
+
+/* Specific overrides for data values */
+.snapshot-card .snapshot-value, .mi-snapshot-card .snapshot-value, .snapshot-card .snapshot-mover {
+    color: #ffffff !important;
+}
+
+/* Glowing Gold Top Borders */
+.snapshot-card::after, .mi-snapshot-card::after, .bounded-card::after, .service-card::after, .teaser-card::after, .calc-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.8;
+}
+
+/* Hover Lift */
+.snapshot-card:hover, .mi-snapshot-card:hover, .service-card:hover, .teaser-card:hover, .calc-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-premium-hover) !important;
+    border-color: rgba(200,150,46, 0.45) !important;
+}
+
+/* 3. Buttons */
+.btn-gold-solid {
+    background: linear-gradient(135deg, var(--gold) 0%, #D4AF37 100%) !important;
+    color: var(--navy) !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(200,150,46,0.25) !important;
+}
+.btn-gold-solid:hover {
+    box-shadow: 0 8px 25px rgba(200,150,46,0.45) !important;
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* 4. Tables */
+.data-table th {
+    background: var(--navy) !important;
+    color: var(--cream) !important;
+    border-bottom: 2px solid var(--gold) !important;
+}
+
+/* Fix specific home page elements */
+.home-stat-label, .teaser-prem-stat-label {
+    color: rgba(251,247,240, 0.7) !important;
+}
+.home-stat-value, .teaser-prem-stat-value {
+    color: #ffffff !important;
+}
+
+/* Fix about page pillar text */
+.pillar-card p {
+    color: rgba(251,247,240, 0.8) !important;
+}
