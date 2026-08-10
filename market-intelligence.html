@@ -57,16 +57,13 @@
             </div>
         </div>
 
-        <div class="container" style="max-width: 950px; margin-top: -2rem; margin-bottom: 4rem;">
+        <div class="container" style="max-width: 900px; margin-top: -2rem; margin-bottom: 4rem;">
 
             <!-- DSE Snapshot Card -->
             <div class="snapshot-card" style="margin-bottom: 2.5rem; position: relative; z-index: 10;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
                     <h2 style="margin: 0; font-size: 1.25rem;">Live DSE Snapshot</h2>
-                    <div style="display: flex; gap: 1rem; align-items: center;">
-                        <div class="snapshot-timestamp" style="font-size: 0.8rem; color: var(--mist); font-weight: 600; text-transform: uppercase;">7 August 2026</div>
-                        <button id="downloadPdfBtn" class="btn-gold-solid" style="padding: 0.4rem 0.8rem; font-size: 0.85rem; border: none; cursor: pointer; border-radius: 4px;">Download PDF</button>
-                    </div>
+                    <div class="snapshot-timestamp" style="font-size: 0.8rem; color: var(--mist); font-weight: 600; text-transform: uppercase;">7 August 2026</div>
                 </div>
                 <div class="snapshot-grid">
                     <div>
@@ -100,43 +97,47 @@
                 </div>
             </div>
 
-            <!-- Two Column Layout for Archive & Quick Links -->
-            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
-                
+            <!-- Archive + Sidebar -->
+            <div style="display: grid; grid-template-columns: 1fr 280px; gap: 2rem;">
+
                 <!-- Daily Wrap Archive -->
                 <div>
-                    <h3 style="margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--stone);">Daily DSE Wrap Archive</h3>
-                    <div class="card" style="padding: 0; overflow: hidden; border-radius: 4px;">
-                        <table class="data-table" style="margin: 0;">
-                            <tbody>
-                                        <tr>
-                                            <td style="width: 25%; font-weight: 600; color: var(--mist); font-size: 0.85rem; text-transform: uppercase;">7 August 2026</td>
-                                            <td><strong>A Steady Finish to the Week as Block Trades Continue and the Market Looks Ahead</strong><br><span style="font-size:0.85rem; color:#555;">The Dar es Salaam Stock Exchange closed the week on a calm and positive note, with the All-Share Index edging higher and turnover comfortably above TZS 5 billion. Behind the quiet headline numbers, pre-arranged block trades continued to show that large investors are actively repositioning their holdings...</span></td>
-                                            <td style="text-align: right;"><a href="/dse-wrap-2026-08-07" class="gold-link">Read &rarr;</a></td>
-                                        </tr>
+                    <h3 style="margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--stone); font-size: 1.05rem; letter-spacing: 0.02em;">Daily DSE Wrap Archive</h3>
 
-                              </tbody>
-                        </table>
+                    <div style="display: flex; flex-direction: column; gap: 0;">
+                        <div style="border: 1px solid rgba(11,29,58,0.09); border-radius: 8px; overflow: hidden; background: #fff;">
+                            <div style="display: grid; grid-template-columns: 120px 1fr auto; align-items: center; gap: 1rem; padding: 1rem 1.25rem; border-bottom: 1px solid rgba(11,29,58,0.06);">
+                                <div style="font-size: 0.75rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;">7 Aug 2026</div>
+                                <div>
+                                    <div style="font-weight: 700; font-size: 0.9rem; color: var(--navy); margin-bottom: 0.25rem; line-height: 1.3;">A Steady Finish to the Week as Block Trades Continue</div>
+                                    <div style="font-size: 0.8rem; color: rgba(11,29,58,0.55); line-height: 1.5;">DSE closed positively with turnover above TZS 5bn. Block trades signal large investor repositioning...</div>
+                                </div>
+                                <a href="/dse-wrap-2026-08-07" style="font-size: 0.8rem; font-weight: 700; color: var(--gold); text-decoration: none; white-space: nowrap;">Read &rarr;</a>
+                            </div>
+                        </div>
                     </div>
+
                     <div style="margin-top: 1.5rem; text-align: center;">
-                        <a href="/market-intelligence-archive" class="btn-gold-solid" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">View Full Historical Archive &rarr;</a>
+                        <a href="/market-intelligence-archive" class="btn-gold-solid" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">View Full Archive &rarr;</a>
                     </div>
                 </div>
 
-                <!-- Sidebar: Quick Links & Education -->
-                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                    
-                    <div class="card" style="padding: 1.5rem; border-top: 2px solid var(--navy);">
-                        <h4 style="margin-bottom: 1rem; font-size: 1.05rem;">Quick Links</h4>
-                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
-                            <li><a href="/current-prices" style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; background: var(--cream); font-weight: 600;">Current Prices <span>&rarr;</span></a></li>
+                <!-- Sidebar -->
+                <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+
+                    <div class="card" style="padding: 1.25rem; border-top: 2px solid var(--navy);">
+                        <h4 style="margin-bottom: 0.75rem; font-size: 0.95rem;">Quick Links</h4>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+                            <li><a href="/current-prices" style="display: flex; justify-content: space-between; align-items: center; padding: 0.4rem 0.6rem; background: var(--cream); font-weight: 600; font-size: 0.88rem; border-radius: 4px;">Current Prices <span>&rarr;</span></a></li>
+                            <li><a href="/bond-calculator" style="display: flex; justify-content: space-between; align-items: center; padding: 0.4rem 0.6rem; background: var(--cream); font-weight: 600; font-size: 0.88rem; border-radius: 4px;">Bond Calculator <span>&rarr;</span></a></li>
+                            <li><a href="/compound-wealth" style="display: flex; justify-content: space-between; align-items: center; padding: 0.4rem 0.6rem; background: var(--cream); font-weight: 600; font-size: 0.88rem; border-radius: 4px;">Wealth Modeler <span>&rarr;</span></a></li>
                         </ul>
                     </div>
 
-                    <div class="card" style="padding: 1.5rem; background: var(--navy); color: var(--white); border-top: 2px solid var(--gold);">
-                        <h4 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 1.05rem;">New to the DSE?</h4>
-                        <p style="font-size: 0.85rem; color: rgba(251, 247, 240, 0.85); margin-bottom: 1.25rem;">Build your foundational knowledge with our free investor curriculum.</p>
-                        <a href="/education" class="btn btn-gold-solid" style="width: 100%; display: block;">Start Learning</a>
+                    <div class="card" style="padding: 1.25rem; background: var(--navy); color: var(--cream); border-top: 2px solid var(--gold);">
+                        <h4 style="color: var(--gold); margin-bottom: 0.4rem; font-size: 0.95rem;">New to the DSE?</h4>
+                        <p style="font-size: 0.82rem; color: rgba(251,247,240,0.8); margin-bottom: 1rem; line-height: 1.5;">Build your foundational knowledge with our free investor curriculum.</p>
+                        <a href="/education" class="btn btn-gold-solid" style="width: 100%; display: block; text-align: center; font-size: 0.88rem;">Start Learning</a>
                     </div>
 
                 </div>
@@ -185,33 +186,6 @@
     <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
     <script src="script.min.js" defer></script>
     <script src="/js/theme-toggle.js" defer></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const btn = document.getElementById('downloadPdfBtn');
-            if (btn) {
-                btn.addEventListener('click', () => {
-                    // Temporarily hide the button during capture
-                    btn.style.display = 'none';
-                    
-                    const element = document.querySelector('main');
-                    const opt = {
-                      margin:       0.5,
-                      filename:     'Amana_Capital_Market_Intelligence.pdf',
-                      image:        { type: 'jpeg', quality: 0.98 },
-                      html2canvas:  { scale: 2, useCORS: true, logging: false },
-                      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-                    };
-                    
-                    html2pdf().set(opt).from(element).save().then(() => {
-                        // Restore button
-                        btn.style.display = 'block';
-                    });
-                });
-            }
-        });
-    </script>
 
     <!-- Heatmap Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
