@@ -53,7 +53,7 @@
     /* ─── Market Intelligence Page Styles ─── */
     .mi-hero {
         background: var(--navy);
-        padding: 5rem 0 4rem;
+        padding: 3.5rem 0 2.5rem;
         position: relative;
         overflow: hidden;
     }
@@ -136,12 +136,12 @@
     /* Main layout */
     .mi-body {
         background: var(--cream);
-        padding: 2.5rem 0 5rem;
+        padding: 2.5rem 0 3.5rem;
     }
     .mi-layout {
         display: grid;
         grid-template-columns: 1fr 290px;
-        gap: 2.5rem;
+        gap: 2rem;
         max-width: 1040px;
         margin: 0 auto;
     }
@@ -198,6 +198,30 @@
         border-radius: 50%;
         background: #22c55e;
         animation: pulseMI 1.5s infinite;
+    }
+    .snapshot-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.25rem;
+    }
+    .snapshot-label {
+        font-size: 0.72rem;
+        color: rgba(251,247,240,0.85);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+    .snapshot-value {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--cream);
+    }
+    .snapshot-mover span {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--cream);
     }
 
     /* Archive section */
@@ -405,15 +429,20 @@
     .mi-sub-form button:hover { background: #d4a233; }
 
     @media (max-width: 860px) {
-        .mi-layout { grid-template-columns: 1fr; }
-        .mi-hero-inner { grid-template-columns: 1fr; }
+        .mi-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+        .mi-hero-inner { grid-template-columns: 1fr; gap: 1.5rem; }
         .mi-hero h1 { font-size: 2.4rem; }
         .mi-subscribe-inner { grid-template-columns: 1fr; gap: 2rem; }
+        .snapshot-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
     }
     @media (max-width: 540px) {
-        .archive-row { grid-template-columns: 80px 1fr; }
+        .mi-hero { padding: 2rem 0 1.5rem; }
+        .archive-row { grid-template-columns: 70px 1fr; padding: 1rem; }
         .archive-cta { display: none; }
         .mi-hero h1 { font-size: 2rem; }
+        .snapshot-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .mi-snapshot-card { padding: 1.25rem; }
+        .mi-heatmap-section { padding: 1.25rem; margin-top: 1rem; }
     }
     </style>
 
