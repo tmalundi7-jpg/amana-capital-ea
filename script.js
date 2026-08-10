@@ -819,31 +819,40 @@ window.initCompoundWealth = function() {
     updateCompoundWealth();
 };
 
+window._chartJsPromise = null;
 window.ensureChartLoaded = function(callback) {
-    if (typeof Chart !== 'undefined' && window['chartjs-chart-treemap']) {
+    if (typeof Chart !== 'undefined' && Chart.registry && Chart.registry.controllers.get('treemap')) {
         callback();
         return;
     }
-    
-    const loadTreemap = () => {
-        if (window['chartjs-chart-treemap']) {
-            callback();
-        } else {
-            const script2 = document.createElement('script');
-            script2.src = 'https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@2.0.2';
-            script2.onload = callback;
-            document.head.appendChild(script2);
-        }
-    };
 
-    if (typeof Chart === 'undefined') {
-        const script1 = document.createElement('script');
-        script1.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js';
-        script1.onload = loadTreemap;
-        document.head.appendChild(script1);
-    } else {
-        loadTreemap();
+    if (!window._chartJsPromise) {
+        window._chartJsPromise = new Promise((resolve, reject) => {
+            const loadTree = () => {
+                if (typeof Chart !== 'undefined' && Chart.registry && Chart.registry.controllers.get('treemap')) {
+                    resolve();
+                } else {
+                    const s2 = document.createElement('script');
+                    s2.src = 'https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@2.0.2';
+                    s2.onload = resolve;
+                    s2.onerror = reject;
+                    document.head.appendChild(s2);
+                }
+            };
+            
+            if (typeof Chart === 'undefined') {
+                const s1 = document.createElement('script');
+                s1.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js';
+                s1.onload = loadTree;
+                s1.onerror = reject;
+                document.head.appendChild(s1);
+            } else {
+                loadTree();
+            }
+        });
     }
+
+    window._chartJsPromise.then(callback).catch(err => console.error('Chart load failed', err));
 };
 
 window.initDSEHeatmap = function() {
