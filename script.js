@@ -657,3 +657,171 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// --- Compound Wealth Engine Logic ---
+const cwInitial = document.getElementById('cw-initial');
+const cwMonthly = document.getElementById('cw-monthly');
+const cwRate = document.getElementById('cw-rate');
+const cwYears = document.getElementById('cw-years');
+
+const cwInitialVal = document.getElementById('cw-initial-val');
+const cwMonthlyVal = document.getElementById('cw-monthly-val');
+const cwRateVal = document.getElementById('cw-rate-val');
+const cwYearsVal = document.getElementById('cw-years-val');
+
+const cwTotalWealth = document.getElementById('cw-total-wealth');
+const cwTotalPrincipal = document.getElementById('cw-total-principal');
+const cwTotalInterest = document.getElementById('cw-total-interest');
+
+let cwChartInstance = null;
+
+function formatCurrency(num) {
+    if (num >= 1000000000) {
+        return (num / 1000000000).toFixed(2) + ' bn TZS';
+    } else if (num >= 1000000) {
+        return (num / 1000000).toFixed(2) + ' m TZS';
+    }
+    return num.toLocaleString() + ' TZS';
+}
+
+function updateCompoundWealth() {
+    if (!cwInitial) return; // Only run on the compound wealth page
+    
+    let initial = parseFloat(cwInitial.value);
+    let monthly = parseFloat(cwMonthly.value);
+    let rate = parseFloat(cwRate.value) / 100;
+    let years = parseInt(cwYears.value);
+    
+    // Update labels
+    cwInitialVal.innerText = initial.toLocaleString() + ' TZS';
+    cwMonthlyVal.innerText = monthly.toLocaleString() + ' TZS';
+    cwRateVal.innerText = cwRate.value + '%';
+    cwYearsVal.innerText = years + (years === 1 ? ' Year' : ' Years');
+    
+    let labels = [];
+    let principalData = [];
+    let interestData = [];
+    
+    let currentPrincipal = initial;
+    let currentTotal = initial;
+    
+    // Calculate yearly data points
+    for (let y = 0; y <= years; y++) {
+        labels.push('Year ' + y);
+        principalData.push(currentPrincipal);
+        interestData.push(currentTotal - currentPrincipal);
+        
+        if (y < years) {
+            // Compound monthly for the next year
+            for (let m = 0; m < 12; m++) {
+                currentTotal = currentTotal * (1 + rate/12) + monthly;
+                currentPrincipal += monthly;
+            }
+        }
+    }
+    
+    // Update summary text
+    let finalPrincipal = principalData[years];
+    let finalInterest = interestData[years];
+    let finalTotal = finalPrincipal + finalInterest;
+    
+    cwTotalWealth.innerText = formatCurrency(finalTotal);
+    cwTotalPrincipal.innerText = formatCurrency(finalPrincipal);
+    cwTotalInterest.innerText = formatCurrency(finalInterest);
+    
+    // Update Chart
+    const ctx = document.getElementById('cw-chart').getContext('2d');
+    
+    if (cwChartInstance) {
+        cwChartInstance.data.labels = labels;
+        cwChartInstance.data.datasets[0].data = principalData;
+        cwChartInstance.data.datasets[1].data = interestData;
+        cwChartInstance.update();
+    } else {
+        cwChartInstance = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Total Principal',
+                        data: principalData,
+                        borderColor: '#1e293b', // Navy
+                        backgroundColor: 'rgba(30, 41, 59, 0.8)',
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 0,
+                        pointHoverRadius: 6
+                    },
+                    {
+                        label: 'Compound Interest',
+                        data: interestData,
+                        borderColor: '#c8962e', // Gold
+                        backgroundColor: 'rgba(200, 150, 46, 0.8)',
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 0,
+                        pointHoverRadius: 6
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += formatCurrency(context.parsed.y);
+                                }
+                                return label;
+                            }
+                        }
+                    },
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        stacked: true,
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                if (value >= 1000000000) return (value / 1000000000) + 'bn';
+                                if (value >= 1000000) return (value / 1000000) + 'm';
+                                return value;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.getElementById('cw-initial')) {
+        const cwInputs = [cwInitial, cwMonthly, cwRate, cwYears];
+        cwInputs.forEach(input => {
+            input.addEventListener('input', updateCompoundWealth);
+        });
+        
+        // Initial render
+        updateCompoundWealth();
+    }
+});

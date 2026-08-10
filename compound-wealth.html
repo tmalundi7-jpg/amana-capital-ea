@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Wealth Projection Engine | Amana Capital EA</title>
+    <meta name="description" content="Calculate Yield to Worst, Accrued Interest, and Interest Rate Stress Matrix for Tanzanian government bonds using Amana Capital's analytics engine.">
+    <link rel="canonical" href="https://www.amana-capital-ea.co.tz/bond-calculator" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2.5">
+    <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script>
+        Weglot.initialize({
+            api_key: 'wg_22a6f434974df4dee513e25f34fc5e009'
+        });
+    </script>
+</head>
+<body>
+                                                    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="brand-link">
+                <svg viewBox="0 0 32 44" class="brand-icon" aria-hidden="true"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"/><rect x="21" y="0" width="8" height="44" fill="currentColor"/><rect x="0" y="19" width="21" height="4" fill="currentColor"/></svg>
+                <div class="brand-text">
+                    <div class="brand-title">AMANA CAPITAL</div>
+                    <div class="brand-sub">EAST AFRICA</div>
+                </div>
+            </a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/market-intelligence">Market Intelligence</a></li>
+                <li><a href="/education">Investor Education</a></li>
+                <li><a href="/bond-calculator">Bond Calculator</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+
+                  </ul>
+        </div>
+    </nav>
+
+    <main id="swup" class="transition-fade">
+    <section class="page-header section-alt">
+        <div class="container">
+            <h1 style="color:var(--white); margin-bottom: 0.25rem; font-size: 1.8rem;">Compound Wealth Projection Engine</h1>
+            <p style="color:var(--gold); font-size: 0.95rem; max-width: 600px; margin: 0 auto;">Model the long-term mathematical compounding of your equity and debt portfolio.</p>
+        </div>
+    </section>
+
+    <section style="padding: 2rem 0; background: var(--cream);">
+        <div class="container">
+            <div class="grid-2" style="display: grid; grid-template-columns: 350px 1fr; gap: 2rem; align-items: stretch;">
+                
+                <!-- INPUTS COLUMN -->
+                <div class="card" style="display: flex; flex-direction: column; gap: 1.5rem; border-top: 4px solid var(--gold);">
+                    <h3 style="color: var(--navy); border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 0.5rem; margin-bottom: 0.5rem;">Input Parameters</h3>
+                    
+                    <div>
+                        <label for="cw-initial" style="display: flex; justify-content: space-between; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem;">
+                            Initial Investment
+                            <span id="cw-initial-val" style="color: var(--gold);">10,000,000 TZS</span>
+                        </label>
+                        <input type="range" id="cw-initial" min="1000000" max="500000000" step="1000000" value="10000000" style="width: 100%; accent-color: var(--navy);">
+                    </div>
+                    
+                    <div>
+                        <label for="cw-monthly" style="display: flex; justify-content: space-between; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem;">
+                            Monthly Contribution
+                            <span id="cw-monthly-val" style="color: var(--gold);">500,000 TZS</span>
+                        </label>
+                        <input type="range" id="cw-monthly" min="0" max="25000000" step="100000" value="500000" style="width: 100%; accent-color: var(--navy);">
+                    </div>
+                    
+                    <div>
+                        <label for="cw-rate" style="display: flex; justify-content: space-between; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem;">
+                            Expected Annual Return
+                            <span id="cw-rate-val" style="color: var(--gold);">12%</span>
+                        </label>
+                        <input type="range" id="cw-rate" min="1" max="25" step="0.5" value="12" style="width: 100%; accent-color: var(--navy);">
+                        <p style="font-size: 0.75rem; color: var(--text-body); margin-top: 0.25rem;">(Blended benchmark: DSE Equities ~15%, Treasuries ~11%)</p>
+                    </div>
+
+                    <div>
+                        <label for="cw-years" style="display: flex; justify-content: space-between; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem;">
+                            Investment Horizon
+                            <span id="cw-years-val" style="color: var(--gold);">10 Years</span>
+                        </label>
+                        <input type="range" id="cw-years" min="1" max="30" step="1" value="10" style="width: 100%; accent-color: var(--navy);">
+                    </div>
+                </div>
+
+                <!-- OUTPUTS COLUMN -->
+                <div class="card" style="display: flex; flex-direction: column;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <p style="color: var(--mist); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Projected Wealth</p>
+                            <h2 id="cw-total-wealth" style="color: var(--gold); font-size: 2.2rem; margin: 0;">-- TZS</h2>
+                        </div>
+                        <div style="text-align: right; background: rgba(0,0,0,0.03); padding: 0.75rem 1rem; border-radius: 4px; border-left: 3px solid var(--navy);">
+                            <div style="font-size: 0.85rem; color: var(--text-body);"><span style="display:inline-block; width:12px; height:12px; background:var(--navy); margin-right:6px;"></span>Total Principal: <strong id="cw-total-principal">-- TZS</strong></div>
+                            <div style="font-size: 0.85rem; color: var(--text-body); margin-top: 0.25rem;"><span style="display:inline-block; width:12px; height:12px; background:var(--gold); margin-right:6px;"></span>Compound Interest: <strong id="cw-total-interest">-- TZS</strong></div>
+                        </div>
+                    </div>
+                    
+                    <div style="flex-grow: 1; position: relative; min-height: 300px;">
+                        <canvas id="cw-chart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+
+                                                    <footer class="footer" style="background-color: var(--navy); padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.8rem;">
+            <div style="color: var(--gold); font-weight: bold; letter-spacing: 0.05em;">AMANA CAPITAL EAST AFRICA</div>
+            <div style="display: flex; gap: 1.5rem;">
+                <a href="/market-intelligence" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Research</a>
+                <a href="/bond-calculator" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Bond Calc</a>
+                <a href="/compound-wealth" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Wealth Modeler</a>
+                <a href="/education" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Education</a>
+                <a href="/about" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Governance</a>
+                <a href="/contact" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Contact</a>
+            </div>
+            <div style="color: var(--mist); opacity: 0.7;">&copy; 2026. Regulated by CMSA.</div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/swup@4"></script>
+    <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
+    <script src="script.js?v=2.1"></script>
+    
+</body>
+</html>
+
