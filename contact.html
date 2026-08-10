@@ -743,6 +743,73 @@
             </div>
         </section>
 
+        <script>
+        /* ── Contact Page JS — runs inside Swup container so it fires on every navigation ── */
+        (function() {
+            /* Expose ctSetTab globally for onclick handlers */
+            window.ctSetTab = function(el, label) {
+                document.querySelectorAll('.ct-tab').forEach(function(t) { t.classList.remove('active'); });
+                el.classList.add('active');
+                var inp = document.getElementById('ct-inquiry-type');
+                var sub = document.getElementById('ct-subject');
+                if (inp) inp.value = label;
+                if (sub) sub.value = 'New Website Enquiry — ' + label + ' (Amana Capital)';
+            };
+
+            /* Form submission */
+            var form    = document.getElementById('ct-form');
+            var btn     = document.getElementById('ct-submit-btn');
+            var btnText = document.getElementById('ct-btn-text');
+            var success = document.getElementById('ct-success');
+            var error   = document.getElementById('ct-error');
+
+            if (!form) return;
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                var name    = document.getElementById('ct-name').value.trim();
+                var email   = document.getElementById('ct-email').value.trim();
+                var message = document.getElementById('ct-message').value.trim();
+                if (!name || !email || !message) {
+                    error.innerText = '⚠️ Please fill in your name, email, and message before submitting.';
+                    error.style.display = 'block';
+                    success.style.display = 'none';
+                    return;
+                }
+
+                btn.disabled = true;
+                btnText.innerText = 'Sending…';
+
+                fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(form) })
+                .then(function(res) { return res.json(); })
+                .then(function(json) {
+                    if (json.success) {
+                        success.style.display = 'block';
+                        error.style.display   = 'none';
+                        form.reset();
+                        document.querySelectorAll('.ct-tab').forEach(function(t) { t.classList.remove('active'); });
+                        var t1 = document.getElementById('ct-tab-1');
+                        if (t1) t1.classList.add('active');
+                        var inp = document.getElementById('ct-inquiry-type');
+                        var sub = document.getElementById('ct-subject');
+                        if (inp) inp.value = 'Investment Advisory';
+                        if (sub) sub.value = 'New Website Enquiry — Investment Advisory (Amana Capital)';
+                        btnText.innerText = '✅ Message Sent!';
+                        setTimeout(function() { btnText.innerText = 'Send Enquiry →'; btn.disabled = false; }, 4000);
+                    } else { throw new Error('API error'); }
+                })
+                .catch(function() {
+                    error.innerText = '❌ Something went wrong. Please email us directly at info@amana-capital-ea.co.tz';
+                    error.style.display = 'block';
+                    success.style.display = 'none';
+                    btnText.innerText = 'Send Enquiry →';
+                    btn.disabled = false;
+                });
+            });
+        })();
+        </script>
+
     </main>
 
     <footer class="footer" style="background-color: var(--navy); padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.05);">

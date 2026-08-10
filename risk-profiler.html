@@ -930,6 +930,170 @@
             </div>
         </div>
 
+        <script>
+        /* ── Risk Profiler JS — inside Swup container so it fires on every SPA navigation ── */
+        (function() {
+            var rpScore = 0;
+            var rpStep  = 1;
+            var rpTotal = 7;
+
+            var PROFILES = {
+                conservative: {
+                    badge: 'Conservative Profile', badgeBg: 'rgba(59,130,246,0.1)', badgeColor: '#3b82f6',
+                    title: 'Capital Preservation Portfolio',
+                    subtitle: 'You prioritize protecting your principal over chasing high returns. Your strategy relies heavily on government securities to ensure stability and steady income.',
+                    metrics: [{ val: 'Low', label: 'Risk Level' }, { val: '~11–13%', label: 'Target Return' }, { val: '1–3 yrs', label: 'Ideal Horizon' }],
+                    alloc: [
+                        { label: 'Tanzanian Government Treasury Bonds', pct: 85, color: '#3b82f6' },
+                        { label: 'High-Dividend DSE Equities (e.g., NMB)', pct: 15, color: '#c8962e' }
+                    ],
+                    instruments: [
+                        { name: '10-25 Year Treasury Bonds (Held to Maturity)', pct: '85%', color: '#3b82f6' },
+                        { name: 'Blue-chip dividend-paying equities (CRDB, NMB, TBL)', pct: '15%', color: '#c8962e' }
+                    ],
+                    details: [{ label: 'Max Drawdown Tolerance', val: '5–10%' }, { label: 'Rebalancing Frequency', val: 'Annual' }, { label: 'Liquidity Requirement', val: 'High' }, { label: 'Income vs Growth', val: '80% Income / 20% Growth' }]
+                },
+                income: {
+                    badge: 'Income-Oriented Profile', badgeBg: 'rgba(16,185,129,0.1)', badgeColor: '#10b981',
+                    title: 'Stable Yield Portfolio',
+                    subtitle: 'You seek a balance between reliable cash flow and modest capital appreciation. You can tolerate mild equity fluctuations in exchange for yields that consistently beat inflation.',
+                    metrics: [{ val: 'Low-Med', label: 'Risk Level' }, { val: '~12–14%', label: 'Target Return' }, { val: '3–5 yrs', label: 'Ideal Horizon' }],
+                    alloc: [
+                        { label: 'Tanzanian Government Treasury Bonds', pct: 60, color: '#3b82f6' },
+                        { label: 'High-Dividend DSE Equities', pct: 30, color: '#c8962e' },
+                        { label: 'Corporate Bonds / Commercial Paper', pct: 10, color: '#10b981' }
+                    ],
+                    instruments: [
+                        { name: '10-20 Year Treasury Bonds', pct: '60%', color: '#3b82f6' },
+                        { name: 'DSE Dividend Equities (NMB, CRDB, TBL)', pct: '30%', color: '#c8962e' },
+                        { name: 'NMB/CRDB Corporate Retail Bonds', pct: '10%', color: '#10b981' }
+                    ],
+                    details: [{ label: 'Max Drawdown Tolerance', val: '10–15%' }, { label: 'Rebalancing Frequency', val: 'Semi-Annual' }, { label: 'Liquidity Requirement', val: 'Moderate' }, { label: 'Income vs Growth', val: '60% Income / 40% Growth' }]
+                },
+                balanced: {
+                    badge: 'Balanced Profile', badgeBg: 'rgba(245,158,11,0.1)', badgeColor: '#f59e0b',
+                    title: 'Balanced Growth & Income Portfolio',
+                    subtitle: 'You understand market cycles and are comfortable with moderate volatility. A classic 60/40 approach adapted for the East African frontier market.',
+                    metrics: [{ val: 'Medium', label: 'Risk Level' }, { val: '~14–17%', label: 'Target Return' }, { val: '5–7 yrs', label: 'Ideal Horizon' }],
+                    alloc: [
+                        { label: 'Core DSE Equities (Financials/Telcos)', pct: 50, color: '#c8962e' },
+                        { label: 'Tanzanian Government Treasury Bonds', pct: 40, color: '#3b82f6' },
+                        { label: 'Mid-Cap Growth Equities', pct: 10, color: '#f59e0b' }
+                    ],
+                    instruments: [
+                        { name: 'Core DSE Equities (CRDB, NMB, VODA, TCCL)', pct: '50%', color: '#c8962e' },
+                        { name: '15-25 Year Treasury Bonds', pct: '40%', color: '#3b82f6' },
+                        { name: 'Mid-Cap DSE Equities (SWIS, TPCC)', pct: '10%', color: '#f59e0b' }
+                    ],
+                    details: [{ label: 'Max Drawdown Tolerance', val: '15–25%' }, { label: 'Rebalancing Frequency', val: 'Quarterly' }, { label: 'Liquidity Requirement', val: 'Low to Moderate' }, { label: 'Income vs Growth', val: '30% Income / 70% Growth' }]
+                },
+                aggressive: {
+                    badge: 'High-Growth Profile', badgeBg: 'rgba(239,68,68,0.1)', badgeColor: '#ef4444',
+                    title: 'Aggressive Growth Portfolio',
+                    subtitle: 'You have a long time horizon and genuine conviction in the East African growth story. This strategy deploys concentrated capital into undervalued DSE equities to maximise long-term compounding.',
+                    metrics: [{ val: 'High', label: 'Risk Level' }, { val: '~18–22%', label: 'Target Return' }, { val: '10+ yrs', label: 'Ideal Horizon' }],
+                    alloc: [
+                        { label: 'High-Conviction DSE Equities', pct: 55, color: '#c8962e' },
+                        { label: 'Mid & Small-Cap DSE Equities', pct: 25, color: '#ef4444' },
+                        { label: 'East African Cross-Listed Stocks', pct: 10, color: '#f87171' },
+                        { label: 'Government Bonds (Tactical)', pct: 10, color: '#fca5a5' }
+                    ],
+                    instruments: [
+                        { name: 'High-conviction DSE blue-chips (CRDB, NMB, Swissport)', pct: '55%', color: '#c8962e' },
+                        { name: 'DSE mid/small-cap growth equities', pct: '25%', color: '#ef4444' },
+                        { name: 'EAC cross-listed equities (NSE, USE, RSE)', pct: '10%', color: '#f87171' },
+                        { name: 'Tactical bond allocation (deployed on yield spikes)', pct: '10%', color: '#fca5a5' }
+                    ],
+                    details: [{ label: 'Max Drawdown Tolerance', val: '35–50%+' }, { label: 'Rebalancing Frequency', val: 'Opportunistic' }, { label: 'Liquidity Requirement', val: 'Low' }, { label: 'Income vs Growth', val: '10% Income / 90% Growth' }]
+                }
+            };
+
+            function rpGetProfile(score) {
+                if (score <= 12) return 'conservative';
+                if (score <= 18) return 'income';
+                if (score <= 23) return 'balanced';
+                return 'aggressive';
+            }
+
+            window.rpNext = function(q) {
+                var btn = event.currentTarget;
+                rpScore += parseInt(btn.getAttribute('data-score'));
+                btn.style.borderColor = 'var(--gold)';
+                btn.style.background = 'rgba(200,150,46,0.07)';
+                var letter = btn.querySelector('.rp-opt-letter');
+                if (letter) { letter.style.background = 'var(--gold)'; letter.style.color = '#fff'; }
+
+                setTimeout(function() {
+                    document.getElementById('rp-step-' + q).style.display = 'none';
+                    rpStep = q + 1;
+                    var pct = Math.round((rpStep / (rpTotal + 1)) * 100);
+                    document.getElementById('rp-progress').style.width = pct + '%';
+                    document.getElementById('rp-q-current').innerText = Math.min(rpStep, rpTotal);
+                    document.getElementById('rp-pct-label').innerHTML = '<strong style="color:var(--gold)">' + pct + '%</strong>';
+                    if (rpStep > rpTotal) {
+                        rpShowResults();
+                    } else {
+                        var next = document.getElementById('rp-step-' + rpStep);
+                        next.style.display = 'block';
+                        next.classList.add('active');
+                    }
+                }, 300);
+            };
+
+            function rpShowResults() {
+                document.getElementById('rp-progress').style.width = '100%';
+                document.getElementById('rp-pct-label').innerHTML = '<strong style="color:var(--gold)">100%</strong>';
+                var key = rpGetProfile(rpScore);
+                var p = PROFILES[key];
+
+                var badge = document.getElementById('rp-badge');
+                badge.innerText = p.badge; badge.style.background = p.badgeBg; badge.style.color = p.badgeColor;
+                document.getElementById('rp-title').innerText = p.title;
+                document.getElementById('rp-subtitle').innerText = p.subtitle;
+
+                var metricsHtml = '';
+                p.metrics.forEach(function(m) { metricsHtml += '<div class="rp-metric"><span class="rp-metric-val">' + m.val + '</span><div class="rp-metric-label">' + m.label + '</div></div>'; });
+                document.getElementById('rp-metrics').innerHTML = metricsHtml;
+
+                var barsHtml = '';
+                p.alloc.forEach(function(a) { barsHtml += '<div class="rp-alloc-row"><div class="rp-alloc-label"><span>' + a.label + '</span><span class="rp-alloc-pct">' + a.pct + '%</span></div><div class="rp-alloc-track"><div class="rp-alloc-bar" style="width:0%;background:' + a.color + ';" data-target="' + a.pct + '"></div></div></div>'; });
+                document.getElementById('rp-alloc-bars').innerHTML = barsHtml;
+
+                var instHtml = '';
+                p.instruments.forEach(function(i) { instHtml += '<div class="rp-instrument"><div class="rp-instrument-dot" style="background:' + i.color + ';"></div><div class="rp-instrument-name">' + i.name + '</div><div class="rp-instrument-pct">' + i.pct + '</div></div>'; });
+                document.getElementById('rp-instruments-list').innerHTML = instHtml;
+
+                var detailHtml = '';
+                p.details.forEach(function(d) { detailHtml += '<div class="rp-detail-card"><div class="rp-detail-card-label">' + d.label + '</div><div class="rp-detail-card-val">' + d.val + '</div></div>'; });
+                document.getElementById('rp-detail-grid').innerHTML = detailHtml;
+
+                document.getElementById('rp-results').style.display = 'block';
+                setTimeout(function() {
+                    document.querySelectorAll('.rp-alloc-bar').forEach(function(bar) { bar.style.width = bar.getAttribute('data-target') + '%'; });
+                }, 200);
+                document.getElementById('rp-results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            window.rpReset = function() {
+                rpScore = 0; rpStep = 1;
+                document.getElementById('rp-results').style.display = 'none';
+                document.getElementById('rp-progress').style.width = '14.28%';
+                document.getElementById('rp-q-current').innerText = '1';
+                document.getElementById('rp-pct-label').innerHTML = '<strong style="color:var(--gold)">14%</strong>';
+                for (var i = 1; i <= 7; i++) {
+                    var step = document.getElementById('rp-step-' + i);
+                    step.style.display = i === 1 ? 'block' : 'none';
+                    step.querySelectorAll('.rp-opt').forEach(function(btn) {
+                        btn.style.borderColor = ''; btn.style.background = '';
+                        var letter = btn.querySelector('.rp-opt-letter');
+                        if (letter) { letter.style.background = ''; letter.style.color = ''; }
+                    });
+                }
+                document.querySelector('.rp-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            };
+        })();
+        </script>
+
     </main>
 
     <footer class="footer" style="background-color: var(--navy); padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
