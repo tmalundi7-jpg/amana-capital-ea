@@ -179,6 +179,49 @@
     .home-stat-badge.neutral { background: rgba(200,150,46,0.15); color: var(--gold); }
 
     /* Snapshot card upgrade */
+    .snapshot-card {
+        background: var(--navy);
+        border: 1px solid rgba(200,150,46,0.2);
+        border-top: 3px solid var(--gold);
+        border-radius: 14px;
+        padding: 2.5rem;
+        box-shadow: 0 20px 40px rgba(11,29,58,0.15);
+    }
+    .snapshot-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.5rem;
+    }
+    .snapshot-label {
+        font-size: 0.72rem;
+        color: rgba(251,247,240,0.85);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+    .snapshot-value {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--cream);
+    }
+    .snapshot-mover span {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--cream);
+    }
+    .snapshot-footer-link {
+        margin-top: 2rem;
+        text-align: right;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        padding-top: 1.5rem;
+    }
+    .snapshot-note {
+        font-size: 0.7rem;
+        color: rgba(251,247,240,0.4);
+        margin-top: 1.5rem;
+    }
     .home-snapshot-header {
         display: flex;
         justify-content: space-between;
@@ -533,6 +576,7 @@
         .teaser-premium { grid-template-columns: 1fr; }
         .teaser-prem-right { border-top: 1px solid rgba(200,150,46,0.12); padding: 2.5rem 3rem; }
         .newsletter-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+        .snapshot-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
     }
     @media (max-width: 600px) {
         .home-hero { padding: 2rem 0 1.5rem; }
@@ -545,6 +589,9 @@
         .home-stat-value { font-size: 1.15rem; }
         .why-grid { grid-template-columns: 1fr; }
         .section-title { font-size: 1.9rem; }
+        .snapshot-card { padding: 1.5rem; }
+        .snapshot-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+        .home-snapshot-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
     }
     </style>
 </head>
