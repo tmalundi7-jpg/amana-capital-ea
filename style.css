@@ -1781,3 +1781,26 @@ html.is-animating .transition-fade {
   .service-expand-card p, .service-expand-card .btn { opacity: 1; transform: translateY(0); max-height: 200px; margin-bottom: 1rem; }
 }
 
+
+/* Archive Scroll Container */
+.archive-scroll-container {
+    max-height: 600px;
+    overflow-y: auto;
+    /* Custom Scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) var(--navy);
+}
+
+.archive-scroll-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.archive-scroll-container::-webkit-scrollbar-track {
+    background: var(--navy);
+    border-radius: 4px;
+}
+
+.archive-scroll-container::-webkit-scrollbar-thumb {
+    background-color: var(--gold);
+    border-radius: 4px;
+}
