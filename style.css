@@ -1820,3 +1820,50 @@ html.is-animating .transition-fade {
     border-color: var(--gold);
     color: var(--gold);
 }
+
+/* --- Institutional Footer Grid --- */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+.footer-col h4 {
+    color: var(--cream);
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-col ul li {
+    margin-bottom: 0.75rem;
+}
+.footer-col ul li a {
+    color: var(--mist);
+    text-decoration: none;
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.footer-col ul li a:hover {
+    color: var(--gold);
+}
+.footer-brand {
+    color: var(--gold);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+.footer-desc {
+    color: var(--mist);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
