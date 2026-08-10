@@ -3,23 +3,557 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Amana Capital East Africa Limited | Our Team</title>
-    <meta name="description" content="Meet the founders of Amana Capital East Africa Limited. We are a CMSA-registered investment advisory firm in Dar es Salaam dedicated to transparent capital markets.">
-    <link rel="canonical" href="https://www.amana-capital-ea.co.tz/about.html" />
+    <title>Investment Risk Profiler | Amana Capital East Africa</title>
+    <meta name="description" content="Discover your optimal DSE investment strategy. Answer 7 institutional-grade questions to receive a personalised portfolio allocation across Tanzanian equities, bonds, and money markets.">
+    <link rel="canonical" href="https://www.amana-capital-ea.co.tz/risk-profiler" />
     <link rel="stylesheet" href="style.min.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
-    <script>
-        Weglot.initialize({
-            api_key: 'wg_22a6f434974df4dee513e25f34fc5e009'
-        });
-    </script>
+    <script>Weglot.initialize({ api_key: 'wg_22a6f434974df4dee513e25f34fc5e009' });</script>
+    <meta property="og:title" content="Investment Risk Profiler | Amana Capital East Africa" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.amana-capital-ea.co.tz/risk-profiler" />
+    <meta property="og:description" content="Institutional-grade investment risk profiling for Tanzanian and diaspora investors." />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <style>
+        /* ── Page Base ── */
+        .rp-page { background: var(--cream); }
+
+        /* ── Hero ── */
+        .rp-hero {
+            background: var(--navy);
+            padding: 5rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .rp-hero::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 380px; height: 380px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(200,150,46,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .rp-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -60px; left: -60px;
+            width: 280px; height: 280px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(200,150,46,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .rp-hero-label {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            background: rgba(200,150,46,0.15);
+            border: 1px solid rgba(200,150,46,0.4);
+            border-radius: 20px;
+            color: var(--gold);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        .rp-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: var(--cream);
+            line-height: 1.1;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+        }
+        .rp-hero h1 span { color: var(--gold); }
+        .rp-hero p {
+            color: rgba(251,247,240,0.8);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+        .rp-hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .rp-hero-stat { text-align: center; }
+        .rp-hero-stat-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            display: block;
+        }
+        .rp-hero-stat-label {
+            font-size: 0.75rem;
+            color: rgba(251,247,240,0.55);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ── Quiz Card ── */
+        .rp-quiz-wrap {
+            max-width: 780px;
+            margin: -2rem auto 5rem;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        .rp-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 25px 60px rgba(11,29,58,0.12);
+            overflow: hidden;
+        }
+        .rp-card-header {
+            background: var(--navy);
+            padding: 1.5rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .rp-step-indicator {
+            color: rgba(251,247,240,0.55);
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .rp-step-indicator strong { color: var(--gold); }
+        .rp-progress-track {
+            flex: 1;
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            margin: 0 1.5rem;
+            overflow: hidden;
+        }
+        .rp-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #c8962e, #e8b84b);
+            border-radius: 2px;
+            transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            width: 14.28%;
+        }
+
+        /* ── Quiz Body ── */
+        .rp-card-body { padding: 2.5rem; }
+        .rp-step { display: none; animation: rpFade 0.4s ease; }
+        .rp-step.active { display: block; }
+        @keyframes rpFade {
+            from { opacity: 0; transform: translateY(12px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .rp-q-num {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        .rp-q-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+        }
+        .rp-q-sub {
+            font-size: 0.88rem;
+            color: rgba(11,29,58,0.5);
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+        .rp-options { display: flex; flex-direction: column; gap: 0.75rem; }
+        .rp-opt {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.1rem 1.4rem;
+            border: 1.5px solid rgba(11,29,58,0.1);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: #fff;
+            text-align: left;
+            width: 100%;
+        }
+        .rp-opt:hover {
+            border-color: var(--gold);
+            background: rgba(200,150,46,0.04);
+            transform: translateX(4px);
+        }
+        .rp-opt-letter {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(11,29,58,0.06);
+            color: var(--navy);
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.2s;
+        }
+        .rp-opt:hover .rp-opt-letter {
+            background: var(--gold);
+            color: #fff;
+        }
+        .rp-opt-text { font-size: 0.97rem; color: var(--navy); line-height: 1.4; padding-top: 3px; }
+        .rp-opt-sub { font-size: 0.8rem; color: rgba(11,29,58,0.5); margin-top: 2px; }
+
+        /* ── Results ── */
+        .rp-results { display: none; }
+        .rp-result-badge {
+            display: inline-block;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .rp-result-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+        .rp-result-subtitle {
+            color: rgba(11,29,58,0.6);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        /* Allocation Bars */
+        .rp-alloc { margin-bottom: 2rem; }
+        .rp-alloc-title {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(11,29,58,0.5);
+            margin-bottom: 1rem;
+        }
+        .rp-alloc-row { margin-bottom: 1rem; }
+        .rp-alloc-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.35rem;
+        }
+        .rp-alloc-pct { color: var(--gold); }
+        .rp-alloc-track {
+            height: 8px;
+            background: rgba(11,29,58,0.06);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .rp-alloc-bar {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1s cubic-bezier(0.16,1,0.3,1);
+        }
+
+        /* Detail Cards */
+        .rp-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 580px) { .rp-detail-grid { grid-template-columns: 1fr; } }
+        .rp-detail-card {
+            background: rgba(11,29,58,0.03);
+            border: 1px solid rgba(11,29,58,0.08);
+            border-radius: 10px;
+            padding: 1.25rem;
+        }
+        .rp-detail-card-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(11,29,58,0.45);
+            margin-bottom: 0.4rem;
+        }
+        .rp-detail-card-val {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        /* Instruments */
+        .rp-instruments {
+            background: var(--navy);
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin-bottom: 2rem;
+        }
+        .rp-instruments-title {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.25rem;
+        }
+        .rp-instrument {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.7rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+        .rp-instrument:last-child { border-bottom: none; padding-bottom: 0; }
+        .rp-instrument-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .rp-instrument-name {
+            font-size: 0.9rem;
+            color: var(--cream);
+            flex: 1;
+        }
+        .rp-instrument-pct {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        /* Risk Metrics */
+        .rp-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 580px) { .rp-metrics { grid-template-columns: 1fr 1fr; } }
+        .rp-metric {
+            background: #fff;
+            border: 1.5px solid rgba(11,29,58,0.08);
+            border-radius: 10px;
+            padding: 1.1rem;
+            text-align: center;
+        }
+        .rp-metric-val {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            display: block;
+        }
+        .rp-metric-label {
+            font-size: 0.72rem;
+            color: rgba(11,29,58,0.5);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 0.2rem;
+        }
+
+        /* CTA */
+        .rp-cta {
+            background: linear-gradient(135deg, var(--navy) 0%, #162947 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(200,150,46,0.3);
+        }
+        .rp-cta h3 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--cream);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .rp-cta p {
+            color: rgba(251,247,240,0.7);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        .rp-cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .rp-btn-gold {
+            background: var(--gold);
+            color: var(--navy);
+            padding: 0.75rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+            display: inline-block;
+        }
+        .rp-btn-gold:hover { opacity: 0.88; }
+        .rp-btn-outline {
+            background: transparent;
+            border: 1.5px solid rgba(251,247,240,0.3);
+            color: var(--cream);
+            padding: 0.75rem 2rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        .rp-btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+        /* ── Info Sections Below Quiz ── */
+        .rp-info-section {
+            background: var(--cream);
+            padding: 5rem 0;
+        }
+        .rp-section-eyebrow {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        .rp-section-h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        .rp-section-sub {
+            color: rgba(11,29,58,0.6);
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 600px;
+        }
+        .rp-profile-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .rp-profile-card {
+            background: var(--navy);
+            border: 1.5px solid rgba(200,150,46,0.25);
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .rp-profile-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 4px;
+        }
+        .rp-pc-conservative::before { background: #4e9af1; }
+        .rp-pc-income::before { background: #22c55e; }
+        .rp-pc-balanced::before { background: #f59e0b; }
+        .rp-pc-growth::before { background: #ef4444; }
+        .rp-profile-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+        }
+        .rp-profile-card-type {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .rp-profile-card p {
+            font-size: 0.85rem;
+            color: rgba(251,247,240,0.7);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .rp-profile-card-alloc {
+            font-size: 0.8rem;
+            color: rgba(251,247,240,0.5);
+        }
+        .rp-profile-card-alloc strong { color: var(--gold); }
+
+        /* DSE instruments table */
+        .rp-instruments-table {
+            background: var(--navy);
+            padding: 4rem 0;
+        }
+        .rp-inst-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .rp-inst-item {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(200,150,46,0.15);
+            border-radius: 10px;
+            padding: 1.5rem;
+        }
+        .rp-inst-item-icon {
+            width: 40px; height: 40px;
+            border-radius: 8px;
+            background: rgba(200,150,46,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .rp-inst-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            color: var(--cream);
+            margin-bottom: 0.4rem;
+        }
+        .rp-inst-item-yield {
+            font-size: 0.75rem;
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+        .rp-inst-item p {
+            font-size: 0.85rem;
+            color: rgba(251,247,240,0.6);
+            line-height: 1.6;
+        }
+
+        /* Disclaimer */
+        .rp-disclaimer {
+            background: rgba(11,29,58,0.04);
+            border-top: 1px solid rgba(11,29,58,0.07);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.78rem;
+            color: rgba(11,29,58,0.4);
+            line-height: 1.6;
+        }
+    </style>
 </head>
-<body>
-                                                            <nav class="navbar">
+<body class="rp-page">
+
+    <nav class="navbar">
         <div class="container nav-container">
             <a href="/" class="brand-link">
                 <svg viewBox="0 0 32 44" class="brand-icon" aria-hidden="true"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"/><rect x="21" y="0" width="8" height="44" fill="currentColor"/><rect x="0" y="19" width="21" height="4" fill="currentColor"/></svg>
@@ -34,163 +568,365 @@
                 <li><a href="/market-intelligence">Market Intelligence</a></li>
                 <li><a href="/education">Investor Education</a></li>
                 <li><a href="/bond-calculator">Bond Calculator</a></li>
-                        <li><a href="/risk-profiler">Risk Profiler</a></li>
-                <li><a href="/about" class="active">About</a></li>
+                <li><a href="/risk-profiler" class="active">Risk Profiler</a></li>
+                <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
-
-                  </ul>
+            </ul>
         </div>
     </nav>
 
     <main id="swup" class="transition-fade">
-    <div class="page-header" style="background-color: var(--navy); color: var(--cream); padding: 3rem 0; text-align: center;">
-        <div class="container">
-            <h1 style="color: var(--gold); margin-bottom: 0.5rem;">Investment Risk Profiler</h1>
-            <p style="font-size: 1.1rem; color: rgba(251, 247, 240, 0.85); max-width: 800px; margin: 0 auto; line-height: 1.6;">Discover your optimal asset allocation strategy based on your unique timeline, goals, and risk tolerance.</p>
+
+        <!-- HERO -->
+        <div class="rp-hero">
+            <div class="container">
+                <div class="rp-hero-label">Institutional Risk Framework</div>
+                <h1>Investment Risk<br><span>Profiler</span></h1>
+                <p>Answer 7 evidence-based questions to receive a personalised portfolio strategy aligned with DSE equities, Tanzanian government bonds, and East African capital markets.</p>
+                <div class="rp-hero-stats">
+                    <div class="rp-hero-stat">
+                        <span class="rp-hero-stat-num">7</span>
+                        <span class="rp-hero-stat-label">Questions</span>
+                    </div>
+                    <div class="rp-hero-stat">
+                        <span class="rp-hero-stat-num">4</span>
+                        <span class="rp-hero-stat-label">Risk Profiles</span>
+                    </div>
+                    <div class="rp-hero-stat">
+                        <span class="rp-hero-stat-num">~3</span>
+                        <span class="rp-hero-stat-label">Minutes</span>
+                    </div>
+                    <div class="rp-hero-stat">
+                        <span class="rp-hero-stat-num">DSE</span>
+                        <span class="rp-hero-stat-label">Calibrated</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="container" style="max-width: 800px; margin-top: 4rem; margin-bottom: 6rem;">
-        
-        <div class="card" style="position: relative; overflow: hidden; padding: 3rem 2rem; border-top: 4px solid var(--gold);">
-            
-            <!-- Progress Bar -->
-            <div style="width: 100%; background: rgba(0,0,0,0.05); height: 6px; border-radius: 3px; margin-bottom: 3rem; overflow: hidden;">
-                <div id="progress-bar" style="width: 25%; height: 100%; background: var(--gold); transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);"></div>
-            </div>
+        <!-- QUIZ CARD -->
+        <div class="rp-quiz-wrap">
+            <div class="rp-card">
+                <!-- Header / Progress -->
+                <div class="rp-card-header">
+                    <span class="rp-step-indicator">Question <strong id="rp-q-current">1</strong> of <strong>7</strong></span>
+                    <div class="rp-progress-track">
+                        <div class="rp-progress-fill" id="rp-progress"></div>
+                    </div>
+                    <span class="rp-step-indicator" id="rp-pct-label"><strong style="color:var(--gold)">14%</strong></span>
+                </div>
 
-            <!-- STEP 1 -->
-            <div id="step-1" class="quiz-step" style="display: block; animation: fadeIn 0.5s ease-in-out;">
-                <h2 style="margin-bottom: 1.5rem; font-size: 1.5rem; color: var(--navy);">1. What is your primary investment goal?</h2>
-                <div class="quiz-options" style="display: flex; flex-direction: column; gap: 1rem;">
-                    <button class="quiz-btn" data-score="1" onclick="nextStep(1, 2)">Capital Preservation (Protect my money)</button>
-                    <button class="quiz-btn" data-score="2" onclick="nextStep(1, 2)">Income Generation (Regular dividends)</button>
-                    <button class="quiz-btn" data-score="3" onclick="nextStep(1, 2)">Balanced Growth (Moderate appreciation)</button>
-                    <button class="quiz-btn" data-score="4" onclick="nextStep(1, 2)">Aggressive Growth (Maximum long-term appreciation)</button>
+                <div class="rp-card-body">
+
+                    <!-- Q1 -->
+                    <div class="rp-step active" id="rp-step-1">
+                        <div class="rp-q-num">Question 01</div>
+                        <div class="rp-q-text">What is your primary investment objective?</div>
+                        <div class="rp-q-sub">Select the statement that best reflects what you want your money to do for you.</div>
+                        <div class="rp-options">
+                            <button class="rp-opt" data-score="1" onclick="rpNext(1)">
+                                <div class="rp-opt-letter">A</div>
+                                <div><div class="rp-opt-text">Capital Preservation</div><div class="rp-opt-sub">Protect the value of my savings above all else</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="2" onclick="rpNext(1)">
+                                <div class="rp-opt-letter">B</div>
+                                <div><div class="rp-opt-text">Income Generation</div><div class="rp-opt-sub">Receive regular dividends or interest payments</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="3" onclick="rpNext(1)">
+                                <div class="rp-opt-letter">C</div>
+                                <div><div class="rp-opt-text">Balanced Growth</div><div class="rp-opt-sub">Grow my wealth steadily while managing volatility</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="4" onclick="rpNext(1)">
+                                <div class="rp-opt-letter">D</div>
+                                <div><div class="rp-opt-text">Aggressive Growth</div><div class="rp-opt-sub">Maximise long-term capital appreciation; I accept short-term losses</div></div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="rp-step" id="rp-step-2">
+                        <div class="rp-q-num">Question 02</div>
+                        <div class="rp-q-text">What is your intended investment time horizon?</div>
+                        <div class="rp-q-sub">Longer horizons allow more time to recover from market downturns and compound returns.</div>
+                        <div class="rp-options">
+                            <button class="rp-opt" data-score="1" onclick="rpNext(2)">
+                                <div class="rp-opt-letter">A</div>
+                                <div><div class="rp-opt-text">Less than 2 years</div><div class="rp-opt-sub">I may need this money in the near term</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="2" onclick="rpNext(2)">
+                                <div class="rp-opt-letter">B</div>
+                                <div><div class="rp-opt-text">3 – 5 years</div><div class="rp-opt-sub">Medium-term goal such as property or education</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="3" onclick="rpNext(2)">
+                                <div class="rp-opt-letter">C</div>
+                                <div><div class="rp-opt-text">6 – 10 years</div><div class="rp-opt-sub">Long-term wealth building with flexibility</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="4" onclick="rpNext(2)">
+                                <div class="rp-opt-letter">D</div>
+                                <div><div class="rp-opt-text">More than 10 years</div><div class="rp-opt-sub">Retirement or multi-generational wealth building</div></div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="rp-step" id="rp-step-3">
+                        <div class="rp-q-num">Question 03</div>
+                        <div class="rp-q-text">Your portfolio falls 25% in value over three months. What do you do?</div>
+                        <div class="rp-q-sub">Market drawdowns are normal; your reaction reveals your true emotional tolerance for risk.</div>
+                        <div class="rp-options">
+                            <button class="rp-opt" data-score="1" onclick="rpNext(3)">
+                                <div class="rp-opt-letter">A</div>
+                                <div><div class="rp-opt-text">Sell everything immediately</div><div class="rp-opt-sub">I cannot sleep with such losses; capital security is critical</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="2" onclick="rpNext(3)">
+                                <div class="rp-opt-letter">B</div>
+                                <div><div class="rp-opt-text">Reduce exposure to stop further losses</div><div class="rp-opt-sub">Sell some holdings and move into safer assets</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="3" onclick="rpNext(3)">
+                                <div class="rp-opt-letter">C</div>
+                                <div><div class="rp-opt-text">Hold steady and wait for recovery</div><div class="rp-opt-sub">I trust the fundamentals and remain disciplined</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="4" onclick="rpNext(3)">
+                                <div class="rp-opt-letter">D</div>
+                                <div><div class="rp-opt-text">Increase my position at the lower price</div><div class="rp-opt-sub">Drawdowns are buying opportunities; I invest more</div></div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="rp-step" id="rp-step-4">
+                        <div class="rp-q-num">Question 04</div>
+                        <div class="rp-q-text">What percentage of your total savings are you considering investing?</div>
+                        <div class="rp-q-sub">Concentration of investable assets affects how much risk is appropriate for your overall financial situation.</div>
+                        <div class="rp-options">
+                            <button class="rp-opt" data-score="1" onclick="rpNext(4)">
+                                <div class="rp-opt-letter">A</div>
+                                <div><div class="rp-opt-text">Less than 25%</div><div class="rp-opt-sub">Most of my savings remain in cash or bank deposits</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="2" onclick="rpNext(4)">
+                                <div class="rp-opt-letter">B</div>
+                                <div><div class="rp-opt-text">25% – 50%</div><div class="rp-opt-sub">I maintain a meaningful cash reserve alongside investments</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="3" onclick="rpNext(4)">
+                                <div class="rp-opt-letter">C</div>
+                                <div><div class="rp-opt-text">50% – 75%</div><div class="rp-opt-sub">The majority of my net worth is allocated to investments</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="4" onclick="rpNext(4)">
+                                <div class="rp-opt-letter">D</div>
+                                <div><div class="rp-opt-text">More than 75%</div><div class="rp-opt-sub">I am fully committed to investment markets</div></div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="rp-step" id="rp-step-5">
+                        <div class="rp-q-num">Question 05</div>
+                        <div class="rp-q-text">How would you describe your understanding of capital markets?</div>
+                        <div class="rp-q-sub">Investment sophistication affects which instruments are suitable and how actively you can manage your portfolio.</div>
+                        <div class="rp-options">
+                            <button class="rp-opt" data-score="1" onclick="rpNext(5)">
+                                <div class="rp-opt-letter">A</div>
+                                <div><div class="rp-opt-text">Beginner</div><div class="rp-opt-sub">I am new to investing and learning the fundamentals</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="2" onclick="rpNext(5)">
+                                <div class="rp-opt-letter">B</div>
+                                <div><div class="rp-opt-text">Intermediate</div><div class="rp-opt-sub">I understand basic instruments like equities and government bonds</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="3" onclick="rpNext(5)">
+                                <div class="rp-opt-letter">C</div>
+                                <div><div class="rp-opt-text">Advanced</div><div class="rp-opt-sub">I can analyse financial statements and evaluate individual securities</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="4" onclick="rpNext(5)">
+                                <div class="rp-opt-letter">D</div>
+                                <div><div class="rp-opt-text">Professional</div><div class="rp-opt-sub">I have formal investment or finance training or work in the industry</div></div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="rp-step" id="rp-step-6">
+                        <div class="rp-q-num">Question 06</div>
+                        <div class="rp-q-text">Do you require regular income from your investment portfolio?</div>
+                        <div class="rp-q-sub">Income requirements influence the balance between dividend-paying equities, bonds, and growth stocks.</div>
+                        <div class="rp-options">
+                            <button class="rp-opt" data-score="1" onclick="rpNext(6)">
+                                <div class="rp-opt-letter">A</div>
+                                <div><div class="rp-opt-text">Yes — I depend on it monthly</div><div class="rp-opt-sub">My investments must generate a regular income stream</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="2" onclick="rpNext(6)">
+                                <div class="rp-opt-letter">B</div>
+                                <div><div class="rp-opt-text">Partially — I prefer some income</div><div class="rp-opt-sub">Income supplements other earnings but is not critical</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="3" onclick="rpNext(6)">
+                                <div class="rp-opt-letter">C</div>
+                                <div><div class="rp-opt-text">No — I reinvest all returns</div><div class="rp-opt-sub">I prefer compounding over distributions</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="4" onclick="rpNext(6)">
+                                <div class="rp-opt-letter">D</div>
+                                <div><div class="rp-opt-text">No — I am in full accumulation mode</div><div class="rp-opt-sub">I add fresh capital regularly and want maximum growth</div></div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="rp-step" id="rp-step-7">
+                        <div class="rp-q-num">Question 07</div>
+                        <div class="rp-q-text">How do you feel about investing in frontier markets such as Tanzania?</div>
+                        <div class="rp-q-sub">Frontier markets like the DSE offer significant return potential but carry liquidity and regulatory risks compared to developed markets.</div>
+                        <div class="rp-options">
+                            <button class="rp-opt" data-score="1" onclick="rpNext(7)">
+                                <div class="rp-opt-letter">A</div>
+                                <div><div class="rp-opt-text">Uncomfortable — I prefer stable, liquid markets</div><div class="rp-opt-sub">I would rather invest in lower-risk, more established markets</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="2" onclick="rpNext(7)">
+                                <div class="rp-opt-letter">B</div>
+                                <div><div class="rp-opt-text">Cautious — A small frontier allocation is acceptable</div><div class="rp-opt-sub">DSE can be a minority part of a broadly diversified portfolio</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="3" onclick="rpNext(7)">
+                                <div class="rp-opt-letter">C</div>
+                                <div><div class="rp-opt-text">Comfortable — I understand and accept frontier risk</div><div class="rp-opt-sub">I see the mispricing opportunity and want meaningful exposure</div></div>
+                            </button>
+                            <button class="rp-opt" data-score="4" onclick="rpNext(7)">
+                                <div class="rp-opt-letter">D</div>
+                                <div><div class="rp-opt-text">Enthusiastic — DSE is my primary investment market</div><div class="rp-opt-sub">I believe in East Africa's structural growth story and want full exposure</div></div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- RESULTS -->
+                    <div class="rp-results" id="rp-results">
+
+                        <div style="text-align:center; margin-bottom: 2rem;">
+                            <div class="rp-result-badge" id="rp-badge"></div>
+                            <div class="rp-result-title" id="rp-title"></div>
+                            <div class="rp-result-subtitle" id="rp-subtitle"></div>
+                        </div>
+
+                        <!-- Risk metrics -->
+                        <div class="rp-metrics" id="rp-metrics"></div>
+
+                        <!-- Allocation bars -->
+                        <div class="rp-alloc">
+                            <div class="rp-alloc-title">Recommended Asset Allocation</div>
+                            <div id="rp-alloc-bars"></div>
+                        </div>
+
+                        <!-- Specific instruments -->
+                        <div class="rp-instruments">
+                            <div class="rp-instruments-title">Recommended DSE Instruments</div>
+                            <div id="rp-instruments-list"></div>
+                        </div>
+
+                        <!-- Detail cards -->
+                        <div class="rp-detail-grid" id="rp-detail-grid"></div>
+
+                        <!-- CTA -->
+                        <div class="rp-cta">
+                            <h3>Ready to implement your strategy?</h3>
+                            <p>Our investment advisory team will work with you to construct a personalised portfolio aligned with your profile and the current DSE market conditions.</p>
+                            <div class="rp-cta-btns">
+                                <a href="/contact" class="rp-btn-gold">Speak to an Advisor</a>
+                                <button onclick="rpReset()" class="rp-btn-outline">Retake Assessment</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- end card-body -->
+            </div><!-- end card -->
+        </div><!-- end quiz-wrap -->
+
+        <!-- PROFILE OVERVIEW SECTION -->
+        <section class="rp-info-section">
+            <div class="container">
+                <div class="rp-section-eyebrow">Our Framework</div>
+                <h2 class="rp-section-h2">The Four Investment Profiles</h2>
+                <p class="rp-section-sub">Every investor sits on a risk spectrum. Our four profiles are calibrated against real DSE market data, Tanzanian government bond yields, and long-term frontier market return series.</p>
+                <div class="rp-profile-cards">
+                    <div class="rp-profile-card rp-pc-conservative">
+                        <h3>Capital Preservation</h3>
+                        <div class="rp-profile-card-type" style="color:#4e9af1;">Conservative</div>
+                        <p>Safety and liquidity are the primary objectives. Suitable for investors with short time horizons or those who cannot tolerate any meaningful capital loss.</p>
+                        <div class="rp-profile-card-alloc">Allocation: <strong>80% Fixed Income</strong> · <strong>20% Equities</strong></div>
+                    </div>
+                    <div class="rp-profile-card rp-pc-income">
+                        <h3>Income Portfolio</h3>
+                        <div class="rp-profile-card-type" style="color:#22c55e;">Moderate-Conservative</div>
+                        <p>Steady income with modest capital growth. Favours high-dividend DSE stocks and mid-duration government bonds to deliver predictable cash flows.</p>
+                        <div class="rp-profile-card-alloc">Allocation: <strong>55% Fixed Income</strong> · <strong>45% Equities</strong></div>
+                    </div>
+                    <div class="rp-profile-card rp-pc-balanced">
+                        <h3>Balanced Growth</h3>
+                        <div class="rp-profile-card-type" style="color:#f59e0b;">Moderate</div>
+                        <p>Diversified exposure to both equity upside and fixed-income stability. Appropriate for investors with a 5–10 year horizon seeking long-run wealth accumulation.</p>
+                        <div class="rp-profile-card-alloc">Allocation: <strong>35% Fixed Income</strong> · <strong>65% Equities</strong></div>
+                    </div>
+                    <div class="rp-profile-card rp-pc-growth">
+                        <h3>Aggressive Growth</h3>
+                        <div class="rp-profile-card-type" style="color:#ef4444;">High Risk</div>
+                        <p>Maximum long-term capital appreciation through concentrated DSE equity exposure. For investors with 10+ year horizons and genuine tolerance for significant short-term drawdowns.</p>
+                        <div class="rp-profile-card-alloc">Allocation: <strong>15% Fixed Income</strong> · <strong>85% Equities</strong></div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- STEP 2 -->
-            <div id="step-2" class="quiz-step" style="display: none; animation: fadeIn 0.5s ease-in-out;">
-                <h2 style="margin-bottom: 1.5rem; font-size: 1.5rem; color: var(--navy);">2. What is your investment time horizon?</h2>
-                <div class="quiz-options" style="display: flex; flex-direction: column; gap: 1rem;">
-                    <button class="quiz-btn" data-score="1" onclick="nextStep(2, 3)">Less than 2 years</button>
-                    <button class="quiz-btn" data-score="2" onclick="nextStep(2, 3)">3 to 5 years</button>
-                    <button class="quiz-btn" data-score="3" onclick="nextStep(2, 3)">6 to 10 years</button>
-                    <button class="quiz-btn" data-score="4" onclick="nextStep(2, 3)">More than 10 years</button>
+        <!-- DSE INSTRUMENTS SECTION -->
+        <section class="rp-instruments-table">
+            <div class="container">
+                <div class="rp-section-eyebrow" style="color:var(--gold);">Available Instruments</div>
+                <h2 class="rp-section-h2" style="color:var(--cream);">What You Can Invest In via the DSE</h2>
+                <p class="rp-section-sub" style="color:rgba(251,247,240,0.65);">Amana Capital provides research and advisory coverage across the full spectrum of instruments listed and traded on the Dar es Salaam Stock Exchange and Tanzanian money markets.</p>
+                <div class="rp-inst-grid">
+                    <div class="rp-inst-item">
+                        <div class="rp-inst-item-icon">📈</div>
+                        <h4>DSE Listed Equities</h4>
+                        <div class="rp-inst-item-yield">Potential Return: 10–25% p.a.</div>
+                        <p>Shares in companies listed on the Dar es Salaam Stock Exchange, including banking leaders CRDB and NMB, Swissport Tanzania, Tanga Cement, TBL, TPCC, and others. Subject to market liquidity and price volatility.</p>
+                    </div>
+                    <div class="rp-inst-item">
+                        <div class="rp-inst-item-icon">🏦</div>
+                        <h4>Government Treasury Bonds</h4>
+                        <div class="rp-inst-item-yield">Yield: ~11–13% p.a.</div>
+                        <p>Fixed-coupon bonds issued by the Government of Tanzania with maturities of 2, 5, 7, 10, 15, and 25 years. Fully backed by sovereign credit. The cornerstone of capital preservation and income portfolios.</p>
+                    </div>
+                    <div class="rp-inst-item">
+                        <div class="rp-inst-item-icon">💵</div>
+                        <h4>Treasury Bills (91/182/364-day)</h4>
+                        <div class="rp-inst-item-yield">Yield: ~9–11% p.a.</div>
+                        <p>Short-dated sovereign instruments ideal for cash management and liquidity buffers. Highly liquid, zero credit risk. Suitable for capital preservation allocations or as a parking mechanism between equity deployments.</p>
+                    </div>
+                    <div class="rp-inst-item">
+                        <div class="rp-inst-item-icon">🏢</div>
+                        <h4>Corporate Bonds</h4>
+                        <div class="rp-inst-item-yield">Yield: ~12–16% p.a.</div>
+                        <p>Debt instruments issued by DSE-listed corporates and financial institutions. Offer higher yields than government bonds in exchange for credit risk. Require thorough fundamental analysis of issuer financial health.</p>
+                    </div>
+                    <div class="rp-inst-item">
+                        <div class="rp-inst-item-icon">🌍</div>
+                        <h4>East African Cross-Listed Stocks</h4>
+                        <div class="rp-inst-item-yield">Varies by market</div>
+                        <p>Shares cross-listed between the DSE, NSE (Kenya), USE (Uganda), and RSE (Rwanda) under the East African Community securities framework. Provides regional diversification within the frontier market spectrum.</p>
+                    </div>
+                    <div class="rp-inst-item">
+                        <div class="rp-inst-item-icon">💰</div>
+                        <h4>Money Market Deposits</h4>
+                        <div class="rp-inst-item-yield">Rate: ~8–10% p.a.</div>
+                        <p>High-interest fixed deposits and call accounts at tier-1 Tanzanian commercial banks. Provides TDIC-backed capital protection (up to TZS 1.5m) with liquidity. Appropriate as a core component of conservative portfolios.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- STEP 3 -->
-            <div id="step-3" class="quiz-step" style="display: none; animation: fadeIn 0.5s ease-in-out;">
-                <h2 style="margin-bottom: 1.5rem; font-size: 1.5rem; color: var(--navy);">3. If your portfolio dropped 20% in one month, what would you do?</h2>
-                <div class="quiz-options" style="display: flex; flex-direction: column; gap: 1rem;">
-                    <button class="quiz-btn" data-score="1" onclick="nextStep(3, 4)">Sell everything immediately</button>
-                    <button class="quiz-btn" data-score="2" onclick="nextStep(3, 4)">Sell a portion to prevent further losses</button>
-                    <button class="quiz-btn" data-score="3" onclick="nextStep(3, 4)">Hold steady and wait for a recovery</button>
-                    <button class="quiz-btn" data-score="4" onclick="nextStep(3, 4)">Buy more while prices are heavily discounted</button>
-                </div>
+        <!-- RISK DISCLOSURE -->
+        <div class="rp-disclaimer">
+            <div class="container" style="max-width:780px;">
+                <strong>Important Disclaimer:</strong> This risk profiler is for educational and indicative purposes only. It does not constitute personalised investment advice. Past performance of DSE-listed instruments is not indicative of future results. Yield estimates are based on historical market data and are subject to change. Capital is at risk. Before investing, please consult a registered investment advisor. Amana Capital East Africa Limited is currently undergoing the registration process with the Capital Markets and Securities Authority (CMSA), Tanzania.
             </div>
-
-            <!-- RESULTS -->
-            <div id="step-results" class="quiz-step" style="display: none; animation: fadeIn 0.8s ease-in-out; text-align: center;">
-                <h3 style="color: var(--mist); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Recommended Strategy</h3>
-                <h2 id="result-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1.5rem;">The Growth Portfolio</h2>
-                <p id="result-desc" style="color: var(--text-body); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    Based on your high risk tolerance and long time horizon, a portfolio weighted heavily towards high-conviction DSE equities is appropriate.
-                </p>
-                
-                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <a href="/contact" class="btn-gold-solid" style="padding: 1rem 2rem; border-radius: 4px; text-decoration: none;">Speak to an Advisor</a>
-                    <button onclick="resetQuiz()" style="background: transparent; border: 1px solid var(--navy); color: var(--navy); padding: 1rem 2rem; border-radius: 4px; cursor: pointer; font-family: var(--heading-font); font-weight: 700;">Retake Quiz</button>
-                </div>
-            </div>
-            
         </div>
-    </div>
-</main>
 
-<style>
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    .quiz-btn {
-        background: rgba(255, 255, 255, 0.8);
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        padding: 1.25rem 1.5rem;
-        border-radius: 6px;
-        text-align: left;
-        font-family: var(--body-font);
-        font-size: 1.05rem;
-        color: var(--navy);
-        cursor: pointer;
-        transition: all 0.2s ease;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-    }
-    .quiz-btn:hover {
-        border-color: var(--gold);
-        background: rgba(200, 150, 46, 0.05);
-        transform: translateX(5px);
-    }
-</style>
+    </main>
 
-<script>
-    let totalScore = 0;
-
-    function nextStep(current, next) {
-        // Add score from clicked button
-        const btn = event.target;
-        totalScore += parseInt(btn.getAttribute('data-score'));
-        
-        // Hide current
-        document.getElementById('step-' + current).style.display = 'none';
-        
-        // Update progress bar
-        const progress = document.getElementById('progress-bar');
-        if (next === 2) progress.style.width = '50%';
-        if (next === 3) progress.style.width = '75%';
-        if (next === 4) progress.style.width = '100%';
-
-        // Show next or results
-        if (next === 4) {
-            showResults();
-        } else {
-            document.getElementById('step-' + next).style.display = 'block';
-        }
-    }
-
-    function showResults() {
-        document.getElementById('step-results').style.display = 'block';
-        
-        const title = document.getElementById('result-title');
-        const desc = document.getElementById('result-desc');
-        
-        if (totalScore <= 5) {
-            title.innerText = "The Capital Preservation Portfolio";
-            desc.innerText = "You prioritize safety over high returns. Your ideal allocation leans heavily on Tanzanian Government Bonds (Treasury Bonds) and high-yield fixed deposits, with minimal exposure to volatile equities.";
-        } else if (totalScore <= 8) {
-            title.innerText = "The Income Portfolio";
-            desc.innerText = "You seek regular cash flow with moderate risk. Your ideal allocation includes high-dividend paying DSE stocks (like CRDB and NMB) combined with mid-duration corporate and government bonds.";
-        } else if (totalScore <= 10) {
-            title.innerText = "The Balanced Growth Portfolio";
-            desc.innerText = "You want long-term capital appreciation but are wary of extreme volatility. A balanced 50/50 split between top-tier DSE equities and secure fixed-income instruments suits your profile.";
-        } else {
-            title.innerText = "The Aggressive Growth Portfolio";
-            desc.innerText = "You have a long time horizon and are unfazed by short-term market drops. Your ideal allocation is heavily weighted (70-80%) in undervalued DSE equities to maximize long-term compound growth.";
-        }
-    }
-
-    function resetQuiz() {
-        totalScore = 0;
-        document.getElementById('progress-bar').style.width = '25%';
-        document.getElementById('step-results').style.display = 'none';
-        document.getElementById('step-1').style.display = 'block';
-    }
-</script>
-
-
-                                                            <footer class="footer" style="background-color: var(--navy); padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+    <footer class="footer" style="background-color: var(--navy); padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
         <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.8rem;">
             <div style="color: var(--gold); font-weight: bold; letter-spacing: 0.05em;">AMANA CAPITAL EAST AFRICA</div>
             <div style="display: flex; gap: 1.5rem;">
@@ -204,23 +940,272 @@
             <div style="color: var(--mist); opacity: 0.7;">&copy; 2026 Amana Capital East Africa.</div>
         </div>
     </footer>
-    
+
     <script src="https://unpkg.com/swup@4"></script>
     <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
     <script src="script.min.js" defer></script>
-    <script src="/js/theme-toggle.js" defer></script>
-<script src="/js/theme-toggle.js" defer></script>
+
+    <script>
+    (function() {
+        var rpScore = 0;
+        var rpStep  = 1;
+        var rpTotal = 7;
+
+        var PROFILES = {
+            conservative: {
+                badge: 'Conservative Profile',
+                badgeBg: 'rgba(78,154,241,0.12)',
+                badgeColor: '#4e9af1',
+                title: 'Capital Preservation Portfolio',
+                subtitle: 'Your responses indicate a low tolerance for volatility and a priority on protecting capital. This strategy anchors your portfolio in Tanzanian sovereign fixed income, ensuring stability and predictable income.',
+                metrics: [
+                    { val: 'Low', label: 'Risk Level' },
+                    { val: '~10%', label: 'Target Return' },
+                    { val: '1–3 yrs', label: 'Ideal Horizon' }
+                ],
+                alloc: [
+                    { label: 'Government Bonds & T-Bills', pct: 60, color: '#4e9af1' },
+                    { label: 'Money Market Deposits', pct: 20, color: '#93c5fd' },
+                    { label: 'High-Dividend DSE Equities', pct: 15, color: '#c8962e' },
+                    { label: 'Cash Buffer', pct: 5, color: '#e2e8f0' }
+                ],
+                instruments: [
+                    { name: 'Tanzania Government Treasury Bonds (5–10yr)', pct: '40%', color: '#4e9af1' },
+                    { name: 'Treasury Bills (91/182 day)', pct: '20%', color: '#93c5fd' },
+                    { name: 'Fixed Deposits (Tier-1 Banks)', pct: '20%', color: '#7dd3fc' },
+                    { name: 'CRDB / NMB Dividend Shares', pct: '15%', color: '#c8962e' },
+                    { name: 'Cash Reserve', pct: '5%', color: '#94a3b8' }
+                ],
+                details: [
+                    { label: 'Max Drawdown Tolerance', val: 'Below 10%' },
+                    { label: 'Rebalancing Frequency', val: 'Annual' },
+                    { label: 'Liquidity Requirement', val: 'High' },
+                    { label: 'Income vs Growth', val: '70% Income / 30% Growth' }
+                ]
+            },
+            income: {
+                badge: 'Moderate-Conservative Profile',
+                badgeBg: 'rgba(34,197,94,0.12)',
+                badgeColor: '#22c55e',
+                title: 'Income Portfolio',
+                subtitle: 'You seek reliable cash flows with modest capital appreciation. This strategy blends high-dividend DSE equities with mid-duration government and corporate bonds to deliver consistent income.',
+                metrics: [
+                    { val: 'Moderate-Low', label: 'Risk Level' },
+                    { val: '~12%', label: 'Target Return' },
+                    { val: '3–5 yrs', label: 'Ideal Horizon' }
+                ],
+                alloc: [
+                    { label: 'Mid-Duration Government Bonds', pct: 35, color: '#22c55e' },
+                    { label: 'High-Dividend DSE Equities', pct: 35, color: '#c8962e' },
+                    { label: 'Corporate Bonds', pct: 20, color: '#86efac' },
+                    { label: 'Money Market', pct: 10, color: '#4e9af1' }
+                ],
+                instruments: [
+                    { name: 'CRDB Bank — Dividend-paying equity', pct: '20%', color: '#c8962e' },
+                    { name: 'NMB Bank — Dividend-paying equity', pct: '15%', color: '#e8b84b' },
+                    { name: 'Tanzania Government Bonds (5–7yr)', pct: '35%', color: '#22c55e' },
+                    { name: 'DSE Corporate Bonds', pct: '20%', color: '#86efac' },
+                    { name: 'Money Market Fund', pct: '10%', color: '#4e9af1' }
+                ],
+                details: [
+                    { label: 'Max Drawdown Tolerance', val: '10–20%' },
+                    { label: 'Rebalancing Frequency', val: 'Semi-Annual' },
+                    { label: 'Liquidity Requirement', val: 'Moderate' },
+                    { label: 'Income vs Growth', val: '55% Income / 45% Growth' }
+                ]
+            },
+            balanced: {
+                badge: 'Moderate Profile',
+                badgeBg: 'rgba(245,158,11,0.12)',
+                badgeColor: '#f59e0b',
+                title: 'Balanced Growth Portfolio',
+                subtitle: 'You want meaningful capital appreciation without extreme volatility. This strategy allocates the majority to top-tier DSE equities while maintaining a fixed-income anchor for resilience through market cycles.',
+                metrics: [
+                    { val: 'Moderate', label: 'Risk Level' },
+                    { val: '~15%', label: 'Target Return' },
+                    { val: '5–10 yrs', label: 'Ideal Horizon' }
+                ],
+                alloc: [
+                    { label: 'DSE Blue-Chip Equities', pct: 45, color: '#c8962e' },
+                    { label: 'Mid/Small-Cap DSE Equities', pct: 20, color: '#e8b84b' },
+                    { label: 'Government Bonds', pct: 25, color: '#f59e0b' },
+                    { label: 'Corporate Bonds / Money Market', pct: 10, color: '#fcd34d' }
+                ],
+                instruments: [
+                    { name: 'CRDB / NMB / Swissport (Blue-chip equities)', pct: '45%', color: '#c8962e' },
+                    { name: 'TBL / TPCC / Tanga Cement (Mid-cap)', pct: '20%', color: '#e8b84b' },
+                    { name: 'Tanzania Government Bonds (7–10yr)', pct: '25%', color: '#f59e0b' },
+                    { name: 'Corporate Bonds', pct: '10%', color: '#fcd34d' }
+                ],
+                details: [
+                    { label: 'Max Drawdown Tolerance', val: '20–35%' },
+                    { label: 'Rebalancing Frequency', val: 'Semi-Annual' },
+                    { label: 'Liquidity Requirement', val: 'Moderate' },
+                    { label: 'Income vs Growth', val: '30% Income / 70% Growth' }
+                ]
+            },
+            aggressive: {
+                badge: 'High-Growth Profile',
+                badgeBg: 'rgba(239,68,68,0.1)',
+                badgeColor: '#ef4444',
+                title: 'Aggressive Growth Portfolio',
+                subtitle: 'You have a long time horizon, high financial literacy, and genuine conviction in the East African growth story. This strategy deploys concentrated capital into undervalued DSE equities to maximise long-term compounding.',
+                metrics: [
+                    { val: 'High', label: 'Risk Level' },
+                    { val: '~18–22%', label: 'Target Return' },
+                    { val: '10+ yrs', label: 'Ideal Horizon' }
+                ],
+                alloc: [
+                    { label: 'High-Conviction DSE Equities', pct: 55, color: '#c8962e' },
+                    { label: 'Mid & Small-Cap DSE Equities', pct: 25, color: '#ef4444' },
+                    { label: 'East African Cross-Listed Stocks', pct: 10, color: '#f87171' },
+                    { label: 'Government Bonds (Tactical)', pct: 10, color: '#fca5a5' }
+                ],
+                instruments: [
+                    { name: 'High-conviction DSE blue-chips (CRDB, NMB, Swissport)', pct: '55%', color: '#c8962e' },
+                    { name: 'DSE mid/small-cap growth equities', pct: '25%', color: '#ef4444' },
+                    { name: 'EAC cross-listed equities (NSE, USE, RSE)', pct: '10%', color: '#f87171' },
+                    { name: 'Tactical bond allocation (deployed on yield spikes)', pct: '10%', color: '#fca5a5' }
+                ],
+                details: [
+                    { label: 'Max Drawdown Tolerance', val: '35–50%+' },
+                    { label: 'Rebalancing Frequency', val: 'Opportunistic' },
+                    { label: 'Liquidity Requirement', val: 'Low' },
+                    { label: 'Income vs Growth', val: '10% Income / 90% Growth' }
+                ]
+            }
+        };
+
+        function rpGetProfile(score) {
+            if (score <= 12) return 'conservative';
+            if (score <= 18) return 'income';
+            if (score <= 23) return 'balanced';
+            return 'aggressive';
+        }
+
+        function rpNext(q) {
+            var btn = event.currentTarget;
+            rpScore += parseInt(btn.getAttribute('data-score'));
+
+            // Highlight selected
+            btn.style.borderColor = 'var(--gold)';
+            btn.style.background = 'rgba(200,150,46,0.07)';
+            btn.querySelector('.rp-opt-letter').style.background = 'var(--gold)';
+            btn.querySelector('.rp-opt-letter').style.color = '#fff';
+
+            setTimeout(function() {
+                document.getElementById('rp-step-' + q).style.display = 'none';
+                rpStep = q + 1;
+
+                var pct = Math.round((rpStep / (rpTotal + 1)) * 100);
+                document.getElementById('rp-progress').style.width = pct + '%';
+                document.getElementById('rp-q-current').innerText = Math.min(rpStep, rpTotal);
+                document.getElementById('rp-pct-label').innerHTML = '<strong style="color:var(--gold)">' + pct + '%</strong>';
+
+                if (rpStep > rpTotal) {
+                    rpShowResults();
+                } else {
+                    var next = document.getElementById('rp-step-' + rpStep);
+                    next.style.display = 'block';
+                    next.classList.add('active');
+                }
+            }, 300);
+        }
+
+        function rpShowResults() {
+            document.getElementById('rp-progress').style.width = '100%';
+            document.getElementById('rp-pct-label').innerHTML = '<strong style="color:var(--gold)">100%</strong>';
+
+            var key = rpGetProfile(rpScore);
+            var p = PROFILES[key];
+
+            // Badge
+            var badge = document.getElementById('rp-badge');
+            badge.innerText = p.badge;
+            badge.style.background = p.badgeBg;
+            badge.style.color = p.badgeColor;
+
+            document.getElementById('rp-title').innerText = p.title;
+            document.getElementById('rp-subtitle').innerText = p.subtitle;
+
+            // Metrics
+            var metricsHtml = '';
+            p.metrics.forEach(function(m) {
+                metricsHtml += '<div class="rp-metric"><span class="rp-metric-val">' + m.val + '</span><div class="rp-metric-label">' + m.label + '</div></div>';
+            });
+            document.getElementById('rp-metrics').innerHTML = metricsHtml;
+
+            // Allocation bars
+            var barsHtml = '';
+            p.alloc.forEach(function(a) {
+                barsHtml += '<div class="rp-alloc-row">' +
+                    '<div class="rp-alloc-label"><span>' + a.label + '</span><span class="rp-alloc-pct">' + a.pct + '%</span></div>' +
+                    '<div class="rp-alloc-track"><div class="rp-alloc-bar" style="width:0%;background:' + a.color + ';" data-target="' + a.pct + '"></div></div>' +
+                    '</div>';
+            });
+            document.getElementById('rp-alloc-bars').innerHTML = barsHtml;
+
+            // Instruments list
+            var instHtml = '';
+            p.instruments.forEach(function(i) {
+                instHtml += '<div class="rp-instrument">' +
+                    '<div class="rp-instrument-dot" style="background:' + i.color + ';"></div>' +
+                    '<div class="rp-instrument-name">' + i.name + '</div>' +
+                    '<div class="rp-instrument-pct">' + i.pct + '</div>' +
+                    '</div>';
+            });
+            document.getElementById('rp-instruments-list').innerHTML = instHtml;
+
+            // Detail cards
+            var detailHtml = '';
+            p.details.forEach(function(d) {
+                detailHtml += '<div class="rp-detail-card"><div class="rp-detail-card-label">' + d.label + '</div><div class="rp-detail-card-val">' + d.val + '</div></div>';
+            });
+            document.getElementById('rp-detail-grid').innerHTML = detailHtml;
+
+            // Show results
+            document.getElementById('rp-results').style.display = 'block';
+
+            // Animate bars after brief delay
+            setTimeout(function() {
+                document.querySelectorAll('.rp-alloc-bar').forEach(function(bar) {
+                    bar.style.width = bar.getAttribute('data-target') + '%';
+                });
+            }, 200);
+
+            // Scroll to results
+            document.getElementById('rp-results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function rpReset() {
+            rpScore = 0;
+            rpStep  = 1;
+
+            document.getElementById('rp-results').style.display = 'none';
+            document.getElementById('rp-progress').style.width = '14.28%';
+            document.getElementById('rp-q-current').innerText = '1';
+            document.getElementById('rp-pct-label').innerHTML = '<strong style="color:var(--gold)">14%</strong>';
+
+            // Reset all steps
+            for (var i = 1; i <= 7; i++) {
+                var step = document.getElementById('rp-step-' + i);
+                step.style.display = i === 1 ? 'block' : 'none';
+                // Reset button styles
+                step.querySelectorAll('.rp-opt').forEach(function(btn) {
+                    btn.style.borderColor = '';
+                    btn.style.background = '';
+                    var letter = btn.querySelector('.rp-opt-letter');
+                    if (letter) { letter.style.background = ''; letter.style.color = ''; }
+                });
+            }
+            document.querySelector('.rp-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Expose globally for onclick
+        window.rpNext  = rpNext;
+        window.rpReset = rpReset;
+    })();
+    </script>
+
 </body>
 </html>
-
-
-
-
-
-
-<!-- force deploy cache bust -->
-
-
-
-
-
