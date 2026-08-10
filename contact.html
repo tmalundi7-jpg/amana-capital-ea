@@ -756,81 +756,9 @@
 
     <script src="https://unpkg.com/swup@4"></script>
     <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
-    <script src="script.min.js" defer></script>
+    <script src="script.min.js?v=20260810g" defer></script>
 
-    <script>
-    /* ── Inquiry Tab Selection ── */
-    function ctSetTab(el, label) {
-        document.querySelectorAll('.ct-tab').forEach(function(t) { t.classList.remove('active'); });
-        el.classList.add('active');
-        document.getElementById('ct-inquiry-type').value = label;
-        document.getElementById('ct-subject').value = 'New Website Enquiry — ' + label + ' (Amana Capital)';
-    }
-
-    /* ── Form Submission via Fetch (no page redirect) ── */
-    document.addEventListener('DOMContentLoaded', function() {
-        var form    = document.getElementById('ct-form');
-        var btn     = document.getElementById('ct-submit-btn');
-        var btnText = document.getElementById('ct-btn-text');
-        var success = document.getElementById('ct-success');
-        var error   = document.getElementById('ct-error');
-
-        if (!form) return;
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Basic validation
-            var name    = document.getElementById('ct-name').value.trim();
-            var email   = document.getElementById('ct-email').value.trim();
-            var message = document.getElementById('ct-message').value.trim();
-            if (!name || !email || !message) {
-                error.innerText = '⚠️ Please fill in your name, email, and message before submitting.';
-                error.style.display = 'block';
-                success.style.display = 'none';
-                return;
-            }
-
-            // Loading state
-            btn.disabled = true;
-            btnText.innerText = 'Sending…';
-
-            var data = new FormData(form);
-
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                body: data
-            })
-            .then(function(res) { return res.json(); })
-            .then(function(json) {
-                if (json.success) {
-                    success.style.display = 'block';
-                    error.style.display   = 'none';
-                    form.reset();
-                    // Reset tab UI
-                    document.querySelectorAll('.ct-tab').forEach(function(t) { t.classList.remove('active'); });
-                    document.getElementById('ct-tab-1').classList.add('active');
-                    document.getElementById('ct-inquiry-type').value = 'Investment Advisory';
-                    document.getElementById('ct-subject').value = 'New Website Enquiry — Investment Advisory (Amana Capital)';
-                    btnText.innerText = '✅ Message Sent!';
-                    setTimeout(function() {
-                        btnText.innerText = 'Send Enquiry →';
-                        btn.disabled = false;
-                    }, 4000);
-                } else {
-                    throw new Error('API error');
-                }
-            })
-            .catch(function() {
-                error.innerText = '❌ Something went wrong. Please email us directly at info@amana-capital-ea.co.tz';
-                error.style.display = 'block';
-                success.style.display = 'none';
-                btnText.innerText = 'Send Enquiry →';
-                btn.disabled = false;
-            });
-        });
-    });
-    </script>
+    
 
 </body>
 </html>
