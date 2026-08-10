@@ -49,6 +49,14 @@ window.initMobileMenu = function() {
         newToggle.addEventListener('click', () => {
             nav.classList.toggle('active');
         });
+
+        // Auto-close menu on link click
+        const navLinks = nav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
     }
 };
 
