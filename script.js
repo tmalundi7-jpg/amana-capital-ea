@@ -856,54 +856,45 @@ window.ensureChartLoaded = function(callback) {
 };
 
 window.initDSEHeatmap = function() {
-    const canvas = document.getElementById('dseHeatmap');
-    if (!canvas) return;
+    const container = document.getElementById('dseHeatmapContainer');
+    if (!container) return;
+    
+    const data = [
+        { symbol: 'TBL', marketCap: 3200, change: 0.00 },
+        { symbol: 'NMB', marketCap: 2675, change: -0.93 },
+        { symbol: 'CRDB', marketCap: 1515, change: 1.75 },
+        { symbol: 'VODA', marketCap: 1200, change: 2.67 },
+        { symbol: 'TPCC', marketCap: 900, change: -0.47 },
+        { symbol: 'TWIGA', marketCap: 800, change: 0.00 },
+        { symbol: 'TICL', marketCap: 250, change: 3.45 },
+        { symbol: 'DSE', marketCap: 150, change: 0.88 },
+        { symbol: 'TCCL', marketCap: 120, change: -1.2 },
+        { symbol: 'SWIS', marketCap: 100, change: 0.00 }
+    ];
 
-    window.ensureChartLoaded(() => {
-        // Destroy existing instance if any
-        const existing = Chart.getChart(canvas);
-        if (existing) existing.destroy();
+    const totalCap = data.reduce((sum, item) => sum + item.marketCap, 0);
+    
+    let html = '<div style="display: flex; flex-wrap: wrap; align-content: stretch; width: 100%; height: 100%; gap: 4px;">';
+    
+    data.forEach(item => {
+        let pct = (item.marketCap / totalCap) * 100;
+        let color = 'rgba(100,116,139,0.55)'; // Neutral
+        if (item.change > 1.5) color = '#16a34a';
+        else if (item.change > 0) color = 'rgba(22,163,74,0.75)';
+        else if (item.change < -1.5) color = '#dc2626';
+        else if (item.change < 0) color = 'rgba(220,38,38,0.75)';
         
-        const data = [
-            { symbol: 'TBL', marketCap: 3200, change: 0.00 },
-            { symbol: 'NMB', marketCap: 2675, change: -0.93 },
-            { symbol: 'CRDB', marketCap: 1515, change: 1.75 },
-            { symbol: 'VODA', marketCap: 1200, change: 2.67 },
-            { symbol: 'TPCC', marketCap: 900, change: -0.47 },
-            { symbol: 'TWIGA', marketCap: 800, change: 0.00 },
-            { symbol: 'TICL', marketCap: 250, change: 3.45 },
-            { symbol: 'DSE', marketCap: 150, change: 0.88 },
-            { symbol: 'TCCL', marketCap: 120, change: -1.2 },
-            { symbol: 'SWIS', marketCap: 100, change: 0.00 }
-        ];
-        
-        new Chart(canvas, {
-            type: 'treemap',
-            data: { datasets: [{
-                tree: data, key: 'marketCap', groups: ['symbol'], spacing: 2, borderWidth: 0,
-                backgroundColor: function(c) {
-                    if (c.type !== 'data') return 'transparent';
-                    var v = c.raw._data.change;
-                    if (v > 1.5) return 'rgba(22,163,74,1)';
-                    if (v > 0) return 'rgba(22,163,74,0.75)';
-                    if (v < -1.5) return 'rgba(220,38,38,1)';
-                    if (v < 0) return 'rgba(220,38,38,0.75)';
-                    return 'rgba(100,116,139,0.55)';
-                },
-                labels: { display: true, color: '#ffffff',
-                    font: { family: "'Plus Jakarta Sans', sans-serif", size: 14, weight: 'bold' },
-                    formatter: function(c) {
-                        var item = c.raw._data;
-                        return [item.symbol, (item.change > 0 ? '+' : '') + item.change.toFixed(2) + '%'];
-                    }
-                }
-            }]},
-            options: { maintainAspectRatio: false, plugins: { legend: { display: false },
-                tooltip: { callbacks: {
-                    title: function(items) { return items[0].raw._data.symbol; },
-                    label: function(item) { var d = item.raw._data; return ['Change: ' + (d.change > 0 ? '+' : '') + d.change + '%', 'Market Cap: ' + d.marketCap]; }
-                }}
-            }}
-        });
+        let sign = item.change > 0 ? '+' : '';
+        // Flex-grow based on marketCap makes them proportionally sized!
+        html += `<div style="flex-grow: ${item.marketCap}; flex-basis: ${Math.max(12, pct)}%; background-color: ${color}; 
+                      display: flex; flex-direction: column; align-items: center; justify-content: center; 
+                      min-height: 80px; padding: 4px; box-sizing: border-box; overflow: hidden; border-radius: 4px; 
+                      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);">
+                     <span style="color: #ffffff; font-weight: 700; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; letter-spacing: 0.5px;">${item.symbol}</span>
+                     <span style="color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 500;">${sign}${item.change.toFixed(2)}%</span>
+                 </div>`;
     });
+    
+    html += '</div>';
+    container.innerHTML = html;
 };
