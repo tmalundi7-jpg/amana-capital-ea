@@ -10,4 +10,4 @@
 @media (max-width:860px){.snapshot-grid{grid-template-columns:repeat(3, 1fr);gap:1.5rem;}}
 @media (max-width:540px){.snapshot-grid{grid-template-columns:repeat(2, 1fr);gap:1rem;}.mi-snapshot-card{padding:1.25rem;}}
 
-.mi-snapshot-card .snapshot-mover, .mi-snapshot-card .snapshot-mover span{color:var(--cream);}
+.mi-snapshot-card .snapshot-mover {color:#ffffff !important;}
