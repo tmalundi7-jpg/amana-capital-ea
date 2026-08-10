@@ -11,12 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Initialize modules on first load
     initMobileMenu();
     initBondCalculator();
+    initWealthCalculator();
     initSnapshotCharts();
 
     // 3. Re-initialize modules after every page transition
     swup.hooks.on('page:view', () => {
         initMobileMenu();
         initBondCalculator();
+        initWealthCalculator();
         initSnapshotCharts();
         
         // Re-initialize Weglot if present
@@ -439,16 +441,16 @@ window.initBondCalculator = function() {
                 const rowBg = year % 2 === 0 ? 'background: rgba(255,255,255,0.02);' : 'background: transparent;';
                 tableHtml += `<tr style="${rowBg}">
                     <td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain);">${year}${isMaturityYear ? ' (Mat/Call)' : ''}</td>
-                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain);">TZS ${formatCurrency(thisYearIncome)}</td>
-                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain);">TZS ${formatCurrency(cumIncome)}</td>
-                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain); font-weight:600;">TZS ${formatCurrency(currentRealValue)}</td>
+                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain);">${formatCurrency(thisYearIncome)}</td>
+                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain);">${formatCurrency(cumIncome)}</td>
+                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain); font-weight:600;">${formatCurrency(currentRealValue)}</td>
                 </tr>`;
             }
 
             totalProfit = totalCashReturned - invAmt;
-            outStartCap.textContent = `TZS ${formatCurrency(invAmt)}`;
-            outTotalCash.textContent = `TZS ${formatCurrency(totalCashReturned)}`;
-            outTotalProfit.textContent = `TZS ${formatCurrency(totalProfit)}`;
+            outStartCap.textContent = formatCurrency(invAmt);
+            outTotalCash.textContent = formatCurrency(totalCashReturned);
+            outTotalProfit.textContent = formatCurrency(totalProfit);
             progressionTable.innerHTML = tableHtml;
 
             renderProgressionChart(labels, principalData, incomeData);
@@ -472,6 +474,50 @@ window.initBondCalculator = function() {
 
     // Trigger initial calculation
     calculateAnalytics();
+};
+
+// --- Wealth Calculator Logic ---
+window.initWealthCalculator = function() {
+    const btn = document.querySelector('button[onclick="calculateWealth()"]');
+    if (!btn) return;
+    
+    // Override the inline onclick since we moved logic here
+    btn.onclick = null;
+    btn.addEventListener('click', calculateWealth);
+
+    function calculateWealth() {
+        try {
+            let initialInput = document.getElementById('calc-initial').value;
+            let monthlyInput = document.getElementById('calc-monthly').value;
+            let returnInput = document.getElementById('calc-return').value;
+            let yearsInput = document.getElementById('calc-years').value;
+
+            let P = Math.max(0, parseFloat(initialInput) || 0);
+            let PMT = Math.max(0, parseFloat(monthlyInput) || 0);
+            let rawReturn = parseFloat(returnInput) || 0;
+            rawReturn = Math.max(-100, Math.min(1000, rawReturn));
+            let r = rawReturn / 100 / 12;
+            let n = Math.max(0, Math.min(100, parseFloat(yearsInput) || 0)) * 12;
+            
+            let futureValue = P * Math.pow(1 + r, n);
+            if (r !== 0) {
+                futureValue += PMT * ((Math.pow(1 + r, n) - 1) / r);
+            } else {
+                futureValue += PMT * n;
+            }
+            
+            if (isNaN(futureValue) || !isFinite(futureValue)) {
+                document.getElementById('calc-output').innerText = 'Invalid Input';
+            } else {
+                document.getElementById('calc-output').innerText = 'TZS ' + futureValue.toLocaleString('en-US', {maximumFractionDigits: 0});
+            }
+        } catch (e) {
+            document.getElementById('calc-output').innerText = 'Error in Calculation';
+        }
+    }
+    
+    // Initial run
+    calculateWealth();
 };
 
 // --- Scroll Reveal Animation Logic ---

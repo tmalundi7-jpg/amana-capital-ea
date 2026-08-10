@@ -7,7 +7,7 @@
     <meta name="description" content="Learn how to invest in the Tanzania stock market. Free educational modules covering DSE basics, bonds, ETFs, and portfolio construction from Amana Capital EA.">
     <link rel="canonical" href="https://www.amana-capital-ea.co.tz/education.html" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2.2">
+    <link rel="stylesheet" href="style.css?v=2.4">
     <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
     <script>
         Weglot.initialize({
@@ -50,8 +50,8 @@
             <div style="display: inline-block; padding: 0.4rem 1.2rem; background-color: rgba(200, 150, 46, 0.1); border: 1px solid rgba(200, 150, 46, 0.3); border-radius: 30px; margin-bottom: 1.5rem;">
                 <span style="color: var(--gold); font-size: 0.85rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Master The Markets</span>
             </div>
-            <h1 style="color: var(--cream); font-size: 3.5rem; font-weight: 700; letter-spacing: -1px; margin-bottom: 1.5rem; line-height: 1.2;">Investor Education Series</h1>
-            <p style="color: var(--stone); font-size: 1.35rem; max-width: 700px; margin: 0 auto; line-height: 1.8; font-weight: 400;">
+            <h1 style="color: var(--cream); font-size: 2.5rem; font-weight: 700; letter-spacing: -1px; margin-bottom: 1.5rem; line-height: 1.2;">Investor Education Series</h1>
+            <p style="color: var(--stone); font-size: 1.15rem; max-width: 700px; margin: 0 auto; line-height: 1.8; font-weight: 400;">
                 A comprehensive <span style="color: var(--gold); font-weight: 600;">7-module curriculum</span> designed to take you from market fundamentals to <span style="color: var(--gold); border-bottom: 2px solid rgba(200, 150, 46, 0.4); padding-bottom: 2px;">advanced portfolio strategy</span>.
             </p>
         </div>
@@ -90,41 +90,7 @@
                     <div id="calc-output" style="font-size: 1.75rem; font-weight: 700; color: var(--navy); margin-top: 0.25rem;">TZS 0</div>
                 </div>
             </div>
-            <script>
-                function calculateWealth() {
-                    try {
-                        let initialInput = document.getElementById('calc-initial').value;
-                        let monthlyInput = document.getElementById('calc-monthly').value;
-                        let returnInput = document.getElementById('calc-return').value;
-                        let yearsInput = document.getElementById('calc-years').value;
-
-                        let P = Math.max(0, parseFloat(initialInput) || 0);
-                        let PMT = Math.max(0, parseFloat(monthlyInput) || 0);
-                        let rawReturn = parseFloat(returnInput) || 0;
-                        rawReturn = Math.max(-100, Math.min(1000, rawReturn));
-                        let r = rawReturn / 100 / 12;
-                        let n = Math.max(0, Math.min(100, parseFloat(yearsInput) || 0)) * 12;
-                        
-                        let futureValue = P * Math.pow(1 + r, n);
-                        if (r !== 0) {
-                            futureValue += PMT * ((Math.pow(1 + r, n) - 1) / r);
-                        } else {
-                            futureValue += PMT * n;
-                        }
-                        
-                        if (isNaN(futureValue) || !isFinite(futureValue)) {
-                            document.getElementById('calc-output').innerText = 'Invalid Input';
-                        } else {
-                            document.getElementById('calc-output').innerText = 'TZS ' + futureValue.toLocaleString('en-US', {maximumFractionDigits: 0});
-                        }
-                    } catch (e) {
-                        document.getElementById('calc-output').innerText = 'Error in Calculation';
-                    }
-                }
-                document.addEventListener('DOMContentLoaded', calculateWealth);
-            </script>
-
-            <!-- Module 1 -->
+            </div>            <!-- Module 1 -->
             <details class="module-accordion" style="margin-bottom: 1.5rem; background: var(--cream); border-radius: 8px; border: 1px solid var(--gold); overflow: hidden;">
                 <summary>
                     Module 1: Macroeconomics & The Market

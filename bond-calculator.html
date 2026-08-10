@@ -7,7 +7,7 @@
     <meta name="description" content="Calculate Yield to Worst, Accrued Interest, and Interest Rate Stress Matrix for Tanzanian government bonds using Amana Capital's analytics engine.">
     <link rel="canonical" href="https://www.amana-capital-ea.co.tz/bond-calculator" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2.2">
+    <link rel="stylesheet" href="style.css?v=2.4">
     <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script>
@@ -150,7 +150,7 @@
 
                         <h3 style="color: var(--white); font-size:1rem; margin-bottom:0.75rem;">Stress Testing Matrix</h3>
                         <div class="matrix-table-container" style="width: 100%; max-width: 100%; overflow-x: auto; margin-bottom: 2rem; -webkit-overflow-scrolling: touch;">
-                            <table class="data-table" style="background: transparent; color: var(--white); font-size: 0.9rem; width: 100%; min-width: 300px;">
+                            <table class="data-table" style="background: transparent; color: var(--white); font-size: 0.9rem; width: 100%; min-width: 100%;">
                                 <thead>
                                     <tr>
                                         <th style="background: rgba(255,255,255,0.1); color: var(--gold);">Rate Shock</th>
@@ -182,14 +182,14 @@
                         </div>
 
                         <!-- Chart Container -->
-                        <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 4px; margin-bottom: 2rem; width: 100%; max-width: 100%; overflow-x: auto; box-sizing: border-box; -webkit-overflow-scrolling: touch;">
-                            <div style="min-width: 100%;">
-                                <canvas id="progressionChart" width="400" height="200" style="max-width: 100%; height: auto;"></canvas>
+                        <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 4px; margin-bottom: 2rem; width: 100%; max-width: 100%; overflow: hidden; box-sizing: border-box;">
+                            <div style="width: 100%; max-width: 100%;">
+                                <canvas id="progressionChart" style="width: 100%; max-width: 100%; height: 200px;"></canvas>
                             </div>
                         </div>
 
                         <div class="table-responsive" style="max-height: 400px; overflow-y: auto; overflow-x: auto; width: 100%; max-width: 100%; -webkit-overflow-scrolling: touch;">
-                            <table class="data-table" style="background: transparent; color: var(--white); font-size: 0.85rem; width: 100%; min-width: 400px;">
+                            <table class="data-table" style="background: transparent; color: var(--white); font-size: 0.85rem; width: 100%; min-width: 100%;">
                                 <thead>
                                     <tr>
                                         <th style="background: var(--navy); color: var(--gold); position: sticky; top: 0; z-index: 10; border-bottom: 1px solid rgba(255,255,255,0.1);">Year</th>
@@ -226,7 +226,7 @@
     
     <script src="https://unpkg.com/swup@4"></script>
     <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
-    <script src="script.js?v=1.7"></script>
+    <script src="script.js?v=1.9"></script>
     
 </body>
 </html>
