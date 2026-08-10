@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         initBondCalculator();
         initWealthCalculator();
         initSnapshotCharts();
+        initCompoundWealth();
         
         // Re-initialize Weglot if present
         if (typeof Weglot !== 'undefined') {
@@ -663,6 +664,9 @@ document.addEventListener('DOMContentLoaded', () => {
 let cwChartInstance = null;
 
 window.initCompoundWealth = function() {
+    function formatCurrency(val) {
+        return val.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    }
     const cwInitial = document.getElementById('cw-initial');
     const cwMonthly = document.getElementById('cw-monthly');
     const cwRate = document.getElementById('cw-rate');
