@@ -52,7 +52,10 @@
             <div class="snapshot-card" style="margin-bottom: 2.5rem; position: relative; z-index: 10;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
                     <h2 style="margin: 0; font-size: 1.25rem;">Live DSE Snapshot</h2>
-                    <div class="snapshot-timestamp" style="font-size: 0.8rem; color: var(--mist); font-weight: 600; text-transform: uppercase;">7 August 2026</div>
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <div class="snapshot-timestamp" style="font-size: 0.8rem; color: var(--mist); font-weight: 600; text-transform: uppercase;">7 August 2026</div>
+                        <button id="downloadPdfBtn" class="btn-gold-solid" style="padding: 0.4rem 0.8rem; font-size: 0.85rem; border: none; cursor: pointer; border-radius: 4px;">Download PDF</button>
+                    </div>
                 </div>
                 <div class="snapshot-grid">
                     <div>
@@ -196,6 +199,33 @@
     <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
     <script src="script.js?v=2.1"></script>
     <script src="/js/theme-toggle.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('downloadPdfBtn');
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    // Temporarily hide the button during capture
+                    btn.style.display = 'none';
+                    
+                    const element = document.querySelector('main');
+                    const opt = {
+                      margin:       0.5,
+                      filename:     'Amana_Capital_Market_Intelligence.pdf',
+                      image:        { type: 'jpeg', quality: 0.98 },
+                      html2canvas:  { scale: 2, useCORS: true, logging: false },
+                      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+                    };
+                    
+                    html2pdf().set(opt).from(element).save().then(() => {
+                        // Restore button
+                        btn.style.display = 'block';
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
 
