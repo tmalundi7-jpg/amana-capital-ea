@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initWealthCalculator();
     initSnapshotCharts();
 
+    // Force close mobile menu on any link click (Swup transition start)
+    swup.hooks.on('visit:start', () => {
+        const nav = document.getElementById('nav-links');
+        if (nav) nav.classList.remove('active');
+    });
+
     // 3. Re-initialize modules after every page transition
     swup.hooks.on('page:view', () => {
         initMobileMenu();
