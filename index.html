@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amana Capital East Africa | Tanzania Investment Advisory</title>
     <meta name="description" content="Amana Capital East Africa offers institutional DSE analysis and Tanzania investment advisory services. Build lasting wealth in frontier capital markets.">
     <link rel="canonical" href="https://www.amana-capital-ea.co.tz/" />
@@ -31,18 +30,515 @@
   }
   </script>
     <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
-    <script>
-        Weglot.initialize({
-            api_key: 'wg_22a6f434974df4dee513e25f34fc5e009'
-        });
-    </script>
-
+    <script>Weglot.initialize({ api_key: 'wg_22a6f434974df4dee513e25f34fc5e009' });</script>
     <meta property="og:title" content="Amana Capital East Africa | Tanzania Investment Advisory" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.amana-capital-ea.co.tz/" />
     <meta property="og:image" content="https://www.amana-capital-ea.co.tz/og-image.jpg" />
-    <meta property="og:description" content="Institutional-grade investment research, advisory, and fund management services rooted in the Dar es Salaam Stock Exchange." />
+    <meta property="og:description" content="Institutional DSE analysis and Tanzania investment advisory. Build lasting wealth in frontier capital markets." />
     <meta name="twitter:card" content="summary_large_image" />
+
+    <style>
+    /* ─── Home Page Enhancement Styles ─── */
+
+    /* Hero */
+    .home-hero {
+        background: var(--navy);
+        padding: 6rem 0 5rem;
+        position: relative;
+        overflow: hidden;
+    }
+    .home-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+            radial-gradient(circle at 80% 20%, rgba(200,150,46,0.10) 0%, transparent 50%),
+            radial-gradient(circle at 10% 80%, rgba(200,150,46,0.06) 0%, transparent 45%);
+        pointer-events: none;
+    }
+    .home-hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+    .home-hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.35rem 1rem;
+        background: rgba(200,150,46,0.12);
+        border: 1px solid rgba(200,150,46,0.35);
+        border-radius: 20px;
+        margin-bottom: 1.75rem;
+    }
+    .home-hero-eyebrow-dot {
+        width: 7px; height: 7px;
+        border-radius: 50%;
+        background: var(--gold);
+        animation: pulseDot 2s ease-in-out infinite;
+    }
+    @keyframes pulseDot {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(0.75); }
+    }
+    .home-hero-eyebrow span {
+        color: var(--gold);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    .home-hero h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 3.8rem;
+        font-weight: 700;
+        color: var(--cream);
+        line-height: 1.05;
+        letter-spacing: -1.5px;
+        margin-bottom: 1.5rem;
+    }
+    .home-hero h1 em {
+        font-style: italic;
+        color: var(--gold);
+    }
+    .home-hero-sub {
+        font-size: 1.05rem;
+        color: rgba(251,247,240,0.72);
+        line-height: 1.75;
+        max-width: 480px;
+        margin-bottom: 2.5rem;
+    }
+    .home-hero-cta {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .home-hero-trust {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 0.78rem;
+        color: rgba(251,247,240,0.45);
+        letter-spacing: 0.05em;
+    }
+    .home-hero-trust::before {
+        content: '';
+        display: block;
+        width: 28px; height: 1px;
+        background: rgba(200,150,46,0.5);
+    }
+
+    /* Stats bar on hero right */
+    .home-hero-stats {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .home-stat-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(200,150,46,0.18);
+        border-left: 3px solid var(--gold);
+        border-radius: 10px;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: background 0.25s, border-color 0.25s;
+    }
+    .home-stat-card:hover {
+        background: rgba(200,150,46,0.06);
+        border-color: rgba(200,150,46,0.4);
+    }
+    .home-stat-label {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: rgba(251,247,240,0.55);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 0.3rem;
+    }
+    .home-stat-value {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: var(--cream);
+        line-height: 1;
+    }
+    .home-stat-badge {
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 0.2rem 0.6rem;
+        border-radius: 12px;
+    }
+    .home-stat-badge.up { background: rgba(34,197,94,0.15); color: #22c55e; }
+    .home-stat-badge.neutral { background: rgba(200,150,46,0.15); color: var(--gold); }
+
+    /* Snapshot card upgrade */
+    .home-snapshot-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(200,150,46,0.2);
+    }
+    .home-snapshot-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--cream);
+        margin: 0;
+    }
+    .live-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: rgba(34,197,94,0.1);
+        border: 1px solid rgba(34,197,94,0.3);
+        color: #22c55e;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+    }
+    .live-badge::before {
+        content: '';
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background: #22c55e;
+        animation: pulseDot 1.5s infinite;
+    }
+
+    /* Why Us section */
+    .why-section {
+        background: var(--cream);
+        padding: 5rem 0;
+        border-top: 1px solid rgba(11,29,58,0.07);
+    }
+    .why-section-header {
+        text-align: center;
+        margin-bottom: 3.5rem;
+    }
+    .section-eyebrow {
+        display: inline-block;
+        color: var(--gold);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+    }
+    .section-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: var(--navy);
+        line-height: 1.15;
+        letter-spacing: -0.5px;
+        margin: 0;
+    }
+    .why-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+    .why-card {
+        background: var(--navy);
+        border-radius: 14px;
+        padding: 2rem 1.75rem;
+        border: 1px solid rgba(200,150,46,0.15);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .why-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--gold), rgba(200,150,46,0.3));
+    }
+    .why-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(11,29,58,0.2);
+        border-color: rgba(200,150,46,0.4);
+    }
+    .why-icon {
+        width: 44px; height: 44px;
+        border-radius: 10px;
+        background: rgba(200,150,46,0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        margin-bottom: 1.25rem;
+    }
+    .why-card h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--cream);
+        margin-bottom: 0.75rem;
+        line-height: 1.2;
+    }
+    .why-card p {
+        font-size: 0.88rem;
+        color: rgba(251,247,240,0.62);
+        line-height: 1.65;
+        margin: 0;
+    }
+
+    /* Services section */
+    .services-section {
+        background: var(--navy);
+        padding: 5rem 0;
+    }
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    .service-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(200,150,46,0.15);
+        border-radius: 14px;
+        padding: 2.25rem 2rem;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    .service-card::after {
+        content: '';
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--gold), transparent);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s ease;
+    }
+    .service-card:hover {
+        background: rgba(200,150,46,0.05);
+        border-color: rgba(200,150,46,0.4);
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+    .service-card:hover::after { transform: scaleX(1); }
+    .service-num {
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: var(--gold);
+        letter-spacing: 2px;
+        margin-bottom: 1.25rem;
+        opacity: 0.7;
+    }
+    .service-card h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.45rem;
+        font-weight: 700;
+        color: var(--cream);
+        margin-bottom: 0.75rem;
+    }
+    .service-card p {
+        font-size: 0.9rem;
+        color: rgba(251,247,240,0.6);
+        line-height: 1.7;
+        margin-bottom: 1.75rem;
+    }
+
+    /* Teaser card upgrade */
+    .home-teaser {
+        background: var(--cream);
+        padding: 4rem 0;
+    }
+    .teaser-premium {
+        background: var(--navy);
+        border-radius: 16px;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        border: 1px solid rgba(200,150,46,0.2);
+        box-shadow: 0 30px 60px rgba(11,29,58,0.15);
+    }
+    .teaser-prem-left {
+        padding: 3rem;
+        border-right: 1px solid rgba(200,150,46,0.12);
+    }
+    .teaser-prem-right {
+        padding: 3rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: rgba(200,150,46,0.04);
+    }
+    .teaser-prem-eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-bottom: 1rem;
+    }
+    .teaser-prem-dot {
+        width: 8px; height: 8px; border-radius: 50%;
+        background: var(--gold);
+        animation: pulseDot 2s infinite;
+    }
+    .teaser-prem-label {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: var(--gold);
+    }
+    .teaser-prem-date {
+        font-size: 0.82rem;
+        color: rgba(251,247,240,0.4);
+        margin-bottom: 1rem;
+    }
+    .teaser-prem-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: var(--cream);
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        letter-spacing: -0.3px;
+    }
+    .teaser-prem-body {
+        font-size: 0.9rem;
+        color: rgba(251,247,240,0.62);
+        line-height: 1.7;
+        margin-bottom: 1.75rem;
+    }
+    .teaser-prem-stats {
+        display: flex;
+        gap: 2rem;
+    }
+    .teaser-prem-stat-label {
+        font-size: 0.7rem;
+        color: rgba(251,247,240,0.4);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.2rem;
+    }
+    .teaser-prem-stat-value {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--cream);
+    }
+    .teaser-prem-stat-value.gain { color: #22c55e; }
+    .teaser-right-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: rgba(251,247,240,0.45);
+        margin-bottom: 1rem;
+    }
+    .teaser-right-cta-text {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--cream);
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+    }
+    .teaser-right-divider {
+        width: 40px; height: 2px;
+        background: var(--gold);
+        margin-bottom: 1.5rem;
+    }
+
+    /* Newsletter premium */
+    .newsletter-premium {
+        background: var(--navy);
+        border-top: 1px solid rgba(200,150,46,0.15);
+        padding: 4rem 0;
+    }
+    .newsletter-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .newsletter-left h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--cream);
+        margin-bottom: 0.75rem;
+        line-height: 1.2;
+    }
+    .newsletter-left h2 span { color: var(--gold); }
+    .newsletter-left p {
+        color: rgba(251,247,240,0.55);
+        font-size: 0.92rem;
+        line-height: 1.65;
+        margin: 0;
+    }
+    .newsletter-form-premium {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .newsletter-form-premium input {
+        width: 100%;
+        padding: 0.9rem 1.25rem;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(200,150,46,0.25);
+        border-radius: 8px;
+        color: var(--cream);
+        font-family: inherit;
+        font-size: 0.9rem;
+        outline: none;
+        transition: border-color 0.2s;
+        box-sizing: border-box;
+    }
+    .newsletter-form-premium input:focus { border-color: var(--gold); }
+    .newsletter-form-premium input::placeholder { color: rgba(251,247,240,0.35); }
+    .newsletter-form-premium button {
+        padding: 0.9rem 1.5rem;
+        background: var(--gold);
+        border: none;
+        border-radius: 8px;
+        color: var(--navy);
+        font-weight: 700;
+        font-size: 0.9rem;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+        transition: background 0.2s, transform 0.2s;
+        font-family: inherit;
+    }
+    .newsletter-form-premium button:hover {
+        background: #d4a233;
+        transform: translateY(-1px);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .home-hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+        .home-hero h1 { font-size: 2.8rem; }
+        .why-grid { grid-template-columns: repeat(2, 1fr); }
+        .services-grid { grid-template-columns: 1fr; }
+        .teaser-premium { grid-template-columns: 1fr; }
+        .teaser-prem-right { border-top: 1px solid rgba(200,150,46,0.12); padding: 2.5rem 3rem; }
+        .newsletter-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 600px) {
+        .home-hero { padding: 4.5rem 0 3.5rem; }
+        .home-hero h1 { font-size: 2.2rem; }
+        .why-grid { grid-template-columns: 1fr; }
+        .section-title { font-size: 1.9rem; }
+    }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -63,7 +559,7 @@
                     <div class="mega-menu">
                           <div class="mega-menu-grid" style="grid-template-columns: 1fr 1fr;">
                               <div class="mega-col">
-                                  <h4>Research & Analysis</h4>
+                                  <h4>Research &amp; Analysis</h4>
                                   <a href="/market-intelligence">Daily DSE Wraps</a>
                                   <a href="/market-intelligence-archive">Weekly Macro Briefings</a>
                                   <a href="/market-intelligence-archive">Monthly Strategy Outlook</a>
@@ -87,26 +583,73 @@
         </div>
     </nav>
 
-    
-
     <main id="swup" class="transition-fade">
-        <!-- Hero -->
-        <section class="hero-section">
+
+        <!-- ─── HERO ─── -->
+        <section class="home-hero">
             <div class="container">
-                <h1 class="hero-tagline">Capital intelligence for the African century.</h1>
-                <hr class="hero-rule">
-                <p class="hero-subheadline">Daily DSE market intelligence and long&#8209;horizon investment perspectives &mdash; rooted in integrity, regional depth, and disciplined conviction. For Tanzanians at home and across the diaspora.</p>
-                <div class="hero-cta-group">
-                    <a href="/market-intelligence" class="btn btn-gold-solid">Today's DSE Wrap</a>
-                    <a href="/education" class="btn btn-cream-outline">Start Learning</a>
+                <div class="home-hero-grid">
+                    <!-- Left: Text -->
+                    <div>
+                        <div class="home-hero-eyebrow">
+                            <span class="home-hero-eyebrow-dot"></span>
+                            <span>Dar es Salaam Stock Exchange</span>
+                        </div>
+                        <h1>Capital intelligence<br>for the <em>African century</em>.</h1>
+                        <p class="home-hero-sub">Daily DSE market intelligence and long&#8209;horizon investment perspectives — rooted in integrity, regional depth, and disciplined conviction. For Tanzanians at home and across the diaspora.</p>
+                        <div class="home-hero-cta">
+                            <a href="/market-intelligence" class="btn btn-gold-solid">Today's DSE Wrap</a>
+                            <a href="/education" class="btn btn-cream-outline">Start Learning</a>
+                        </div>
+                        <div class="home-hero-trust">Registration with CMSA Pending — Dar es Salaam, Tanzania</div>
+                    </div>
+
+                    <!-- Right: Live Stats -->
+                    <div class="home-hero-stats">
+                        <div class="home-stat-card">
+                            <div>
+                                <div class="home-stat-label">DSEI — End of Day</div>
+                                <div class="home-stat-value">4,195.20</div>
+                            </div>
+                            <span class="home-stat-badge up">▲ +0.8%</span>
+                        </div>
+                        <div class="home-stat-card">
+                            <div>
+                                <div class="home-stat-label">Daily Turnover</div>
+                                <div class="home-stat-value">TZS 5.25bn</div>
+                            </div>
+                            <span class="home-stat-badge up">▲ High Vol</span>
+                        </div>
+                        <div class="home-stat-card">
+                            <div>
+                                <div class="home-stat-label">Top Mover</div>
+                                <div class="home-stat-value">MCB +14.6%</div>
+                            </div>
+                            <span class="home-stat-badge neutral">7 Aug 2026</span>
+                        </div>
+                        <div class="home-stat-card">
+                            <div>
+                                <div class="home-stat-label">DSE Listed Companies</div>
+                                <div class="home-stat-value">28</div>
+                            </div>
+                            <span class="home-stat-badge neutral">Frontier</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="trust-badge">Registration with CMSA Pending</div>
             </div>
         </section>
-        <!-- DSE Snapshot -->
-        <section style="padding: 2rem 0;">
+
+        <!-- ─── LIVE DSE SNAPSHOT ─── -->
+        <section style="padding: 2.5rem 0; background: var(--cream);">
             <div class="container">
                 <div class="snapshot-card">
+                    <div class="home-snapshot-header">
+                        <h2 class="home-snapshot-title">Live DSE Snapshot</h2>
+                        <div style="display:flex;align-items:center;gap:1rem;">
+                            <span class="live-badge">Live Feed</span>
+                            <span style="font-size:0.78rem;color:var(--mist);font-weight:600;">End-of-day · 7 August 2026</span>
+                        </div>
+                    </div>
 <!-- SNAPSHOT_CARD_START -->
 <div class="snapshot-grid">
     <div class="snapshot-item">
@@ -153,163 +696,154 @@
                 </div>
             </div>
         </section>
-        <!-- Four Pillars -->
-        <section style="padding: 2rem 0;">
+
+        <!-- ─── WHY AMANA CAPITAL ─── -->
+        <section class="why-section">
             <div class="container">
-                <div class="bounded-card reveal-up" style="transition-delay: 100ms;">
-                    <div class="pillars-label">Our Core Principles</div>
-                    <div class="pillars-grid">
-                        <div class="pillar-card">
-                            <div class="pillar-number">01</div>
-                            <h3>Integrity</h3>
-                            <p>Uncompromising ethical standards.</p>
-                            <div class="pillar-line"></div>
-                        </div>
-                        <div class="pillar-card">
-                            <div class="pillar-number">02</div>
-                            <h3>Long-horizon</h3>
-                            <p>Compounding wealth across generations.</p>
-                            <div class="pillar-line"></div>
-                        </div>
-                        <div class="pillar-card">
-                            <div class="pillar-number">03</div>
-                            <h3>Regional Intelligence</h3>
-                            <p>Deep East African market insight.</p>
-                            <div class="pillar-line"></div>
-                        </div>
-                        <div class="pillar-card">
-                            <div class="pillar-number">04</div>
-                            <h3>Disciplined Conviction</h3>
-                            <p>Data-driven, unswayed by noise.</p>
-                            <div class="pillar-line"></div>
-                        </div>
+                <div class="why-section-header">
+                    <div class="section-eyebrow">Why Amana Capital</div>
+                    <h2 class="section-title">Our Four Governing Principles</h2>
+                </div>
+                <div class="why-grid">
+                    <div class="why-card reveal-up">
+                        <div class="why-icon">🏛️</div>
+                        <h3>Integrity First</h3>
+                        <p>We hold ourselves to the fiduciary standard — your interests are always placed before ours, without exception or compromise.</p>
+                    </div>
+                    <div class="why-card reveal-up" style="transition-delay:100ms;">
+                        <div class="why-icon">🔭</div>
+                        <h3>Long-Horizon Thinking</h3>
+                        <p>We invest with a multi-year conviction framework. We do not chase quarterly noise — we build compounding wealth across generations.</p>
+                    </div>
+                    <div class="why-card reveal-up" style="transition-delay:200ms;">
+                        <div class="why-icon">🌍</div>
+                        <h3>Regional Intelligence</h3>
+                        <p>Deep, boots-on-the-ground knowledge of the East African frontier. We see opportunities that global asset managers consistently overlook.</p>
+                    </div>
+                    <div class="why-card reveal-up" style="transition-delay:300ms;">
+                        <div class="why-icon">📐</div>
+                        <h3>Disciplined Conviction</h3>
+                        <p>Rigorous fundamental analysis. Data-driven decision making. We are unswayed by market sentiment and driven only by intrinsic value.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Core Services -->
-        <section style="padding: 2rem 0;">
+        <!-- ─── SERVICES ─── -->
+        <section class="services-section">
             <div class="container">
-                <div class="services-expand-grid">
-                    <div class="service-expand-card reveal-up" style="transition-delay: 100ms;">
-                        <div class="card-bg" style="background: linear-gradient(to top, rgba(11,29,58,1) 0%, rgba(11,29,58,0) 100%);"></div>
-                        <div class="card-content">
-                            <h3>Market Intelligence</h3>
-                            <p>Daily analysis and institutional insights on the DSE.</p>
-                            <a href="/market-intelligence" class="btn btn-gold-solid">Read Analysis</a>
-                        </div>
+                <div class="why-section-header" style="margin-bottom:3.5rem;">
+                    <div class="section-eyebrow" style="color:var(--gold);">What We Do</div>
+                    <h2 class="section-title" style="color:var(--cream);">Our Core Services</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card reveal-up" style="transition-delay:100ms;">
+                        <div class="service-num">01 — RESEARCH</div>
+                        <h3>Market Intelligence</h3>
+                        <p>Daily institutional-grade analysis of the Dar es Salaam Stock Exchange. Equity research, macro commentary, and sector deep-dives delivered every trading day.</p>
+                        <a href="/market-intelligence" class="btn btn-gold-solid">Read Analysis &rarr;</a>
                     </div>
-                    <div class="service-expand-card reveal-up" style="transition-delay: 200ms;">
-                        <div class="card-bg" style="background: linear-gradient(to top, rgba(11,29,58,1) 0%, rgba(11,29,58,0) 100%);"></div>
-                        <div class="card-content">
-                            <h3>Investor Education</h3>
-                            <p>Foundational knowledge for East African markets.</p>
-                            <a href="/education" class="btn btn-gold-solid">Start Learning</a>
-                        </div>
+                    <div class="service-card reveal-up" style="transition-delay:200ms;">
+                        <div class="service-num">02 — EDUCATION</div>
+                        <h3>Investor Education</h3>
+                        <p>From the fundamentals of stock ownership to advanced bond valuation — our free curriculum closes the knowledge gap for every East African investor.</p>
+                        <a href="/education" class="btn btn-gold-solid">Start Learning &rarr;</a>
                     </div>
-                    <div class="service-expand-card reveal-up" style="transition-delay: 300ms;">
-                        <div class="card-bg" style="background: linear-gradient(to top, rgba(11,29,58,1) 0%, rgba(11,29,58,0) 100%);"></div>
-                        <div class="card-content">
-                            <h3>Our Firm</h3>
-                            <p>Integrity. Regional intelligence. Conviction.</p>
-                            <a href="/about" class="btn btn-gold-solid">About Us</a>
-                        </div>
+                    <div class="service-card reveal-up" style="transition-delay:300ms;">
+                        <div class="service-num">03 — ADVISORY</div>
+                        <h3>Investment Advisory</h3>
+                        <p>Bespoke portfolio construction and strategic advisory for sophisticated investors and institutions. Rooted in fundamental analysis and a long-horizon worldview.</p>
+                        <a href="/contact" class="btn btn-gold-solid">Speak to Us &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Today's DSE Wrap Teaser -->
-        <section style="padding: 2rem 0;">
+        <!-- ─── TODAY'S WRAP TEASER ─── -->
+        <section class="home-teaser">
             <div class="container">
+                <div class="why-section-header" style="margin-bottom:2.5rem;">
+                    <div class="section-eyebrow">Latest Research</div>
+                    <h2 class="section-title">Today's DSE Wrap</h2>
+                </div>
                 <!-- TEASER_CARD_START -->
-                <div class="teaser-card reveal-up" style="transition-delay: 200ms;">
-                    <div class="teaser-bg-accent"></div>
-                    <div class="teaser-left">
-                        <div class="teaser-eyebrow">
-                            <span class="teaser-dot"></span>
-                            <span class="teaser-label">Daily DSE Wrap</span>
+                <div class="teaser-premium reveal-up" style="transition-delay:100ms;">
+                    <div class="teaser-prem-left">
+                        <div class="teaser-prem-eyebrow">
+                            <span class="teaser-prem-dot"></span>
+                            <span class="teaser-prem-label">Daily DSE Wrap</span>
                         </div>
-                        <div class="teaser-date">7 August 2026</div>
-                        <h3 class="teaser-title">Turnover Surges Past TZS 5bn on NMB and CRDB Volume as MCB Rallies</h3>
-                        <p class="teaser-body">The Dar es Salaam Stock Exchange closed the week on a high note. Total equity turnover exceeded TZS 5.25 billion, driven by massive institutional block trades in NMB and CRDB, while MCB recorded a stellar 14.6% gain...</p>
-                        <div class="teaser-stats">
-                            <div class="teaser-stat"><span class="teaser-stat-label">DSEI</span><span class="teaser-stat-value">4,195.20</span></div>
-                            <div class="teaser-stat"><span class="teaser-stat-label">Turnover</span><span class="teaser-stat-value">TZS 5.25bn</span></div>
-                            <div class="teaser-stat"><span class="teaser-stat-label">Top Gainer</span><span class="teaser-stat-value gain">MCB +14.6%</span></div>
+                        <div class="teaser-prem-date">Thursday, 7 August 2026</div>
+                        <h3 class="teaser-prem-title">Turnover Surges Past TZS 5bn on NMB and CRDB Volume as MCB Rallies</h3>
+                        <p class="teaser-prem-body">The Dar es Salaam Stock Exchange closed the week on a high note. Total equity turnover exceeded TZS 5.25 billion, driven by massive institutional block trades in NMB and CRDB, while MCB recorded a stellar 14.6% single-session gain...</p>
+                        <div class="teaser-prem-stats">
+                            <div>
+                                <div class="teaser-prem-stat-label">DSEI</div>
+                                <div class="teaser-prem-stat-value">4,195.20</div>
+                            </div>
+                            <div>
+                                <div class="teaser-prem-stat-label">Turnover</div>
+                                <div class="teaser-prem-stat-value">TZS 5.25bn</div>
+                            </div>
+                            <div>
+                                <div class="teaser-prem-stat-label">Top Gainer</div>
+                                <div class="teaser-prem-stat-value gain">MCB +14.6%</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="teaser-right">
-                        <div class="teaser-cta-box">
-                            <p class="teaser-cta-text">Read the full institutional analysis</p>
-                            <a href="/dse-wrap-2026-08-07" class="btn btn-gold-solid" style="width:100%; justify-content:center;">Read the Full Wrap &rarr;</a>
-                        </div>
+                    <div class="teaser-prem-right">
+                        <div class="teaser-right-label">Institutional Analysis</div>
+                        <div class="teaser-right-divider"></div>
+                        <p class="teaser-right-cta-text">Read the full wrap — data, context, and market perspective from our analysts.</p>
+                        <a href="/dse-wrap-2026-08-07" class="btn btn-gold-solid" style="width:100%; justify-content:center; text-align:center;">Read the Full Wrap &rarr;</a>
                     </div>
                 </div>
                 <!-- TEASER_CARD_END -->
             </div>
         </section>
 
-        <!-- Newsletter -->
-        <section style="padding: 1rem 0;">
+        <!-- ─── INTELLIGENCE BRIEFING ─── -->
+        <section class="newsletter-premium">
             <div class="container">
-                <div class="newsletter-box reveal-up">
-                    <h2>Join Our Intelligence Briefing</h2>
-                    <p>Exclusive institutional research delivered to your inbox weekly.</p>
-                    <form class="newsletter-form" action="https://formspree.io/f/mvzjdqnv" method="POST">
-                        <input type="email" name="email" placeholder="Your email address" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
+                <div class="newsletter-inner">
+                    <div class="newsletter-left">
+                        <div class="section-eyebrow" style="color:var(--gold);">Intelligence Briefing</div>
+                        <h2>Join Our <span>Research</span> Network</h2>
+                        <p>Exclusive institutional-grade DSE wraps and macroeconomic briefings delivered to your inbox every trading day. No noise — only signal.</p>
+                    </div>
+                    <div>
+                        <form class="newsletter-form-premium" action="https://formspree.io/f/mvzjdqnv" method="POST">
+                            <input type="email" name="email" placeholder="Your institutional email address" required>
+                            <button type="submit">Subscribe to Intelligence Briefing</button>
+                        </form>
+                        <p style="font-size:0.72rem;color:rgba(251,247,240,0.3);margin-top:0.75rem;">No spam. Unsubscribe at any time. For serious investors.</p>
+                    </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-        <section class="lead-gen-section" style="background: var(--navy); padding: 1.5rem 0; border-top: 1px solid rgba(200, 150, 46, 0.1);">
-        <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <h2 style="color: var(--gold); margin-bottom: 0.5rem; font-family: var(--heading-font); font-size: 1.25rem;">Subscribe to Institutional Intelligence</h2>
-            <p style="color: var(--mist); margin-bottom: 1rem; font-size: 0.85rem;">Receive daily DSE wraps and macroeconomic briefings in your inbox.</p>
-            <form class="lead-gen-form" action="#" method="POST" style="display: flex; gap: 0.5rem; width: 100%; max-width: 500px; flex-wrap: wrap;">
-                <input type="email" placeholder="Enter your business email" required style="flex: 1; min-width: 250px; padding: 0.8rem 1.25rem; border-radius: 4px; border: 1px solid rgba(200, 150, 46, 0.3); background: rgba(255, 255, 255, 0.05); color: var(--cream); outline: none; font-family: var(--body-font); background: var(--cream); color: var(--navy); border: none;">
-                <button type="submit" class="btn-gold-solid" style="padding: 0.8rem 1.5rem; border: none; cursor: pointer;">Subscribe</button>
-            </form>
-        </div>
-    </section>
-    
-    <footer class="footer" style="background-color: var(--navy); padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
-        <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.8rem;">
-            <div style="color: var(--gold); font-weight: bold; letter-spacing: 0.05em;">AMANA CAPITAL EAST AFRICA</div>
-            <div style="display: flex; gap: 1.5rem;">
-                <a href="/market-intelligence" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Research</a>
-                <a href="/bond-calculator" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Bond Calc</a>
-                <a href="/compound-wealth" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Wealth Modeler</a>
-                <a href="/education" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Education</a>
-                <a href="/about" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Governance</a>
-                <a href="/contact" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Contact</a>
+    <footer class="footer" style="background-color: var(--navy); padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; font-size: 0.82rem;">
+            <div>
+                <div style="color: var(--gold); font-weight: 800; letter-spacing: 0.1em; font-size: 0.85rem; margin-bottom: 0.3rem;">AMANA CAPITAL EAST AFRICA</div>
+                <div style="color: rgba(251,247,240,0.35); font-size: 0.72rem;">Dar es Salaam · Tanzania · Registration Pending CMSA</div>
             </div>
-            <div style="color: var(--mist); opacity: 0.7;">&copy; 2026 Amana Capital East Africa.</div>
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                <a href="/market-intelligence" style="color: var(--mist); text-decoration: none; transition: color 0.2s; font-size:0.8rem;">Research</a>
+                <a href="/bond-calculator" style="color: var(--mist); text-decoration: none; transition: color 0.2s; font-size:0.8rem;">Bond Calc</a>
+                <a href="/compound-wealth" style="color: var(--mist); text-decoration: none; transition: color 0.2s; font-size:0.8rem;">Wealth Modeler</a>
+                <a href="/education" style="color: var(--mist); text-decoration: none; transition: color 0.2s; font-size:0.8rem;">Education</a>
+                <a href="/about" style="color: var(--mist); text-decoration: none; transition: color 0.2s; font-size:0.8rem;">Governance</a>
+                <a href="/contact" style="color: var(--mist); text-decoration: none; transition: color 0.2s; font-size:0.8rem;">Contact</a>
+            </div>
+            <div style="color: var(--mist); opacity: 0.45; font-size:0.75rem;">&copy; 2026 Amana Capital East Africa Limited.</div>
         </div>
     </footer>
     
     <script src="https://unpkg.com/swup@4"></script>
     <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
     <script src="script.min.js?v=20260810h" defer></script>
-    <script src="/js/theme-toggle.js" defer></script>
 </body>
 </html>
-
-
-
-
-
-
-
-<!-- cache bust newsletter fix -->
-
-
-
-
-
-
-

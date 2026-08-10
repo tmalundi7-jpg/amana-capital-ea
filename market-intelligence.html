@@ -3,36 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily DSE Market Wrap & Analysis | Amana Capital EA</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Daily DSE Market Wrap &amp; Analysis | Amana Capital EA</title>
     <meta name="description" content="Read our daily Dar es Salaam Stock Exchange (DSE) wrap. Get institutional-grade market intelligence, top movers, and equity research from Amana Capital East Africa.">
-    
-    <!-- force deploy cache bust 4 -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    
-    <link rel="canonical" href="https://www.amana-capital-ea.co.tz/market-intelligence.html" />
+    <link rel="canonical" href="https://www.amana-capital-ea.co.tz/market-intelligence" />
     <link rel="stylesheet" href="style.min.css?v=20260810h">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
-    <script>
-        Weglot.initialize({
-            api_key: 'wg_22a6f434974df4dee513e25f34fc5e009'
-        });
-    </script>
-
-    <meta property="og:title" content="Daily DSE Market Wrap & Analysis | Amana Capital EA" />
+    <script>Weglot.initialize({ api_key: 'wg_22a6f434974df4dee513e25f34fc5e009' });</script>
+    <meta property="og:title" content="Daily DSE Market Wrap &amp; Analysis | Amana Capital EA" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.amana-capital-ea.co.tz/market-intelligence.html" />
+    <meta property="og:url" content="https://www.amana-capital-ea.co.tz/market-intelligence" />
     <meta property="og:image" content="https://www.amana-capital-ea.co.tz/og-image.jpg" />
-    <meta property="og:description" content="Institutional-grade investment research, advisory, and fund management services rooted in the Dar es Salaam Stock Exchange." />
+    <meta property="og:description" content="Institutional-grade DSE research and daily market intelligence from Amana Capital East Africa." />
     <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body>
-                                                            <nav class="navbar">
+    <nav class="navbar">
         <div class="container nav-container">
             <a href="/" class="brand-link">
                 <svg viewBox="0 0 32 44" class="brand-icon" aria-hidden="true"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"/><rect x="21" y="0" width="8" height="44" fill="currentColor"/><rect x="0" y="19" width="21" height="4" fill="currentColor"/></svg>
@@ -47,153 +38,610 @@
                 <li><a href="/market-intelligence" class="active">Market Intelligence</a></li>
                 <li><a href="/education">Investor Education</a></li>
                 <li><a href="/bond-calculator">Bond Calculator</a></li>
-                        <li><a href="/risk-profiler">Risk Profiler</a></li>
+                <li><a href="/risk-profiler">Risk Profiler</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
-
-                  </ul>
+            </ul>
         </div>
     </nav>
 
     <main id="swup" class="transition-fade">
-        <div class="page-header" style="background-color: var(--navy); color: var(--cream); padding: 3rem 0; text-align: center;">
+    <style>
+    /* ─── Market Intelligence Page Styles ─── */
+    .mi-hero {
+        background: var(--navy);
+        padding: 5rem 0 4rem;
+        position: relative;
+        overflow: hidden;
+    }
+    .mi-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+            radial-gradient(ellipse at 70% 0%, rgba(200,150,46,0.10) 0%, transparent 55%),
+            radial-gradient(ellipse at 5% 100%, rgba(200,150,46,0.06) 0%, transparent 45%);
+        pointer-events: none;
+    }
+    .mi-hero-inner {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: end;
+        gap: 3rem;
+    }
+    .mi-hero-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(200,150,46,0.12);
+        border: 1px solid rgba(200,150,46,0.3);
+        color: var(--gold);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 0.3rem 0.9rem;
+        border-radius: 20px;
+        margin-bottom: 1.25rem;
+    }
+    .mi-hero-label::before {
+        content: '';
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background: var(--gold);
+        animation: pulseMI 2s infinite;
+    }
+    @keyframes pulseMI {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.4; transform: scale(0.7); }
+    }
+    .mi-hero h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: var(--cream);
+        line-height: 1.1;
+        letter-spacing: -1px;
+        margin-bottom: 1rem;
+    }
+    .mi-hero h1 em { font-style: italic; color: var(--gold); }
+    .mi-hero-sub {
+        color: rgba(251,247,240,0.65);
+        font-size: 1rem;
+        line-height: 1.7;
+        max-width: 540px;
+        margin: 0;
+    }
+    .mi-hero-meta {
+        text-align: right;
+        font-size: 0.78rem;
+        color: rgba(251,247,240,0.35);
+        letter-spacing: 0.05em;
+    }
+    .mi-hero-meta strong {
+        display: block;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--cream);
+        letter-spacing: -0.5px;
+        margin-bottom: 0.2rem;
+    }
+
+    /* Main layout */
+    .mi-body {
+        background: var(--cream);
+        padding: 2.5rem 0 5rem;
+    }
+    .mi-layout {
+        display: grid;
+        grid-template-columns: 1fr 290px;
+        gap: 2.5rem;
+        max-width: 1040px;
+        margin: 0 auto;
+    }
+
+    /* Snapshot card */
+    .mi-snapshot-card {
+        background: var(--navy);
+        border-radius: 14px;
+        padding: 1.75rem 2rem;
+        margin-bottom: 2rem;
+        border: 1px solid rgba(200,150,46,0.18);
+        position: relative;
+        overflow: hidden;
+    }
+    .mi-snapshot-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--gold), rgba(200,150,46,0.2));
+    }
+    .mi-snapshot-hdr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(200,150,46,0.15);
+    }
+    .mi-snapshot-hdr h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--cream);
+        margin: 0;
+    }
+    .live-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        background: rgba(34,197,94,0.1);
+        border: 1px solid rgba(34,197,94,0.3);
+        color: #22c55e;
+        font-size: 0.67rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 0.22rem 0.7rem;
+        border-radius: 20px;
+    }
+    .live-badge::before {
+        content: '';
+        width: 5px; height: 5px;
+        border-radius: 50%;
+        background: #22c55e;
+        animation: pulseMI 1.5s infinite;
+    }
+
+    /* Archive section */
+    .mi-archive-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid rgba(11,29,58,0.08);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .archive-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        background: #fff;
+        border-radius: 12px;
+        border: 1px solid rgba(11,29,58,0.08);
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(11,29,58,0.06);
+    }
+    .archive-row {
+        display: grid;
+        grid-template-columns: 100px 1fr auto;
+        gap: 1.25rem;
+        align-items: center;
+        padding: 1.1rem 1.5rem;
+        border-bottom: 1px solid rgba(11,29,58,0.055);
+        transition: background 0.2s;
+        text-decoration: none;
+    }
+    .archive-row:last-child { border-bottom: none; }
+    .archive-row:hover { background: rgba(11,29,58,0.025); }
+    .archive-date {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--gold);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        line-height: 1.3;
+    }
+    .archive-content-title {
+        font-weight: 700;
+        font-size: 0.88rem;
+        color: var(--navy);
+        margin-bottom: 0.2rem;
+        line-height: 1.35;
+    }
+    .archive-content-excerpt {
+        font-size: 0.78rem;
+        color: rgba(11,29,58,0.5);
+        line-height: 1.5;
+    }
+    .archive-cta {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--gold);
+        text-decoration: none;
+        white-space: nowrap;
+        transition: opacity 0.2s;
+    }
+    .archive-cta:hover { opacity: 0.7; }
+    .archive-badge {
+        display: inline-block;
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 0.15rem 0.5rem;
+        border-radius: 10px;
+        margin-bottom: 0.35rem;
+    }
+    .badge-equity { background: rgba(11,29,58,0.08); color: var(--navy); }
+    .badge-macro { background: rgba(200,150,46,0.12); color: #a07020; }
+    .badge-bonds { background: rgba(59,130,246,0.1); color: #3b82f6; }
+
+    /* Sidebar */
+    .mi-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+    .mi-sidebar-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 1.5rem;
+        border: 1px solid rgba(11,29,58,0.08);
+        box-shadow: 0 4px 16px rgba(11,29,58,0.05);
+    }
+    .mi-sidebar-card.dark {
+        background: var(--navy);
+        border-color: rgba(200,150,46,0.2);
+        border-top: 3px solid var(--gold);
+    }
+    .mi-sidebar-card h4 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 1rem;
+    }
+    .mi-sidebar-card.dark h4 { color: var(--gold); }
+    .mi-sidebar-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .mi-sidebar-links a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0.75rem;
+        background: var(--cream);
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--navy);
+        text-decoration: none;
+        transition: background 0.2s;
+    }
+    .mi-sidebar-links a:hover { background: rgba(200,150,46,0.1); }
+    .mi-analyst-note {
+        background: rgba(200,150,46,0.06);
+        border-left: 3px solid var(--gold);
+        border-radius: 0 8px 8px 0;
+        padding: 1rem;
+        margin-top: 0.75rem;
+    }
+    .mi-analyst-note p {
+        font-size: 0.83rem;
+        color: rgba(251,247,240,0.75);
+        line-height: 1.6;
+        margin: 0;
+        font-style: italic;
+    }
+
+    /* Heatmap section */
+    .mi-heatmap-section {
+        background: var(--navy);
+        border-radius: 14px;
+        border: 1px solid rgba(200,150,46,0.15);
+        padding: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
+        grid-column: 1 / -1;
+    }
+    .mi-heatmap-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.25rem;
+    }
+    .mi-heatmap-header h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--cream);
+        margin: 0;
+    }
+
+    /* Subscribe strip */
+    .mi-subscribe {
+        background: var(--navy);
+        border-top: 1px solid rgba(200,150,46,0.15);
+        padding: 3.5rem 0;
+    }
+    .mi-subscribe-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .mi-subscribe h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--cream);
+        margin-bottom: 0.6rem;
+        line-height: 1.2;
+    }
+    .mi-subscribe h2 em { font-style: normal; color: var(--gold); }
+    .mi-subscribe p { color: rgba(251,247,240,0.5); font-size: 0.88rem; line-height: 1.6; margin: 0; }
+    .mi-sub-form { display: flex; flex-direction: column; gap: 0.65rem; }
+    .mi-sub-form input {
+        padding: 0.85rem 1.2rem;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(200,150,46,0.25);
+        border-radius: 8px;
+        color: var(--cream);
+        font-family: inherit;
+        font-size: 0.88rem;
+        outline: none;
+    }
+    .mi-sub-form input::placeholder { color: rgba(251,247,240,0.3); }
+    .mi-sub-form button {
+        padding: 0.85rem;
+        background: var(--gold);
+        border: none;
+        border-radius: 8px;
+        color: var(--navy);
+        font-weight: 700;
+        font-size: 0.88rem;
+        cursor: pointer;
+        font-family: inherit;
+        transition: background 0.2s;
+    }
+    .mi-sub-form button:hover { background: #d4a233; }
+
+    @media (max-width: 860px) {
+        .mi-layout { grid-template-columns: 1fr; }
+        .mi-hero-inner { grid-template-columns: 1fr; }
+        .mi-hero h1 { font-size: 2.4rem; }
+        .mi-subscribe-inner { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    @media (max-width: 540px) {
+        .archive-row { grid-template-columns: 80px 1fr; }
+        .archive-cta { display: none; }
+        .mi-hero h1 { font-size: 2rem; }
+    }
+    </style>
+
+        <!-- ─── HERO ─── -->
+        <section class="mi-hero">
             <div class="container">
-                <h1 style="color: var(--cream); margin-bottom: 0.5rem;">Market Intelligence</h1>
-                <p style="font-size: 1.1rem; color: rgba(251, 247, 240, 0.85); max-width: 600px; margin: 0 auto;">Institutional-grade research and disciplined investment perspectives for East African equities.</p>
-            </div>
-        </div>
-
-        <div class="container" style="max-width: 900px; margin-top: -2rem; margin-bottom: 4rem;">
-
-            <!-- DSE Snapshot Card -->
-            <div class="snapshot-card" style="margin-bottom: 2.5rem; position: relative; z-index: 10;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                    <h2 style="margin: 0; font-size: 1.25rem;">Live DSE Snapshot</h2>
-                    <div class="snapshot-timestamp" style="font-size: 0.8rem; color: var(--mist); font-weight: 600; text-transform: uppercase;">7 August 2026</div>
-                </div>
-                <div class="snapshot-grid">
+                <div class="mi-hero-inner">
                     <div>
-                        <div class="snapshot-label">DSEI</div>
-                              <div class="snapshot-value" id="mi-dsei">4,195.20 <span style="color: #22c55e;">▲</span></div>
+                        <div class="mi-hero-label">Research &amp; Analysis</div>
+                        <h1>Market <em>Intelligence</em><br>Hub</h1>
+                        <p class="mi-hero-sub">Institutional-grade daily research on the Dar es Salaam Stock Exchange — equity analysis, macro commentary, and disciplined investment perspectives for serious East African investors.</p>
                     </div>
-                    <div>
-                        <div class="snapshot-label">TSI</div>
-                              <div class="snapshot-value" id="mi-tsi">9,201.10 <span style="color: #22c55e;">▲</span></div>
-                    </div>
-                    <div>
-                        <div class="snapshot-label">Turnover (TZS)</div>
-                              <div class="snapshot-value" id="mi-turnover" data-tzs-value="5250000000" data-format-type="bn">5.25 bn</div>
-                    </div>
-                    <div>
-                        <div class="snapshot-label">Top Gainers</div>
-                            <!-- GAINERS_START -->
-  <div class="snapshot-mover" id="mi-gainer">MCB <span style="color:#16A34A">+14.6%</span></div>
-  <div class="snapshot-mover" id="mi-gainer">PAL <span style="color:#16A34A">+3.3%</span></div>
-  <div class="snapshot-mover" id="mi-gainer">SWIS <span style="color:#16A34A">+2.7%</span></div>
-  <!-- GAINERS_END -->
-                    </div>
-                    <div>
-                        <div class="snapshot-label">Top Losers</div>
-                            <!-- LOSERS_START -->
-  <div class="snapshot-mover" id="mi-loser">TCCL <span style="color:#DC2626">-11.7%</span></div>
-  <div class="snapshot-mover" id="mi-loser">MBP <span style="color:#DC2626">-6.4%</span></div>
-  <div class="snapshot-mover" id="mi-loser">MKCB <span style="color:#DC2626">-3.7%</span></div>
-  <!-- LOSERS_END -->
+                    <div class="mi-hero-meta">
+                        <strong>7 Aug 2026</strong>
+                        Latest issue<br>published today
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Archive + Sidebar -->
-            <div style="display: grid; grid-template-columns: 1fr 280px; gap: 2rem;">
+        <!-- ─── MAIN BODY ─── -->
+        <section class="mi-body">
+            <div class="container">
+                <div class="mi-layout" style="max-width:1040px;margin:0 auto;">
 
-                <!-- Daily Wrap Archive -->
-                <div>
-                    <h3 style="margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--stone); font-size: 1.05rem; letter-spacing: 0.02em;">Daily DSE Wrap Archive</h3>
-
-                    <div style="display: flex; flex-direction: column; gap: 0;">
-                        <div style="border: 1px solid rgba(11,29,58,0.09); border-radius: 8px; overflow: hidden; background: #fff;">
-                            <div style="display: grid; grid-template-columns: 120px 1fr auto; align-items: center; gap: 1rem; padding: 1rem 1.25rem; border-bottom: 1px solid rgba(11,29,58,0.06);">
-                                <div style="font-size: 0.75rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;">7 Aug 2026</div>
-                                <div>
-                                    <div style="font-weight: 700; font-size: 0.9rem; color: var(--navy); margin-bottom: 0.25rem; line-height: 1.3;">A Steady Finish to the Week as Block Trades Continue</div>
-                                    <div style="font-size: 0.8rem; color: rgba(11,29,58,0.55); line-height: 1.5;">DSE closed positively with turnover above TZS 5bn. Block trades signal large investor repositioning...</div>
+                    <!-- Left Column -->
+                    <div>
+                        <!-- Snapshot Card -->
+                        <div class="mi-snapshot-card">
+                            <div class="mi-snapshot-hdr">
+                                <h2>Live DSE Snapshot</h2>
+                                <div style="display:flex;align-items:center;gap:0.75rem;">
+                                    <span class="live-badge">Live Feed</span>
+                                    <span style="font-size:0.75rem;color:rgba(251,247,240,0.4);">7 August 2026</span>
                                 </div>
-                                <a href="/dse-wrap-2026-08-07" style="font-size: 0.8rem; font-weight: 700; color: var(--gold); text-decoration: none; white-space: nowrap;">Read &rarr;</a>
+                            </div>
+                            <div class="snapshot-grid">
+                                <div>
+                                    <div class="snapshot-label" style="color:rgba(251,247,240,0.5);">DSEI</div>
+                                    <div class="snapshot-value" id="mi-dsei">4,195.20 <span style="color: #22c55e;">▲</span></div>
+                                </div>
+                                <div>
+                                    <div class="snapshot-label" style="color:rgba(251,247,240,0.5);">TSI</div>
+                                    <div class="snapshot-value" id="mi-tsi">9,201.10 <span style="color: #22c55e;">▲</span></div>
+                                </div>
+                                <div>
+                                    <div class="snapshot-label" style="color:rgba(251,247,240,0.5);">Turnover (TZS)</div>
+                                    <div class="snapshot-value" id="mi-turnover" data-tzs-value="5250000000" data-format-type="bn">5.25 bn</div>
+                                </div>
+                                <div>
+                                    <div class="snapshot-label" style="color:rgba(251,247,240,0.5);">Top Gainers</div>
+                                    <!-- GAINERS_START -->
+                                    <div class="snapshot-mover" id="mi-gainer">MCB <span style="color:#16A34A">+14.6%</span></div>
+                                    <div class="snapshot-mover" id="mi-gainer">PAL <span style="color:#16A34A">+3.3%</span></div>
+                                    <div class="snapshot-mover" id="mi-gainer">SWIS <span style="color:#16A34A">+2.7%</span></div>
+                                    <!-- GAINERS_END -->
+                                </div>
+                                <div>
+                                    <div class="snapshot-label" style="color:rgba(251,247,240,0.5);">Top Losers</div>
+                                    <!-- LOSERS_START -->
+                                    <div class="snapshot-mover" id="mi-loser">TCCL <span style="color:#DC2626">-11.7%</span></div>
+                                    <div class="snapshot-mover" id="mi-loser">MBP <span style="color:#DC2626">-6.4%</span></div>
+                                    <div class="snapshot-mover" id="mi-loser">MKCB <span style="color:#DC2626">-3.7%</span></div>
+                                    <!-- LOSERS_END -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Heatmap -->
+                        <div class="mi-heatmap-section" style="grid-column:auto;">
+                            <div class="mi-heatmap-header">
+                                <h3>DSE Market Heatmap</h3>
+                                <span class="live-badge">End of Day</span>
+                            </div>
+                            <div style="height: 300px; position: relative; width: 100%;">
+                                <canvas id="dseHeatmap"></canvas>
+                            </div>
+                            <p style="font-size: 0.75rem; color: rgba(251,247,240,0.4); margin-top: 0.75rem; margin-bottom: 0; font-style: italic;">Block size = relative Market Cap. Colour = daily % change (Green positive, Red negative).</p>
+                        </div>
+
+                        <!-- Archive -->
+                        <div>
+                            <div class="mi-archive-title">
+                                <span>Daily DSE Wrap Archive</span>
+                                <a href="/market-intelligence-archive" style="font-size:0.8rem;font-weight:600;color:var(--gold);text-decoration:none;">All Issues &rarr;</a>
+                            </div>
+                            <div class="archive-list">
+                                <a class="archive-row" href="/dse-wrap-2026-08-07">
+                                    <div class="archive-date">7 Aug<br>2026</div>
+                                    <div>
+                                        <div class="archive-badge badge-equity">Equities</div>
+                                        <div class="archive-content-title">A Steady Finish to the Week as Block Trades Continue</div>
+                                        <div class="archive-content-excerpt">DSE closed positively with turnover above TZS 5bn. Block trades signal large investor repositioning...</div>
+                                    </div>
+                                    <span class="archive-cta">Read &rarr;</span>
+                                </a>
+                                <a class="archive-row" href="/dse-wrap-2026-08-06">
+                                    <div class="archive-date">6 Aug<br>2026</div>
+                                    <div>
+                                        <div class="archive-badge badge-macro">Macro</div>
+                                        <div class="archive-content-title">BOT Rate Decision Ripples Through Bond Market</div>
+                                        <div class="archive-content-excerpt">The Bank of Tanzania held rates steady. We examine what this means for T-bond valuations and equity risk premium...</div>
+                                    </div>
+                                    <span class="archive-cta">Read &rarr;</span>
+                                </a>
+                                <a class="archive-row" href="/dse-wrap-2026-08-05">
+                                    <div class="archive-date">5 Aug<br>2026</div>
+                                    <div>
+                                        <div class="archive-badge badge-bonds">Bonds</div>
+                                        <div class="archive-content-title">Government 25-Year Bond Auction Results — Full Analysis</div>
+                                        <div class="archive-content-excerpt">The latest 25-year T-bond auction closed at a 14.2% yield. We break down the bid-to-cover ratio and what it signals...</div>
+                                    </div>
+                                    <span class="archive-cta">Read &rarr;</span>
+                                </a>
+                                <a class="archive-row" href="/dse-wrap-2026-08-04">
+                                    <div class="archive-date">4 Aug<br>2026</div>
+                                    <div>
+                                        <div class="archive-badge badge-equity">Equities</div>
+                                        <div class="archive-content-title">NMB &amp; CRDB Q2 Results Preview — Key Metrics to Watch</div>
+                                        <div class="archive-content-excerpt">Both banking giants report this week. We preview the key ROE, NPL, and loan growth metrics that matter most to long-term investors...</div>
+                                    </div>
+                                    <span class="archive-cta">Read &rarr;</span>
+                                </a>
+                                <a class="archive-row" href="/dse-wrap-2026-08-03">
+                                    <div class="archive-date">3 Aug<br>2026</div>
+                                    <div>
+                                        <div class="archive-badge badge-macro">Macro</div>
+                                        <div class="archive-content-title">Weekly Open: EAC Inflation Data and DSE Outlook</div>
+                                        <div class="archive-content-excerpt">Tanzania CPI came in at 3.1%, below consensus. We examine the implications for real bond yields across the curve...</div>
+                                    </div>
+                                    <span class="archive-cta">Read &rarr;</span>
+                                </a>
+                            </div>
+                            <div style="margin-top:1.5rem;text-align:center;">
+                                <a href="/market-intelligence-archive" class="btn btn-gold-solid">View Full Archive &rarr;</a>
                             </div>
                         </div>
                     </div>
 
-                    <div style="margin-top: 1.5rem; text-align: center;">
-                        <a href="/market-intelligence-archive" class="btn-gold-solid" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">View Full Archive &rarr;</a>
+                    <!-- Sidebar -->
+                    <div class="mi-sidebar">
+                        <div class="mi-sidebar-card">
+                            <h4>Quick Links</h4>
+                            <ul class="mi-sidebar-links">
+                                <li><a href="/current-prices">Current Prices <span>&rarr;</span></a></li>
+                                <li><a href="/bond-calculator">Bond Calculator <span>&rarr;</span></a></li>
+                                <li><a href="/compound-wealth">Wealth Modeler <span>&rarr;</span></a></li>
+                                <li><a href="/risk-profiler">Risk Profiler <span>&rarr;</span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mi-sidebar-card dark">
+                            <h4>Analyst Note</h4>
+                            <div class="mi-analyst-note">
+                                <p>"The DSE continues to offer compelling structural value. With DSEI P/E ratios trading at a significant discount to global emerging market peers, patient long-term investors are well-positioned."</p>
+                            </div>
+                            <p style="font-size:0.72rem;color:rgba(251,247,240,0.35);margin-top:1rem;margin-bottom:1.25rem;">— Amana Capital Research, August 2026</p>
+                            <a href="/contact" class="btn btn-gold-solid" style="width:100%;text-align:center;display:block;font-size:0.85rem;">Speak to an Analyst &rarr;</a>
+                        </div>
+
+                        <div class="mi-sidebar-card">
+                            <h4 style="color:var(--navy);">New to the DSE?</h4>
+                            <p style="font-size:0.83rem;color:rgba(11,29,58,0.6);line-height:1.6;margin-bottom:1rem;">Build your foundational knowledge with our free investor education curriculum. From equities to bonds — we cover it all.</p>
+                            <a href="/education" class="btn btn-gold-solid" style="width:100%;text-align:center;display:block;font-size:0.85rem;">Start Learning &rarr;</a>
+                        </div>
+
+                        <div class="mi-sidebar-card" style="background:var(--cream);border:1px solid rgba(11,29,58,0.1);">
+                            <h4 style="color:var(--navy);">Research Coverage</h4>
+                            <div style="display:flex;flex-direction:column;gap:0.5rem;font-size:0.82rem;">
+                                <div style="display:flex;justify-content:space-between;color:rgba(11,29,58,0.7);">
+                                    <span>DSE Equities</span><span style="color:var(--gold);font-weight:700;">28 stocks</span>
+                                </div>
+                                <div style="display:flex;justify-content:space-between;color:rgba(11,29,58,0.7);">
+                                    <span>Treasury Bonds</span><span style="color:var(--gold);font-weight:700;">Full curve</span>
+                                </div>
+                                <div style="display:flex;justify-content:space-between;color:rgba(11,29,58,0.7);">
+                                    <span>EAC Markets</span><span style="color:var(--gold);font-weight:700;">NSE, USE, RSE</span>
+                                </div>
+                                <div style="display:flex;justify-content:space-between;color:rgba(11,29,58,0.7);">
+                                    <span>Daily Wraps</span><span style="color:var(--gold);font-weight:700;">Every trading day</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Sidebar -->
-                <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-
-                    <div class="card" style="padding: 1.25rem; border-top: 2px solid var(--navy);">
-                        <h4 style="margin-bottom: 0.75rem; font-size: 0.95rem;">Quick Links</h4>
-                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
-                            <li><a href="/current-prices" style="display: flex; justify-content: space-between; align-items: center; padding: 0.4rem 0.6rem; background: var(--cream); font-weight: 600; font-size: 0.88rem; border-radius: 4px;">Current Prices <span>&rarr;</span></a></li>
-                            <li><a href="/bond-calculator" style="display: flex; justify-content: space-between; align-items: center; padding: 0.4rem 0.6rem; background: var(--cream); font-weight: 600; font-size: 0.88rem; border-radius: 4px;">Bond Calculator <span>&rarr;</span></a></li>
-                            <li><a href="/compound-wealth" style="display: flex; justify-content: space-between; align-items: center; padding: 0.4rem 0.6rem; background: var(--cream); font-weight: 600; font-size: 0.88rem; border-radius: 4px;">Wealth Modeler <span>&rarr;</span></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="card" style="padding: 1.25rem; background: var(--navy); color: var(--cream); border-top: 2px solid var(--gold);">
-                        <h4 style="color: var(--gold); margin-bottom: 0.4rem; font-size: 0.95rem;">New to the DSE?</h4>
-                        <p style="font-size: 0.82rem; color: rgba(251,247,240,0.8); margin-bottom: 1rem; line-height: 1.5;">Build your foundational knowledge with our free investor curriculum.</p>
-                        <a href="/education" class="btn btn-gold-solid" style="width: 100%; display: block; text-align: center; font-size: 0.88rem;">Start Learning</a>
-                    </div>
-
-                </div>
-
             </div>
-        </div>
+        </section>
+
+        <!-- ─── SUBSCRIBE ─── -->
+        <section class="mi-subscribe">
+            <div class="container">
+                <div class="mi-subscribe-inner">
+                    <div>
+                        <div style="color:var(--gold);font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:0.6rem;">Intelligence Briefing</div>
+                        <h2>Never Miss a<br><em>Market Signal</em></h2>
+                        <p>Daily DSE wraps and macroeconomic briefings delivered to your inbox every trading day. Institutional quality. Completely free.</p>
+                    </div>
+                    <form class="mi-sub-form" action="https://formspree.io/f/mvzjdqnv" method="POST">
+                        <input type="email" name="email" placeholder="Enter your institutional email" required>
+                        <button type="submit">Subscribe to Daily Intelligence</button>
+                        <p style="font-size:0.7rem;color:rgba(251,247,240,0.25);margin:0;">No spam. Unsubscribe at any time.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-                                                                
-              <!-- Interactive DSE Market Heatmap -->
-              <div class="card" style="margin-bottom: 2.5rem; position: relative; z-index: 10; border-top: 2px solid var(--gold);">
-                  <h3 style="margin-top: 0; margin-bottom: 1rem; font-size: 1.15rem; color: var(--cream);">DSE Market Heatmap</h3>
-                  <div style="height: 350px; position: relative; width: 100%;">
-                      <canvas id="dseHeatmap"></canvas>
-                  </div>
-                  <p style="font-size: 0.8rem; color: var(--mist); margin-top: 1rem; margin-bottom: 0; font-style: italic;">Block size represents relative Market Capitalization. Color represents daily % change (Green = Positive, Red = Negative).</p>
-              </div>
-              
-              <section class="lead-gen-section" style="background: var(--navy); padding: 1.5rem 0; border-top: 1px solid rgba(200, 150, 46, 0.1);">
-        <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <h2 style="color: var(--gold); margin-bottom: 0.5rem; font-family: var(--heading-font); font-size: 1.25rem;">Subscribe to Institutional Intelligence</h2>
-            <p style="color: var(--mist); margin-bottom: 1rem; font-size: 0.85rem;">Receive daily DSE wraps and macroeconomic briefings in your inbox.</p>
-            <form class="lead-gen-form" action="#" method="POST" style="display: flex; gap: 0.5rem; width: 100%; max-width: 500px; flex-wrap: wrap;">
-                <input type="email" placeholder="Enter your business email" required style="flex: 1; min-width: 250px; padding: 0.8rem 1.25rem; border-radius: 4px; border: 1px solid rgba(200, 150, 46, 0.3); background: rgba(255, 255, 255, 0.05); color: var(--cream); outline: none; font-family: var(--body-font); background: var(--cream); color: var(--navy); border: none;">
-                <button type="submit" class="btn-gold-solid" style="padding: 0.8rem 1.5rem; border: none; cursor: pointer;">Subscribe</button>
-            </form>
-        </div>
-    </section>
-    
-    <footer class="footer" style="background-color: var(--navy); padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
-        <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.8rem;">
-            <div style="color: var(--gold); font-weight: bold; letter-spacing: 0.05em;">AMANA CAPITAL EAST AFRICA</div>
-            <div style="display: flex; gap: 1.5rem;">
-                <a href="/market-intelligence" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Research</a>
-                <a href="/bond-calculator" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Bond Calc</a>
-                <a href="/compound-wealth" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Wealth Modeler</a>
-                <a href="/education" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Education</a>
-                <a href="/about" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Governance</a>
-                <a href="/contact" style="color: var(--mist); text-decoration: none; transition: color 0.2s;">Contact</a>
+    <footer class="footer" style="background-color: var(--navy); padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; font-size: 0.8rem;">
+            <div>
+                <div style="color: var(--gold); font-weight: 800; letter-spacing: 0.1em; font-size: 0.85rem; margin-bottom: 0.3rem;">AMANA CAPITAL EAST AFRICA</div>
+                <div style="color: rgba(251,247,240,0.3); font-size: 0.72rem;">Dar es Salaam · Tanzania</div>
             </div>
-            <div style="color: var(--mist); opacity: 0.7;">&copy; 2026 Amana Capital East Africa.</div>
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                <a href="/market-intelligence" style="color: var(--mist); text-decoration: none;">Research</a>
+                <a href="/bond-calculator" style="color: var(--mist); text-decoration: none;">Bond Calc</a>
+                <a href="/compound-wealth" style="color: var(--mist); text-decoration: none;">Wealth Modeler</a>
+                <a href="/education" style="color: var(--mist); text-decoration: none;">Education</a>
+                <a href="/about" style="color: var(--mist); text-decoration: none;">Governance</a>
+                <a href="/contact" style="color: var(--mist); text-decoration: none;">Contact</a>
+            </div>
+            <div style="color: var(--mist); opacity: 0.4; font-size:0.75rem;">&copy; 2026 Amana Capital East Africa.</div>
         </div>
     </footer>
-    
+
     <script src="https://unpkg.com/swup@4"></script>
     <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
     <script src="script.min.js?v=20260810h" defer></script>
-    <script src="/js/theme-toggle.js" defer></script>
 
-    <!-- Heatmap Scripts -->
+    <!-- Heatmap -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap"></script>
     <script>
@@ -212,7 +660,6 @@
                     { symbol: 'TCCL', marketCap: 120, change: -1.2 },
                     { symbol: 'SWIS', marketCap: 100, change: 0.00 },
                 ];
-
                 new Chart(ctx, {
                     type: 'treemap',
                     data: {
@@ -225,20 +672,16 @@
                             backgroundColor: (ctx) => {
                                 if (ctx.type !== 'data') return 'transparent';
                                 const value = ctx.raw._data.change;
-                                if (value > 1.5) return 'rgba(22, 163, 74, 1)'; // Strong Green
-                                if (value > 0) return 'rgba(22, 163, 74, 0.7)'; // Light Green
-                                if (value < -1.5) return 'rgba(220, 38, 38, 1)'; // Strong Red
-                                if (value < 0) return 'rgba(220, 38, 38, 0.7)'; // Light Red
-                                return 'rgba(100, 116, 139, 0.5)'; // Neutral Slate
+                                if (value > 1.5) return 'rgba(22,163,74,1)';
+                                if (value > 0) return 'rgba(22,163,74,0.7)';
+                                if (value < -1.5) return 'rgba(220,38,38,1)';
+                                if (value < 0) return 'rgba(220,38,38,0.7)';
+                                return 'rgba(100,116,139,0.5)';
                             },
                             labels: {
                                 display: true,
                                 color: '#ffffff',
-                                font: {
-                                    family: "'Inter', sans-serif",
-                                    size: 14,
-                                    weight: 'bold'
-                                },
+                                font: { family: "'Plus Jakarta Sans', sans-serif", size: 13, weight: 'bold' },
                                 formatter: (ctx) => {
                                     const item = ctx.raw._data;
                                     const sign = item.change > 0 ? '+' : '';
@@ -255,11 +698,8 @@
                                 callbacks: {
                                     title: (items) => items[0].raw._data.symbol,
                                     label: (item) => {
-                                        const data = item.raw._data;
-                                        return [
-                                            `Change: ${data.change > 0 ? '+' : ''}${data.change}%`,
-                                            `Market Cap Weight: ${data.marketCap}`
-                                        ];
+                                        const d = item.raw._data;
+                                        return [`Change: ${d.change > 0 ? '+' : ''}${d.change}%`, `Market Cap Weight: ${d.marketCap}`];
                                     }
                                 }
                             }
@@ -269,26 +709,5 @@
             }
         });
     </script>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
