@@ -1550,7 +1550,7 @@ html.is-animating .transition-fade {
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
-  width: 800px;
+  width: 600px;
   background: var(--navy);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius-md);
