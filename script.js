@@ -4,9 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize SPA Router (BBC-Style Instant Swap + Progress Bar)
     const swup = new Swup({
         animationSelector: '[class*="transition-"]',
-        cache: true,
+        cache: false,   // Always fetch fresh HTML — prevents FOUC on pages with inline styles
         plugins: [new SwupProgressPlugin({ delay: 50 })]
     });
+
 
     // 2. Initialize modules on first load
     initMobileMenu();

@@ -10,7 +10,7 @@
     <title>Investment Risk Profiler | Amana Capital East Africa</title>
     <meta name="description" content="Discover your optimal DSE investment strategy. Answer 7 institutional-grade questions to receive a personalised portfolio allocation across Tanzanian equities, bonds, and money markets.">
     <link rel="canonical" href="https://www.amana-capital-ea.co.tz/risk-profiler" />
-    <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="style.min.css?v=20260810h">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,7 +22,34 @@
     <meta property="og:description" content="Institutional-grade investment risk profiling for Tanzanian and diaspora investors." />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <style>
+    
+</head>
+<body class="rp-page">
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="brand-link">
+                <svg viewBox="0 0 32 44" class="brand-icon" aria-hidden="true"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"/><rect x="21" y="0" width="8" height="44" fill="currentColor"/><rect x="0" y="19" width="21" height="4" fill="currentColor"/></svg>
+                <div class="brand-text">
+                    <div class="brand-title">AMANA CAPITAL</div>
+                    <div class="brand-sub">EAST AFRICA</div>
+                </div>
+            </a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/market-intelligence">Market Intelligence</a></li>
+                <li><a href="/education">Investor Education</a></li>
+                <li><a href="/bond-calculator">Bond Calculator</a></li>
+                <li><a href="/risk-profiler" class="active">Risk Profiler</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="swup" class="transition-fade">
+<style>
         /* ── Page Base ── */
         .rp-page { background: var(--cream); }
 
@@ -554,32 +581,7 @@
             line-height: 1.6;
         }
     </style>
-</head>
-<body class="rp-page">
 
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="/" class="brand-link">
-                <svg viewBox="0 0 32 44" class="brand-icon" aria-hidden="true"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"/><rect x="21" y="0" width="8" height="44" fill="currentColor"/><rect x="0" y="19" width="21" height="4" fill="currentColor"/></svg>
-                <div class="brand-text">
-                    <div class="brand-title">AMANA CAPITAL</div>
-                    <div class="brand-sub">EAST AFRICA</div>
-                </div>
-            </a>
-            <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">&#9776;</button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/market-intelligence">Market Intelligence</a></li>
-                <li><a href="/education">Investor Education</a></li>
-                <li><a href="/bond-calculator">Bond Calculator</a></li>
-                <li><a href="/risk-profiler" class="active">Risk Profiler</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main id="swup" class="transition-fade">
 
         <!-- HERO -->
         <div class="rp-hero">
@@ -947,7 +949,7 @@
 
     <script src="https://unpkg.com/swup@4"></script>
     <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
-    <script src="script.min.js?v=20260810g" defer></script>
+    <script src="script.min.js?v=20260810h" defer></script>
 
     
 
