@@ -149,11 +149,173 @@
             <div style="color: var(--mist); opacity: 0.7;">&copy; 2026 Amana Capital East Africa.</div>
         </div>
     </footer>
-    
-    <script src="https://unpkg.com/swup@4"></script>
-    <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
-    <script src="script.min.js" defer></script>
-    
+
+    <script>
+    // Compound Wealth Calculator — self-contained, runs independently of script.min.js
+    (function() {
+        function formatTZS(val) {
+            return val.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + ' TZS';
+        }
+
+        var cwChartInst = null;
+
+        function runCalc() {
+            var cwInitial = document.getElementById('cw-initial');
+            if (!cwInitial) return;
+
+            var cwMonthly  = document.getElementById('cw-monthly');
+            var cwRate     = document.getElementById('cw-rate');
+            var cwYears    = document.getElementById('cw-years');
+
+            var cwInitialVal  = document.getElementById('cw-initial-val');
+            var cwMonthlyVal  = document.getElementById('cw-monthly-val');
+            var cwRateVal     = document.getElementById('cw-rate-val');
+            var cwYearsVal    = document.getElementById('cw-years-val');
+            var cwTotalWealth = document.getElementById('cw-total-wealth');
+            var cwTotalPrincipal = document.getElementById('cw-total-principal');
+            var cwTotalInterest  = document.getElementById('cw-total-interest');
+
+            var initial = parseFloat(cwInitial.value);
+            var monthly = parseFloat(cwMonthly.value);
+            var rate    = parseFloat(cwRate.value) / 100;
+            var years   = parseInt(cwYears.value);
+
+            // Update slider labels
+            cwInitialVal.innerText = initial.toLocaleString() + ' TZS';
+            cwMonthlyVal.innerText = monthly.toLocaleString() + ' TZS';
+            cwRateVal.innerText    = cwRate.value + '%';
+            cwYearsVal.innerText   = years + (years === 1 ? ' Year' : ' Years');
+
+            // Compute compound growth year-by-year
+            var labels        = [];
+            var principalData = [];
+            var interestData  = [];
+            var currentPrincipal = initial;
+            var currentTotal     = initial;
+
+            for (var y = 0; y <= years; y++) {
+                labels.push('Year ' + y);
+                principalData.push(Math.round(currentPrincipal));
+                interestData.push(Math.round(currentTotal - currentPrincipal));
+                if (y < years) {
+                    for (var m = 0; m < 12; m++) {
+                        currentTotal     = currentTotal * (1 + rate / 12) + monthly;
+                        currentPrincipal += monthly;
+                    }
+                }
+            }
+
+            var finalPrincipal = principalData[years];
+            var finalInterest  = interestData[years];
+            var finalTotal     = finalPrincipal + finalInterest;
+
+            // Write results
+            cwTotalWealth.innerText    = formatTZS(finalTotal);
+            cwTotalPrincipal.innerText = formatTZS(finalPrincipal);
+            cwTotalInterest.innerText  = formatTZS(finalInterest);
+
+            // Render / update chart
+            var canvas = document.getElementById('cw-chart');
+            if (!canvas) return;
+            var ctx = canvas.getContext('2d');
+
+            if (typeof Chart === 'undefined') return; // Chart.js not loaded yet
+
+            if (cwChartInst) {
+                cwChartInst.data.labels = labels;
+                cwChartInst.data.datasets[0].data = principalData;
+                cwChartInst.data.datasets[1].data = interestData;
+                cwChartInst.update();
+            } else {
+                cwChartInst = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [
+                            {
+                                label: 'Total Principal',
+                                data: principalData,
+                                borderColor: '#0b1d3a',
+                                backgroundColor: 'rgba(11,29,58,0.75)',
+                                fill: true, tension: 0.4,
+                                pointRadius: 0, pointHoverRadius: 6
+                            },
+                            {
+                                label: 'Compound Interest',
+                                data: interestData,
+                                borderColor: '#c8962e',
+                                backgroundColor: 'rgba(200,150,46,0.75)',
+                                fill: true, tension: 0.4,
+                                pointRadius: 0, pointHoverRadius: 6
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: { mode: 'index', intersect: false },
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(ctx2) {
+                                        var lbl = ctx2.dataset.label || '';
+                                        if (lbl) lbl += ': ';
+                                        lbl += ctx2.parsed.y.toLocaleString('en-US', {maximumFractionDigits:0}) + ' TZS';
+                                        return lbl;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: { grid: { display: false } },
+                            y: {
+                                stacked: true,
+                                beginAtZero: true,
+                                ticks: {
+                                    callback: function(v) {
+                                        if (v >= 1e9) return (v/1e9).toFixed(1)+'bn';
+                                        if (v >= 1e6) return (v/1e6).toFixed(1)+'m';
+                                        return v.toLocaleString();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        function initInlineCW() {
+            var cwInitial = document.getElementById('cw-initial');
+            if (!cwInitial) return;
+
+            // Destroy previous chart on re-init (Swup navigation)
+            if (cwChartInst) { cwChartInst.destroy(); cwChartInst = null; }
+
+            // Attach slider listeners
+            ['cw-initial','cw-monthly','cw-rate','cw-years'].forEach(function(id) {
+                var el = document.getElementById(id);
+                if (el) {
+                    var fresh = el.cloneNode(true); // remove old listeners
+                    el.parentNode.replaceChild(fresh, el);
+                    fresh.addEventListener('input', runCalc);
+                }
+            });
+
+            // Run immediately to populate results on load
+            runCalc();
+        }
+
+        // Run on first hard load
+        document.addEventListener('DOMContentLoaded', initInlineCW);
+
+        // Re-run on every Swup navigation to this page
+        document.addEventListener('swup:page:view', initInlineCW);
+        document.addEventListener('swup:contentReplaced', initInlineCW);
+    })();
+    </script>
 </body>
 </html>
+
 
