@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCompoundWealth();
     if (typeof window.initContactForm === 'function') window.initContactForm();
     if (typeof window.initRiskProfiler === 'function') window.initRiskProfiler();
+    if (typeof window.initDSEHeatmap === 'function') window.initDSEHeatmap();
 
     // Force close mobile menu on any link click (Swup transition start)
     swup.hooks.on('visit:start', () => {
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         initCompoundWealth();
         if (typeof window.initContactForm === 'function') window.initContactForm();
         if (typeof window.initRiskProfiler === 'function') window.initRiskProfiler();
-        
+        if (typeof window.initDSEHeatmap === 'function') window.initDSEHeatmap();
         
         // Re-initialize Weglot if present
         if (typeof Weglot !== 'undefined') {

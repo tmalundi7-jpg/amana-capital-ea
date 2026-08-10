@@ -10,6 +10,9 @@
     <meta name="description" content="Read our daily Dar es Salaam Stock Exchange (DSE) wrap. Get institutional-grade market intelligence, top movers, and equity research from Amana Capital East Africa.">
     <link rel="canonical" href="https://www.amana-capital-ea.co.tz/market-intelligence" />
     <link rel="stylesheet" href="style.min.css?v=20260810h">
+    <!-- Chart.js in head so it's available immediately -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -316,11 +319,11 @@
         background: rgba(200,150,46,0.06);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
-        padding: 1rem;
-        margin-top: 0.75rem;
+        padding: 0.75rem 0.9rem;
+        margin-top: 0.6rem;
     }
     .mi-analyst-note p {
-        font-size: 0.83rem;
+        font-size: 0.78rem;
         color: rgba(251,247,240,0.75);
         line-height: 1.6;
         margin: 0;
@@ -425,7 +428,7 @@
                     </div>
                     <div class="mi-hero-meta">
                         <strong>7 Aug 2026</strong>
-                        Latest issue<br>published today
+                        Latest Report<br>issued today
                     </div>
                 </div>
             </div>
@@ -444,24 +447,24 @@
                                 <h2>Live DSE Snapshot</h2>
                                 <div style="display:flex;align-items:center;gap:0.75rem;">
                                     <span class="live-badge">Live Feed</span>
-                                    <span style="font-size:0.75rem;color:rgba(251,247,240,0.4);">7 August 2026</span>
+                                    <span style="font-size:0.78rem;color:rgba(251,247,240,0.7);font-weight:600;">7 August 2026</span>
                                 </div>
                             </div>
                             <div class="snapshot-grid">
                                 <div>
-                                    <div class="snapshot-label" style="color:rgba(251,247,240,0.5);">DSEI</div>
+                                    <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">DSEI</div>
                                     <div class="snapshot-value" id="mi-dsei">4,195.20 <span style="color: #22c55e;">▲</span></div>
                                 </div>
                                 <div>
-                                    <div class="snapshot-label" style="color:rgba(251,247,240,0.5);">TSI</div>
+                                    <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">TSI</div>
                                     <div class="snapshot-value" id="mi-tsi">9,201.10 <span style="color: #22c55e;">▲</span></div>
                                 </div>
                                 <div>
-                                    <div class="snapshot-label" style="color:rgba(251,247,240,0.5);">Turnover (TZS)</div>
+                                    <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">Turnover (TZS)</div>
                                     <div class="snapshot-value" id="mi-turnover" data-tzs-value="5250000000" data-format-type="bn">5.25 bn</div>
                                 </div>
                                 <div>
-                                    <div class="snapshot-label" style="color:rgba(251,247,240,0.5);">Top Gainers</div>
+                                    <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">Top Gainers</div>
                                     <!-- GAINERS_START -->
                                     <div class="snapshot-mover" id="mi-gainer">MCB <span style="color:#16A34A">+14.6%</span></div>
                                     <div class="snapshot-mover" id="mi-gainer">PAL <span style="color:#16A34A">+3.3%</span></div>
@@ -469,7 +472,7 @@
                                     <!-- GAINERS_END -->
                                 </div>
                                 <div>
-                                    <div class="snapshot-label" style="color:rgba(251,247,240,0.5);">Top Losers</div>
+                                    <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">Top Losers</div>
                                     <!-- LOSERS_START -->
                                     <div class="snapshot-mover" id="mi-loser">TCCL <span style="color:#DC2626">-11.7%</span></div>
                                     <div class="snapshot-mover" id="mi-loser">MBP <span style="color:#DC2626">-6.4%</span></div>
@@ -485,7 +488,7 @@
                                 <h3>DSE Market Heatmap</h3>
                                 <span class="live-badge">End of Day</span>
                             </div>
-                            <div style="height: 300px; position: relative; width: 100%;">
+                            <div style="height: 220px; position: relative; width: 100%;">
                                 <canvas id="dseHeatmap"></canvas>
                             </div>
                             <p style="font-size: 0.75rem; color: rgba(251,247,240,0.4); margin-top: 0.75rem; margin-bottom: 0; font-style: italic;">Block size = relative Market Cap. Colour = daily % change (Green positive, Red negative).</p>
@@ -495,7 +498,7 @@
                         <div>
                             <div class="mi-archive-title">
                                 <span>Daily DSE Wrap Archive</span>
-                                <a href="/market-intelligence-archive" style="font-size:0.8rem;font-weight:600;color:var(--gold);text-decoration:none;">All Issues &rarr;</a>
+                                <a href="/market-intelligence-archive" style="font-size:0.8rem;font-weight:600;color:var(--gold);text-decoration:none;">Research Archive &rarr;</a>
                             </div>
                             <div class="archive-list">
                                 <a class="archive-row" href="/dse-wrap-2026-08-07">
@@ -507,45 +510,10 @@
                                     </div>
                                     <span class="archive-cta">Read &rarr;</span>
                                 </a>
-                                <a class="archive-row" href="/dse-wrap-2026-08-06">
-                                    <div class="archive-date">6 Aug<br>2026</div>
-                                    <div>
-                                        <div class="archive-badge badge-macro">Macro</div>
-                                        <div class="archive-content-title">BOT Rate Decision Ripples Through Bond Market</div>
-                                        <div class="archive-content-excerpt">The Bank of Tanzania held rates steady. We examine what this means for T-bond valuations and equity risk premium...</div>
-                                    </div>
-                                    <span class="archive-cta">Read &rarr;</span>
-                                </a>
-                                <a class="archive-row" href="/dse-wrap-2026-08-05">
-                                    <div class="archive-date">5 Aug<br>2026</div>
-                                    <div>
-                                        <div class="archive-badge badge-bonds">Bonds</div>
-                                        <div class="archive-content-title">Government 25-Year Bond Auction Results — Full Analysis</div>
-                                        <div class="archive-content-excerpt">The latest 25-year T-bond auction closed at a 14.2% yield. We break down the bid-to-cover ratio and what it signals...</div>
-                                    </div>
-                                    <span class="archive-cta">Read &rarr;</span>
-                                </a>
-                                <a class="archive-row" href="/dse-wrap-2026-08-04">
-                                    <div class="archive-date">4 Aug<br>2026</div>
-                                    <div>
-                                        <div class="archive-badge badge-equity">Equities</div>
-                                        <div class="archive-content-title">NMB &amp; CRDB Q2 Results Preview — Key Metrics to Watch</div>
-                                        <div class="archive-content-excerpt">Both banking giants report this week. We preview the key ROE, NPL, and loan growth metrics that matter most to long-term investors...</div>
-                                    </div>
-                                    <span class="archive-cta">Read &rarr;</span>
-                                </a>
-                                <a class="archive-row" href="/dse-wrap-2026-08-03">
-                                    <div class="archive-date">3 Aug<br>2026</div>
-                                    <div>
-                                        <div class="archive-badge badge-macro">Macro</div>
-                                        <div class="archive-content-title">Weekly Open: EAC Inflation Data and DSE Outlook</div>
-                                        <div class="archive-content-excerpt">Tanzania CPI came in at 3.1%, below consensus. We examine the implications for real bond yields across the curve...</div>
-                                    </div>
-                                    <span class="archive-cta">Read &rarr;</span>
-                                </a>
+
                             </div>
                             <div style="margin-top:1.5rem;text-align:center;">
-                                <a href="/market-intelligence-archive" class="btn btn-gold-solid">View Full Archive &rarr;</a>
+                                <a href="/market-intelligence-archive" class="btn btn-gold-solid">View Research Archive &rarr;</a>
                             </div>
                         </div>
                     </div>
@@ -562,13 +530,13 @@
                             </ul>
                         </div>
 
-                        <div class="mi-sidebar-card dark">
-                            <h4>Analyst Note</h4>
+                        <div class="mi-sidebar-card dark" style="padding:1.25rem;">
+                            <h4 style="font-size:0.9rem;margin-bottom:0.6rem;">Analyst Commentary</h4>
                             <div class="mi-analyst-note">
-                                <p>"The DSE continues to offer compelling structural value. With DSEI P/E ratios trading at a significant discount to global emerging market peers, patient long-term investors are well-positioned."</p>
+                                <p>"The DSE continues to offer compelling structural value — patient long-term investors remain well-positioned relative to global EM peers."</p>
                             </div>
-                            <p style="font-size:0.72rem;color:rgba(251,247,240,0.35);margin-top:1rem;margin-bottom:1.25rem;">— Amana Capital Research, August 2026</p>
-                            <a href="/contact" class="btn btn-gold-solid" style="width:100%;text-align:center;display:block;font-size:0.85rem;">Speak to an Analyst &rarr;</a>
+                            <p style="font-size:0.68rem;color:rgba(251,247,240,0.35);margin-top:0.6rem;margin-bottom:0.9rem;">— Amana Capital Research, August 2026</p>
+                            <a href="/contact" class="btn btn-gold-solid" style="width:100%;text-align:center;display:block;font-size:0.82rem;">Speak to an Analyst &rarr;</a>
                         </div>
 
                         <div class="mi-sidebar-card">
@@ -577,19 +545,19 @@
                             <a href="/education" class="btn btn-gold-solid" style="width:100%;text-align:center;display:block;font-size:0.85rem;">Start Learning &rarr;</a>
                         </div>
 
-                        <div class="mi-sidebar-card" style="background:var(--cream);border:1px solid rgba(11,29,58,0.1);">
-                            <h4 style="color:var(--navy);">Research Coverage</h4>
+                        <div class="mi-sidebar-card" style="background:var(--navy);border:1px solid rgba(200,150,46,0.2);border-top:3px solid var(--gold);">
+                            <h4 style="color:var(--gold);">Research Coverage</h4>
                             <div style="display:flex;flex-direction:column;gap:0.5rem;font-size:0.82rem;">
-                                <div style="display:flex;justify-content:space-between;color:rgba(11,29,58,0.7);">
+                                <div style="display:flex;justify-content:space-between;color:rgba(251,247,240,0.75);">
                                     <span>DSE Equities</span><span style="color:var(--gold);font-weight:700;">28 stocks</span>
                                 </div>
-                                <div style="display:flex;justify-content:space-between;color:rgba(11,29,58,0.7);">
+                                <div style="display:flex;justify-content:space-between;color:rgba(251,247,240,0.75);">
                                     <span>Treasury Bonds</span><span style="color:var(--gold);font-weight:700;">Full curve</span>
                                 </div>
-                                <div style="display:flex;justify-content:space-between;color:rgba(11,29,58,0.7);">
+                                <div style="display:flex;justify-content:space-between;color:rgba(251,247,240,0.75);">
                                     <span>EAC Markets</span><span style="color:var(--gold);font-weight:700;">NSE, USE, RSE</span>
                                 </div>
-                                <div style="display:flex;justify-content:space-between;color:rgba(11,29,58,0.7);">
+                                <div style="display:flex;justify-content:space-between;color:rgba(251,247,240,0.75);">
                                     <span>Daily Wraps</span><span style="color:var(--gold);font-weight:700;">Every trading day</span>
                                 </div>
                             </div>
@@ -641,73 +609,65 @@
     <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
     <script src="script.min.js?v=20260810h" defer></script>
 
-    <!-- Heatmap -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap"></script>
+    <!-- Heatmap init: fires on both direct load and Swup navigation -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const ctx = document.getElementById('dseHeatmap');
-            if (ctx && typeof Chart !== 'undefined' && window['chartjs-chart-treemap']) {
-                const data = [
-                    { symbol: 'TBL', marketCap: 3200, change: 0.00 },
-                    { symbol: 'NMB', marketCap: 2675, change: -0.93 },
-                    { symbol: 'CRDB', marketCap: 1515, change: 1.75 },
-                    { symbol: 'VODA', marketCap: 1200, change: 2.67 },
-                    { symbol: 'TPCC', marketCap: 900, change: -0.47 },
-                    { symbol: 'TWIGA', marketCap: 800, change: 0.00 },
-                    { symbol: 'TICL', marketCap: 250, change: 3.45 },
-                    { symbol: 'DSE', marketCap: 150, change: 0.88 },
-                    { symbol: 'TCCL', marketCap: 120, change: -1.2 },
-                    { symbol: 'SWIS', marketCap: 100, change: 0.00 },
-                ];
-                new Chart(ctx, {
-                    type: 'treemap',
-                    data: {
-                        datasets: [{
-                            tree: data,
-                            key: 'marketCap',
-                            groups: ['symbol'],
-                            spacing: 2,
-                            borderWidth: 0,
-                            backgroundColor: (ctx) => {
-                                if (ctx.type !== 'data') return 'transparent';
-                                const value = ctx.raw._data.change;
-                                if (value > 1.5) return 'rgba(22,163,74,1)';
-                                if (value > 0) return 'rgba(22,163,74,0.7)';
-                                if (value < -1.5) return 'rgba(220,38,38,1)';
-                                if (value < 0) return 'rgba(220,38,38,0.7)';
-                                return 'rgba(100,116,139,0.5)';
-                            },
-                            labels: {
-                                display: true,
-                                color: '#ffffff',
-                                font: { family: "'Plus Jakarta Sans', sans-serif", size: 13, weight: 'bold' },
-                                formatter: (ctx) => {
-                                    const item = ctx.raw._data;
-                                    const sign = item.change > 0 ? '+' : '';
-                                    return [item.symbol, sign + item.change.toFixed(2) + '%'];
-                                }
-                            }
-                        }]
-                    },
-                    options: {
-                        maintainAspectRatio: false,
-                        plugins: {
-                            legend: { display: false },
-                            tooltip: {
-                                callbacks: {
-                                    title: (items) => items[0].raw._data.symbol,
-                                    label: (item) => {
-                                        const d = item.raw._data;
-                                        return [`Change: ${d.change > 0 ? '+' : ''}${d.change}%`, `Market Cap Weight: ${d.marketCap}`];
-                                    }
-                                }
-                            }
-                        }
+    window.initDSEHeatmap = function() {
+        var canvas = document.getElementById('dseHeatmap');
+        if (!canvas) return;
+        if (typeof Chart === 'undefined' || !window['chartjs-chart-treemap']) {
+            setTimeout(window.initDSEHeatmap, 300); return;
+        }
+        // Destroy existing instance if any
+        var existing = Chart.getChart(canvas);
+        if (existing) existing.destroy();
+        var data = [
+            { symbol: 'TBL', marketCap: 3200, change: 0.00 },
+            { symbol: 'NMB', marketCap: 2675, change: -0.93 },
+            { symbol: 'CRDB', marketCap: 1515, change: 1.75 },
+            { symbol: 'VODA', marketCap: 1200, change: 2.67 },
+            { symbol: 'TPCC', marketCap: 900, change: -0.47 },
+            { symbol: 'TWIGA', marketCap: 800, change: 0.00 },
+            { symbol: 'TICL', marketCap: 250, change: 3.45 },
+            { symbol: 'DSE', marketCap: 150, change: 0.88 },
+            { symbol: 'TCCL', marketCap: 120, change: -1.2 },
+            { symbol: 'SWIS', marketCap: 100, change: 0.00 }
+        ];
+        new Chart(canvas, {
+            type: 'treemap',
+            data: { datasets: [{
+                tree: data, key: 'marketCap', groups: ['symbol'], spacing: 2, borderWidth: 0,
+                backgroundColor: function(c) {
+                    if (c.type !== 'data') return 'transparent';
+                    var v = c.raw._data.change;
+                    if (v > 1.5) return 'rgba(22,163,74,1)';
+                    if (v > 0) return 'rgba(22,163,74,0.75)';
+                    if (v < -1.5) return 'rgba(220,38,38,1)';
+                    if (v < 0) return 'rgba(220,38,38,0.75)';
+                    return 'rgba(100,116,139,0.55)';
+                },
+                labels: { display: true, color: '#ffffff',
+                    font: { family: "'Plus Jakarta Sans', sans-serif", size: 12, weight: 'bold' },
+                    formatter: function(c) {
+                        var item = c.raw._data;
+                        return [item.symbol, (item.change > 0 ? '+' : '') + item.change.toFixed(2) + '%'];
                     }
-                });
-            }
+                }
+            }]},
+            options: { maintainAspectRatio: false, plugins: { legend: { display: false },
+                tooltip: { callbacks: {
+                    title: function(items) { return items[0].raw._data.symbol; },
+                    label: function(item) { var d = item.raw._data; return ['Change: ' + (d.change > 0 ? '+' : '') + d.change + '%', 'Market Cap: ' + d.marketCap]; }
+                }}
+            }}
         });
+    };
+    // Fire on initial page load
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', window.initDSEHeatmap);
+    } else {
+        window.initDSEHeatmap();
+    }
     </script>
+
 </body>
 </html>
