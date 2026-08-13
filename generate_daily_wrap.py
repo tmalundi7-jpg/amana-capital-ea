@@ -136,6 +136,16 @@ Throughout the article, you must maintain interactive highlighted materials. Whe
 Use an English tone that will be understood by everyone and maintain a professional, human tone. 
 UNDER NO CIRCUMSTANCES should you disclose any of my proprietary trading strategies (e.g. shadow market making, spread capture targets, specific limit order plans) in this public wrap.
 
+**CRITICAL REQUIREMENT - JSON METADATA:**
+At the very end of your response, after the 'In Focus' section, you MUST output a JSON block wrapped in ```json ... ``` tags containing exactly these fields:
+- "headline": The thematic headline you used.
+- "intro": A short 1-2 sentence excerpt of the introductory paragraph.
+- "dsei": The current DSEI value (e.g. "4,228.71").
+- "turnover": The current Equity Turnover formatted exactly like "TZS 4.81bn" or "TZS 900m".
+- "top_gainer": The ticker and percentage change of the top gainer, exactly like "SWIS +10.7%".
+
+This JSON is required for website automation.
+
 ### MY INTERNAL ANALYSIS
 {internal_analysis}
 
@@ -151,6 +161,17 @@ UNDER NO CIRCUMSTANCES should you disclose any of my proprietary trading strateg
     except Exception as e:
         print(f"Failed to generate public wrap: {e}")
         return
+
+    import re
+    # Extract JSON metadata
+    metadata = None
+    json_match = re.search(r'```json\s*(\{.*?\})\s*```', public_wrap, re.DOTALL)
+    if json_match:
+        try:
+            metadata = json.loads(json_match.group(1))
+            public_wrap = public_wrap.replace(json_match.group(0), "").strip()
+        except Exception as e:
+            print(f"Warning: Failed to parse JSON metadata: {e}")
 
     # ---------------------------------------------------------
     # SAVE OUTPUTS
@@ -178,7 +199,7 @@ UNDER NO CIRCUMSTANCES should you disclose any of my proprietary trading strateg
     print(f"Raw Market Data saved to {raw_data_filename}")
     
     # ---------------------------------------------------------
-    # Step 2.5: Build HTML Output
+    # Step 2.5: Build HTML Output & Auto-Update index.html
     # ---------------------------------------------------------
     try:
         from build_html_wrap import build_wrap_html
@@ -196,8 +217,37 @@ UNDER NO CIRCUMSTANCES should you disclose any of my proprietary trading strateg
         
         template_path = os.path.join("templates", "wrap_template.html")
         build_wrap_html(public_path, template_path, html_path)
+        
+        # Auto-update index.html teaser section
+        if metadata:
+            index_path = 'index.html'
+            with open(index_path, 'r', encoding='utf-8') as f:
+                index_html = f.read()
+
+            day_of_week = parsed_date.strftime('%A')
+            date_str = f"{day_of_week}, {parsed_date.strftime('%d %B %Y')}"
+            
+            # Update date
+            index_html = re.sub(r'(<div class="teaser-prem-date">).*?(</div>)', r'\g<1>' + date_str + r'\2', index_html)
+            # Update headline
+            index_html = re.sub(r'(<h3 class="teaser-prem-title">).*?(</h3>)', r'\g<1>' + metadata.get('headline', '') + r'\2', index_html)
+            # Update body intro
+            index_html = re.sub(r'(<p class="teaser-prem-body">).*?(</p>)', r'\g<1>' + metadata.get('intro', '') + r'\2', index_html)
+            
+            # Update stats
+            index_html = re.sub(r'(<div class="teaser-prem-stat-label">DSEI</div>\s*<div class="teaser-prem-stat-value">).*?(</div>)', r'\g<1>' + metadata.get('dsei', '') + r'\2', index_html)
+            index_html = re.sub(r'(<div class="teaser-prem-stat-label">Turnover</div>\s*<div class="teaser-prem-stat-value">).*?(</div>)', r'\g<1>' + metadata.get('turnover', '') + r'\2', index_html)
+            index_html = re.sub(r'(<div class="teaser-prem-stat-label">Top Gainer</div>\s*<div class="teaser-prem-stat-value gain">).*?(</div>)', r'\g<1>' + metadata.get('top_gainer', '') + r'\2', index_html)
+            
+            # Update link
+            index_html = re.sub(r'(<a href="/dse-wrap-)[^"]+(" class="btn btn-gold-solid".*?>Read the Full Wrap &rarr;</a>)', r'\g<1>' + yyyy_mm_dd + r'\2', index_html)
+            
+            with open(index_path, 'w', encoding='utf-8') as f:
+                f.write(index_html)
+            print("Successfully updated index.html teaser section!")
+            
     except Exception as e:
-        print(f"Warning: Failed to build HTML automatically: {e}")
+        print(f"Warning: Failed to build HTML automatically or update index: {e}")
         html_filename = None
     
     # ---------------------------------------------------------
