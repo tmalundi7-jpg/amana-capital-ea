@@ -12,5 +12,22 @@ When updating the Daily DSE Wrap and creating new HTML files, follow these guide
    - The "Daily DSE Wrap Archive" section preview inside `market-intelligence.html`. Make sure the `archive-date` div and the `href` link both reflect the NEW date.
    - The `market-intelligence-archive.html` file, by moving the *previous* day's wrap into the archive list and ensuring the date is correctly labeled.
 
-3. **Performance Preservation**:
+3. **Preserve Rich Text Formatting and Interactive Elements**:
+   When extracting content from the daily wrap `.docx` source files (e.g. `Daily DSE Wrap [Date].docx`), you must ensure that all formatting is faithfully preserved. This includes:
+   - **Bold text**: Highlighted or bolded text in the source (for example, "Upper limit: ..." and "Lower limit: ...") must be wrapped in `<strong>` tags in the HTML.
+   - **Italics**: Preserve `<em>` tags where appropriate.
+   - **Links and Interactive Elements**: Any hyperlinks or interactive parts meant to link between other pages in the website must be adhered to and correctly formatted as `<a href="...">` in the HTML. 
+   Do not just extract raw plain text if it strips away these important elements.
+
+4. **Considerations for a Multi-Year Framework Formatting**:
+   The final section of the wrap, usually titled "Considerations for a Multi-Year Framework", must be formatted exactly like this, using a cream background `div` with a gold border:
+   ```html
+   <div style="background: var(--cream); border-left: 4px solid var(--gold); padding: 2rem; border-radius: 4px; margin-top: 3rem;">
+   <h3 style="color: var(--navy); margin-top: 0; font-size: 1.4rem;">X. Considerations for a Multi-Year Framework</h3>
+   <p style="margin-bottom: 0;">(Paragraph text goes here...)</p>
+   </div>
+   ```
+   Follow this block immediately with the single disclaimer `<div class="article-disclaimer"...` at the bottom of the article. Do NOT output a standard `<h2>` tag for this section.
+
+4. **Performance Preservation**:
    All updates must adhere to the `performance.md` guidelines. Do not include excessive unused CSS, keep image sizes optimized, and do not introduce render-blocking scripts.
