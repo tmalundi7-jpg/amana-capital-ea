@@ -4,8 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize SPA Router (BBC-Style Instant Swap + Progress Bar)
     const swup = new Swup({
         animationSelector: '[class*="transition-"]',
-        cache: false,   // Always fetch fresh HTML — prevents FOUC on pages with inline styles
-        plugins: [new SwupProgressPlugin({ delay: 50 })]
+        cache: true,
+        plugins: [
+            new SwupProgressPlugin({ delay: 50 }),
+            new SwupPreloadPlugin()
+        ]
     });
 
 
