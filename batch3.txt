@@ -1,0 +1,458 @@
+Article 4.6 – An Introduction to Technical Analysis (It’s Not Sorcery)
+
+By Amana Capital East Africa – Investor Education Series
+
+While fundamental analysis tells you what to buy, technical analysis attempts to tell you when to buy or sell by studying price charts, volume, and patterns. It’s not a crystal ball, but a supplementary tool that many institutional investors use to refine their entry and exit points. This article introduces the most practical concepts for a DSE investor.
+1. The Foundation: Price and Trends
+
+A trend is the general direction in which a price is moving. An uptrend consists of higher highs and higher lows; a downtrend has lower lows and lower highs. The simplest technical rule is: Don’t fight the trend.
+
+    A stock in a clear uptrend with rising volume is under accumulation.
+
+    A stock in a downtrend with high volume may be under distribution (selling).
+
+On the DSE, daily price charts are available from various data services, though not yet as seamlessly as on developed markets. You can manually plot closing prices to observe trends.
+2. Support and Resistance
+
+    Support is a price level where buying interest is strong enough to prevent further decline. Think of it as a floor.
+
+    Resistance is a price level where selling pressure halts a rally. Think of it as a ceiling.
+
+These levels often form at previous highs or lows. For example, if CRDB consistently finds buyers at TZS 2,550, that level becomes support. If it repeatedly fails to break above TZS 2,600, that’s resistance.
+
+In the Daily DSE Wrap, when we note that a stock “bounced off support” or “tested resistance,” we are using these concepts.
+3. Volume as a Confirmation Tool
+
+Volume confirms price moves. A breakout above resistance on significantly higher volume is more likely to be genuine. A breakout on low volume may be a false signal. Conversely, if a stock falls below support on heavy volume, it suggests real selling pressure.
+4. Simple Moving Averages (SMA)
+
+A 50‑day simple moving average is the average closing price over the last 50 trading days. It smooths out noise and shows the medium‑term trend. When the current price is above the 50‑day SMA, the trend is considered positive; below, negative. A “golden cross” (50‑day SMA crossing above 200‑day SMA) is a classic long‑term bullish signal, though it works best in liquid markets.
+5. Limitations on the DSE
+
+Technical analysis works best in highly liquid, continuous markets. The DSE’s lower liquidity on some counters means that a few large orders can create misleading chart patterns. Use technical analysis as a supplement to, never a replacement for, fundamental analysis. In our Daily DSE Wrap, we primarily rely on fundamentals but will occasionally note a technically significant level when it aligns with our fundamental view.
+
+    Action step: For your favourite DSE stock, manually note the closing prices over the last 10 trading days. Draw a line connecting them. Is there a visible trend? Where might support and resistance lie?
+
+This content is for informational and educational purposes only and does not constitute investment advice. Capital is at risk. Amana Capital East Africa Limited is a registered investment advisory and fund management firm in Tanzania. Licence number: [pending].
+Article 4.7 – Putting It All Together: A Step‑by‑Step Stock Analysis Checklist
+
+By Amana Capital East Africa – Investor Education Series
+
+You have now acquired all the pieces: macroeconomics, microeconomics, financial statements, competitive analysis, valuation, and technical context. This article provides a single, repeatable checklist you can use every time you consider a new investment on the DSE.
+The Amana Capital EA Stock Analysis Checklist
+Step	Question
+1. Macro Context	Where are we in the economic cycle? What is the BOT’s interest rate stance? What is the inflation trend? What is happening to the exchange rate?
+2. Industry Analysis	Is the sector growing? Is it cyclical or defensive? What are the key drivers and risks?
+3. Business Model	How does this company make money? Does it have a competitive moat?
+4. Financial Health	Are revenues and profits growing? Are margins stable or expanding? Is the debt level manageable? Is free cash flow positive?
+5. Management Quality	Is management transparent? Do they allocate capital wisely? Is the dividend policy sustainable?
+6. Valuation	What is the P/E, P/B, and dividend yield? Are they reasonable compared to peers and history? Is the stock undervalued or overvalued?
+7. Technical Snapshot	Is the stock in an uptrend, downtrend, or consolidation? Is there a clear support or resistance level? Is volume confirming the price move?
+8. Decision	Based on the above, do you buy, hold, or sell? Set a target price and a stop‑loss level if used.
+Applying the Checklist to the Daily DSE Wrap
+
+The Daily DSE Wrap applies this checklist at the market level every day. The Market Snapshot covers macro context and market internals. The Top Movers highlight stocks that are leading or lagging. The In Focus section applies fundamental reasoning to a specific company or sector. The Considerations for a Multi‑Year Framework tie it all back to long‑term allocation thinking.
+
+By now, you should be able to read the Daily Wrap not as a collection of numbers, but as a coherent, disciplined analysis that mirrors the checklist you can use for your own decisions.
+
+    Action step: Print the checklist and place it wherever you review your investments. The next time you consider a trade on the DSE, complete all eight steps before taking action.
+
+This content is for informational and educational purposes only and does not constitute investment advice. Capital is at risk. Amana Capital East Africa Limited is a registered investment advisory and fund management firm in Tanzania. Licence number: [pending].
+Module 5: The Investor’s Mind & Portfolio
+Article 5.1 – Risk and Return: The Only Free Lunch Is Diversification
+
+By Amana Capital East Africa – Investor Education Series
+
+Every investment carries risk. The key is not to avoid risk — that’s impossible — but to understand it, manage it, and ensure you are compensated for bearing it. This article explains the relationship between risk and return and introduces the most powerful risk‑management tool available to every investor: diversification.
+1. Types of Investment Risk
+Risk Type	What It Means	Can It Be Diversified Away?
+Company‑specific risk	A CEO resigns, a factory burns down, a product fails.	Yes — hold many companies, and no single failure will sink you.
+Sector risk	A regulatory change hits all banks, or a drought hits all brewers.	Partially — hold companies in different sectors.
+Market risk (systematic)	A recession, a currency crisis, a global pandemic.	No — this risk affects all assets. You manage it through asset allocation (bonds, cash, etc.) and a long time horizon.
+2. The Risk‑Return Trade‑Off
+
+Higher expected return comes with higher risk. Government bonds offer lower returns but are considered very safe. Equities offer higher returns but can lose significant value in a downturn. As an investor, you must decide where on the risk spectrum you belong, based on your goals, age, and temperament.
+3. Diversification: The Free Lunch
+
+Diversification means spreading your money across different companies, sectors, and asset classes so that a loss in one area can be offset by a gain in another. It’s the most reliable way to reduce risk without reducing expected return.
+
+A simple diversified DSE portfolio might hold:
+
+    A major bank (CRDB or NMB)
+
+    A consumer goods company (TBL)
+
+    An industrial (TCC or TPCC)
+
+    A telecom (VODA)
+
+    A bond or bond fund for stability
+
+Owning 4–5 well‑chosen, unrelated companies dramatically reduces company‑specific risk.
+4. The Daily DSE Wrap Connection
+
+In the Daily Wrap, we track sector performance, which shows you diversification in action. On any given day, one sector may rise while another falls. A diversified portfolio captures the gains without being crushed by the losses. When we note that banks led but industrials lagged, that’s diversification at work.
+
+    Action step: List your current holdings. How many different sectors are represented? Could one event wipe out a large portion of your portfolio? If so, consider diversifying.
+
+This content is for informational and educational purposes only and does not constitute investment advice. Capital is at risk. Amana Capital East Africa Limited is a registered investment advisory and fund management firm in Tanzania. Licence number: [pending].
+Article 5.2 – Building Your First Investment Portfolio
+
+By Amana Capital East Africa – Investor Education Series
+
+You understand the economy, you can analyse a company, and you know the power of diversification. Now it’s time to build. This article walks you through constructing a simple, robust portfolio tailored to a Tanzanian investor.
+1. Define Your Goal and Time Horizon
+
+    Are you saving for retirement in 20 years? You can afford more equity risk.
+
+    Are you saving for a house in 5 years? You should lean more toward bonds and stable dividend stocks.
+
+    Are you investing to generate monthly income? Focus on high‑dividend stocks and bonds.
+
+Your goal determines your asset allocation — the mix of equities, bonds, and cash.
+2. A Sample Allocation Framework
+Investor Profile	Equities	Bonds & Bond Funds	Cash / Money Market
+Aggressive (young, long horizon)	70–80%	10–20%	10%
+Moderate (mid‑career)	50–60%	30–40%	10%
+Conservative (near retirement)	30–40%	50–60%	10%
+
+Within the equity portion, spread your capital across at least three sectors. For example, a moderate portfolio might hold:
+
+    CRDB (banks) — 20%
+
+    TBL (consumer) — 15%
+
+    VODA (telecoms) — 10%
+
+    TPCC (industrial) — 10%
+
+    UTT AMIS Bond Fund — 35%
+
+    Cash reserve — 10%
+
+3. Starting Small Is Fine
+
+You don’t need millions to begin. With as little as TZS 500,000, you can buy a few shares and a bond fund. The most important step is to start. Time in the market, as we will see in Article 5.3, is far more powerful than timing the market.
+4. The Daily DSE Wrap Connection
+
+The Daily Wrap gives you the raw material to manage your portfolio. Check your holdings against the day’s movers. Is a stock you own falling on heavy volume? Investigate. Is a sector you’re not yet in showing consistent strength? Consider adding it over time.
+
+    Action step: Write down your asset allocation target. Then compare it to your actual holdings. What’s the biggest gap? Make a plan to close it over the next three months.
+
+This content is for informational and educational purposes only and does not constitute investment advice. Capital is at risk. Amana Capital East Africa Limited is a registered investment advisory and fund management firm in Tanzania. Licence number: [pending].
+Article 5.3 – The Power of Compounding and Why Time Beats Timing
+
+By Amana Capital East Africa – Investor Education Series
+
+Albert Einstein reportedly called compound interest the eighth wonder of the world. For a Tanzanian investor with a long horizon, compounding is the single most powerful force for building wealth. This article shows you why starting early and staying invested matters far more than finding the perfect entry point.
+1. What Is Compounding?
+
+Compounding is earning returns on your returns. If you invest TZS 1,000,000 and it grows 10% in one year, you have TZS 1,100,000. If the next year it grows another 10%, you earn TZS 110,000 (not TZS 100,000) because the gain is calculated on the new, higher balance. Over many years, this snowball effect becomes enormous.
+2. The Mathematics of Compounding
+
+Suppose you invest TZS 1,000,000 at an average annual return of 10%:
+Year	Balance
+0	1,000,000
+5	1,610,510
+10	2,593,742
+20	6,727,500
+30	17,449,402
+
+Notice that in the last 10 years, the portfolio grew by more than TZS 10 million — even though you added no new money. That’s compounding.
+
+If you reinvest dividends — buying more shares with the cash you receive — the effect accelerates even further.
+3. Time in the Market vs. Timing the Market
+
+Many investors try to buy at the bottom and sell at the top. The evidence is clear: almost no one can do this consistently. Missing just the best 10 trading days in a decade can cut your returns in half. The investor who stays fully invested, reinvests dividends, and ignores the noise almost always outperforms the one who jumps in and out.
+
+On the DSE, where some stocks trade infrequently, trying to time is especially risky. A long‑horizon, buy‑and‑hold approach suits the market’s structure well.
+4. The Daily DSE Wrap Connection
+
+The Daily Wrap is a tool for staying informed, not for timing the market. It helps you understand what is happening, but it does not advocate trading daily. We publish it because an informed investor is a confident investor, and a confident investor can sit through volatility without panic‑selling.
+
+    Action step: Use a compound interest calculator (many free online) to project your portfolio’s value in 10, 20, and 30 years, assuming a realistic return and your current savings rate. Let the numbers motivate your patience.
+
+This content is for informational and educational purposes only and does not constitute investment advice. Capital is at risk. Amana Capital East Africa Limited is a registered investment advisory and fund management firm in Tanzania. Licence number: [pending].
+Article 5.4 – Behavioural Finance: Understanding Your Own Worst Enemy
+
+By Amana Capital East Africa – Investor Education Series
+
+You can master macroeconomic cycles, financial statements, and valuation techniques, and still fail as an investor if you cannot master your own emotions. Behavioural finance studies the psychological biases that cause investors to make irrational decisions. This article covers the most dangerous biases and how to counter them.
+1. Loss Aversion: The Pain of Losing Is Twice as Powerful as the Joy of Winning
+
+People feel the pain of a loss much more intensely than the pleasure of an equivalent gain. This leads to two costly mistakes:
+
+    Holding onto losers too long, hoping they will recover, instead of cutting losses.
+
+    Selling winners too early, to lock in a gain and avoid the pain of seeing it disappear.
+
+The fix: Have a predetermined thesis for every investment. If the thesis is broken, sell regardless of gain or loss. If the thesis is intact, hold through the noise.
+2. Herd Mentality: Everyone’s Doing It, So It Must Be Right
+
+When a stock is soaring and everyone is talking about it, the temptation to buy is overwhelming. Conversely, when the market is crashing and panic is everywhere, the urge to sell is almost irresistible. Herd behaviour creates bubbles and crashes.
+
+The fix: Use a checklist (Article 4.7) and a long‑term plan. When you feel the herd’s pull, re‑read your written investment policy.
+3. Overconfidence: I Know What Will Happen Next
+
+After a few successful trades, many investors begin to believe they have a special talent for prediction. They trade more frequently, take larger positions, and eventually suffer disproportionate losses.
+
+The fix: Track your decisions. Compare your actual returns to the market index. If you are not beating the DSEI over a full cycle, consider a simpler, more diversified approach.
+4. Confirmation Bias: Seeking Information That Supports Your View
+
+You buy a stock, and suddenly you notice only the positive news. You ignore or dismiss negative information. This bias prevents you from objectively reassessing your investments.
+
+The fix: Actively seek out the bear case for every stock you own. Read critical analysis. If you can’t find any, you haven’t looked hard enough.
+5. The Daily DSE Wrap Connection
+
+The Daily Wrap is designed to counter behavioural biases. It presents facts calmly, focuses on the long term, avoids emotional language, and never hypes a stock. Use it as your anchor. When your emotions are screaming “buy!” or “sell!”, re‑read the day’s analysis and ask: What are the facts?
+
+    Action step: Reflect on your last investment decision. Which bias might have been at play? Write it down. Awareness is the first defence.
+
+This content is for informational and educational purposes only and does not constitute investment advice. Capital is at risk. Amana Capital East Africa Limited is a registered investment advisory and fund management firm in Tanzania. Licence number: [pending].
+Article 5.5 – Long‑Horizon Thinking: The Amana Capital Philosophy
+
+By Amana Capital East Africa – Investor Education Series
+
+At Amana Capital East Africa, our investment philosophy rests on four pillars: Integrity without exception, Long‑horizon thinking, Deep regional intelligence, and Disciplined conviction. This article explains each pillar and how you, as an individual investor, can adopt the same mindset.
+1. Integrity Without Exception
+
+Trust is the foundation of finance. Without it, no market can function. We apply integrity by being transparent about our analysis, clearly separating education from advice, and never promising returns we cannot deliver.
+
+For you: invest only in what you understand. Be honest with yourself about your risk tolerance and knowledge. If a product sounds too good to be true, walk away.
+2. Long‑Horizon Thinking
+
+We believe the best investment decisions are made with a multi‑year perspective. Short‑term price movements are noise; long‑term value creation is what matters. This is why our daily analysis always includes a “Considerations for a Multi‑Year Framework” — we want to train your eye to look beyond the day’s volatility.
+
+For you: set a minimum holding period for every investment — say, three years. Ask yourself: Will this company likely be stronger in three years? If the answer is yes, daily price moves matter less.
+3. Deep Regional Intelligence
+
+We focus on East Africa because that’s what we know best. We understand the local regulatory environment, the cultural nuances, and the economic drivers. Global markets are important, but our edge is here.
+
+For you: build your portfolio primarily in markets you understand. There is nothing wrong with a Tanzanian investor holding only DSE stocks and bonds. You don’t need to invest in New York or London to be successful.
+4. Disciplined Conviction
+
+Analysis without action is useless. Action without discipline is dangerous. We form a view, act on it within a structured framework, and hold ourselves accountable. We don’t chase every trend.
+
+For you: create an Investment Policy Statement — a one‑page document that states your goals, asset allocation, and rules for buying and selling. When emotions run high, your policy keeps you grounded.
+5. The Daily DSE Wrap Connection
+
+Every Daily Wrap is an expression of these four pillars. The analysis is honest (integrity), focused on long‑term frameworks, grounded in local knowledge, and presented with calm discipline. We invite you to adopt the same principles.
+
+    Action step: Write your own Investment Policy Statement. It can be as simple as: “I will invest TZS 200,000 per month into a diversified portfolio of DSE equities and a bond fund, and I will not sell for at least five years.” Sign it. Keep it.
+
+This content is for informational and educational purposes only and does not constitute investment advice. Capital is at risk. Amana Capital East Africa Limited is a registered investment advisory and fund management firm in Tanzania. Licence number: [pending].
+Article 5.6 – How Macro Trends Shape Multi‑Year Investment Themes
+
+By Amana Capital East Africa – Investor Education Series
+
+The daily market moves capture your attention, but the big money is made by positioning for trends that unfold over a decade. This article identifies several structural shifts that are reshaping Tanzania and East Africa, and how you can align your portfolio with them.
+1. Urbanisation and the Rise of the Consumer
+
+Tanzania’s urban population is growing rapidly. Dar es Salaam, Arusha, Mwanza, and Dodoma are expanding. Urbanisation brings demand for housing, cement, electricity, banking services, mobile connectivity, and consumer goods. Companies at the intersection of this trend — banks, cement manufacturers, telcos, and brewers — are likely to see sustained demand for decades.
+2. Regional Integration and Cross‑Border Trade
+
+The East African Community (EAC) is deepening integration. Cross‑listed stocks like KCB and NMG already allow Tanzanians to participate in Kenya’s economy. As harmonisation of trading systems, settlement, and regulation continues, the opportunity set will expand. Companies that operate across multiple EAC markets will have a growth advantage.
+3. Financial Inclusion and Mobile Money
+
+Millions of Tanzanians remain unbanked, but mobile money is closing the gap. VODA’s M‑Pesa and other platforms are bringing savings, credit, and insurance to previously excluded populations. This trend expands the addressable market for financial services and creates new revenue streams for listed companies.
+4. Infrastructure Investment
+
+The government’s focus on roads, railways (SGR), ports, and energy will benefit construction, cement, and logistics companies for years. Bond investors can participate directly in infrastructure financing through government and corporate bonds.
+5. Demographic Dividend
+
+Tanzania has one of the youngest populations in the world. A growing working‑age population, if productively employed, can drive economic growth for decades. This demographic tailwind supports long‑term equity returns.
+6. The Daily DSE Wrap Connection
+
+The Daily Wrap anchors these long‑term themes to daily reality. When we report that the banking sector is leading, it’s a validation of the financial inclusion theme. When we note that cement stocks are rallying on infrastructure news, it’s the urbanisation theme at work. The Wrap is your daily bridge between the decade‑long trend and the specific investment.
+
+    Action step: Choose one of the five themes above. Identify which companies on the DSE are best positioned to benefit from it. Consider adding one to your portfolio with a ten‑year horizon.
+
+This content is for informational and educational purposes only and does not constitute investment advice. Capital is at risk. Amana Capital East Africa Limited is a registered investment advisory and fund management firm in Tanzania. Licence number: [pending].
+Module 6: Practical Pathways
+Article 6.1 – How to Open a CSD Account and Buy Your First DSE Stock
+
+By Amana Capital East Africa – Investor Education Series
+
+All the knowledge in the world is useless if you cannot act on it. This article walks you through the exact steps to open a Central Securities Depository (CSD) account and place your first trade on the Dar es Salaam Stock Exchange.
+1. Open a CSD Account
+
+The CSD account holds your shares electronically. You need one to invest.
+
+Step‑by‑step:
+
+    Select a licensed stockbroker from the DSE’s official list (available on the DSE website or through our contact page).
+
+    Visit the broker’s office with:
+
+        A copy of your TIN (Taxpayer Identification Number).
+
+        A passport‑sized photograph.
+
+        A copy of your national ID, passport, or driver’s licence.
+
+        Proof of residence (utility bill or bank statement).
+
+    Fill out the CSD account opening forms.
+
+    The broker will submit your application to the CSD. You will receive an account number.
+
+    Fund your brokerage account (the broker will provide bank details). Minimum amounts vary but can be as low as TZS 100,000.
+
+2. Place Your First Trade
+
+Once your account is open and funded:
+
+    Contact your broker (by phone, email, or in person) and specify:
+
+        Ticker (e.g., CRDB)
+
+        Quantity (e.g., 100 shares)
+
+        Price limit (e.g., “buy at TZS 2,550 maximum”)
+
+    The broker executes the order on the DSE’s ATS.
+
+    After execution, shares are credited to your CSD account (T+2 settlement).
+
+    You will receive a contract note confirming the trade.
+
+3. Tips for Beginners
+
+    Start small. Buy a few shares of a liquid, well‑known company you have researched.
+
+    Use limit orders, not market orders, to control the price you pay.
+
+    Hold for the long term. Don’t check prices daily hoping to flip a quick profit; that way lie fees and frustration.
+
+4. The Daily DSE Wrap Connection
+
+Now that you can act, the Daily Wrap becomes your daily briefing. Read it before making any trading decision. It will tell you what happened yesterday, why, and what the broad market context is. Combined with your fundamental analysis, it keeps you informed and grounded.
+
+    Action step: If you haven’t already, call or visit a licensed broker this week and start the CSD account process. There is no substitute for actually taking the first step.
+
+This content is for informational and educational purposes only and does not constitute investment advice. Capital is at risk. Amana Capital East Africa Limited is a registered investment advisory and fund management firm in Tanzania. Licence number: [pending].
+Article 6.2 – Investing from Abroad: A Diaspora Step‑by‑Step Guide
+
+By Amana Capital East Africa – Investor Education Series
+
+Tanzanians living in the UK, Europe, North America, or Asia can invest on the DSE. Distance is not a barrier, but the process requires some additional steps. This guide covers the essentials.
+1. Opening a CSD Account from Abroad
+
+Many licensed DSE brokers can handle the account opening process remotely. You will typically need:
+
+    Scanned copies of your Tanzanian passport or national ID.
+
+    A TIN certificate (you can apply through the Tanzania Revenue Authority’s online portal or via a representative).
+
+    Proof of overseas address (utility bill, bank statement).
+
+    Passport‑sized photograph.
+
+    Completed account opening forms (provided by the broker).
+
+Contact a broker directly, explain you are in the diaspora, and ask for their remote account opening procedure. Some brokers may require original documents couriered, but many now accept email scans initially.
+2. Funding Your Account
+
+You will need to transfer funds in hard currency (GBP, USD, EUR) to the broker’s settlement bank account. The funds will be converted to TZS at the prevailing exchange rate. Compare exchange rates and transfer fees — specialist services (Wise, WorldRemit, direct SWIFT) may offer better rates than traditional banks.
+
+Once your shillings are in the brokerage account, you can place orders as any local investor would.
+3. Tax Considerations
+
+    Withholding tax on dividends: typically 5% for resident individuals. For non‑resident individuals, rates may differ under double taxation agreements. Consult a tax advisor in your country of residence.
+
+    Capital gains tax: Currently, gains on listed securities are tax‑exempt in Tanzania, but your country of residence may tax them. Check local rules.
+
+    Estate tax: Ensure your CSD account and holdings are documented in your will or estate plan, as cross‑border probate can be complex.
+
+4. The Daily DSE Wrap Connection
+
+As a diaspora investor, you can read the Daily Wrap at any time from anywhere. It keeps you connected to the home market and alerts you to opportunities. The exchange rate data we provide daily helps you calculate exactly how many shillings your next remittance will buy.
+
+    Action step: Email three DSE brokers this week, stating you are a diaspora investor and asking about their remote account opening process. Choose the one that responds most clearly and professionally.
+
+This content is for informational and educational purposes only and does not constitute investment advice. Capital is at risk. Amana Capital East Africa Limited is a registered investment advisory and fund management firm in Tanzania. Licence number: [pending].
+Article 6.3 – Understanding Tanzanian Tax on Investments
+
+By Amana Capital East Africa – Investor Education Series
+
+Taxes can significantly affect your net investment return. Fortunately, Tanzania’s tax regime for listed securities is relatively favourable compared to many countries. This article outlines the main taxes you will encounter as a DSE investor.
+1. Withholding Tax on Dividends
+
+Dividends paid by DSE‑listed companies are subject to a 5% final withholding tax for resident individuals. This means that if a company declares a dividend of TZS 1,000 per share, TZS 950 is deposited into your brokerage account, and the remaining TZS 50 goes to the TRA. The tax is “final,” meaning you do not need to declare it further on your personal income tax return.
+
+For non‑resident individuals, the rate may vary based on the double taxation agreement between Tanzania and your country of residence. Common rates range from 5% to 15%.
+2. Capital Gains Tax on Listed Securities
+
+As of the current tax code, capital gains from the sale of listed securities are exempt from tax for both residents and non‑residents. This is a major advantage of investing through the DSE. A gain of TZS 1,000,000 is yours entirely.
+
+This exemption is designed to encourage long‑term investment and market participation. However, tax laws can change, so stay informed.
+3. Withholding Tax on Bond Interest
+
+Interest earned on government bonds and corporate bonds is subject to a 5% withholding tax for residents. For non‑residents, the rate may be higher under certain conditions.
+4. Tax on Collective Investment Schemes
+
+If you invest through a unit trust like UTT AMIS, the tax treatment depends on the underlying assets. Generally, fund income distributed to you is subject to withholding tax at the applicable rate.
+5. Record‑Keeping
+
+Keep all contract notes, dividend vouchers, and annual CSD statements. They are your proof of transactions and will be needed if you are ever audited or if you need to reconcile your portfolio.
+6. The Daily DSE Wrap Connection
+
+When we report dividend announcements in the Daily Wrap, we often state the gross dividend and the net (after‑tax) amount. Knowing the tax rate allows you to calculate your true income. For example, the NMB dividend of TZS 610.15 gross yields TZS 579.64 net after the 5% tax.
+
+    Action step: If you hold dividend‑paying stocks, check your contract notes to confirm that withholding tax has been correctly applied. If uncertain, contact your broker.
+
+This content is for informational and educational purposes only and does not constitute investment advice. Capital is at risk. Amana Capital East Africa Limited is a registered investment advisory and fund management firm in Tanzania. Licence number: [pending].
+Article 6.4 – Using Collective Investment Schemes (UTT AMIS, etc.)
+
+By Amana Capital East Africa – Investor Education Series
+
+Not everyone has the time, expertise, or capital to build a diversified portfolio of individual stocks. Collective investment schemes (CIS) — also called unit trusts or mutual funds — offer an alternative. You pool your money with other investors, and a professional fund manager invests it on your behalf. In Tanzania, UTT AMIS is one of the primary providers.
+1. How a Unit Trust Works
+
+    You buy units in the fund at the prevailing unit price (Net Asset Value per unit, or NAV).
+
+    The fund invests in a diversified portfolio of stocks, bonds, or both.
+
+    Returns come from capital gains on the underlying securities and interest/dividend income.
+
+    You can buy and redeem units on any dealing day.
+
+2. Advantages of Unit Trusts
+
+    Instant diversification even with small amounts.
+
+    Professional management — the fund manager conducts the analysis and trading.
+
+    Liquidity — you can usually redeem units relatively quickly.
+
+    Regulatory oversight — CIS are regulated by CMSA, providing a layer of protection.
+
+3. Types of Funds Available
+
+    Equity funds: Invest primarily in stocks. Higher risk, higher potential return.
+
+    Bond funds: Invest in government and corporate bonds. Lower risk, stable income.
+
+    Balanced funds: Mix of equities and bonds.
+
+    Money market funds: Very low risk, highly liquid, often used as a cash management tool.
+
+4. How to Invest in UTT AMIS or Another CIS
+
+    Visit the fund manager’s office or website.
+
+    Complete an application form and provide KYC documents (ID, TIN, photo).
+
+    Deposit the minimum investment amount (often TZS 100,000 or less).
+
+    Receive a statement showing your unit holdings.
+
+    Monitor the fund’s performance and add to your investment regularly.
+
+5. The Daily DSE Wrap Connection
+
+When we analyse the market, we often mention the bond fund or equity fund activity because these institutional players are significant market participants. Understanding CIS helps you interpret that flow. Additionally, if you are not yet ready to pick individual stocks, a CIS can be a sensible first step while you continue your education.
+
+    Action step: Research two CIS providers in Tanzania. Compare their fees, minimum investments, and historical performance. Consider allocating a small portion of your portfolio to a bond or balanced fund as a diversifier.
+
+This content is for informational and educational purposes only and does not constitute investment advice. Capital is at risk. Amana Capital East Africa Limited is a registered investment advisory and fund management firm in Tanzania. Licence number: [pending].

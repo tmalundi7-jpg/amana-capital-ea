@@ -1,18 +1,7 @@
 // Amana Capital East Africa - Main Application Script
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Initialize SPA Router (BBC-Style Instant Swap + Progress Bar)
-    const swup = new Swup({
-        animationSelector: '[class*="transition-"]',
-        cache: true,
-        plugins: [
-            new SwupProgressPlugin({ delay: 50 }),
-            new SwupPreloadPlugin()
-        ]
-    });
-
-
-    // 2. Initialize modules on first load
+    // 1. Initialize modules on first load
     initMobileMenu();
     initBondCalculator();
     initWealthCalculator();
@@ -21,34 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof window.initContactForm === 'function') window.initContactForm();
     if (typeof window.initRiskProfiler === 'function') window.initRiskProfiler();
     if (typeof window.initDSEHeatmap === 'function') window.initDSEHeatmap();
-
-    // Force close mobile menu on any link click (Swup transition start)
-    swup.hooks.on('visit:start', () => {
-        const nav = document.getElementById('nav-links');
-        if (nav) nav.classList.remove('active');
-    });
-
-    // 3. Re-initialize modules after every page transition
-    swup.hooks.on('page:view', () => {
-        initMobileMenu();
-        initBondCalculator();
-        initWealthCalculator();
-        initSnapshotCharts();
-        initCompoundWealth();
-        if (typeof window.initContactForm === 'function') window.initContactForm();
-        if (typeof window.initRiskProfiler === 'function') window.initRiskProfiler();
-        if (typeof window.initDSEHeatmap === 'function') window.initDSEHeatmap();
-        
-        // Re-initialize Weglot if present
-        if (typeof Weglot !== 'undefined') {
-            Weglot.initialize({ api_key: 'wg_22a6f434974df4dee513e25f34fc5e009' });
-        }
-        
-        // Scroll to top on transition
-        window.scrollTo(0, 0);
-        
-        initScrollReveal();
-    });
 
     // Initial call for Scroll Reveal
     initScrollReveal();
@@ -594,10 +555,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     initTheme();
-    // Re-init on swup navigation
-    if (typeof swup !== 'undefined') {
-        swup.hooks.on('page:view', initTheme);
-    }
 });
 
 // --- Currency Toggle Logic ---
