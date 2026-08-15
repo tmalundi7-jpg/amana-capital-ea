@@ -1523,8 +1523,8 @@ html.is-animating .transition-fade {
 
 /* --- Scroll Reveal Animations --- */
 .reveal-up {
-  opacity: 0;
-  transform: translateY(40px);
+  /* opacity: 0; removed for native loading */
+  /* transform: translateY(40px); removed for native loading */
   transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   will-change: opacity, transform;
 }
@@ -1556,7 +1556,7 @@ html.is-animating .transition-fade {
   border-radius: var(--radius-md);
   padding: 2rem;
   box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-  opacity: 0;
+  /* opacity: 0; removed for native loading */
   visibility: hidden;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 1000;

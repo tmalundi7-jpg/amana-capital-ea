@@ -3,6 +3,9 @@ import json
 import os
 import datetime
 from google import genai
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ---------------------------------------------------------
 # Configuration
@@ -251,49 +254,30 @@ This JSON is required for website automation.
         html_filename = None
     
     # ---------------------------------------------------------
-    # Step 3: Publish to GitHub
+    # Step 3: Publish to GitHub via Git CLI
     # ---------------------------------------------------------
-    import base64
-    print("\nPublishing Public Wrap to GitHub...")
-    import os
-    github_token = os.environ.get("GITHUB_TOKEN", "your_token_here")
-    repo = "tmalundi7-jpg/amana-capital-ea"
-    
-    # We upload the newly generated HTML file to the root instead of the markdown to public_wraps
-    if html_filename:
-        upload_path = html_filename
-        with open(html_filename, 'r', encoding='utf-8') as f:
-            upload_content = f.read()
-    else:
-        upload_path = f"public_wraps/{public_filename}"
-        upload_content = public_wrap
+    import subprocess
+    print("\nPublishing updates to GitHub via Git CLI...")
+    try:
+        # Add index.html, public wrap markdown, and daily wrap HTML
+        subprocess.run(["git", "add", "index.html"], check=True)
+        if os.path.exists(public_path):
+            subprocess.run(["git", "add", public_path], check=True)
+        if html_filename and os.path.exists(html_filename):
+            subprocess.run(["git", "add", html_filename], check=True)
+            
+        commit_msg = f"Publish Daily Wrap: {market_data['date']}"
         
-    github_path = upload_path
-    url = f"https://api.github.com/repos/{repo}/contents/{github_path}"
-    headers = {
-        "Authorization": f"token {github_token}",
-        "Accept": "application/vnd.github.v3+json"
-    }
-    
-    # Check if file exists to get SHA for updates
-    sha = None
-    check_resp = requests.get(url, headers=headers)
-    if check_resp.status_code == 200:
-        sha = check_resp.json().get("sha")
+        # Commit the staged changes
+        # Use --allow-empty in case no changes were made (e.g. re-running on the same day)
+        subprocess.run(["git", "commit", "--allow-empty", "-m", commit_msg], check=True)
         
-    encoded_content = base64.b64encode(upload_content.encode('utf-8')).decode('utf-8')
-    payload = {
-        "message": f"Publish Daily Wrap: {market_data['date']}",
-        "content": encoded_content
-    }
-    if sha:
-        payload["sha"] = sha
-        
-    put_resp = requests.put(url, headers=headers, json=payload)
-    if put_resp.status_code in [201, 200]:
-        print(f"Successfully published {github_path} to GitHub repository '{repo}/{github_path}'!")
-    else:
-        print(f"Failed to publish to GitHub. Status: {put_resp.status_code}, Response: {put_resp.text}")
+        # Push to the remote repository
+        print("Pushing commits to remote origin/main...")
+        subprocess.run(["git", "push", "origin", "main"], check=True)
+        print("Successfully published all updates to GitHub Pages!")
+    except Exception as e:
+        print(f"Git push failed: {e}")
 
     print("\n--- PUBLIC WRAP PREVIEW ---")
     print(public_wrap[:1000] + "...\n(truncated for preview)")
