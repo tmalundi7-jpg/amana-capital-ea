@@ -1,0 +1,69 @@
+{
+  "report_date": "Tuesday, 18th August 2026",
+  "dsei_end_of_day": null,
+  "daily_turnover": "TZS 6.84 billion",
+  "top_mover": {
+    "name": "DCB",
+    "price": "600",
+    "change": "+13.2%"
+  },
+  "dse_listed_companies": null,
+  "live_dse_snapshot": {
+    "dsei": null,
+    "tsi": null,
+    "turnover": "TZS 6.84 billion",
+    "top_gainers": [
+      {
+        "name": "DCB",
+        "price": "600",
+        "change": "+13.2%"
+      },
+      {
+        "name": "MCB",
+        "price": null,
+        "change": "+3.7%"
+      },
+      {
+        "name": "KCB",
+        "price": null,
+        "change": "+1.0%"
+      },
+      {
+        "name": "NICO",
+        "price": null,
+        "change": "+0.8%"
+      }
+    ],
+    "top_losers": [
+      {
+        "name": "TCCL",
+        "price": null,
+        "change": "-3.6%"
+      },
+      {
+        "name": "TBL",
+        "price": null,
+        "change": "-1.4%"
+      },
+      {
+        "name": "SWIS",
+        "price": null,
+        "change": "-0.8%"
+      },
+      {
+        "name": "CRDB",
+        "price": "2,680",
+        "change": "-0.4%"
+      }
+    ]
+  },
+  "daily_dse_wrap": {
+    "dsei": null,
+    "turnover": "TZS 6.84 billion",
+    "top_gainer": {
+      "name": "DCB",
+      "price": "600",
+      "change": "+13.2%"
+    }
+  }
+}
