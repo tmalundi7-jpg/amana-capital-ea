@@ -833,7 +833,7 @@ window.initDSEHeatmap = function() {
         { symbol: 'KA', marketCap: 70, change: 9.1 },
         { symbol: 'PAL', marketCap: 60, change: -7.2 },
         { symbol: 'MUCOBA', marketCap: 60, change: -1.1 },
-        { symbol: 'AFRIP', marketCap: 60, change: -0.8 }
+        { symbol: 'AFRIPRISE', marketCap: 60, change: -0.8 }
     ];
 
     const totalCap = data.reduce((sum, item) => sum + item.marketCap, 0);
