@@ -95,6 +95,8 @@ def parse_docx(filepath):
         # Basic markdown to HTML bolding
         text = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', text)
         text = text.replace("’", "'")
+        text = re.sub(r'^(Upper limit:)', r'<strong>\1</strong>', text)
+        text = re.sub(r'^(Lower limit:)', r'<strong>\1</strong>', text)
         
         if parsing_intro:
             data["introduction_paragraphs"].append(text)

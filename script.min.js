@@ -820,16 +820,16 @@ window.initDSEHeatmap = function() {
     if (!container) return;
     
     const data = [
-        { symbol: 'TBL', marketCap: 3200, change: 0.0 },
-        { symbol: 'NMB', marketCap: 2675, change: 0.0 },
-        { symbol: 'CRDB', marketCap: 1515, change: 0.0 },
-        { symbol: 'VODA', marketCap: 1200, change: 0.0 },
-        { symbol: 'TPCC', marketCap: 900, change: 0.0 },
+        { symbol: 'TBL', marketCap: 3200, change: 0.1 },
+        { symbol: 'NMB', marketCap: 2675, change: 0.1 },
+        { symbol: 'CRDB', marketCap: 1515, change: -0.4 },
+        { symbol: 'VODA', marketCap: 1200, change: 1.0 },
+        { symbol: 'TPCC', marketCap: 900, change: 0.2 },
         { symbol: 'TWIGA', marketCap: 800, change: 0.0 },
         { symbol: 'TICL', marketCap: 250, change: 0.0 },
         { symbol: 'DSE', marketCap: 150, change: 0.0 },
-        { symbol: 'TCCL', marketCap: 120, change: 0.0 },
-        { symbol: 'SWIS', marketCap: 100, change: 0.0 }
+        { symbol: 'TCCL', marketCap: 120, change: 1.3 },
+        { symbol: 'SWIS', marketCap: 100, change: 0.4 }
     ];
 
     const totalCap = data.reduce((sum, item) => sum + item.marketCap, 0);
