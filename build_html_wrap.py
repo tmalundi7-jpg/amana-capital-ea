@@ -2,6 +2,7 @@ import os
 import re
 from datetime import datetime
 import markdown
+import bs4
 
 def build_wrap_html(markdown_path, template_path, output_path):
     if not os.path.exists(markdown_path):
@@ -12,13 +13,11 @@ def build_wrap_html(markdown_path, template_path, output_path):
         md_content = f.read()
         
     # Extract Title and Subtitle
-    # Assuming first line is title e.g. "Daily DSE Wrap | Friday, 12 August 2026"
     lines = md_content.split('\n')
     title_line = ""
     subtitle_line = ""
     content_lines = []
     
-    # We might have some blank lines at the top
     start_idx = 0
     for i, line in enumerate(lines):
         if line.strip():
@@ -37,10 +36,7 @@ def build_wrap_html(markdown_path, template_path, output_path):
     # Extract date string from title
     date_string = title_line.replace("Daily DSE Wrap |", "").strip()
     
-    # Parse date string for YYYY-MM-DD
-    # E.g. "Friday, 7 August 2026" or "12 August 2026"
     try:
-        # Try to extract just the date part if there's a day of week
         date_part = date_string.split(', ')[-1] if ', ' in date_string else date_string
         parsed_date = datetime.strptime(date_part.strip(), '%d %B %Y')
         yyyy_mm_dd = parsed_date.strftime('%Y-%m-%d')
@@ -51,48 +47,70 @@ def build_wrap_html(markdown_path, template_path, output_path):
     # Convert remaining markdown to HTML
     html_content = markdown.markdown(content_md, extensions=['tables'])
     
-    # Apply specific CSS styling
+    # Use BeautifulSoup for precise table formatting
+    soup = bs4.BeautifulSoup(html_content, 'html.parser')
+    
     # 1. H2 Tags
-    html_content = re.sub(r'<h2>', r'<h2 style="color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;">', html_content)
+    for h2 in soup.find_all('h2'):
+        h2['style'] = "color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;"
+        
+    # 2. Tables
+    for table in soup.find_all('table'):
+        # Wrap table in responsive div
+        wrapper = soup.new_tag('div', style="overflow-x: auto; margin-bottom: 1rem;", **{'class': 'table-responsive'})
+        table.wrap(wrapper)
+        table['style'] = "width: 100%; border-collapse: collapse;"
+        table['class'] = "data-table"
+        
+        # Format Headers
+        thead = table.find('thead')
+        if thead:
+            for tr in thead.find_all('tr'):
+                tr['style'] = "background-color: var(--navy); color: var(--white); text-align: left;"
+                for th in tr.find_all('th'):
+                    th['style'] = "padding: 1rem;"
+                    
+        # Format Body Rows
+        tbody = table.find('tbody')
+        if tbody:
+            for i, tr in enumerate(tbody.find_all('tr')):
+                if i % 2 == 1:
+                    tr['style'] = "background-color: var(--cream);"
+                    
+                cells = tr.find_all('td')
+                for j, td in enumerate(cells):
+                    text_content = td.get_text().strip()
+                    style = "padding: 1rem;"
+                    
+                    if j == 0:
+                        # First column
+                        style += " font-weight: 600;"
+                        inner_text = td.string
+                        if inner_text:
+                            strong_tag = soup.new_tag('strong', style="color: #000;")
+                            strong_tag.string = inner_text
+                            td.string = ""
+                            td.append(strong_tag)
+                        else:
+                            # If it already contains elements, wrap them
+                            wrapper_strong = soup.new_tag('strong', style="color: #000;")
+                            for child in list(td.children):
+                                wrapper_strong.append(child)
+                            td.append(wrapper_strong)
+                    else:
+                        # Gain/Loss styling
+                        # Use negative lookbehind or simple matching to avoid matching the first column
+                        if '+' in text_content and ('%' in text_content or 'pts' in text_content or '+' == text_content[0]):
+                            style += " color: var(--gain); font-weight: 600;"
+                        elif ('-' in text_content or '–' in text_content or '−' in text_content) and ('%' in text_content or 'pts' in text_content or '-' == text_content[0] or '–' == text_content[0]):
+                            style += " color: var(--loss); font-weight: 600;"
+                            
+                    td['style'] = style
     
-    # 2. H3 Tags (for "Considerations for a Multi-Year Framework" etc)
-    html_content = re.sub(r'<h3>', r'<h3 style="color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;">', html_content)
+    # Update HTML string
+    html_content = str(soup)
     
-    # 3. Tables
-    html_content = re.sub(
-        r'<table>', 
-        r'<div class="table-responsive" style="overflow-x: auto; margin-bottom: 1rem;">\n<table class="data-table" style="width: 100%; border-collapse: collapse;">', 
-        html_content
-    )
-    html_content = re.sub(r'</table>', r'</table>\n</div>', html_content)
-    
-    # Table headers
-    html_content = re.sub(r'<thead>', r'<thead>\n<tr style="background-color: var(--navy); color: var(--white); text-align: left;">', html_content)
-    html_content = re.sub(r'<th>', r'<th style="padding: 1rem;">', html_content)
-    
-    # Remove the default <tr> inside <thead> because we just added one
-    html_content = re.sub(r'<tr style="background-color: var\(--navy\); color: var\(--white\); text-align: left;">\s*<tr>', r'<tr style="background-color: var(--navy); color: var(--white); text-align: left;">', html_content)
-    
-    # Table body rows - alternate colors
-    tbody_split = html_content.split('<tbody>')
-    if len(tbody_split) > 1:
-        new_html = tbody_split[0]
-        for i in range(1, len(tbody_split)):
-            tbody_part = tbody_split[i]
-            trs = tbody_part.split('<tr>')
-            new_tbody = trs[0]
-            for j in range(1, len(trs)):
-                if j % 2 == 0:
-                    new_tbody += '<tr style="background-color: var(--cream);">' + trs[j]
-                else:
-                    new_tbody += '<tr>' + trs[j]
-            new_html += '<tbody>' + new_tbody
-        html_content = new_html
-
-    # Table cells
-    html_content = re.sub(r'<td>', r'<td style="padding: 1rem;">', html_content)
-    
-    # Links
+    # 3. Links
     html_content = re.sub(r'<a href=', r'<a class="gold-link" href=', html_content)
     
     # Apply to template
