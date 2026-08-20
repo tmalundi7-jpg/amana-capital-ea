@@ -819,21 +819,22 @@ window.initDSEHeatmap = function() {
     const container = document.getElementById('dseHeatmapContainer');
     if (!container) return;
     
-    const data = [
-        { symbol: 'TBL', marketCap: 3200, change: 0.1 },
-        { symbol: 'NMB', marketCap: 2675, change: 0.1 },
-        { symbol: 'CRDB', marketCap: 1515, change: -0.4 },
-        { symbol: 'VODA', marketCap: 1200, change: 1.0 },
-        { symbol: 'TPCC', marketCap: 900, change: 0.2 },
-        { symbol: 'DSE', marketCap: 150, change: 0.0 },
-        { symbol: 'TCCL', marketCap: 120, change: 1.3 },
-        { symbol: 'SWIS', marketCap: 100, change: 0.4 },
-        { symbol: 'DCB', marketCap: 80, change: 14.0 },
-        { symbol: 'TTP', marketCap: 70, change: 11.1 },
-        { symbol: 'KA', marketCap: 70, change: 9.1 },
-        { symbol: 'PAL', marketCap: 60, change: -7.2 },
-        { symbol: 'MUCOBA', marketCap: 60, change: -1.1 },
-        { symbol: 'AFRIPRISE', marketCap: 60, change: -0.8 }
+        const data = [
+        { symbol: 'NMB', marketCap: 2675, change: 0.0 },
+        { symbol: 'TBL', marketCap: 3200, change: 0.2 },
+        { symbol: 'CRDB', marketCap: 1515, change: 0.0 },
+        { symbol: 'VODA', marketCap: 1200, change: 0.0 },
+        { symbol: 'TPCC', marketCap: 900, change: 0.0 },
+        { symbol: 'NICO', marketCap: 700, change: -2.3 },
+        { symbol: 'KCB', marketCap: 380, change: -0.5 },
+        { symbol: 'TCCL', marketCap: 120, change: 7.8 },
+        { symbol: 'TOL', marketCap: 85, change: 2.4 },
+        { symbol: 'SWIS', marketCap: 100, change: 1.6 },
+        { symbol: 'DCB', marketCap: 80, change: -11.2 },
+        { symbol: 'MBP', marketCap: 65, change: 1.1 },
+        { symbol: 'MCB', marketCap: 62, change: -1.1 },
+        { symbol: 'AFRIPRISE', marketCap: 60, change: 0.8 },
+        { symbol: 'MKCB', marketCap: 55, change: -0.8 }
     ];
 
     const totalCap = data.reduce((sum, item) => sum + item.marketCap, 0);
