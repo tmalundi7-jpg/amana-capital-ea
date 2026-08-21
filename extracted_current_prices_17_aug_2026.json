@@ -1,0 +1,227 @@
+{
+  "source_document": "C:\\Users\\tmalu\\Documents\\Current Prices 17 August 2026.docx",
+  "timestamp_label": "Current Prices — End-of-Day, Monday 17th August 2026",
+  "report_date": "Monday 17th August 2026",
+  "columns": [
+    "ticker",
+    "company",
+    "sector",
+    "last_price_tzs",
+    "change_pct",
+    "volume",
+    "turnover_tzs"
+  ],
+  "total_records": 21,
+  "prices": [
+    {
+      "ticker": "AFRIPRISE",
+      "company": "African Pride",
+      "sector": "Commercial Services",
+      "last_price_tzs": "620",
+      "change_pct": "–0.8%",
+      "volume": "84,208",
+      "turnover_tzs": "52,396,820"
+    },
+    {
+      "ticker": "CRDB",
+      "company": "CRDB Bank",
+      "sector": "Banks & Finance",
+      "last_price_tzs": "2,690",
+      "change_pct": "–0.4%",
+      "volume": "331,433",
+      "turnover_tzs": "890,288,340"
+    },
+    {
+      "ticker": "DCB",
+      "company": "Dar es Salaam Community Bank",
+      "sector": "Banks & Finance",
+      "last_price_tzs": "530",
+      "change_pct": "+14.0%",
+      "volume": "973,402¹",
+      "turnover_tzs": "363,617,115"
+    },
+    {
+      "ticker": "DSE",
+      "company": "Dar es Salaam Stock Exchange",
+      "sector": "Commercial Services",
+      "last_price_tzs": "6,570",
+      "change_pct": "0.0%",
+      "volume": "3,035",
+      "turnover_tzs": "19,949,900"
+    },
+    {
+      "ticker": "KA",
+      "company": "Kenya Airways (cross-listed)",
+      "sector": "Commercial Services",
+      "last_price_tzs": "120",
+      "change_pct": "+9.1%",
+      "volume": "—",
+      "turnover_tzs": "—"
+    },
+    {
+      "ticker": "KCB",
+      "company": "KCB Group (cross-listed)",
+      "sector": "Banks & Finance",
+      "last_price_tzs": "1,960",
+      "change_pct": "+0.5%",
+      "volume": "11,884",
+      "turnover_tzs": "23,251,230"
+    },
+    {
+      "ticker": "MBP",
+      "company": "Maendeleo Bank",
+      "sector": "Banks & Finance",
+      "last_price_tzs": "1,690",
+      "change_pct": "+0.6%",
+      "volume": "1,492",
+      "turnover_tzs": "2,519,700"
+    },
+    {
+      "ticker": "MCB",
+      "company": "Mwanga Community Bank",
+      "sector": "Banks & Finance",
+      "last_price_tzs": "405",
+      "change_pct": "0.0%",
+      "volume": "232,253",
+      "turnover_tzs": "93,664,355"
+    },
+    {
+      "ticker": "MKCB",
+      "company": "Mkamba Commercial Bank",
+      "sector": "Banks & Finance",
+      "last_price_tzs": "3,780",
+      "change_pct": "+0.5%",
+      "volume": "3,963",
+      "turnover_tzs": "14,962,900"
+    },
+    {
+      "ticker": "MUCOBA",
+      "company": "Mucoba Bank",
+      "sector": "Banks & Finance",
+      "last_price_tzs": "450",
+      "change_pct": "–1.1%",
+      "volume": "1,072",
+      "turnover_tzs": "482,400"
+    },
+    {
+      "ticker": "NICO",
+      "company": "NICO Holdings",
+      "sector": "Banks & Finance",
+      "last_price_tzs": "3,990",
+      "change_pct": "+4.5%",
+      "volume": "35,852",
+      "turnover_tzs": "143,267,160"
+    },
+    {
+      "ticker": "NMB",
+      "company": "NMB Bank",
+      "sector": "Banks & Finance",
+      "last_price_tzs": "17,710",
+      "change_pct": "+0.1%",
+      "volume": "168,490",
+      "turnover_tzs": "2,983,673,110"
+    },
+    {
+      "ticker": "PAL",
+      "company": "Pal Holdings",
+      "sector": "Industrials",
+      "last_price_tzs": "320",
+      "change_pct": "–7.2%",
+      "volume": "3,496",
+      "turnover_tzs": "1,127,460"
+    },
+    {
+      "ticker": "SWIS",
+      "company": "Swissport Tanzania",
+      "sector": "Commercial Services",
+      "last_price_tzs": "2,580",
+      "change_pct": "+0.4%",
+      "volume": "2,112",
+      "turnover_tzs": "5,456,080"
+    },
+    {
+      "ticker": "TBL",
+      "company": "Tanzania Breweries",
+      "sector": "Industrials",
+      "last_price_tzs": "9,940",
+      "change_pct": "+0.1%",
+      "volume": "3,745",
+      "turnover_tzs": "37,214,950"
+    },
+    {
+      "ticker": "TCC",
+      "company": "Tanga Cement",
+      "sector": "Industrials",
+      "last_price_tzs": "12,580",
+      "change_pct": "+0.6%",
+      "volume": "757",
+      "turnover_tzs": "9,517,700"
+    },
+    {
+      "ticker": "TCCL",
+      "company": "Tanzania Cigarette Company",
+      "sector": "Industrials",
+      "last_price_tzs": "4,000",
+      "change_pct": "+1.3%",
+      "volume": "1,600",
+      "turnover_tzs": "6,400,000"
+    },
+    {
+      "ticker": "TOL",
+      "company": "TOL Gases",
+      "sector": "Industrials",
+      "last_price_tzs": "1,500",
+      "change_pct": "+0.7%",
+      "volume": "2,549",
+      "turnover_tzs": "3,833,730"
+    },
+    {
+      "ticker": "TPCC",
+      "company": "Tanga Portland Cement",
+      "sector": "Industrials",
+      "last_price_tzs": "6,060",
+      "change_pct": "+0.2%",
+      "volume": "3,232",
+      "turnover_tzs": "19,596,980"
+    },
+    {
+      "ticker": "TTP",
+      "company": "Tatepa Public Limited Company",
+      "sector": "Commercial Services",
+      "last_price_tzs": "500",
+      "change_pct": "+11.1%",
+      "volume": "1,580",
+      "turnover_tzs": "786,030"
+    },
+    {
+      "ticker": "VODA",
+      "company": "Vodacom Tanzania",
+      "sector": "Commercial Services",
+      "last_price_tzs": "1,030",
+      "change_pct": "+1.0%",
+      "volume": "90,892",
+      "turnover_tzs": "93,578,110"
+    }
+  ],
+  "footnotes": [
+    "¹ Includes a 760,000-share block trade. Normal-board volume was 213,402 shares.Change (%) calculated from opening to closing price. Counters with no opening price or zero trades (EABL, JATU, JHL, NMG, SWALA, USL, YETU) are omitted."
+  ],
+  "omitted_counters": [
+    "EABL",
+    "JATU",
+    "JHL",
+    "NMG",
+    "SWALA",
+    "USL",
+    "YETU"
+  ],
+  "extraction_notes": {
+    "omission_reason": "Counters with no opening price or zero trades omitted as stated in source footnote",
+    "null_fields": [
+      "KA.volume = '—'",
+      "KA.turnover_tzs = '—'"
+    ],
+    "dash_meaning": "'—' in volume/turnover = no trade recorded for that counter",
+    "values_reformat": "None — all values extracted verbatim"
+  }
+}

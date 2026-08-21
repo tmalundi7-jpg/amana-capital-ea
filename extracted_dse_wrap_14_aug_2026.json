@@ -1,0 +1,120 @@
+{
+    "report_date": "Friday, 14th August 2026",
+    "live_snapshot": {
+        "Metric": "Thursday 13 Aug",
+        "DSEI": "4,228.80",
+        "TSI": "9,299.64",
+        "Equity Turnover": "TZS 4.26 bn",
+        "Shares Traded": "1,103,276",
+        "Deals": "2,887",
+        "Bond Turnover": "TZS 14.47 bn",
+        "ETF Turnover": "TZS 58.56 mn",
+        "Foreign Buying": "0.29%",
+        "Foreign Selling": "37.68%"
+    },
+    "heatmap": [
+        {
+            "ticker": "NMB",
+            "price": "17,700",
+            "change": "+0.3%",
+            "volume": "202,667\u00b9"
+        },
+        {
+            "ticker": "TPCC",
+            "price": "6,050",
+            "change": "+1.7%",
+            "volume": "252,884\u00b2"
+        },
+        {
+            "ticker": "TCCL",
+            "price": "3,950",
+            "change": "+1.3%",
+            "volume": "200,840\u00b3"
+        },
+        {
+            "ticker": "VODA",
+            "price": "1,020",
+            "change": "+1.0%",
+            "volume": "123,675"
+        },
+        {
+            "ticker": "NICO",
+            "price": "3,820",
+            "change": "+4.9%",
+            "volume": "26,571"
+        },
+        {
+            "ticker": "CRDB",
+            "price": "2,700",
+            "change": "0.0%",
+            "volume": "390,325"
+        },
+        {
+            "ticker": "KCB",
+            "price": "1,950",
+            "change": "\u20131.0%",
+            "volume": "22,888"
+        },
+        {
+            "ticker": "MCB",
+            "price": "405",
+            "change": "\u20138.0%",
+            "volume": "189,296"
+        },
+        {
+            "ticker": "TBL",
+            "price": "9,940",
+            "change": "\u20130.1%",
+            "volume": "1,444"
+        }
+    ],
+    "daily_wrap_content": [
+        "Daily DSE Wrap | Friday, 14th August 2026",
+        "Block Trades Lift Turnover as NMB Reaches a New High and Foreign Selling Fails to Shake the Market",
+        "The Dar es Salaam Stock Exchange closed the week on a strong note, with the All-Share Index rising for a second consecutive session to 4,232.85. A series of large pre-arranged block trades boosted overall activity, while NMB touched a fresh record high. Crucially, the market advanced even as foreign investors sold into the strength \u2014 clear evidence that local institutions and retail buyers now set the tone.",
+        "1. Market Snapshot",
+        "Equity turnover jumped by 70%, driven mainly by three pre-arranged block trades: NMB (55,947 shares), TCCL (200,000 shares), and TPCC (250,000 shares, worth roughly TZS 1.5 billion). Normal-board trading also remained active, with nearly 2,900 deals spread across the market.",
+        "Foreign selling eased from Thursday\u2019s sharp spike but remained substantial at 19.6% of turnover. Despite this, the index moved higher \u2014 a sign that local investors are absorbing the supply without difficulty. The market has clearly transitioned into a domestically driven phase, where international flows no longer dictate daily direction.",
+        "2. Top Movers",
+        "\u00b9 Includes a 55,947-share block trade. \u00b2 Includes a 250,000-share block trade. \u00b3 Includes a 200,000-share block trade.",
+        "Gainers: NICO (+4.9%), TPCC (+1.7%), TCCL (+1.3%), VODA (+1.0%), NMB (+0.3%).\nLosers: MCB (\u20138.0%), KCB (\u20131.0%), TBL (\u20130.1%).",
+        "NMB climbed to a new all-time high of 17,700, touching 17,950 during the session, as the market positions ahead of the expected ex-dividend date for the approved TZS 610.15 per share dividend. TPCC rose on the back of a large block trade, reflecting institutional interest in the cement manufacturer. VODA ticked up to 1,020, continuing its steady recovery, while CRDB held firm at 2,700 after Thursday\u2019s strong gain.",
+        "On the downside, MCB fell sharply on heavy volume, giving back some of its recent rebound \u2014 a reminder that smaller, less liquid counters can move rapidly. KCB eased after the previous day\u2019s surge, but the pullback was modest.",
+        "3. In Focus: Block Trades and the Power of Local Demand",
+        "Friday\u2019s three large block trades \u2014 in NMB, TCCL, and TPCC \u2014 highlight a key feature of the modern DSE: when large institutions need to move shares, they do so privately, away from the open market, and the local investor base absorbs the impact.",
+        "A block trade is a privately negotiated transaction between two institutions, typically executed on the exchange\u2019s pre-arranged board. It allows a seller to offload a large position without flooding the order book and crashing the price. The fact that these trades occurred at prices close to the prevailing market level, and that the broader index still rose, indicates that demand from Tanzanian pension funds, insurance companies, and retail investors is deep enough to absorb institutional selling.",
+        "This is a dramatic change from the first half of 2026, when foreign investors were consistently net sellers and local buying was insufficient to prevent sharp declines. The market has since absorbed the largest ownership transfers in its history, and the results are now visible: a stable, locally anchored exchange that can weather external pressure without panic.",
+        "For the everyday investor, a block trade is not a signal to buy or sell. It is simply one part of the market\u2019s daily mechanics. The more important lesson is that a market with deep domestic demand is fundamentally safer and more predictable than one that depends on international capital flows.",
+        "To understand how block trades work, see our guide How a Trade Happens: From Your Phone to the Market.",
+        "4. Today\u2019s Concept: The 5% Daily Price Band \u2014 Your Safety Net",
+        "On Friday, CRDB closed at 2,700. That means on Monday, 17 August, the stock cannot trade at any price outside a band of \u00b15% around that closing level. The limits are:",
+        "Upper limit: 2,700 \u00d7 1.05 = 2,835",
+        "Lower limit: 2,700 \u00d7 0.95 = 2,565",
+        "Any order to buy above 2,835 or to sell below 2,565 will be automatically rejected by the DSE\u2019s trading system. This rule applies to every actively traded stock, with a wider 15% band for a few smaller counters.",
+        "Based on Friday\u2019s closing prices, here are the allowed trading ranges for Monday, 17 August 2026, for widely held stocks:",
+        "\u00b9 DCB trades under a wider 15% band; the table shows 15% limits. Some smaller counters may have different bands \u2014 always confirm with your broker or the DSE.",
+        "This mechanism ensures that even the largest trades occur in an orderly fashion. For you as an investor, it is a practical tool: before placing any order, check the previous day\u2019s close, calculate the band, and set your limit within it. This prevents the frustration of submitting orders that the exchange will automatically reject.",
+        "For a deeper explanation of market data, read our article Understanding Market Data.",
+        "5. Bond Market: A Quiet Week for Fixed Income",
+        "Government bond turnover fell to TZS 5.22 billion, the lowest of the week, as institutions took a breather after several active sessions. The 10-year 11.44% bond and the 20-year 12.25% bond were the most traded instruments, with yields ranging from about 9.3% to 13.6%, all free of withholding tax.",
+        "The bond market remains a deep, liquid alternative for investors seeking predictable, long-term income. Even on quieter days, the underlying demand from pension funds and insurance companies remains intact, providing a stable floor for the fixed-income market.",
+        "6. Strategic Outlook: What to Anticipate",
+        "Near-Term (August):",
+        "The market has built a solid base above 4,200. With local buying absorbing foreign sales comfortably, further gradual gains are possible, though volumes may remain uneven.",
+        "NMB is at an all-time high. The ex-dividend date for the approved TZS 610.15 dividend is overdue and could be announced at any time. When it is, the share price may adjust downward by an amount roughly equal to the dividend \u2014 a normal, mechanical process.",
+        "CRDB held the 2,700 level after Thursday\u2019s rally, confirming that buying interest remains at these prices. A sustained move above 2,720 would signal a stronger recovery.",
+        "VODA continues to trade near 1,020, with support visible around 1,000. The stock appears to be stabilising after its late-July surge.",
+        "Medium-Term (Q3 2026):",
+        "The Bank of Tanzania\u2019s steady policy stance remains supportive of both equities and bonds. Any change in the benchmark interest rate would be the most significant macroeconomic event.",
+        "The implementation of the government\u2019s infrastructure spending will directly benefit cement, construction, and logistics companies, including TPCC and TCCL.",
+        "Long-Term:\nThe DSE\u2019s ability to advance despite foreign selling in four of the last five sessions is a powerful indicator of structural change. A market that can rely on its own domestic capital is far more resilient than one that must wait for international investors to return. For the patient, long-term investor, this is the foundation on which sustainable wealth is built.",
+        "7. Professional Approach: How to Use This Intelligence",
+        "Pair the Daily Wrap with our education series. If the block-trade or price-band concepts are new to you, read How a Trade Happens and Understanding Market Data.",
+        "Maintain a diversified portfolio. Spread your capital across banks, industrials, consumer goods, and bonds.",
+        "Think in years, not days. Daily rallies and foreign selling spikes are part of normal market behaviour. The steady, compounding growth of well-managed companies over many years is what builds real wealth.",
+        "Remember that all investments carry risk. Never invest money you cannot afford to lose, and always do your own research.",
+        "8. Considerations for a Multi-Year Framework",
+        "A market that rises on a day when foreign investors are net sellers, and that handles three block trades without disruption, is a market that has come of age. The handover of ownership from foreign to local hands \u2014 completed over the past two months \u2014 has created a more stable, more predictable exchange. For the multi-year investor, this transformation is the real story: the DSE is no longer a market that panics when international capital leaves; it is a market that stands on its own two feet.",
+        "For general informational and educational purposes only; not financial, legal, or tax advice. All investment decisions are solely your responsibility. Capital is at risk, and past performance does not guarantee future results. Amana Capital East Africa Limited registration under CMSA, Tanzania is pending. Registration does not imply CMSA endorsement"
+    ]
+}

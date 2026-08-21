@@ -1,0 +1,162 @@
+Daily DSE Wrap | Wednesday, 19th August 2026
+Market Holds Firm as Block Trades Continue and Local Investors Anchor Trading
+The Dar es Salaam Stock Exchange extended its winning streak on Wednesday, with the AllShare Index climbing to 4,255.50 — a fresh postcorrection high. A series of prearranged block trades in CRDB, KCB, and the iTrust ETF lifted overall activity, while local investors absorbed continued foreign selling without flinching. The market’s resilience is a clear sign that the ownership base has shifted decisively to domestic institutions.
+
+1. Market Snapshot
+Metric
+Tuesday 18 Aug
+Wednesday 19 Aug
+Change
+DSEI
+4,238.03
+4,255.50
++17.47 pts (+0.4%)
+TSI
+9,315.05
+9,327.78
++12.73 pts
+Equity Turnover
+TZS 6.84 bn
+TZS 7.15 bn
++4.5%
+Shares Traded
+1,502,194
+1,713,650
++14.1%
+Deals
+3,633
+3,739
++2.9%
+Bond Turnover
+TZS 10.34 bn
+TZS 8.94 bn
+–13.5%
+ETF Turnover
+TZS 59.24 mn
+TZS 730.56 mn¹
+—
+Foreign Buying
+0.15%
+0.04%
+—
+Foreign Selling
+0.03%
+22.28%
+—
+¹ Includes a 362,785share block trade in IEACLCETF.
+Equity turnover remained strong, supported by three prearranged block trades: CRDB (150,000 shares), KCB (253,019 shares), and the IEACLCETF (362,785 shares). Normalboard activity was also healthy, with nearly 3,740 deals recorded, indicating broad participation from retail and local institutional investors.
+Foreign buying was negligible, while foreign selling accounted for 22.3% of turnover — a notable increase from the previous session. Despite this outflow, the index rose. The market’s ability to absorb foreign selling without price weakness is the clearest evidence yet that the DSE is now anchored by patient, domestic capital.
+
+2. Top Movers
+Ticker
+Closing Price (TZS)
+Change
+Volume
+DCB
+625
++4.2%
+147,388
+TOL
+1,690
++6.9%
+22,976
+MBP
+1,770
++9.9%
+6,814
+MCB
+450
++7.1%
+80,848
+VODA
+1,030
+0.0%
+136,376
+CRDB
+2,690
+0.0%
+705,744¹
+KCB
+1,980
+0.0%
+268,872²
+NMB
+17,700
+0.0%
+238,991
+TBL
+9,870
++0.7%
+1,511
+TCCL
+3,710
+–3.9%
+2,798
+¹ Includes a 150,000share block trade. ² Includes a 253,019share block trade.
+Gainers: MBP (+9.9%), MCB (+7.1%), TOL (+6.9%), DCB (+4.2%).Losers: TCCL (–3.9%), AFRIPRISE (–1.6%), TPCC (–0.5%), NICO (–0.5%).
+DCB continued its remarkable run, rising another 4.2% to 625, though the pace of gains has slowed from the previous two days. TOL Gases also climbed sharply on moderate volume, while MBP and MCB posted strong percentage gains. Among the larger, widely held stocks, CRDB, VODA, NMB, and KCB were all essentially flat, consolidating after recent moves. The market’s gains were driven more by small and midsized counters than by the blue chips, a sign that local investors are broadening their participation.
+
+3. In Focus: Block Trades and the 5% Daily Price Band
+Wednesday’s block trades — including 150,000 CRDB shares and 253,019 KCB shares — were absorbed quietly, with the broader market rising. This is a testament to the depth of local institutional liquidity. A block trade is a privately negotiated transaction between two large institutions, reported on the prearranged board and executed away from the open market. It allows a seller to exit a large position without flooding the order book, and it gives the buyer a stable entry point. For the everyday investor, a block trade is not a signal to buy or sell; it is simply part of the market’s daily mechanics.
+The 5% daily price band also plays a crucial role in keeping trading orderly. On Wednesday, CRDB closed at 2,690. On Thursday, 20 August, the stock cannot trade at any price outside a band of ±5% around that level. The limits are:
+Upper limit: 2,690 × 1.05 = 2,824.50
+Lower limit: 2,690 × 0.95 = 2,555.50
+Any order to buy above 2,824.50 or to sell below 2,555.50 will be automatically rejected by the DSE’s trading system. This mechanism ensures that even the largest trades do not produce panicdriven price swings.
+Based on Wednesday’s closing prices, here are the allowed trading ranges for Thursday, 20 August 2026, for widely held stocks:
+Counter
+Wednesday Close (TZS)
+Thursday Upper Limit (TZS)
+Thursday Lower Limit (TZS)
+CRDB
+2,690
+2,824.50
+2,555.50
+NMB
+17,700
+18,585.00
+16,815.00
+VODA
+1,030
+1,081.50
+978.50
+KCB
+1,980
+2,079.00
+1,881.00
+TBL
+9,870
+10,363.50
+9,376.50
+DCB¹
+625
+718.75
+531.25
+¹ DCB trades under a wider 15% band; the table shows 15% limits. Some smaller counters may have different bands — always confirm with your broker or the DSE.
+Before placing any order, checking the previous day’s close and calculating the allowed band takes only a moment. It ensures your order is executable from the second you place it, and it prevents the frustration of setting a price the market simply cannot reach that day.
+For a complete guide to interpreting market data, read our article Understanding Market Data.
+
+4. Bond Market: Steady Demand for LongTerm Paper
+Government bond turnover was a healthy TZS 8.94 billion, with the 25year 13.25% bond continuing to attract the most interest. Institutions bought this paper at prices ranging from about 114% to 125% of face value, locking in yields of roughly 10.5% to 13.4%, all free of withholding tax. The 20year 15.49% highcoupon bond also saw notable activity. The bond market remains a deep, liquid alternative for pension funds and insurance companies seeking predictable, taxfree income, and its continued strength alongside a rising equity market underscores the depth of local capital.
+
+5. Strategic Outlook: What to Anticipate
+NearTerm (August):
+The market has built a solid base above 4,250. With local buying absorbing foreign sales comfortably, further gradual gains are possible, though the pace may remain uneven.
+NMB is at an alltime high. The exdividend date for the approved TZS 610.15 dividend is overdue and could be announced at any time. When it is, the share price may adjust downward by an amount roughly equal to the dividend — a normal, mechanical process.
+CRDB held the 2,690 level after several sessions of consolidation, confirming that buying interest remains at these prices. A sustained move above 2,720 would signal a stronger recovery.
+VODA continues to trade near 1,030, with support visible around 1,010 and resistance near 1,040. The stock appears to be stabilising after its lateJuly surge.
+MediumTerm (Q3 2026):
+The Bank of Tanzania’s steady policy stance remains supportive of both equities and bonds. Any change in the benchmark interest rate would be the most significant macroeconomic event.
+The implementation of the government’s infrastructure spending will directly benefit cement, construction, and logistics companies, including TPCC and TCCL.
+LongTerm:The DSE’s ability to advance despite foreign selling in most recent sessions is a powerful indicator of structural change. A market that can rely on its own domestic capital is far more resilient than one that must wait for international investors to return. For the patient, longterm investor, this is the foundation on which sustainable wealth is built.
+
+6. Professional Approach: How to Use This Intelligence
+Combine the Daily Wrap with our education series. If the blocktrade or priceband concepts are new to you, read How a Trade Happens and Understanding Market Data.
+Maintain a diversified portfolio. Spread your capital across banks, industrials, consumer goods, and bonds.
+Think in years, not days. Daily rallies and foreign selling spikes are part of normal market behaviour. The steady, compounding growth of wellmanaged companies over many years is what builds real wealth.
+Remember that all investments carry risk. Never invest money you cannot afford to lose, and always do your own research.
+
+7. Considerations for a MultiYear Framework
+A market that rises on a day when foreign investors are net sellers, and that handles three block trades without disruption, is a market that has come of age. The handover of ownership from foreign to local hands — completed over the past two months — has created a more stable, more predictable exchange. For the multiyear investor, this transformation is the real story: the DSE is no longer a market that panics when international capital leaves; it is a market that stands on its own two feet.
+
+For general informational and educational purposes only; not financial, legal, or tax advice. All investment decisions are solely your responsibility. Capital is at risk, and past performance does not guarantee future results. Amana Capital East Africa Limited registration under CMSA, Tanzania is pending. Registration does not imply CMSA endorsement.
+

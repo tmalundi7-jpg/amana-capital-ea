@@ -1,0 +1,157 @@
+Current Prices — End-of-Day, Wednesday 19th August 2026
+Ticker
+Company
+Sector
+Last Price (TZS)
+Change (%)
+Volume
+Turnover (TZS)
+AFRIPRISE
+African Pride
+Commercial Services
+615
+–1.6%
+61,997
+38,287,835
+CRDB
+CRDB Bank
+Banks & Finance
+2,690
++0.4%
+705,744¹
+1,900,379,800
+DCB
+Dar es Salaam Community Bank
+Banks & Finance
+625
++4.2%
+147,388
+92,207,390
+DSE
+Dar es Salaam Stock Exchange
+Commercial Services
+6,540
++1.6%
+1,398
+9,138,520
+JATU
+Jatu Plc
+Commercial Services
+270
++1.9%
+360
+97,200
+KCB
+KCB Group (cross-listed)
+Banks & Finance
+1,980
+0.0%
+268,872²
+524,777,540
+MBP
+Maendeleo Bank
+Banks & Finance
+1,770
++9.9%
+6,814
+12,059,620
+MCB
+Mwanga Community Bank
+Banks & Finance
+450
++7.1%
+80,848
+36,274,390
+MKCB
+Mkamba Commercial Bank
+Banks & Finance
+3,770
++1.3%
+1,897
+7,151,920
+MUCOBA
+Mucoba Bank
+Banks & Finance
+450
+0.0%
+390
+174,900
+NICO
+NICO Holdings
+Banks & Finance
+4,000
+–0.5%
+13,540
+54,203,480
+NMB
+NMB Bank
+Banks & Finance
+17,700
+0.0%
+238,991
+4,229,030,080
+PAL
+Pal Holdings
+Industrials
+305
+–4.7%
+14,297
+4,405,535
+SWIS
+Swissport Tanzania
+Commercial Services
+2,560
+0.0%
+3,085
+7,901,400
+TBL
+Tanzania Breweries
+Industrials
+9,870
++0.7%
+1,511
+14,892,450
+TCC
+Tanga Cement
+Industrials
+12,520
+0.0%
+285
+3,522,500
+TCCL
+Tanzania Cigarette Company
+Industrials
+3,710
+–3.9%
+2,798
+10,426,130
+TOL
+TOL Gases
+Industrials
+1,690
++7.0%
+22,976
+38,835,920
+TPCC
+Tanga Portland Cement
+Industrials
+6,000
+–0.5%
+3,878
+23,280,940
+TTP
+Tatepa Public Limited Company
+Commercial Services
+500
+0.0%
+205
+99,320
+VODA
+Vodacom Tanzania
+Commercial Services
+1,030
+0.0%
+136,376
+140,276,310
+¹ Includes a 150,000-share block trade. ² Includes a 253,019-share block trade.Change (%) calculated from opening to closing price. Counters with no opening price or zero trades are omitted.
+

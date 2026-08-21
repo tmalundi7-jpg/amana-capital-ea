@@ -1,0 +1,66 @@
+============================================================
+DSE HOMEPAGE UPDATE REPORT -- 17 AUGUST 2026
+Run at: 2026-08-18 08:46:13
+============================================================
+
+SOURCE DOCUMENT:
+  C:\Users\tmalu\Documents\Daily DSE Wrap 17 August 2026.docx
+
+TARGET FILE (LOCAL ONLY -- NOT DEPLOYED):
+  C:\Users\tmalu\.gemini\antigravity\scratch\Amana-capital-ea\index.html
+  Backup: C:\Users\tmalu\.gemini\antigravity\scratch\Amana-capital-ea\index.html.bak_17aug
+
+EXTRACTED FIELD VALUES:
+  report_date          : 2026-08-18
+  dsei_end_of_day      : 4,232.85
+  daily_turnover       : TZS 7.25 bn
+  top_mover.name       : DCB
+  top_mover.price      : 530
+  top_mover.change     : +14.0%
+  dse_listed_companies : 28 (preserved -- not in source)
+  snapshot.dsei        : 4,232.85
+  snapshot.tsi         : 9,331.91
+  snapshot.turnover    : TZS 7.25 bn
+  snapshot.gainers[0]  : DCB +14.0% @ TZS 530
+  snapshot.gainers[1]  : NICO +4.5% @ TZS 3,990
+  snapshot.gainers[2]  : VODA +1.0% @ TZS 1,030
+  snapshot.losers[0]   : PAL -7.25% @ TZS 320
+  snapshot.losers[1]   : MUCOBA -1.10% @ TZS 455
+  snapshot.losers[2]   : CRDB -0.37% @ TZS 2,690
+  wrap.dsei            : 4,232.85
+  wrap.turnover        : TZS 7.25 bn
+  wrap.top_gainer.name : DCB
+
+JSON FILE:
+  C:\Users\tmalu\.gemini\antigravity\scratch\Amana-capital-ea\extracted_dse_data.json
+
+FIELDS UPDATED IN index.html:
+  [OK] UPDATED : Hero: DSEI End of Day
+  [OK] UPDATED : Hero: Daily Turnover
+  [OK] UPDATED : Hero: Top Mover
+  [OK] UPDATED : Hero: Top Mover date badge
+  [OK] PRESERVED: DSE Listed Companies (not in daily wrap -- kept at 28)
+  [OK] UPDATED : Snapshot: header date
+  [OK] UPDATED : Snapshot: DSEI
+  [OK] UPDATED : Snapshot: TSI
+  [OK] UPDATED : Snapshot: Turnover
+  [OK] UPDATED : Snapshot: Top Gainers
+  [OK] UPDATED : Snapshot: Top Losers
+  [OK] UPDATED : Snapshot: footer note date
+  [OK] UPDATED : Wrap Teaser: DSEI stat
+  [OK] UPDATED : Wrap Teaser: Turnover stat
+  [OK] UPDATED : Wrap Teaser: Top Gainer stat
+
+FIELDS SKIPPED:
+  None -- all patterns matched.
+
+EXTRA CONTENT ADDED      : None
+LAYOUT/CSS MODIFIED      : No
+OTHER SECTIONS CHANGED   : No
+
+EVIDENCE FOLDER:
+  C:\Users\tmalu\.gemini\antigravity\scratch\Amana-capital-ea\update_evidence
+  (browser screenshots pending -- see Prompt 2)
+
+STATUS: LOCAL UPDATE COMPLETE -- AWAITING PROMPT 2 VERIFICATION BEFORE DEPLOYMENT
+============================================================

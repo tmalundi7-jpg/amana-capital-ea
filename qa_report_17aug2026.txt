@@ -1,0 +1,34 @@
+QA VERIFICATION REPORT  |  17 August 2026 DSE Homepage Update
+=================================================================
+
+  [PASS]  DSEI — End of Day (hero)
+  [PASS]  Daily Turnover (hero)
+  [PASS]  Top Mover name+change (hero)
+  [PASS]  Date badge on hero
+  [PASS]  DSE Listed Companies (hero)
+  [PASS]  Snapshot header date
+  [PASS]  Snapshot DSEI
+  [PASS]  Snapshot TSI
+  [PASS]  Snapshot Turnover
+  [PASS]  Snapshot Top Gainer 1 name
+  [PASS]  Snapshot Top Gainer 1 change
+  [PASS]  Snapshot Top Gainer 2 name
+  [PASS]  Snapshot Top Gainer 2 change
+  [PASS]  Snapshot Top Gainer 3 name
+  [PASS]  Snapshot Top Gainer 3 change
+  [PASS]  Snapshot Top Loser 1 name
+  [PASS]  Snapshot Top Loser 1 change
+  [PASS]  Snapshot Top Loser 2 name
+  [PASS]  Snapshot Top Loser 2 change
+  [PASS]  Snapshot Top Loser 3 name
+  [PASS]  Snapshot Top Loser 3 change
+  [PASS]  Snapshot footer date
+  [PASS]  Wrap teaser date line
+  [PASS]  Wrap teaser DSEI stat
+  [PASS]  Wrap teaser Turnover stat
+  [PASS]  Wrap teaser Top Gainer stat
+  [PASS]  Old date (14 Aug) absent from snapshot
+  [PASS]  Old date (14 Aug) absent from hero
+
+Total: 28   Passed: 28   Failed: 0
+Overall Result: PASS

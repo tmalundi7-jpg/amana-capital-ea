@@ -1,0 +1,250 @@
+{
+  "source_document": "C:\\Users\\tmalu\\Documents\\Daily DSE Wrap 17 August 2026.docx",
+  "report_date": "Monday, 17th August 2026",
+  "headline": {
+    "title": "Daily DSE Wrap | Monday, 17th August 2026",
+    "subtitle": "NMB Touches 18,000 as Local Investors Absorb Continued Foreign Selling",
+    "lede": "The Dar es Salaam Stock Exchange opened the new week on a positive note, with the AllShare Index advancing to 4,248.98 — its highest level in over a month. The session was highlighted by a large prearranged trade in DCB, a fresh alltime intraday high for NMB, and continued evidence that local investors are fully absorbing whatever foreign institutions choose to sell. The market’s resilience tells a clear story: the ownership of Tanzania’s listed companies is now firmly anchored at home."
+  },
+  "headline_figures": {
+    "DSEI": "4,248.98",
+    "TSI": "9,349.59",
+    "equity_turnover": "TZS 4.77 bn",
+    "shares_traded": "1,957,047",
+    "deals": "3,881",
+    "bond_turnover": "TZS 1.27 bn",
+    "etf_turnover": "TZS 158.85 mn",
+    "foreign_buying": "0.23%",
+    "foreign_selling": "32.49%"
+  },
+  "live_dse_snapshot": {
+    "columns": [
+      "Metric",
+      "Friday 14 Aug (previous)",
+      "Monday 17 Aug (current)",
+      "Change"
+    ],
+    "note": "Current session = Monday 17 August 2026",
+    "metrics": {
+      "DSEI": {
+        "previous_session": "4,232.85",
+        "current_session": "4,248.98",
+        "change": "+16.13 pts (+0.4%)"
+      },
+      "TSI": {
+        "previous_session": "9,331.91",
+        "current_session": "9,349.59",
+        "change": "+17.68 pts"
+      },
+      "Equity Turnover": {
+        "previous_session": "TZS 7.25 bn",
+        "current_session": "TZS 4.77 bn",
+        "change": "–34.2%"
+      },
+      "Shares Traded": {
+        "previous_session": "1,539,849",
+        "current_session": "1,957,047",
+        "change": "+27.1%"
+      },
+      "Deals": {
+        "previous_session": "2,883",
+        "current_session": "3,881",
+        "change": "+34.6%"
+      },
+      "Bond Turnover": {
+        "previous_session": "TZS 5.22 bn",
+        "current_session": "TZS 1.27 bn",
+        "change": "–75.7%"
+      },
+      "ETF Turnover": {
+        "previous_session": "TZS 30.40 mn",
+        "current_session": "TZS 158.85 mn",
+        "change": "—"
+      },
+      "Foreign Buying": {
+        "previous_session": "0.24%",
+        "current_session": "0.23%",
+        "change": "—"
+      },
+      "Foreign Selling": {
+        "previous_session": "19.60%",
+        "current_session": "32.49%",
+        "change": "—"
+      }
+    }
+  },
+  "dse_market_heatmap": {
+    "note": "Top Movers table from wrap document",
+    "columns": [
+      "Ticker",
+      "Closing Price (TZS)",
+      "Change",
+      "Volume"
+    ],
+    "stocks": [
+      {
+        "Ticker": "DCB",
+        "Closing Price (TZS)": "530",
+        "Change": "+14.0%",
+        "Volume": "973,402¹"
+      },
+      {
+        "Ticker": "NICO",
+        "Closing Price (TZS)": "3,990",
+        "Change": "+4.5%",
+        "Volume": "35,852"
+      },
+      {
+        "Ticker": "VODA",
+        "Closing Price (TZS)": "1,030",
+        "Change": "+1.0%",
+        "Volume": "90,892"
+      },
+      {
+        "Ticker": "NMB",
+        "Closing Price (TZS)": "17,710",
+        "Change": "+0.1%",
+        "Volume": "168,490"
+      },
+      {
+        "Ticker": "CRDB",
+        "Closing Price (TZS)": "2,690",
+        "Change": "–0.4%",
+        "Volume": "331,433"
+      },
+      {
+        "Ticker": "TCC",
+        "Closing Price (TZS)": "12,580",
+        "Change": "+0.6%",
+        "Volume": "757"
+      },
+      {
+        "Ticker": "PAL",
+        "Closing Price (TZS)": "320",
+        "Change": "–7.2%",
+        "Volume": "3,496"
+      },
+      {
+        "Ticker": "MCB",
+        "Closing Price (TZS)": "405",
+        "Change": "0.0%",
+        "Volume": "232,253"
+      }
+    ],
+    "footnotes": [
+      "¹ DCB volume 973,402 includes a 760,000-share block trade. Normal-board volume was 213,402 shares."
+    ]
+  },
+  "price_bands_next_session": {
+    "note": "Trading limits for Tuesday 18 August 2026",
+    "columns": [
+      "Counter",
+      "Monday Close (TZS)",
+      "Tuesday Upper Limit (TZS)",
+      "Tuesday Lower Limit (TZS)"
+    ],
+    "bands": [
+      {
+        "Counter": "CRDB",
+        "Monday Close (TZS)": "2,690",
+        "Tuesday Upper Limit (TZS)": "2,824.50",
+        "Tuesday Lower Limit (TZS)": "2,555.50"
+      },
+      {
+        "Counter": "NMB",
+        "Monday Close (TZS)": "17,710",
+        "Tuesday Upper Limit (TZS)": "18,595.50",
+        "Tuesday Lower Limit (TZS)": "16,824.50"
+      },
+      {
+        "Counter": "VODA",
+        "Monday Close (TZS)": "1,030",
+        "Tuesday Upper Limit (TZS)": "1,081.50",
+        "Tuesday Lower Limit (TZS)": "978.50"
+      },
+      {
+        "Counter": "TBL",
+        "Monday Close (TZS)": "9,940",
+        "Tuesday Upper Limit (TZS)": "10,437.00",
+        "Tuesday Lower Limit (TZS)": "9,443.00"
+      },
+      {
+        "Counter": "TCC",
+        "Monday Close (TZS)": "12,580",
+        "Tuesday Upper Limit (TZS)": "13,209.00",
+        "Tuesday Lower Limit (TZS)": "11,951.00"
+      },
+      {
+        "Counter": "DCB¹",
+        "Monday Close (TZS)": "530",
+        "Tuesday Upper Limit (TZS)": "609.50",
+        "Tuesday Lower Limit (TZS)": "450.50"
+      }
+    ],
+    "footnotes": [
+      "¹ DCB trades under a wider 15% band; table shows 15% limits."
+    ]
+  },
+  "daily_wrap_content": [
+    "Daily DSE Wrap | Monday, 17th August 2026",
+    "NMB Touches 18,000 as Local Investors Absorb Continued Foreign Selling",
+    "The Dar es Salaam Stock Exchange opened the new week on a positive note, with the AllShare Index advancing to 4,248.98 — its highest level in over a month. The session was highlighted by a large prearranged trade in DCB, a fresh alltime intraday high for NMB, and continued evidence that local investors are fully absorbing whatever foreign institutions choose to sell. The market’s resilience tells a clear story: the ownership of Tanzania’s listed companies is now firmly anchored at home.",
+    "1. Market Snapshot",
+    "Equity turnover eased from Friday’s blockdriven surge, but the number of deals jumped by more than a third — a clear indication that retail and local institutional investors were active across a broad range of counters. A single prearranged block trade in DCB, covering 760,000 shares, accounted for a large part of the day’s volume and pushed the stock up by 14%.",
+    "Foreign selling picked up again, reaching 32.5% of equity turnover, yet the index rose. This is the signature of a market that has moved beyond its reliance on international capital: local buyers are absorbing every foreign share without panic, and prices are grinding steadily higher.",
+    "2. Top Movers",
+    "¹ Includes a 760,000share block trade. Normalboard volume was 213,402 shares.",
+    "Gainers: DCB (+14.0%), NICO (+4.5%), VODA (+1.0%), TCC (+0.6%), TTP (+11.1%).Losers: PAL (–7.2%), AFRIPRISE (–0.8%), MUCOBA (–1.1%), MCB (flat, after heavy selling).",
+    "DCB stole the show, jumping 14% on a massive block trade. Such a move in a smaller, less liquid counter is usually the result of a single institutional transfer rather than broad market conviction, and investors should be cautious about chasing it. Among the larger stocks, NMB touched 18,000 during the session — a fresh alltime high — before easing back to close at 17,710. VODA regained the 1,030 level, while CRDB held near 2,690. The broader market’s advance, despite the foreign selling, was supported by steady gains in NICO and other midsized financial counters.",
+    "3. In Focus: DCB’s Block Trade and the Power of Local Demand",
+    "The 760,000share DCB block trade is the largest single transaction in the stock in recent memory. Block trades like this are privately negotiated between large institutions and reported on the prearranged board, away from the open market. Their purpose is to allow a seller to offload a large position without flooding the order book and causing a sharp price collapse.",
+    "On Monday, the buyer — almost certainly a local institution — absorbed the entire block at a price that pushed DCB up 14%. That is a powerful statement: even in a smaller bank, there is enough domestic capital to absorb institutional supply and move the price higher. For the everyday investor, the lesson is not to chase the spike, but to understand that the market’s foundation is now built on patient, local hands. When foreign sellers appear, they are no longer met with panic; they are met with buyers who are in no hurry to sell again.",
+    "This same dynamic played out in the broader market. Foreign selling accounted for nearly a third of equity turnover, yet the AllShare Index rose. The DSE has reached a stage where international flows are just one part of the daily mix, not the dominant force they once were.",
+    "To learn more about how block trades work, see our guide How a Trade Happens: From Your Phone to the Market.",
+    "4. Today’s Concept: The 5% Daily Price Band — Your Safety Net",
+    "On Monday, CRDB closed at 2,690. On Tuesday, 18 August, the stock cannot trade at any price outside a band of ±5% around that closing level. The limits are:",
+    "Upper limit: 2,690 × 1.05 = 2,824.50",
+    "Lower limit: 2,690 × 0.95 = 2,555.50",
+    "Any order to buy above 2,824.50 or to sell below 2,555.50 will be automatically rejected by the DSE’s trading system. This rule applies to every actively traded stock, with a handful of smaller counters operating under a wider 15% band.",
+    "Based on Monday’s closing prices, here are the allowed trading ranges for Tuesday, 18 August 2026, for widely held stocks:",
+    "¹ DCB trades under a wider 15% band; the table shows 15% limits. Some smaller counters may have different bands — always confirm with your broker or the DSE.",
+    "This mechanism is one of the most practical tools available to investors. Before placing any order, checking the previous day’s closing price and calculating the allowed band takes only a moment. It ensures your order is executable from the second you place it, and it prevents the frustration of setting a price that the market simply cannot reach that day.",
+    "For a complete guide to interpreting market data, read our article Understanding Market Data.",
+    "5. Bond Market: A Quiet Day After a Busy August",
+    "Government bond turnover fell sharply to just TZS 1.27 billion — the lowest in weeks. Only the 25year 13.25% bond saw meaningful activity, trading at yields of roughly 10.7% to 11.6%, entirely free of withholding tax. After a period of heavy institutional accumulation in the bond market, institutions have temporarily stepped back. This is a natural lull rather than a change in the underlying demand for longterm, taxfree income. The bond market remains a deep and reliable alternative for investors seeking predictable returns.",
+    "6. Strategic Outlook: What to Anticipate",
+    "NearTerm (August):",
+    "The market’s upward drift continues, supported by domestic buying. The large block trades and foreign selling are being absorbed without difficulty, which suggests that any pullbacks are likely to be shallow.",
+    "NMB has reached a new alltime high. The exdividend date for the approved TZS 610.15 dividend is still pending and could be announced at any time. When it is, the share price may adjust downward by an amount roughly equal to the dividend — a normal, mechanical process.",
+    "VODA appears to have settled into a stable range between roughly 1,010 and 1,060, providing a predictable trading band.",
+    "CRDB continues to consolidate near the 2,690 level, with support around 2,670 and resistance near 2,710.",
+    "MediumTerm (Q3 2026):",
+    "The Bank of Tanzania’s steady policy stance remains supportive of both equities and bonds. Any change in the benchmark interest rate would be the most significant macroeconomic event.",
+    "The implementation of the government’s infrastructure spending will directly benefit cement, construction, and logistics companies.",
+    "LongTerm:The DSE’s ability to advance while foreign investors are net sellers in four of the last five sessions is a powerful signal of structural change. A market that can rely on its own domestic capital is far more resilient than one that must wait for international investors to return. For the patient, longterm investor, this is the foundation on which sustainable wealth is built.",
+    "7. Professional Approach: How to Use This Intelligence",
+    "Combine the Daily Wrap with our education series. If the blocktrade or priceband concepts are new to you, read How a Trade Happens and Understanding Market Data.",
+    "Maintain a diversified portfolio. Spread your capital across banks, industrials, consumer goods, and bonds.",
+    "Think in years, not days. Daily rallies and foreign selling spikes are part of normal market behaviour. The steady, compounding growth of wellmanaged companies over many years is what builds real wealth.",
+    "Remember that all investments carry risk. Never invest money you cannot afford to lose, and always do your own research.",
+    "8. Considerations for a MultiYear Framework",
+    "A market that rises while foreign investors are net sellers is no longer a market dependent on the moods of international capital. The handover of ownership to local institutions, completed over the past two months, has created a more stable, more predictable exchange. For the multiyear investor, this transformation is the real story — a market that can stand on its own two feet and compound wealth for those with patience and discipline.",
+    "For general informational and educational purposes only; not financial, legal, or tax advice. All investment decisions are solely your responsibility. Capital is at risk, and past performance does not guarantee future results. Amana Capital East Africa Limited registration under CMSA, Tanzania is pending. Registration does not imply CMSA endorsement."
+  ],
+  "sections_identified": [
+    "1. Market Snapshot",
+    "2. Top Movers",
+    "3. In Focus: DCB's Block Trade and the Power of Local Demand",
+    "4. Today's Concept: The 5% Daily Price Band — Your Safety Net",
+    "5. Bond Market: A Quiet Day After a Busy August",
+    "6. Strategic Outlook: What to Anticipate",
+    "7. Professional Approach: How to Use This Intelligence",
+    "8. Considerations for a Multi-Year Framework"
+  ],
+  "extraction_notes": {
+    "missing_fields": [],
+    "null_fields": [],
+    "footnotes_preserved": true,
+    "values_reformat": "None — all values extracted verbatim"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "report_date": "2026-08-17",
+  "dsei_end_of_day": "4,248.98",
+  "daily_turnover": "TZS 4,765.58m",
+  "top_mover": {
+    "name": "DCB",
+    "price": "530",
+    "change": "+13.98%"
+  },
+  "dse_listed_companies": "28",
+  "live_dse_snapshot": {
+    "dsei": "4,248.98",
+    "tsi": "9,349.59",
+    "turnover": "TZS 4,765.58m",
+    "top_gainers": [
+      {
+        "name": "DCB",
+        "price": "530",
+        "change": "+13.98%"
+      },
+      {
+        "name": "TTP",
+        "price": "500",
+        "change": "+11.11%"
+      },
+      {
+        "name": "NICO",
+        "price": "3,990",
+        "change": "+4.45%"
+      }
+    ],
+    "top_losers": [
+      {
+        "name": "PAL",
+        "price": "320",
+        "change": "-7.25%"
+      },
+      {
+        "name": "MUCOBA",
+        "price": "455",
+        "change": "-1.10%"
+      },
+      {
+        "name": "CRDB",
+        "price": "2,690",
+        "change": "-0.37%"
+      }
+    ]
+  },
+  "daily_dse_wrap": {
+    "dsei": "4,248.98",
+    "turnover": "TZS 4,765.58m",
+    "top_gainer": {
+      "name": "DCB",
+      "price": "530",
+      "change": "+13.98%"
+    }
+  }
+}

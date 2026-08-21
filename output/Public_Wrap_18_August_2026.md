@@ -1,0 +1,150 @@
+# Daily DSE Wrap | Tuesday, 18th August 2026
+
+Block Trades Keep Local Investors Firmly in Control
+
+The Dar es Salaam Stock Exchange delivered another session of healthy, locally driven trading on Tuesday, with turnover climbing to TZS 6.84 billion. Large pre-arranged transactions in NICO and continued strong activity in DCB highlighted the depth of institutional interest, while foreign investors remained almost entirely on the sidelines. The All-Share Index eased only slightly, consolidating near its monthly high.
+
+## 1. Market Snapshot
+
+| Metric | Monday 17 Aug | Tuesday 18 Aug | Change |
+
+| --- | --- | --- | --- |
+
+| DSEI | 4,248.98 | 4,238.03 | –10.95 pts (–0.3%) |
+
+| TSI | 9,349.59 | 9,315.05 | –34.54 pts |
+
+| Equity Turnover | TZS 4.77 bn | TZS 6.84 bn | +43.5% |
+
+| Shares Traded | 1,957,047 | 1,502,194 | –23.2% |
+
+| Deals | 3,881 | 3,633 | –6.4% |
+
+| Bond Turnover | TZS 1.27 bn | TZS 10.34 bn | +714% |
+
+| ETF Turnover | TZS 158.85 mn | TZS 59.24 mn | — |
+
+| Foreign Buying | 0.23% | 0.15% | — |
+
+| Foreign Selling | 32.49% | 0.03% | — |
+
+
+
+Equity turnover rose strongly on the back of a 229,222-share block trade in NICO, alongside heavy normal-board volumes in DCB and NMB. The number of deals remained elevated at over 3,600, confirming broad participation across the market. Foreign activity was negligible — buying accounted for just 0.15% of turnover and selling a mere 0.03%. The market is now almost exclusively driven by Tanzanian pension funds, institutions, and retail investors.
+
+## 2. Top Movers
+
+| Ticker | Closing Price (TZS) | Change | Volume |
+
+| --- | --- | --- | --- |
+
+| DCB | 600 | +13.2% | 295,266 |
+
+| NICO | 4,020 | +0.8% | 260,628¹ |
+
+| NMB | 17,700 | 0.0% | 243,505 |
+
+| KCB | 1,980 | +1.0% | 22,920 |
+
+| VODA | 1,030 | 0.0% | 130,410 |
+
+| CRDB | 2,680 | –0.4% | 353,959 |
+
+| TBL | 9,800 | –1.4% | 821 |
+
+| MCB | 420 | +3.7% | 119,117 |
+
+
+
+¹ Includes a 229,222-share block trade.
+
+Gainers: DCB (+13.2%), KCB (+1.0%), NICO (+0.8%), MCB (+3.7%).
+
+Losers: TBL (–1.4%), CRDB (–0.4%), TCCL (–3.6%), SWIS (–0.8%).
+
+DCB continued its remarkable run, jumping another 13.2% to close at 600, following Monday’s 14% surge. Such rapid moves in smaller, less liquid stocks are often the result of large institutional block transfers rather than broad market conviction, and investors should be cautious about chasing them. NICO saw a block trade of over 229,000 shares, yet its price moved only modestly, indicating a balanced two-sided transfer. Among the large caps, NMB again touched the 18,000 level intraday before settling at 17,700, while CRDB consolidated at 2,680. VODA held steady at 1,030.
+
+## 3. In Focus: Understanding Block Trades in a Quiet Market
+
+Tuesday’s session featured a pre-arranged block trade of 229,222 shares in NICO, worth roughly TZS 900 million. Block trades like this are privately negotiated between large institutions and reported on the exchange’s pre-arranged board, away from the open order book. They allow institutions to transfer large positions without causing sudden price swings.
+
+The most important lesson from Tuesday is not the size of the block, but how little it affected the broader market. The NICO share price rose just 0.8%, and the All-Share Index was barely moved. This is the hallmark of a market with deep domestic liquidity — when one institution sells, another (often a local pension fund or insurance company) is ready to buy at a fair price. For everyday investors, this means the market is more stable and predictable than it was during the first half of 2026, when foreign selling regularly caused sharp declines.
+
+A block trade is a piece of information, not a trading signal. It tells you that professional money is active, but it does not tell you whether the buyer or seller is making a long-term bet or simply rebalancing. Your own investment decisions should always be based on your own research, your goals, and a plan you have thought through in advance.
+
+## 4. Today’s Concept: The 5% Daily Price Band — Your Safety Net
+
+On Tuesday, CRDB closed at 2,680. On Wednesday, 19 August, the stock cannot trade at any price outside a band of ±5% around that closing level. The limits are:
+
+Upper limit: 2,680 × 1.05 = 2,814.00
+
+Lower limit: 2,680 × 0.95 = 2,546.00
+
+Any order to buy above 2,814.00 or to sell below 2,546.00 will be automatically rejected by the DSE’s trading system. This rule applies to every actively traded stock, with a handful of smaller counters operating under a wider 15% band.
+
+Based on Tuesday’s closing prices, here are the allowed trading ranges for Wednesday, 19 August 2026, for widely held stocks:
+
+| Counter | Tuesday Close (TZS) | Wednesday Upper Limit (TZS) | Wednesday Lower Limit (TZS) |
+
+| --- | --- | --- | --- |
+
+| CRDB | 2,680 | 2,814.00 | 2,546.00 |
+
+| NMB | 17,700 | 18,585.00 | 16,815.00 |
+
+| VODA | 1,030 | 1,081.50 | 978.50 |
+
+| TBL | 9,800 | 10,290.00 | 9,310.00 |
+
+| TCC | 12,520 | 13,146.00 | 11,894.00 |
+
+| DCB¹ | 600 | 690.00 | 510.00 |
+
+
+
+¹ DCB trades under a wider 15% band; the table shows 15% limits. Some smaller counters may have different bands — always confirm with your broker or the DSE.
+
+Before placing any order, checking the previous day’s closing price and calculating the allowed band takes only a moment. It ensures your order is executable from the second you place it, and it prevents the frustration of setting a price that the market simply cannot reach that day.
+
+## 5. Bond Market: Institutional Demand Returns
+
+Government bond turnover rebounded sharply to TZS 10.34 billion, after a very quiet Monday. The busiest instruments were the 25-year 13.25% bond and the 20-year 15.49% high-coupon paper. Yields ranged from roughly 10.7% to 13.4%, all free of withholding tax. Pension funds and insurance companies continue to use the bond market to lock in long-term, tax-free income, and this demand remains a stable foundation for the broader financial system.
+
+## 6. Strategic Outlook: What to Anticipate
+
+**Near-Term (August):**
+
+The market continues to consolidate near its recent highs, with local investors absorbing any institutional supply. The appearance of block trades in smaller stocks like DCB and NICO may create short-term volatility, but the broader index remains well supported.
+
+NMB is at its all-time high, with the ex-dividend date for the approved TZS 610.15 dividend still pending. When it is announced, the share price may adjust downward by an amount roughly equal to the dividend — a normal, mechanical process.
+
+CRDB is holding the 2,680 level, with support near 2,660 and resistance around 2,710. A sustained move above 2,720 would signal a stronger recovery.
+
+VODA remains range-bound between approximately 1,010 and 1,060, providing a predictable trading range for investors who follow the daily price bands.
+
+**Medium-Term (Q3 2026):**
+
+The Bank of Tanzania’s steady policy stance remains supportive of both equities and bonds. Any change in the benchmark interest rate would be the most significant macroeconomic event.
+
+The implementation of the government’s infrastructure spending will directly benefit cement, construction, and logistics companies.
+
+**Long-Term:**
+
+The DSE’s ability to handle large block trades with minimal price disruption, and to advance despite occasional foreign selling, shows that the market has matured significantly. For the patient, long-term investor, this is exactly the kind of stable, domestically anchored environment that supports consistent wealth creation.
+
+## 7. Professional Approach: How to Use This Intelligence
+
+Combine the Daily Wrap with our education series. If the block-trade or price-band concepts are new to you, read How a Trade Happens and Understanding Market Data.
+
+Maintain a diversified portfolio. Spread your capital across banks, industrials, consumer goods, and bonds.
+
+Think in years, not days. Daily rallies and institutional block trades are interesting, but lasting wealth is built by owning well-managed companies through economic cycles.
+
+Remember that all investments carry risk. Never invest money you cannot afford to lose, and always do your own research.
+
+## 8. Considerations for a Multi-Year Framework
+
+A market that can absorb a 229,000-share block trade without a flicker, and where foreign participation is nearly zero, is a market that has truly come of age. The handover of ownership to local institutions, completed over the past two months, has created a more stable, more predictable exchange. For the multi-year investor, this transformation is the real story — a market that stands on its own two feet and compounds wealth for those with patience and discipline.
+
+For general informational and educational purposes only; not financial, legal, or tax advice. All investment decisions are solely your responsibility. Capital is at risk, and past performance does not guarantee future results. Amana Capital East Africa Limited registration under CMSA, Tanzania is pending. Registration does not imply CMSA endorsement.
+
