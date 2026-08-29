@@ -1,0 +1,59 @@
+{
+  "report_date": "28 August 2026",
+  "dsei_end_of_day": "4,444.48",
+  "daily_turnover": "TZS 10.20 bn",
+  "top_mover": {
+    "name": "NMG",
+    "price": null,
+    "change": "+5.8%"
+  },
+  "dse_listed_companies": "20",
+  "live_dse_snapshot": {
+    "dsei": "4,444.48",
+    "tsi": "9,924.23",
+    "turnover": "TZS 10.20 bn",
+    "top_gainers": [
+      {
+        "name": "NMG",
+        "price": null,
+        "change": "+5.8%"
+      },
+      {
+        "name": "NMB",
+        "price": null,
+        "change": "+4.9%"
+      },
+      {
+        "name": "VODA",
+        "price": null,
+        "change": "+1.9%"
+      }
+    ],
+    "top_losers": [
+      {
+        "name": "TOL",
+        "price": null,
+        "change": "\u20136.6%"
+      },
+      {
+        "name": "MBP",
+        "price": null,
+        "change": "\u20134.8%"
+      },
+      {
+        "name": "SWIS",
+        "price": null,
+        "change": "\u20131.6%"
+      }
+    ]
+  },
+  "daily_dse_wrap": {
+    "dsei": "4,444.48",
+    "turnover": "TZS 10.20 bn",
+    "top_gainer": {
+      "name": "NMG",
+      "price": null,
+      "change": "+5.8%"
+    }
+  }
+}

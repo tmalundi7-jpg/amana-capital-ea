@@ -1,0 +1,182 @@
+[
+    {
+        "ticker": "AFRIPRISE",
+        "company": "African Pride",
+        "sector": "Commercial Services",
+        "last_price_tzs": "625",
+        "change_pct": "\u20130.8%",
+        "volume": "105,125",
+        "turnover_tzs": "65,908,115"
+    },
+    {
+        "ticker": "CRDB",
+        "company": "CRDB Bank",
+        "sector": "Banks & Finance",
+        "last_price_tzs": "2,640",
+        "change_pct": "0.0%",
+        "volume": "493,656",
+        "turnover_tzs": "1,303,996,780"
+    },
+    {
+        "ticker": "DCB",
+        "company": "Dar es Salaam Community Bank",
+        "sector": "Banks & Finance",
+        "last_price_tzs": "465",
+        "change_pct": "+1.1%",
+        "volume": "9,372",
+        "turnover_tzs": "4,363,880"
+    },
+    {
+        "ticker": "DSE",
+        "company": "Dar es Salaam Stock Exchange",
+        "sector": "Commercial Services",
+        "last_price_tzs": "6,460",
+        "change_pct": "\u20130.6%",
+        "volume": "614",
+        "turnover_tzs": "3,971,720"
+    },
+    {
+        "ticker": "KCB",
+        "company": "KCB Group (cross-listed)",
+        "sector": "Banks & Finance",
+        "last_price_tzs": "1,990",
+        "change_pct": "0.0%",
+        "volume": "8,307",
+        "turnover_tzs": "16,500,490"
+    },
+    {
+        "ticker": "MBP",
+        "company": "Maendeleo Bank",
+        "sector": "Banks & Finance",
+        "last_price_tzs": "2,160",
+        "change_pct": "\u20134.8%",
+        "volume": "3,770",
+        "turnover_tzs": "8,124,560"
+    },
+    {
+        "ticker": "MCB",
+        "company": "Mwanga Community Bank",
+        "sector": "Banks & Finance",
+        "last_price_tzs": "395",
+        "change_pct": "\u20131.3%",
+        "volume": "23,067",
+        "turnover_tzs": "9,147,885"
+    },
+    {
+        "ticker": "MKCB",
+        "company": "Mkamba Commercial Bank",
+        "sector": "Banks & Finance",
+        "last_price_tzs": "3,690",
+        "change_pct": "+0.5%",
+        "volume": "2,678",
+        "turnover_tzs": "9,893,070"
+    },
+    {
+        "ticker": "MUCOBA",
+        "company": "Mucoba Bank",
+        "sector": "Banks & Finance",
+        "last_price_tzs": "450",
+        "change_pct": "\u20131.1%",
+        "volume": "694",
+        "turnover_tzs": "312,410"
+    },
+    {
+        "ticker": "NICO",
+        "company": "NICO Holdings",
+        "sector": "Banks & Finance",
+        "last_price_tzs": "3,820",
+        "change_pct": "\u20131.5%",
+        "volume": "21,035",
+        "turnover_tzs": "80,449,610"
+    },
+    {
+        "ticker": "NMB",
+        "company": "NMB Bank",
+        "sector": "Banks & Finance",
+        "last_price_tzs": "2,130",
+        "change_pct": "+4.9%",
+        "volume": "4,010,704",
+        "turnover_tzs": "8,542,799,520"
+    },
+    {
+        "ticker": "PAL",
+        "company": "Pal Holdings",
+        "sector": "Industrials",
+        "last_price_tzs": "350",
+        "change_pct": "+1.4%",
+        "volume": "3,849",
+        "turnover_tzs": "1,340,115"
+    },
+    {
+        "ticker": "SWIS",
+        "company": "Swissport Tanzania",
+        "sector": "Commercial Services",
+        "last_price_tzs": "2,530",
+        "change_pct": "\u20131.6%",
+        "volume": "1,800",
+        "turnover_tzs": "4,568,920"
+    },
+    {
+        "ticker": "TBL",
+        "company": "Tanzania Breweries",
+        "sector": "Industrials",
+        "last_price_tzs": "9,870",
+        "change_pct": "+0.2%",
+        "volume": "1,289",
+        "turnover_tzs": "12,722,220"
+    },
+    {
+        "ticker": "TCC",
+        "company": "Tanga Cement",
+        "sector": "Industrials",
+        "last_price_tzs": "12,400",
+        "change_pct": "+0.5%",
+        "volume": "606",
+        "turnover_tzs": "7,522,450"
+    },
+    {
+        "ticker": "TCCL",
+        "company": "Tanzania Cigarette Company",
+        "sector": "Industrials",
+        "last_price_tzs": "3,720",
+        "change_pct": "0.0%",
+        "volume": "1,725",
+        "turnover_tzs": "6,415,820"
+    },
+    {
+        "ticker": "TOL",
+        "company": "TOL Gases",
+        "sector": "Industrials",
+        "last_price_tzs": "1,850",
+        "change_pct": "\u20136.6%",
+        "volume": "12,636",
+        "turnover_tzs": "23,405,670"
+    },
+    {
+        "ticker": "TPCC",
+        "company": "Tanga Portland Cement",
+        "sector": "Industrials",
+        "last_price_tzs": "5,720",
+        "change_pct": "\u20130.9%",
+        "volume": "3,005",
+        "turnover_tzs": "17,226,950"
+    },
+    {
+        "ticker": "TTP",
+        "company": "Tatepa Public Limited Company",
+        "sector": "Commercial Services",
+        "last_price_tzs": "485",
+        "change_pct": "0.0%",
+        "volume": "643",
+        "turnover_tzs": "311,815"
+    },
+    {
+        "ticker": "VODA",
+        "company": "Vodacom Tanzania",
+        "sector": "Commercial Services",
+        "last_price_tzs": "1,050",
+        "change_pct": "+1.9%",
+        "volume": "77,373",
+        "turnover_tzs": "81,098,410"
+    }
+]
