@@ -1,0 +1,23 @@
+name: Market Data Freshness Monitor
+on:
+  schedule:
+    - cron: "30 14 * * 1-5" # 14:30 UTC = 17:30 EAT Mon-Fri
+  workflow_dispatch:
+
+jobs:
+  verify-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Today's Date String
+        id: date
+        run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+      
+      - name: Verify Wrap Exists
+        run: |
+          HTTP_STATUS=$(curl -o /dev/null -s -w "%{http_code}\n" https://www.amana-capital-ea.co.tz/dse-wrap-${{ env.DATE }}.html)
+          if [ "$HTTP_STATUS" -ne 200 ]; then
+            echo "Error: Daily Wrap for ${{ env.DATE }} is missing!"
+            exit 1
+          else
+            echo "Daily wrap is live."
+          fi
