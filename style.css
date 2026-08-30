@@ -2192,9 +2192,9 @@ html.is-animating .transition-fade {
 @media (max-width: 768px) { .trust-title-text { font-size: 1.8rem; } .trust-grid { grid-template-columns: 1fr; gap: 2rem; } .regulatory-badge { flex-direction: column; text-align: center; padding: 0.75rem 1rem; } }
 
 /* ENHANCED SWUP TRANSITIONS */
-.transition-main { transition: opacity 0.5s ease, transform 0.5s ease; }
-.transition-fade-slide { opacity: 0; transform: translateY(20px); }
-.transition-fade-slide.is-active { opacity: 1; transform: translateY(0); }
+.transition-main { transition: none; }
+.transition-fade-slide { opacity: 1; transform: none; }
+.transition-fade-slide.is-active { opacity: 1; transform: none; }
 .transition-scale { opacity: 0; transform: scale(0.98); }
 .transition-scale.is-active { opacity: 1; transform: scale(1); }
 .transition-stagger > * { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
