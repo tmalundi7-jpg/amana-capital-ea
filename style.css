@@ -2357,3 +2357,19 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     display: block !important; 
   }
 }
+
+@media (max-width: 768px) {
+    .services-grid, .why-grid, .snapshot-grid, .pillars-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    align-items: center;
+}
+.snapshot-value {
+    white-space: nowrap;
+}
