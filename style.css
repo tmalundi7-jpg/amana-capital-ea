@@ -93,6 +93,12 @@ body {
   font-size: 16px;
   line-height: 1.7;
   transition: background-color 0.3s ease, color 0.3s ease;
+  animation: globalFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes globalFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* --- Typography --- */
@@ -195,12 +201,12 @@ a:hover {
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: -2px;
+  bottom: -4px;
   left: 0;
   width: 0;
   height: 2px;
   background-color: var(--gold);
-  transition: width 0.3s ease;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .nav-links a:hover::after,
 .nav-links a.active::after {
@@ -211,22 +217,8 @@ a:hover {
 .nav-links a:active,
 .nav-links a.active {
   color: #FFFFFF;
-  text-shadow: 0 0 10px rgba(255,255,255,0.2);
+  text-shadow: 0 0 12px rgba(229,177,59,0.4);
   outline: none;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: var(--gold);
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.nav-links a:hover::after, .nav-links a.active::after {
-  width: 100%;
 }
 
 .mobile-toggle {
