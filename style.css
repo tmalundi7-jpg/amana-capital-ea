@@ -2309,21 +2309,9 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 
 
 /* Dark Navy Box for Visibility */
-.why-section-header {
-    background-color: var(--navy);
-    padding: 2.5rem;
-    border-radius: 8px;
-    margin-bottom: 2.5rem;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-.why-section-header .section-eyebrow {
-    color: var(--gold) !important;
-}
-.why-section-header .section-title {
-    color: var(--white) !important;
-    margin-bottom: 0;
-}
+
+
+
 
 
 /* Ensure Logo fits on mobile */
@@ -2560,4 +2548,173 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 }
 .teaser-prem-stat-value.loss {
     color: #f87171 !important; /* bright red for dark bg */
+}
+
+/* --- Elite Design Upgrades for Homepage Sections --- */
+
+/* 1. Global Section Headers (Used in Why Amana, Core Services, Latest Research) */
+.why-section-header {
+    background: transparent !important;
+    padding: 0 !important;
+    margin-bottom: 4rem !important;
+    text-align: center !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+.why-section-header .section-eyebrow {
+    color: var(--gold) !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 2.5px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 1rem !important;
+    display: inline-block !important;
+}
+.why-section-header .section-title {
+    color: var(--navy) !important;
+    font-family: var(--font-serif, 'Cormorant Garamond', serif) !important;
+    font-size: 3rem !important;
+    font-weight: 400 !important;
+    margin: 0 auto !important;
+}
+
+/* 2. Why Amana (Governing Principles) */
+.why-card {
+    background: linear-gradient(160deg, #001f3f 0%, #001226 100%) !important;
+    border: 1px solid rgba(200, 150, 46, 0.2) !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15) !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease !important;
+    border-radius: 4px !important;
+    padding: 3.5rem 2.5rem !important;
+    position: relative;
+    overflow: hidden;
+}
+.why-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 3px;
+    background: var(--gold);
+    opacity: 0.8;
+}
+.why-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 50px rgba(11,29,58,0.3) !important;
+}
+.why-card h3 {
+    color: #ffffff !important;
+    font-family: var(--font-serif, 'Cormorant Garamond', serif) !important;
+    font-size: 2rem !important;
+    font-weight: 400 !important;
+    margin-bottom: 1.2rem !important;
+}
+.why-card p {
+    color: rgba(255,255,255,0.75) !important;
+    line-height: 1.8 !important;
+    font-size: 1.05rem !important;
+}
+.why-icon {
+    font-size: 2rem !important;
+    margin-bottom: 2rem !important;
+    background: transparent !important;
+    color: var(--gold) !important;
+    width: auto !important;
+    height: auto !important;
+    display: inline-block !important;
+}
+
+/* 3. What We Do (Core Services) */
+.services-section {
+    background-color: var(--cream) !important;
+    padding: 6rem 0 !important;
+}
+.service-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(11,29,58,0.08) !important;
+    border-top: none !important;
+    border-radius: 4px !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.04) !important;
+    padding: 4rem 3rem !important;
+    transition: all 0.4s ease !important;
+    position: relative;
+}
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 4px;
+    background: var(--navy);
+}
+.service-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08) !important;
+}
+.service-num {
+    color: var(--gold) !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 1.5rem !important;
+}
+.service-card h3 {
+    color: var(--navy) !important;
+    font-family: var(--font-serif, 'Cormorant Garamond', serif) !important;
+    font-size: 2.2rem !important;
+    font-weight: 400 !important;
+    margin-bottom: 1.5rem !important;
+}
+.service-card p {
+    color: rgba(11,29,58,0.75) !important;
+    line-height: 1.8 !important;
+    font-size: 1.05rem !important;
+    margin-bottom: 2.5rem !important;
+}
+.service-card .btn {
+    align-self: flex-start !important;
+    background: transparent !important;
+    color: var(--navy) !important;
+    border: 1px solid rgba(11,29,58,0.2) !important;
+    padding: 10px 24px !important;
+}
+.service-card .btn:hover {
+    background: var(--navy) !important;
+    color: var(--cream) !important;
+}
+
+/* 4. Latest Research Layout Polish */
+.teaser-premium {
+    display: flex !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(11,29,58,0.08) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.05) !important;
+    overflow: hidden !important;
+}
+.teaser-prem-right {
+    background: #ffffff !important;
+    padding: 4rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    border-left: 1px solid rgba(11,29,58,0.05) !important;
+}
+.teaser-right-label {
+    color: var(--navy) !important;
+    font-size: 1.5rem !important;
+    font-family: var(--font-serif, 'Cormorant Garamond', serif) !important;
+    margin-bottom: 1rem !important;
+}
+.teaser-right-divider {
+    background: var(--gold) !important;
+    width: 40px !important;
+    height: 2px !important;
+    margin-bottom: 1.5rem !important;
+}
+.teaser-right-cta-text {
+    color: rgba(11,29,58,0.7) !important;
+    line-height: 1.8 !important;
+    margin-bottom: 2rem !important;
+}
+.teaser-prem-right .btn-gold-solid {
+    background: var(--navy) !important;
+    color: var(--cream) !important;
+    border: none !important;
 }
