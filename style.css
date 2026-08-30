@@ -3140,3 +3140,32 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     text-shadow: 0 0 12px rgba(229,177,59,0.5) !important;
 }
 /* ============================================= */
+
+/* ============================================================
+   USER REQUESTED OVERRIDES (TEASER DESIGN MATCH)
+   ============================================================ */
+
+/* 1. Ensure the right panel has a solid dark navy blue background */
+.teaser-prem-right {
+    background: var(--navy) !important;
+}
+
+/* 2. Ensure teaser stats font exactly matches main snapshot (2rem, 400 weight) */
+.teaser-prem-stat-value {
+    font-size: 2rem !important;
+    font-weight: 400 !important;
+    font-family: 'Cormorant Garamond', serif !important;
+}
+
+/* On mobile, shrink slightly but remain larger than before */
+@media (max-width: 768px) {
+    .teaser-prem-stat-value {
+        font-size: 1.5rem !important;
+    }
+}
+@media (max-width: 480px) {
+    .teaser-prem-stat-value {
+        font-size: 1.25rem !important;
+    }
+}
+/* ============================================================ */
