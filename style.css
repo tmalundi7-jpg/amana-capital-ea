@@ -2605,3 +2605,54 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 .home-teaser .teaser-prem-left .teaser-prem-stat-value.loss {
     color: #dc2626 !important; /* Readable red on cream */
 }
+
+/* Square around section headers */
+.why-section-header {
+    border: 1px solid var(--gold) !important;
+    padding: 2rem 3rem !important;
+    display: inline-block !important;
+    background: transparent !important;
+    margin-bottom: 3rem !important;
+    text-align: center !important;
+}
+.why-section { text-align: center; } /* To center the inline-block header */
+.home-teaser { text-align: center; }
+.services-section { text-align: center; }
+
+/* Dark Navy Box inside Daily DSE Wrap left square */
+.home-teaser .teaser-prem-left {
+    background-color: var(--navy) !important;
+    border-right: none !important;
+}
+.home-teaser .teaser-prem-left .teaser-prem-eyebrow .teaser-prem-label {
+    color: var(--gold) !important;
+}
+.home-teaser .teaser-prem-left .teaser-prem-date {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+.home-teaser .teaser-prem-left .teaser-prem-title {
+    color: #ffffff !important;
+}
+.home-teaser .teaser-prem-left .teaser-prem-body {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+.home-teaser .teaser-prem-left .teaser-prem-stat-label {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+.home-teaser .teaser-prem-left .teaser-prem-stat-value {
+    color: #ffffff !important;
+}
+.home-teaser .teaser-prem-left .teaser-prem-stats {
+    border-top: 1px solid rgba(255,255,255,0.1) !important;
+}
+.home-teaser .teaser-prem-left .teaser-prem-stat-value.gain {
+    color: #4ade80 !important; /* Bright green on dark bg */
+}
+.home-teaser .teaser-prem-left .teaser-prem-stat-value.loss {
+    color: #f87171 !important; /* Bright red on dark bg */
+}
+
+/* Ensure cards retain left alignment */
+.why-card { text-align: left !important; }
+.service-card { text-align: left !important; }
+.teaser-premium { text-align: left !important; }
