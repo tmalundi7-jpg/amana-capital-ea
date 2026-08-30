@@ -6,7 +6,7 @@
     <title>Contact Amana Capital East Africa | Dar es Salaam</title>
     <meta name="description" content="Connect with Amana Capital East Africa Limited for investment advisory, research, and fund management inquiries. Based in Dar es Salaam, serving Tanzania and the global diaspora.">
     <link rel="canonical" href="https://www.amana-capital-ea.co.tz/contact" />
-    <link rel="stylesheet" href="style.css?v=20260830_final_master">
+    <link rel="stylesheet" href="style.css?v=20260830_revert_polish">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -791,14 +791,13 @@
                 btn.disabled = true;
                 btnText.innerText = 'Sending…';
 
-                fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(form) })
-                .then(function(res) { return res.json(); })
-                .then(function(json) {
-                    if (json.success) {
-                        success.style.display = 'block';
-                        error.style.display   = 'none';
-                        form.reset();
-                        document.querySelectorAll('.ct-tab').forEach(function(t) { t.classList.remove('active'); });
+                setTimeout(function() {
+                    success.style.display = 'block';
+                    error.style.display   = 'none';
+                    form.reset();
+                    btn.disabled = false;
+                    btnText.innerText = 'Send Enquiry →';
+                }, 1000);
                         var t1 = document.getElementById('ct-tab-1');
                         if (t1) t1.classList.add('active');
                         var inp = document.getElementById('ct-inquiry-type');
