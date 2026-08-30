@@ -432,9 +432,9 @@ window.initBondCalculator = function() {
                 const rowBg = year % 2 === 0 ? 'background: rgba(255,255,255,0.02);' : 'background: transparent;';
                 tableHtml += `<tr style="${rowBg}">
                     <td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain);">${year}${isMaturityYear ? ' (Mat/Call)' : ''}</td>
-                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain);">${formatCurrency(thisYearIncome)}</td>
+                    <td style="padding: 0.5rem; text-align:left; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain);">${formatCurrency(thisYearIncome)}</td>
                     <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain);">${formatCurrency(cumIncome)}</td>
-                    <td style="padding: 0.5rem; text-align:right; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain); font-weight:600;">${formatCurrency(currentRealValue)}</td>
+                    <td style="padding: 0.5rem; text-align:left; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--gain); font-weight:600;">${formatCurrency(currentRealValue)}</td>
                 </tr>`;
             }
 
