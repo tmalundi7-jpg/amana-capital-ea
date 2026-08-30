@@ -2778,7 +2778,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     margin-bottom: 0.5rem !important;
     font-weight: 700 !important;
 }
-\.snapshot-value {
+.snapshot-value {
     font-size: 1.4rem !important;
     font-weight: 700 !important;
     color: var(--cream) !important;
