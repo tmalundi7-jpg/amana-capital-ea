@@ -54,13 +54,7 @@
   </defs>
 </svg>
 
-<!-- ============================================ -->
-<!-- THEME TOGGLE (Dark/Light Mode)              -->
-<!-- ============================================ -->
-<button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
-  <span class="theme-icon-dark" aria-hidden="true">🌙</span>
-  <span class="theme-icon-light" aria-hidden="true" style="display: none;">☀️</span>
-</button>
+<nav class="navbar">
 <div class="container nav-container">
 <a class="brand-link" href="/">
 <svg aria-hidden="true" class="brand-icon" viewbox="0 0 32 44"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"></path><rect fill="currentColor" height="44" width="8" x="21" y="0"></rect><rect fill="currentColor" height="4" width="21" x="0" y="19"></rect></svg>
@@ -69,8 +63,15 @@
 <div class="brand-sub">EAST AFRICA</div>
 </div>
 </a>
+<!-- ============================================ -->
+<!-- THEME TOGGLE (Dark/Light Mode)              -->
+<!-- ============================================ -->
+<button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+  <span class="theme-icon-dark" aria-hidden="true">🌙</span>
+  <span class="theme-icon-light" aria-hidden="true" style="display: none;">☀️</span>
+</button>
 <button aria-label="Open menu" class="mobile-toggle" id="mobile-toggle">&#9776;</button>
-<ul class="nav-list">
+<ul class="nav-links" id="nav-links">
   <li><a href="/dashboard.html" class="nav-link">Dashboard</a></li>
 <li><a class="active" href="/">Home</a></li>
 <li class="nav-item-dropdown">
@@ -100,7 +101,7 @@
 </ul>
 </div>
 </nav>
-<main class="transition-fade" id="swup" class="transition-fade-slide">
+<main class="transition-fade transition-fade-slide" id="swup">
 <style>
     /* ─── Home Page Enhancement Styles ─── */
 
@@ -662,31 +663,38 @@
 <!-- ============================================ -->
 <!-- HERO SECTION – IMAGE‑BACKED + PARALLAX      -->
 <!-- ============================================ -->
-<section class="hero-section enhanced-hero" role="banner" aria-label="Amana Capital – Investment Advisory">
-  <div class="hero-background">
-    <picture>
-      <source srcset="/images/hero/hero-bg-1200.webp 1200w" type="image/webp">
-      <img src="/images/hero/hero-bg-1200.jpg" alt="Dar es Salaam skyline at dusk – Amana Capital investment advisory" loading="eager" decoding="async" class="hero-image">
-    </picture>
-    <div class="hero-overlay"></div>
-  </div>
-  <div class="hero-content container">
-    <div class="hero-text">
-      <span class="hero-badge">Tanzania's Premier Investment Advisory</span>
-      <h1 class="hero-title">
-        <span class="hero-title-line">Intelligence That</span>
-        <span class="hero-title-line hero-title-highlight">Builds Wealth</span>
-      </h1>
-      <p class="hero-subtitle">Institutional‑grade market intelligence, daily DSE analysis, and bespoke investment advisory for East Africa's discerning investors.</p>
-      <div class="hero-actions">
-        <a href="/market-intelligence/" class="btn btn-primary btn-large">Explore Market Data <span class="btn-arrow">→</span></a>
-        <a href="/contact/" class="btn btn-secondary btn-large">Speak to an Advisor</a>
+<section class="home-hero">
+  <div class="container">
+    <div class="home-hero-grid">
+      <div class="home-hero-content">
+        <div class="home-hero-eyebrow">
+          <div class="home-hero-eyebrow-dot"></div>
+          <span>Tanzania's Premier Investment Advisory</span>
+        </div>
+        <h1>Intelligence That<br><em>Builds Wealth</em></h1>
+        <p class="home-hero-sub">Institutional-grade market intelligence, daily DSE analysis, and bespoke investment advisory for East Africa's discerning investors.</p>
+        <div class="home-hero-cta">
+          <a href="/market-intelligence" class="btn btn-primary" style="padding: 1rem 1.5rem; font-weight: 600; text-decoration: none;">Explore Market Data</a>
+          <a href="/contact" class="btn" style="border: 1px solid rgba(200,150,46,0.5); color: #c8962e; padding: 1rem 1.5rem; border-radius: 8px; font-weight: 600; text-decoration: none;">Speak to an Advisor</a>
+        </div>
+        <div class="home-hero-trust">
+          Regulated by the Capital Markets and Securities Authority (CMSA)
+        </div>
       </div>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat"><span class="hero-stat-value" data-count="250">250+</span><span class="hero-stat-label">Daily Wraps</span></div>
-      <div class="hero-stat"><span class="hero-stat-value" data-count="15">15</span><span class="hero-stat-label">Years Experience</span></div>
-      <div class="hero-stat"><span class="hero-stat-value">DSE</span><span class="hero-stat-label">Licensed</span></div>
+      <div class="home-hero-stats">
+        <div class="home-stat-card">
+          <div class="home-stat-value">250+</div>
+          <div class="home-stat-label">Daily Wraps</div>
+        </div>
+        <div class="home-stat-card">
+          <div class="home-stat-value">15 Yrs</div>
+          <div class="home-stat-label">Experience</div>
+        </div>
+        <div class="home-stat-card">
+          <div class="home-stat-value">DSE</div>
+          <div class="home-stat-label">Licensed Dealer</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -882,7 +890,7 @@
 <script defer="" src="script.min.js?v=20260813h"></script>
 
 <div id="authModal" class="auth-modal" role="dialog" aria-hidden="true"><div class="auth-modal-content"><button class="auth-modal-close" id="authModalClose">✕</button><h2 class="auth-title">Welcome Back</h2><form id="loginForm" class="auth-form"><div class="form-group"><label>Email</label><input type="email" required></div><button type="submit" class="btn btn-primary btn-block">Sign In</button></form></div></div>
-<section class="newsletter-section"><div class="newsletter-content"><h2>📬 Stay Ahead of the Market</h2><form id="newsletterForm" class="newsletter-form"><div class="newsletter-input-group"><input type="email" placeholder="Email" required><button type="submit" class="btn btn-primary">Subscribe</button></div><div id="newsletterMessage" hidden></div></form></div></section>
+
 <div id="consentBanner" class="consent-banner" hidden><div class="consent-content"><p class="consent-text">We use cookies.</p><div class="consent-actions"><button id="consentAccept" class="btn btn-primary btn-sm">Accept</button></div></div></div>
 <script src="/config/analytics.js"></script>
 <script src="/assets/js/analytics.js"></script>
