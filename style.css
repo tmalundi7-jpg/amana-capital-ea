@@ -3143,3 +3143,23 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 }
 
 /* ============================================================ */
+
+/* ====== NAV BRIGHTNESS LOCK v3 (FINAL) ====== */
+.logo-word-primary {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 20px rgba(229,177,59,0.12) !important;
+}
+.logo-word-secondary {
+    color: #e5b13b !important;
+    opacity: 1 !important;
+}
+.nav-links a {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+}
+.nav-links a:hover,
+.nav-links a.active {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 12px rgba(229,177,59,0.5) !important;
+}
+/* ============================================= */
