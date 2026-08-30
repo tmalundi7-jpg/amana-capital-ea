@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="style.min.css?v=20260810k" rel="stylesheet"/>
+<link href="style.css?v=20260830" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,7 +54,13 @@
   </defs>
 </svg>
 
-\1\n  {% include \'theme-toggle.html\' %}
+<!-- ============================================ -->
+<!-- THEME TOGGLE (Dark/Light Mode)              -->
+<!-- ============================================ -->
+<button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+  <span class="theme-icon-dark" aria-hidden="true">🌙</span>
+  <span class="theme-icon-light" aria-hidden="true" style="display: none;">☀️</span>
+</button>
 <div class="container nav-container">
 <a class="brand-link" href="/">
 <svg aria-hidden="true" class="brand-icon" viewbox="0 0 32 44"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"></path><rect fill="currentColor" height="44" width="8" x="21" y="0"></rect><rect fill="currentColor" height="4" width="21" x="0" y="19"></rect></svg>
@@ -63,11 +69,12 @@
 <div class="brand-sub">EAST AFRICA</div>
 </div>
 </a>
-<button aria-label="Menu" class="mobile-toggle" id="mobile-toggle">☰</button>
-\1\n  <li><a href="/dashboard.html" class="nav-link">Dashboard</a></li>
+<button aria-label="Open menu" class="mobile-toggle" id="mobile-toggle">&#9776;</button>
+<ul class="nav-list">
+  <li><a href="/dashboard.html" class="nav-link">Dashboard</a></li>
 <li><a class="active" href="/">Home</a></li>
 <li class="nav-item-dropdown">
-<a href="/market-intelligence">Market Intelligence <span class="dropdown-arrow">▾</span></a>
+<a href="/market-intelligence">Market Intelligence <span class="dropdown-arrow">&#9660;</span></a>
 <div class="mega-menu">
 <div class="mega-menu-grid" style="grid-template-columns: 1fr 1fr;">
 <div class="mega-col">
@@ -874,9 +881,9 @@
 </footer>
 <script defer="" src="script.min.js?v=20260813h"></script>
 
-{% include 'auth-modal.html' %}
-{% include 'newsletter.html' %}
-{% include 'consent-banner.html' %}
+<div id="authModal" class="auth-modal" role="dialog" aria-hidden="true"><div class="auth-modal-content"><button class="auth-modal-close" id="authModalClose">✕</button><h2 class="auth-title">Welcome Back</h2><form id="loginForm" class="auth-form"><div class="form-group"><label>Email</label><input type="email" required></div><button type="submit" class="btn btn-primary btn-block">Sign In</button></form></div></div>
+<section class="newsletter-section"><div class="newsletter-content"><h2>📬 Stay Ahead of the Market</h2><form id="newsletterForm" class="newsletter-form"><div class="newsletter-input-group"><input type="email" placeholder="Email" required><button type="submit" class="btn btn-primary">Subscribe</button></div><div id="newsletterMessage" hidden></div></form></div></section>
+<div id="consentBanner" class="consent-banner" hidden><div class="consent-content"><p class="consent-text">We use cookies.</p><div class="consent-actions"><button id="consentAccept" class="btn btn-primary btn-sm">Accept</button></div></div></div>
 <script src="/config/analytics.js"></script>
 <script src="/assets/js/analytics.js"></script>
 <script src="/assets/js/personalisation.js"></script>

@@ -1991,7 +1991,7 @@ html.is-animating .transition-fade {
   margin-bottom: 0.25rem;
 }
 /* ============================================ */
-/* TYPOGRAPHY REFINEMENT – Mobile Readability   */
+/* TYPOGRAPHY REFINEMENT - Mobile Readability   */
 /* ============================================ */
 @media (max-width: 768px) {
   body, p, .body-text, .daily-wrap-content p { line-height: 1.7; }
