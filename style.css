@@ -2943,20 +2943,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 
 
 
-/* ============================================================
-   REDUCE SNAPSHOT SQUARE SIZE AND BOTTOM MARGIN
-   ============================================================ */
-.snapshot-card {
-    padding: 2rem 2.5rem !important;
-    margin-bottom: 0 !important;
-}
 
-@media (max-width: 768px) {
-    .snapshot-card {
-        padding: 1.5rem !important;
-    }
-}
-/* ============================================================ */
 
 /* ============================================================
    REDUCE VERTICAL SPACE BETWEEN MAIN HOMEPAGE SECTIONS
