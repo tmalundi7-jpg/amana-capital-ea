@@ -2813,3 +2813,57 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 .home-teaser .teaser-prem-left .teaser-prem-stat-value.loss {
     color: #dc2626 !important; /* Dark red on cream */
 }
+
+/* FINAL ULTIMATE DAILY WRAP REVERT (CREAM AND GOLD) */
+.home-teaser {
+    background-color: var(--cream) !important;
+}
+.home-teaser .teaser-premium {
+    background-color: var(--cream) !important;
+    border: 1px solid var(--gold) !important;
+    box-shadow: 0 10px 40px rgba(200, 150, 46, 0.15) !important;
+}
+.home-teaser .teaser-prem-left {
+    background-color: var(--cream) !important;
+    border-right: 1px solid rgba(200, 150, 46, 0.3) !important;
+}
+.home-teaser .teaser-prem-left .teaser-prem-eyebrow .teaser-prem-label,
+.home-teaser .teaser-prem-left .teaser-prem-date {
+    color: rgba(11, 29, 58, 0.7) !important;
+}
+.home-teaser .teaser-prem-left .teaser-prem-title {
+    color: var(--navy) !important;
+}
+.home-teaser .teaser-prem-left .teaser-prem-body {
+    color: rgba(11, 29, 58, 0.8) !important;
+}
+.home-teaser .teaser-prem-left .teaser-prem-stats {
+    border-top: 1px solid rgba(200, 150, 46, 0.2) !important;
+}
+.home-teaser .teaser-prem-left .teaser-prem-stat-label {
+    color: rgba(11, 29, 58, 0.6) !important;
+}
+.home-teaser .teaser-prem-left .teaser-prem-stat-value {
+    color: var(--navy) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    font-variant-numeric: tabular-nums !important;
+}
+.home-teaser .teaser-prem-left .teaser-prem-stat-value.gain {
+    color: #16a34a !important; /* Readable green on cream */
+}
+.home-teaser .teaser-prem-left .teaser-prem-stat-value.loss {
+    color: #dc2626 !important; /* Readable red on cream */
+}
+
+/* Global Tabular Nums */
+#amortization-schedule td,
+.snapshot-val,
+.snapshot-row,
+.bc-result-val,
+.numerical,
+.number-cell {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    font-variant-numeric: tabular-nums !important;
+}
