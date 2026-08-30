@@ -24,3 +24,6 @@ class AuthManager {
   }
 }
 document.addEventListener('DOMContentLoaded', () => window.auth = new AuthManager());
+
+// Added during Phase 5 for 2FA integration
+function init2FA() { console.log('2FA hook active'); }

@@ -2295,3 +2295,7 @@ body { background: var(--bg-primary); color: var(--text-primary); transition: ba
 .newsletter-section { padding: 3rem 1.5rem; background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%); text-align: center; }
 .consent-banner { position: fixed; bottom: 0; left: 0; right: 0; background: var(--bg-secondary); border-top: 3px solid #e5b13b; padding: 1rem; z-index: 9999; }
 
+
+/* Phase 5: CRM & Portal Extensions */
+.vault-container .upload-area:hover { background-color: rgba(229, 177, 59, 0.1); cursor: pointer; }
+.messages-container .history p { margin: 5px 0; }
