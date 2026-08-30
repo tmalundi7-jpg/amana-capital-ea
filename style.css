@@ -2497,11 +2497,5 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 .teaser-right-cta-text {
     color: #e0e0e0 !important;
 }
-.teaser-prem-left {
-    padding: 3rem !important;
-    background: #ffffff !important;
-}
-.teaser-prem-left p {
-    color: rgba(11,29,58,0.85) !important;
-    line-height: 1.8 !important;
-}
+.teaser-prem-left { padding: 3rem !important; background: var(--navy) !important; color: var(--cream) !important; }
+.teaser-prem-left p, .teaser-prem-title, .teaser-prem-stat-label, .teaser-prem-stat-value { color: var(--cream) !important; line-height: 1.8 !important; }
