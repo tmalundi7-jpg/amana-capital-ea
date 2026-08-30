@@ -2,14 +2,14 @@
 
 :root {
   /* --- Colors (Light Theme Defaults) --- */
-  --navy: #051426;
-  --navy-alt: #0A213D;
-  --cream: #F8F7F4;
+  --navy: #0A1628;
+  --navy-alt: #0F223D;
+  --cream: #FBF7F0;
   --stone: #EAE3D5;
   --mist: #6B7280; /* Better contrast for accessibility */
-  --gold: #B39255;
-  --gold-hover: #987A45;
-  --gold-light: rgba(179, 146, 85, 0.1);
+  --gold: #E5B13B;
+  --gold-hover: #F1C453;
+  --gold-light: rgba(229, 177, 59, 0.15);
   --gain: #16A34A;
   --loss: #DC2626;
   --white: #FFFFFF;
@@ -299,8 +299,11 @@ a:hover {
   left: 100%;
 }
 .btn-gold-solid:hover {
-  background: transparent;
-  color: var(--gold);
+  background: var(--gold-hover);
+  color: var(--navy);
+  border-color: var(--gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(229, 177, 59, 0.4);
 }
 .btn-cream-outline {
   background: transparent;
@@ -2319,3 +2322,21 @@ body { background: var(--bg-primary); color: var(--text-primary); transition: ba
 }
 
 
+
+
+/* Dark Navy Box for Visibility */
+.why-section-header {
+    background-color: var(--navy);
+    padding: 2.5rem;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.why-section-header .section-eyebrow {
+    color: var(--gold) !important;
+}
+.why-section-header .section-title {
+    color: var(--white) !important;
+    margin-bottom: 0;
+}
