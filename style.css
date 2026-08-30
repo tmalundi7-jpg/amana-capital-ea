@@ -2299,3 +2299,29 @@ body { background: var(--bg-primary); color: var(--text-primary); transition: ba
 /* Phase 5: CRM & Portal Extensions */
 .vault-container .upload-area:hover { background-color: rgba(229, 177, 59, 0.1); cursor: pointer; }
 .messages-container .history p { margin: 5px 0; }
+
+/* Vertical Logo Upgrade */
+.vertical-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.1;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    padding-left: 12px;
+    margin-left: 4px;
+}
+.logo-word-primary {
+    font-family: var(--heading-font);
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--cream);
+}
+.logo-word-secondary {
+    font-family: var(--body-font);
+    font-size: 0.5rem;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    margin-top: 4px;
+    text-transform: uppercase;
+}
