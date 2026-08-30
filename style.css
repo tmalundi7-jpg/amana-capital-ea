@@ -3169,3 +3169,51 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     }
 }
 /* ============================================================ */
+
+/* ============================================================
+   REDUCE TEASER SQUARE SIZE AND STATS
+   ============================================================ */
+
+/* Reduce padding on the entire teaser card to make the square smaller */
+.teaser-prem-left {
+    padding: 2.5rem !important;
+}
+
+.teaser-prem-right {
+    padding: 2.5rem !important;
+}
+
+/* Reduce the font size of the stats as requested */
+.teaser-prem-stat-value {
+    font-size: 1.5rem !important;
+}
+
+/* Slightly reduce the title size to match the smaller card footprint */
+.teaser-prem-title {
+    font-size: 1.75rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Slightly reduce the margin of the body text */
+.teaser-prem-body {
+    margin-bottom: 1.5rem !important;
+}
+
+/* On mobile, shrink stats a bit more so they fit well */
+@media (max-width: 768px) {
+    .teaser-prem-left, .teaser-prem-right {
+        padding: 1.5rem !important;
+    }
+    .teaser-prem-stat-value {
+        font-size: 1.25rem !important;
+    }
+    .teaser-prem-title {
+        font-size: 1.5rem !important;
+    }
+}
+@media (max-width: 480px) {
+    .teaser-prem-stat-value {
+        font-size: 1.1rem !important;
+    }
+}
+/* ============================================================ */
