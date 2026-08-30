@@ -3048,12 +3048,9 @@ body { background: var(--bg-primary); color: var(--text-primary); }
         gap: 0.5rem !important; 
     }
     /* Let the Top Gainers / Losers span 2 columns so they aren't squished */
-    /* Stack Gainers and Losers sequentially (one after another) to prevent squishing */
-    .snapshot-grid > :nth-child(3) {
-        grid-column: span 2 !important; /* Turnover full width */
-    }
+    /* Let the Top Gainers / Losers span 2 columns so they aren't squished */
     .snapshot-grid > :nth-child(4), .snapshot-grid > :nth-child(5) {
-        grid-column: span 2 !important; /* Gainers and Losers each get their own full row */
+        grid-column: span 2 !important;
     }
     
     .snapshot-value { font-size: 1.15rem !important; }
@@ -3222,26 +3219,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 }
 /* ============================================================ */
 
-/* ============================================================
-   REDUCE MAIN DSE SNAPSHOT SQUARE SIZE
-   ============================================================ */
 
-/* Reduce padding on the main snapshot card to shrink its square size */
-.snapshot-card {
-    padding: 2rem 2.5rem !important;
-}
-
-@media (max-width: 768px) {
-    .snapshot-card {
-        padding: 1.5rem !important;
-    }
-}
-@media (max-width: 480px) {
-    .snapshot-card {
-        padding: 1rem !important;
-    }
-}
-/* ============================================================ */
 
 /* ============================================================
    ALIGN TEASER STATS VALUES
@@ -3308,27 +3286,4 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 }
 /* ============================================================ */
 
-/* ============================================================
-   REVERT DESKTOP SNAPSHOT GRID (BACK TO 5 COLUMNS)
-   ============================================================ */
-.snapshot-grid {
-    display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
-    gap: 1rem !important;
-}
 
-/* Ensure all items just take 1 column on desktop */
-.snapshot-grid > * {
-    grid-column: span 1 !important;
-}
-
-/* On small screens (mobile), stack everything sequentially */
-@media (max-width: 768px) {
-    .snapshot-grid {
-        grid-template-columns: 1fr !important;
-    }
-    .snapshot-grid > * {
-        grid-column: span 1 !important;
-    }
-}
-/* ============================================================ */
