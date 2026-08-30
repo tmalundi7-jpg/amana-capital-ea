@@ -45,6 +45,15 @@
 <link href="/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
 </head>
 <body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; width: 0; height: 0;">
+  <defs>
+    <filter id="duotone">
+      <feColorMatrix type="matrix" values="0.33 0.33 0.33 0 0.04 0.09 0.09 0.09 0 0.09 0.03 0.03 0.03 0 0.70 0 0 0 1 0" />
+    </filter>
+  </defs>
+</svg>
+
 <nav class="navbar">
 <div class="container nav-container">
 <a class="brand-link" href="/">
@@ -84,7 +93,7 @@
 </ul>
 </div>
 </nav>
-<main class="transition-fade" id="swup">
+<main class="transition-fade" id="swup" class="transition-fade-slide">
 <style>
     /* ─── Home Page Enhancement Styles ─── */
 
@@ -642,57 +651,39 @@
     }
     </style>
 <!-- ─── HERO ─── -->
-<section class="home-hero">
-<div class="container">
-<div class="home-hero-grid">
-<!-- Left: Text -->
-<div>
-<div class="home-hero-eyebrow">
-<span class="home-hero-eyebrow-dot"></span>
-<span>Dar es Salaam Stock Exchange</span>
-</div>
-<h1>Capital intelligence<br/>for the <em>African century</em>.</h1>
-<p class="home-hero-sub">Daily DSE market intelligence and long‑horizon investment perspectives — rooted in integrity, regional depth, and disciplined conviction. For Tanzanians at home and across the diaspora.</p>
-<div class="home-hero-cta">
-<a class="btn btn-gold-solid" href="/market-intelligence">Today's DSE Wrap</a>
-<a class="btn btn-cream-outline" href="/education">Start Learning</a>
-</div>
-<div class="home-hero-trust">Registration with CMSA Pending — Dar es Salaam, Tanzania</div>
-</div>
-<!-- Right: Live Stats -->
-<div class="home-hero-stats">
-<div class="home-stat-card">
-<div>
-<div class="home-stat-label">DSEI — End of Day</div>
-<div class="home-stat-value">4,444.48</div>
-</div>
-<span class="home-stat-badge" style="background:rgba(239,68,68,0.15);color:#ef4444;">▼ −0.2%</span>
-</div>
-<div class="home-stat-card">
-<div>
-<div class="home-stat-label">Daily Turnover</div>
-<div class="home-stat-value">TZS 10.20 bn</div>
-</div>
-<span class="home-stat-badge" style="background:rgba(239,68,68,0.15);color:#ef4444;">▼ −56.3%</span>
-</div>
-<div class="home-stat-card">
-<div>
-<div class="home-stat-label">Top Mover</div>
-<div class="home-stat-value">NMG +5.8%</div>
-</div>
-<span class="home-stat-badge neutral">28 Aug 2026</span>
-</div>
-<div class="home-stat-card">
-<div>
-<div class="home-stat-label">DSE Listed Companies</div>
-<div class="home-stat-value">20</div>
-</div>
-<span class="home-stat-badge neutral">Frontier</span>
-</div>
-</div>
-</div>
-</div>
+
+<!-- ============================================ -->
+<!-- HERO SECTION – IMAGE‑BACKED + PARALLAX      -->
+<!-- ============================================ -->
+<section class="hero-section enhanced-hero" role="banner" aria-label="Amana Capital – Investment Advisory">
+  <div class="hero-background">
+    <picture>
+      <source srcset="/images/hero/hero-bg-1200.webp 1200w" type="image/webp">
+      <img src="/images/hero/hero-bg-1200.jpg" alt="Dar es Salaam skyline at dusk – Amana Capital investment advisory" loading="eager" decoding="async" class="hero-image">
+    </picture>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content container">
+    <div class="hero-text">
+      <span class="hero-badge">Tanzania's Premier Investment Advisory</span>
+      <h1 class="hero-title">
+        <span class="hero-title-line">Intelligence That</span>
+        <span class="hero-title-line hero-title-highlight">Builds Wealth</span>
+      </h1>
+      <p class="hero-subtitle">Institutional‑grade market intelligence, daily DSE analysis, and bespoke investment advisory for East Africa's discerning investors.</p>
+      <div class="hero-actions">
+        <a href="/market-intelligence/" class="btn btn-primary btn-large">Explore Market Data <span class="btn-arrow">→</span></a>
+        <a href="/contact/" class="btn btn-secondary btn-large">Speak to an Advisor</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-value" data-count="250">250+</span><span class="hero-stat-label">Daily Wraps</span></div>
+      <div class="hero-stat"><span class="hero-stat-value" data-count="15">15</span><span class="hero-stat-label">Years Experience</span></div>
+      <div class="hero-stat"><span class="hero-stat-value">DSE</span><span class="hero-stat-label">Licensed</span></div>
+    </div>
+  </div>
 </section>
+
 <!-- ─── LIVE DSE SNAPSHOT ─── -->
 <section style="padding: 2.5rem 0; background: var(--cream);">
 <div class="container">

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -49,16 +49,22 @@
 </div>
 
 <!-- ============================================ -->
-<!-- KEY TAKEAWAYS � Cognitive Load Reduction      -->
+<!-- KEY TAKEAWAYS BOX (Cognitive Load Reduction) -->
 <!-- ============================================ -->
 {% if key_takeaways %}
 <section class="key-takeaways" aria-labelledby="takeaways-heading">
-  <h3 id="takeaways-heading" class="takeaways-title">
-    ?? Key Takeaways
-  </h3>
+  <div class="key-takeaways-header">
+    <h3 id="takeaways-heading" class="takeaways-title">
+      <span class="takeaways-icon">📋</span>
+      Key Takeaways
+    </h3>
+  </div>
   <ul class="takeaways-list">
     {% for takeaway in key_takeaways %}
-    <li class="takeaway-item">{{ takeaway }}</li>
+    <li class="takeaway-item">
+      <span class="takeaway-bullet">✦</span>
+      {{ takeaway }}
+    </li>
     {% endfor %}
   </ul>
 </section>
@@ -154,3 +160,4 @@
     <script src="script.min.js?v=20260813h" defer></script>
 </body>
 </html>
+
