@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=20260830_final_design_revert" rel="stylesheet"/>
+<link href="style.css?v=20260830_economist_fix2" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -76,7 +76,7 @@
 </ul>
 </div>
 </nav>
-<main>
+<main class="transition-fade" id="swup">
 <style>
     /* ─── Home Page Enhancement Styles ─── */
 
@@ -97,7 +97,7 @@
     /* Hero */
     .home-hero {
         background: var(--navy);
-        padding:4rem 0; 6rem;
+        padding: 8rem 0 6rem;
         position: relative;
         overflow: hidden;
     }
@@ -350,7 +350,7 @@
     /* Why Us section */
     .why-section {
         background: var(--cream);
-        padding:4rem 0;
+        padding: 8rem 0;
         position: relative;
     }
     .why-section::before {
@@ -393,12 +393,12 @@
         gap: 2.5rem;
     }
     .why-card {
-        background: var(--navy);
+        background: var(--gold);
         padding: 2.5rem;
         border: none;
         border-radius: var(--radius-md);
         position: relative;
-        box-shadow: 0 10px 30px rgba(11, 29, 58, 0.1);
+        box-shadow: 0 4px 15px rgba(229, 177, 59, 0.2);
     }
     .why-card::before {
         display: none;
@@ -406,26 +406,26 @@
     .why-icon {
         width: 50px; height: 50px;
         border-radius: 50%;
-        border: 1px solid rgba(200,150,46,0.4);
+        border: 1px solid rgba(11,29,58,0.4);
         background: transparent;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 1.25rem;
         margin-bottom: 1.5rem;
-        color: var(--gold);
+        color: var(--navy);
     }
     .why-card h3 {
         font-family: 'Cormorant Garamond', serif;
         font-size: 1.5rem;
         font-weight: 600;
-        color: var(--cream);
+        color: var(--navy);
         margin-bottom: 1rem;
         line-height: 1.2;
     }
     .why-card p {
         font-size: 0.95rem;
-        color: rgba(251,247,240,0.85);
+        color: rgba(11,29,58,0.85);
         line-height: 1.7;
         margin: 0;
         font-weight: 400;
@@ -434,7 +434,7 @@
     /* Services section */
     .services-section {
         background: var(--cream);
-        padding:4rem 0;
+        padding: 8rem 0;
         position: relative;
     }
     .services-section-header {
@@ -451,7 +451,7 @@
         gap: 3rem;
     }
     .service-card {
-        background: var(--navy);
+        background: #ffffff;
         border: 1px solid rgba(11,29,58,0.1);
         border-top: 3px solid var(--gold);
         border-radius: var(--radius-md);
@@ -468,7 +468,6 @@
         box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     }
     .service-num {
-        color: var(--gold);
         font-size: 0.65rem;
         font-weight: 600;
         color: var(--gold);
@@ -477,16 +476,15 @@
         opacity: 0.8;
     }
     .service-card h3 {
-        color: var(--cream);
         font-family: 'Cormorant Garamond', serif;
         font-size: 2rem;
         font-weight: 600;
-        color: var(--cream);
+        color: var(--navy);
         margin-bottom: 1rem;
     }
     .service-card p {
         font-size: 1rem;
-        color: #fbf7f0;
+        color: rgba(11,29,58,0.7);
         line-height: 1.7;
         margin-bottom: 2.5rem;
         font-weight: 400;
@@ -495,7 +493,7 @@
     /* Teaser card upgrade */
     .home-teaser {
         background: var(--cream);
-        padding:4rem 0;
+        padding: 8rem 0;
         position: relative;
     }
     .teaser-premium {
@@ -605,7 +603,7 @@
     /* Newsletter premium */
     .newsletter-premium {
         background: var(--navy);
-        padding:4rem 0;
+        padding: 8rem 0;
         position: relative;
     }
     .newsletter-premium::before {
@@ -765,9 +763,9 @@
 <div class="container">
 <div class="snapshot-card">
 <div class="home-snapshot-header">
-<h2 class="home-snapshot-title">DSE Snapshot</h2>
+<h2 class="home-snapshot-title">Live DSE Snapshot</h2>
 <div style="display:flex;align-items:center;gap:1rem;">
-
+<span class="live-badge">Live Feed</span>
 <span style="font-size:0.78rem;color:var(--mist);font-weight:600;">End-of-day · 28 August 2026</span>
 </div>
 </div>
@@ -803,7 +801,7 @@
 <div class="snapshot-mover" id="home-losers" style="display: flex; flex-direction: column; gap: 0.25rem;"><span>TOL <span style="color:var(--loss)">–6.6%</span></span><span>MBP <span style="color:var(--loss)">–4.8%</span></span><span>SWIS <span style="color:var(--loss)">–1.6%</span></span></div>
 </div>
 </div>
-<div class="snapshot-note" id="home-snapshot-date">Terminal Feed | End-of-day, 28 August 2026</div>
+<div class="snapshot-note" id="home-snapshot-date">Live Terminal Feed | End-of-day, 28 August 2026</div>
 <!-- SNAPSHOT_CARD_END -->
 <div class="snapshot-footer-link"><a class="gold-link" href="/market-intelligence">View Full Market Intelligence →</a></div>
 </div>
