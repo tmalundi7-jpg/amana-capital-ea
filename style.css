@@ -2656,3 +2656,37 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 .why-card { text-align: left !important; }
 .service-card { text-align: left !important; }
 .teaser-premium { text-align: left !important; }
+
+/* 1. Solid Dark Navy Blue inside the Header Squares */
+.why-section-header {
+    background-color: var(--navy) !important;
+    border: 1px solid var(--gold) !important;
+    padding: 2.5rem 3.5rem !important;
+    border-radius: 4px !important;
+}
+.why-section-header .section-eyebrow {
+    color: var(--gold) !important;
+}
+.why-section-header .section-title {
+    color: #ffffff !important;
+}
+
+/* 2. Gold line around the entire Daily DSE Wrap (both left and right sides) */
+.home-teaser .teaser-premium {
+    border: 2px solid var(--gold) !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+/* 3. Gold line separating the left side and right side */
+.home-teaser .teaser-prem-left {
+    border-right: 2px solid var(--gold) !important;
+}
+
+/* Ensure mobile layout doesn't have a broken right border */
+@media (max-width: 900px) {
+    .home-teaser .teaser-prem-left {
+        border-right: none !important;
+        border-bottom: 2px solid var(--gold) !important;
+    }
+}
