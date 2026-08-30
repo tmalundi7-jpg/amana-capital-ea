@@ -2311,19 +2311,20 @@ body { background: var(--bg-primary); color: var(--text-primary); transition: ba
     margin-left: 4px;
 }
 .logo-word-primary {
-    font-family: var(--heading-font);
-    font-size: 1.05rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.65rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     color: var(--cream);
+    line-height: 1;
 }
 .logo-word-secondary {
-    font-family: var(--body-font);
-    font-size: 0.5rem;
-    letter-spacing: 0.1em;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
     color: var(--gold);
-    margin-top: 4px;
-    text-transform: uppercase;
+    margin-top: 2px;
 }
 
 
