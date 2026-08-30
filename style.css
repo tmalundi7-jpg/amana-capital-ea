@@ -3307,3 +3307,53 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     }
 }
 /* ============================================================ */
+
+/* ============================================================
+   LAPTOP/DESKTOP SNAPSHOT GRID REDESIGN
+   ============================================================ */
+/* Instead of 5 squished columns, use a 6-column grid to create two rows */
+.snapshot-grid {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 1rem !important;
+}
+
+/* Row 1: DSEI, TSI, Turnover (each spans 2 of 6 columns) */
+.snapshot-grid > :nth-child(1),
+.snapshot-grid > :nth-child(2),
+.snapshot-grid > :nth-child(3) {
+    grid-column: span 2 !important;
+}
+
+/* Row 2: Top Gainers, Top Losers (each spans 3 of 6 columns) */
+.snapshot-grid > :nth-child(4),
+.snapshot-grid > :nth-child(5) {
+    grid-column: span 3 !important;
+}
+
+/* On medium screens (tablets), switch to 2 columns */
+@media (max-width: 1024px) {
+    .snapshot-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .snapshot-grid > :nth-child(1),
+    .snapshot-grid > :nth-child(2) {
+        grid-column: span 1 !important;
+    }
+    .snapshot-grid > :nth-child(3),
+    .snapshot-grid > :nth-child(4),
+    .snapshot-grid > :nth-child(5) {
+        grid-column: span 2 !important;
+    }
+}
+
+/* On small screens (mobile), stack everything sequentially */
+@media (max-width: 768px) {
+    .snapshot-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .snapshot-grid > * {
+        grid-column: span 1 !important;
+    }
+}
+/* ============================================================ */
