@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=20260830_match_text_style" rel="stylesheet"/>
+<link href="style.css?v=20260830_revert_homematch" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -799,37 +799,38 @@
 </div>
 </div>
 <!-- SNAPSHOT_CARD_START -->
-  <div class="snapshot-grid">
-  <div class="snapshot-item">
-  <div class="snapshot-label">DSEI</div>
-  <div class="snapshot-value" id="home-dsei" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--navy);">4,444.48</div>
-  </div>
-  <div class="snapshot-item">
-  <div class="snapshot-label">TSI</div>
-  <div class="snapshot-value" id="home-tsi" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--navy);">4,484.05</div>
-  </div>
-  <div class="snapshot-item">
-  <div class="snapshot-label">Turnover</div>
-  <div class="snapshot-value" id="home-turnover" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--navy);">TZS 10.20 bn</div>
-  </div>
-  <div class="snapshot-item">
-  <div class="snapshot-label">Top Gainers</div>
-  <div class="snapshot-mover" id="home-gainers" style="display: flex; flex-direction: column; gap: 0.15rem; width:100%; font-family: 'Plus Jakarta Sans', sans-serif; font-size:0.75rem; font-weight:700; color:var(--navy);">
-      <div style="display:flex; justify-content:start; gap:0.5rem;"><span>NMG</span> <span style="color:var(--gain)">+5.8%</span></div>
-      <div style="display:flex; justify-content:start; gap:0.5rem;"><span>NMB</span> <span style="color:var(--gain)">+4.9%</span></div>
-      <div style="display:flex; justify-content:start; gap:0.5rem;"><span>VODA</span> <span style="color:var(--gain)">+1.9%</span></div>
-  </div>
-  </div>
-  <div class="snapshot-item">
-  <div class="snapshot-label">Top Losers</div>
-  <div class="snapshot-mover" id="home-losers" style="display: flex; flex-direction: column; gap: 0.15rem; width:100%; font-family: 'Plus Jakarta Sans', sans-serif; font-size:0.75rem; font-weight:700; color:var(--navy);">
-      <div style="display:flex; justify-content:start; gap:0.5rem;"><span>TOL</span> <span style="color:var(--loss)">-6.6%</span></div>
-      <div style="display:flex; justify-content:start; gap:0.5rem;"><span>MBP</span> <span style="color:var(--loss)">-4.8%</span></div>
-      <div style="display:flex; justify-content:start; gap:0.5rem;"><span>SWIS</span> <span style="color:var(--loss)">-1.6%</span></div>
-  </div>
-  </div>
-  </div>
-  <div class="snapshot-note" id="home-snapshot-date">Terminal Feed | End-of-day, 28 August 2026</div>
+<div class="snapshot-grid">
+<div class="snapshot-item">
+<div class="snapshot-label">DSEI</div>
+<div class="snapshot-value" id="home-dsei">4,444.48</div>
+<canvas height="40" id="dseiChart" style="margin-top:0.5rem;" width="100"></canvas>
+</div>
+<div class="snapshot-item">
+<div class="snapshot-label">TSI</div>
+<div class="snapshot-value" id="home-tsi">4,484.05</div>
+<canvas height="40" id="tsiChart" style="margin-top:0.5rem;" width="100"></canvas>
+</div>
+<div class="snapshot-item">
+<div class="snapshot-label">Turnover</div>
+<div class="snapshot-value" id="home-turnover">TZS 10.20 bn</div>
+<div class="snapshot-bar-chart">
+<div class="bar" style="height: 40%"></div>
+<div class="bar" style="height: 60%"></div>
+<div class="bar" style="height: 30%"></div>
+<div class="bar" style="height: 45%"></div>
+<div class="bar" style="height: 44%"></div>
+</div>
+</div>
+<div class="snapshot-item">
+<div class="snapshot-label">Top Gainers</div>
+<div class="snapshot-mover" id="home-gainers" style="display: flex; flex-direction: column; gap: 0.25rem;"><span>NMG <span style="color:var(--gain)">+5.8%</span></span><span>NMB <span style="color:var(--gain)">+4.9%</span></span><span>VODA <span style="color:var(--gain)">+1.9%</span></span></div>
+</div>
+<div class="snapshot-item">
+<div class="snapshot-label">Top Losers</div>
+<div class="snapshot-mover" id="home-losers" style="display: flex; flex-direction: column; gap: 0.25rem;"><span>TOL <span style="color:var(--loss)">-6.6%</span></span><span>MBP <span style="color:var(--loss)">-4.8%</span></span><span>SWIS <span style="color:var(--loss)">-1.6%</span></span></div>
+</div>
+</div>
+<div class="snapshot-note" id="home-snapshot-date">Terminal Feed | End-of-day, 28 August 2026</div>
 <!-- SNAPSHOT_CARD_END -->
 <div class="snapshot-footer-link"><a class="gold-link" href="/market-intelligence">View Full Market Intelligence →</a></div>
 </div>
