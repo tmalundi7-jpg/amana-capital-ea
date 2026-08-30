@@ -181,7 +181,7 @@ a:hover {
 }
 .nav-links li { margin: 0; padding: 0; }
 .nav-links a {
-  color: rgba(251, 247, 240, 0.85); /* Cream text */
+  color: #FFFFFF; /* Bright white - improved visibility */
   font-weight: 500;
   font-size: 0.92rem;
   text-decoration: none;
@@ -2916,3 +2916,99 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     font-weight: 700 !important;
 }
 /* ============================================================= */
+
+/* ====== NAV BRIGHTNESS UPGRADE ====== */
+.logo-word-primary {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 20px rgba(229,177,59,0.12) !important;
+}
+.logo-word-secondary {
+    color: var(--gold) !important;
+    opacity: 1 !important;
+}
+.nav-links a {
+    color: #FFFFFF !important;
+}
+.nav-links a:hover,
+.nav-links a.active {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 12px rgba(229,177,59,0.5) !important;
+}
+/* ===================================== */
+
+/* ====== DAILY DSE WRAP TEASER UPGRADE ====== */
+
+/* Outer card: tighter gold border, stronger shadow */
+.teaser-premium {
+    border: 2px solid var(--gold) !important;
+    box-shadow: 0 16px 60px rgba(0,0,0,0.35), 0 0 0 1px rgba(200,150,46,0.1) !important;
+    border-radius: 6px !important;
+}
+
+/* Left panel: article body */
+.teaser-prem-eyebrow {
+    margin-bottom: 1.5rem !important;
+}
+.teaser-prem-label {
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    color: var(--gold) !important;
+}
+.teaser-prem-date {
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    color: rgba(251,247,240,0.5) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    margin-bottom: 1rem !important;
+}
+.teaser-prem-title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    color: var(--cream) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1.5rem !important;
+    letter-spacing: -0.5px !important;
+}
+.teaser-prem-body {
+    font-size: 0.92rem !important;
+    color: rgba(251,247,240,0.72) !important;
+    line-height: 1.75 !important;
+    margin-bottom: 2rem !important;
+    border-left: 3px solid var(--gold) !important;
+    padding-left: 1.25rem !important;
+}
+
+/* Right panel: "Institutional Analysis" CTA */
+.teaser-prem-right {
+    background: rgba(200,150,46,0.07) !important;
+    border-left: 1px solid rgba(200,150,46,0.35) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 1.5rem !important;
+    padding: 4rem 3rem !important;
+}
+.teaser-right-label {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    color: var(--gold) !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 0 !important;
+}
+.teaser-right-divider {
+    width: 50px !important;
+    height: 2px !important;
+    background: var(--gold) !important;
+    opacity: 0.6 !important;
+}
+.teaser-right-cta-text {
+    font-size: 0.95rem !important;
+    color: rgba(251,247,240,0.75) !important;
+    line-height: 1.7 !important;
+    font-style: italic !important;
+}
+/* ============================================= */
