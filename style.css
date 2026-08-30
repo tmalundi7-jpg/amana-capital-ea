@@ -2957,3 +2957,32 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     }
 }
 /* ============================================================ */
+
+/* ============================================================
+   REDUCE VERTICAL SPACE BETWEEN MAIN HOMEPAGE SECTIONS
+   ============================================================ */
+/* Reduce padding on the main sections to bring them closer together */
+.why-section,
+.services-section,
+.home-teaser {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+
+/* Also reduce the huge margin under the section headers (e.g. 'What We Do') */
+.why-section-header {
+    margin-bottom: 2rem !important; /* Reduced from 3rem/3.5rem */
+}
+
+@media (max-width: 768px) {
+    .why-section,
+    .services-section,
+    .home-teaser {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+    .why-section-header {
+        margin-bottom: 1.5rem !important;
+    }
+}
+/* ============================================================ */
