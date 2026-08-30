@@ -2973,3 +2973,57 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     }
 }
 /* ============================================================ */
+
+/* ============================================================
+   ABSOLUTE MOBILE RESPONSIVENESS OVERRIDE
+   ============================================================ */
+/* 1. DSE Snapshot must ALWAYS be side-by-side (swipeable) on mobile, NOT vertical columns */
+@media (max-width: 900px) {
+    .snapshot-card .snapshot-grid,
+    .mi-snapshot-card .snapshot-grid,
+    .snapshot-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 1.5rem !important;
+        padding-bottom: 0.5rem !important;
+        justify-content: flex-start !important;
+    }
+    
+    .snapshot-item {
+        flex: 0 0 auto !important;
+        min-width: min-content !important;
+    }
+
+    /* Hide the scrollbar for a cleaner look but keep it swipeable */
+    .snapshot-grid::-webkit-scrollbar {
+        display: none;
+    }
+    .snapshot-grid {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+}
+
+/* 2. Ensure general sections fit well on mobile */
+@media (max-width: 768px) {
+    .why-section, .services-section, .home-teaser {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    .why-grid, .services-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Ensure the Top Gainers / Losers raw text doesn't overflow */
+    .snapshot-mover {
+        white-space: nowrap !important;
+    }
+}
+/* ============================================================ */
