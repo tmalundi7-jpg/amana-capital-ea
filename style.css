@@ -2690,3 +2690,63 @@ body { background: var(--bg-primary); color: var(--text-primary); }
         border-bottom: 2px solid var(--gold) !important;
     }
 }
+
+/* --- DSE WRAP ARTICLE UPGRADE --- */
+.dse-article-card {
+    background-color: var(--cream) !important;
+    border: 2px solid var(--gold) !important;
+    color: var(--navy) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1) !important;
+}
+.dse-article-card p, 
+.dse-article-card li {
+    color: #1a2a3a !important;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.dse-article-card .dse-header-box {
+    background-color: var(--navy) !important;
+    border-bottom: 4px solid var(--gold) !important;
+    border: none !important;
+}
+.dse-article-card .dse-header-box h1 {
+    color: var(--cream) !important;
+    font-family: 'Cormorant Garamond', serif !important;
+}
+.dse-article-card .dse-header-box p {
+    color: var(--gold) !important;
+}
+.dse-article-card h2 {
+    font-family: 'Cormorant Garamond', serif !important;
+    color: var(--navy) !important;
+    border-bottom: 1px solid rgba(11,29,58,0.1) !important;
+    padding-bottom: 0.5rem !important;
+    margin-top: 3rem !important;
+}
+.dse-article-card h3 {
+    font-family: 'Cormorant Garamond', serif !important;
+    color: var(--navy) !important;
+}
+.dse-article-card .key-takeaways {
+    background-color: white !important;
+    border: 1px solid rgba(200,150,46,0.3) !important;
+    border-left: 4px solid var(--gold) !important;
+}
+.dse-article-card .key-takeaways h3 {
+    color: var(--navy) !important;
+}
+.dse-article-card table {
+    border: 1px solid rgba(11,29,58,0.1) !important;
+}
+.dse-article-card table th {
+    background-color: var(--navy) !important;
+    color: var(--cream) !important;
+}
+.dse-article-card table td {
+    color: var(--navy) !important;
+    border-bottom: 1px solid rgba(11,29,58,0.1) !important;
+}
+.dse-article-card .article-disclaimer {
+    border-top: 1px solid rgba(11,29,58,0.2) !important;
+}
