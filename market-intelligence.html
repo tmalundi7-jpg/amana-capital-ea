@@ -7,7 +7,7 @@
 <title>Daily DSE Market Wrap &amp; Analysis | Amana Capital EA</title>
 <meta content="Read our daily Dar es Salaam Stock Exchange (DSE) wrap. Get institutional-grade market intelligence, top movers, and equity research from Amana Capital East Africa." name="description"/>
 <link href="https://www.amana-capital-ea.co.tz/market-intelligence" rel="canonical"/>
-<link href="style.css?v=20260830_match_mi_snapshot" rel="stylesheet"/>
+<link href="style.css?v=20260830_mi_to_home" rel="stylesheet"/>
 <!-- Chart.js in head so it's available immediately -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@2.0.2"></script>
@@ -446,49 +446,47 @@
 <!-- Left Column -->
 <div>
 <!-- Snapshot Card -->
-<div class="snapshot-card">
-<div class="home-snapshot-header">
-<h2 class="home-snapshot-title">DSE Snapshot</h2>
-<div style="display:flex;align-items:center;gap:1rem;">
-
-<span style="font-size:0.78rem;color:var(--mist);font-weight:600;">End-of-day · 28 August 2026</span>
+<div class="mi-snapshot-card">
+<div class="mi-snapshot-hdr">
+<h2>DSE Snapshot</h2>
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="font-size:0.78rem;color:rgba(251,247,240,0.7);font-weight:600;">28 August 2026</span>
 </div>
 </div>
-<!-- SNAPSHOT_CARD_START -->
 <div class="snapshot-grid">
-<div class="snapshot-item">
-<div class="snapshot-label">DSEI</div>
-<div class="snapshot-value" id="home-dsei">4,444.48</div>
-<canvas height="40" id="dseiChart" style="margin-top:0.5rem;" width="100"></canvas>
+  <div class="snapshot-item">
+<div class="snapshot-label" style="color:rgba(251,247,240,0.85);">DSEI</div>
+<div class="snapshot-value" id="mi-dsei">4,444.48</div>
 </div>
-<div class="snapshot-item">
-<div class="snapshot-label">TSI</div>
-<div class="snapshot-value" id="home-tsi">4,484.05</div>
-<canvas height="40" id="tsiChart" style="margin-top:0.5rem;" width="100"></canvas>
+  <div class="snapshot-item">
+  <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">TSI</div>
+<div class="snapshot-value" id="mi-tsi">4,484.05</div>
 </div>
-<div class="snapshot-item">
-<div class="snapshot-label">Turnover</div>
-<div class="snapshot-value" id="home-turnover">TZS 10.20 bn</div>
-<div class="snapshot-bar-chart">
-<div class="bar" style="height: 40%"></div>
-<div class="bar" style="height: 60%"></div>
-<div class="bar" style="height: 30%"></div>
-<div class="bar" style="height: 45%"></div>
-<div class="bar" style="height: 44%"></div>
+  <div class="snapshot-item">
+  <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">Turnover</div>
+<div class="snapshot-value" data-format-type="bn" data-tzs-value="1380000000" id="mi-turnover">TZS 10.20 bn</div>
+</div>
+  <div class="snapshot-item">
+  <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">Top Gainers</div>
+  <!-- GAINERS_START -->
+      <div style="display:flex; flex-direction:column; gap:0.15rem; width:100%;">
+        <div style="display:flex; justify-content:space-between; font-size:0.75rem; font-weight:700; color:var(--cream);"><span>NMG</span> <span style="color:var(--gain)">+5.8%</span></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.75rem; font-weight:700; color:var(--cream);"><span>NMB</span> <span style="color:var(--gain)">+4.9%</span></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.75rem; font-weight:700; color:var(--cream);"><span>VODA</span> <span style="color:var(--gain)">+1.9%</span></div>
+      </div>
+      <!-- GAINERS_END -->
+</div>
+  <div class="snapshot-item">
+  <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">Top Losers</div>
+  <!-- LOSERS_START -->
+      <div style="display:flex; flex-direction:column; gap:0.15rem; width:100%;">
+        <div style="display:flex; justify-content:space-between; font-size:0.75rem; font-weight:700; color:var(--cream);"><span>TOL</span> <span style="color:var(--loss)">-6.6%</span></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.75rem; font-weight:700; color:var(--cream);"><span>MBP</span> <span style="color:var(--loss)">-4.8%</span></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.75rem; font-weight:700; color:var(--cream);"><span>SWIS</span> <span style="color:var(--loss)">-1.6%</span></div>
+      </div>
+      <!-- LOSERS_END -->
 </div>
 </div>
-<div class="snapshot-item">
-<div class="snapshot-label">Top Gainers</div>
-<div class="snapshot-mover" id="home-gainers" style="display: flex; flex-direction: column; gap: 0.25rem;"><span>NMG <span style="color:var(--gain)">+5.8%</span></span><span>NMB <span style="color:var(--gain)">+4.9%</span></span><span>VODA <span style="color:var(--gain)">+1.9%</span></span></div>
-</div>
-<div class="snapshot-item">
-<div class="snapshot-label">Top Losers</div>
-<div class="snapshot-mover" id="home-losers" style="display: flex; flex-direction: column; gap: 0.25rem;"><span>TOL <span style="color:var(--loss)">-6.6%</span></span><span>MBP <span style="color:var(--loss)">-4.8%</span></span><span>SWIS <span style="color:var(--loss)">-1.6%</span></span></div>
-</div>
-</div>
-<div class="snapshot-note" id="home-snapshot-date">Terminal Feed | End-of-day, 28 August 2026</div>
-<!-- SNAPSHOT_CARD_END -->
-<div class="snapshot-footer-link"><a class="gold-link" href="/market-intelligence">View Full Market Intelligence →</a></div>
 </div>
 <!-- Heatmap -->
 <div class="mi-heatmap-section" style="grid-column:auto;">
