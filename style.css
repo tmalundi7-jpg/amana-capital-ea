@@ -3238,3 +3238,31 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     }
 }
 /* ============================================================ */
+
+/* ============================================================
+   ALIGN TEASER STATS VALUES
+   ============================================================ */
+.teaser-prem-stats > div, .teaser-prem-stat {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+}
+
+/* Ensure the label has a consistent height so the values line up */
+.teaser-prem-stat-label {
+    min-height: 24px !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    margin-bottom: 0.5rem !important;
+    white-space: nowrap !important; /* Prevent 'Top Gainer' from wrapping and pushing the value down */
+}
+
+/* If the text is a gain label, make it sans-serif and slightly smaller so it fits */
+.teaser-prem-stat-value.gain {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    margin-top: auto !important; /* Pushes the value up/down to align if needed, but flex-start is on parent */
+}
+/* ============================================================ */
