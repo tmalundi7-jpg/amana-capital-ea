@@ -3048,8 +3048,12 @@ body { background: var(--bg-primary); color: var(--text-primary); }
         gap: 0.5rem !important; 
     }
     /* Let the Top Gainers / Losers span 2 columns so they aren't squished */
-    .snapshot-grid > :nth-child(4), .snapshot-grid > :nth-child(5) {
+    /* Make Turnover span 2 so Top Gainers and Top Losers sit next to each other */
+    .snapshot-grid > :nth-child(3) {
         grid-column: span 2 !important;
+    }
+    .snapshot-grid > :nth-child(4), .snapshot-grid > :nth-child(5) {
+        grid-column: span 1 !important;
     }
     
     .snapshot-value { font-size: 1.15rem !important; }
