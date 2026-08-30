@@ -2306,19 +2306,21 @@ body { background: var(--bg-primary); color: var(--text-primary); transition: ba
 }
 .logo-word-primary {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.65rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    color: var(--cream);
+    font-size: 1.35rem; /* Reduced to fit ALL CAPS */
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--white);
     line-height: 1;
+    white-space: nowrap;
 }
 .logo-word-secondary {
     font-family: 'Inter', sans-serif;
     font-size: 0.55rem;
-    font-weight: 400;
-    letter-spacing: 0.2em;
+    font-weight: 500;
+    letter-spacing: 0.22em;
     color: var(--gold);
-    margin-top: 2px;
+    margin-top: 4px;
+    white-space: nowrap;
 }
 
 
@@ -2339,4 +2341,12 @@ body { background: var(--bg-primary); color: var(--text-primary); transition: ba
 .why-section-header .section-title {
     color: var(--white) !important;
     margin-bottom: 0;
+}
+
+
+/* Ensure Logo fits on mobile */
+@media (max-width: 480px) {
+    .brand-icon { height: 30px !important; }
+    .logo-word-primary { font-size: 1.1rem !important; }
+    .logo-word-secondary { font-size: 0.45rem !important; letter-spacing: 0.15em !important; }
 }
