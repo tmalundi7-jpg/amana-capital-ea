@@ -3048,12 +3048,12 @@ body { background: var(--bg-primary); color: var(--text-primary); }
         gap: 0.5rem !important; 
     }
     /* Let the Top Gainers / Losers span 2 columns so they aren't squished */
-    /* Make Turnover span 2 so Top Gainers and Top Losers sit next to each other */
+    /* Stack Gainers and Losers sequentially (one after another) to prevent squishing */
     .snapshot-grid > :nth-child(3) {
-        grid-column: span 2 !important;
+        grid-column: span 2 !important; /* Turnover full width */
     }
     .snapshot-grid > :nth-child(4), .snapshot-grid > :nth-child(5) {
-        grid-column: span 1 !important;
+        grid-column: span 2 !important; /* Gainers and Losers each get their own full row */
     }
     
     .snapshot-value { font-size: 1.15rem !important; }
