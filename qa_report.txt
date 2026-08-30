@@ -1,0 +1,20 @@
+QA CHECKLIST
+- [ ] DSEI — End of Day matches source
+- [x] Daily Turnover matches source
+- [x] Top Mover name/price/change matches source
+- [x] DSE Listed Companies number matches source
+- [x] Live DSE Snapshot DSEI matches source
+- [x] Live DSE Snapshot TSI matches source
+- [x] Live DSE Snapshot Turnover matches source
+- [x] Top Gainers list matches source exactly
+- [x] Top Losers list matches source exactly
+- [x] Daily DSE Wrap DSEI matches source
+- [x] Daily DSE Wrap Turnover matches source
+- [x] Daily DSE Wrap Top Gainer matches source
+- [x] Date updated correctly (if applicable)
+- [x] No extra content added
+- [x] No other sections changed
+- [x] Mobile view correct
+- [x] Desktop view correct
+
+Overall Result: FAIL

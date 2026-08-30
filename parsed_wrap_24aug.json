@@ -1,0 +1,643 @@
+{
+  "report_date": "24 August 2026",
+  "url_date": "2026-08-24",
+  "report_date_long": "Monday, 24th August 2026",
+  "headline": "NMB's 10-for-1 Split Rewrites the Rulebook \u2014 Index Rebases, Liquidity Surges, and the Retail Era Begins",
+  "introduction_paragraphs": [
+    "The Dar es Salaam Stock Exchange delivered a historic session on Monday, headlined by the long-awaited NMB share split. The headline numbers are extraordinary: equity turnover surged to TZS 7.72 billion, more than five times Friday's level, while the All-Share Index appeared to drop sharply from 4,250 to 1,364. This is not a market collapse \u2014 it is the index divisor being recalculated to reflect NMB's new share structure. Behind the technical adjustment lies a market that is becoming more accessible, more liquid, and more inclusive for everyday investors."
+  ],
+  "sections": [
+    {
+      "title": "1. Market Snapshot",
+      "paragraphs": [
+        "The session produced a\u00a0HIGH\u00a0turnover regime, with TZS 7.72 billion in equity trades. This was driven overwhelmingly by NMB, which traded 2,301,840 shares (post-split) including a 1,136,900-share block trade on the pre-arranged board. CRDB also contributed substantially with 814,692 shares traded across 2,170 deals.",
+        "Understanding the index reset:\u00a0When NMB split its shares 10-for-1, the exchange adjusted the index calculation so that the price history remains comparable. The DSEI falling from 4,250 to 1,364 does not mean the market lost value \u2014 it means the denominator has changed. The Tanzania Share Index (TSI) similarly rebased from 9,321 to 2,283. Investors should focus on individual share prices and overall market capitalisation, which actually rose from TZS 36,528.82 billion to TZS 37,453.90 billion \u2014 a genuine increase of 2.5%.",
+        "Foreign investors returned to selling:\u00a0Foreign selling represented 25.14% of turnover, concentrated almost entirely in the NMB block trade. This suggests a foreign institution used the post-split liquidity to exit or reduce its position. Local investors absorbed this supply comfortably, confirming the market's growing self-reliance."
+      ],
+      "list": [],
+      "has_table": true,
+      "table": {
+        "headers": [
+          "Metric",
+          "Fri 21 Aug",
+          "Mon 24 Aug",
+          "Change"
+        ],
+        "rows": [
+          [
+            {
+              "text": "Equity Turnover",
+              "color": ""
+            },
+            {
+              "text": "TZS 1.38 bn",
+              "color": ""
+            },
+            {
+              "text": "TZS 7.72 bn",
+              "color": ""
+            },
+            {
+              "text": "+458%",
+              "color": "--gain"
+            }
+          ],
+          [
+            {
+              "text": "Shares Traded",
+              "color": ""
+            },
+            {
+              "text": "724,503",
+              "color": ""
+            },
+            {
+              "text": "3,833,556",
+              "color": ""
+            },
+            {
+              "text": "+429%",
+              "color": "--gain"
+            }
+          ],
+          [
+            {
+              "text": "Deals",
+              "color": ""
+            },
+            {
+              "text": "2,146",
+              "color": ""
+            },
+            {
+              "text": "5,774",
+              "color": ""
+            },
+            {
+              "text": "+169%",
+              "color": "--gain"
+            }
+          ],
+          [
+            {
+              "text": "Bond Turnover",
+              "color": ""
+            },
+            {
+              "text": "TZS 15.54 bn",
+              "color": ""
+            },
+            {
+              "text": "TZS 6.82 bn",
+              "color": ""
+            },
+            {
+              "text": "\u201356%",
+              "color": "--loss"
+            }
+          ],
+          [
+            {
+              "text": "ETF Turnover",
+              "color": ""
+            },
+            {
+              "text": "TZS 74.85 mn",
+              "color": ""
+            },
+            {
+              "text": "TZS 247.83 mn",
+              "color": ""
+            },
+            {
+              "text": "+231%",
+              "color": "--gain"
+            }
+          ],
+          [
+            {
+              "text": "Foreign Buying",
+              "color": ""
+            },
+            {
+              "text": "1.39%",
+              "color": ""
+            },
+            {
+              "text": "0.74%",
+              "color": ""
+            },
+            {
+              "text": "\u20130.65 pts",
+              "color": "--loss"
+            }
+          ],
+          [
+            {
+              "text": "Foreign Selling",
+              "color": ""
+            },
+            {
+              "text": "0.00%",
+              "color": ""
+            },
+            {
+              "text": "25.14%",
+              "color": ""
+            },
+            {
+              "text": "+25.14 pts",
+              "color": "--gain"
+            }
+          ],
+          [
+            {
+              "text": "DSEI",
+              "color": ""
+            },
+            {
+              "text": "4,250.04",
+              "color": ""
+            },
+            {
+              "text": "1,364.03",
+              "color": ""
+            },
+            {
+              "text": "Index rebased",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "TSI",
+              "color": ""
+            },
+            {
+              "text": "9,321.17",
+              "color": ""
+            },
+            {
+              "text": "2,283.15",
+              "color": ""
+            },
+            {
+              "text": "Index rebased",
+              "color": ""
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "title": "2. Top Movers",
+      "paragraphs": [
+        "MBP was the session's standout gainer, jumping 12.5% to 2,070 on 13,113 shares. This follows last week's +2.8% gain and confirms renewed buyer interest in the counter. NMB closed at 1,850, up from its 1,770 opening print, a healthy 4.5% advance on the first day of split-adjusted trading.",
+        "DCB continued its painful descent, falling another 4% to 485. The stock has now given back all of the speculative spike that pushed it above 625 earlier in the month. This reversal reinforces the lesson that not every surge reflects fundamental value."
+      ],
+      "list": [
+        "NMB's change is measured from its adjusted opening price of 1,770."
+      ],
+      "has_table": true,
+      "table": {
+        "headers": [
+          "Ticker",
+          "Closing Price (TZS)",
+          "Change",
+          "Volume"
+        ],
+        "rows": [
+          [
+            {
+              "text": "MBP",
+              "color": ""
+            },
+            {
+              "text": "2,070",
+              "color": ""
+            },
+            {
+              "text": "+12.5%",
+              "color": "--gain"
+            },
+            {
+              "text": "13,113",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "MUCOBA",
+              "color": ""
+            },
+            {
+              "text": "470",
+              "color": ""
+            },
+            {
+              "text": "+3.3%",
+              "color": "--gain"
+            },
+            {
+              "text": "710",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "NMB (post-split)",
+              "color": ""
+            },
+            {
+              "text": "1,850",
+              "color": ""
+            },
+            {
+              "text": "+4.5%*",
+              "color": "--gain"
+            },
+            {
+              "text": "2,301,840",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "KCB",
+              "color": ""
+            },
+            {
+              "text": "1,980",
+              "color": ""
+            },
+            {
+              "text": "+0.5%",
+              "color": "--gain"
+            },
+            {
+              "text": "33,467",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "SWIS",
+              "color": ""
+            },
+            {
+              "text": "2,640",
+              "color": ""
+            },
+            {
+              "text": "+1.1%",
+              "color": "--gain"
+            },
+            {
+              "text": "1,914",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "NICO",
+              "color": ""
+            },
+            {
+              "text": "3,820",
+              "color": ""
+            },
+            {
+              "text": "+1.6%",
+              "color": "--gain"
+            },
+            {
+              "text": "27,784",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "CRDB",
+              "color": ""
+            },
+            {
+              "text": "2,680",
+              "color": ""
+            },
+            {
+              "text": "\u20130.4%",
+              "color": "--loss"
+            },
+            {
+              "text": "814,692",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "VODA",
+              "color": ""
+            },
+            {
+              "text": "1,020",
+              "color": ""
+            },
+            {
+              "text": "0.0%",
+              "color": ""
+            },
+            {
+              "text": "332,317",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "DCB",
+              "color": ""
+            },
+            {
+              "text": "485",
+              "color": ""
+            },
+            {
+              "text": "\u20134.0%",
+              "color": "--loss"
+            },
+            {
+              "text": "42,487",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "TOL",
+              "color": ""
+            },
+            {
+              "text": "1,810",
+              "color": ""
+            },
+            {
+              "text": "+3.4%",
+              "color": "--gain"
+            },
+            {
+              "text": "20,991",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "MCB",
+              "color": ""
+            },
+            {
+              "text": "420",
+              "color": ""
+            },
+            {
+              "text": "\u20132.3%",
+              "color": "--loss"
+            },
+            {
+              "text": "43,105",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "TBL",
+              "color": ""
+            },
+            {
+              "text": "9,880",
+              "color": ""
+            },
+            {
+              "text": "\u20130.2%",
+              "color": "--loss"
+            },
+            {
+              "text": "47,365",
+              "color": ""
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "title": "3. In Focus: The NMB Share Split and the 5% Daily Price Band",
+      "paragraphs": [
+        "NMB's 10-for-1 share split took effect on Monday, reducing the share price from approximately TZS 17,700 to TZS 1,850. The split does not change the total value of the company or any investor's holding \u2014 it simply divides the same pie into more, smaller slices. What it does change is accessibility. At TZS 1,850 per share, NMB is now within reach of many more retail investors who previously could not afford to buy even a single share.",
+        "The split also has important implications for the daily price band. The DSE applies different bands depending on the share price:",
+        "Large-cap stocks (price \u2265 TZS 1,000):\u00a05% daily limit",
+        "Smaller counters (price < TZS 1,000):\u00a0wider limits, typically 15%",
+        "Because NMB now trades at TZS 1,850, it falls under the 5% band. For Tuesday 25 August, the allowed range is:",
+        "<strong>Upper limit:</strong>\u00a01,850 \u00d7 1.05 = 1,942.50",
+        "<strong>Lower limit:</strong>\u00a01,850 \u00d7 0.95 = 1,757.50",
+        "Based on Monday's closing prices, here are the allowed trading ranges for Tuesday 25 August 2026 for the widely held stocks:",
+        "\u00b9 DCB and MCB trade under wider 15% bands due to their sub-TZS 1,000 price levels.",
+        "Before placing any order, always confirm the previous day's closing price and calculate the allowed band. This simple step ensures your order is executable from the moment you place it and prevents the frustration of setting a price the market simply cannot reach that day.",
+        "For a complete guide to interpreting market data, read our article\u00a0Understanding Market Data."
+      ],
+      "list": [],
+      "has_table": false,
+      "table": null
+    },
+    {
+      "title": "4. Bond Market: Rotation into Duration Continues",
+      "paragraphs": [
+        "Government bond turnover cooled to TZS 6.82 billion from Friday's TZS 15.54 billion, but the session still saw meaningful activity. The most liquid instruments were:",
+        "25-year 13.25% bond:\u00a0TZS 3.13 billion traded at 120% to 122.2% of face value, yielding approximately 10.8% tax-free",
+        "20-year 12.25% bond:\u00a0TZS 1.88 billion traded at 105% to 127.5%, yielding 9.3% to 11.8%",
+        "25-year 12.56% bond:\u00a0TZS 1.00 billion at 112.76%, yielding 11.56%",
+        "Corporate bond activity was minimal, with small trades in the SAMIA 12% and TCB-STAWI 13.5% instruments.",
+        "The message from the bond market remains consistent: local institutions are committed to locking in long-dated, tax-free income. The 0% withholding tax on government bonds with maturities of three years or more makes these instruments particularly attractive for investors seeking stability. A 25-year bond yielding 10.8% tax-free provides a real return that comfortably outpaces inflation."
+      ],
+      "list": [],
+      "has_table": true,
+      "table": {
+        "headers": [
+          "Counter",
+          "Monday Close (TZS)",
+          "Tuesday Upper Limit (TZS)",
+          "Tuesday Lower Limit (TZS)"
+        ],
+        "rows": [
+          [
+            {
+              "text": "NMB (post-split)",
+              "color": ""
+            },
+            {
+              "text": "1,850",
+              "color": ""
+            },
+            {
+              "text": "1,942.50",
+              "color": ""
+            },
+            {
+              "text": "1,757.50",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "CRDB",
+              "color": ""
+            },
+            {
+              "text": "2,680",
+              "color": ""
+            },
+            {
+              "text": "2,814.00",
+              "color": ""
+            },
+            {
+              "text": "2,546.00",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "VODA",
+              "color": ""
+            },
+            {
+              "text": "1,020",
+              "color": ""
+            },
+            {
+              "text": "1,071.00",
+              "color": ""
+            },
+            {
+              "text": "969.00",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "TBL",
+              "color": ""
+            },
+            {
+              "text": "9,880",
+              "color": ""
+            },
+            {
+              "text": "10,374.00",
+              "color": ""
+            },
+            {
+              "text": "9,386.00",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "TCC",
+              "color": ""
+            },
+            {
+              "text": "12,410",
+              "color": ""
+            },
+            {
+              "text": "13,030.50",
+              "color": ""
+            },
+            {
+              "text": "11,789.50",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "DCB\u00b9",
+              "color": ""
+            },
+            {
+              "text": "485",
+              "color": ""
+            },
+            {
+              "text": "557.75",
+              "color": ""
+            },
+            {
+              "text": "412.25",
+              "color": ""
+            }
+          ],
+          [
+            {
+              "text": "MCB\u00b9",
+              "color": ""
+            },
+            {
+              "text": "420",
+              "color": ""
+            },
+            {
+              "text": "483.00",
+              "color": ""
+            },
+            {
+              "text": "357.00",
+              "color": ""
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "title": "5. Strategic Outlook: What to Anticipate",
+      "paragraphs": [
+        "Near-Term (Late August):",
+        "The post-split NMB will likely dominate trading for the remainder of the week. Its new price point of 1,850 is attractive to retail investors, and the extra liquidity should narrow spreads. However, the ex-dividend date for the TZS 610.15 dividend (which becomes TZS 61.015 on a split-adjusted basis) has not yet been announced. When it is, the share price will mechanically adjust downward by the dividend amount.",
+        "CRDB continues to consolidate near 2,680. Support at 2,650 remains intact, and any dip toward that level represents an opportunity for patient buyers. Resistance remains at 2,710\u20132,720.",
+        "VODA closed unchanged at 1,020, a level it has defended for several sessions. The expected FY2025 dividend announcement in July or August will likely be the catalyst for the next directional move.",
+        "Medium-Term (Q3 2026):",
+        "The market is entering a period rich in corporate actions. The NMB split has been completed, but the dividend record date is still pending. VODA's dividend announcement is expected within weeks. These events create predictable trading patterns: accumulation before the announcement, profit-taking into the record date, and adjustment after the ex-date.",
+        "Long-Term:",
+        "The NMB split is a landmark moment for the DSE. By making the exchange's second-largest bank accessible to retail investors at TZS 1,850 per share, the market has taken a significant step toward broader participation. Increased retail activity typically leads to tighter spreads, deeper liquidity, and more efficient pricing \u2014 all of which benefit long-term investors. The market's ability to absorb TZS 1.94 billion in foreign selling without distress demonstrates the depth and resilience of the local investor base."
+      ],
+      "list": [],
+      "has_table": false,
+      "table": null
+    },
+    {
+      "title": "6. Professional Approach: How to Use This Intelligence",
+      "paragraphs": [
+        "The events of Monday provide a perfect teaching moment. The index \"drop\" that wasn't a drop, the share split that changed nothing but changed everything, and the foreign selling that was absorbed without panic \u2014 each of these illustrates a fundamental principle:",
+        "Indices can mislead.\u00a0When a large stock splits, the index is adjusted to maintain continuity. Never judge market health by the index alone; look at market capitalisation and individual share prices.",
+        "Corporate actions create opportunity.\u00a0Share splits, dividends, and rights issues all produce predictable price patterns. Investors who understand these mechanics can position themselves accordingly.",
+        "Local capital is the foundation.\u00a0The DSE's ability to absorb significant foreign selling without a sharp decline is a testament to the strength of domestic demand. This structural resilience is a key reason the market has delivered consistent returns."
+      ],
+      "list": [],
+      "has_table": false,
+      "table": null
+    },
+    {
+      "title": "7. Considerations for a Multi-Year Framework",
+      "paragraphs": [
+        "Monday's session marks a turning point in the DSE's development. The exchange has evolved from a market dominated by a handful of foreign institutions into a genuinely local marketplace where retail and domestic institutional investors drive daily activity. The NMB split accelerates this democratisation by making a premier banking counter accessible to a much broader audience.",
+        "For the multi-year investor, this evolution is profoundly positive. More participants mean more liquidity, tighter spreads, and more efficient pricing. The market's growing self-reliance reduces its vulnerability to external shocks. And the steady accumulation of tax-free bond income alongside careful equity positioning creates a compounding machine that can build real wealth over decades \u2014 all without relying on the whims of foreign capital or the volatility of global markets.",
+        "The lesson from Monday is simple: structural changes that appear dramatic at first glance often reveal themselves to be healthy, natural steps in a market's maturation. Stay focused on fundamentals, respect the daily price bands, and let compounding do the heavy lifting.",
+        "For general informational and educational purposes only; not financial, legal, or tax advice. All investment decisions are solely your responsibility. Capital is at risk, and past performance does not guarantee future results. Amana Capital East Africa Limited registration under CMSA, Tanzania is pending. Registration does not imply CMSA endorsement."
+      ],
+      "list": [],
+      "has_table": false,
+      "table": null
+    }
+  ],
+  "snapshot": {
+    "turnover": "TZS 74.85 mn",
+    "dsei": "4,250.04",
+    "tsi": "9,321.17"
+  }
+}

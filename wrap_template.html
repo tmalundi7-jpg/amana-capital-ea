@@ -48,6 +48,22 @@
     <p style="font-size: 1.1rem; color: var(--mist); margin-bottom: 0; font-weight: 600;">{{ headline }}</p>
 </div>
 
+<!-- ============================================ -->
+<!-- KEY TAKEAWAYS – Cognitive Load Reduction      -->
+<!-- ============================================ -->
+{% if key_takeaways %}
+<section class="key-takeaways" aria-labelledby="takeaways-heading">
+  <h3 id="takeaways-heading" class="takeaways-title">
+    ?? Key Takeaways
+  </h3>
+  <ul class="takeaways-list">
+    {% for takeaway in key_takeaways %}
+    <li class="takeaway-item">{{ takeaway }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
 {% for paragraph in introduction_paragraphs %}
 <p>{{ paragraph }}</p>
 {% endfor %}
@@ -65,7 +81,7 @@
 <h2 style="color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;">{{ section.title }}</h2>
 
 {% if section.has_table %}
-<div class="table-responsive" style="overflow-x: auto; margin-bottom: 1rem;">
+<div class="table-wrapper" id="tableWrapper">
 <table class="data-table" style="width: 100%; border-collapse: collapse;">
 <thead>
 <tr style="background-color: var(--navy); color: var(--white); text-align: left;">

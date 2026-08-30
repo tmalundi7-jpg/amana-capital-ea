@@ -1,0 +1,27 @@
+Current Prices — End‑of‑Day, Monday 24th August 2026
+Ticker	Company	Sector	Last Price (TZS)	Change (%)	Volume	Turnover (TZS)
+AFRIPRISE	African Pride	Commercial Services	620	0.0%	128,569	79,885,770
+CRDB	CRDB Bank	Banks & Finance	2,680	–0.4%	814,692	2,182,963,040
+DCB	Dar es Salaam Community Bank	Banks & Finance	485	–4.0%	42,487	20,705,060
+DSE	Dar es Salaam Stock Exchange	Commercial Services	6,360	–1.9%	2,374	15,188,790
+KCB	KCB Group (cross‑listed)	Banks & Finance	1,980	+0.5%	33,467	66,275,810
+MBP	Maendeleo Bank	Banks & Finance	2,070	+12.5%	13,113	27,053,180
+MCB	Mwanga Community Bank	Banks & Finance	420	–2.3%	43,105	18,151,345
+MKCB	Mkamba Commercial Bank	Banks & Finance	3,790	0.0%	3,776	14,320,900
+MUCOBA	Mucoba Bank	Banks & Finance	470	+3.3%	710	328,600
+NICO	NICO Holdings	Banks & Finance	3,820	+1.6%	27,784	106,133,970
+NMG	Nation Media Group (cross‑listed)	Commercial Services	260	+2.0%	24	6,960
+NMB	NMB Bank	Banks & Finance	1,850	+4.5%	2,301,840	4,258,404,000
+PAL	Pal Holdings	Industrials	305	–3.2%	5,757	1,752,440
+SWIS	Swissport Tanzania	Commercial Services	2,640	+1.1%	1,914	5,045,710
+TBL	Tanzania Breweries	Industrials	9,880	–0.2%	47,365	464,581,320
+TCC	Tanga Cement	Industrials	12,410	+0.7%	2,354	29,215,500
+TCCL	Tanzania Cigarette Company	Industrials	4,000	0.0%	2,562	10,237,780
+TOL	TOL Gases	Industrials	1,810	+3.4%	20,991	38,023,150
+TPCC	Tanga Portland Cement	Industrials	5,940	–0.7%	7,971	47,309,170
+TTP	Tatepa Public Limited Company	Commercial Services	475	0.0%	384	184,670
+VODA	Vodacom Tanzania	Commercial Services	1,020	0.0%	332,317	339,229,740
+Block Trades on the Pre‑arranged Board:
+NMB traded a block of 1,136,900 shares, while TBL traded a block of 42,089 shares.
+
+Change (%) calculated from opening to closing price. Counters with zero trades (EABL, JATU, JHL, KA, SWALA, USL, YETU) are omitted.

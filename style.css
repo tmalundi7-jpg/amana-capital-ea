@@ -1914,3 +1914,79 @@ html.is-animating .transition-fade {
     0% { transform: translate3d(0, 0, 0); }
     100% { transform: translate3d(-50%, 0, 0); }
 }
+
+/* ============================================ */
+/* MOBILE TABLE SCROLL AFFORDANCE (UX Fix)      */
+/* ============================================ */
+.table-wrapper {
+  position: relative;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  background: linear-gradient(to right, transparent, rgba(10, 22, 40, 0.85));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 4px 4px 0;
+}
+
+.table-wrapper.is-scrollable::after {
+  opacity: 1;
+}
+
+/* Ensure tables inside the wrapper are full width */
+.table-wrapper table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+}
+
+/* Hide the shadow when scrolled to the end using JS */
+.table-wrapper.is-scrolled-end::after {
+  opacity: 0;
+}
+
+/* ============================================ */
+/* ACCESSIBILITY: ARROW ICONS FOR GAIN/LOSS     */
+/* ============================================ */
+.change .gain, span.gain { color: #2e7d32; }
+.change .loss, span.loss { color: #c62828; }
+.change .gain::before, span.gain::before { content: "? "; }
+.change .loss::before, span.loss::before { content: "? "; }
+
+/* ============================================ */
+/* KEY TAKEAWAYS BOX (Cognitive Load)           */
+/* ============================================ */
+.key-takeaways {
+  background: #f8f9fa;
+  border-left: 6px solid #e5b13b;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+.key-takeaways .takeaways-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #0a1628;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+.key-takeaways .takeaways-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+.key-takeaways .takeaway-item {
+  margin-bottom: 0.25rem;
+}
