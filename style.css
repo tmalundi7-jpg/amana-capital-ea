@@ -2752,3 +2752,61 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 }
 
 @media (max-width: 540px) { .ab-hero h1 { font-size: 3.5rem !important; } }
+/* --- SNAPSHOT GRID UPGRADE --- */
+.snapshot-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 1rem !important;
+    width: 100% !important;
+}
+.snapshot-item {
+    background-color: var(--navy) !important;
+    border: 1px solid rgba(200,150,46,0.3) !important;
+    border-top: 3px solid var(--gold) !important;
+    border-right: 1px solid rgba(200,150,46,0.3) !important; /* Override old inline right-borders */
+    padding: 1.25rem !important;
+    border-radius: 4px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+    display: flex;
+    flex-direction: column;
+}
+.snapshot-label {
+    font-size: 0.65rem !important;
+    color: var(--gold) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 0.5rem !important;
+    font-weight: 700 !important;
+}
+.snapshot-value {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    color: var(--cream) !important;
+    font-variant-numeric: tabular-nums !important;
+    margin-bottom: 0.2rem !important;
+}
+/* For the Gainers/Losers lists inside the snapshot items */
+.snapshot-item .snapshot-mover,
+.snapshot-item div[style*="font-size:0.85rem;"] {
+    font-size: 0.75rem !important;
+    color: var(--cream) !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    margin-bottom: 0.2rem !important;
+}
+/* Ensure the charts scale down */
+.snapshot-item canvas {
+    max-width: 100% !important;
+    height: auto !important;
+    margin-top: auto !important; /* Push to bottom */
+}
+.snapshot-bar-chart {
+    margin-top: auto !important;
+}
+
+@media (max-width: 860px) {
+    .snapshot-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+@media (max-width: 540px) {
+    .snapshot-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}

@@ -7,7 +7,7 @@
 <title>Daily DSE Market Wrap &amp; Analysis | Amana Capital EA</title>
 <meta content="Read our daily Dar es Salaam Stock Exchange (DSE) wrap. Get institutional-grade market intelligence, top movers, and equity research from Amana Capital East Africa." name="description"/>
 <link href="https://www.amana-capital-ea.co.tz/market-intelligence" rel="canonical"/>
-<link href="style.css?v=20260830_final_polish_18" rel="stylesheet"/>
+<link href="style.css?v=20260830_final_polish_19" rel="stylesheet"/>
 <!-- Chart.js in head so it's available immediately -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@2.0.2"></script>
@@ -175,34 +175,10 @@
         color: var(--cream);
         margin: 0;
     }
-    .snapshot-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 1.5rem;
-    }
-    .snapshot-label {
-        font-size: 0.75rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 0.4rem;
-        color: rgba(251,247,240,0.85);
-    }
-    .snapshot-value {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: var(--gold);
-    }
-    .snapshot-mover {
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: var(--cream);
-        display: flex;
-        justify-content: space-between;
-        padding: 0.35rem 0;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
+    
+    
+    
+    
     .snapshot-mover:last-child {
         border-bottom: none;
     }
@@ -478,20 +454,20 @@
 </div>
 </div>
 <div class="snapshot-grid">
-<div>
+  <div class="snapshot-item">
 <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">DSEI</div>
 <div class="snapshot-value" id="mi-dsei">4,444.48</div>
 </div>
-<div>
-<div class="snapshot-label" style="color:rgba(251,247,240,0.85);">TSI</div>
+  <div class="snapshot-item">
+  <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">TSI</div>
 <div class="snapshot-value" id="mi-tsi">4,484.05</div>
 </div>
-<div>
-<div class="snapshot-label" style="color:rgba(251,247,240,0.85);">Turnover (TZS)</div>
+  <div class="snapshot-item">
+  <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">Turnover (TZS)</div>
 <div class="snapshot-value" data-format-type="bn" data-tzs-value="1380000000" id="mi-turnover">10.20 bn</div>
 </div>
-<div>
-<div class="snapshot-label" style="color:rgba(251,247,240,0.85);">Top Gainers</div>
+  <div class="snapshot-item">
+  <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">Top Gainers</div>
   <!-- GAINERS_START -->
   <div style="display:flex; flex-direction:column; gap:0.25rem;">
     <div style="font-size:0.85rem; font-weight:700; color:var(--white);">NMG <span style="color:var(--gain)">+5.8%</span></div>
@@ -500,8 +476,8 @@
   </div>
   <!-- GAINERS_END -->
 </div>
-<div>
-<div class="snapshot-label" style="color:rgba(251,247,240,0.85);">Top Losers</div>
+  <div class="snapshot-item">
+  <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">Top Losers</div>
   <!-- LOSERS_START -->
   <div style="display:flex; flex-direction:column; gap:0.25rem;">
     <div style="font-size:0.85rem; font-weight:700; color:var(--white);">TOL <span style="color:var(--loss)">-6.6%</span></div>
