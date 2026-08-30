@@ -1,0 +1,1 @@
+window.analyticsConfig = { clarityId: 'YOUR_CLARITY_PROJECT_ID', gaId: 'GA-XXXXXXXX', enableTracking: true, requireConsent: false };
