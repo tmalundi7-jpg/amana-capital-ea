@@ -2778,12 +2778,10 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     margin-bottom: 0.5rem !important;
     font-weight: 700 !important;
 }
-.snapshot-value {
-    font-family: 'Cormorant Garamond', serif !important;
+\.snapshot-value {
     font-size: 1.4rem !important;
     font-weight: 700 !important;
     color: var(--cream) !important;
-    font-variant-numeric: tabular-nums !important;
     margin-bottom: 0.2rem !important;
 }
 /* For the Gainers/Losers lists inside the snapshot items */
@@ -2809,21 +2807,6 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 }
 @media (max-width: 540px) {
     .snapshot-grid { grid-template-columns: repeat(2, 1fr) !important; }
-}
-
-/* --- GLOBAL TYPOGRAPHY UNISON & UPGRADE --- */
-body, p, a, li, input, button {
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
-}
-h1, h2, h3, h4, h5, h6, .brand-text, .section-title, .ab-title, .teaser-prem-title, .why-section-header .section-title {
-    font-family: 'Cormorant Garamond', serif !important;
-}
-
-/* Ensure all primary financial snapshot numbers are strictly elegant serif */
-.snapshot-value, .teaser-prem-stat-value {
-    font-family: 'Cormorant Garamond', serif !important;
-    font-weight: 700 !important;
-    font-variant-numeric: tabular-nums !important;
 }
 
 /* Fix Horizontal Alignment of the 5-Grid Snapshot */
@@ -2868,4 +2851,40 @@ h1, h2, h3, h4, h5, h6, .brand-text, .section-title, .ab-title, .teaser-prem-tit
     display: flex;
     align-items: center;
     height: 100%;
+}
+
+/* --- DAILY DSE WRAP MINI-SNAPSHOT EXACT MATCH --- */
+.teaser-prem-stat, .teaser-prem-stats > div {
+    background-color: var(--navy) !important; /* Made identical to main snapshot */
+    border: 1px solid rgba(200,150,46,0.3) !important;
+    border-top: 3px solid var(--gold) !important;
+    padding: 1.25rem !important; /* Matched padding */
+    border-radius: 4px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+}
+.teaser-prem-stat-label {
+    min-height: 24px !important; /* Forces alignment */
+    display: flex !important;
+    align-items: flex-end !important;
+    color: var(--gold) !important;
+    font-size: 0.65rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    font-weight: 700 !important;
+}
+.teaser-prem-stat-value {
+    font-size: 1.4rem !important;
+    color: var(--cream) !important;
+}
+/* Ensure the +5.8% gain tag looks like a two-column row inside the mini-snapshot */
+.teaser-prem-stat-value.gain {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    color: var(--cream) !important;
 }
