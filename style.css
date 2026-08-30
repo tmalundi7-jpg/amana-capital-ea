@@ -3217,3 +3217,24 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     }
 }
 /* ============================================================ */
+
+/* ============================================================
+   REDUCE MAIN DSE SNAPSHOT SQUARE SIZE
+   ============================================================ */
+
+/* Reduce padding on the main snapshot card to shrink its square size */
+.snapshot-card {
+    padding: 2rem 2.5rem !important;
+}
+
+@media (max-width: 768px) {
+    .snapshot-card {
+        padding: 1.5rem !important;
+    }
+}
+@media (max-width: 480px) {
+    .snapshot-card {
+        padding: 1rem !important;
+    }
+}
+/* ============================================================ */
