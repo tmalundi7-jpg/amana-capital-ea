@@ -2450,18 +2450,58 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     text-align: left !important;
 }
 
+
+
 /* Governing Principles */
-.why-section {
-    background-color: var(--cream) !important;
-}
 .why-card {
-    background-color: var(--cream) !important;
-    border: 1px solid var(--gold) !important;
-    color: var(--navy) !important;
+    background-color: var(--navy) !important;
+    border: none !important;
+    box-shadow: 0 10px 30px rgba(11,29,58,0.1) !important;
 }
-.why-card h3, .why-section .section-title, .why-section .section-eyebrow {
-    color: var(--navy) !important;
+.why-card h3 {
+    color: var(--gold) !important;
 }
 .why-card p {
-    color: #333 !important;
+    color: var(--cream) !important;
+}
+.why-icon {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: var(--gold) !important;
+}
+
+/* Daily DSE Wrap Upgrade */
+.home-teaser {
+    background-color: #fcfcfc !important; /* Very subtle off-white */
+    border-top: 1px solid rgba(11,29,58,0.05) !important;
+    border-bottom: 1px solid rgba(11,29,58,0.05) !important;
+}
+.teaser-premium {
+    box-shadow: none !important;
+    border: 1px solid rgba(11,29,58,0.1) !important;
+    border-radius: 0 !important; /* Crisp, sharp edges */
+}
+.teaser-prem-right {
+    background: var(--navy) !important;
+    color: var(--cream) !important;
+    padding: 3rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+.teaser-right-label {
+    color: var(--gold) !important;
+}
+.teaser-right-divider {
+    background: rgba(200,150,46,0.3) !important;
+}
+.teaser-right-cta-text {
+    color: #e0e0e0 !important;
+}
+.teaser-prem-left {
+    padding: 3rem !important;
+    background: #ffffff !important;
+}
+.teaser-prem-left p {
+    color: rgba(11,29,58,0.85) !important;
+    line-height: 1.8 !important;
 }
