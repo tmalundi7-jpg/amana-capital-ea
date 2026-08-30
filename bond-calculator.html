@@ -91,6 +91,10 @@
                                 </select>
                             </div>
                             <div class="form-group">
+                                <label for="taxRate">Withholding Tax (% p.a.)</label>
+                                <input type="number" id="taxRate" class="calc-input" value="10.0" step="0.1">
+                            </div>
+                            <div class="form-group">
                                 <label for="mp">Quoted Clean Price (TZS)</label>
                                 <input type="number" id="mp" class="calc-input" value="100.00" step="0.01">
                             </div>
@@ -154,6 +158,10 @@
                             <div>
                                 <div style="color:var(--mist); font-size:0.8rem; text-transform:uppercase;">Yield to Maturity</div>
                                 <div id="out-ytm" style="color:var(--white); font-weight:600;">12.2500%</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="color:var(--mist); font-size:0.8rem; text-transform:uppercase;">Net Yield (After Tax)</div>
+                                <div id="out-net-yield" style="color:var(--white); font-weight:600;">11.0250%</div>
                             </div>
                             <div style="text-align: right;">
                                 <div style="color:var(--mist); font-size:0.8rem; text-transform:uppercase;">Yield to Call</div>
