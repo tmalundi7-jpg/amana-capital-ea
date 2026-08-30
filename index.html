@@ -9,7 +9,7 @@
 <link href="https://www.amana-capital-ea.co.tz/" rel="canonical"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="style.css?v=20260830" rel="stylesheet"/>
 <script type="application/ld+json">
 {
@@ -102,7 +102,7 @@
     /* Hero */
     .home-hero {
         background: var(--navy);
-        padding: 3.5rem 0 2.5rem;
+        padding: 6rem 0 4rem;
         position: relative;
         overflow: hidden;
     }
@@ -111,8 +111,8 @@
         position: absolute;
         inset: 0;
         background-image:
-            radial-gradient(circle at 80% 20%, rgba(200,150,46,0.10) 0%, transparent 50%),
-            radial-gradient(circle at 10% 80%, rgba(200,150,46,0.06) 0%, transparent 45%);
+            radial-gradient(circle at 80% 20%, rgba(179,146,85,0.10) 0%, transparent 50%),
+            radial-gradient(circle at 10% 80%, rgba(179,146,85,0.06) 0%, transparent 45%);
         pointer-events: none;
     }
     .home-hero-grid {
@@ -126,9 +126,9 @@
         align-items: center;
         gap: 0.5rem;
         padding: 0.35rem 1rem;
-        background: rgba(200,150,46,0.12);
-        border: 1px solid rgba(200,150,46,0.35);
-        border-radius: 20px;
+        background: rgba(179,146,85,0.12);
+        border: 1px solid rgba(179,146,85,0.35);
+        border-radius: 0px;
         margin-bottom: 1.75rem;
     }
     .home-hero-eyebrow-dot {
@@ -145,7 +145,7 @@
         color: var(--gold);
         font-size: 0.72rem;
         font-weight: 700;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         text-transform: uppercase;
     }
     .home-hero h1 {
@@ -188,7 +188,7 @@
         content: '';
         display: block;
         width: 28px; height: 1px;
-        background: rgba(200,150,46,0.5);
+        background: rgba(179,146,85,0.5);
     }
 
     /* Stats bar on hero right */
@@ -199,9 +199,9 @@
     }
     .home-stat-card {
         background: rgba(255,255,255,0.04);
-        border: 1px solid rgba(200,150,46,0.18);
+        border: 1px solid rgba(179,146,85,0.18);
         border-left: 3px solid var(--gold);
-        border-radius: 10px;
+        border-radius: 2px;
         padding: 0.85rem 1.2rem;
         display: flex;
         align-items: center;
@@ -209,15 +209,15 @@
         transition: background 0.25s, border-color 0.25s;
     }
     .home-stat-card:hover {
-        background: rgba(200,150,46,0.06);
-        border-color: rgba(200,150,46,0.4);
+        background: rgba(179,146,85,0.06);
+        border-color: rgba(179,146,85,0.4);
     }
     .home-stat-label {
         font-size: 0.78rem;
         font-weight: 600;
         color: rgba(251,247,240,0.55);
         text-transform: uppercase;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
         margin-bottom: 0.3rem;
     }
     .home-stat-value {
@@ -234,15 +234,15 @@
         border-radius: 12px;
     }
     .home-stat-badge.up { background: rgba(34,197,94,0.15); color: #22c55e; }
-    .home-stat-badge.neutral { background: rgba(200,150,46,0.15); color: var(--gold); }
+    .home-stat-badge.neutral { background: rgba(179,146,85,0.15); color: var(--gold); }
 
     /* Snapshot card upgrade */
     .snapshot-card {
         background: var(--navy);
-        border: 1px solid rgba(200,150,46,0.2);
+        border: 1px solid rgba(179,146,85,0.2);
         border-top: 3px solid var(--gold);
-        border-radius: 14px;
-        padding: 2.5rem;
+        border-radius: 4px;
+        padding: 3rem;
         box-shadow: 0 20px 40px rgba(11,29,58,0.15);
     }
     .snapshot-grid {
@@ -286,7 +286,7 @@
         align-items: center;
         margin-bottom: 1.5rem;
         padding-bottom: 1rem;
-        border-bottom: 1px solid rgba(200,150,46,0.2);
+        border-bottom: 1px solid rgba(179,146,85,0.2);
     }
     .home-snapshot-title {
         font-family: 'Cormorant Garamond', serif;
@@ -304,10 +304,10 @@
         color: #22c55e;
         font-size: 0.68rem;
         font-weight: 700;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
         text-transform: uppercase;
         padding: 0.25rem 0.75rem;
-        border-radius: 20px;
+        border-radius: 0px;
     }
     .live-badge::before {
         content: '';
@@ -320,19 +320,19 @@
     /* Why Us section */
     .why-section {
         background: var(--cream);
-        padding: 3.5rem 0;
+        padding: 6rem 0;
         border-top: 1px solid rgba(11,29,58,0.07);
     }
     .why-section-header {
         text-align: center;
-        margin-bottom: 2.5rem;
+        margin-bottom: 4rem;
     }
     .section-eyebrow {
         display: inline-block;
         color: var(--gold);
         font-size: 0.72rem;
         font-weight: 700;
-        letter-spacing: 2.5px;
+        letter-spacing: 1px;
         text-transform: uppercase;
         margin-bottom: 0.75rem;
     }
@@ -352,9 +352,9 @@
     }
     .why-card {
         background: var(--navy);
-        border-radius: 14px;
+        border-radius: 4px;
         padding: 2rem 1.75rem;
-        border: 1px solid rgba(200,150,46,0.15);
+        border: 1px solid rgba(179,146,85,0.15);
         position: relative;
         overflow: hidden;
         transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -364,17 +364,17 @@
         position: absolute;
         top: 0; left: 0; right: 0;
         height: 3px;
-        background: linear-gradient(90deg, var(--gold), rgba(200,150,46,0.3));
+        background: linear-gradient(90deg, var(--gold), rgba(179,146,85,0.3));
     }
     .why-card:hover {
-        transform: translateY(-4px);
+        transform: translateY(-2px);
         box-shadow: 0 20px 40px rgba(11,29,58,0.2);
-        border-color: rgba(200,150,46,0.4);
+        border-color: rgba(179,146,85,0.4);
     }
     .why-icon {
         width: 44px; height: 44px;
-        border-radius: 10px;
-        background: rgba(200,150,46,0.12);
+        border-radius: 2px;
+        background: rgba(179,146,85,0.12);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -399,7 +399,7 @@
     /* Services section */
     .services-section {
         background: var(--navy);
-        padding: 3.5rem 0;
+        padding: 6rem 0;
     }
     .services-grid {
         display: grid;
@@ -408,8 +408,8 @@
     }
     .service-card {
         background: rgba(255,255,255,0.03);
-        border: 1px solid rgba(200,150,46,0.15);
-        border-radius: 14px;
+        border: 1px solid rgba(179,146,85,0.15);
+        border-radius: 4px;
         padding: 2.25rem 2rem;
         transition: all 0.3s ease;
         position: relative;
@@ -426,9 +426,9 @@
         transition: transform 0.35s ease;
     }
     .service-card:hover {
-        background: rgba(200,150,46,0.05);
-        border-color: rgba(200,150,46,0.4);
-        transform: translateY(-3px);
+        background: rgba(179,146,85,0.05);
+        border-color: rgba(179,146,85,0.4);
+        transform: translateY(-1px);
         box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     }
     .service-card:hover::after { transform: scaleX(1); }
@@ -436,7 +436,7 @@
         font-size: 0.7rem;
         font-weight: 700;
         color: var(--gold);
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         margin-bottom: 1.25rem;
         opacity: 0.7;
     }
@@ -457,7 +457,7 @@
     /* Teaser card upgrade */
     .home-teaser {
         background: var(--cream);
-        padding: 2.5rem 0;
+        padding: 5rem 0;
     }
     .teaser-premium {
         background: var(--navy);
@@ -465,19 +465,19 @@
         overflow: hidden;
         display: grid;
         grid-template-columns: 1fr 320px;
-        border: 1px solid rgba(200,150,46,0.2);
+        border: 1px solid rgba(179,146,85,0.2);
         box-shadow: 0 30px 60px rgba(11,29,58,0.15);
     }
     .teaser-prem-left {
         padding: 3rem;
-        border-right: 1px solid rgba(200,150,46,0.12);
+        border-right: 1px solid rgba(179,146,85,0.12);
     }
     .teaser-prem-right {
         padding: 3rem 2.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background: rgba(200,150,46,0.04);
+        background: rgba(179,146,85,0.04);
     }
     .teaser-prem-eyebrow {
         display: flex;
@@ -493,7 +493,7 @@
     .teaser-prem-label {
         font-size: 0.7rem;
         font-weight: 700;
-        letter-spacing: 2.5px;
+        letter-spacing: 1px;
         text-transform: uppercase;
         color: var(--gold);
     }
@@ -538,7 +538,7 @@
     .teaser-right-label {
         font-size: 0.72rem;
         font-weight: 700;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
         text-transform: uppercase;
         color: rgba(251,247,240,0.45);
         margin-bottom: 1rem;
@@ -560,8 +560,8 @@
     /* Newsletter premium */
     .newsletter-premium {
         background: var(--navy);
-        border-top: 1px solid rgba(200,150,46,0.15);
-        padding: 4rem 0;
+        border-top: 1px solid rgba(179,146,85,0.15);
+        padding: 6rem 0;
     }
     .newsletter-inner {
         display: grid;
@@ -595,7 +595,7 @@
         width: 100%;
         padding: 0.9rem 1.25rem;
         background: rgba(255,255,255,0.06);
-        border: 1px solid rgba(200,150,46,0.25);
+        border: 1px solid rgba(179,146,85,0.25);
         border-radius: 8px;
         color: var(--cream);
         font-family: inherit;
@@ -632,7 +632,7 @@
         .why-grid { grid-template-columns: repeat(2, 1fr); }
         .services-grid { grid-template-columns: 1fr; }
         .teaser-premium { grid-template-columns: 1fr; }
-        .teaser-prem-right { border-top: 1px solid rgba(200,150,46,0.12); padding: 2.5rem 3rem; }
+        .teaser-prem-right { border-top: 1px solid rgba(179,146,85,0.12); padding: 2.5rem 3rem; }
         .newsletter-inner { grid-template-columns: 1fr; gap: 2.5rem; }
         .snapshot-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
     }
@@ -669,7 +669,7 @@
         <p class="home-hero-sub">Institutional-grade market intelligence, daily DSE analysis, and bespoke investment advisory for East Africa's discerning investors.</p>
         <div class="home-hero-cta">
           <a href="/market-intelligence" class="btn btn-primary" style="padding: 1rem 1.5rem; font-weight: 600; text-decoration: none;">Explore Market Data</a>
-          <a href="/contact" class="btn" style="border: 1px solid rgba(200,150,46,0.5); color: #c8962e; padding: 1rem 1.5rem; border-radius: 8px; font-weight: 600; text-decoration: none;">Speak to an Advisor</a>
+          <a href="/contact" class="btn" style="border: 1px solid rgba(179,146,85,0.5); color: #c8962e; padding: 1rem 1.5rem; border-radius: 8px; font-weight: 600; text-decoration: none;">Speak to an Advisor</a>
         </div>
         <div class="home-hero-trust">
           Registration with the Capital Markets and Securities Authority (CMSA) is currently pending.
@@ -694,7 +694,7 @@
 </section>
 
 <!-- ─── LIVE DSE SNAPSHOT ─── -->
-<section style="padding: 2.5rem 0; background: var(--cream);">
+<section style="padding: 5rem 0; background: var(--cream);">
 <div class="container">
 <div class="snapshot-card">
 <div class="home-snapshot-header">
@@ -896,3 +896,6 @@
 
 </body>
 </html>
+
+
+
