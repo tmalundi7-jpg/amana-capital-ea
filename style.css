@@ -3266,3 +3266,40 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     margin-top: auto !important; /* Pushes the value up/down to align if needed, but flex-start is on parent */
 }
 /* ============================================================ */
+
+/* ============================================================
+   FURTHER REDUCE TEASER STATS SIZE
+   ============================================================ */
+
+/* Make the numbers themselves even smaller */
+.teaser-prem-stat-value {
+    font-size: 1.15rem !important;
+}
+
+/* Make the physical squares smaller by reducing their internal padding */
+.teaser-prem-stats > div, .teaser-prem-stat {
+    padding: 0.85rem !important;
+}
+
+/* Ensure the label is slightly smaller to match the new proportion */
+.teaser-prem-stat-label {
+    font-size: 0.6rem !important;
+    min-height: 20px !important;
+    margin-bottom: 0.25rem !important;
+}
+
+/* Mobile adjustments for the smaller size */
+@media (max-width: 768px) {
+    .teaser-prem-stat-value {
+        font-size: 1.1rem !important;
+    }
+}
+@media (max-width: 480px) {
+    .teaser-prem-stat-value {
+        font-size: 1rem !important;
+    }
+    .teaser-prem-stats > div, .teaser-prem-stat {
+        padding: 0.6rem !important;
+    }
+}
+/* ============================================================ */
