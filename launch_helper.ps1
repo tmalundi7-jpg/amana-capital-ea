@@ -1,22 +1,12 @@
-$inputDate = Read-Host "Enter report date (dd/MM/yyyy) or press Enter to use today's date"
+﻿$targetDate = Get-Date
 
-if ([string]::IsNullOrWhiteSpace($inputDate)) {
-    $targetDate = Get-Date
-    if ($targetDate.DayOfWeek -eq 'Saturday') {
-        Write-Host "Today is Saturday. Using Friday's data..." -ForegroundColor Cyan
-        $targetDate = $targetDate.AddDays(-1)
-    }
-    elseif ($targetDate.DayOfWeek -eq 'Sunday') {
-        Write-Host "Today is Sunday. Using Friday's data..." -ForegroundColor Cyan
-        $targetDate = $targetDate.AddDays(-2)
-    }
-} else {
-    try {
-        $targetDate = [datetime]::ParseExact($inputDate, 'dd/MM/yyyy', $null)
-    } catch {
-        Write-Host "Invalid date format. Please use dd/MM/yyyy (e.g. 31/08/2026)" -ForegroundColor Red
-        exit 1
-    }
+if ($targetDate.DayOfWeek -eq 'Saturday') {
+    Write-Host "Today is Saturday. Using Friday's data..." -ForegroundColor Cyan
+    $targetDate = $targetDate.AddDays(-1)
+}
+elseif ($targetDate.DayOfWeek -eq 'Sunday') {
+    Write-Host "Today is Sunday. Using Friday's data..." -ForegroundColor Cyan
+    $targetDate = $targetDate.AddDays(-2)
 }
 
 $dateStr = $targetDate.ToString("d MMMM yyyy")
@@ -52,7 +42,7 @@ The new data is located in "$wrapDoc" and the prices are in "$pricesDoc".
 Parse the new docx file and generate a new dedicated HTML page (e.g., dse-wrap-$shortDate.html). Maintain the exact text, headings, bullet points, and tables.
 
 2. Update the Home Page (index.html):
-- Top Stat Cards: Update the 'DSEI - End of Day', 'Daily Turnover', and 'Top Mover'.
+- Top Stat Cards: Update the 'DSEI — End of Day', 'Daily Turnover', and 'Top Mover'.
 - Live DSE Snapshot: Update the snapshot date label, DSEI, TSI, Turnover, Top 3 Gainers, and Top 3 Losers. Ensure you update the inner grid values (like id="home-dsei").
 - Bottom Teaser (Daily DSE Wrap): Update the teaser date, headline title, introductory paragraph, and the mini-stats below it.
 
@@ -68,7 +58,7 @@ Parse the new docx file and generate a new dedicated HTML page (e.g., dse-wrap-$
 - Move the previous day's featured wrap into the archive list.
 - CRITICAL: Format the new entry exactly like the older entries using the list-style <div class="arc-row"> structure, NOT the <a class="archive-row"> card structure. Ensure the alternating background color pattern (background: rgba(11,29,58,0.02)) is perfectly maintained.
 
-Please ensure NO external data is added-use ONLY the figures provided in the source documents. Deploy subagents if necessary to accomplish this. Do not stop until everything is done professionally with no errors or issues. Once you have verified all changes across these four files, commit and push to live.
+Please ensure NO external data is added—use ONLY the figures provided in the source documents. Deploy subagents if necessary to accomplish this. Do not stop until everything is done professionally with no errors or issues. Once you have verified all changes across these four files, commit and push to live.
 "@
 
 Set-Content -Path "update_instructions.txt" -Value $prompt -Encoding UTF8
