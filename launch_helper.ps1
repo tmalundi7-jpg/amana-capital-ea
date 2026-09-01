@@ -22,25 +22,33 @@ if ([string]::IsNullOrWhiteSpace($inputDate)) {
 $dateStr = $targetDate.ToString("d MMMM yyyy")
 $shortDate = $targetDate.ToString("yyyy-MM-dd")
 
-$wrapDoc = "C:\Users\tmalu\Documents\Daily DSE Wrap $dateStr.docx"
-$pricesDoc = "C:\Users\tmalu\Documents\Current Prices $dateStr.docx"
+Write-Host "Searching for files for $($dateStr)..."
 
-Write-Host "Looking for files for $($dateStr):"
-Write-Host "- $wrapDoc"
-Write-Host "- $pricesDoc"
-Write-Host ""
+# Use wildcards to handle extra spaces (e.g., "Wrap  1 September")
+$wrapFile = Get-ChildItem -Path "C:\Users\tmalu\Documents" -Filter "Daily DSE Wrap*$dateStr.docx" | Select-Object -First 1
+$pricesFile = Get-ChildItem -Path "C:\Users\tmalu\Documents" -Filter "Current Prices*$dateStr.docx" | Select-Object -First 1
 
 $missing = $false
-if (!(Test-Path $wrapDoc)) {
-    Write-Host "ERROR: Daily Wrap document not found at $wrapDoc" -ForegroundColor Red
+if ($null -eq $wrapFile) {
+    Write-Host "ERROR: Daily Wrap document not found for $dateStr" -ForegroundColor Red
     $missing = $true
+} else {
+    $wrapDoc = $wrapFile.FullName
+    Write-Host "Found: $wrapDoc" -ForegroundColor Green
 }
-if (!(Test-Path $pricesDoc)) {
-    Write-Host "ERROR: Current Prices document not found at $pricesDoc" -ForegroundColor Red
+
+if ($null -eq $pricesFile) {
+    Write-Host "ERROR: Current Prices document not found for $dateStr" -ForegroundColor Red
     $missing = $true
+} else {
+    $pricesDoc = $pricesFile.FullName
+    Write-Host "Found: $pricesDoc" -ForegroundColor Green
 }
 
 if ($missing) {
+    Write-Host ""
+    Write-Host "Press any key to exit..."
+    $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown") | Out-Null
     exit 1
 }
 
@@ -79,4 +87,7 @@ Write-Host "SUCCESS! The instructions have been copied to your clipboard!" -Fore
 Write-Host "==========================================================" -ForegroundColor Green
 Write-Host ""
 Write-Host "Simply open Antigravity, press Ctrl+V to paste, and hit Enter." -ForegroundColor Yellow
+Write-Host ""
+Write-Host "Press any key to exit..."
+$Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown") | Out-Null
 exit 0
