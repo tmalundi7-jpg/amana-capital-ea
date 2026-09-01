@@ -53,10 +53,12 @@ Parse the new docx file and generate a new dedicated HTML page (e.g., dse-wrap-$
 
 2. Update the Home Page (index.html):
 - Live DSE Snapshot: Update the snapshot date label, DSEI, TSI, Turnover, Top 3 Gainers, and Top 3 Losers. Ensure you update the inner grid values (like id="home-dsei").
+- CRITICAL HTML SAFETY: Do NOT delete or modify the outer `<div>` flexbox wrappers when updating the lists of Gainers/Losers. Just update the inner spans.
 - Bottom Teaser (Latest Research / Today's DSE Wrap): Update the teaser date, headline title, introductory paragraph, the mini-stats below it, and the href link in the "Read the Full Wrap" button to point to the new wrap page.
 
 3. Update Market Intelligence (market-intelligence.html):
 - Update the 'Live DSE Snapshot' metrics, Top Gainers, and Top Losers to match the homepage.
+- CRITICAL HTML SAFETY: Do NOT delete or modify the outer `<div>` flexbox wrappers when updating the lists of Gainers/Losers. Just update the inner text values.
 - Under 'Daily DSE Wrap Archive', update the featured spotlight to point to the newly generated wrap page. Update its href link, date, title, and short excerpt.
 
 4. Update Current Prices (current-prices.html):
