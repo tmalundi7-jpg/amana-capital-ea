@@ -65,6 +65,7 @@ Parse the new docx file and generate a new dedicated HTML page (e.g., dse-wrap-$
 - Bottom Teaser (Latest Research / Today's DSE Wrap): Update the teaser date, headline title, introductory paragraph, the mini-stats below it, and the href link in the "Read the Full Wrap" button to point to the new wrap page.
 
 3. Update Market Intelligence (market-intelligence.html):
+- Update the hero meta date under "Latest Report" at the top.
 - Update the 'Live DSE Snapshot' metrics, Top Gainers, and Top Losers to match the homepage.
 - CRITICAL HTML SAFETY: Do NOT delete or modify the outer `<div>` flexbox wrappers when updating the lists of Gainers/Losers. Just update the inner text values.
 - Under 'Daily DSE Wrap Archive', update the featured spotlight to point to the newly generated wrap page. Update its href link, date, title, and short excerpt.
