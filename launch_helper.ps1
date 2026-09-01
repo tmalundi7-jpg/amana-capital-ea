@@ -60,7 +60,7 @@ The new data is located in "$wrapDoc" and the prices are in "$pricesDoc".
 Parse the new docx file and generate a new dedicated HTML page (e.g., dse-wrap-$shortDate.html). Maintain the exact text, headings, bullet points, and tables.
 
 2. Update the Home Page (index.html):
-- Live DSE Snapshot: Update the snapshot date label, DSEI, TSI, Turnover, Top 3 Gainers, and Top 3 Losers. Ensure you update the inner grid values (like id="home-dsei").
+- Live DSE Snapshot: Update the snapshot date labels (BOTH the title subtitle AND the terminal feed label at the bottom), DSEI, TSI, Turnover, Top 3 Gainers, and Top 3 Losers. Ensure you update the inner grid values (like id="home-dsei").
 - CRITICAL HTML SAFETY: Do NOT delete or modify the outer `<div>` flexbox wrappers when updating the lists of Gainers/Losers. Just update the inner spans.
 - Bottom Teaser (Latest Research / Today's DSE Wrap): Update the teaser date, headline title, introductory paragraph, the mini-stats below it, and the href link in the "Read the Full Wrap" button to point to the new wrap page.
 
@@ -71,7 +71,7 @@ Parse the new docx file and generate a new dedicated HTML page (e.g., dse-wrap-$
 
 4. Update Current Prices (current-prices.html):
 - Rebuild the main equities table using the latest prices.
-- Update the Market Snapshot bar at the top (DSEI, TSI, Total Turnover, Volume, and Date).
+- Update the Market Snapshot bar at the top (DSEI, TSI, Total Turnover, Volume, Date, and the subtitle date paragraph).
 
 5. Update the Archive (market-intelligence-archive.html):
 - Add the newly generated wrap into the archive list.
