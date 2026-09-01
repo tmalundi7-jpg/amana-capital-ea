@@ -52,23 +52,22 @@ The new data is located in "$wrapDoc" and the prices are in "$pricesDoc".
 Parse the new docx file and generate a new dedicated HTML page (e.g., dse-wrap-$shortDate.html). Maintain the exact text, headings, bullet points, and tables.
 
 2. Update the Home Page (index.html):
-- Top Stat Cards: Update the 'DSEI - End of Day', 'Daily Turnover', and 'Top Mover'.
 - Live DSE Snapshot: Update the snapshot date label, DSEI, TSI, Turnover, Top 3 Gainers, and Top 3 Losers. Ensure you update the inner grid values (like id="home-dsei").
-- Bottom Teaser (Daily DSE Wrap): Update the teaser date, headline title, introductory paragraph, and the mini-stats below it.
+- Bottom Teaser (Latest Research / Today's DSE Wrap): Update the teaser date, headline title, introductory paragraph, the mini-stats below it, and the href link in the "Read the Full Wrap" button to point to the new wrap page.
 
 3. Update Market Intelligence (market-intelligence.html):
 - Update the 'Live DSE Snapshot' metrics, Top Gainers, and Top Losers to match the homepage.
-- Under 'Daily DSE Wrap Archive', update the featured spotlight to point to the newly generated wrap page. Update its date, title, and short excerpt.
+- Under 'Daily DSE Wrap Archive', update the featured spotlight to point to the newly generated wrap page. Update its href link, date, title, and short excerpt.
 
 4. Update Current Prices (current-prices.html):
 - Rebuild the main equities table using the latest prices.
 - Update the Market Snapshot bar at the top (DSEI, TSI, Total Turnover, Volume, and Date).
 
 5. Update the Archive (market-intelligence-archive.html):
-- Move the previous day's featured wrap into the archive list.
+- Add the newly generated wrap into the archive list.
 - CRITICAL: Format the new entry exactly like the older entries using the list-style <div class="arc-row"> structure, NOT the <a class="archive-row"> card structure. Ensure the alternating background color pattern (background: rgba(11,29,58,0.02)) is perfectly maintained.
 
-Please ensure NO external data is added-use ONLY the figures provided in the source documents. Deploy subagents if necessary to accomplish this. Do not stop until everything is done professionally with no errors or issues. Once you have verified all changes across these four files, commit and push to live.
+Please ensure NO external data is added—use ONLY the figures provided in the source documents. Deploy subagents if necessary to accomplish this. Do not stop until everything is done professionally with no errors or issues. Once you have verified all changes across these four files, commit and push to live.
 "@
 
 Set-Content -Path "update_instructions.txt" -Value $prompt -Encoding UTF8
