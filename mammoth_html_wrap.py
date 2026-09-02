@@ -149,7 +149,9 @@ def main():
     # Fix unicode encoding issues (en-dash, etc) that get parsed as replacement characters
     final_html = final_html.replace('\ufffd', '-')
 
-    output_path = f"dse-wrap-{yyyy_mm_dd}.html"
+    final_html = final_html.replace('\ufffd', '—')
+    final_html = final_html.replace('\xa0', ' ')
+    output_path =  f"dse-wrap-{yyyy_mm_dd}.html"
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(final_html)
         
