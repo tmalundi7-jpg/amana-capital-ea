@@ -119,6 +119,8 @@ def main():
                     f.write(raw_text)
                     
                 print(f"SUCCESS! Raw data saved to {filepath}")
+                import subprocess
+                subprocess.Popen(['notepad.exe', filepath])
             else:
                 print("Failed to extract text from the report.")
 
