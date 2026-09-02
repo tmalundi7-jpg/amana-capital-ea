@@ -1,22 +1,23 @@
 ﻿Please process the new daily wrap and update the website exactly according to the following instructions. 
-The new data is located in "C:\Users\tmalu\Documents\Daily DSE Wrap 01 September 2026.docx" and the prices are in "C:\Users\tmalu\Documents\Current Prices 01 September 2026.docx".
+The new data is located in "C:\Users\tmalu\Documents\Daily DSE Wrap 02 September 2026.docx" and the prices are in "C:\Users\tmalu\Documents\Current Prices 02 September 2026.docx".
 
 1. Generate the New Wrap Page:
-Parse the new docx file and generate a new dedicated HTML page (e.g., dse-wrap-2026-09-01.html). Maintain the exact text, headings, bullet points, and tables.
+Parse the new docx file and generate a new dedicated HTML page (e.g., dse-wrap-2026-09-02.html). Maintain the exact text, headings, bullet points, and tables.
 
 2. Update the Home Page (index.html):
-- Live DSE Snapshot: Update the snapshot date label, DSEI, TSI, Turnover, Top 3 Gainers, and Top 3 Losers. Ensure you update the inner grid values (like id="home-dsei").
+- Live DSE Snapshot: Update the snapshot date labels (BOTH the title subtitle AND the terminal feed label at the bottom), DSEI, TSI, Turnover, Top 3 Gainers, and Top 3 Losers. Ensure you update the inner grid values (like id="home-dsei").
 - CRITICAL HTML SAFETY: Do NOT delete or modify the outer <div> flexbox wrappers when updating the lists of Gainers/Losers. Just update the inner spans.
 - Bottom Teaser (Latest Research / Today's DSE Wrap): Update the teaser date, headline title, introductory paragraph, the mini-stats below it, and the href link in the "Read the Full Wrap" button to point to the new wrap page.
 
 3. Update Market Intelligence (market-intelligence.html):
+- Update the hero meta date under "Latest Report" at the top.
 - Update the 'Live DSE Snapshot' metrics, Top Gainers, and Top Losers to match the homepage.
 - CRITICAL HTML SAFETY: Do NOT delete or modify the outer <div> flexbox wrappers when updating the lists of Gainers/Losers. Just update the inner text values.
 - Under 'Daily DSE Wrap Archive', update the featured spotlight to point to the newly generated wrap page. Update its href link, date, title, and short excerpt.
 
 4. Update Current Prices (current-prices.html):
 - Rebuild the main equities table using the latest prices.
-- Update the Market Snapshot bar at the top (DSEI, TSI, Total Turnover, Volume, and Date).
+- Update the Market Snapshot bar at the top (DSEI, TSI, Total Turnover, Volume, Date, and the subtitle date paragraph).
 
 5. Update the Archive (market-intelligence-archive.html):
 - Add the newly generated wrap into the archive list.
