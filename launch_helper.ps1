@@ -83,6 +83,7 @@ Please ensure NO external data is added—use ONLY the figures provided in the s
 
 Set-Content -Path "update_instructions.txt" -Value $prompt -Encoding UTF8
 Set-Clipboard -Value $prompt
+Start-Process notepad.exe "update_instructions.txt"
 Write-Host "==========================================================" -ForegroundColor Green
 Write-Host "SUCCESS! The instructions have been copied to your clipboard!" -ForegroundColor Green
 Write-Host "==========================================================" -ForegroundColor Green
