@@ -1,3 +1,8 @@
+
+def get_ordinal(n):
+    if 11 <= (n % 100) <= 13:
+        return str(n) + 'th'
+    return str(n) + {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')
 import os
 import re
 import argparse
@@ -66,6 +71,31 @@ def process_mammoth_html(html):
                         elif text.startswith('-') or text.startswith('–'):
                             td['style'] = "padding: 1rem; color: var(--loss); font-weight: 600;"
     
+    
+    # Wrap Section 7
+    for h2 in soup.find_all('h2'):
+        if h2.text.strip().startswith('7.'):
+            # Change to h3
+            h2.name = 'h3'
+            h2['style'] = "color: var(--navy); margin-top: 0; font-size: 1.4rem; margin-bottom: 1.5rem;"
+            
+            # Wrap in cream box
+            wrapper = soup.new_tag('div')
+            wrapper['class'] = ['dse-header-box']
+            wrapper['style'] = "background-color: var(--cream); border: 1px solid rgba(200, 150, 46, 0.3); border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);"
+            
+            # Gather all subsequent elements
+            siblings = list(h2.next_siblings)
+            
+            # Wrap h2 itself
+            h2.wrap(wrapper)
+            
+            # Move all siblings into the wrapper
+            for sibling in siblings:
+                wrapper.append(sibling)
+            
+            break
+
     return str(soup)
 
 def main():
@@ -78,7 +108,7 @@ def main():
     yyyy_mm_dd = args.date
     
     date_obj = datetime.datetime.strptime(yyyy_mm_dd, '%Y-%m-%d')
-    date_str = date_obj.strftime(f'%A, {date_obj.day} %B %Y')
+    date_str = date_obj.strftime(f'%A, {get_ordinal(date_obj.day)} %B %Y')
 
     with open(docx_path, "rb") as docx_file:
         result = mammoth.convert_to_html(docx_file)
@@ -119,6 +149,9 @@ def main():
     final_html = final_html.replace('{{YYYY_MM_DD}}', yyyy_mm_dd)
     final_html = final_html.replace('{{SUBTITLE}}', subtitle)
     final_html = final_html.replace('{{CONTENT}}', article_html)
+    
+    # Fix unicode encoding issues (en-dash, etc) that get parsed as replacement characters
+    final_html = final_html.replace('\ufffd', '-')
 
     output_path = f"dse-wrap-{yyyy_mm_dd}.html"
     with open(output_path, 'w', encoding='utf-8') as f:
