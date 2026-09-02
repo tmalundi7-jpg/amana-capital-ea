@@ -82,7 +82,8 @@ def process_mammoth_html(html):
             # Wrap in cream box
             wrapper = soup.new_tag('div')
             wrapper['class'] = ['dse-header-box']
-            wrapper['style'] = "background-color: var(--cream); border: 1px solid rgba(200, 150, 46, 0.3); border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);"
+            wrapper['style'] = "background: var(--cream); border-left: 4px solid var(--gold); padding: 2rem; border-radius: 4px; margin-top: 3rem;"
+            wrapper['class'] = [] # remove dse-header-box class
             
             # Gather all subsequent elements
             siblings = list(h2.next_siblings)
@@ -134,12 +135,7 @@ def main():
     processed_html = process_mammoth_html(rest_of_article)
 
     # Create the full article HTML
-    article_html = f'''<div class=\"dse-header-box\" style=\"background-color: var(--cream); border: 1px solid rgba(200, 150, 46, 0.3); border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);\">
-                    <h1 style=\"margin-top: 0; color: var(--navy); font-size: 2.2rem; margin-bottom: 0.5rem;\">{title}</h1>
-                    <p style=\"font-size: 1.1rem; color: var(--mist); margin-bottom: 0; font-weight: 600;\">{subtitle}</p>
-                </div>
-                {processed_html}
-'''
+    article_html = processed_html
 
     template_path = os.path.join("templates", "wrap_template.html")
     with open(template_path, 'r', encoding='utf-8') as f:
