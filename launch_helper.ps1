@@ -75,8 +75,8 @@ Parse the new docx file and generate a new dedicated HTML page (e.g., dse-wrap-$
 - Update the Market Snapshot bar at the top (DSEI, TSI, Total Turnover, Volume, Date, and the subtitle date paragraph).
 
 5. Update the Archive (market-intelligence-archive.html):
-- Add the newly generated wrap into the archive list.
-- CRITICAL: Format the new entry exactly like the older entries using the list-style <div class="arc-row"> structure, NOT the <a class="archive-row"> card structure. Ensure the alternating background color pattern (background: rgba(11,29,58,0.02)) is perfectly maintained.
+- Add the PREVIOUS day's wrap into the archive list (the one that was previously featured in the Market Intelligence spotlight). The newly generated wrap for today should NOT be added to the archive list yet.
+- CRITICAL: Format the new archive entry exactly like the older entries using the list-style <div class="arc-row"> structure, NOT the <a class="archive-row"> card structure. Ensure the alternating background color pattern (background: rgba(11,29,58,0.02)) is perfectly maintained.
 
 Please ensure NO external data is added and use ONLY the figures provided in the source documents. Deploy subagents if necessary to accomplish this. Do not stop until everything is done professionally with no errors or issues. Once you have verified all changes across these four files, commit and push to live.
 "@
