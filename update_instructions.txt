@@ -1,8 +1,8 @@
 ﻿Please process the new daily wrap and update the website exactly according to the following instructions. 
-The new data is located in "C:\Users\tmalu\Documents\Daily DSE Wrap 02 September 2026.docx" and the prices are in "C:\Users\tmalu\Documents\Current Prices 02 September 2026.docx".
+The new data is located in "C:\Users\tmalu\Documents\Daily DSE Wrap 04 September 2026.docx" and the prices are in "C:\Users\tmalu\Documents\Current Prices 04 September 2026.docx".
 
 1. Generate the New Wrap Page:
-Parse the new docx file and generate a new dedicated HTML page (e.g., dse-wrap-2026-09-02.html). Maintain the exact text, headings, bullet points, and tables.
+Parse the new docx file and generate a new dedicated HTML page (e.g., dse-wrap-2026-09-04.html). Maintain the exact text, headings, bullet points, and tables.
 
 2. Update the Home Page (index.html):
 - Live DSE Snapshot: Update the snapshot date labels (BOTH the title subtitle AND the terminal feed label at the bottom), DSEI, TSI, Turnover, Top 3 Gainers, and Top 3 Losers. Ensure you update the inner grid values (like id="home-dsei").
@@ -20,7 +20,7 @@ Parse the new docx file and generate a new dedicated HTML page (e.g., dse-wrap-2
 - Update the Market Snapshot bar at the top (DSEI, TSI, Total Turnover, Volume, Date, and the subtitle date paragraph).
 
 5. Update the Archive (market-intelligence-archive.html):
-- Add the newly generated wrap into the archive list.
-- CRITICAL: Format the new entry exactly like the older entries using the list-style <div class="arc-row"> structure, NOT the <a class="archive-row"> card structure. Ensure the alternating background color pattern (background: rgba(11,29,58,0.02)) is perfectly maintained.
+- Add the PREVIOUS day's wrap into the archive list (the one that was previously featured in the Market Intelligence spotlight). The newly generated wrap for today should NOT be added to the archive list yet.
+- CRITICAL: Format the new archive entry exactly like the older entries using the list-style <div class="arc-row"> structure, NOT the <a class="archive-row"> card structure. Ensure the alternating background color pattern (background: rgba(11,29,58,0.02)) is perfectly maintained.
 
 Please ensure NO external data is added and use ONLY the figures provided in the source documents. Deploy subagents if necessary to accomplish this. Do not stop until everything is done professionally with no errors or issues. Once you have verified all changes across these four files, commit and push to live.
