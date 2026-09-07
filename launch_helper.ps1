@@ -1,4 +1,4 @@
-﻿$inputDate = Read-Host "Enter report date (dd/MM/yyyy) or press Enter to use today's date"
+$inputDate = Read-Host "Enter report date (dd/MM/yyyy) or press Enter to use today's date"
 
 if ([string]::IsNullOrWhiteSpace($inputDate)) {
     $targetDate = Get-Date
@@ -101,3 +101,8 @@ Write-Host ""
 Write-Host "Press any key to exit..."
 $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown") | Out-Null
 exit 0
+
+
+=== CRITICAL SYSTEM RULES FOR AI AGENTS ===
+1. NEVER use PowerShell commands like `Set-Content` or `Out-File` to modify HTML files. Windows PowerShell adds a Byte Order Mark (BOM) which corrupts the website's unicode rendering. ALWAYS use Python scripts with `open('file.html', 'w', encoding='utf-8')` for any HTML modifications.
+2. DO NOT use greedy regex (.*) when doing DOM replacements. Parse accurately or use exact substring replacements to prevent HTML deletion.
