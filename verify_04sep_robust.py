@@ -1,0 +1,53 @@
+import sys, io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
+def check(name, expected, text):
+    if expected in text:
+        print(f"  [PASS] {name}")
+    else:
+        print(f"  [FAIL] {name} missing '{expected}'")
+
+with open('index.html', 'r', encoding='utf-8') as f:
+    c = f.read()
+print("============ index.html ============")
+check("DSEI", "4,523.81", c)
+check("TSI", "9,826.80", c)
+check("Turnover", "TZS 8.18 bn", c)
+check("Gainer 1", "KCB", c)
+check("Gainer 1 Val", "+3.7%", c)
+check("Gainer 2", "NMB", c)
+check("Gainer 2 Val", "+3.6%", c)
+check("Gainer 3", "MCB", c)
+check("Gainer 3 Val", "+2.6%", c)
+check("Loser 1", "VODA", c)
+check("Loser 1 Val", "-1.9%", c)
+check("Loser 2", "DSE", c)
+check("Loser 2 Val", "-1.4%", c)
+check("Loser 3", "TOL", c)
+check("Loser 3 Val", "-0.5%", c)
+check("Teaser Link", "/dse-wrap-2026-09-04", c)
+check("Teaser Date", "Friday, 4th September 2026", c)
+check("Snapshot Subtitle", "4th September 2026", c)
+check("Terminal Feed", "04 SEP 2026", c)
+
+with open('market-intelligence.html', 'r', encoding='utf-8') as f:
+    c = f.read()
+print("\n============ market-intelligence.html ============")
+check("DSEI", "4,523.81", c)
+check("TSI", "9,826.80", c)
+check("Turnover", "TZS 8.18 bn", c)
+check("Gainer 1", "KCB", c)
+check("Gainer 1 Val", "+3.7%", c)
+check("Gainer 2", "NMB", c)
+check("Gainer 2 Val", "+3.6%", c)
+check("Gainer 3", "MCB", c)
+check("Gainer 3 Val", "+2.6%", c)
+check("Loser 1", "VODA", c)
+check("Loser 1 Val", "-1.9%", c)
+check("Loser 2", "DSE", c)
+check("Loser 2 Val", "-1.4%", c)
+check("Loser 3", "TOL", c)
+check("Loser 3 Val", "-0.5%", c)
+check("Spotlight Link", "/dse-wrap-2026-09-04", c)
+check("Hero Date", "04 Sep 2026", c)
+check("Spotlight Date", "Friday, 4th September 2026", c)
