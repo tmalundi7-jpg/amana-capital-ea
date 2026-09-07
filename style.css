@@ -3027,3 +3027,8 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     }
 }
 /* ============================================================ */
+
+/* ─── Current Prices — Change % column colours ─── */
+.change-positive { color: #16a34a; font-weight: 700; }
+.change-negative { color: #dc2626; font-weight: 700; }
+.change-neutral  { color: #64748b; font-weight: 600; }
