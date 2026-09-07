@@ -76,6 +76,13 @@ Parse the new docx file and generate a new dedicated HTML page (e.g., dse-wrap-$
 - Update the Market Snapshot bar at the top (DSEI, TSI, Total Turnover, Volume, Date, and the subtitle date paragraph).
 
 5. Update the Archive (market-intelligence-archive.html):
+
+6. Update the Heatmap (script.js and script.min.js):
+- Find the const data = [...] array inside script.js and script.min.js which powers the DSE Market Heatmap.
+- Update the change: values for each symbol to reflect their daily percentage change from the 'Current Prices' document.
+- Ensure you update BOTH script.js and script.min.js using robust string replacements.
+
+5. Update the Archive (market-intelligence-archive.html):
 - Add the PREVIOUS day's wrap into the archive list (the one that was previously featured in the Market Intelligence spotlight). The newly generated wrap for today should NOT be added to the archive list yet.
 - CRITICAL: Format the new archive entry exactly like the older entries using the list-style <div class="arc-row"> structure, NOT the <a class="archive-row"> card structure. Ensure the alternating background color pattern (background: rgba(11,29,58,0.02)) is perfectly maintained.
 
