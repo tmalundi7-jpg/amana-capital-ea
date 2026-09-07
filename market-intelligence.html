@@ -610,4 +610,581 @@
 </footer>
 <script defer="" src="script.min.js?v=20260830_final_polish_27"></script>
 </body>
+</htmlx192.png" rel="icon" sizes="192x192" type="image/png"/>
+</head>
+<body>
+<nav class="navbar">
+<div class="container nav-container">
+<a class="brand-link" href="/">
+<svg aria-hidden="true" class="brand-icon" viewbox="0 0 32 44"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"></path><rect fill="currentColor" height="44" width="8" x="21" y="0"></rect><rect fill="currentColor" height="4" width="21" x="0" y="19"></rect></svg>
+<div class="brand-text vertical-logo">
+<span class="logo-word-primary">AMANA CAPITAL</span>
+<span class="logo-word-secondary">East Africa Limited</span>
+</div>
+</a>
+<button aria-label="Menu" class="mobile-toggle" id="mobile-toggle">&#9776;</button>
+<ul class="nav-links" id="nav-links">
+<li><a href="/">Home</a></li>
+<li><a class="active" href="/market-intelligence">Market Intelligence</a></li>
+<li><a href="/education">Investor Education</a></li>
+<li><a href="/bond-calculator">Bond Calculator</a></li>
+<li><a href="/risk-profiler">Risk Profiler</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+<main>
+<style>
+    /* ─── Market Intelligence Page Styles ─── */
+    .mi-hero {
+        background: var(--navy);
+        padding: 3.5rem 0 2.5rem;
+        position: relative;
+        overflow: hidden;
+    }
+    .mi-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+            radial-gradient(ellipse at 70% 0%, rgba(200,150,46,0.10) 0%, transparent 55%),
+            radial-gradient(ellipse at 5% 100%, rgba(200,150,46,0.06) 0%, transparent 45%);
+        pointer-events: none;
+    }
+    .mi-hero-inner {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: end;
+        gap: 3rem;
+    }
+    .mi-hero-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(200,150,46,0.12);
+        border: 1px solid rgba(200,150,46,0.3);
+        color: var(--gold);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 0.3rem 0.9rem;
+        border-radius: 20px;
+        margin-bottom: 1.25rem;
+    }
+    .mi-hero-label::before {
+        content: '';
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background: var(--gold);
+        animation: pulseMI 2s infinite;
+    }
+    @keyframes pulseMI {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.4; transform: scale(0.7); }
+    }
+    .mi-hero h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: var(--cream);
+        line-height: 1.1;
+        letter-spacing: -1px;
+        margin-bottom: 1rem;
+    }
+    .mi-hero h1 em { font-style: italic; color: var(--gold); }
+    .mi-hero-sub {
+        color: rgba(251,247,240,0.65);
+        font-size: 1rem;
+        line-height: 1.7;
+        max-width: 540px;
+        margin: 0;
+    }
+    .mi-hero-meta {
+        text-align: right;
+        font-size: 0.78rem;
+        color: rgba(251,247,240,0.35);
+        letter-spacing: 0.05em;
+    }
+    .mi-hero-meta strong {
+        display: block;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--cream);
+        letter-spacing: -0.5px;
+        margin-bottom: 0.2rem;
+    }
+
+    /* Main layout */
+    .mi-body {
+        background: var(--cream);
+        padding: 2.5rem 0 3.5rem;
+    }
+    .mi-layout {
+        display: grid;
+        grid-template-columns: 1fr 290px;
+        gap: 2rem;
+        max-width: 1040px;
+        margin: 0 auto;
+    }
+
+    /* Snapshot card */
+    .mi-snapshot-card {
+        background: var(--navy);
+        border: 1px solid rgba(200,150,46,0.2);
+        border-top: 3px solid var(--gold);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 16px rgba(11,29,58,0.1);
+        margin-bottom: 2rem;
+    }
+    .mi-snapshot-hdr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(200,150,46,0.15);
+    }
+    .mi-snapshot-hdr h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--cream);
+        margin: 0;
+    }
+    
+    
+    
+    
+    .snapshot-mover:last-child {
+        border-bottom: none;
+    }
+    
+    .live-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        background: rgba(34,197,94,0.1);
+        border: 1px solid rgba(34,197,94,0.3);
+        color: #22c55e;
+        font-size: 0.67rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 0.22rem 0.7rem;
+        border-radius: 20px;
+    }
+    .live-badge::before {
+        content: '';
+        width: 5px; height: 5px;
+        border-radius: 50%;
+        background: #22c55e;
+        animation: pulseMI 1.5s infinite;
+    }
+
+    /* Archive section */
+    .mi-archive-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid rgba(11,29,58,0.08);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .archive-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        background: #fff;
+        border-radius: 12px;
+        border: 1px solid rgba(11,29,58,0.08);
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(11,29,58,0.06);
+    }
+    .archive-row {
+        display: grid;
+        grid-template-columns: 100px 1fr auto;
+        gap: 1.25rem;
+        align-items: center;
+        padding: 1.1rem 1.5rem;
+        border-bottom: 1px solid rgba(11,29,58,0.055);
+        transition: background 0.2s;
+        text-decoration: none;
+    }
+    .archive-row:last-child { border-bottom: none; }
+    .archive-row:hover { background: rgba(11,29,58,0.025); }
+    .archive-date {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--gold);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        line-height: 1.3;
+    }
+    .archive-content-title {
+        font-weight: 700;
+        font-size: 0.88rem;
+        color: var(--navy);
+        margin-bottom: 0.2rem;
+        line-height: 1.35;
+    }
+    .archive-content-excerpt {
+        font-size: 0.78rem;
+        color: rgba(11,29,58,0.5);
+        line-height: 1.5;
+    }
+    .archive-cta {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--gold);
+        text-decoration: none;
+        white-space: nowrap;
+        transition: opacity 0.2s;
+    }
+    .archive-cta:hover { opacity: 0.7; }
+    .archive-badge {
+        display: inline-block;
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 0.15rem 0.5rem;
+        border-radius: 10px;
+        margin-bottom: 0.35rem;
+    }
+    .badge-equity { background: rgba(11,29,58,0.08); color: var(--navy); }
+    .badge-macro { background: rgba(200,150,46,0.12); color: #a07020; }
+    .badge-bonds { background: rgba(59,130,246,0.1); color: #3b82f6; }
+
+    /* Sidebar */
+    .mi-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+    .mi-sidebar-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 1.5rem;
+        border: 1px solid rgba(11,29,58,0.08);
+        box-shadow: 0 4px 16px rgba(11,29,58,0.05);
+    }
+    .mi-sidebar-card.dark {
+        background: var(--navy);
+        border-color: rgba(200,150,46,0.2);
+        border-top: 3px solid var(--gold);
+    }
+    .mi-sidebar-card h4 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 1rem;
+    }
+    .mi-sidebar-card.dark h4 { color: var(--gold); }
+    .mi-sidebar-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .mi-sidebar-links a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0.75rem;
+        background: var(--cream);
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--navy);
+        text-decoration: none;
+        transition: background 0.2s;
+    }
+    .mi-sidebar-links a:hover { background: rgba(200,150,46,0.1); }
+    .mi-analyst-note {
+        background: rgba(200,150,46,0.06);
+        border-left: 3px solid var(--gold);
+        border-radius: 0 8px 8px 0;
+        padding: 0.75rem 0.9rem;
+        margin-top: 0.6rem;
+    }
+    .mi-analyst-note p {
+        font-size: 0.78rem;
+        color: rgba(251,247,240,0.75);
+        line-height: 1.6;
+        margin: 0;
+        font-style: italic;
+    }
+
+    /* Heatmap section */
+    .mi-heatmap-section {
+        background: var(--navy);
+        border-radius: 14px;
+        border: 1px solid rgba(200,150,46,0.15);
+        padding: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
+        grid-column: 1 / -1;
+    }
+    .mi-heatmap-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.25rem;
+    }
+    .mi-heatmap-header h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--cream);
+        margin: 0;
+    }
+
+    /* Subscribe strip */
+    .mi-subscribe {
+        background: var(--navy);
+        border-top: 1px solid rgba(200,150,46,0.15);
+        padding: 3.5rem 0;
+    }
+    .mi-subscribe-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; max-width: 1040px; margin: 0 auto; }
+    .mi-subscribe h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--cream);
+        margin-bottom: 0.6rem;
+        line-height: 1.2;
+    }
+    .mi-subscribe h2 em { font-style: normal; color: var(--gold); }
+    .mi-subscribe p { color: rgba(251,247,240,0.5); font-size: 0.78rem; line-height: 1.6; margin: 0; }
+    .mi-sub-form { display: flex; flex-direction: column; gap: 0.65rem; }
+    .mi-sub-form input {
+        padding: 0.75rem 1rem;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(200,150,46,0.25);
+        border-radius: 8px;
+        color: var(--cream);
+        font-family: inherit;
+        font-size: 0.78rem;
+        outline: none;
+    }
+    .mi-sub-form input::placeholder { color: rgba(251,247,240,0.3); }
+    .mi-sub-form button {
+        padding: 0.75rem;
+        background: var(--gold);
+        border: none;
+        border-radius: 8px;
+        color: var(--navy);
+        font-weight: 700;
+        font-size: 0.78rem;
+        cursor: pointer;
+        font-family: inherit;
+        transition: background 0.2s;
+    }
+    .mi-sub-form button:hover { background: #d4a233; }
+
+    @media (max-width: 860px) {
+        .mi-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+        .mi-hero-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+        .mi-hero h1 { font-size: 2.4rem; }
+        .mi-subscribe-inner { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+        .archive-row { grid-template-columns: 1fr; text-align: left; gap: 0.75rem; padding: 1.5rem; }
+        .archive-date { font-size: 0.85rem; display: inline-block; margin-bottom: 0.25rem; }
+        .archive-cta { display: inline-block; margin-top: 0.5rem; }
+    }
+    @media (max-width: 540px) {
+        .mi-hero { padding: 2rem 0 1.5rem; }
+        .archive-row { grid-template-columns: 1fr; padding: 1rem; }
+        .archive-cta { display: none; }
+        .mi-hero h1 { font-size: 2rem; }
+        
+        
+        .mi-heatmap-section { padding: 1.25rem; margin-top: 1rem; }
+    }
+    </style>
+<!-- ─── HERO ─── -->
+<section class="mi-hero">
+<div class="container">
+<div class="mi-hero-inner">
+<div>
+<div class="mi-hero-label">Research &amp; Analysis</div>
+<h1>Market <em>Intelligence</em><br/>Hub</h1>
+<p class="mi-hero-sub">Institutional-grade daily research on the Dar es Salaam Stock Exchange — equity analysis, macro commentary, and disciplined investment perspectives for serious East African investors.</p>
+</div>
+<div class="mi-hero-meta">
+<strong>03 Sep 2026</strong>
+                        Latest Report
+                    </div>
+</div>
+</div>
+</section>
+<!-- ─── MAIN BODY ─── -->
+<section class="mi-body">
+<div class="container">
+<div class="mi-layout" style="max-width:1040px;margin:0 auto;">
+<!-- Left Column -->
+<div>
+<!-- Snapshot Card -->
+<div class="mi-snapshot-card">
+<div class="mi-snapshot-hdr">
+<h2>DSE Snapshot</h2>
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="font-size:0.78rem;color:rgba(251,247,240,0.7);font-weight:600;">3 September 2026</span>
+</div>
+</div>
+<div class="snapshot-grid">
+  <div class="snapshot-item">
+<div class="snapshot-label" style="color:rgba(251,247,240,0.85);">DSEI</div>
+<div class="snapshot-value" id="mi-dsei">4,442.62</div>
+</div>
+  <div class="snapshot-item">
+  <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">TSI</div>
+<div class="snapshot-value" id="mi-tsi">9,653.89</div>
+</div>
+  <div class="snapshot-item">
+  <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">Turnover</div>
+<div class="snapshot-value" data-format-type="bn" data-tzs-value="4010000000" id="mi-turnover">TZS 42.93 bn</div>
+</div>
+  <div class="snapshot-item">
+  <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">Top Gainers</div>
+  <!-- GAINERS_START -->
+      <div style="display:flex; flex-direction:column; gap:0.15rem; width:100%;">
+        <div style="display:flex; justify-content:space-between; font-size:0.75rem; font-weight:700; color:var(--cream);"><span>MBP</span> <span style="color:var(--gain)">+8.2%</span></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.75rem; font-weight:700; color:var(--cream);"><span>NMG</span> <span style="color:var(--gain)">+7.9%</span></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.75rem; font-weight:700; color:var(--cream);"><span>KCB</span> <span style="color:var(--gain)">+3.9%</span></div>
+      </div>
+      <!-- GAINERS_END -->
+</div>
+  <div class="snapshot-item">
+  <div class="snapshot-label" style="color:rgba(251,247,240,0.85);">Top Losers</div>
+  <!-- LOSERS_START -->
+      <div style="display:flex; flex-direction:column; gap:0.15rem; width:100%;">
+        <div style="display:flex; justify-content:space-between; font-size:0.75rem; font-weight:700; color:var(--cream);"><span>TCCL</span> <span style="color:var(--loss)">-4.0%</span></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.75rem; font-weight:700; color:var(--cream);"><span>TTP</span> <span style="color:var(--loss)">-2.1%</span></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.75rem; font-weight:700; color:var(--cream);"><span>DSE</span> <span style="color:var(--loss)">-1.8%</span></div>
+      </div>
+      <!-- LOSERS_END -->
+</div>
+</div>
+</div>
+<!-- Heatmap -->
+<div class="mi-heatmap-section" style="grid-column:auto;">
+<div class="mi-heatmap-header">
+<h3>DSE Market Heatmap</h3>
+<span class="live-badge">End of Day</span>
+</div>
+<div style="width: 100%; overflow-x: auto;"><div style="height: 300px; position: relative; width: 100%; min-width: 600px;">
+<div id="dseHeatmapContainer" style="width: 100%; height: 100%;"></div>
+</div></div>
+<p style="font-size: 0.75rem; color: rgba(251,247,240,0.4); margin-top: 0.75rem; margin-bottom: 0; font-style: italic;">Block size = relative Market Cap. Colour = daily % change (Green positive, Red negative).</p>
+</div>
+<!-- Archive -->
+<div>
+<div class="mi-archive-title">
+<span>Daily DSE Wrap Archive</span>
+<a href="/market-intelligence-archive" style="font-size:0.8rem;font-weight:600;color:var(--gold);text-decoration:none;">Research Archive →</a>
+</div>
+<div class="archive-list">
+<a class="archive-row" href="/dse-wrap-2026-09-03">
+<div class="archive-date">03 Sep<br/>2026</div>
+<div>
+<div class="archive-badge badge-equity">Equities</div>
+<div class="archive-content-title">Daily DSE Wrap | Thursday, 3rd September 2026</div>
+<div class="archive-content-excerpt">The Dar es Salaam Stock Exchange delivered its most dramatic session of the quarter on Thursday, with equity turnover exploding to TZS 42.93 billion — the highest single-day figure...</div>
+</div>
+<span class="archive-cta">Read &rarr;</span>
+</a>
+
+
+</div>
+<div style="margin-top:1.5rem;text-align:center;">
+<a class="btn btn-gold-solid" href="/market-intelligence-archive">View Research Archive →</a>
+</div>
+</div>
+</div>
+<!-- Sidebar -->
+<div class="mi-sidebar">
+<div class="mi-sidebar-card">
+<h4>Quick Links</h4>
+<ul class="mi-sidebar-links">
+<li><a href="/current-prices">Current Prices <span>→</span></a></li>
+<li><a href="/bond-calculator">Bond Calculator <span>→</span></a></li>
+<li><a href="/compound-wealth">Wealth Modeler <span>→</span></a></li>
+<li><a href="/risk-profiler">Risk Profiler <span>→</span></a></li>
+</ul>
+</div>
+<div class="mi-sidebar-card dark" style="padding:1.25rem;">
+<h4 style="font-size:0.9rem;margin-bottom:0.6rem;">Analyst Commentary</h4>
+<div class="mi-analyst-note">
+<p>"The DSE continues to offer compelling structural value — patient long-term investors remain well-positioned relative to global EM peers."</p>
+</div>
+<p style="font-size:0.68rem;color:rgba(251,247,240,0.35);margin-top:0.6rem;margin-bottom:0.9rem;">— Amana Capital Research, August 2026</p>
+<a class="btn btn-gold-solid" href="/contact" style="width:100%;text-align:center;display:block;font-size:0.82rem;">Speak to an Analyst →</a>
+</div>
+<div class="mi-sidebar-card">
+<h4 style="color:var(--navy);">New to the DSE?</h4>
+<p style="font-size:0.83rem;color:rgba(11,29,58,0.6);line-height:1.6;margin-bottom:1rem;">Build your foundational knowledge with our free investor education curriculum. From equities to bonds — we cover it all.</p>
+<a class="btn btn-gold-solid" href="/education" style="width:100%;text-align:center;display:block;font-size:0.85rem;">Start Learning →</a>
+</div>
+<div class="mi-sidebar-card" style="background:var(--navy);border:1px solid rgba(200,150,46,0.2);border-top:3px solid var(--gold);">
+<h4 style="color:var(--gold);">Research Coverage</h4>
+<div style="display:flex;flex-direction:column;gap:0.5rem;font-size:0.82rem;">
+<div style="display:flex;justify-content:space-between;color:rgba(251,247,240,0.75);">
+<span>DSE Equities</span><span style="color:var(--gold);font-weight:700;">28 stocks</span>
+</div>
+<div style="display:flex;justify-content:space-between;color:rgba(251,247,240,0.75);">
+<span>Treasury Bonds</span><span style="color:var(--gold);font-weight:700;">Full curve</span>
+</div>
+<div style="display:flex;justify-content:space-between;color:rgba(251,247,240,0.75);">
+<span>EAC Markets</span><span style="color:var(--gold);font-weight:700;">DSE</span>
+</div>
+<div style="display:flex;justify-content:space-between;color:rgba(251,247,240,0.75);">
+<span>Daily Wraps</span><span style="color:var(--gold);font-weight:700;">Every trading day</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ─── SUBSCRIBE ─── -->
+<section class="mi-subscribe">
+<div class="container">
+<div class="mi-subscribe-inner">
+<div>
+<div style="color:var(--gold);font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:0.6rem;">Intelligence Briefing</div>
+<h2>Join Our Research Network</h2>
+  <p>Exclusive institutional-grade DSE wraps and macroeconomic briefings delivered to your inbox every trading day. No noise &mdash; only signal.</p>
+</div>
+<form action="https://formspree.io/f/mvzjdqnv" class="mi-sub-form" method="POST">
+<input name="email" placeholder="Your institutional email address" required="" type="email"/>
+  <button type="submit">Subscribe to Intelligence Briefing</button>
+  <p style="font-size:0.65rem;color:rgba(251,247,240,0.25);margin:0;">No spam. Unsubscribe at any time. For serious investors.</p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer" style="background-color: var(--navy); padding: 3rem 0 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
+  <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center;">
+    <div>
+      <div style="font-family: 'Cormorant Garamond', serif; color: var(--gold); font-weight: 600; letter-spacing: 2px; font-size: 1.15rem; margin-bottom: 0.4rem; text-transform: uppercase;">AMANA CAPITAL EAST AFRICA</div>
+      <div style="color: rgba(251,247,240,0.5); font-size: 0.8rem; letter-spacing: 0.5px;">Dar es Salaam &middot; Tanzania &middot; Registration Pending CMSA</div>
+    </div>
+    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin: 0.5rem 0;">
+      <a href="/market-intelligence" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Research</a>
+      <a href="/bond-calculator" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Bond Calc</a>
+      <a href="/compound-wealth" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Wealth Modeler</a>
+      <a href="/education" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Education</a>
+      <a href="/about" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Governance</a>
+      <a href="/contact" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Contact</a>
+    </div>
+    <div style="color: var(--mist); opacity: 0.45; font-size:0.75rem;">&copy; 2026 Amana Capital East Africa Limited</div>
+  </div>
+</footer>
+<script defer="" src="script.min.js?v=20260830_final_polish_27"></script>
+</body>
 </html>
