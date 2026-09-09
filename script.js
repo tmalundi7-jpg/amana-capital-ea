@@ -862,3 +862,27 @@ window.initDSEHeatmap = function() {
     html += '</div>';
     container.innerHTML = html;
 };
+
+/* --- Swup Initialization --- */
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof Swup !== 'undefined') {
+        const swup = new Swup({
+            containers: ['#swup'],
+            plugins: [
+                new SwupScriptsPlugin({ head: true, body: true }),
+                new SwupProgressPlugin(),
+                new SwupPreloadPlugin()
+            ]
+        });
+
+        swup.hooks.on('page:view', () => {
+            // Re-init specific features if necessary
+            if (typeof window.initDSEHeatmap === 'function') {
+                window.initDSEHeatmap();
+            }
+            if (typeof Weglot !== 'undefined') {
+                Weglot.initialize({ api_key: 'wg_22a6f434974df4dee513e25f34fc5e009' });
+            }
+        });
+    }
+});
