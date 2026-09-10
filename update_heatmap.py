@@ -1,35 +1,41 @@
-import json
 import re
+import json
 
-# Load prices
-with open('extracted_current_prices_17_aug_2026.json', 'r', encoding='utf-8') as f:
-    prices = {p['ticker']: p for p in json.load(f)['prices']}
+with open('extracted_prices.json', 'r', encoding='utf-8') as f:
+    d = json.load(f)
 
-for js_file in ['script.js', 'script.min.js']:
-    with open(js_file, 'r', encoding='utf-8') as f:
-        content = f.read()
+changes = {}
+for row in d['tables'][0][1:]:
+    ticker = row[0]
+    change = row[4].replace('%', '').replace('+', '').replace('–', '-')
+    try:
+        changes[ticker] = float(change)
+    except ValueError:
+        changes[ticker] = 0.0
+
+# Add NMG explicitly if missing (it's 0.0 usually)
+if 'NMG' not in changes:
+    changes['NMG'] = 0.0
+
+def update_script(filename):
+    with open(filename, 'r', encoding='utf-8') as f:
+        c = f.read()
 
     # Find the data array in initDSEHeatmap
-    match = re.search(r'const data = \[(.*?)\];', content, re.DOTALL)
-    if match:
-        data_str = match.group(1)
-        # Parse the JS objects roughly
-        new_data_str = []
-        for line in data_str.split('\n'):
-            if '{' in line:
-                sym_m = re.search(r"symbol:\s*'([^']+)'", line)
-                if sym_m:
-                    sym = sym_m.group(1)
-                    if sym in prices:
-                        c_str = prices[sym].get('change_pct', '0%').replace('?', '-').replace('', '-').replace('%', '')
-                        try:
-                            new_change = float(c_str)
-                        except:
-                            new_change = 0.0
-                        line = re.sub(r'change:\s*[^}]+', f'change: {new_change} ', line)
-            new_data_str.append(line)
-        
-        new_content = content[:match.start(1)] + '\n'.join(new_data_str) + content[match.end(1):]
-        with open(js_file, 'w', encoding='utf-8') as f:
-            f.write(new_content)
-        print(f'Updated {js_file}')
+    # We will regex replace each line: { symbol: 'NMB', marketCap: 2675, change: 4.95 },
+    
+    def replacer(match):
+        sym = match.group(1)
+        if sym in changes:
+            return f"symbol: '{sym}', marketCap: {match.group(2)}, change: {changes[sym]}"
+        return match.group(0)
+
+    c = re.sub(r"symbol:\s*'([^']+)',\s*marketCap:\s*([0-9.]+),\s*change:\s*[-0-9.]+", replacer, c)
+    
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(c)
+
+update_script('script.js')
+update_script('script.min.js')
+
+print('Updated script.js and script.min.js Heatmap data.')
