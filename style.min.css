@@ -9,6 +9,37 @@
   z-index: 9999;
 }
 
+/* ============================================ */
+/* RESTORED CORE LAYOUT & DISPLAY SETTINGS      */
+/* ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+.card {
+  padding: 2.5rem;
+}
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 2rem 0;
+  width: 100%;
+  display: block;
+}
+
+
 /* --- Article Detail Styles --- */
 .article-container {
   max-width: 820px;

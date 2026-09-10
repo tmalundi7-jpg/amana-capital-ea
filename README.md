@@ -74,3 +74,11 @@ The daily process for updating the DSE market data follows this strict flow:
 
 ## License
 No license is currently specified. All rights reserved by Amana Capital East Africa.
+
+# Amana Capital EA - Frontend Development Guidelines
+
+## STRICT DISPLAY SETTINGS GUARDRAIL
+**DO NOT MODIFY** the core display settings, layout structure, responsive breakpoints, or grid/flex container logic in style.css or style.min.css without explicit user request.
+The mobile and desktop viewports, padding, scaling, and alignments have been carefully audited and locked. 
+
+Any automated minification, CSS refactoring, or 'tree shaking' must NOT remove base classes like .container, .btn, .card, or .table-responsive.
