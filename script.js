@@ -820,19 +820,19 @@ window.initDSEHeatmap = function() {
     if (!container) return;
     
         const data = [
-        { symbol: 'NMB', marketCap: 2675, change: 2.8 },
-        { symbol: 'TBL', marketCap: 3200, change: -0.1 },
-        { symbol: 'CRDB', marketCap: 1515, change: 1.1 },
-        { symbol: 'VODA', marketCap: 1200, change: 2.8 },
-        { symbol: 'TPCC', marketCap: 900, change: 0.0 },
-        { symbol: 'NICO', marketCap: 700, change: 1.3 },
-        { symbol: 'KCB', marketCap: 380, change: -2.3 },
-        { symbol: 'TCCL', marketCap: 120, change: 8.5 },
-        { symbol: 'TOL', marketCap: 85, change: -11.6 },
-        { symbol: 'SWIS', marketCap: 100, change: 0.4 },
-        { symbol: 'DCB', marketCap: 80, change: -1.1 },
+        { symbol: 'NMB', marketCap: 2675, change: 0.0 },
+        { symbol: 'TBL', marketCap: 3200, change: 0.2 },
+        { symbol: 'CRDB', marketCap: 1515, change: 2.1 },
+        { symbol: 'VODA', marketCap: 1200, change: 0.0 },
+        { symbol: 'TPCC', marketCap: 900, change: -0.3 },
+        { symbol: 'NICO', marketCap: 700, change: 1.0 },
+        { symbol: 'KCB', marketCap: 380, change: 1.0 },
+        { symbol: 'TCCL', marketCap: 120, change: 0.8 },
+        { symbol: 'TOL', marketCap: 85, change: -3.8 },
+        { symbol: 'SWIS', marketCap: 100, change: -2.5 },
+        { symbol: 'DCB', marketCap: 80, change: 0.0 },
         { symbol: 'MBP', marketCap: 65, change: -1.9 },
-        { symbol: 'MCB', marketCap: 62, change: 0.0 },
+        { symbol: 'MCB', marketCap: 62, change: -1.3 },
         { symbol: 'NMG', marketCap: 50, change: 0.0 }
     ];
 
