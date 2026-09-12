@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
+  /* Legacy Colors */
+  --navy: #0B1D3A;
+  --cream: #FBF7F0;
+  --stone: #E8E2D9;
+  --gold: #C8962E;
+  --mist: #9A9490;
+
   --gain: #16A34A;
   --loss: #DC2626;
   
@@ -1095,7 +1102,14 @@ body {
 @media (prefers-reduced-motion: reduce) { .skeleton { animation: none; background: #e8e8e8; } }
 
 /* --- THEME TOKENS (CSS Variables) --- */
-:root { --bg-primary: #0a1628; --bg-secondary: #1a2a3a; --bg-card: rgba(255, 255, 255, 0.04); --bg-card-hover: rgba(255, 255, 255, 0.08); --text-primary: #ffffff; --text-secondary: #b0c4de; --text-muted: #6b7a8f; --border-color: rgba(255, 255, 255, 0.08); --shadow-color: rgba(0, 0, 0, 0.3); --hero-overlay: rgba(10, 22, 40, 0.85); }
+:root {
+  /* Legacy Colors */
+  --navy: #0B1D3A;
+  --cream: #FBF7F0;
+  --stone: #E8E2D9;
+  --gold: #C8962E;
+  --mist: #9A9490;
+ --bg-primary: #0a1628; --bg-secondary: #1a2a3a; --bg-card: rgba(255, 255, 255, 0.04); --bg-card-hover: rgba(255, 255, 255, 0.08); --text-primary: #ffffff; --text-secondary: #b0c4de; --text-muted: #6b7a8f; --border-color: rgba(255, 255, 255, 0.08); --shadow-color: rgba(0, 0, 0, 0.3); --hero-overlay: rgba(10, 22, 40, 0.85); }
 [data-theme="light"] { --bg-primary: #f8f9fa; --bg-secondary: #ffffff; --bg-card: #ffffff; --bg-card-hover: #f0f1f3; --text-primary: #0a1628; --text-secondary: #2a2a2a; --text-muted: #6b7a8f; --border-color: rgba(0, 0, 0, 0.08); --shadow-color: rgba(0, 0, 0, 0.08); --hero-overlay: rgba(255, 255, 255, 0.7); }
 body { background: var(--bg-primary); color: var(--text-primary); }
 .card, .market-card, .daily-wrap-preview { background: var(--bg-card); border-color: var(--border-color); }
