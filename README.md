@@ -84,5 +84,5 @@ The mobile and desktop viewports, padding, scaling, and alignments have been car
 Any automated minification, CSS refactoring, or 'tree shaking' must NOT remove base classes like .container, .btn, .card, or .table-responsive.
 
 **CURRENT PRICES PAGE DESIGN GUARDRAIL:**
-The new Current Prices page design, format, and colour scheme (in `current-prices.html`) are considered LOCKED.
-They must NOT be changed unless explicitly requested by the site owner. Any future content update (e.g. new daily prices) must reuse the same table structure, CSS classes, and layout automatically. If a future content update risks affecting the design, flag it and ask before changing anything design-related.
+The Change (%) colour scheme (green for positive, red for negative, neutral for 0.0%) on the Current Prices page (`current-prices.html`) is considered LOCKED.
+It must NOT be changed unless explicitly requested by the site owner. Any future content update (e.g. new daily prices) must automatically apply the same colour classes based on the sign of the value. If a future content update risks affecting the colour formatting, flag it and ask before changing anything.
