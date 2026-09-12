@@ -28,44 +28,54 @@
     /* unless explicitly requested by the site owner. */
     .gold-grid-table {
         border-collapse: collapse !important;
-        width: 100%;
-        background-color: #ffffff;
-        font-family: 'Inter', sans-serif;
+        width: 100% !important;
+        background-color: #ffffff !important;
+        font-family: 'Inter', sans-serif !important;
+    }
+    .gold-grid-table th, .gold-grid-table td {
+        border: 1px solid rgba(200, 150, 46, 0.4) !important;
     }
     .gold-grid-table th {
-        padding: 1.2rem 1rem;
-        border-bottom: 2px solid #C8962E !important;
+        padding: 1.2rem 1rem !important;
         background-color: rgba(200, 150, 46, 0.08) !important;
         color: #0B1D3A !important;
         text-align: left;
-        font-weight: 600;
-        white-space: nowrap;
+        font-weight: 600 !important;
+        white-space: nowrap !important;
     }
     .gold-grid-table td {
-        padding: 1rem;
-        border-bottom: 1px solid rgba(200, 150, 46, 0.15) !important;
-        color: #0A1628;
-        vertical-align: middle;
+        padding: 1rem !important;
+        color: #0A1628 !important;
+        vertical-align: middle !important;
     }
     .gold-grid-table tbody tr:nth-child(even) {
-        background-color: #FBF7F0;
+        background-color: #FBF7F0 !important;
     }
     .gold-grid-table tbody tr:hover {
-        background-color: rgba(200, 150, 46, 0.1);
+        background-color: rgba(200, 150, 46, 0.1) !important;
     }
+    
+    /* Lock structural formatting */
+    .gold-grid-table th:nth-child(n+4), .gold-grid-table td:nth-child(n+4) {
+        text-align: right !important;
+    }
+    .gold-grid-table td:nth-child(3) {
+        color: #9A9490 !important;
+    }
+    .gold-grid-table td:nth-child(1) {
+        font-weight: 700 !important;
+    }
+    
+    /* Lock colours for changes */
+    .change-positive { color: #16A34A !important; font-weight: 700 !important; }
+    .change-negative { color: #DC2626 !important; font-weight: 700 !important; }
+    
     .table-responsive {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        margin-bottom: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(11, 29, 58, 0.05);
-        border: 1px solid rgba(200, 150, 46, 0.2);
-    }
-    .text-right {
-        text-align: right !important;
-    }
-    .th-right {
-        text-align: right !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        margin-bottom: 2rem !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 20px rgba(11, 29, 58, 0.05) !important;
     }
 </style>
 </head>
