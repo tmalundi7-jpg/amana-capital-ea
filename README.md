@@ -82,3 +82,7 @@ No license is currently specified. All rights reserved by Amana Capital East Afr
 The mobile and desktop viewports, padding, scaling, and alignments have been carefully audited and locked. 
 
 Any automated minification, CSS refactoring, or 'tree shaking' must NOT remove base classes like .container, .btn, .card, or .table-responsive.
+
+**CURRENT PRICES PAGE DESIGN GUARDRAIL:**
+The new Current Prices page design, format, and colour scheme (in `current-prices.html`) are considered LOCKED.
+They must NOT be changed unless explicitly requested by the site owner. Any future content update (e.g. new daily prices) must reuse the same table structure, CSS classes, and layout automatically. If a future content update risks affecting the design, flag it and ask before changing anything design-related.

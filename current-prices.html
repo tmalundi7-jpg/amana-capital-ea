@@ -22,11 +22,50 @@
 <link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
 <link href="/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
 <style>
+    /* GUARDRAIL: LOCKED DESIGN FORMAT */
+    /* This design format is locked for the Current Prices page. */
+    /* Any future content updates must automatically inherit these styles without altering them, */
+    /* unless explicitly requested by the site owner. */
     .gold-grid-table {
         border-collapse: collapse !important;
+        width: 100%;
+        background-color: #ffffff;
+        font-family: 'Inter', sans-serif;
     }
-    .gold-grid-table th, .gold-grid-table td {
-        border: 1px solid rgba(200, 150, 46, 0.4) !important;
+    .gold-grid-table th {
+        padding: 1.2rem 1rem;
+        border-bottom: 2px solid #C8962E !important;
+        background-color: rgba(200, 150, 46, 0.08) !important;
+        color: #0B1D3A !important;
+        text-align: left;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    .gold-grid-table td {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(200, 150, 46, 0.15) !important;
+        color: #0A1628;
+        vertical-align: middle;
+    }
+    .gold-grid-table tbody tr:nth-child(even) {
+        background-color: #FBF7F0;
+    }
+    .gold-grid-table tbody tr:hover {
+        background-color: rgba(200, 150, 46, 0.1);
+    }
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(11, 29, 58, 0.05);
+        border: 1px solid rgba(200, 150, 46, 0.2);
+    }
+    .text-right {
+        text-align: right !important;
+    }
+    .th-right {
+        text-align: right !important;
     }
 </style>
 </head>
@@ -81,8 +120,6 @@
       <div style="font-size: 0.85rem; color: #6B7280; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 0.25rem;">VODA</div>
       <div style="font-size: 1.6rem; color: #0A1628; font-weight: 700;">600,000 <span style="font-size: 0.95rem; font-weight: 400; color: #6B7280;">shares</span></div>
     </div>
-  </div>
-</div>
     <div style="background: #ffffff; border: 1px solid rgba(200, 150, 46, 0.4); padding: 1rem 1.5rem; border-radius: 6px; min-width: 200px; flex: 1;">
       <div style="font-size: 0.85rem; color: #6B7280; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 0.25rem;">KCB</div>
       <div style="font-size: 1.6rem; color: #0A1628; font-weight: 700;">500,000 <span style="font-size: 0.95rem; font-weight: 400; color: #6B7280;">shares</span></div>
@@ -99,8 +136,8 @@
 </div>
 
 <div class="table-responsive">
-<table class="data-table gold-grid-table" style="width: 100%; border-collapse: collapse; margin-bottom: 2rem; background-color: transparent; color: #0B1D3A;">
-<thead><tr><th style="padding: 1rem; border-bottom: 2px solid #C8962E; background-color: rgba(200, 150, 46, 0.08); color: #0B1D3A;">Ticker</th><th style="padding: 1rem; border-bottom: 2px solid #C8962E; background-color: rgba(200, 150, 46, 0.08); color: #0B1D3A;">Company</th><th style="padding: 1rem; border-bottom: 2px solid #C8962E; background-color: rgba(200, 150, 46, 0.08); color: #0B1D3A;">Sector</th><th style="padding: 1rem; border-bottom: 2px solid #C8962E; background-color: rgba(200, 150, 46, 0.08); color: #0B1D3A;">Last Price (TZS)</th><th style="padding: 1rem; border-bottom: 2px solid #C8962E; background-color: rgba(200, 150, 46, 0.08); color: #0B1D3A;">Change (%)</th><th style="padding: 1rem; border-bottom: 2px solid #C8962E; background-color: rgba(200, 150, 46, 0.08); color: #0B1D3A;">Volume</th><th style="padding: 1rem; border-bottom: 2px solid #C8962E; background-color: rgba(200, 150, 46, 0.08); color: #0B1D3A;">Turnover (TZS)</th></tr></thead><tbody>
+<table class="data-table gold-grid-table">
+<thead><tr><th>Ticker</th><th>Company</th><th>Sector</th><th class="th-right">Last Price (TZS)</th><th class="th-right">Change (%)</th><th class="th-right">Volume</th><th class="th-right">Turnover (TZS)</th></tr></thead><tbody>
                             <tr>
                                 <td><strong>AFRIPRISE</strong></td>
                                 <td>African Pride</td>
