@@ -1883,10 +1883,19 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     }
 }
 /* ============================================================ */
-
-/* ─── Current Prices — Change % column colours ─── */
-.change-positive { color: #16a34a; font-weight: 700; }
-.change-negative { color: #dc2626; font-weight: 700; }
+/* GUARDRAIL: LOCKED DESIGN FORMAT                              */
+/* - The Change (%) colour scheme (green for positive, red for  */
+/*   negative, neutral for 0.0%) is LOCKED.                     */
+/* - It must NOT be changed unless explicitly requested by the  */
+/*   site owner.                                                */
+/* - Every future price update must automatically apply the     */
+/*   correct class based on the sign of the value.              */
+/* - The CSS class names and their colours are documented so    */
+/*   future updates reuse them:                                 */
+/*   .change-positive (#16a34a) and .change-negative (#dc2626)  */
+/* ============================================================ */
+.change-positive { color: #16a34a !important; font-weight: 700; }
+.change-negative { color: #dc2626 !important; font-weight: 700; }
 .change-neutral  { color: #64748b; font-weight: 600; }
 
 /* --- Smooth Page Transitions --- */
