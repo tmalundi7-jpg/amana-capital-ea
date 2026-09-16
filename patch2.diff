@@ -1,0 +1,61 @@
+
+diff --git a/index.html b/index.html
+index c7ec51c..6024f10 100644
+--- a/index.html
++++ b/index.html
+@@ -819,11 +819,53 @@
+     </div>
+     <div>
+         <div class="snapshot-label">Top Gainers</div>
+-        <div class="snapshot-mover" id="home-gainers">CRDB <span style="color:var(--gain)">+2.1%</span><br>TCC <span style="color:var(--gain)">+1.4%</span><br>KCB <span style="color:var(--gain)">+1.0%</span></div>
++        <table style="width: 100%; text-align: left; border-collapse: collapse; color: #FBF7F0; font-size: 0.9rem;">
++            <thead>
++                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1); color: #C8962E; font-size: 0.75rem; text-transform: uppercase;">
++                    <th style="padding-bottom: 0.3rem; font-weight: 600;">Ticker</th>
++                    <th style="padding-bottom: 0.3rem; font-weight: 600; text-align: right;">Change</th>
++                </tr>
++            </thead>
++            <tbody>
++                <tr>
++                    <td style="padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">CRDB</td>
++                    <td style="padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); text-align: right; color: var(--gain);">+2.1%</td>
++                </tr>
++                <tr>
++                    <td style="padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">TCC</td>
++                    <td style="padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); text-align: right; color: var(--gain);">+1.4%</td>
++                </tr>
++                <tr>
++                    <td style="padding: 0.3rem 0;">KCB</td>
++                    <td style="padding: 0.3rem 0; text-align: right; color: var(--gain);">+1.0%</td>
++                </tr>
++            </tbody>
++        </table>
+     </div>
+     <div>
+         <div class="snapshot-label">Top Losers</div>
+-        <div class="snapshot-mover" id="home-losers">TOL <span style="color:var(--loss)">-3.8%</span><br>SWIS <span style="color:var(--loss)">-2.5%</span><br>MBP <span style="color:var(--loss)">-1.9%</span></div>
++        <table style="width: 100%; text-align: left; border-collapse: collapse; color: #FBF7F0; font-size: 0.9rem;">
++            <thead>
++                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1); color: #C8962E; font-size: 0.75rem; text-transform: uppercase;">
++                    <th style="padding-bottom: 0.3rem; font-weight: 600;">Ticker</th>
++                    <th style="padding-bottom: 0.3rem; font-weight: 600; text-align: right;">Change</th>
++                </tr>
++            </thead>
++            <tbody>
++                <tr>
++                    <td style="padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">TOL</td>
++                    <td style="padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); text-align: right; color: var(--loss);">-3.8%</td>
++                </tr>
++                <tr>
++                    <td style="padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">SWIS</td>
++                    <td style="padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); text-align: right; color: var(--loss);">-2.5%</td>
++                </tr>
++                <tr>
++                    <td style="padding: 0.3rem 0;">MBP</td>
++                    <td style="padding: 0.3rem 0; text-align: right; color: var(--loss);">-1.9%</td>
++                </tr>
++            </tbody>
++        </table>
+     </div>
+ </div>
+ <div class="snapshot-note" id="home-snapshot-date">End&#8209;of&#8209;day, Friday, 11th September 2026. For educational purposes only.</div>

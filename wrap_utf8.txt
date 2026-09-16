@@ -1,0 +1,114 @@
+﻿Daily DSE Wrap | Friday, 11th September 2026
+Record Block Supply Absorbed Without a Flinch as Indices Reach New Peaks
+The Dar es Salaam Stock Exchange closed the week with a session that demonstrated the remarkable depth of local institutional demand. Equity turnover nearly doubled to TZS 16.64 billion, driven by three major block trades ù a 4.9-million-share NMB block, a 600,000-share VODA block, and a 114,000-share TCC block. Yet the All-Share Index rose to a new post-split high of 4,658.31, and the Tanzania Share Index crossed 10,400. The message is clear: local capital is not just absorbing supply ù it is actively bidding for it. At the same time, the bond market attracted TZS 19.43 billion in institutional money, proving that both asset classes can draw liquidity simultaneously.
+
+1. Market Snapshot
+The session was firmly in theáHIGHáturnover regime at TZS 16.64 billion. The deal count rose modestly to 3,747, confirming that this was not just institutional activity but broad-based participation. The volume of 7.53 million shares was nearly double Thursday's level.
+The block trades tell the story:áNMB absorbed a 4.9-million-share block, VODA a 600,000-share block, and TCC a 114,000-share block. In total, more than 5.6 million shares changed hands in pre-arranged transactions. Yet the market closed higher across the board. This is what a market looks like when local institutions are the dominant buyers.
+Foreign selling faded further:áForeign selling fell to 5.27% of turnover (TZS 877 million) ù the lowest level in months. The foreign exit that dominated August is now a minor footnote. Local capital has fully taken control.
+The DSEI and TSI both hit new post-split highs.áThe DSEI closed at 4,658.31, up 35 points, while the TSI broke through 10,400.36. Market capitalisation rose to TZS 40.61 trillion, a new record.
+
+2. Top Movers
+Gainers: CRDB (+2.1%), TCC (+1.4%), KCB (+1.0%), NICO (+1.0%), TCCL (+0.8%).
+Losers: TOL (û3.8%), SWIS (û2.5%), MBP (û1.9%), PAL (û1.6%), MCB (û1.3%).
+CRDBáwas the standout performer among the large caps, rising 2.1% to 2,900 ù a new post-split high. The stock touched 2,980 intraday before settling, and the order book shows 328,402 bids versus just 94,781 offers ù a ratio of 3.5 to 1. Demand is firmly in control.
+TCCácontinued its steady climb, rising 1.4% to 13,440 after absorbing a 114,000-share block trade. The stock is accumulating into its expected ex-dividend window.
+TOLáwas the session's worst performer, falling 3.8% to 1,760. The industrial gas company has now given back most of its recent speculative gains. This is a reminder that not every rally is sustainable.
+VODAáclosed flat at 1,110 despite absorbing a 600,000-share block trade. The order book shows 44,794 bids versus just 9,911 offers ù a ratio of 4.5 to 1. Supply is extremely thin.
+NMBáclosed flat at 2,190 after absorbing a 4.9-million-share block. The order book shows 227,640 bids versus 346,237 offers ù a ratio of 0.66, meaning offers exceed bids for the first time in weeks. The post-split rally may be losing momentum.
+
+3. In Focus: Record Block Absorption and the 5% Daily Price Band
+Friday's session provided a textbook example of how institutional block trades work in a deep, locally-driven market. Three major blocks changed hands:
+NMB:á4,904,282 shares
+VODA:á600,000 shares
+TCC:á114,000 shares
+In total, more than 5.6 million shares ù worth approximately TZS 15 billion ù were transferred in pre-arranged transactions. Yet the market closed higher. The DSEI rose 35 points. The TSI crossed 10,400.
+What does this mean for everyday investors?
+Block trades are negotiated directly between institutions, not through the normal order book. They don't reflect retail demand. But they do signal institutional confidence. When local institutions step forward to absorb millions of shares without demanding a discount, it tells you they believe the stock is worth buying at current prices.
+The most remarkable aspect of Friday's session was the price action. Despite absorbing 5.6 million shares in blocks, the market did not decline. CRDB rose 2.1%. TCC rose 1.4%. NMB and VODA closed flat. This is what a market looks like when the buyer base is deep and confident.
+For the daily price band, Friday's closing prices determine Monday's limits. Because CRDB closed at 2,900, it cannot trade on Monday, 14 September, outside a band of ▒5% around that level:
+Upper limit:á2,900 ╫ 1.05 =á3,045.00
+Lower limit:á2,900 ╫ 0.95 =á2,755.00
+Based on Friday's closing prices, here are the allowed trading ranges for Monday, 14 September 2026:
+╣ DCB and MCB trade under wider 15% bands due to their sub-TZS 1,000 price levels.
+Before placing any order, checking the previous day's close and calculating the allowed band takes only a moment. It ensures your order is executable from the second you place it, and it prevents the frustration of setting a price the market simply cannot reach that day.
+For a complete guide to interpreting market data, read our articleáUnderstanding Market Data.
+
+4. Bond Market: Two-Way Liquidity in Action
+Government bond turnover rebounded to TZS 19.43 billion on Friday, up 151.7% from Thursday's TZS 7.72 billion. The dominant trades were:
+20-year 12.25% bond (Jul 2026):áTZS 15.96 billion at 105.00% to 112.65%, yielding 11.04% to 11.87%
+25-year 13.25% bond (Feb 2026):áTZS 2.22 billion at 126.997% to 137.4337%, yielding 9.50% to 10.40%
+25-year 15.00% bond:áTZS 0.60 billion at 138.3874%, yielding approximately 10.4%
+The most striking development is that both the equity and bond markets attracted significant institutional money on the same day. Equity turnover reached TZS 16.64 billion, while bond turnover reached TZS 19.43 billion. This is not a one-way rotation; it is a two-way liquidity environment where institutions are deploying capital across both asset classes.
+What does this mean for everyday investors?
+The window for double-digit tax-free bond yields remains open. The 20-year 12.25% bond still yields 11.04% to 11.87%, and the 25-year 13.25% bond yields 9.50% to 10.40%. These are attractive returns for those seeking predictable income.
+But the equity market is also offering compelling opportunities. CRDB closed at 2,900 with a 3.5x bid/offer ratio. VODA closed at 1,110 with a 4.5x bid/offer ratio. These are deep, liquid counters with strong institutional demand.
+The lesson for everyday investors is that you don't have to choose between bonds and equities. A balanced approach ù some capital in tax-free bonds for stability, some in quality equities for growth ù can work well in this environment.
+
+5. Strategic Outlook: What to Anticipate
+Near-Term (Mid-September):
+CRDBáclosed at 2,900, a new post-split high, with a 3.5x bid/offer ratio. The stock touched 2,980 intraday; a pullback to 2,840û2,880 would represent an opportunity for patient buyers.
+NMBáclosed flat at 2,190 after absorbing a 4.9-million-share block. The order book has flipped ù offers now exceed bids. The ex-dividend date for the TZS 61.015 per share dividend remains pending.
+VODAáclosed at 1,110 with a 4.5x bid/offer ratio. The expected FY2025 dividend announcement remains the key catalyst.
+TCCácontinues to rally into its ex-dividend window. The stock closed at 13,440 and is approaching its 5% upper limit.
+TOLáfell 3.8% ù the speculative surge has fully reversed. Avoid chasing.
+Medium-Term (Q3 2026):
+The bond-to-equity rotation is not a one-way street. Institutions are active in both markets. The key signal to watch is whether bond turnover contracts below TZS 10 billion for two consecutive sessions while equity turnover remains above TZS 10 billion.
+The Bank of Tanzania's monetary policy stance remains supportive. Any rate cuts would further compress bond yields and support equity valuations.
+Long-Term:
+The events of the past nine weeks ù the NMB share split, the CRDB block trades, the bond yield compression, the foreign flow reversal, and now the record block absorption ù all point in the same direction: the DSE has entered a new era. Local capital is firmly in control, institutional participation is growing, and the market is demonstrating depth and resilience that would have been unthinkable a year ago. For the patient, long-term investor, this is a market that rewards discipline, education, and the willingness to let compounding work.
+
+6. Professional Approach: How to Use This Intelligence
+Combine the Daily Wrap with our education series.áIf the block-trade or price-band concepts are new to you, readáStocks, Bonds, and ETFsáandáUnderstanding Market Data.
+Understand block trades.áWhen institutions negotiate large transactions, it doesn't mean you should chase the stock. It means institutional confidence exists at that price. Use it as a reference point, not a signal to buy at any cost.
+Respect the daily price bands.áThey are designed to keep trading orderly and prevent panic-driven moves. Always calculate the allowed range before placing an order.
+Watch both markets.áThe bond market and equity market can attract liquidity simultaneously. A balanced approach across both asset classes can work well.
+Don't chase volatile counters.áTOL's 3.8% drop after its speculative surge is a reminder that not every rally is sustainable. The patient investor waits for stable prices and clear entry points.
+Think in years, not days.áDaily rallies and pullbacks are part of normal market behaviour. The steady, compounding growth of well-managed companies over many years is what builds real wealth.
+Remember that all investments carry risk.áNever invest money you cannot afford to lose, and always do your own research.
+
+7. Considerations for a Multi-Year Framework
+Friday's session ù with TZS 16.64 billion in equity turnover, TZS 19.43 billion in bond turnover, and 5.6 million shares absorbed in block trades without a price decline ù is the clearest demonstration yet that the DSE has matured into a deep, resilient, locally-driven market. Foreign selling was just 5.27% of turnover. Local institutions absorbed every block. Both the DSEI and TSI closed at new post-split highs. For the multi-year investor, the message is clear: this is a market that rewards patience, education, and the willingness to adapt. The opportunities are there ù in CRDB's steady accumulation, in VODA's thin supply, in the 11% government bond yield that may not last ù but they require discipline to capture. The crowd chases TOL's speculative surge and panics at its reversal; the wise investor plants limit orders, respects the price bands, and lets the market's natural rhythm do the heavy lifting.
+
+For general informational and educational purposes only; not financial, legal, or tax advice. All investment decisions are solely your responsibility. Capital is at risk, and past performance does not guarantee future results. Amana Capital East Africa Limited registration under CMSA, Tanzania is pending. Registration does not imply CMSA endorsement.
+
+
+---
+
+Metric | Thursday 10 Sep | Friday 11 Sep | Change
+DSEI | 4,623.20 | 4,658.31 | +35.11 pts (+0.8%)
+TSI | 10,335.82 | 10,400.36 | +64.54 pts
+Equity Turnover | TZS 8.33 bn | TZS 16.64 bn | +99.7%
+Shares Traded | 3,949,330 | 7,528,814 | +90.6%
+Deals | 3,601 | 3,747 | +4.1%
+Bond Turnover | TZS 7.72 bn | TZS 19.43 bn | +151.7%
+ETF Turnover | TZS 444.53 mn | TZS 129.67 mn | û70.8%
+Foreign Buying | 0.69% | 0.05% | û0.64 pts
+Foreign Selling | 7.69% | 5.27% | û2.42 pts
+Ticker | Closing Price (TZS) | Change | Volume
+TCC | 13,440 | +1.4% | 115,430
+CRDB | 2,900 | +2.1% | 626,636
+KCB | 2,120 | +1.0% | 33,413
+NICO | 3,870 | +1.0% | 17,197
+TCCL | 3,970 | +0.8% | 1,255
+TBL | 10,000 | +0.2% | 5,278
+DSE | 6,390 | +0.2% | 594
+VODA | 1,110 | 0.0% | 631,323
+NMB | 2,190 | 0.0% | 5,726,307
+DCB | 445 | 0.0% | 21,411
+MCB | 390 | û1.3% | 82,879
+PAL | 305 | û1.6% | 6,642
+MBP | 2,030 | û1.9% | 4,884
+SWIS | 2,720 | û2.5% | 601
+TOL | 1,760 | û3.8% | 18,907
+Counter | Friday Close (TZS) | Monday Upper Limit (TZS) | Monday Lower Limit (TZS)
+CRDB | 2,900 | 3,045.00 | 2,755.00
+NMB | 2,190 | 2,299.50 | 2,080.50
+VODA | 1,110 | 1,165.50 | 1,054.50
+TBL | 10,000 | 10,500.00 | 9,500.00
+TCC | 13,440 | 14,112.00 | 12,768.00
+KCB | 2,120 | 2,226.00 | 2,014.00
+TPCC | 5,770 | 6,058.50 | 5,481.50
+AFRIPRISE | 605 | 635.25 | 574.75
+DCB╣ | 445 | 511.75 | 378.25
+MCB╣ | 390 | 448.50 | 331.50

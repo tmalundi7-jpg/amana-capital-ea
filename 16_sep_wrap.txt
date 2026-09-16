@@ -1,0 +1,109 @@
+Daily DSE Wrap | Wednesday, 16th September 2026
+Order Books Tell Divergent Stories as Foreign Flows Hit Record Two-Way Levels
+The Dar es Salaam Stock Exchange delivered a session of remarkable contrasts on Wednesday. Equity turnover moderated to TZS 10.18 billion, the indices pulled back from recent highs, yet foreign participation surged to levels not seen in months — with buying at 51.39% and selling at 61.90% of turnover. Behind these headline numbers lies a market where different stocks are telling very different stories through their order books. Some are offer-heavy, suggesting further consolidation; others are balanced, suggesting stability. Understanding these divergences is essential for any investor navigating this market.
+
+1. Market Snapshot
+The session remained in the HIGH turnover regime at TZS 10.18 billion, though this represents a 40% decline from Tuesday's block-heavy TZS 16.86 billion. The deal count held steady at 3,240, confirming that everyday investors remained engaged.
+Foreign flows hit unprecedented two-way levels: Foreign buying jumped to 51.39% of turnover (TZS 5.23 billion), while foreign selling rose to 61.90% (TZS 6.30 billion). This is the highest level of two-way foreign participation in recent memory. The net outflow was approximately TZS 1.07 billion. This pattern — heavy buying alongside heavy selling — indicates active portfolio rebalancing rather than a one-way exit. Foreign institutions are repositioning across counters, not abandoning the market.
+The DSEI and TSI both pulled back from recent highs. The DSEI closed at 4,663.24, down 32.87 points, while the TSI slipped to 10,380.73. This is a normal consolidation after several sessions of gains.
+Bond market activity remained elevated at TZS 17.83 billion, with the 10-year 11.25% bond trading TZS 12.41 billion at yields of 10.67% to 10.77% tax-free.
+
+2. Top Movers
+Gainers: VODA (+3.5%), PAL (+3.3%), MCB (+2.6%), DCB (+2.3%), TCC (+0.7%).
+Losers: TCCL (–5.1%), TOL (–4.2%), NMB (–1.4%), AFRIPRISE (–0.8%), CRDB (–0.7%).
+VODA was the standout performer among the large caps, rising 3.5% to 1,190 after absorbing a 1.55-million-share block trade. The order book is now balanced: 5,634 bids versus 5,247 offers. Supply and demand are in equilibrium.
+TCCL fell 5.1% to 3,700, giving back recent gains. TOL dropped 4.2% to 1,820, continuing its volatile pattern.
+CRDB eased 0.7% to 2,920. The order book is extremely offer-heavy: 588,938 offers versus just 30,868 bids — a ratio of 19 to 1. This suggests the market is still digesting supply from recent block trades.
+NMB fell 1.4% to 2,150 after absorbing a 900,000-share block trade. The order book is even more offer-heavy: 450,110 offers versus 14,196 bids — a ratio of 32 to 1. The ex-dividend date for the TZS 61.015 per share dividend remains pending.
+
+3. In Focus: Reading Order Books and the 5% Daily Price Band
+Wednesday's session provided a powerful lesson in reading order books — the lists of outstanding buy and sell orders that sit beneath every stock's price.
+Three large-cap stocks absorbed significant block trades on Wednesday. But their order books told very different stories at the close:
+What does this mean for everyday investors?
+When a stock closes with a balanced order book, it means buyers and sellers are roughly equal in number. The price is likely to be stable in the near term.
+When a stock closes with offers far exceeding bids, it means there is more supply than demand. Sellers are competing to exit, and buyers can afford to be patient. This suggests the stock may continue to drift lower until the excess supply is absorbed.
+The lesson is simple: pay attention to the order book, not just the price. A stock that falls on heavy volume with a balanced book may be near a bottom. A stock that falls with an offer-heavy book may have further to go.
+For the daily price band, Wednesday's closing prices determine Thursday's limits. Because CRDB closed at 2,920, it cannot trade on Thursday, 17 September, outside a band of ±5% around that level:
+Upper limit: 2,920 × 1.05 = 3,066.00
+Lower limit: 2,920 × 0.95 = 2,774.00
+Based on Wednesday's closing prices, here are the allowed trading ranges for Thursday, 17 September 2026:
+¹ DCB and MCB trade under wider 15% bands due to their sub-TZS 1,000 price levels.
+Before placing any order, checking the previous day's close and calculating the allowed band takes only a moment. It ensures your order is executable from the second you place it, and it prevents the frustration of setting a price the market simply cannot reach that day.
+For a complete guide to interpreting market data, read our article Understanding Market Data.
+
+4. Bond Market: Institutions Still Locking in Duration
+Government bond turnover was TZS 17.83 billion on Wednesday, down 33% from Tuesday's TZS 26.61 billion but still elevated. The most liquid instruments were:
+10-year 11.25% bond (Jul 2026): TZS 12.41 billion at 106.54% to 107.17%, yielding 10.67% to 10.77%
+10-year 11.44% bond (Sep 2021): TZS 5.00 billion at 114.58%, yielding 9.11%
+20-year 15.49% bond (Sep 2020): TZS 0.20 billion at 100.00% to 137.23%, yielding 11.02% to 15.68%
+The 10-year 11.44% bond traded at 9.11% — the tightest yield on record for that maturity. The 10-year 11.25% benchmark, which is the current issue, traded at yields of 10.67% to 10.77% tax-free.
+What does this mean for everyday investors?
+The bond market continues to attract significant institutional demand. Pension funds and insurance companies are locking in long-dated, tax-free yields before they compress further. The 9.11% yield on the 10-year bond is the lowest on record, confirming that the era of double-digit yields on shorter maturities is ending.
+However, the 20-year 15.49% bond still offers over 11% tax-free at the higher end of its range. For those seeking predictable, long-term income, this remains an attractive option.
+The simultaneous strength of both the bond and equity markets tells us that this is not a one-way rotation. Institutions are deploying capital across both asset classes. A balanced approach — some capital in bonds for stability, some in quality equities for growth — can work well in this environment.
+
+5. Strategic Outlook: What to Anticipate
+Near-Term (Mid-September):
+CRDB closed at 2,920 with an extremely offer-heavy order book. The 588,938-share offer wall will likely cap any rally in the near term. A pullback to 2,870 or below would represent a natural pause.
+VODA closed at 1,190 with a balanced order book after absorbing a 1.55-million-share block. The stock appears to have found equilibrium. The expected FY2025 dividend announcement remains the key catalyst.
+NMB closed at 2,150 with the most offer-heavy book on the board (32:1 offers to bids). The ex-dividend date for the TZS 61.015 per share dividend remains pending. Caution is warranted.
+TCC eased 0.7% to 13,450. The stock continues to trade in its pre-dividend window.
+TCCL fell 5.1% to 3,700. The stock remains volatile; avoid chasing.
+Medium-Term (Q3 2026):
+Foreign participation hit record two-way levels on Wednesday. If this continues, it could provide additional liquidity and support for the market.
+The bond market continues to attract TZS 17-26 billion in duration demand at 9% to 11% tax-free. Watch for a contraction in bond turnover below TZS 10 billion for two consecutive sessions while equity turnover remains elevated — that would signal a clearer rotation.
+Long-Term:
+The events of the past several weeks — the NMB share split, the CRDB block trades, the bond yield compression, the foreign flow reversal, and now the record two-way foreign participation — all point in the same direction: the DSE has entered a new era. Local capital is firmly in control, institutional participation is growing, and the market is demonstrating depth and resilience that would have been unthinkable a year ago. For the patient, long-term investor, this is a market that rewards discipline, education, and the willingness to let compounding work.
+
+6. Professional Approach: How to Use This Intelligence
+Combine the Daily Wrap with our education series. If the order-book or price-band concepts are new to you, read Stocks, Bonds, and ETFs and Understanding Market Data.
+Read the order book, not just the price. A stock that closes with offers exceeding bids by 19x is very different from one that closes with a balanced book. The order book tells you what the price alone cannot.
+Respect the daily price bands. They are designed to keep trading orderly and prevent panic-driven moves. Always calculate the allowed range before placing an order.
+Watch foreign flows. The record two-way participation on Wednesday is a significant development. If it continues, it could provide additional liquidity and support for the market.
+Don't chase volatile counters. TCCL's 5.1% drop after recent gains is a reminder that speculative moves can reverse quickly.
+Think in years, not days. Daily rallies and pullbacks are part of normal market behaviour. The steady, compounding growth of well-managed companies over many years is what builds real wealth.
+Remember that all investments carry risk. Never invest money you cannot afford to lose, and always do your own research.
+
+7. Considerations for a Multi-Year Framework
+Wednesday's session — with foreign buying at 51.39% and selling at 61.90% of turnover, the DSEI pulling back from recent highs, and order books telling divergent stories across CRDB, VODA, and NMB — is a reminder that markets are not uniform. Different stocks tell different stories, and the order book reveals what the price alone cannot. The record two-way foreign participation suggests that international institutions are actively rebalancing their Tanzanian portfolios, not abandoning the market. Meanwhile, the bond market continues to attract TZS 17.83 billion in duration demand at 9% to 11% tax-free. Both asset classes are attracting capital. For the multi-year investor, the message is clear: this is a market that rewards patience, education, and the willingness to adapt. The opportunities are there — in VODA's balanced book, in CRDB's offer-heavy pause, in the 10.67% government bond yield that may not last — but they require discipline to capture. The crowd chases prices; the wise investor reads order books, respects the price bands, and lets the market's natural rhythm do the heavy lifting.
+
+For general informational and educational purposes only; not financial, legal, or tax advice. All investment decisions are solely your responsibility. Capital is at risk, and past performance does not guarantee future results. Amana Capital East Africa Limited registration under CMSA, Tanzania is pending. Registration does not imply CMSA endorsement.
+
+Metric	Tuesday 15 Sep	Wednesday 16 Sep	Change
+DSEI	4,696.11	4,663.24	–32.87 pts (–0.7%)
+TSI	10,438.46	10,380.73	–57.73 pts
+Equity Turnover	TZS 16.86 bn	TZS 10.18 bn	–39.6%
+Shares Traded	7,954,485	4,589,526	–42.3%
+Deals	3,516	3,240	–7.9%
+Bond Turnover	TZS 26.61 bn	TZS 17.83 bn	–33.0%
+ETF Turnover	TZS 310.43 mn	TZS 373.95 mn	+20.5%
+Foreign Buying	11.82%	51.39%	+39.57 pts
+Foreign Selling	15.36%	61.90%	+46.54 pts
+Ticker	Closing Price (TZS)	Change	Volume
+PAL	315	+3.3%	1,975
+VODA	1,190	+3.5%	1,886,813
+MCB	395	+2.6%	29,526
+DCB	445	+2.3%	21,964
+TCC	13,450	+0.7%	982
+AFRIPRISE	600	–0.8%	394,056
+CRDB	2,920	–0.7%	306,119
+NMB	2,150	–1.4%	1,560,725
+TOL	1,820	–4.2%	4,053
+TCCL	3,700	–5.1%	7,619
+TPCC	5,710	–0.7%	3,384
+TBL	9,970	0.0%	307,875
+Counter	Bids	Offers	Bid/Offer Ratio	Interpretation
+VODA	5,634	5,247	1.07x	Balanced — supply and demand in equilibrium
+CRDB	30,868	588,938	0.05x	Offers exceed bids by 19x
+NMB	14,196	450,110	0.03x	Offers exceed bids by 32x
+Counter	Wednesday Close (TZS)	Thursday Upper Limit (TZS)	Thursday Lower Limit (TZS)
+CRDB	2,920	3,066.00	2,774.00
+NMB	2,150	2,257.50	2,042.50
+VODA	1,190	1,249.50	1,130.50
+TBL	9,970	10,468.50	9,471.50
+TCC	13,450	14,122.50	12,777.50
+KCB	2,180	2,289.00	2,071.00
+TPCC	5,710	5,995.50	5,424.50
+AFRIPRISE	600	630.00	570.00
+DCB¹	445	511.75	378.25
+MCB¹	395	454.25	375.25
