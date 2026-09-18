@@ -74,3 +74,9 @@ The daily process for updating the DSE market data follows this strict flow:
 
 ## License
 No license is currently specified. All rights reserved by Amana Capital East Africa.
+
+## UI & Design Guardrails (Current Prices / Currency Page)
+* **LOCKED DESIGN**: The Currency/Current Prices page text colour and cream background combination is strictly LOCKED.
+* **VISIBILITY**: All figures and data must always remain visible with the correct contrast combination.
+* **LAYOUT & SCHEME**: The layout, colour scheme, and design language across the site are LOCKED and must not be changed unless explicitly requested by the user.
+* **FUTURE UPDATES**: Future content-only updates must inherit these settings automatically without overriding CSS or HTML structures.
