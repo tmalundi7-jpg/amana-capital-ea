@@ -80,3 +80,8 @@ No license is currently specified. All rights reserved by Amana Capital East Afr
 * **VISIBILITY**: All figures and data must always remain visible with the correct contrast combination.
 * **LAYOUT & SCHEME**: The layout, colour scheme, and design language across the site are LOCKED and must not be changed unless explicitly requested by the user.
 * **FUTURE UPDATES**: Future content-only updates must inherit these settings automatically without overriding CSS or HTML structures.
+
+## UI & Design Guardrails (LOCKED)
+- **Currency Page Strict Formatting:** The Currency page format, layout, structure, styling, and colour scheme are LOCKED exactly as they are on the live site right now.
+- **Colour Contrast:** The text colour and cream background combination is LOCKED. The figures must always remain visible (correct contrast combination).
+- **Updates:** Future content updates must update ONLY the data values and inherit this exact format automatically. Any design or format change requires explicit request from the site owner.
