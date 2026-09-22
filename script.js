@@ -826,7 +826,7 @@ window.initDSEHeatmap = function() {
         { symbol: 'VODA', marketCap: 1200, change: 4.8 },
         { symbol: 'TPCC', marketCap: 900, change: -0.5 },
         { symbol: 'NICO', marketCap: 700, change: -1.4 },
-        { symbol: 'KCB', marketCap: 380, change: 0.0 },
+        { symbol: 'KCB', marketCap: 380, change: 0.5 },
         { symbol: 'JHL', marketCap: 320, change: 0.0 },
         { symbol: 'TCCL', marketCap: 300, change: -5.1 },
         { symbol: 'DCB', marketCap: 180, change: 0.0 },
@@ -835,7 +835,7 @@ window.initDSEHeatmap = function() {
         { symbol: 'SWIS', marketCap: 100, change: 0.0 },
         { symbol: 'AFRIPRISE', marketCap: 80, change: 5.4 },
         { symbol: 'MCB', marketCap: 50, change: 1.3 },
-        { symbol: 'PAL', marketCap: 40, change: 0.0 },
+        { symbol: 'PAL', marketCap: 40, change: -1.6 },
         { symbol: 'MUCOBA', marketCap: 20, change: 0.0 }
     ];
 
