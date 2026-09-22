@@ -1,7 +1,6 @@
 ﻿import mammoth
 import re
 from bs4 import BeautifulSoup
-import os
 
 docx_path = r'C:\Users\tmalu\Documents\Daily DSE Wrap 18 September 2026.docx'
 
@@ -11,32 +10,47 @@ with open(docx_path, 'rb') as docx_file:
 
 soup = BeautifulSoup(html, 'html.parser')
 
-paragraphs = soup.find_all('p')
-title_text = paragraphs[0].get_text(strip=True) if len(paragraphs) > 0 else "Daily DSE Wrap | Friday, 18th September 2026"
-subtitle_text = paragraphs[1].get_text(strip=True) if len(paragraphs) > 1 else ""
-excerpt_text = paragraphs[2].get_text(strip=True) if len(paragraphs) > 2 else ""
-if len(excerpt_text) > 200: excerpt_text = excerpt_text[:197] + "..."
+# Get excerpt (first paragraph that's long enough)
+excerpt = ""
+for p in soup.find_all('p'):
+    t = p.get_text(strip=True)
+    if len(t) > 50 and "Friday 18th September 2026" not in t:
+        excerpt = t
+        break
 
-# Remove title and subtitle from soup
-if len(paragraphs) > 0: paragraphs[0].decompose()
-if len(paragraphs) > 1: paragraphs[1].decompose()
+if len(excerpt) > 200:
+    excerpt = excerpt[:197] + "..."
+print(f"Excerpt: {excerpt}")
 
 # Fix headers
 for h2 in soup.find_all('h2'):
     h2['style'] = "color: var(--navy); margin-top: 2.5rem; margin-bottom: 1.5rem;"
+    
 for h3 in soup.find_all('h3'):
     h3['style'] = "color: var(--navy); margin-top: 0; font-size: 1.4rem; margin-bottom: 1.5rem;"
+
+# Remove h1
+for h1 in soup.find_all('h1'):
+    h1.decompose()
+
+# Remove the date paragraph
+for p in soup.find_all('p'):
+    if 'Friday 18th September 2026' in p.get_text():
+        p.decompose()
 
 # Fix Tables
 for table in soup.find_all('table'):
     table['class'] = "data-table"
     table['style'] = "width: 100%; border-collapse: collapse;"
+    # wrap in table-responsive
     wrapper = soup.new_tag('div', **{'class': 'table-responsive', 'style': 'overflow-x: auto; margin-bottom: 1rem;'})
     table.insert_before(wrapper)
     wrapper.append(table)
     
+    # Process rows
     for i, tr in enumerate(table.find_all('tr')):
         if i == 0:
+            # Header
             tr['style'] = "background-color: var(--navy); color: var(--white); text-align: left;"
             for th in tr.find_all(['td', 'th']):
                 th.name = 'th'
@@ -46,24 +60,31 @@ for table in soup.find_all('table'):
                 tr['style'] = "background-color: var(--cream);"
             for j, td in enumerate(tr.find_all('td')):
                 style = "padding: 1rem;"
+                # make first column bold
                 if j == 0:
                     style += " font-weight: 600;"
+                    # wrap content in strong
                     inner = td.get_text()
                     td.string = ''
                     s = soup.new_tag('strong', style="color: #000;")
                     s.string = inner
                     td.append(s)
                 
+                # Check for + / - for coloring
                 txt = td.get_text()
-                if '+' in txt: style += " color: var(--gain); font-weight: 600;"
-                elif '-' in txt or '−' in txt or '' in txt: style += " color: var(--loss); font-weight: 600;"
+                if '+' in txt:
+                    style += " color: var(--gain); font-weight: 600;"
+                elif '-' in txt or '−' in txt or '' in txt:
+                    style += " color: var(--loss); font-weight: 600;"
                     
                 td['style'] = style
 
 # Reformat section 7 block
 h3_section7 = None
 for h3 in soup.find_all('h3'):
-    if '7. Considerations for a Multi-Year Framework' in h3.get_text(): h3_section7 = h3; break
+    if '7. Considerations for a Multi-Year Framework' in h3.get_text():
+        h3_section7 = h3
+        break
 
 if h3_section7:
     div = soup.new_tag('div', style="background: var(--cream); border-left: 4px solid var(--gold); padding: 2rem; border-radius: 4px; margin-top: 3rem;")
@@ -84,38 +105,23 @@ if h3_section7:
         div.append(curr)
         curr = nxt
 
-# Read 17th html
+body_html = "".join([str(tag) for tag in soup.contents])
+
+# Open 17th html
 with open('dse-wrap-2026-09-17.html', 'r', encoding='utf-8') as f:
     template_soup = BeautifulSoup(f.read(), 'html.parser')
 
+# Get card
 h1 = template_soup.find('h1')
 card = h1.parent.parent
 
-h1.string = title_text
+# Change H1
+h1.string = "Daily DSE Wrap | Friday, 18th September 2026"
+
+# Change Date
 date_p = h1.find_next_sibling('p')
-date_p.string = subtitle_text
-
-# Delete all children of card EXCEPT dse-header-box and article-disclaimer
-to_delete = []
-for c in card.children:
-    if c.name:
-        classes = c.get('class', [])
-        if not classes: classes = []
-        if 'dse-header-box' not in classes and 'article-disclaimer' not in classes:
-            to_delete.append(c)
-
-for d in to_delete:
-    d.decompose()
-
-# Insert the parsed content right after the dse-header-box
-header_box = card.find('div', class_='dse-header-box')
-for elem in reversed(soup.contents):
-    header_box.insert_after(elem)
-
-with open('dse-wrap-2026-09-18.html', 'w', encoding='utf-8') as f:
-    f.write(str(template_soup))
-
-print(f"EXCERPT={excerpt_text}")
-print(f"TITLE={title_text}")
-print("Created dse-wrap-2026-09-18.html perfectly")
-
+# Update the title of the wrap in the date
+# wait, what was the title for 18th? 
+# "The Dar es Salaam Stock Exchange delivered a session of stark contrasts on Friday..."
+# Wait, let's just make the date_p text empty or extract the first bold line from the docx?
+# Let's check the docx title.

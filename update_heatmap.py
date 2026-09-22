@@ -1,35 +1,39 @@
-import json
-import re
+﻿import re
 
-# Load prices
-with open('extracted_current_prices_17_aug_2026.json', 'r', encoding='utf-8') as f:
-    prices = {p['ticker']: p for p in json.load(f)['prices']}
+# From docx Top Movers:
+heatmap_data = [
+    "{ symbol: 'NMB', marketCap: 2675, change: 2.9 },",
+    "{ symbol: 'TBL', marketCap: 3200, change: -0.7 },",
+    "{ symbol: 'CRDB', marketCap: 1515, change: 0.0 },",
+    "{ symbol: 'VODA', marketCap: 1200, change: 3.3 },",
+    "{ symbol: 'TPCC', marketCap: 900, change: -0.2 },",
+    "{ symbol: 'NICO', marketCap: 700, change: 0.8 },",
+    "{ symbol: 'KCB', marketCap: 380, change: 0.0 },",
+    "{ symbol: 'JHL', marketCap: 320, change: 0.6 },",
+    "{ symbol: 'TCCL', marketCap: 300, change: 0.3 },",
+    "{ symbol: 'DCB', marketCap: 180, change: 0.0 },",
+    "{ symbol: 'TICL', marketCap: 150, change: 0.0 },",
+    "{ symbol: 'TOL', marketCap: 120, change: -1.1 },",
+    "{ symbol: 'SWIS', marketCap: 100, change: -1.5 },",
+    "{ symbol: 'AFRIPRISE', marketCap: 80, change: 0.0 },",
+    "{ symbol: 'MCB', marketCap: 50, change: -3.8 },",
+    "{ symbol: 'PAL', marketCap: 40, change: 3.3 },",
+    "{ symbol: 'MUCOBA', marketCap: 20, change: 2.5 }",
+]
 
-for js_file in ['script.js', 'script.min.js']:
-    with open(js_file, 'r', encoding='utf-8') as f:
-        content = f.read()
+with open('script.js', 'r', encoding='utf-8') as f:
+    js_content = f.read()
 
-    # Find the data array in initDSEHeatmap
-    match = re.search(r'const data = \[(.*?)\];', content, re.DOTALL)
-    if match:
-        data_str = match.group(1)
-        # Parse the JS objects roughly
-        new_data_str = []
-        for line in data_str.split('\n'):
-            if '{' in line:
-                sym_m = re.search(r"symbol:\s*'([^']+)'", line)
-                if sym_m:
-                    sym = sym_m.group(1)
-                    if sym in prices:
-                        c_str = prices[sym].get('change_pct', '0%').replace('?', '-').replace('', '-').replace('%', '')
-                        try:
-                            new_change = float(c_str)
-                        except:
-                            new_change = 0.0
-                        line = re.sub(r'change:\s*[^}]+', f'change: {new_change} ', line)
-            new_data_str.append(line)
-        
-        new_content = content[:match.start(1)] + '\n'.join(new_data_str) + content[match.end(1):]
-        with open(js_file, 'w', encoding='utf-8') as f:
-            f.write(new_content)
-        print(f'Updated {js_file}')
+# Replace the data array inside initDSEHeatmap
+new_js = re.sub(r'const data = \[.*?\];', 'const data = [\n        ' + '\n        '.join(heatmap_data) + '\n    ];', js_content, flags=re.DOTALL)
+
+with open('script.js', 'w', encoding='utf-8') as f:
+    f.write(new_js)
+
+# Also update script.min.js
+with open('script.min.js', 'r', encoding='utf-8') as f:
+    min_js_content = f.read()
+
+new_min_js = re.sub(r'const [a-zA-Z0-9_]+=new Array\(\{symbol:"NMB".*?\}\];', 'const data=[' + ''.join(heatmap_data).replace(' ', '').replace(',\n', ',') + '];', min_js_content, flags=re.DOTALL)
+# It might be simpler to just copy script.js to script.min.js if there's no actual minification, but let's just do a basic replace or see if it matches.
+# Actually, the user says script.min.js needs updating. I will just replace the exact data string.
