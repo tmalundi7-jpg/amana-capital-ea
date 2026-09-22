@@ -827,13 +827,16 @@ window.initDSEHeatmap = function() {
         { symbol: 'TPCC', marketCap: 900, change: -0.2 },
         { symbol: 'NICO', marketCap: 700, change: 0.8 },
         { symbol: 'KCB', marketCap: 380, change: 0.0 },
-        { symbol: 'TCCL', marketCap: 120, change: 0.3 },
-        { symbol: 'TOL', marketCap: 85, change: -1.1 },
+        { symbol: 'JHL', marketCap: 320, change: 0.6 },
+        { symbol: 'TCCL', marketCap: 300, change: 0.3 },
+        { symbol: 'DCB', marketCap: 180, change: 0.0 },
+        { symbol: 'TICL', marketCap: 150, change: 0.0 },
+        { symbol: 'TOL', marketCap: 120, change: -1.1 },
         { symbol: 'SWIS', marketCap: 100, change: -1.5 },
-        { symbol: 'DCB', marketCap: 80, change: 0.0 },
-        { symbol: 'MBP', marketCap: 65, change: 1.0 },
-        { symbol: 'MCB', marketCap: 62, change: -3.8 },
-        { symbol: 'NMG', marketCap: 50, change: 0.0 }
+        { symbol: 'AFRIPRISE', marketCap: 80, change: 0.0 },
+        { symbol: 'MCB', marketCap: 50, change: -3.8 },
+        { symbol: 'PAL', marketCap: 40, change: 3.3 },
+        { symbol: 'MUCOBA', marketCap: 20, change: 2.5 }
     ];
 
     const totalCap = data.reduce((sum, item) => sum + item.marketCap, 0);
