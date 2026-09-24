@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;600;700&display=swap');
+
+@page {
+    size: 1080px 1080px;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #0B1D3A;
+    color: #FBF7F0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.slide {
+    width: 1080px;
+    height: 1080px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 60px 80px;
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle at 100% 0%, rgba(200,150,46,0.15) 0%, #0B1D3A 50%);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(200,150,46,0.3);
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+}
+
+.header-left {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #C8962E;
+    letter-spacing: 2px;
+}
+
+.header-right {
+    font-size: 20px;
+    color: #FBF7F0;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    font-weight: 600;
+    color: #FBF7F0;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.title span {
+    color: #C8962E;
+}
+
+.subtitle {
+    font-size: 32px;
+    color: #8A94A6;
+    font-weight: 400;
+    margin-bottom: 80px;
+    max-width: 800px;
+    line-height: 1.4;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.footer {
+    position: absolute;
+    bottom: 60px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #8A94A6;
+    border-top: 1px solid rgba(138,148,166,0.3);
+    padding-top: 20px;
+}
+
+.footer-logo {
+    color: #C8962E;
+    font-weight: 600;
+}
+
+/* Slide 1 specifics */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.stat-box {
+    background: rgba(30,58,95,0.4);
+    border: 1px solid rgba(200,150,46,0.2);
+    border-radius: 16px;
+    padding: 40px;
+}
+
+.stat-label {
+    font-size: 20px;
+    color: #C8962E;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.stat-value {
+    font-size: 56px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: #FBF7F0;
+    margin-bottom: 10px;
+}
+
+.stat-sub {
+    font-size: 18px;
+    color: #22C55E;
+    font-weight: 600;
+}
+
+/* Slide 2 specifics */
+.order-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.order-box {
+    background: #1E3A5F;
+    border-radius: 20px;
+    padding: 50px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border: 1px solid rgba(251,247,240,0.1);
+}
+
+.ticker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(251,247,240,0.1);
+    padding-bottom: 20px;
+}
+
+.ticker-name {
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.ticker-change {
+    font-size: 32px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 12px;
+}
+
+.change-green {
+    background: rgba(34,197,94,0.15);
+    color: #22C55E;
+}
+
+.change-neutral {
+    background: rgba(138,148,166,0.15);
+    color: #8A94A6;
+}
+
+.data-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    margin-bottom: 25px;
+    border-bottom: 1px dashed rgba(251,247,240,0.1);
+    padding-bottom: 10px;
+}
+
+.data-label {
+    color: #8A94A6;
+}
+
+.data-val {
+    font-weight: 600;
+}
+
+.highlight-val {
+    color: #C8962E;
+}
+
+/* Slide 3 specifics */
+.flows-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+}
+
+.movers-section {
+    background: rgba(30,58,95,0.3);
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #C8962E;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.mover-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.loss {
+    color: #EF4444;
+}
+
+.flows-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.flow-box {
+    background: #1E3A5F;
+    padding: 40px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 6px solid #C8962E;
+}
+
+.flow-label {
+    font-size: 24px;
+    color: #8A94A6;
+}
+
+.flow-value {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.insight-box {
+    background: rgba(200,150,46,0.1);
+    border: 1px solid rgba(200,150,46,0.3);
+    padding: 40px;
+    border-radius: 16px;
+    margin-top: 20px;
+}
+
+.insight-text {
+    font-size: 28px;
+    line-height: 1.5;
+    color: #FBF7F0;
+    font-weight: 400;
+}
+
+.insight-text strong {
+    color: #C8962E;
+}
+
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 -->
+<div class="slide">
+    <div class="header">
+        <div class="header-left">AMANA CAPITAL EAST AFRICA</div>
+        <div class="header-right">22 SEPTEMBER 2026</div>
+    </div>
+    
+    <div class="title">DAILY DSE WRAP<br><span>VODA HITS LIMIT-UP</span></div>
+    <div class="subtitle">The bond market explodes to TZS 33.59 billion while local capital aggressively hunts for yield and growth simultaneously.</div>
+    
+    <div class="content">
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-label">Equity Turnover</div>
+                <div class="stat-value">TZS 5.07B</div>
+                <div class="stat-sub">High Regime</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">DSEI</div>
+                <div class="stat-value">4,659.23</div>
+                <div class="stat-sub">+25 pts (New High)</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Bond Turnover</div>
+                <div class="stat-value">TZS 33.59B</div>
+                <div class="stat-sub">Massive Demand</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div>Not financial advice. Capital at risk. Registration Pending CMSA.</div>
+        <div class="footer-logo">www.amana-capital-ea.co.tz</div>
+    </div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide">
+    <div class="header">
+        <div class="header-left">AMANA CAPITAL EAST AFRICA</div>
+        <div class="header-right">ORDER BOOK ANALYSIS</div>
+    </div>
+    
+    <div class="title">THE ORDER BOOK <span>REVEALS ALL</span></div>
+    <div class="subtitle">Demand is quietly exceeding supply on key counters. Look beneath the surface of the closing prints.</div>
+    
+    <div class="content">
+        <div class="order-grid">
+            <div class="order-box">
+                <div class="ticker-header">
+                    <div class="ticker-name">VODA</div>
+                    <div class="ticker-change change-green">+4.8%</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Price</div>
+                    <div class="data-val highlight-val">1,320</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Status</div>
+                    <div class="data-val">Limit-Up</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Bids</div>
+                    <div class="data-val">23,119</div>
+                </div>
+                <div class="data-row" style="border:none;">
+                    <div class="data-label">Offers</div>
+                    <div class="data-val">24,814</div>
+                </div>
+            </div>
+            
+            <div class="order-box">
+                <div class="ticker-header">
+                    <div class="ticker-name">CRDB</div>
+                    <div class="ticker-change change-neutral">FLAT</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Price</div>
+                    <div class="data-val">2,810</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Volume</div>
+                    <div class="data-val">1,273,724</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Bids</div>
+                    <div class="data-val highlight-val">192,156</div>
+                </div>
+                <div class="data-row" style="border:none;">
+                    <div class="data-label">Offers</div>
+                    <div class="data-val highlight-val">49,819</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div>Not financial advice. Capital at risk. Registration Pending CMSA.</div>
+        <div class="footer-logo">www.amana-capital-ea.co.tz</div>
+    </div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide">
+    <div class="header">
+        <div class="header-left">AMANA CAPITAL EAST AFRICA</div>
+        <div class="header-right">CAPITAL FLOWS</div>
+    </div>
+    
+    <div class="title">FOREIGN EXITS. <span>LOCAL BUYERS.</span></div>
+    
+    <div class="content">
+        <div class="flows-grid">
+            <div class="movers-section">
+                <div class="section-title">TOP MOVERS</div>
+                <div class="mover-row">
+                    <div>AFRIPRISE</div>
+                    <div class="stat-sub">+5.4%</div>
+                </div>
+                <div class="mover-row">
+                    <div>VODA</div>
+                    <div class="stat-sub">+4.8%</div>
+                </div>
+                <div class="mover-row" style="margin-top: 50px;">
+                    <div>TCCL</div>
+                    <div class="loss">-5.1%</div>
+                </div>
+                <div class="mover-row">
+                    <div>NICO</div>
+                    <div class="loss">-1.4%</div>
+                </div>
+            </div>
+            
+            <div class="flows-section">
+                <div class="flow-box">
+                    <div class="flow-label">Foreign Selling</div>
+                    <div class="flow-value">57.58%</div>
+                </div>
+                <div class="flow-box" style="border-left-color:#22C55E;">
+                    <div class="flow-label">Local Buying</div>
+                    <div class="flow-value" style="color:#22C55E;">99.88%</div>
+                </div>
+                
+                <div class="insight-box">
+                    <div class="insight-text">
+                        <strong>Insight:</strong> Local capital stepped in to absorb 99.88% of all supply, confirming <strong>domestic institutions are in full control</strong> of the floor.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div>Not financial advice. Capital at risk. Registration Pending CMSA.</div>
+        <div class="footer-logo">www.amana-capital-ea.co.tz</div>
+    </div>
+</div>
+
+</body>
+</html>
