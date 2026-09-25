@@ -1,58 +1,9 @@
-<!DOCTYPE html>
+import re
 
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Daily DSE Wrap | Friday, 25th September 2026 | Amana Capital East Africa</title>
-<meta content="Read our daily Dar es Salaam Stock Exchange (DSE) wrap for Friday, 25th September 2026. Get institutional-grade market intelligence, top movers, and equity research from Amana Capital East Africa." name="description"/>
-<link href="https://www.amana-capital-ea.co.tz/dse-wrap-2026-09-25.html" rel="canonical"/>
-<link href="style.css?v=20260914_revert_07sep" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.weglot.com/weglot.min.js" type="text/javascript"></script>
-<script>
-        Weglot.initialize({
-            api_key: 'wg_22a6f434974df4dee513e25f34fc5e009'
-        });
-    </script>
-<!-- Open Graph / LinkedIn Preview -->
-<meta content="https://www.amana-capital-ea.co.tz/og-image-v2.png" property="og:image"/>
-<meta content="image/png" property="og:image:type"/>
-<meta content="1200" property="og:image:width"/>
-<meta content="630" property="og:image:height"/>
-<!-- Twitter Preview -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="https://www.amana-capital-ea.co.tz/og-image-v2.png" name="twitter:image"/>
-</head>
-<body>
-<nav class="navbar">
-<div class="container nav-container">
-<a class="brand-link" href="/">
-<svg aria-hidden="true" class="brand-icon" viewbox="0 0 32 44"><path d="M0,44 L13,0 L19,0 L6,44Z" fill="currentColor"></path><rect fill="currentColor" height="44" width="8" x="21" y="0"></rect><rect fill="currentColor" height="4" width="21" x="0" y="19"></rect></svg>
-<div class="brand-text vertical-logo">
-<span class="logo-word-primary">AMANA CAPITAL</span>
-<span class="logo-word-secondary">East Africa Limited</span>
-</div>
-</a>
-<button aria-label="Menu" class="mobile-toggle" id="mobile-toggle">☰</button>
-<ul class="nav-links" id="nav-links">
-<li><a href="/">Home</a></li>
-<li><a class="active" href="/market-intelligence">Market Intelligence</a></li>
-<li><a href="/investor-education">Investor Education</a></li>
-<li><a href="/bond-calculator">Bond Calculator</a></li>
-<li><a href="/risk-profiler">Risk Profiler</a></li>
-<li><a href="/about">About</a></li>
-<li><a href="/contact">Contact</a></li>
-</ul>
-</div>
-</nav>
-<main id="swup">
-<div class="container section-pad">
-<a href="/market-intelligence" style="color: var(--gold); text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-block; margin-bottom: 1.5rem;">← Back to Market Intelligence</a>
-<div class="card dse-article-card" style="padding: 3rem;">
+with open('dse-wrap-2026-09-25.html', 'r', encoding='utf-8') as f:
+    html = f.read()
 
+new_content = """
 <div class="dse-header-box" style="background-color: var(--cream); border: 1px solid rgba(200, 150, 46, 0.3); border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
 <h1 style="margin-top: 0; color: var(--navy); font-size: 2.2rem; margin-bottom: 0.5rem;">Daily DSE Wrap | Friday, 25th September 2026</h1>
 <p style="font-size: 1.1rem; color: var(--mist); margin-bottom: 0; font-weight: 600;">Equities Reclaim High Ground as Bond Turnover Contracts for Third Straight Session</p>
@@ -243,30 +194,16 @@
 </tbody>
 </table>
 </div>
+"""
 
-<p style="font-size: 0.85rem; color: var(--mist); margin-top: 3rem; border-top: 1px solid rgba(200, 150, 46, 0.2); padding-top: 1rem;"><em>For general informational and educational purposes only; not financial, legal, or tax advice. All investment decisions are solely your responsibility. Capital is at risk, and past performance does not guarantee future results. Amana Capital East Africa Limited registration under CMSA, Tanzania is pending. Registration does not imply CMSA endorsement.</em></p>
-</div></div>
-</main>
-<footer class="footer" style="background-color: var(--navy); padding: 3rem 0 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
-<div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center;">
-<div>
-<div style="font-family: 'Cormorant Garamond', serif; color: var(--gold); font-weight: 600; letter-spacing: 2px; font-size: 1.15rem; margin-bottom: 0.4rem; text-transform: uppercase;">AMANA CAPITAL EAST AFRICA</div>
-<div style="color: rgba(251,247,240,0.5); font-size: 0.8rem; letter-spacing: 0.5px;">Dar es Salaam · Tanzania · Registration Pending CMSA</div>
-</div>
-<div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin: 0.5rem 0;">
-<a href="/market-intelligence" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Research</a>
-<a href="/bond-calculator" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Bond Calc</a>
-<a href="/compound-wealth" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Wealth Modeler</a>
-<a href="/investor-education" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Education</a>
-<a href="/about" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Governance</a>
-<a href="/contact" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Contact</a>
-</div>
-<div style="color: var(--mist); opacity: 0.45; font-size:0.75rem;">© 2026 Amana Capital East Africa Limited</div>
-</div>
-</footer>
-<script src="https://unpkg.com/swup@4"></script>
-<script src="https://unpkg.com/@swup/progress-plugin@3"></script>
-<script src="https://unpkg.com/@swup/preload-plugin@3"></script>
-<script defer="" src="script.min.js?v=20260925c"></script>
-</body>
-</html>
+start_idx = html.find('<div class="dse-header-box"')
+end_idx = html.find('<p style="font-size: 0.85rem; color: var(--mist);')
+
+if start_idx != -1 and end_idx != -1:
+    new_html = html[:start_idx] + new_content + "\n" + html[end_idx:]
+    with open('dse-wrap-2026-09-25.html', 'w', encoding='utf-8') as f:
+        f.write(new_html)
+    print("SUCCESS")
+else:
+    print(f"FAILED TO FIND BOUNDARIES: start_idx={start_idx}, end_idx={end_idx}")
+
