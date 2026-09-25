@@ -820,26 +820,26 @@ window.initDSEHeatmap = function() {
     if (!container) return;
     
                 const data = [
-        { symbol: 'NMB',       marketCap: 2675, change: -0.9 },
-        { symbol: 'TBL',       marketCap: 3200, change: -1.0 },
-        { symbol: 'CRDB',      marketCap: 1515, change:  0.4 },
-        { symbol: 'VODA',      marketCap: 1200, change: -0.8 },
-        { symbol: 'TPCC',      marketCap:  900, change: -0.4 },
-        { symbol: 'NICO',      marketCap:  700, change: -0.8 },
-        { symbol: 'KCB',       marketCap:  380, change: -0.5 },
-        { symbol: 'TCC',       marketCap:  340, change: -1.6 },
-        { symbol: 'TCCL',      marketCap:  300, change:  1.9 },
-        { symbol: 'DCB',       marketCap:  180, change: -1.1 },
-        { symbol: 'MKCB',      marketCap:  150, change:  0.0 },
-        { symbol: 'TOL',       marketCap:  120, change:  1.1 },
-        { symbol: 'SWIS',      marketCap:  100, change: -1.5 },
-        { symbol: 'AFRIPRISE', marketCap:   80, change:  1.3 },
-        { symbol: 'MCB',       marketCap:   50, change: -1.3 },
-        { symbol: 'PAL',       marketCap:   40, change:  3.3 },
-        { symbol: 'MUCOBA',    marketCap:   20, change:  3.6 },
-        { symbol: 'MBP',       marketCap:   18, change:  2.9 },
-        { symbol: 'DSE',       marketCap:   16, change:  0.0 },
-        { symbol: 'TTP',       marketCap:   12, change: -2.3 }
+        { symbol: 'NMB',       marketCap: 2675, change:  0.5 },
+        { symbol: 'TBL',       marketCap: 3200, change: -0.4 },
+        { symbol: 'CRDB',      marketCap: 1515, change:  1.8 },
+        { symbol: 'VODA',      marketCap: 1200, change: -1.5 },
+        { symbol: 'TPCC',      marketCap:  900, change: -0.9 },
+        { symbol: 'NICO',      marketCap:  700, change:  3.3 },
+        { symbol: 'KCB',       marketCap:  380, change:  0.5 },
+        { symbol: 'TCC',       marketCap:  340, change:  0.0 },
+        { symbol: 'TCCL',      marketCap:  300, change:  3.7 },
+        { symbol: 'DCB',       marketCap:  180, change:  0.0 },
+        { symbol: 'MKCB',      marketCap:  150, change: -1.4 },
+        { symbol: 'TOL',       marketCap:  120, change:  0.0 },
+        { symbol: 'SWIS',      marketCap:  100, change: -1.2 },
+        { symbol: 'AFRIPRISE', marketCap:   80, change: -1.9 },
+        { symbol: 'MCB',       marketCap:   50, change:  1.3 },
+        { symbol: 'PAL',       marketCap:   40, change: -3.2 },
+        { symbol: 'MUCOBA',    marketCap:   20, change: -5.8 },
+        { symbol: 'MBP',       marketCap:   18, change: -1.9 },
+        { symbol: 'DSE',       marketCap:   16, change:  1.1 },
+        { symbol: 'TTP',       marketCap:   12, change:  1.2 }
     ];
 
     const totalCap = data.reduce((sum, item) => sum + item.marketCap, 0);
