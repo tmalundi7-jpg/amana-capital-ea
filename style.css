@@ -3363,3 +3363,142 @@ body { background: var(--bg-primary); color: var(--text-primary); }
   .page-terminal .term-arc-go{display:none;}
 }
 @media(max-width:900px){ .page-terminal .term-cols{grid-template-columns:1fr !important;} }
+
+/* ==========================================================================
+   READER PAGES (Oct 2026) — scoped to .page-reader.
+   Dark editorial reading experience for Daily Wraps, Articles, Education.
+   Matches the homepage family: navy/gold/cream, serif headings.
+   ========================================================================== */
+.page-reader{background:#070f20;color:#e8e4d8;}
+.page-reader .container{max-width:1180px;}
+/* reading column */
+.page-reader .dse-article-card,
+.page-reader .article-container{
+  background:#0b1526 !important;
+  border:1px solid rgba(201,162,39,.18) !important;
+  border-radius:12px !important;
+  box-shadow:0 20px 60px rgba(0,0,0,.35) !important;
+  max-width:860px;
+  margin:0 auto;
+}
+.page-reader .article-content{max-width:720px;margin:0 auto;}
+/* header box */
+.page-reader .dse-header-box{
+  background:linear-gradient(135deg,#12294f,#0a1830) !important;
+  border:1px solid rgba(201,162,39,.3) !important;
+  border-left:3px solid var(--gold) !important;
+  box-shadow:none !important;
+}
+.page-reader .dse-header-box h1{color:#faf6ee !important;}
+.page-reader .dse-header-box p{color:rgba(250,246,238,.65) !important;}
+/* headings */
+.page-reader h1{
+  font-family:'Cormorant Garamond',Georgia,serif !important;
+  font-weight:500 !important;
+  color:#faf6ee !important;
+  font-size:2.4rem !important;
+  line-height:1.15 !important;
+}
+.page-reader h2{
+  font-family:'Cormorant Garamond',Georgia,serif !important;
+  font-weight:600 !important;
+  color:var(--gold) !important;
+  font-size:1.7rem !important;
+  padding-bottom:.5rem;
+  border-bottom:1px solid rgba(201,162,39,.3);
+}
+.page-reader h3{
+  font-family:'Cormorant Garamond',Georgia,serif !important;
+  color:#faf6ee !important;
+  font-size:1.35rem !important;
+}
+/* body text */
+.page-reader .dse-article-card p,
+.page-reader .article-content p,
+.page-reader .article-content li{
+  color:rgba(232,228,216,.82) !important;
+  font-size:1.02rem;
+  line-height:1.8;
+}
+.page-reader .article-content ul{margin:0 0 1.5rem 1.2rem;}
+.page-reader strong{color:#faf6ee !important;}
+.page-reader a{color:var(--gold) !important;}
+.page-reader a:hover{color:#e3c15c !important;}
+/* breadcrumb / back link */
+.page-reader .breadcrumb a,
+.page-reader a[href="/market-intelligence"],
+.page-reader a[href="/investor-education"]{
+  color:var(--gold) !important;
+  font-weight:600;
+  font-size:.85rem;
+  letter-spacing:.06em;
+}
+/* tables */
+.page-reader .table-responsive{overflow-x:auto;border:1px solid rgba(201,162,39,.2);border-radius:10px;}
+.page-reader table{width:100%;border-collapse:collapse;font-size:.9rem;}
+.page-reader table thead tr{background:#0a1830 !important;}
+.page-reader table thead th{
+  color:var(--gold) !important;
+  font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  padding:.9rem 1.1rem !important;
+  border-bottom:1px solid rgba(201,162,39,.3) !important;
+  text-align:left;
+  white-space:nowrap;
+}
+.page-reader table tbody td{
+  padding:.85rem 1.1rem !important;
+  border-bottom:1px solid rgba(255,255,255,.06) !important;
+  color:rgba(232,228,216,.8) !important;
+  background:transparent !important;
+}
+.page-reader table tbody tr:last-child td{border-bottom:none !important;}
+.page-reader table tbody tr:nth-child(even) td{background:rgba(201,162,39,.04) !important;}
+.page-reader table tbody tr:hover td{background:rgba(201,162,39,.08) !important;}
+/* pull quotes */
+.page-reader blockquote{
+  border-left:3px solid var(--gold);
+  padding:.5rem 0 .5rem 1.5rem;
+  margin:2rem 0;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:1.35rem;font-style:italic;
+  color:#faf6ee;
+}
+/* byline */
+.page-reader .byline{color:rgba(232,228,216,.5) !important;font-size:.85rem;letter-spacing:.04em;}
+/* footer note */
+.page-reader .article-footer{border-top:1px solid rgba(201,162,39,.2);margin-top:3rem;padding-top:1.5rem;}
+/* focus */
+.page-reader :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+/* responsive */
+@media(max-width:768px){
+  .page-reader .dse-article-card,
+  .page-reader .article-container{padding:1.5rem !important;border-radius:0 !important;border-left:none !important;border-right:none !important;}
+  .page-reader h1{font-size:1.9rem !important;}
+}
+/* legacy wrap structures (single old page) brought into the reader family */
+.page-reader .card-content-block{
+  background:#0b1526 !important;
+  border:1px solid rgba(201,162,39,.18) !important;
+  border-radius:12px !important;
+  max-width:860px;margin:0 auto;
+}
+.page-reader .card-content-block h2{
+  font-family:'Cormorant Garamond',Georgia,serif !important;
+  color:var(--gold) !important;font-size:1.7rem !important;
+  padding-bottom:.5rem;border-bottom:1px solid rgba(201,162,39,.3);
+}
+.page-reader .card-content-block p,
+.page-reader .card-content-block li{color:rgba(232,228,216,.82) !important;line-height:1.8;}
+.page-reader .card-content-block strong{color:#faf6ee !important;}
+.page-reader .framework-box,
+.page-reader .concept-box{
+  background:#0e1a30 !important;
+  border:1px solid rgba(201,162,39,.25) !important;
+  border-left:3px solid var(--gold) !important;
+  border-radius:8px;
+}
+.page-reader .framework-box h3,
+.page-reader .concept-box h3{color:#faf6ee !important;font-family:'Cormorant Garamond',Georgia,serif !important;}
+.page-reader .framework-box p,
+.page-reader .concept-box p{color:rgba(232,228,216,.78) !important;}
+.page-reader .text-success{color:#22C55E !important;}
