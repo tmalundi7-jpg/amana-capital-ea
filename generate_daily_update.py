@@ -57,12 +57,38 @@ def build():
     with open(idx_path, 'w', encoding='utf-8') as f:
         f.write(idx_html)
         
-    # 2. Update Current Prices
+    # 2. Update Current Prices (terminal table)
+    # Company/sector names live in data/ticker_map.json (scraped once from the
+    # published table; the daily feed carries ticker/open/close/volume only).
+    try:
+        with open(os.path.join(REPO_DIR, 'data', 'ticker_map.json'), encoding='utf-8') as fh:
+            ticker_map = json.load(fh)
+    except OSError:
+        ticker_map = {}
+    def _compact(n):
+        try: n = float(n)
+        except (TypeError, ValueError): return '-'
+        if n >= 1e9: return f'{n/1e9:.2f}bn'
+        if n >= 1e6: return f'{n/1e6:.2f}m'
+        if n >= 1e3: return f'{n/1e3:.1f}k'
+        return f'{int(n):,}'
+    enriched = []
+    for eq in (data.get('stocks') or data.get('equities') or []):
+        chg = eq.get('change_pct')
+        if chg is None and eq.get('open'):
+            chg = ((eq['close'] - eq['open']) / eq['open'] * 100) if eq['open'] else 0.0
+        vol = eq.get('volume') or 0
+        try: turnover = float(str(vol).replace(',', '')) * float(eq.get('close') or 0)
+        except (TypeError, ValueError): turnover = 0
+        co, _sec = ticker_map.get(eq.get('ticker', ''), ('', ''))
+        enriched.append({'ticker': eq.get('ticker', ''), 'company': co,
+                         'close': eq.get('close', 0), 'change_pct': chg or 0.0,
+                         'volume': vol, 'turnover_compact': _compact(turnover)})
     prices_template = env.get_template('current_prices_template.html')
-    prices_snippet = prices_template.render(data=data)
-    # Just update the table part
+    prices_snippet = prices_template.render(data=data, equities=enriched)
     cp_path = os.path.join(REPO_DIR, 'current-prices.html')
-    update_file(cp_path, r'<table class="data-table".*?>', r'</table>', prices_snippet) # Needs refinement, using simpler replace for now
+    update_file(cp_path, r'<!-- PRICES_TABLE_START -->', r'<!-- PRICES_TABLE_END -->',
+                prices_snippet.replace('<!-- PRICES_TABLE_START -->', '').replace('<!-- PRICES_TABLE_END -->', '').strip())
 
     # 3. Market Intelligence Archive
     mi_path = os.path.join(REPO_DIR, 'market-intelligence.html')
@@ -76,9 +102,9 @@ def build():
         mi_html = mi_html.replace('<!-- NEW_WRAP_ENTRY -->', '<!-- NEW_WRAP_ENTRY -->\\n' + mi_snippet)
     
     # MI Snapshot Update
-    mi_html = re.sub(r'<div class="snapshot-value" id="mi-dsei">.*?</div>', f'<div class="snapshot-value" id="mi-dsei">{data.get("dsei", data.get("market_snapshot", {}).get("dsei", ""))}</div>', mi_html)
-    mi_html = re.sub(r'<div class="snapshot-value" id="mi-tsi">.*?</div>', f'<div class="snapshot-value" id="mi-tsi">{data.get("tsi", data.get("market_snapshot", {}).get("tsi", ""))}</div>', mi_html)
-    mi_html = re.sub(r'<div class="snapshot-value" id="mi-turnover">.*?</div>', f'<div class="snapshot-value" id="mi-turnover">{data.get("equity_turnover_bn", data.get("market_snapshot", {}).get("equity_turnover", ""))}</div>', mi_html)
+    mi_html = re.sub(r'<div class="snapshot-value[^"]*" id="mi-dsei">.*?</div>', f'<div class="snapshot-value" id="mi-dsei">{data.get("dsei", data.get("market_snapshot", {}).get("dsei", ""))}</div>', mi_html)
+    mi_html = re.sub(r'<div class="snapshot-value[^"]*" id="mi-tsi">.*?</div>', f'<div class="snapshot-value" id="mi-tsi">{data.get("tsi", data.get("market_snapshot", {}).get("tsi", ""))}</div>', mi_html)
+    mi_html = re.sub(r'<div class="snapshot-value[^"]*" id="mi-turnover">.*?</div>', f'<div class="snapshot-value" id="mi-turnover">{data.get("equity_turnover_bn", data.get("market_snapshot", {}).get("equity_turnover", ""))}</div>', mi_html)
     if gainers:
         mi_html = re.sub(r'<div class="snapshot-mover" id="mi-gainer">.*?</div>', f'<div class="snapshot-mover" id="mi-gainer">{gainers[0]["ticker"]} <span style="color:var(--gain)">+{gainers[0]["change_pct"]:.1f}%</span></div>', mi_html)
     if losers:

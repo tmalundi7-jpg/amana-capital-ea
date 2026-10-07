@@ -1,36 +1,13 @@
 <!-- PRICES_TABLE_START -->
-<table class="data-table" style="margin: 0; width: 100%; border-collapse: collapse;">
-    <thead>
-        <tr style="background-color: var(--navy); color: var(--white); text-align: left;">
-            <th style="padding: 1rem;">Ticker</th>
-            <th style="padding: 1rem;">Sector</th>
-            <th style="padding: 1rem; text-align: right;">Last Price</th>
-            <th style="padding: 1rem; text-align: right;">Change</th>
-            <th style="padding: 1rem; text-align: right;">Volume</th>
-            <th style="padding: 1rem; text-align: right;">Turnover (TZS)</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for eq in data.equities %}
-        <tr style="{% if loop.index0 % 2 == 1 %}background-color: var(--cream);{% endif %}">
-            <td style="padding: 1rem; font-weight: 600;">{{ eq.ticker }}</td>
-            <td style="padding: 1rem; font-size: 0.9rem; color: var(--mist);">{{ eq.sector }}</td>
-            <td style="padding: 1rem; text-align: right; font-weight: 600;">{{ "{:,.0f}".format(eq.close) }}</td>
-            <td style="padding: 1rem; text-align: right; font-weight: 600; {% if eq.change_pct > 0 %}color: var(--gain);{% elif eq.change_pct < 0 %}color: var(--loss);{% endif %}">
-                {% if eq.change_pct > 0 %}+{{ "%.1f"|format(eq.change_pct) }}%{% elif eq.change_pct < 0 %}{{ "%.1f"|format(eq.change_pct) }}%{% else %}0.0%{% endif %}
-            </td>
-            <td style="padding: 1rem; text-align: right;">{{ eq.volume }}</td>
-            <td style="padding: 1rem; text-align: right;">{{ eq.turnover }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<!-- Terminal design, Oct 2026. Rendered by generate_daily_update.py between the
+     PRICES_TABLE_START/END markers in current-prices.html. `equities` is the
+     enriched list built by the script (ticker/close/change_pct/volume/turnover). -->
+<div class="term-tbl-wrap"><table class="term-table data-table">
+<thead><tr><th>Ticker</th><th class="r">Last (TZS)</th><th class="r">Chg %</th><th class="r">Volume</th><th class="r">Turnover</th></tr></thead>
+<tbody>
+{% for eq in equities %}
+<tr><td class="term-sym">{{ eq.ticker }}</td><td class="r">{{ "{:,.0f}".format(eq.close) }}</td><td class="r"><span class="{{ 'term-up' if eq.change_pct > 0 else ('term-down' if eq.change_pct < 0 else 'term-flat') }}">{{ ('+' if eq.change_pct > 0 else '') + "%.1f"|format(eq.change_pct) }}%</span></td><td class="r">{{ "{:,}".format(eq.volume|int) }}</td><td class="r">{{ eq.turnover_compact }}</td></tr>
+{% endfor %}
+</tbody>
+</table></div>
 <!-- PRICES_TABLE_END -->
-
-
-
-
-    <script src="https://unpkg.com/swup@4"></script>
-    <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
-    <script src="https://unpkg.com/@swup/preload-plugin@3"></script>
-    <script src="script.min.js?v=20260923a" defer></script>
