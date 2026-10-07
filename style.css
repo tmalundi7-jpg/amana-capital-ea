@@ -3077,16 +3077,17 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 .mk-tick-item {
   display: inline-block;
   margin: 0 2rem;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   letter-spacing: 0.06em;
-  color: var(--text-body);
+  color: #F1F5F9;
+  font-weight: 500;
 }
 .mk-tick-item b {
   font-family: var(--heading-font);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 600;
   margin-right: 0.5rem;
-  color: var(--text-heading);
+  color: var(--gold);
 }
 .mk-tick-up { color: var(--gain); font-weight: 600; }
 .mk-tick-down { color: var(--loss); font-weight: 600; }
