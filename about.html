@@ -26,7 +26,7 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
     </head>
-<body>
+<body class="page-terminal">
     <nav class="navbar">
         <div class="container nav-container">
             <a href="/" class="brand-link">
@@ -475,6 +475,22 @@
         .ab-cta h2 { font-size: 2rem; }
         .ab-section { padding: 3.5rem 0; }
     }
+    
+        /* ── TERMINAL DARK OVERRIDES (Oct 2026) ── */
+        .page-terminal .ab-section { background: transparent; }
+        .page-terminal .ab-section.dark { background: rgba(4,7,13,0.55); }
+        .page-terminal .ab-title { color: #f2f5f9; }
+        .page-terminal .ab-reg-card {
+            background: #070d18;
+            border: 1px solid rgba(201,162,39,0.25);
+            box-shadow: none;
+        }
+        .page-terminal .ab-reg-title { color: #f2f5f9; }
+        .page-terminal .ab-reg-text { color: #aab4c4; }
+        .page-terminal .ab-reg-badge { color: #c9a227; }
+        .page-terminal .ab-cta { background: transparent; }
+        .page-terminal .ab-pillar { background: rgba(7,13,24,0.7); }
+        .page-terminal .ab-hero { background: transparent; }
     </style>
 
                 <!-- ─── HERO ─── -->
@@ -495,7 +511,7 @@
 
             <!-- Right: Mission Statement -->
             <div style="padding: 1rem 0 1rem 3.5rem; display: flex; flex-direction: column; justify-content: center; gap: 2rem;">
-                <p style="font-family: 'Cormorant Garamond', serif; font-size: 2.1rem; color: var(--navy); line-height: 1.4; margin: 0;">
+                <p style="font-family: 'Cormorant Garamond', serif; font-size: 2.1rem; color: #f2f5f9; line-height: 1.4; margin: 0;">
                     Amana Capital East Africa Limited exists to deliver institutional-grade investment research, advisory, and fund management services rooted in the Dar es Salaam Stock Exchange and East African capital markets.
                 </p>
                 <div style="width: 70px; height: 3px; background: linear-gradient(90deg, var(--gold), rgba(200,150,46,0.3));"></div>

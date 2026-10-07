@@ -3345,6 +3345,12 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 .page-terminal .term-side-card ul{list-style:none;}
 .page-terminal .term-side-card li{margin-bottom:.6rem;}
 .page-terminal .term-side-card a{color:#c6cfda;text-decoration:none;font-size:.88rem;display:flex;justify-content:space-between;align-items:center;}
+/* Fix Oct 2026: sidebar buttons must keep navy text on gold (overrides .term-side-card a) */
+.page-terminal .term-side-card a.btn-gold-solid,
+.page-terminal .term-side-card a.btn-gold-solid:hover {
+  color: #0A1628 !important;
+}
+
 .page-terminal .term-side-card a:hover{color:#c9a227;}
 .page-terminal .term-side-card p{font-size:.84rem;color:#8b95a5;line-height:1.6;}
 .page-terminal .term-quote{border-left:2px solid #c9a227;padding-left:1.1rem;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.1rem;color:#d7dee8;margin-bottom:.6rem;}
@@ -3375,7 +3381,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 /* reading column */
 .page-reader .dse-article-card,
 .page-reader .article-container{
-  background:#0b1526 !important;
+  background:#FEF9F0 !important;
   border:1px solid rgba(201,162,39,.18) !important;
   border-radius:12px !important;
   box-shadow:0 20px 60px rgba(0,0,0,.35) !important;
@@ -3390,8 +3396,8 @@ body { background: var(--bg-primary); color: var(--text-primary); }
   border-left:3px solid var(--gold) !important;
   box-shadow:none !important;
 }
-.page-reader .dse-header-box h1{color:#faf6ee !important;}
-.page-reader .dse-header-box p{color:rgba(250,246,238,.65) !important;}
+.page-reader .dse-header-box h1{color:#0A1628 !important;}
+.page-reader .dse-header-box p{color:rgba(10,22,40,.65) !important;}
 /* headings */
 .page-reader h1{
   font-family:'Cormorant Garamond',Georgia,serif !important;
@@ -3417,12 +3423,12 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 .page-reader .dse-article-card p,
 .page-reader .article-content p,
 .page-reader .article-content li{
-  color:rgba(232,228,216,.82) !important;
+  color:rgba(10,22,40,.88) !important;
   font-size:1.02rem;
   line-height:1.8;
 }
 .page-reader .article-content ul{margin:0 0 1.5rem 1.2rem;}
-.page-reader strong{color:#faf6ee !important;}
+.page-reader strong{color:#0A1628 !important;}
 .page-reader a{color:var(--gold) !important;}
 .page-reader a:hover{color:#e3c15c !important;}
 /* breadcrumb / back link */
@@ -3448,8 +3454,8 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 }
 .page-reader table tbody td{
   padding:.85rem 1.1rem !important;
-  border-bottom:1px solid rgba(255,255,255,.06) !important;
-  color:rgba(232,228,216,.8) !important;
+  border-bottom:1px solid rgba(10,22,40,.08) !important;
+  color:rgba(10,22,40,.85) !important;
   background:transparent !important;
 }
 .page-reader table tbody tr:last-child td{border-bottom:none !important;}

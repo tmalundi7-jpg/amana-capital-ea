@@ -27,7 +27,7 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
     </head>
-<body class="rp-page">
+<body class="page-terminal">
 
     <nav class="navbar">
         <div class="container nav-container">
@@ -54,7 +54,7 @@
     <main id="swup">
 <style>
         /* ── Page Base ── */
-        .rp-page { background: var(--cream); }
+        .page-terminal { background: #04070d; }
 
         /* ── Hero ── */
         .rp-hero {
@@ -145,9 +145,10 @@
             z-index: 2;
         }
         .rp-card {
-            background: #ffffff;
+            background: #070d18;
+            border: 1px solid rgba(201,162,39,.18);
             border-radius: 16px;
-            box-shadow: 0 25px 60px rgba(11,29,58,0.12);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.45);
             overflow: hidden;
         }
         .rp-card-header {
@@ -200,13 +201,13 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.65rem;
             font-weight: 700;
-            color: var(--navy);
+            color: #f2f5f9;
             line-height: 1.3;
             margin-bottom: 0.75rem;
         }
         .rp-q-sub {
             font-size: 0.88rem;
-            color: rgba(11,29,58,0.5);
+            color: #8b95a5;
             margin-bottom: 2rem;
             line-height: 1.5;
         }
@@ -216,25 +217,25 @@
             align-items: flex-start;
             gap: 1rem;
             padding: 1.1rem 1.4rem;
-            border: 1.5px solid rgba(11,29,58,0.1);
+            border: 1.5px solid rgba(201,162,39,.15);
             border-radius: 10px;
             cursor: pointer;
             transition: all 0.2s ease;
-            background: #fff;
+            background: #0a1120;
             text-align: left;
             width: 100%;
         }
         .rp-opt:hover {
             border-color: var(--gold);
-            background: rgba(200,150,46,0.04);
+            background: rgba(201,162,39,0.08);
             transform: translateX(4px);
         }
         .rp-opt-letter {
             width: 28px;
             height: 28px;
             border-radius: 50%;
-            background: rgba(11,29,58,0.06);
-            color: var(--navy);
+            background: rgba(201,162,39,.14);
+            color: #f2f5f9;
             font-size: 0.8rem;
             font-weight: 700;
             display: flex;
@@ -247,8 +248,8 @@
             background: var(--gold);
             color: #fff;
         }
-        .rp-opt-text { font-size: 0.97rem; color: var(--navy); line-height: 1.4; padding-top: 3px; }
-        .rp-opt-sub { font-size: 0.8rem; color: rgba(11,29,58,0.5); margin-top: 2px; }
+        .rp-opt-text { font-size: 0.97rem; color: #d7dee8; line-height: 1.4; padding-top: 3px; }
+        .rp-opt-sub { font-size: 0.8rem; color: #8b95a5; margin-top: 2px; }
 
         /* ── Results ── */
         .rp-results { display: none; }
@@ -266,11 +267,11 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
             font-weight: 700;
-            color: var(--navy);
+            color: #f2f5f9;
             margin-bottom: 0.5rem;
         }
         .rp-result-subtitle {
-            color: rgba(11,29,58,0.6);
+            color: #8b95a5;
             font-size: 1rem;
             margin-bottom: 2rem;
             line-height: 1.6;
@@ -283,7 +284,7 @@
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: rgba(11,29,58,0.5);
+            color: #8b95a5;
             margin-bottom: 1rem;
         }
         .rp-alloc-row { margin-bottom: 1rem; }
@@ -292,13 +293,13 @@
             justify-content: space-between;
             font-size: 0.88rem;
             font-weight: 600;
-            color: var(--navy);
+            color: #d7dee8;
             margin-bottom: 0.35rem;
         }
         .rp-alloc-pct { color: var(--gold); }
         .rp-alloc-track {
             height: 8px;
-            background: rgba(11,29,58,0.06);
+            background: rgba(255,255,255,.08);
             border-radius: 4px;
             overflow: hidden;
         }
@@ -317,8 +318,8 @@
         }
         @media (max-width: 580px) { .rp-detail-grid { grid-template-columns: 1fr; } }
         .rp-detail-card {
-            background: rgba(11,29,58,0.03);
-            border: 1px solid rgba(11,29,58,0.08);
+            background: rgba(255,255,255,.03);
+            border: 1px solid rgba(201,162,39,.15);
             border-radius: 10px;
             padding: 1.25rem;
         }
@@ -327,13 +328,13 @@
             font-weight: 700;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            color: rgba(11,29,58,0.45);
+            color: #8b95a5;
             margin-bottom: 0.4rem;
         }
         .rp-detail-card-val {
             font-size: 1.05rem;
             font-weight: 600;
-            color: var(--navy);
+            color: #f2f5f9;
         }
 
         /* Instruments */
@@ -384,8 +385,8 @@
         }
         @media (max-width: 580px) { .rp-metrics { grid-template-columns: 1fr 1fr; } }
         .rp-metric {
-            background: #fff;
-            border: 1.5px solid rgba(11,29,58,0.08);
+            background: #0a1120;
+            border: 1.5px solid rgba(201,162,39,.15);
             border-radius: 10px;
             padding: 1.1rem;
             text-align: center;
@@ -394,12 +395,12 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--navy);
+            color: #f2f5f9;
             display: block;
         }
         .rp-metric-label {
             font-size: 0.72rem;
-            color: rgba(11,29,58,0.5);
+            color: #8b95a5;
             letter-spacing: 1px;
             text-transform: uppercase;
             margin-top: 0.2rem;
@@ -453,7 +454,8 @@
 
         /* ── Info Sections Below Quiz ── */
         .rp-info-section {
-            background: var(--cream);
+            background: #04070d;
+            border-top: 1px solid rgba(201,162,39,.12);
             padding: 5rem 0;
         }
         .rp-section-eyebrow {
@@ -468,11 +470,11 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
             font-weight: 700;
-            color: var(--navy);
+            color: #f2f5f9;
             margin-bottom: 1rem;
         }
         .rp-section-sub {
-            color: rgba(11,29,58,0.6);
+            color: #8b95a5;
             font-size: 1rem;
             line-height: 1.7;
             max-width: 600px;
@@ -575,13 +577,21 @@
 
         /* Disclaimer */
         .rp-disclaimer {
-            background: rgba(11,29,58,0.04);
-            border-top: 1px solid rgba(11,29,58,0.07);
+            background: rgba(255,255,255,.02);
+            border-top: 1px solid rgba(201,162,39,.12);
             padding: 2rem;
             text-align: center;
             font-size: 0.78rem;
-            color: rgba(11,29,58,0.4);
+            color: #8b95a5;
             line-height: 1.6;
+        }
+        /* ── Mobile safety ── */
+        @media (max-width: 580px) {
+            .rp-card-body { padding: 1.5rem 1.25rem; }
+            .rp-card-header { padding: 1rem 1.25rem; }
+            .rp-hero { padding: 3.5rem 0 3rem; }
+            .rp-hero h1 { font-size: 2.1rem; }
+            .rp-q-text { font-size: 1.35rem; }
         }
     </style>
 

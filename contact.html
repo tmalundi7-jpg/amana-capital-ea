@@ -28,7 +28,7 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
     </head>
-<body>
+<body class="page-terminal">
 
     <nav class="navbar">
         <div class="container nav-container">
@@ -517,6 +517,66 @@
         .ct-h2-light { color: var(--cream); }
         .ct-sub { font-size: 0.95rem; color: rgba(11,29,58,0.55); line-height: 1.6; max-width: 550px; }
         .ct-sub-light { color: rgba(251,247,240,0.6); }
+    
+        /* ── TERMINAL DARK OVERRIDES (Oct 2026) ── */
+        .page-terminal .ct-hero { background: transparent; }
+        .page-terminal .ct-main { background: transparent; }
+        .page-terminal .ct-form-card {
+            background: #070d18;
+            border: 1px solid rgba(201,162,39,0.25);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        }
+        .page-terminal .ct-form-header {
+            background: #0a1220;
+            border-bottom: 3px solid #c9a227;
+        }
+        .page-terminal .ct-label { color: #8b95a5; }
+        .page-terminal .ct-h2 { color: #f2f5f9; }
+        .page-terminal .ct-input,
+        .page-terminal .ct-textarea,
+        .page-terminal .ct-select {
+            background: #0a1220;
+            border: 1.5px solid rgba(201,162,39,0.2);
+            color: #e8e4d8;
+        }
+        .page-terminal .ct-input::placeholder,
+        .page-terminal .ct-textarea::placeholder { color: #5b6572; }
+        .page-terminal .ct-input:focus,
+        .page-terminal .ct-textarea:focus {
+            border-color: #c9a227;
+            box-shadow: 0 0 0 3px rgba(201,162,39,0.15);
+            outline: none;
+        }
+        .page-terminal .ct-tab {
+            color: #8b95a5;
+            border-color: rgba(139,149,165,0.3);
+        }
+        .page-terminal .ct-tab.active {
+            background: rgba(201,162,39,0.15);
+            border-color: #c9a227;
+            color: #c9a227;
+        }
+        .page-terminal .ct-submit {
+            background: #c9a227;
+            color: #04070d;
+        }
+        .page-terminal .ct-submit:hover {
+            background: #d9b13b;
+        }
+        .page-terminal .ct-info-card { background: #070d18; }
+        .page-terminal .ct-response-strip { background: rgba(7,13,24,0.7); }
+        .page-terminal .ct-team-card {
+            background: #070d18;
+            border: 1px solid rgba(201,162,39,0.2);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .page-terminal .ct-team-name { color: #f2f5f9; }
+        .page-terminal .ct-map-card {
+            background: #070d18;
+            border: 1px solid rgba(201,162,39,0.2);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
     </style>
 
 
