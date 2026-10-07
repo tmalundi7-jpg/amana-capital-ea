@@ -7,8 +7,8 @@
   --cream: #FBF7F0;
   --stone: #EAE3D5;
   --mist: #6B7280; /* Better contrast for accessibility */
-  --gold: #E5B13B;
-  --gold-hover: #F1C453;
+  --gold: #c9a227;
+  --gold-hover: #d4af37;
   --gold-light: rgba(229, 177, 59, 0.15);
   /* Two-gold rule (refined look, Oct 2026): --gold for fills/borders and text
      on DARK surfaces; --gold-ink for text on LIGHT surfaces (4.59:1 on cream). */
