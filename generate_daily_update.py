@@ -13,13 +13,14 @@ def load_data():
 
 def process_equities(data):
     # compute percentages and sort
-    for eq in data['equities']:
+    for eq in data.get('stocks') or data.get('equities') or []:
         if eq['open'] > 0:
             eq['change_pct'] = ((eq['close'] - eq['open']) / eq['open']) * 100
         else:
             eq['change_pct'] = 0.0
 
-    valid_movers = [eq for eq in data['equities'] if eq['volume'] != '0' and eq['volume'] != '-']
+    equities = data.get('stocks') or data.get('equities') or []
+    valid_movers = [eq for eq in equities if str(eq.get('volume')) not in ('0', '-', '')]
     sorted_movers = sorted(valid_movers, key=lambda x: x['change_pct'], reverse=True)
     
     gainers = [eq for eq in sorted_movers if eq['change_pct'] > 0][:3]
@@ -50,9 +51,9 @@ def build():
     idx_path = os.path.join(REPO_DIR, 'index.html')
     with open(idx_path, 'r', encoding='utf-8') as f:
         idx_html = f.read()
-    idx_html = re.sub(r'<span class="teaser-date" id="teaser-date">.*?</span>', f'<span class="teaser-date" id="teaser-date">{data["publication_date"]}</span>', idx_html)
-    idx_html = re.sub(r'<p class="teaser-body" id="teaser-body">.*?</p>', f'<p class="teaser-body" id="teaser-body">{data["analysis"]["in_focus_body"][:150]}...</p>', idx_html)
-    idx_html = re.sub(r'<a href="/dse-wrap-.*?" class="btn btn-gold-solid" id="teaser-link">', f'<a href="/dse-wrap-{data["trade_date"]}" class="btn btn-gold-solid" id="teaser-link">', idx_html)
+    idx_html = re.sub(r'<span class="teaser-date" id="teaser-date">.*?</span>', f'<span class="teaser-date" id="teaser-date">{data.get("display_date", "")}</span>', idx_html)
+    idx_html = re.sub(r'<p class="teaser-body" id="teaser-body">.*?</p>', f'<p class="teaser-body" id="teaser-body">{(data.get("in_focus") or {}).get("text", "")[:150]}...</p>', idx_html)
+    idx_html = re.sub(r'<a href="/dse-wrap-.*?" class="mk-btn mk-btn-gold" id="teaser-link">', f'<a href="/dse-wrap-{data.get("date", "")}" class="mk-btn mk-btn-gold" id="teaser-link">', idx_html)
     with open(idx_path, 'w', encoding='utf-8') as f:
         f.write(idx_html)
         
@@ -71,13 +72,13 @@ def build():
     with open(mi_path, 'r', encoding='utf-8') as f:
         mi_html = f.read()
         
-    if data['publication_date'] not in mi_html:
+    if data.get('display_date', '') and data.get('display_date', '') not in mi_html:
         mi_html = mi_html.replace('<!-- NEW_WRAP_ENTRY -->', '<!-- NEW_WRAP_ENTRY -->\\n' + mi_snippet)
     
     # MI Snapshot Update
-    mi_html = re.sub(r'<div class="snapshot-value" id="mi-dsei">.*?</div>', f'<div class="snapshot-value" id="mi-dsei">{data["market_snapshot"]["dsei"]}</div>', mi_html)
-    mi_html = re.sub(r'<div class="snapshot-value" id="mi-tsi">.*?</div>', f'<div class="snapshot-value" id="mi-tsi">{data["market_snapshot"]["tsi"]}</div>', mi_html)
-    mi_html = re.sub(r'<div class="snapshot-value" id="mi-turnover">.*?</div>', f'<div class="snapshot-value" id="mi-turnover">{data["market_snapshot"]["equity_turnover"]}</div>', mi_html)
+    mi_html = re.sub(r'<div class="snapshot-value" id="mi-dsei">.*?</div>', f'<div class="snapshot-value" id="mi-dsei">{data.get("dsei", data.get("market_snapshot", {}).get("dsei", ""))}</div>', mi_html)
+    mi_html = re.sub(r'<div class="snapshot-value" id="mi-tsi">.*?</div>', f'<div class="snapshot-value" id="mi-tsi">{data.get("tsi", data.get("market_snapshot", {}).get("tsi", ""))}</div>', mi_html)
+    mi_html = re.sub(r'<div class="snapshot-value" id="mi-turnover">.*?</div>', f'<div class="snapshot-value" id="mi-turnover">{data.get("equity_turnover_bn", data.get("market_snapshot", {}).get("equity_turnover", ""))}</div>', mi_html)
     if gainers:
         mi_html = re.sub(r'<div class="snapshot-mover" id="mi-gainer">.*?</div>', f'<div class="snapshot-mover" id="mi-gainer">{gainers[0]["ticker"]} <span style="color:var(--gain)">+{gainers[0]["change_pct"]:.1f}%</span></div>', mi_html)
     if losers:

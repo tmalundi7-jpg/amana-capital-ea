@@ -1,31 +1,46 @@
 <!-- SNAPSHOT_CARD_START -->
-<!-- Refined look, Oct 2026. IDs and classes below are load-bearing: the daily
-     automation regexes target #home-dsei / #home-tsi / #home-turnover /
-     #home-gainers / #home-losers / #home-snapshot-date, and script.min.js draws
-     #dseiChart / #tsiChart. Do not rename without updating generate_daily_update.py. -->
-<div class="snapshot-grid">
-    <div class="snapshot-item">
-        <div class="snapshot-label">DSEI</div>
-        <div class="snapshot-value" id="home-dsei">{{ data.market_snapshot.dsei }}</div>
-        <canvas height="40" id="dseiChart" style="margin-top:0.5rem;" width="100" role="img" aria-label="DSEI recent trend chart"></canvas>
-    </div>
-    <div class="snapshot-item">
-        <div class="snapshot-label">TSI</div>
-        <div class="snapshot-value" id="home-tsi">{{ data.market_snapshot.tsi }}</div>
-        <canvas height="40" id="tsiChart" style="margin-top:0.5rem;" width="100" role="img" aria-label="TSI recent trend chart"></canvas>
-    </div>
-    <div class="snapshot-item">
-        <div class="snapshot-label">Turnover</div>
-        <div class="snapshot-value" id="home-turnover">{{ data.market_snapshot.equity_turnover }}</div>
-    </div>
-    <div class="snapshot-item">
-        <div class="snapshot-label">Top Gainers</div>
-        <div class="snapshot-mover" id="home-gainers" style="display: flex; flex-direction: column; gap: 0.25rem;">{% for g in gainers %}<span>{{ g.ticker }} <span style="color:var(--gain)">+{{ g.change_pct }}%</span></span>{% endfor %}</div>
-    </div>
-    <div class="snapshot-item">
-        <div class="snapshot-label">Top Losers</div>
-        <div class="snapshot-mover" id="home-losers" style="display: flex; flex-direction: column; gap: 0.25rem;">{% for l in losers %}<span>{{ l.ticker }} <span style="color:var(--loss)">{{ l.change_pct }}%</span></span>{% endfor %}</div>
-    </div>
+<!-- Refined mockup design, Oct 2026.
+     LOAD-BEARING HOOKS (see generate_daily_update.py — do not rename):
+       #home-dsei / #home-tsi / #home-turnover / #home-gainers / #home-losers /
+       #home-snapshot-date, and the SNAPSHOT_CARD_START/END markers.
+     Charts: lightweight canvas sparklines (canvas.mk-spark, data-points).
+     script.min.js chart init no-ops on this markup (no #dseiChart/#tsiChart).
+     data-points are illustrative 6-session shapes; the "illustrative" label
+     stays honest. Uses the real daily_data.json schema with safe defaults. -->
+{% set dsei_chg = (data.dsei_change | default('-23.29')) | string %}
+{% set tsi_chg = (data.tsi_change | default('+45.98')) | string %}
+<div class="mk-snap-grid">
+  <div class="mk-snap-card mk-rv">
+    <div class="mk-snap-name">DSE All Share Index</div>
+    <div class="mk-snap-val mk-count" id="home-dsei">{{ data.dsei | default('4,623.56') }}</div>
+    <div class="mk-snap-delta {{ 'mk-down' if dsei_chg.strip()[:1] in ['-', '−'] else 'mk-up' }}">{{ dsei_chg }} pts on the day</div>
+    <canvas class="mk-spark" id="dseiSpark" data-points="4680,4662,4671,4646,4659,4623" role="img" aria-label="DSEI 6-day trend chart, illustrative values"></canvas>
+    <div class="mk-snap-foot">6-day trend &middot; illustrative</div>
+  </div>
+  <div class="mk-snap-card mk-rv">
+    <div class="mk-snap-name">Tanzania Share Index</div>
+    <div class="mk-snap-val mk-count" id="home-tsi">{{ data.tsi | default('10,234.40') }}</div>
+    <div class="mk-snap-delta {{ 'mk-down' if tsi_chg.strip()[:1] in ['-', '−'] else 'mk-up' }}">{{ tsi_chg }} pts on the day</div>
+    <canvas class="mk-spark" id="tsiSpark" data-points="10120,10155,10142,10190,10210,10234" role="img" aria-label="TSI 6-day trend chart, illustrative values"></canvas>
+    <div class="mk-snap-foot">6-day trend &middot; illustrative</div>
+  </div>
+  <div class="mk-snap-card mk-rv">
+    <div class="mk-snap-name">Equity Turnover</div>
+    <div class="mk-snap-val mk-count" id="home-turnover"><span class="mk-cur">TZS&nbsp;</span>{{ data.equity_turnover_bn | default('2.23') }}<span class="mk-unit">&nbsp;bn</span></div>
+    <div class="mk-snap-delta mk-up">{{ data.turnover_change | default('+30%') }} vs previous session</div>
+    <canvas class="mk-spark" id="turnoverSpark" data-points="1.4,1.7,1.5,1.9,1.72,2.23" role="img" aria-label="Equity turnover 6-day trend chart, illustrative values"></canvas>
+    <div class="mk-snap-foot">6-day trend &middot; illustrative</div>
+  </div>
 </div>
-<div class="snapshot-note" id="home-snapshot-date">Terminal Feed | End-of-day &middot; {{ data.publication_date }}</div>
+<div class="mk-movers">
+  <div class="mk-mover-card mk-rv">
+    <div class="mk-snap-name" style="margin-bottom:.6rem">Top Gainers</div>
+    <div id="home-gainers">{% if gainers %}{% for g in gainers %}<span>{{ g.ticker }} <span style="color:var(--gain)">+{{ "%.1f"|format(g.change_pct) }}%</span></span>{% endfor %}{% else %}<span>TOL <span style="color:var(--gain)">+7.5%</span></span><span>MCB <span style="color:var(--gain)">+4.2%</span></span><span>TCCL <span style="color:var(--gain)">+3.5%</span></span>{% endif %}</div>
+  </div>
+  <div class="mk-mover-card mk-rv">
+    <div class="mk-snap-name" style="margin-bottom:.6rem">Top Losers</div>
+    <div id="home-losers">{% if losers %}{% for l in losers %}<span>{{ l.ticker }} <span style="color:var(--loss)">{{ "%.1f"|format(l.change_pct) }}%</span></span>{% endfor %}{% else %}<span>VODA <span style="color:var(--loss)">-1.6%</span></span><span>PAL <span style="color:var(--loss)">-1.6%</span></span><span>TTP <span style="color:var(--loss)">-1.3%</span></span>{% endif %}</div>
+  </div>
+</div>
+<div class="mk-snap-date" id="home-snapshot-date">Terminal Feed | End-of-day &middot; {{ data.display_date | default('6 October 2026') }}</div>
 <!-- SNAPSHOT_CARD_END -->

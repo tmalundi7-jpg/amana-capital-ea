@@ -9,8 +9,8 @@
 <link href="https://www.amana-capital-ea.co.tz/" rel="canonical"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=20261007_refined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="style.css?v=20261007_mockup" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -48,16 +48,11 @@
 <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
 <link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
 <link href="/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<noscript><style>.page-home .mk-rv{opacity:1 !important;transform:none !important;}</style></noscript>
 </head>
-<body>
+<body class="page-home">
 
-<svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; width: 0; height: 0;">
-  <defs>
-    <filter id="duotone">
-      <feColorMatrix type="matrix" values="0.33 0.33 0.33 0 0.04 0.09 0.09 0.09 0 0.09 0.03 0.03 0.03 0 0.70 0 0 0 1 0" />
-    </filter>
-  </defs>
-</svg>
+
 
 <nav class="navbar">
 <div class="container nav-container">
@@ -82,715 +77,23 @@
 </div>
 </nav>
 <main>
-<style>
-    /* ─── Home Page Enhancement Styles ─── */
-
-    /* Hairline Dividers */
-    .hairline-divider {
-        width: 100%;
-        height: 1px;
-        background: rgba(255, 255, 255, 0.1);
-        margin: 2rem 0;
-    }
-    .hairline-divider-dark {
-        width: 100%;
-        height: 1px;
-        background: rgba(11, 29, 58, 0.1);
-        margin: 2rem 0;
-    }
-
-    /* Hero */
-    .home-hero {
-        background: var(--navy);
-        padding: 4rem 0 6rem;
-        position: relative;
-        overflow: hidden;
-    }
-    .home-hero::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-image:
-            radial-gradient(circle at 80% 20%, rgba(179,146,85,0.08) 0%, transparent 60%),
-            radial-gradient(circle at 10% 80%, rgba(179,146,85,0.04) 0%, transparent 50%);
-        pointer-events: none;
-    }
-    .home-hero-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 4rem;
-        align-items: center;
-    }
-    .home-hero-eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 0.4rem 1.2rem;
-        background: rgba(179,146,85,0.05);
-        border: 1px solid rgba(179,146,85,0.25);
-        border-radius: 2px;
-        margin-bottom: 2rem;
-        backdrop-filter: blur(4px);
-    }
-    .home-hero-eyebrow-dot {
-        width: 6px; height: 6px;
-        border-radius: 50%;
-        background: var(--gold);
-        animation: pulseDot 2s ease-in-out infinite;
-    }
-    @keyframes pulseDot {
-        0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.5; transform: scale(0.75); }
-    }
-    .home-hero-eyebrow span {
-        color: var(--gold);
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-    }
-    .home-hero h1 {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 4rem;
-        font-weight: 300;
-        color: var(--cream);
-        line-height: 1.05;
-        letter-spacing: -1.5px;
-        margin-bottom: 1.75rem;
-    }
-    .home-hero h1 em {
-        font-style: italic;
-        color: var(--gold);
-        font-weight: 400;
-    }
-    .home-hero-sub {
-        font-size: 1.05rem;
-        color: rgba(251,247,240,0.65);
-        line-height: 1.7;
-        max-width: 500px;
-        margin-bottom: 2.5rem;
-        font-weight: 300;
-    }
-    .home-hero-cta {
-        display: flex;
-        gap: 1.25rem;
-        flex-wrap: wrap;
-        align-items: center;
-        margin-bottom: 1.5rem;
-    }
-    .home-hero-trust {
-        margin-top: 3rem;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        font-size: 0.75rem;
-        color: rgba(251,247,240,0.4);
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-    }
-    .home-hero-trust::before {
-        content: '';
-        display: block;
-        width: 40px; height: 1px;
-        background: rgba(179,146,85,0.4);
-    }
-
-    /* Stats bar on hero right */
-    .home-hero-stats {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        position: relative;
-        padding-left: 3rem;
-        border-left: 1px solid rgba(255,255,255,0.08);
-    }
-    .home-stat-card {
-        background: transparent;
-        padding: 0.5rem 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .home-stat-card:hover {
-        transform: translateX(5px);
-    }
-    .home-stat-label {
-        font-size: 0.7rem;
-        font-weight: 600;
-        color: var(--gold);
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        margin-bottom: 0.5rem;
-    }
-    .home-stat-value {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 2rem;
-        font-weight: 400;
-        color: var(--cream);
-        line-height: 1;
-    }
-    .home-stat-card:not(:last-child)::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 1px;
-        background: rgba(255,255,255,0.08);
-        margin-top: 1.5rem;
-    }
-    .home-stat-badge {
-        font-size: 0.75rem;
-        font-weight: 600;
-        padding: 0.2rem 0.6rem;
-        border-radius: 12px;
-    }
-    .home-stat-badge.up { background: rgba(34,197,94,0.15); color: #22c55e; }
-    .home-stat-badge.neutral { background: rgba(179,146,85,0.15); color: var(--gold); }
-
-    /* Snapshot card upgrade */
-    .snapshot-card {
-        background: var(--navy);
-        border: 1px solid rgba(179,146,85,0.15);
-        border-radius: 0;
-        padding: 3.5rem;
-        box-shadow: 0 30px 60px rgba(11,29,58,0.2);
-        position: relative;
-    }
-    .snapshot-card::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, var(--gold), transparent);
-        opacity: 0.5;
-    }
-    .snapshot-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 2rem;
-    }
-    .snapshot-item {
-        border-right: 1px solid rgba(255,255,255,0.08);
-        padding-right: 1.5rem;
-    }
-    .snapshot-item:last-child {
-        border-right: none;
-        padding-right: 0;
-    }
-    .snapshot-label {
-        font-size: 0.65rem;
-        color: rgba(251,247,240,0.5);
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        margin-bottom: 0.75rem;
-        font-weight: 600;
-    }
-    .snapshot-value {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 2rem;
-        font-weight: 400;
-        color: var(--cream);
-    }
-    .snapshot-mover span {
-        font-size: 0.9rem;
-        font-weight: 400;
-        color: var(--cream);
-        display: flex;
-        justify-content: space-between;
-        padding: 0.3rem 0;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .snapshot-mover span:last-child {
-        border-bottom: none;
-    }
-    .snapshot-footer-link {
-        margin-top: 3rem;
-        text-align: right;
-        border-top: 1px solid rgba(255,255,255,0.08);
-        padding-top: 1.5rem;
-    }
-    .snapshot-note {
-        font-size: 0.7rem;
-        color: rgba(251,247,240,0.4);
-        margin-top: 2rem;
-        letter-spacing: 0.5px;
-    }
-    .home-snapshot-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 2.5rem;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .home-snapshot-title {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 1.75rem;
-        font-weight: 300;
-        color: var(--cream);
-        margin: 0;
-    }
-    .live-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: transparent;
-        border: 1px solid rgba(34,197,94,0.4);
-        color: #22c55e;
-        font-size: 0.65rem;
-        font-weight: 600;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        padding: 0.35rem 0.85rem;
-        border-radius: 2px;
-    }
-    .live-badge::before {
-        content: '';
-        width: 6px; height: 6px;
-        border-radius: 50%;
-        background: #22c55e;
-        animation: pulseDot 1.5s infinite;
-    }
-
-    /* Why Us section */
-    .why-section {
-        background: var(--cream);
-        padding:4rem 0;
-        position: relative;
-    }
-    .why-section::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0;
-        height: 1px;
-        background: rgba(11,29,58,0.1);
-    }
-    .why-section-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 5rem;
-        border-bottom: 1px solid rgba(11,29,58,0.1);
-        padding-bottom: 2rem;
-    }
-    .section-eyebrow {
-        display: inline-block;
-        color: var(--gold);
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-    }
-    .section-title {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 3rem;
-        font-weight: 300;
-        color: var(--navy);
-        line-height: 1.1;
-        letter-spacing: -0.5px;
-        margin: 0;
-        max-width: 600px;
-    }
-    .why-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2.5rem;
-    }
-    .why-card {
-        background: var(--navy);
-        padding: 2.5rem;
-        border: none;
-        border-radius: var(--radius-md);
-        position: relative;
-        box-shadow: 0 10px 30px rgba(11, 29, 58, 0.1);
-    }
-    .why-card::before {
-        display: none;
-    }
-    .why-icon {
-        width: 50px; height: 50px;
-        border-radius: 50%;
-        border: 1px solid rgba(200,150,46,0.4);
-        background: transparent;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.25rem;
-        margin-bottom: 1.5rem;
-        color: var(--gold);
-    }
-    .why-card h3 {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: var(--cream);
-        margin-bottom: 1rem;
-        line-height: 1.2;
-    }
-    .why-card p {
-        font-size: 0.95rem;
-        color: rgba(251,247,240,0.85);
-        line-height: 1.7;
-        margin: 0;
-        font-weight: 400;
-    }
-
-    /* Services section */
-    .services-section {
-        background: var(--cream);
-        padding:4rem 0;
-        position: relative;
-    }
-    .services-section-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 5rem;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-        padding-bottom: 2rem;
-    }
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
-    }
-    .service-card {
-        background: var(--navy);
-        border: 1px solid rgba(11,29,58,0.1);
-        border-top: 3px solid var(--gold);
-        border-radius: var(--radius-md);
-        padding: 2.5rem;
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        position: relative;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
-    .service-card::after {
-        display: none;
-    }
-    .service-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    }
-    .service-num {
-        color: var(--gold);
-        font-size: 0.65rem;
-        font-weight: 600;
-        color: var(--gold);
-        letter-spacing: 2px;
-        margin-bottom: 1.5rem;
-        opacity: 0.8;
-    }
-    .service-card h3 {
-        color: var(--cream);
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 2rem;
-        font-weight: 600;
-        color: var(--cream);
-        margin-bottom: 1rem;
-    }
-    .service-card p {
-        font-size: 1rem;
-        color: #fbf7f0;
-        line-height: 1.7;
-        margin-bottom: 2.5rem;
-        font-weight: 400;
-    }
-
-    /* Teaser card upgrade */
-    .home-teaser {
-        background: var(--cream);
-        padding:4rem 0;
-        position: relative;
-    }
-    .teaser-premium {
-        background: var(--navy);
-        border-radius: var(--radius-md);
-        overflow: hidden;
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        border: 1px solid rgba(179,146,85,0.25);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-    .teaser-prem-left {
-        padding: 4rem;
-        border-right: 1px solid rgba(179,146,85,0.2);
-        background: var(--navy);
-        color: var(--cream);
-    }
-    .teaser-prem-right {
-          padding: 4rem 3rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          background: var(--navy);
-      }
-    .teaser-prem-eyebrow {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        margin-bottom: 1.5rem;
-    }
-    .teaser-prem-dot {
-        width: 6px; height: 6px; border-radius: 50%;
-        background: var(--gold);
-        animation: pulseDot 2s infinite;
-    }
-    .teaser-prem-label {
-        font-size: 0.7rem;
-        font-weight: 600;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        color: var(--gold);
-    }
-    .teaser-prem-date {
-          font-size: 0.78rem;
-          color: rgba(251,247,240,0.5);
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          margin-bottom: 1rem;
-          font-weight: 600;
-      }
-    .teaser-prem-title {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 2.1rem;
-          font-weight: 600;
-          color: var(--cream);
-          line-height: 1.2;
-          margin-bottom: 1.5rem;
-          letter-spacing: -0.5px;
-      }
-    .teaser-prem-body {
-          font-size: 0.92rem;
-          color: rgba(251,247,240,0.72);
-          line-height: 1.75;
-          margin-bottom: 2rem;
-          border-left: 3px solid var(--gold);
-          padding-left: 1.25rem;
-      }
-    .teaser-prem-stats {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 0.75rem;
-          padding-top: 1.5rem;
-      }
-      /* Each stat tile — identical to main DSE Snapshot tiles */
-      .teaser-prem-stat,
-      .teaser-prem-stats > div {
-          background-color: var(--navy);
-          border: 1px solid rgba(200,150,46,0.3);
-          border-top: 3px solid var(--gold);
-          padding: 1.25rem;
-          border-radius: 4px;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-          display: flex;
-          flex-direction: column;
-      }
-      .teaser-prem-stat-label {
-          font-size: 0.65rem;
-          color: var(--gold);
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          margin-bottom: 0.5rem;
-          font-weight: 700;
-          min-height: 24px;
-          display: flex;
-          align-items: flex-end;
-      }
-      /* Numbers — Cormorant Garamond exactly like main DSE Snapshot */
-      .teaser-prem-stat-value {
-          font-family: 'Cormorant Garamond', serif;
-          font-variant-numeric: tabular-nums;
-          font-size: 2rem;
-          font-weight: 400;
-          color: var(--cream);
-          letter-spacing: -0.5px;
-      }
-      /* Top Gainer percentage — slightly smaller sans-serif */
-      .teaser-prem-stat-value.gain {
-          font-family: 'Plus Jakarta Sans', sans-serif;
-          font-size: 0.85rem;
-          font-weight: 700;
-          color: #22c55e;
-      }
-    .teaser-right-label {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 1.6rem;
-          font-weight: 700;
-          color: var(--gold);
-          margin-bottom: 0;
-          letter-spacing: 0.3px;
-      }
-    .teaser-right-cta-text {
-          font-size: 0.95rem;
-          color: rgba(251,247,240,0.75);
-          line-height: 1.7;
-          font-style: italic;
-      }
-    .teaser-right-divider {
-          width: 50px;
-          height: 2px;
-          background: var(--gold);
-          margin-bottom: 1.5rem;
-      }
-
-    /* Newsletter premium */
-    .newsletter-premium {
-        background: var(--navy);
-        padding:4rem 0;
-        position: relative;
-    }
-    .newsletter-premium::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0;
-        height: 1px;
-        background: rgba(255,255,255,0.1);
-    }
-    .newsletter-inner {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5rem;
-        align-items: center;
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-    .newsletter-left h2 {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 3rem;
-        font-weight: 300;
-        color: var(--cream);
-        margin-bottom: 1rem;
-        line-height: 1.1;
-    }
-    .newsletter-left h2 span { color: var(--gold); font-style: italic; font-weight: 400; }
-    .newsletter-left p {
-        color: rgba(251,247,240,0.6);
-        font-size: 1.05rem;
-        line-height: 1.7;
-        margin: 0;
-        font-weight: 300;
-    }
-    .newsletter-form-premium {
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem;
-    }
-    .newsletter-form-premium input {
-        width: 100%;
-        padding: 1.2rem 1.5rem;
-        background: transparent;
-        border: 1px solid rgba(179,146,85,0.4);
-        border-radius: 2px;
-        color: var(--cream);
-        font-family: inherit;
-        font-size: 1rem;
-        outline: none;
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        box-sizing: border-box;
-    }
-    .newsletter-form-premium input:focus { 
-        border-color: var(--gold); 
-        background: rgba(255,255,255,0.02);
-    }
-    .newsletter-form-premium input::placeholder { color: rgba(251,247,240,0.3); }
-    .newsletter-form-premium button {
-        padding: 1.2rem 2rem;
-        background: var(--gold);
-        border: 1px solid var(--gold);
-        border-radius: 2px;
-        color: var(--navy);
-        font-weight: 600;
-        font-size: 0.85rem;
-        cursor: pointer;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        font-family: inherit;
-    }
-    .newsletter-form-premium button:hover {
-        background: transparent;
-        color: var(--gold);
-    }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-        .home-hero-grid { grid-template-columns: 1fr; gap: 3rem; }
-        .home-hero-stats { padding-left: 0; border-left: none; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 3rem; grid-template-columns: repeat(3, 1fr); }
-        .home-stat-card:not(:last-child)::after { display: none; }
-        .snapshot-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .snapshot-item { border-right: none; padding-right: 0; }
-        .why-grid { grid-template-columns: repeat(2, 1fr); }
-        .services-grid { grid-template-columns: repeat(2, 1fr); }
-        .teaser-premium { grid-template-columns: 1fr; }
-        .teaser-prem-right { border-top: 1px solid rgba(11,29,58,0.15); }
-        .newsletter-inner { grid-template-columns: 1fr; gap: 3rem; }
-    }
-    @media (max-width: 768px) {
-        .home-hero { padding: 4rem 0 3rem; }
-        .home-hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .home-hero-sub { font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .home-hero-stats { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 2rem; }
-        .home-stat-card:not(:last-child)::after { display: block; margin-top: 1.5rem; }
-        .snapshot-card { padding: 2rem; }
-        .snapshot-grid { grid-template-columns: 1fr; }
-        .home-snapshot-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-        .why-section { padding: 4rem 0; }
-        .why-section-header { flex-direction: column; align-items: flex-start; gap: 1rem; margin-bottom: 3rem; }
-        .section-title { font-size: 2rem; }
-        .why-grid { grid-template-columns: 1fr; }
-        .services-section { padding: 4rem 0; }
-        .services-section-header { flex-direction: column; align-items: flex-start; gap: 1rem; margin-bottom: 3rem; }
-        .services-grid { grid-template-columns: 1fr; }
-        .teaser-prem-left { padding: 2rem; }
-        .teaser-prem-right { padding: 2rem; }
-        .teaser-prem-title { font-size: 1.75rem; }
-        .teaser-prem-stats { flex-direction: column; gap: 1.5rem; }
-        .newsletter-premium { padding: 4rem 0; }
-        .newsletter-left h2 { font-size: 2rem; }
-    }
-    </style>
-<!-- ─── HERO ─── -->
-
-<!-- ============================================ -->
-<!-- HERO SECTION – IMAGE‑BACKED + PARALLAX      -->
-<!-- ============================================ -->
-<section class="home-hero">
+<!-- ─── HERO (refined mockup design, Oct 2026) ─── -->
+<header class="mk-hero">
+  <svg class="mk-chart-bg" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,320 L120,300 L240,310 L360,260 L480,280 L600,220 L720,240 L840,180 L960,200 L1080,140 L1200,160" fill="none" stroke="#c9a227" stroke-width="2"/>
+    <path d="M0,320 L120,300 L240,310 L360,260 L480,280 L600,220 L720,240 L840,180 L960,200 L1080,140 L1200,160 L1200,400 L0,400 Z" fill="#c9a227" opacity=".12"/>
+  </svg>
   <div class="container">
-    <div class="home-hero-grid">
-      <div class="home-hero-content">
-        <div class="home-hero-eyebrow">
-          <div class="home-hero-eyebrow-dot"></div>
-          <span>Tanzania's Premier Investment Advisory</span>
-        </div>
-        <h1>Intelligence That<br><em>Builds Wealth</em></h1>
-        <p class="home-hero-sub">Institutional-grade market intelligence, daily DSE analysis, and bespoke investment advisory for East Africa's discerning investors.</p>
-        <div class="home-hero-cta">
-          <a href="/market-intelligence" class="btn btn-gold-solid">Explore Market Data</a>
-          <a href="/contact" class="btn btn-outline">Speak to an Advisor</a>
-        </div>
-        <div class="home-hero-trust">
-          Registration with the Capital Markets and Securities Authority (CMSA) is currently pending.
-        </div>
-      </div>
-      <div class="home-hero-stats">
-        <div class="home-stat-card">
-          <div class="home-stat-value">Deep Insight</div>
-          <div class="home-stat-label">Local DSE Expertise</div>
-        </div>
-        <div class="home-stat-card">
-          <div class="home-stat-value">Data-Driven</div>
-          <div class="home-stat-label">Proprietary Analytics</div>
-        </div>
-        <div class="home-stat-card">
-          <div class="home-stat-value">Tailored</div>
-          <div class="home-stat-label">Investment strategies</div>
-        </div>
-      </div>
+    <div class="mk-kicker">Tanzania&apos;s Premier Investment Advisory</div>
+    <h1>Intelligence That <span class="mk-it">Builds Wealth</span></h1>
+    <p class="mk-lead">Institutional-grade market intelligence, daily DSE analysis, and bespoke investment advisory for East Africa&apos;s discerning investors.</p>
+    <div class="mk-hero-cta">
+      <a href="/market-intelligence" class="mk-btn mk-btn-gold">Read Market Analysis</a>
+      <a href="/investor-education" class="mk-btn mk-btn-ghost">Start Learning</a>
     </div>
+    <div class="mk-hero-note"><strong>CMSA registration</strong> currently pending &mdash; operating as an independent research publisher.</div>
   </div>
-</section>
-<div class="hairline-divider-dark"></div>
+</header>
 
 <!-- ─── MARKET TICKER (refined look, Oct 2026) ─── -->
 <!-- NOTE to automation: values below are static. The live template version in
@@ -819,203 +122,124 @@
   </div>
 </div>
 
-<!-- ─── LIVE DSE SNAPSHOT ─── -->
-<section style="padding: 5rem 0; background: var(--cream);">
-<div class="container">
-<div class="snapshot-card">
-<div class="home-snapshot-header">
-<h2 class="home-snapshot-title">DSE Snapshot</h2>
-<div style="display:flex;align-items:center;gap:1rem;">
-
-<span style="font-size:0.78rem;color:var(--mist);font-weight:600;">End-of-day &middot; 6 October 2026</span>
-</div>
-</div>
+<!-- ─── LIVE DSE SNAPSHOT (refined mockup design, Oct 2026) ─── -->
+<section class="mk-snapshot">
+  <div class="container">
+    <div class="mk-sec-label mk-rv">Live Market Snapshot</div>
+    <h2 class="mk-sec-title mk-rv">Dar es Salaam Stock Exchange</h2>
+    <p class="mk-sec-sub mk-rv">End-of-day figures, updated every trading day.</p>
 <!-- SNAPSHOT_CARD_START -->
-<div class="snapshot-grid">
-<div class="snapshot-item">
-<div class="snapshot-label">DSEI</div>
-<div class="snapshot-value" id="home-dsei">4,623.56</div>
-<canvas height="40" id="dseiChart" style="margin-top:0.5rem;" width="100"></canvas>
-</div>
-<div class="snapshot-item">
-<div class="snapshot-label">TSI</div>
-<div class="snapshot-value" id="home-tsi">10,234.40</div>
-<canvas height="40" id="tsiChart" style="margin-top:0.5rem;" width="100"></canvas>
-</div>
-<div class="snapshot-item">
-<div class="snapshot-label">Turnover</div>
-<div class="snapshot-value" id="home-turnover">TZS 2.23 bn</div>
-<div class="snapshot-bar-chart">
-<div class="bar" style="height: 40%"></div>
-<div class="bar" style="height: 60%"></div>
-<div class="bar" style="height: 30%"></div>
-<div class="bar" style="height: 45%"></div>
-<div class="bar" style="height: 44%"></div>
-</div>
-</div>
-<div class="snapshot-item">
-<div class="snapshot-label">Top Gainers</div>
-<div class="snapshot-mover" id="home-gainers" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                              <span>TOL <span style="color:var(--gain)">+7.5%</span></span>
-                  <span>MCB <span style="color:var(--gain)">+4.2%</span></span>
-                  <span>TCCL <span style="color:var(--gain)">+3.5%</span></span>
+<div class="mk-snap-grid">
+  <div class="mk-snap-card mk-rv">
+    <div class="mk-snap-name">DSE All Share Index</div>
+    <div class="mk-snap-val mk-count" id="home-dsei">4,623.56</div>
+    <div class="mk-snap-delta mk-down">&minus;23.29 pts on the day</div>
+    <canvas class="mk-spark" id="dseiSpark" data-points="4680,4662,4671,4646,4659,4623" role="img" aria-label="DSEI 6-day trend chart, illustrative values"></canvas>
+    <div class="mk-snap-foot">6-day trend &middot; illustrative</div>
   </div>
+  <div class="mk-snap-card mk-rv">
+    <div class="mk-snap-name">Tanzania Share Index</div>
+    <div class="mk-snap-val mk-count" id="home-tsi">10,234.40</div>
+    <div class="mk-snap-delta mk-up">+45.98 pts on the day</div>
+    <canvas class="mk-spark" id="tsiSpark" data-points="10120,10155,10142,10190,10210,10234" role="img" aria-label="TSI 6-day trend chart, illustrative values"></canvas>
+    <div class="mk-snap-foot">6-day trend &middot; illustrative</div>
   </div>
-<div class="snapshot-item">
-<div class="snapshot-label">Top Losers</div>
-<div class="snapshot-mover" id="home-losers" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                              <span>VODA <span style="color:var(--loss)">-1.6%</span></span>
-                  <span>PAL <span style="color:var(--loss)">-1.6%</span></span>
-                  <span>TTP <span style="color:var(--loss)">-1.3%</span></span>
-  </div>
+  <div class="mk-snap-card mk-rv">
+    <div class="mk-snap-name">Equity Turnover</div>
+    <div class="mk-snap-val mk-count" id="home-turnover"><span class="mk-cur">TZS&nbsp;</span>2.23<span class="mk-unit">&nbsp;bn</span></div>
+    <div class="mk-snap-delta mk-up">+30% vs previous session</div>
+    <canvas class="mk-spark" id="turnoverSpark" data-points="1.4,1.7,1.5,1.9,1.72,2.23" role="img" aria-label="Equity turnover 6-day trend chart, illustrative values"></canvas>
+    <div class="mk-snap-foot">6-day trend &middot; illustrative</div>
   </div>
 </div>
-<div class="snapshot-note" id="home-snapshot-date">Terminal Feed | End-of-day &middot; 6 October 2026</div>
+<div class="mk-movers">
+  <div class="mk-mover-card mk-rv">
+    <div class="mk-snap-name" style="margin-bottom:.6rem">Top Gainers</div>
+    <div id="home-gainers"><span>TOL <span style="color:var(--gain)">+7.5%</span></span><span>MCB <span style="color:var(--gain)">+4.2%</span></span><span>TCCL <span style="color:var(--gain)">+3.5%</span></span></div>
+  </div>
+  <div class="mk-mover-card mk-rv">
+    <div class="mk-snap-name" style="margin-bottom:.6rem">Top Losers</div>
+    <div id="home-losers"><span>VODA <span style="color:var(--loss)">&minus;1.6%</span></span><span>PAL <span style="color:var(--loss)">&minus;1.6%</span></span><span>TTP <span style="color:var(--loss)">&minus;1.3%</span></span></div>
+  </div>
+</div>
+<div class="mk-snap-date" id="home-snapshot-date">Terminal Feed | End-of-day &middot; 6 October 2026</div>
 <!-- SNAPSHOT_CARD_END -->
-<div class="snapshot-footer-link"><a class="gold-link" href="/market-intelligence">View Full Market Intelligence →</a></div>
-</div>
-</div>
+    <div class="mk-snapshot-footer"><a class="mk-text-link" href="/market-intelligence">View Full Market Intelligence &rarr;</a></div>
+  </div>
 </section>
-<!-- ─── WHY AMANA CAPITAL ─── -->
-<section class="why-section">
-<div class="container">
-<div class="why-section-header">
-<div class="section-eyebrow">Why Amana Capital</div>
-<h2 class="section-title">Our Four Governing Principles</h2>
-</div>
-<div class="why-grid">
-<div class="why-card reveal-up">
-<div class="why-icon">🏛️</div>
-<h3>Integrity First</h3>
-<p>We hold ourselves to the fiduciary standard — your interests are always placed before ours, without exception or compromise.</p>
-</div>
-<div class="why-card reveal-up" style="transition-delay:100ms;">
-<div class="why-icon">🔭</div>
-<h3>Long-Horizon Thinking</h3>
-<p>We invest with a multi-year conviction framework. We do not chase quarterly noise — we build compounding wealth across generations.</p>
-</div>
-<div class="why-card reveal-up" style="transition-delay:200ms;">
-<div class="why-icon">🌍</div>
-<h3>Regional Intelligence</h3>
-<p>Deep, boots-on-the-ground knowledge of the East African frontier. We see opportunities that global asset managers consistently overlook.</p>
-</div>
-<div class="why-card reveal-up" style="transition-delay:300ms;">
-<div class="why-icon">📐</div>
-<h3>Disciplined Conviction</h3>
-<p>Rigorous fundamental analysis. Data-driven decision making. We are unswayed by market sentiment and driven only by intrinsic value.</p>
-</div>
-</div>
-</div>
+<!-- ─── PRINCIPLES (refined mockup design, Oct 2026) ─── -->
+<section class="mk-principles">
+  <div class="container">
+    <div class="mk-sec-label mk-rv">Who We Are</div>
+    <h2 class="mk-sec-title mk-rv">Our Four Governing Principles</h2>
+    <p class="mk-sec-sub mk-rv">The standards every piece of our research is held to.</p>
+    <div class="mk-p-grid">
+      <div class="mk-p-card mk-rv"><div class="mk-p-num">01</div><h3>Integrity First</h3><p>We hold ourselves to the fiduciary standard &mdash; your interests before ours, without exception.</p></div>
+      <div class="mk-p-card mk-rv"><div class="mk-p-num">02</div><h3>Long-Horizon Thinking</h3><p>Multi-year conviction. We don&apos;t chase quarterly noise; we build compounding wealth.</p></div>
+      <div class="mk-p-card mk-rv"><div class="mk-p-num">03</div><h3>Regional Intelligence</h3><p>Boots-on-the-ground knowledge of the East African frontier that global managers overlook.</p></div>
+      <div class="mk-p-card mk-rv"><div class="mk-p-num">04</div><h3>Disciplined Conviction</h3><p>Rigorous fundamental analysis, driven only by intrinsic value &mdash; never by sentiment.</p></div>
+    </div>
+  </div>
 </section>
-
-<!-- ─── SERVICES ─── -->
-<section class="services-section">
-<div class="container">
-<div class="why-section-header" style="margin-bottom:3.5rem;">
-<div class="section-eyebrow">What We Do</div>
-<h2 class="section-title" style="color:var(--navy);">Our Core Services</h2>
-</div>
-<div class="services-grid">
-<div class="service-card reveal-up" style="transition-delay:100ms;">
-<div class="service-num">01 — RESEARCH</div>
-<h3>Market Intelligence</h3>
-<p>Daily institutional-grade analysis of the Dar es Salaam Stock Exchange. Equity research, macro commentary, and sector deep-dives delivered every trading day.</p>
-<a class="btn btn-gold-solid" href="/market-intelligence">Read Analysis →</a>
-</div>
-<div class="service-card reveal-up" style="transition-delay:200ms;">
-<div class="service-num">02 — EDUCATION</div>
-<h3>Investor Education</h3>
-<p>From the fundamentals of stock ownership to advanced bond valuation — our free curriculum closes the knowledge gap for every East African investor.</p>
-<a class="btn btn-gold-solid" href="/investor-education">Start Learning →</a>
-</div>
-<div class="service-card reveal-up" style="transition-delay:300ms;">
-<div class="service-num">03 — ADVISORY</div>
-<h3>Investment Advisory</h3>
-<p>Bespoke portfolio construction and strategic advisory for sophisticated investors and institutions. Rooted in fundamental analysis and a long-horizon worldview.</p>
-<a class="btn btn-gold-solid" href="/contact">Speak to Us →</a>
-</div>
-</div>
-</div>
+<!-- ─── SERVICES (refined mockup design, Oct 2026) ─── -->
+<section class="mk-services">
+  <div class="container">
+    <div class="mk-sec-label mk-rv">What We Do</div>
+    <h2 class="mk-sec-title mk-rv">Our Core Services</h2>
+    <p class="mk-sec-sub mk-rv">Three ways we serve East Africa&apos;s investors.</p>
+    <div class="mk-s-grid">
+      <div class="mk-s-card mk-rv"><div class="mk-idx">01 &mdash; Research</div><h3>Market Intelligence</h3><p>Daily institutional-grade analysis of the Dar es Salaam Stock Exchange, delivered every trading day.</p><a href="/market-intelligence" class="mk-text-link">Read Analysis &rarr;</a></div>
+      <div class="mk-s-card mk-rv"><div class="mk-idx">02 &mdash; Education</div><h3>Investor Education</h3><p>From the fundamentals of stock ownership to bond valuation &mdash; a free curriculum for every investor.</p><a href="/investor-education" class="mk-text-link">Start Learning &rarr;</a></div>
+      <div class="mk-s-card mk-rv"><div class="mk-idx">03 &mdash; Advisory</div><h3>Investment Advisory</h3><p>Bespoke portfolio construction for sophisticated investors and institutions.</p><a href="/contact" class="mk-text-link">Speak to Us &rarr;</a></div>
+    </div>
+  </div>
 </section>
-<!-- ─── TODAY'S WRAP TEASER ─── -->
-<section class="home-teaser">
-<div class="container">
-<div class="why-section-header" style="margin-bottom:2.5rem;">
-<div class="section-eyebrow">Latest Research</div>
-<h2 class="section-title">Today's DSE Wrap</h2>
-</div>
-<!-- TEASER_CARD_START -->
-<div class="teaser-premium reveal-up" style="transition-delay:100ms;">
-<div class="teaser-prem-left">
-<div class="teaser-prem-eyebrow">
-<span class="teaser-prem-dot"></span>
-<span class="teaser-prem-label">Daily DSE Wrap</span>
-</div>
-<div class="teaser-prem-date">Tuesday, 6th October 2026</div>
-<h3 class="teaser-prem-title">Daily DSE Wrap | Tuesday, 6th October 2026</h3>
-<p class="teaser-prem-body">Tuesday's session delivered the clearest signal yet that institutional money is rotating from bonds into equities. Government bond turnover collapsed 87.3% to TZS 1.45 billion &mdash; the lowest reading in weeks &mdash; while equity turnover rose 30% to TZS 6.01 billion. This is the pattern that experienced investors watch for. When institutions buy government bonds, they are parking cash in a safe, predictable asset. When they sell bonds or stop buying, that cash has to go somewhere. Often, it moves into equities &mdash; particularly high-quality, dividend-paying stocks.</p>
-<div class="teaser-prem-stats">
-<div>
-<div class="teaser-prem-stat-label">DSEI</div>
-                <div class="teaser-prem-stat-value">4,623.56</div>
-</div>
-<div class="teaser-prem-stat">
-<div class="teaser-prem-stat-label">Turnover</div>
-                <div class="teaser-prem-stat-value">TZS 2.23 bn</div>
-</div>
-<div class="teaser-prem-stat">
-<div class="teaser-prem-stat-label">Top Gainer</div>
-<div class="teaser-prem-stat-value gain" style="display:flex; justify-content:space-between; width:100%; font-family: 'Plus Jakarta Sans', sans-serif !important; font-size: 0.9rem !important; letter-spacing: 0;">
-                  <span>TOL</span> <span style="color: #22c55e;">+7.5%</span>
-                </div>
-</div>
-</div>
-</div>
-<div class="teaser-prem-right">
-<div class="teaser-right-label">Institutional Analysis</div>
-<div class="teaser-right-divider"></div>
-<p class="teaser-right-cta-text">Read the full wrap — data, context, and market perspective from our analysts.</p>
-<a class="btn btn-gold-solid" href="/dse-wrap-2026-10-06">Read the Full Wrap →</a>
-</div>
-</div>
-<!-- TEASER_CARD_END -->
-</div>
+<!-- ─── WRAP TEASER (refined mockup design, Oct 2026) ─── -->
+<!-- Automation hooks kept: #teaser-date / #teaser-body / #teaser-link
+     (see generate_daily_update.py). -->
+<section class="mk-wrap-teaser">
+  <div class="container">
+    <div class="mk-wt-card mk-rv">
+      <div class="mk-wt-body">
+        <div class="mk-wt-date">Daily DSE Wrap &middot; <span class="teaser-date" id="teaser-date">Tuesday, 6 October 2026</span></div>
+        <h3>Institutions Rotate <em>From Bonds Into Equities</em></h3>
+        <p class="teaser-body" id="teaser-body">Tuesday&apos;s session delivered the clearest signal yet that institutional money is rotating from bonds into equities. Government bond turnover collapsed 87.3% to TZS 1.45 billion &mdash; the lowest reading in weeks &mdash; while equity turnover rose 30% to TZS 6.01 billion.</p>
+        <div class="mk-wt-stats">
+          <div><span>DSEI</span><strong>4,623.56</strong></div>
+          <div><span>Turnover</span><strong>TZS 2.23bn</strong></div>
+          <div><span>Top Gainer</span><strong>TOL +7.5%</strong></div>
+        </div>
+        <a href="/dse-wrap-2026-10-06" class="mk-btn mk-btn-gold" id="teaser-link">Read the Full Wrap</a>
+      </div>
+      <div class="mk-wt-side">
+        <div><div class="mk-wt-big">&minus;0.5%</div><div class="mk-wt-cap">DSEI day move</div></div>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- ─── INTELLIGENCE BRIEFING ─── -->
-<section class="newsletter-premium">
-<div class="container">
-<div class="newsletter-inner">
-<div class="newsletter-left">
-<div class="section-eyebrow" style="color:var(--gold);">Intelligence Briefing</div>
-<h2>Join Our <span>Research</span> Network</h2>
-<p>Exclusive institutional-grade DSE wraps and macroeconomic briefings delivered to your inbox every trading day. No noise — only signal.</p>
-</div>
-<div>
-<form action="https://formspree.io/f/mvzjdqnv" class="newsletter-form-premium" method="POST">
-<input name="email" placeholder="Your institutional email address" required="" type="email"/>
-<button type="submit">Subscribe to Intelligence Briefing</button>
-</form>
-<p style="font-size:0.72rem;color:rgba(251,247,240,0.3);margin-top:0.75rem;">No spam. Unsubscribe at any time. For serious investors.</p>
-</div>
-</div>
-</div>
+<!-- ─── NEWSLETTER (refined mockup design, Oct 2026) ─── -->
+<section class="mk-news">
+  <div class="container">
+    <h2 class="mk-rv">Join Our Research Network</h2>
+    <p class="mk-rv">Institutional-grade DSE wraps and macro briefings in your inbox every trading day. No noise &mdash; only signal. Unsubscribe anytime.</p>
+    <form class="mk-news-form mk-rv" action="https://formspree.io/f/mvzjdqnv" method="POST">
+      <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+      <button class="mk-btn mk-btn-gold" type="submit">Subscribe</button>
+    </form>
+    <label class="mk-news-consent mk-rv"><input type="checkbox" checked style="margin-top:.3rem"> <span>I agree to receive research emails from Amana Capital EA. I can unsubscribe at any time.</span></label>
+    <p class="mk-news-note">No spam. Unsubscribe at any time. For serious investors.</p>
+  </div>
 </section>
 </main>
-<footer class="footer" style="background-color: var(--navy); padding: 3rem 0 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
-  <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center;">
-    <div>
-      <div style="font-family: 'Cormorant Garamond', serif; color: var(--gold); font-weight: 600; letter-spacing: 2px; font-size: 1.15rem; margin-bottom: 0.4rem; text-transform: uppercase;">AMANA CAPITAL EAST AFRICA</div>
-      <div style="color: rgba(251,247,240,0.5); font-size: 0.8rem; letter-spacing: 0.5px;">Dar es Salaam &middot; Tanzania &middot; Registration Pending CMSA</div>
+<footer class="mk-footer">
+  <div class="container">
+    <div class="mk-f-grid">
+      <div><div class="mk-f-brand">AMANA <em>CAPITAL</em></div><p class="mk-f-tag">Institutional DSE analysis and Tanzania investment advisory.</p></div>
+      <div class="mk-f-col"><h4>Research</h4><a href="/market-intelligence">Market Intelligence</a><a href="/current-prices">Current Prices</a><a href="/investor-education">Investor Education</a></div>
+      <div class="mk-f-col"><h4>Company</h4><a href="/about">About</a><a href="/contact">Contact</a><a href="/contact">Advisory</a></div>
+      <div class="mk-f-col"><h4>Legal</h4><a href="/privacy">Privacy</a><a href="/cookies">Cookies</a><a href="/terms">Terms</a></div>
     </div>
-    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin: 0.5rem 0;">
-      <a href="/market-intelligence" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Research</a>
-      <a href="/bond-calculator" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Bond Calc</a>
-      <a href="/compound-wealth" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Wealth Modeler</a>
-      <a href="/investor-education" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Education</a>
-      <a href="/about" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Governance</a>
-      <a href="/contact" style="color: var(--mist); text-decoration: none; font-size:0.85rem; transition: color 0.2s;">Contact</a>
-    </div>
-    <div style="color: var(--mist); opacity: 0.45; font-size:0.75rem;">&copy; 2026 Amana Capital East Africa Limited</div>
+    <div class="mk-f-base"><span>&copy; 2026 Amana Capital East Africa Ltd. All rights reserved.</span><span>CMSA registration pending.</span></div>
   </div>
 </footer>
 <script defer="" src="script.min.js?v=20260925c"></script>
@@ -1024,7 +248,7 @@
      any email with no credential check and no backend). Reintroduce only with a
      real authentication system. See website autopsy 2026-10-07, finding #1. -->
 
-<div id="consentBanner" class="consent-banner" hidden><div class="consent-content"><p class="consent-text">We use cookies to improve your experience and analyse site traffic. You can accept or reject non-essential cookies.</p><div class="consent-actions"><button id="consentAccept" class="btn btn-primary btn-sm">Accept</button><button id="consentReject" class="btn btn-outline btn-sm">Reject</button></div></div></div>
+<div class="mk-cookie" id="consentBanner" role="dialog" aria-label="Cookie consent" hidden><p>We use cookies to improve your experience and analyse site traffic. You can accept or reject non-essential cookies.</p><div class="mk-row"><button class="mk-btn mk-btn-gold mk-btn-sm" id="consentAccept" type="button">Accept</button><button class="mk-btn mk-btn-ghost mk-btn-sm" id="consentReject" type="button">Reject</button></div></div>
 <script src="/config/analytics.js"></script>
 <script src="/assets/js/analytics.js"></script>
 <script src="/assets/js/personalisation.js"></script>
@@ -1032,6 +256,90 @@
 <script src="/assets/js/newsletter.js"></script>
 <script src="/assets/js/consent.js"></script>
 
+<script>
+/* Refined mockup JS, Oct 2026: sparklines, count-up stats, reveal on scroll.
+   All scoped to .page-home; no-ops elsewhere. */
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- sparklines ---- */
+  function drawSpark(cv){
+    try{
+      var pts = cv.dataset.points.split(',').map(Number);
+      if(!pts.length || pts.some(isNaN)) return;
+      var col = getComputedStyle(cv).color || '#c9a227';
+      var m = cv.parentElement.querySelector('.mk-snap-delta');
+      if(m) col = m.classList.contains('mk-up') ? '#22c55e' : (m.classList.contains('mk-down') ? '#f87171' : '#c9a227');
+      cv.setAttribute('role','img');
+      if(!cv.getAttribute('aria-label')) cv.setAttribute('aria-label','Trend chart, illustrative values: '+pts.join(', '));
+      var dpr = window.devicePixelRatio||1, w = cv.clientWidth||260, h = cv.clientHeight||56;
+      cv.width = w*dpr; cv.height = h*dpr;
+      var c = cv.getContext('2d'); c.scale(dpr,dpr);
+      var min = Math.min.apply(null,pts), max = Math.max.apply(null,pts), rg = (max-min)||1;
+      var X = function(i){ return 4 + i*(w-8)/(pts.length-1); };
+      var Y = function(v){ return h-6 - ((v-min)/rg)*(h-14); };
+      var g = c.createLinearGradient(0,0,0,h);
+      g.addColorStop(0,col+'55'); g.addColorStop(1,col+'00');
+      c.beginPath(); c.moveTo(X(0),Y(pts[0]));
+      pts.forEach(function(v,i){ c.lineTo(X(i),Y(v)); });
+      c.lineTo(X(pts.length-1),h); c.lineTo(X(0),h); c.closePath();
+      c.fillStyle = g; c.fill();
+      c.beginPath(); c.moveTo(X(0),Y(pts[0]));
+      pts.forEach(function(v,i){ c.lineTo(X(i),Y(v)); });
+      c.strokeStyle = col; c.lineWidth = 2; c.lineJoin='round'; c.stroke();
+      c.beginPath(); c.arc(X(pts.length-1),Y(pts[pts.length-1]),3.5,0,7); c.fillStyle = col; c.fill();
+    }catch(e){/* chart is decorative; never break the page */}
+  }
+  function drawAllSparks(){ document.querySelectorAll('.page-home canvas.mk-spark').forEach(drawSpark); }
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(drawAllSparks); }
+  window.addEventListener('load', drawAllSparks);
+  window.addEventListener('resize', drawAllSparks);
+
+  /* ---- count-up stats (parses whatever the automation wrote) ---- */
+  function animateCount(el){
+    var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    var node=null, m=null;
+    while(walker.nextNode()){
+      var mm = walker.currentNode.nodeValue.match(/(-?[\d,]*\.\d+|-?[\d,]+)/);
+      if(mm){ node=walker.currentNode; m=mm; break; }
+    }
+    if(!node) return;
+    var full=node.nodeValue, numStr=m[0], target=parseFloat(numStr.replace(/,/g,''));
+    if(isNaN(target)) return;
+    var dec=(numStr.split('.')[1]||'').length;
+    var pre=full.slice(0,m.index), suf=full.slice(m.index+numStr.length);
+    function fmt(v){ return v.toLocaleString('en-GB',{minimumFractionDigits:dec,maximumFractionDigits:dec}); }
+    if(reduceMotion){ node.nodeValue=pre+fmt(target)+suf; return; }
+    var t0=null, dur=1400;
+    function step(t){
+      if(!t0) t0=t;
+      var p=Math.min((t-t0)/dur,1), e=1-Math.pow(1-p,3);
+      node.nodeValue=pre+fmt(target*e)+suf;
+      if(p<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var cio=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ animateCount(e.target); cio.unobserve(e.target); } });
+    },{threshold:.4});
+    document.querySelectorAll('.page-home .mk-count').forEach(function(el){ cio.observe(el); });
+  }else{
+    document.querySelectorAll('.page-home .mk-count').forEach(animateCount);
+  }
+
+  /* ---- reveal on scroll ---- */
+  if('IntersectionObserver' in window && !reduceMotion){
+    var rio=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('mk-in'); rio.unobserve(e.target); } });
+    },{threshold:.12});
+    document.querySelectorAll('.page-home .mk-rv').forEach(function(el){ rio.observe(el); });
+  }else{
+    document.querySelectorAll('.page-home .mk-rv').forEach(function(el){ el.classList.add('mk-in'); });
+  }
+})();
+</script>
 </body>
 </html>
 
