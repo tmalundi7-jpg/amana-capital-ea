@@ -1368,6 +1368,7 @@ html.is-animating #swup {
 
   /* Navbar */
   .navbar { height: 64px; }
+  .nav-links.active { top: 64px; } /* fix: menu aligns with 64px navbar on mobile */
   .nav-links {
     display: none;
     flex-direction: column;
