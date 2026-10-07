@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -48,17 +47,152 @@
 <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
 <link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
 <link href="/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<style>
+  :root{
+    --navy:#0a1830; --navy-2:#0e2140; --ink:#101418;
+    --gold:#c9a227; --gold-soft:rgba(201,162,39,.35);
+    --cream:#faf6ee; --cream-2:#f3ecdd;
+    --green:#22c55e; --red:#ef4444; --red-bright:#f87171; --gold-deep:#8a6d1c;
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Inter',-apple-system,'Segoe UI',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--navy);color:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 2rem}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;overflow:hidden;padding:7.5rem 0 5rem;text-align:center}
+  .hero svg.chart-bg{position:absolute;inset:0;width:100%;height:100%;opacity:.16;pointer-events:none}
+  .kicker{font-size:.75rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1.6rem}
+  h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.08;letter-spacing:.01em;max-width:16ch;margin:0 auto 1.4rem}
+  h1 .it{font-style:italic;color:var(--gold);font-weight:400}
+  .hero p.lead{max-width:620px;margin:0 auto 2.6rem;color:rgba(250,246,238,.68);font-size:1.08rem;font-weight:400}
+  .hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+  .hero-note{margin-top:2.2rem;font-size:.8rem;color:rgba(250,246,238,.6);letter-spacing:.06em}
+  .hero-note strong{color:var(--gold);font-weight:600}
+
+  /* ---------- ticker ---------- */
+  .ticker{border-top:1px solid rgba(201,162,39,.18);border-bottom:1px solid rgba(201,162,39,.18);background:rgba(0,0,0,.25);overflow:hidden;white-space:nowrap;padding:.85rem 0}
+  .ticker-track{display:inline-block;animation:tick 32s linear infinite}
+  .ticker:hover .ticker-track{animation-play-state:paused}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .tick-item{display:inline-block;margin:0 2.2rem;font-size:.85rem;letter-spacing:.08em;color:rgba(250,246,238,.75)}
+  .tick-item b{font-family:var(--serif);font-size:1.05rem;color:var(--cream);font-weight:600;margin-right:.5rem}
+  .up{color:var(--green)} .down{color:var(--red-bright)}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+  @media (prefers-reduced-motion: reduce){
+    .ticker-track{animation:none}
+    .rv{opacity:1;transform:none;transition:none}
+    .cookie.show{animation:none}
+    *{scroll-behavior:auto}
+  }
+
+  /* ---------- snapshot ---------- */
+  .snapshot{padding:5.5rem 0}
+  .sec-label{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+  .sec-title{font-family:var(--serif);font-size:2.4rem;font-weight:500;margin-bottom:.4rem}
+  .sec-sub{color:rgba(250,246,238,.55);margin-bottom:2.8rem;max-width:640px}
+  .snap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+  .snap-card{background:var(--navy-2);border:1px solid rgba(201,162,39,.14);border-radius:14px;padding:2.2rem;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+  .snap-card:hover{transform:translateY(-4px);border-color:rgba(201,162,39,.4)}
+  .snap-card::before{content:'';position:absolute;top:0;left:2.2rem;right:2.2rem;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.6}
+  .snap-name{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(250,246,238,.55);margin-bottom:1rem}
+  .snap-val{font-family:var(--serif);font-size:3rem;font-weight:600;color:var(--gold);line-height:1;font-variant-numeric:tabular-nums}
+  .snap-delta{font-size:.85rem;margin:.6rem 0 1.2rem;letter-spacing:.04em}
+  .snap-card canvas{width:100%;height:56px;display:block}
+  .snap-foot{margin-top:1.6rem;font-size:.75rem;color:rgba(250,246,238,.55);letter-spacing:.08em}
+  .movers{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:1.4rem}
+  .mover-card{background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:1.6rem 2rem}
+  .mover-row{display:flex;justify-content:space-between;align-items:center;padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:.95rem}
+  .mover-row:last-child{border-bottom:none}
+  .mover-row .sym{font-weight:600;letter-spacing:.08em}
+  .chip{font-size:.8rem;font-weight:600;padding:.28rem .8rem;border-radius:999px;font-variant-numeric:tabular-nums}
+  .chip.up{background:rgba(34,197,94,.14);color:var(--green)}
+  .chip.down{background:rgba(248,113,113,.14);color:var(--red-bright)}
+
+  /* ---------- principles (cream) ---------- */
+  .cream{background:var(--cream);color:var(--ink)}
+  .principles{padding:5.5rem 0}
+  .principles .sec-label{color:#8a6d1c}
+  .principles .sec-title{color:var(--navy)}
+  .principles .sec-sub{color:rgba(16,20,24,.6)}
+  .p-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+  .p-card{background:#fff;border:1px solid rgba(10,24,48,.08);border-left:2px solid var(--gold);border-radius:10px;padding:2rem;transition:transform .3s,box-shadow .3s}
+  .p-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(10,24,48,.1)}
+  .p-num{font-family:var(--serif);font-size:2rem;color:var(--gold-deep);font-weight:600}
+  .p-card h3{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--navy);margin:.8rem 0 .5rem}
+  .p-card p{font-size:.9rem;color:rgba(16,20,24,.62)}
+
+  /* ---------- services ---------- */
+  .services{padding:5.5rem 0;background:var(--navy)}
+  .s-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+  .s-card{border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:2.4rem;background:linear-gradient(180deg,rgba(255,255,255,.025),transparent);transition:border-color .3s,transform .3s}
+  .s-card:hover{border-color:rgba(201,162,39,.45);transform:translateY(-4px)}
+  .s-card .idx{font-size:.72rem;letter-spacing:.28em;color:var(--gold)}
+  .s-card h3{font-family:var(--serif);font-size:1.7rem;font-weight:500;margin:1rem 0 .7rem}
+  .s-card p{font-size:.92rem;color:rgba(250,246,238,.6);margin-bottom:1.6rem}
+  .text-link{color:var(--gold);text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.08em;border-bottom:1px solid var(--gold-soft);padding-bottom:2px;transition:border-color .25s}
+  .text-link:hover{border-color:var(--gold)}
+
+  /* ---------- wrap teaser ---------- */
+  .wrap-teaser{padding:0 0 5.5rem;background:var(--navy)}
+  .wt-card{display:grid;grid-template-columns:1.2fr 1fr;background:var(--navy-2);border:1px solid rgba(201,162,39,.16);border-radius:16px;overflow:hidden}
+  .wt-body{padding:3rem}
+  .wt-body .date{font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+  .wt-body h3{font-family:var(--serif);font-size:2rem;font-weight:500;line-height:1.2;margin-bottom:1rem}
+  .wt-body h3 em{color:var(--gold);font-weight:400}
+  .wt-body p{color:rgba(250,246,238,.62);font-size:.95rem;margin-bottom:1.8rem}
+  .wt-stats{display:flex;gap:2.4rem;margin-bottom:2rem;flex-wrap:wrap}
+  .wt-stats div span{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,246,238,.45)}
+  .wt-stats div strong{font-family:var(--serif);font-size:1.5rem;color:var(--cream);font-weight:600}
+  .wt-side{background:linear-gradient(135deg,#12294f,#0a1830);display:flex;align-items:center;justify-content:center;padding:3rem;border-left:1px solid rgba(201,162,39,.12)}
+  .wt-side .big{font-family:var(--serif);font-size:4.4rem;color:var(--gold);font-weight:600;line-height:1}
+  .wt-side .cap{text-align:center;color:rgba(250,246,238,.5);font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;margin-top:.8rem}
+
+  /* ---------- newsletter ---------- */
+  .news{background:var(--cream);color:var(--ink);padding:5.5rem 0;text-align:center}
+  .news h2{font-family:var(--serif);font-size:2.4rem;font-weight:500;color:var(--navy);margin-bottom:.8rem}
+  .news p{color:rgba(16,20,24,.6);max-width:560px;margin:0 auto 2rem}
+  .news-form{display:flex;gap:.7rem;justify-content:center;max-width:520px;margin:0 auto 1rem}
+  .news-form input{flex:1;padding:.95rem 1.3rem;border:1px solid rgba(10,24,48,.2);border-radius:999px;font-family:var(--sans);font-size:.95rem;background:#fff;color:var(--ink)}
+  .news-form input:focus{outline:2px solid var(--gold);border-color:var(--gold)}
+  .consent{display:flex;gap:.6rem;justify-content:center;align-items:flex-start;font-size:.78rem;color:rgba(16,20,24,.55);max-width:520px;margin:0 auto;text-align:left}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid rgba(201,162,39,.16);padding:3.5rem 0 2.5rem;background:#070f20}
+  .f-grid{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+  .f-brand{font-family:var(--serif);letter-spacing:.28em;font-size:1.1rem}
+  .f-brand em{font-style:normal;color:var(--gold)}
+  .f-col h4{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+  .f-col a{display:block;color:rgba(250,246,238,.6);text-decoration:none;font-size:.88rem;margin-bottom:.55rem}
+  .f-col a:hover{color:var(--gold)}
+  .f-base{border-top:1px solid rgba(255,255,255,.07);padding-top:1.6rem;display:flex;justify-content:space-between;font-size:.78rem;color:rgba(250,246,238,.6);flex-wrap:wrap;gap:1rem}
+
+  /* ---------- cookie banner ---------- */
+  .cookie{position:fixed;left:1.4rem;bottom:1.4rem;z-index:60;background:#0e2140;border:1px solid rgba(201,162,39,.3);border-radius:14px;padding:1.4rem 1.6rem;max-width:380px;box-shadow:0 20px 50px rgba(0,0,0,.5);display:none}
+  .cookie.show{display:block;animation:slideup .5s ease}
+  @keyframes slideup{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
+  .cookie p{font-size:.82rem;color:rgba(250,246,238,.7);margin-bottom:1rem}
+  .cookie .row{display:flex;gap:.6rem}
+  .btn-outline-gold{background:transparent;color:var(--gold);border:1px solid var(--gold-soft)}
+  .btn-outline-gold:hover{border-color:var(--gold)}
+
+  /* ---------- reveal on scroll ---------- */
+  .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+
+  
+
+  @media(max-width:900px){
+    .snap-grid,.p-grid,.s-grid,.movers{grid-template-columns:1fr}
+    .wt-card{grid-template-columns:1fr}
+    .nav-links{display:none}
+    .news-form{flex-direction:column}
+  }
+</style>
 </head>
 <body>
-
-<svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; width: 0; height: 0;">
-  <defs>
-    <filter id="duotone">
-      <feColorMatrix type="matrix" values="0.33 0.33 0.33 0 0.04 0.09 0.09 0.09 0 0.09 0.03 0.03 0.03 0 0.70 0 0 0 1 0" />
-    </filter>
-  </defs>
-</svg>
-
 <nav class="navbar">
 <div class="container nav-container">
 <a class="brand-link" href="/">
@@ -81,899 +215,135 @@
 </ul>
 </div>
 </nav>
-<main>
-<style>
-    /* ─── Home Page Enhancement Styles ─── */
 
-    /* Hairline Dividers */
-    .hairline-divider {
-        width: 100%;
-        height: 1px;
-        background: rgba(255, 255, 255, 0.1);
-        margin: 2rem 0;
-    }
-    .hairline-divider-dark {
-        width: 100%;
-        height: 1px;
-        background: rgba(11, 29, 58, 0.1);
-        margin: 2rem 0;
-    }
 
-    /* Hero */
-    .home-hero {
-        background: var(--navy);
-        padding:4rem 0; 6rem;
-        position: relative;
-        overflow: hidden;
-    }
-    .home-hero::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-image:
-            radial-gradient(circle at 80% 20%, rgba(179,146,85,0.08) 0%, transparent 60%),
-            radial-gradient(circle at 10% 80%, rgba(179,146,85,0.04) 0%, transparent 50%);
-        pointer-events: none;
-    }
-    .home-hero-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 4rem;
-        align-items: center;
-    }
-    .home-hero-eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 0.4rem 1.2rem;
-        background: rgba(179,146,85,0.05);
-        border: 1px solid rgba(179,146,85,0.25);
-        border-radius: 2px;
-        margin-bottom: 2rem;
-        backdrop-filter: blur(4px);
-    }
-    .home-hero-eyebrow-dot {
-        width: 6px; height: 6px;
-        border-radius: 50%;
-        background: var(--gold);
-        animation: pulseDot 2s ease-in-out infinite;
-    }
-    @keyframes pulseDot {
-        0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.5; transform: scale(0.75); }
-    }
-    .home-hero-eyebrow span {
-        color: var(--gold);
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-    }
-    .home-hero h1 {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 4rem;
-        font-weight: 300;
-        color: var(--cream);
-        line-height: 1.05;
-        letter-spacing: -1.5px;
-        margin-bottom: 1.75rem;
-    }
-    .home-hero h1 em {
-        font-style: italic;
-        color: var(--gold);
-        font-weight: 400;
-    }
-    .home-hero-sub {
-        font-size: 1.05rem;
-        color: rgba(251,247,240,0.65);
-        line-height: 1.7;
-        max-width: 500px;
-        margin-bottom: 2.5rem;
-        font-weight: 300;
-    }
-    .home-hero-cta {
-        display: flex;
-        gap: 1.25rem;
-        flex-wrap: wrap;
-        align-items: center;
-        margin-bottom: 1.5rem;
-    }
-    .home-hero-trust {
-        margin-top: 3rem;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        font-size: 0.75rem;
-        color: rgba(251,247,240,0.4);
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-    }
-    .home-hero-trust::before {
-        content: '';
-        display: block;
-        width: 40px; height: 1px;
-        background: rgba(179,146,85,0.4);
-    }
+<header class="hero">
+  <svg class="chart-bg" viewBox="0 0 1200 400" preserveAspectRatio="none">
+    <path d="M0,320 L120,300 L240,310 L360,260 L480,280 L600,220 L720,240 L840,180 L960,200 L1080,140 L1200,160" fill="none" stroke="#c9a227" stroke-width="2"/>
+    <path d="M0,320 L120,300 L240,310 L360,260 L480,280 L600,220 L720,240 L840,180 L960,200 L1080,140 L1200,160 L1200,400 L0,400 Z" fill="#c9a227" opacity=".12"/>
+  </svg>
+  <div class="wrap">
+    <div class="kicker">Tanzania's Premier Investment Advisory</div>
+    <h1>Intelligence That <span class="it">Builds Wealth</span></h1>
+    <p class="lead">Institutional-grade market intelligence, daily DSE analysis, and bespoke investment advisory for East Africa's discerning investors.</p>
+    <div class="hero-cta">
+      <a href="/market-intelligence" class="btn btn-gold">Read Market Analysis</a>
+      <a href="/investor-education" class="btn btn-ghost">Start Learning</a>
+    </div>
+    <div class="hero-note"><strong>CMSA registration</strong> currently pending — operating as an independent research publisher.</div>
+  </div>
+</header>
 
-    /* Stats bar on hero right */
-    .home-hero-stats {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        position: relative;
-        padding-left: 3rem;
-        border-left: 1px solid rgba(255,255,255,0.08);
-    }
-    .home-stat-card {
-        background: transparent;
-        padding: 0.5rem 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .home-stat-card:hover {
-        transform: translateX(5px);
-    }
-    .home-stat-label {
-        font-size: 0.7rem;
-        font-weight: 600;
-        color: var(--gold);
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        margin-bottom: 0.5rem;
-    }
-    .home-stat-value {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 2rem;
-        font-weight: 400;
-        color: var(--cream);
-        line-height: 1;
-    }
-    .home-stat-card:not(:last-child)::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 1px;
-        background: rgba(255,255,255,0.08);
-        margin-top: 1.5rem;
-    }
-    .home-stat-badge {
-        font-size: 0.75rem;
-        font-weight: 600;
-        padding: 0.2rem 0.6rem;
-        border-radius: 12px;
-    }
-    .home-stat-badge.up { background: rgba(34,197,94,0.15); color: #22c55e; }
-    .home-stat-badge.neutral { background: rgba(179,146,85,0.15); color: var(--gold); }
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
 
-    /* Snapshot card upgrade */
-    .snapshot-card {
-        background: var(--navy);
-        border: 1px solid rgba(179,146,85,0.15);
-        border-radius: 0;
-        padding: 3.5rem;
-        box-shadow: 0 30px 60px rgba(11,29,58,0.2);
-        position: relative;
-    }
-    .snapshot-card::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, var(--gold), transparent);
-        opacity: 0.5;
-    }
-    .snapshot-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 2rem;
-    }
-    .snapshot-item {
-        border-right: 1px solid rgba(255,255,255,0.08);
-        padding-right: 1.5rem;
-    }
-    .snapshot-item:last-child {
-        border-right: none;
-        padding-right: 0;
-    }
-    .snapshot-label {
-        font-size: 0.65rem;
-        color: rgba(251,247,240,0.5);
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        margin-bottom: 0.75rem;
-        font-weight: 600;
-    }
-    .snapshot-value {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 2rem;
-        font-weight: 400;
-        color: var(--cream);
-    }
-    .snapshot-mover span {
-        font-size: 0.9rem;
-        font-weight: 400;
-        color: var(--cream);
-        display: flex;
-        justify-content: space-between;
-        padding: 0.3rem 0;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .snapshot-mover span:last-child {
-        border-bottom: none;
-    }
-    .snapshot-footer-link {
-        margin-top: 3rem;
-        text-align: right;
-        border-top: 1px solid rgba(255,255,255,0.08);
-        padding-top: 1.5rem;
-    }
-    .snapshot-note {
-        font-size: 0.7rem;
-        color: rgba(251,247,240,0.4);
-        margin-top: 2rem;
-        letter-spacing: 0.5px;
-    }
-    .home-snapshot-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 2.5rem;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .home-snapshot-title {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 1.75rem;
-        font-weight: 300;
-        color: var(--cream);
-        margin: 0;
-    }
-    .live-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: transparent;
-        border: 1px solid rgba(34,197,94,0.4);
-        color: #22c55e;
-        font-size: 0.65rem;
-        font-weight: 600;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        padding: 0.35rem 0.85rem;
-        border-radius: 2px;
-    }
-    .live-badge::before {
-        content: '';
-        width: 6px; height: 6px;
-        border-radius: 50%;
-        background: #22c55e;
-        animation: pulseDot 1.5s infinite;
-    }
-
-    /* Why Us section */
-    .why-section {
-        background: var(--cream);
-        padding:4rem 0;
-        position: relative;
-    }
-    .why-section::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0;
-        height: 1px;
-        background: rgba(11,29,58,0.1);
-    }
-    .why-section-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 5rem;
-        border-bottom: 1px solid rgba(11,29,58,0.1);
-        padding-bottom: 2rem;
-    }
-    .section-eyebrow {
-        display: inline-block;
-        color: var(--gold);
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-    }
-    .section-title {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 3rem;
-        font-weight: 300;
-        color: var(--navy);
-        line-height: 1.1;
-        letter-spacing: -0.5px;
-        margin: 0;
-        max-width: 600px;
-    }
-    .why-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2.5rem;
-    }
-    .why-card {
-        background: var(--navy);
-        padding: 2.5rem;
-        border: none;
-        border-radius: var(--radius-md);
-        position: relative;
-        box-shadow: 0 10px 30px rgba(11, 29, 58, 0.1);
-    }
-    .why-card::before {
-        display: none;
-    }
-    .why-icon {
-        width: 50px; height: 50px;
-        border-radius: 50%;
-        border: 1px solid rgba(200,150,46,0.4);
-        background: transparent;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.25rem;
-        margin-bottom: 1.5rem;
-        color: var(--gold);
-    }
-    .why-card h3 {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: var(--cream);
-        margin-bottom: 1rem;
-        line-height: 1.2;
-    }
-    .why-card p {
-        font-size: 0.95rem;
-        color: rgba(251,247,240,0.85);
-        line-height: 1.7;
-        margin: 0;
-        font-weight: 400;
-    }
-
-    /* Services section */
-    .services-section {
-        background: var(--cream);
-        padding:4rem 0;
-        position: relative;
-    }
-    .services-section-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 5rem;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-        padding-bottom: 2rem;
-    }
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
-    }
-    .service-card {
-        background: var(--navy);
-        border: 1px solid rgba(11,29,58,0.1);
-        border-top: 3px solid var(--gold);
-        border-radius: var(--radius-md);
-        padding: 2.5rem;
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        position: relative;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
-    .service-card::after {
-        display: none;
-    }
-    .service-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    }
-    .service-num {
-        color: var(--gold);
-        font-size: 0.65rem;
-        font-weight: 600;
-        color: var(--gold);
-        letter-spacing: 2px;
-        margin-bottom: 1.5rem;
-        opacity: 0.8;
-    }
-    .service-card h3 {
-        color: var(--cream);
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 2rem;
-        font-weight: 600;
-        color: var(--cream);
-        margin-bottom: 1rem;
-    }
-    .service-card p {
-        font-size: 1rem;
-        color: #fbf7f0;
-        line-height: 1.7;
-        margin-bottom: 2.5rem;
-        font-weight: 400;
-    }
-
-    /* Teaser card upgrade */
-    .home-teaser {
-        background: var(--cream);
-        padding:4rem 0;
-        position: relative;
-    }
-    .teaser-premium {
-        background: var(--navy);
-        border-radius: var(--radius-md);
-        overflow: hidden;
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        border: 1px solid rgba(179,146,85,0.25);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-    .teaser-prem-left {
-        padding: 4rem;
-        border-right: 1px solid rgba(179,146,85,0.2);
-        background: var(--navy);
-        color: var(--cream);
-    }
-    .teaser-prem-right {
-          padding: 4rem 3rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          background: var(--navy);
-      }
-    .teaser-prem-eyebrow {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        margin-bottom: 1.5rem;
-    }
-    .teaser-prem-dot {
-        width: 6px; height: 6px; border-radius: 50%;
-        background: var(--gold);
-        animation: pulseDot 2s infinite;
-    }
-    .teaser-prem-label {
-        font-size: 0.7rem;
-        font-weight: 600;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        color: var(--gold);
-    }
-    .teaser-prem-date {
-          font-size: 0.78rem;
-          color: rgba(251,247,240,0.5);
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          margin-bottom: 1rem;
-          font-weight: 600;
-      }
-    .teaser-prem-title {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 2.1rem;
-          font-weight: 600;
-          color: var(--cream);
-          line-height: 1.2;
-          margin-bottom: 1.5rem;
-          letter-spacing: -0.5px;
-      }
-    .teaser-prem-body {
-          font-size: 0.92rem;
-          color: rgba(251,247,240,0.72);
-          line-height: 1.75;
-          margin-bottom: 2rem;
-          border-left: 3px solid var(--gold);
-          padding-left: 1.25rem;
-      }
-    .teaser-prem-stats {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 0.75rem;
-          padding-top: 1.5rem;
-      }
-      /* Each stat tile — identical to main DSE Snapshot tiles */
-      .teaser-prem-stat,
-      .teaser-prem-stats > div {
-          background-color: var(--navy);
-          border: 1px solid rgba(200,150,46,0.3);
-          border-top: 3px solid var(--gold);
-          padding: 1.25rem;
-          border-radius: 4px;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-          display: flex;
-          flex-direction: column;
-      }
-      .teaser-prem-stat-label {
-          font-size: 0.65rem;
-          color: var(--gold);
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          margin-bottom: 0.5rem;
-          font-weight: 700;
-          min-height: 24px;
-          display: flex;
-          align-items: flex-end;
-      }
-      /* Numbers — Cormorant Garamond exactly like main DSE Snapshot */
-      .teaser-prem-stat-value {
-          font-family: 'Cormorant Garamond', serif;
-          font-variant-numeric: tabular-nums;
-          font-size: 2rem;
-          font-weight: 400;
-          color: var(--cream);
-          letter-spacing: -0.5px;
-      }
-      /* Top Gainer percentage — slightly smaller sans-serif */
-      .teaser-prem-stat-value.gain {
-          font-family: 'Plus Jakarta Sans', sans-serif;
-          font-size: 0.85rem;
-          font-weight: 700;
-          color: #22c55e;
-      }
-    .teaser-right-label {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 1.6rem;
-          font-weight: 700;
-          color: var(--gold);
-          margin-bottom: 0;
-          letter-spacing: 0.3px;
-      }
-    .teaser-right-cta-text {
-          font-size: 0.95rem;
-          color: rgba(251,247,240,0.75);
-          line-height: 1.7;
-          font-style: italic;
-      }
-    .teaser-right-divider {
-          width: 50px;
-          height: 2px;
-          background: var(--gold);
-          margin-bottom: 1.5rem;
-      }
-
-    /* Newsletter premium */
-    .newsletter-premium {
-        background: var(--navy);
-        padding:4rem 0;
-        position: relative;
-    }
-    .newsletter-premium::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0;
-        height: 1px;
-        background: rgba(255,255,255,0.1);
-    }
-    .newsletter-inner {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5rem;
-        align-items: center;
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-    .newsletter-left h2 {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 3rem;
-        font-weight: 300;
-        color: var(--cream);
-        margin-bottom: 1rem;
-        line-height: 1.1;
-    }
-    .newsletter-left h2 span { color: var(--gold); font-style: italic; font-weight: 400; }
-    .newsletter-left p {
-        color: rgba(251,247,240,0.6);
-        font-size: 1.05rem;
-        line-height: 1.7;
-        margin: 0;
-        font-weight: 300;
-    }
-    .newsletter-form-premium {
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem;
-    }
-    .newsletter-form-premium input {
-        width: 100%;
-        padding: 1.2rem 1.5rem;
-        background: transparent;
-        border: 1px solid rgba(179,146,85,0.4);
-        border-radius: 2px;
-        color: var(--cream);
-        font-family: inherit;
-        font-size: 1rem;
-        outline: none;
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        box-sizing: border-box;
-    }
-    .newsletter-form-premium input:focus { 
-        border-color: var(--gold); 
-        background: rgba(255,255,255,0.02);
-    }
-    .newsletter-form-premium input::placeholder { color: rgba(251,247,240,0.3); }
-    .newsletter-form-premium button {
-        padding: 1.2rem 2rem;
-        background: var(--gold);
-        border: 1px solid var(--gold);
-        border-radius: 2px;
-        color: var(--navy);
-        font-weight: 600;
-        font-size: 0.85rem;
-        cursor: pointer;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        font-family: inherit;
-    }
-    .newsletter-form-premium button:hover {
-        background: transparent;
-        color: var(--gold);
-    }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-        .home-hero-grid { grid-template-columns: 1fr; gap: 3rem; }
-        .home-hero-stats { padding-left: 0; border-left: none; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 3rem; grid-template-columns: repeat(3, 1fr); }
-        .home-stat-card:not(:last-child)::after { display: none; }
-        .snapshot-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .snapshot-item { border-right: none; padding-right: 0; }
-        .why-grid { grid-template-columns: repeat(2, 1fr); }
-        .services-grid { grid-template-columns: repeat(2, 1fr); }
-        .teaser-premium { grid-template-columns: 1fr; }
-        .teaser-prem-right { border-top: 1px solid rgba(11,29,58,0.15); }
-        .newsletter-inner { grid-template-columns: 1fr; gap: 3rem; }
-    }
-    @media (max-width: 768px) {
-        .home-hero { padding: 4rem 0 3rem; }
-        .home-hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .home-hero-sub { font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .home-hero-stats { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 2rem; }
-        .home-stat-card:not(:last-child)::after { display: block; margin-top: 1.5rem; }
-        .snapshot-card { padding: 2rem; }
-        .snapshot-grid { grid-template-columns: 1fr; }
-        .home-snapshot-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-        .why-section { padding: 4rem 0; }
-        .why-section-header { flex-direction: column; align-items: flex-start; gap: 1rem; margin-bottom: 3rem; }
-        .section-title { font-size: 2rem; }
-        .why-grid { grid-template-columns: 1fr; }
-        .services-section { padding: 4rem 0; }
-        .services-section-header { flex-direction: column; align-items: flex-start; gap: 1rem; margin-bottom: 3rem; }
-        .services-grid { grid-template-columns: 1fr; }
-        .teaser-prem-left { padding: 2rem; }
-        .teaser-prem-right { padding: 2rem; }
-        .teaser-prem-title { font-size: 1.75rem; }
-        .teaser-prem-stats { flex-direction: column; gap: 1.5rem; }
-        .newsletter-premium { padding: 4rem 0; }
-        .newsletter-left h2 { font-size: 2rem; }
-    }
-    </style>
-<!-- ─── HERO ─── -->
-
-<!-- ============================================ -->
-<!-- HERO SECTION – IMAGE‑BACKED + PARALLAX      -->
-<!-- ============================================ -->
-<section class="home-hero">
-  <div class="container">
-    <div class="home-hero-grid">
-      <div class="home-hero-content">
-        <div class="home-hero-eyebrow">
-          <div class="home-hero-eyebrow-dot"></div>
-          <span>Tanzania's Premier Investment Advisory</span>
-        </div>
-        <h1>Intelligence That<br><em>Builds Wealth</em></h1>
-        <p class="home-hero-sub">Institutional-grade market intelligence, daily DSE analysis, and bespoke investment advisory for East Africa's discerning investors.</p>
-        <div class="home-hero-cta">
-          <a href="/market-intelligence" class="btn btn-gold-solid">Explore Market Data</a>
-          <a href="/contact" class="btn btn-outline">Speak to an Advisor</a>
-        </div>
-        <div class="home-hero-trust">
-          Registration with the Capital Markets and Securities Authority (CMSA) is currently pending.
-        </div>
+<section class="snapshot">
+  <div class="wrap">
+    <div class="sec-label rv">Live Market Snapshot</div>
+    <h2 class="sec-title rv">Dar es Salaam Stock Exchange</h2>
+    <p class="sec-sub rv">End-of-day figures, updated every trading day. <span style="color:var(--gold)">As of Wednesday, 7 October 2026.</span></p>
+    <div class="snap-grid">
+      <div class="snap-card rv">
+        <div class="snap-name">DSE All Share Index</div>
+        <div class="snap-val"><span class="count" data-to="4611.00" data-dec="2">0</span></div>
+        <div class="snap-delta down">−12.56 pts on the day</div>
+        <canvas class="spark" data-points="4680,4662,4671,4646,4659,4623" data-color="#c9a227"></canvas>
+        <div class="snap-foot">6-day trend · illustrative</div>
       </div>
-      <div class="home-hero-stats">
-        <div class="home-stat-card">
-          <div class="home-stat-value">Deep Insight</div>
-          <div class="home-stat-label">Local DSE Expertise</div>
-        </div>
-        <div class="home-stat-card">
-          <div class="home-stat-value">Data-Driven</div>
-          <div class="home-stat-label">Proprietary Analytics</div>
-        </div>
-        <div class="home-stat-card">
-          <div class="home-stat-value">Tailored</div>
-          <div class="home-stat-label">Investment strategies</div>
-        </div>
+      <div class="snap-card rv">
+        <div class="snap-name">Tanzania Share Index</div>
+        <div class="snap-val"><span class="count" data-to="10197.04" data-dec="2">0</span></div>
+        <div class="snap-delta down">−37.36 pts on the day</div>
+        <canvas class="spark" data-points="10120,10155,10142,10190,10210,10234" data-color="#22c55e"></canvas>
+        <div class="snap-foot">6-day trend · illustrative</div>
+      </div>
+      <div class="snap-card rv">
+        <div class="snap-name">Equity Turnover</div>
+        <div class="snap-val"><span style="font-size:1.6rem;vertical-align:.5rem">TZS&nbsp;</span><span class="count" data-to="5.68" data-dec="2">0</span><span style="font-size:1.6rem">&nbsp;bn</span></div>
+        <div class="snap-delta up">+154.8% vs previous session</div>
+        <canvas class="spark" data-points="1.4,1.7,1.5,1.9,1.72,2.23" data-color="#c9a227"></canvas>
+        <div class="snap-foot">6-day trend · illustrative</div>
+      </div>
+    </div>
+    <div class="movers">
+      <div class="mover-card rv">
+        <div class="snap-name" style="margin-bottom:.6rem">Top Gainers</div>
+        <div class="mover-row"><span class="sym">TTP</span><span class="chip up">+10.3%</span></div>
+        <div class="mover-row"><span class="sym">MCB</span><span class="chip up">+2.7%</span></div>
+        <div class="mover-row"><span class="sym">MBP</span><span class="chip up">+2.1%</span></div>
+      </div>
+      <div class="mover-card rv">
+        <div class="snap-name" style="margin-bottom:.6rem">Top Losers</div>
+        <div class="mover-row"><span class="sym">TOL</span><span class="chip down">−4.3%</span></div>
+        <div class="mover-row"><span class="sym">DSE</span><span class="chip down">−3.6%</span></div>
+        <div class="mover-row"><span class="sym">NICO</span><span class="chip down">−1.6%</span></div>
       </div>
     </div>
   </div>
 </section>
-<div class="hairline-divider-dark"></div>
 
-<!-- ─── LIVE DSE SNAPSHOT ─── -->
-<section style="padding: 5rem 0; background: var(--cream);">
-<div class="container">
-<div class="snapshot-card">
-<div class="home-snapshot-header">
-<h2 class="home-snapshot-title">DSE Snapshot</h2>
-<div style="display:flex;align-items:center;gap:1rem;">
-
-<span style="font-size:0.78rem;color:var(--mist);font-weight:600;">End-of-day &middot; 7 October 2026</span>
-</div>
-</div>
-<!-- SNAPSHOT_CARD_START -->
-<div class="snapshot-grid">
-<div class="snapshot-item">
-<div class="snapshot-label">DSEI</div>
-<div class="snapshot-value" id="home-dsei">4,611.00</div>
-<canvas height="40" id="dseiChart" style="margin-top:0.5rem;" width="100"></canvas>
-</div>
-<div class="snapshot-item">
-<div class="snapshot-label">TSI</div>
-<div class="snapshot-value" id="home-tsi">10,197.04</div>
-<canvas height="40" id="tsiChart" style="margin-top:0.5rem;" width="100"></canvas>
-</div>
-<div class="snapshot-item">
-<div class="snapshot-label">Turnover</div>
-<div class="snapshot-value" id="home-turnover">TZS 5.68 bn</div>
-<div class="snapshot-bar-chart">
-<div class="bar" style="height: 40%"></div>
-<div class="bar" style="height: 60%"></div>
-<div class="bar" style="height: 30%"></div>
-<div class="bar" style="height: 45%"></div>
-<div class="bar" style="height: 44%"></div>
-</div>
-</div>
-<div class="snapshot-item">
-<div class="snapshot-label">Top Gainers</div>
-<div class="snapshot-mover" id="home-gainers" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                              <span>TTP <span style="color:var(--gain)">+10.3%</span></span>
-                  <span>MCB <span style="color:var(--gain)">+2.7%</span></span>
-                  <span>MBP <span style="color:var(--gain)">+2.1%</span></span>
+<section class="cream principles">
+  <div class="wrap">
+    <div class="sec-label rv">Who We Are</div>
+    <h2 class="sec-title rv">Our Four Governing Principles</h2>
+    <p class="sec-sub rv">The standards every piece of our research is held to.</p>
+    <div class="p-grid">
+      <div class="p-card rv"><div class="p-num">01</div><h3>Integrity First</h3><p>We hold ourselves to the fiduciary standard — your interests before ours, without exception.</p></div>
+      <div class="p-card rv"><div class="p-num">02</div><h3>Long-Horizon Thinking</h3><p>Multi-year conviction. We don't chase quarterly noise; we build compounding wealth.</p></div>
+      <div class="p-card rv"><div class="p-num">03</div><h3>Regional Intelligence</h3><p>Boots-on-the-ground knowledge of the East African frontier that global managers overlook.</p></div>
+      <div class="p-card rv"><div class="p-num">04</div><h3>Disciplined Conviction</h3><p>Rigorous fundamental analysis, driven only by intrinsic value — never by sentiment.</p></div>
+    </div>
   </div>
-  </div>
-<div class="snapshot-item">
-<div class="snapshot-label">Top Losers</div>
-<div class="snapshot-mover" id="home-losers" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                              <span>TOL <span style="color:var(--loss)">-4.3%</span></span>
-                  <span>DSE <span style="color:var(--loss)">-3.6%</span></span>
-                  <span>NICO <span style="color:var(--loss)">-1.6%</span></span>
-  </div>
-  </div>
-</div>
-<div class="snapshot-note" id="home-snapshot-date">Terminal Feed | End-of-day &middot; 6 October 2026</div>
-<!-- SNAPSHOT_CARD_END -->
-<div class="snapshot-footer-link"><a class="gold-link" href="/market-intelligence">View Full Market Intelligence →</a></div>
-</div>
-</div>
-</section>
-<!-- ─── WHY AMANA CAPITAL ─── -->
-<section class="why-section">
-<div class="container">
-<div class="why-section-header">
-<div class="section-eyebrow">Why Amana Capital</div>
-<h2 class="section-title">Our Four Governing Principles</h2>
-</div>
-<div class="why-grid">
-<div class="why-card reveal-up">
-<div class="why-icon">🏛️</div>
-<h3>Integrity First</h3>
-<p>We hold ourselves to the fiduciary standard — your interests are always placed before ours, without exception or compromise.</p>
-</div>
-<div class="why-card reveal-up" style="transition-delay:100ms;">
-<div class="why-icon">🔭</div>
-<h3>Long-Horizon Thinking</h3>
-<p>We invest with a multi-year conviction framework. We do not chase quarterly noise — we build compounding wealth across generations.</p>
-</div>
-<div class="why-card reveal-up" style="transition-delay:200ms;">
-<div class="why-icon">🌍</div>
-<h3>Regional Intelligence</h3>
-<p>Deep, boots-on-the-ground knowledge of the East African frontier. We see opportunities that global asset managers consistently overlook.</p>
-</div>
-<div class="why-card reveal-up" style="transition-delay:300ms;">
-<div class="why-icon">📐</div>
-<h3>Disciplined Conviction</h3>
-<p>Rigorous fundamental analysis. Data-driven decision making. We are unswayed by market sentiment and driven only by intrinsic value.</p>
-</div>
-</div>
-</div>
 </section>
 
-<!-- ─── SERVICES ─── -->
-<section class="services-section">
-<div class="container">
-<div class="why-section-header" style="margin-bottom:3.5rem;">
-<div class="section-eyebrow">What We Do</div>
-<h2 class="section-title" style="color:var(--navy);">Our Core Services</h2>
-</div>
-<div class="services-grid">
-<div class="service-card reveal-up" style="transition-delay:100ms;">
-<div class="service-num">01 — RESEARCH</div>
-<h3>Market Intelligence</h3>
-<p>Daily institutional-grade analysis of the Dar es Salaam Stock Exchange. Equity research, macro commentary, and sector deep-dives delivered every trading day.</p>
-<a class="btn btn-gold-solid" href="/market-intelligence">Read Analysis →</a>
-</div>
-<div class="service-card reveal-up" style="transition-delay:200ms;">
-<div class="service-num">02 — EDUCATION</div>
-<h3>Investor Education</h3>
-<p>From the fundamentals of stock ownership to advanced bond valuation — our free curriculum closes the knowledge gap for every East African investor.</p>
-<a class="btn btn-gold-solid" href="/investor-education">Start Learning →</a>
-</div>
-<div class="service-card reveal-up" style="transition-delay:300ms;">
-<div class="service-num">03 — ADVISORY</div>
-<h3>Investment Advisory</h3>
-<p>Bespoke portfolio construction and strategic advisory for sophisticated investors and institutions. Rooted in fundamental analysis and a long-horizon worldview.</p>
-<a class="btn btn-gold-solid" href="/contact">Speak to Us →</a>
-</div>
-</div>
-</div>
+<section class="services">
+  <div class="wrap">
+    <div class="sec-label rv">What We Do</div>
+    <h2 class="sec-title rv">Our Core Services</h2>
+    <p class="sec-sub rv">Three ways we serve East Africa's investors.</p>
+    <div class="s-grid">
+      <div class="s-card rv"><div class="idx">01 — Research</div><h3>Market Intelligence</h3><p>Daily institutional-grade analysis of the Dar es Salaam Stock Exchange, delivered every trading day.</p><a href="/market-intelligence" class="text-link">Read Analysis →</a></div>
+      <div class="s-card rv"><div class="idx">02 — Education</div><h3>Investor Education</h3><p>From the fundamentals of stock ownership to bond valuation — a free curriculum for every investor.</p><a href="/investor-education" class="text-link">Start Learning →</a></div>
+      <div class="s-card rv"><div class="idx">03 — Advisory</div><h3>Investment Advisory</h3><p>Bespoke portfolio construction for sophisticated investors and institutions.</p><a href="/contact" class="text-link">Speak to Us →</a></div>
+    </div>
+  </div>
 </section>
-<!-- ─── TODAY'S WRAP TEASER ─── -->
-<section class="home-teaser">
-<div class="container">
-<div class="why-section-header" style="margin-bottom:2.5rem;">
-<div class="section-eyebrow">Latest Research</div>
-<h2 class="section-title">Today's DSE Wrap</h2>
-</div>
-<!-- TEASER_CARD_START -->
-<div class="teaser-premium reveal-up" style="transition-delay:100ms;">
-<div class="teaser-prem-left">
-<div class="teaser-prem-eyebrow">
-<span class="teaser-prem-dot"></span>
-<span class="teaser-prem-label">Daily DSE Wrap</span>
-</div>
-<div class="teaser-prem-date">Wednesday, 7th October 2026</div>
-<h3 class="teaser-prem-title">Daily DSE Wrap | Wednesday, 7th October 2026</h3>
-<p class="teaser-prem-body">Equity turnover surged 154.8% to TZS 5.68 billion as two large block trades &mdash; TBL (200,000 shares) and TCCL (240,000 shares) &mdash; crossed the pre-arranged board, while foreign selling accounted for 57.88% of turnover. Yet the All-Share Index fell only 12.56 points.</p>
-<div class="teaser-prem-stats">
-<div>
-<div class="teaser-prem-stat-label">DSEI</div>
-                <div class="teaser-prem-stat-value">4,611.00</div>
-</div>
-<div class="teaser-prem-stat">
-<div class="teaser-prem-stat-label">Turnover</div>
-                <div class="teaser-prem-stat-value">TZS 5.68 bn</div>
-</div>
-<div class="teaser-prem-stat">
-<div class="teaser-prem-stat-label">Top Gainer</div>
-<div class="teaser-prem-stat-value gain" style="display:flex; justify-content:space-between; width:100%; font-family: 'Plus Jakarta Sans', sans-serif !important; font-size: 0.9rem !important; letter-spacing: 0;">
-                  <span>TTP</span> <span style="color: #22c55e;">+10.3%</span>
-                </div>
-</div>
-</div>
-</div>
-<div class="teaser-prem-right">
-<div class="teaser-right-label">Institutional Analysis</div>
-<div class="teaser-right-divider"></div>
-<p class="teaser-right-cta-text">Read the full wrap — data, context, and market perspective from our analysts.</p>
-<a class="btn btn-gold-solid" href="/dse-wrap-2026-10-07">Read the Full Wrap →</a>
-</div>
-</div>
-<!-- TEASER_CARD_END -->
-</div>
+
+<section class="wrap-teaser">
+  <div class="wrap">
+    <div class="wt-card rv">
+      <div class="wt-body">
+        <div class="date">Daily DSE Wrap · Wednesday, 7 October 2026</div>
+        <h3>Turnover Surges 154.8% <em>as Block Trades Dominate</em></h3>
+        <p>Equity turnover surged 154.8% to TZS 5.68 billion as two large block trades — TBL (200,000 shares) and TCCL (240,000 shares) — crossed the pre-arranged board, while foreign selling accounted for 57.88% of turnover.</p>
+        <div class="wt-stats">
+          <div><span>DSEI</span><strong>4,611.00</strong></div>
+          <div><span>Turnover</span><strong>TZS 5.68bn</strong></div>
+          <div><span>Top Gainer</span><strong>TTP +10.3%</strong></div>
+        </div>
+        <a href="/dse-wrap-2026-10-07" class="btn btn-gold">Read the Full Wrap</a>
+      </div>
+      <div class="wt-side">
+        <div><div class="big">−0.3%</div><div class="cap">DSEI day move</div></div>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- ─── INTELLIGENCE BRIEFING ─── -->
-<section class="newsletter-premium">
-<div class="container">
-<div class="newsletter-inner">
-<div class="newsletter-left">
-<div class="section-eyebrow" style="color:var(--gold);">Intelligence Briefing</div>
-<h2>Join Our <span>Research</span> Network</h2>
-<p>Exclusive institutional-grade DSE wraps and macroeconomic briefings delivered to your inbox every trading day. No noise — only signal.</p>
-</div>
-<div>
-<form action="https://formspree.io/f/mvzjdqnv" class="newsletter-form-premium" method="POST">
-<input name="email" placeholder="Your institutional email address" required="" type="email"/>
-<button type="submit">Subscribe to Intelligence Briefing</button>
-</form>
-<p style="font-size:0.72rem;color:rgba(251,247,240,0.3);margin-top:0.75rem;">No spam. Unsubscribe at any time. For serious investors.</p>
-</div>
-</div>
-</div>
+
+<section class="news">
+  <div class="wrap">
+    <h2 class="rv">Join Our Research Network</h2>
+    <p class="rv">Institutional-grade DSE wraps and macro briefings in your inbox every trading day. No noise — only signal. Unsubscribe anytime.</p>
+    <form class="news-form rv" onsubmit="return false">
+      <input type="email" placeholder="you@example.com" aria-label="Email address">
+      <button class="btn btn-gold" type="submit">Subscribe</button>
+    </form>
+    <label class="consent rv"><input type="checkbox" checked style="margin-top:.3rem"> I agree to receive research emails from Amana Capital EA. I can unsubscribe at any time.</label>
+  </div>
 </section>
-</main>
+
+
 <footer class="footer" style="background-color: var(--navy); padding: 3rem 0 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
   <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center;">
     <div>
@@ -991,22 +361,77 @@
     <div style="color: var(--mist); opacity: 0.45; font-size:0.75rem;">&copy; 2026 Amana Capital East Africa Limited</div>
   </div>
 </footer>
-<script defer="" src="script.min.js?v=20260925c"></script>
-
-<div id="authModal" class="auth-modal" role="dialog" aria-hidden="true"><div class="auth-modal-content"><button class="auth-modal-close" id="authModalClose">✕</button><h2 class="auth-title">Welcome Back</h2><form id="loginForm" class="auth-form"><div class="form-group"><label>Email</label><input type="email" required></div><button type="submit" class="btn btn-primary btn-block">Sign In</button></form></div></div>
-
 <div id="consentBanner" class="consent-banner" hidden><div class="consent-content"><p class="consent-text">We use cookies.</p><div class="consent-actions"><button id="consentAccept" class="btn btn-primary btn-sm">Accept</button></div></div></div>
-<script src="/config/analytics.js"></script>
-<script src="/assets/js/analytics.js"></script>
-<script src="/assets/js/personalisation.js"></script>
-<script src="/assets/js/engagement.js"></script>
-<script src="/assets/js/auth.js"></script>
-<script src="/assets/js/newsletter.js"></script>
-<script src="/assets/js/consent.js"></script>
+<script>
+// ---- market ticker (07 Oct 2026 figures) ----
+(function(){
+  var items = [
+    ['DSEI','4,611.00','−12.56','down'],['TSI','10,197.04','−37.36','down'],
+    ['TTP','+10.3%','','up'],['MCB','+2.7%','','up'],['MBP','+2.1%','','up'],
+    ['TOL','−4.3%','','down'],['DSE','−3.6%','','down'],['NICO','−1.6%','','down'],
+    ['Turnover','TZS 5.68bn','+154.8%','up']
+  ];
+  var html = items.map(function(i){
+    return '<span class="tick-item"><b>'+i[0]+'</b>'+i[1]+(i[2]?' <span class="'+i[3]+'">'+i[2]+'</span>':'')+'</span>';
+  }).join('');
+  document.getElementById('tickerTrack').innerHTML = html + html; // doubled for seamless loop
+})();
+// ---- count-up stats (instant values when reduced motion is preferred) ----
+(function(){
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function fmt(el,v){ var dec=parseInt(el.dataset.dec||'0',10); return v.toLocaleString('en-GB',{minimumFractionDigits:dec,maximumFractionDigits:dec}); }
+  function animate(el){
+    var to = parseFloat(el.dataset.to);
+    if(reduceMotion){ el.textContent = fmt(el,to); return; }
+    var dec = parseInt(el.dataset.dec||'0',10), t0 = null, dur = 1400;
+    function step(t){
+      if(!t0) t0 = t;
+      var p = Math.min((t-t0)/dur, 1), e = 1-Math.pow(1-p,3);
+      el.textContent = fmt(el,to*e);
+      if(p<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ animate(e.target); io.unobserve(e.target); } });
+  },{threshold:.4});
+  document.querySelectorAll('.count').forEach(function(el){ io.observe(el); });
+})();
 
+// ---- sparklines (with accessible names for screen readers) ----
+document.querySelectorAll('canvas.spark').forEach(function(cv){
+  var pts = cv.dataset.points.split(',').map(Number), col = cv.dataset.color;
+  cv.setAttribute('role','img');
+  cv.setAttribute('aria-label','6-day trend chart: values ' + pts.join(', '));
+  var dpr = window.devicePixelRatio||1, w = cv.clientWidth, h = cv.clientHeight;
+  cv.width = w*dpr; cv.height = h*dpr;
+  var c = cv.getContext('2d'); c.scale(dpr,dpr);
+  var min = Math.min.apply(null,pts), max = Math.max.apply(null,pts), rg = (max-min)||1;
+  var X = function(i){ return 4 + i*(w-8)/(pts.length-1); };
+  var Y = function(v){ return h-6 - ((v-min)/rg)*(h-14); };
+  var g = c.createLinearGradient(0,0,0,h);
+  g.addColorStop(0,col+'55'); g.addColorStop(1,col+'00');
+  c.beginPath(); c.moveTo(X(0),Y(pts[0]));
+  pts.forEach(function(v,i){ c.lineTo(X(i),Y(v)); });
+  c.lineTo(X(pts.length-1),h); c.lineTo(X(0),h); c.closePath();
+  c.fillStyle = g; c.fill();
+  c.beginPath(); c.moveTo(X(0),Y(pts[0]));
+  pts.forEach(function(v,i){ c.lineTo(X(i),Y(v)); });
+  c.strokeStyle = col; c.lineWidth = 2; c.lineJoin='round'; c.stroke();
+  c.beginPath(); c.arc(X(pts.length-1),Y(pts[pts.length-1]),3.5,0,7); c.fillStyle = col; c.fill();
+});
+
+// ---- reveal on scroll ----
+(function(){
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+
+
+</script>
+<script defer src="script.min.js?v=20260925c"></script>
+<script src="/assets/js/consent.js"></script>
 </body>
 </html>
-
-
-
-

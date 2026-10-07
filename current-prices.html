@@ -7,7 +7,7 @@
 <title>Current Prices | Amana Capital East Africa</title>
 <meta content="View the latest Dar es Salaam Stock Exchange (DSE) equity prices, volumes, and turnover. Updated daily by Amana Capital East Africa." name="description"/>
 <link href="https://www.amana-capital-ea.co.tz/current-prices.html" rel="canonical"/>
-<link href="style.css?v=20261007_refined" rel="stylesheet"/>
+<link href="style.css?v=20261007_combo" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
@@ -35,6 +35,20 @@
     <meta property="og:url" content="https://www.amana-capital-ea.co.tz/current-prices.html">
     <meta property="og:image" content="https://www.amana-capital-ea.co.tz/og-image-v2.png">
     <meta name="twitter:card" content="summary_large_image">
+
+<style>
+/* Cream integration Oct 2026: session board + block trades */
+.page-terminal .term-board.cream-board { background: #FEF9F0 !important; border: 1px solid rgba(10,22,40,.1) !important; border-radius: 14px; }
+.page-terminal .term-board.cream-board .term-cell .k { color: rgba(10,22,40,.55) !important; }
+.page-terminal .term-board.cream-board .term-cell .v { color: #0A1628 !important; }
+.page-terminal .term-board.cream-board .term-cell .snapshot-value { color: #0A1628 !important; }
+.page-terminal .term-board.cream-board .term-up { color: #15803d !important; }
+.page-terminal .term-board.cream-board .term-down { color: #b91c1c !important; }
+.page-terminal .term-block.cream-block { background: #FEF9F0 !important; border: 1px solid rgba(10,22,40,.1) !important; }
+.page-terminal .term-block.cream-block .k { color: rgba(10,22,40,.55) !important; }
+.page-terminal .term-block.cream-block .v { color: #0A1628 !important; }
+.page-terminal .term-block.cream-block small { color: rgba(10,22,40,.6) !important; }
+</style>
 </head>
 <body class="page-terminal">
 <nav class="navbar">
@@ -68,7 +82,7 @@
 </div>
 </header>
 <div class="container">
-<div class="term-board">
+<div class="term-board cream-board">
   <div class="term-cell"><div class="k">DSEI</div><div class="v">4,611.00</div><div class="d term-down">-12.56 (-0.27%)</div></div>
   <div class="term-cell"><div class="k">TSI</div><div class="v">10,197.04</div><div class="d term-down">-37.36 (-0.37%)</div></div>
   <div class="term-cell"><div class="k">Turnover</div><div class="v">5.68bn</div><div class="d term-up">+154.8% vs prev</div></div>
@@ -78,8 +92,8 @@
 
 <div class="term-sec">Pre-Arranged Board &mdash; Block Trades</div>
 <div class="term-blocks">
-  <div class="term-block"><div class="k">TBL</div><div class="v">200,000 <small>shares</small></div></div>
-  <div class="term-block"><div class="k">TCCL</div><div class="v">240,000 <small>shares</small></div></div>
+  <div class="term-block cream-block"><div class="k">TBL</div><div class="v">200,000 <small>shares</small></div></div>
+  <div class="term-block cream-block"><div class="k">TCCL</div><div class="v">240,000 <small>shares</small></div></div>
 </div>
 <!-- PRICES_TABLE_START -->
 <div class="term-tbl-wrap"><table class="term-table data-table">

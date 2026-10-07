@@ -7,7 +7,7 @@
 <title>Daily DSE Market Wrap &amp; Analysis | Amana Capital EA</title>
 <meta content="Read our daily Dar es Salaam Stock Exchange (DSE) wrap. Get institutional-grade market intelligence, top movers, and equity research from Amana Capital East Africa." name="description"/>
 <link href="https://www.amana-capital-ea.co.tz/market-intelligence" rel="canonical"/>
-<link href="style.css?v=20261007_refined" rel="stylesheet"/>
+<link href="style.css?v=20261007_combo" rel="stylesheet"/>
 <!-- Chart.js in head so it's available immediately -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@2.0.2"></script>
@@ -34,6 +34,21 @@
 <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
 <link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
 <link href="/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+
+<style>
+/* Cream integration Oct 2026: market highlights strip + alternating sidebar */
+.page-terminal .term-board.cream-board { background: #FEF9F0 !important; border: 1px solid rgba(10,22,40,.1) !important; border-radius: 14px; }
+.page-terminal .term-board.cream-board .term-cell .k { color: rgba(10,22,40,.55) !important; }
+.page-terminal .term-board.cream-board .term-cell .v { color: #0A1628 !important; }
+.page-terminal .term-board.cream-board .term-cell .snapshot-value { color: #0A1628 !important; }
+.page-terminal .term-board.cream-board .term-up { color: #15803d !important; }
+.page-terminal .term-board.cream-board .term-down { color: #b91c1c !important; }
+.page-terminal .term-side-card.cream-side { background: #FEF9F0 !important; border: 1px solid rgba(10,22,40,.1) !important; }
+.page-terminal .term-side-card.cream-side h4 { color: #0A1628 !important; }
+.page-terminal .term-side-card.cream-side p { color: rgba(10,22,40,.75) !important; }
+.page-terminal .term-side-card.cream-side a:not(.btn) { color: #0A1628 !important; }
+.page-terminal .term-side-card.cream-side .term-side-label { color: rgba(10,22,40,.55) !important; }
+</style>
 </head>
 <body class="page-terminal">
 <nav class="navbar">
@@ -71,7 +86,7 @@
 <!-- ─── MAIN BODY ─── -->
 <div class="container">
 <div class="term-sec">Session Board &mdash; 7 October 2026</div>
-<div class="term-board">
+<div class="term-board cream-board">
   <div class="term-cell"><div class="k">DSEI</div><div class="snapshot-value v" id="mi-dsei">4,611.00</div><div class="d term-down">-12.56 (-0.27%)</div></div>
   <div class="term-cell"><div class="k">TSI</div><div class="snapshot-value v" id="mi-tsi">10,197.04</div><div class="d term-down">-37.36 (-0.37%)</div></div>
   <div class="term-cell"><div class="k">Turnover</div><div class="snapshot-value v" id="mi-turnover">TZS 5.68bn</div><div class="d term-up">+154.8% vs prev</div></div>
@@ -114,7 +129,7 @@
 <li><a href="/risk-profiler">Risk Profiler <span>→</span></a></li>
 </ul>
 </div>
-<div class="term-side-card">
+<div class="term-side-card cream-side">
 <h4>Analyst Commentary</h4>
 <div class="term-quote"><p>"The DSE continues to offer compelling structural value — patient long-term investors remain well-positioned relative to global EM peers."</p>
 </div>
@@ -126,7 +141,7 @@
 <p style="font-size:0.83rem;color:rgba(232,228,216,0.75);line-height:1.6;margin-bottom:1rem;">Build your foundational knowledge with our free investor education curriculum. From equities to bonds — we cover it all.</p>
 <a class="btn btn-gold-solid" href="/investor-education" style="width:100%;text-align:center;display:block;font-size:0.85rem;">Start Learning →</a>
 </div>
-<div class="term-side-card">
+<div class="term-side-card cream-side">
 <h4 style="color:var(--gold);">Research Coverage</h4>
 <div style="display:flex;flex-direction:column;gap:0.5rem;font-size:0.82rem;">
 <div style="display:flex;justify-content:space-between;color:rgba(251,247,240,0.75);">

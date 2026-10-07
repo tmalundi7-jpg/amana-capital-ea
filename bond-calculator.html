@@ -31,7 +31,13 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
-    </head>
+    
+<style>
+.page-terminal .calc-result.cream-box { background: #FEF9F0 !important; border: 1px solid rgba(10,22,40,.1) !important; border-radius: 12px; padding: 1.5rem; }
+.page-terminal .calc-result.cream-box * { color: #0A1628 !important; }
+.page-terminal .calc-result.cream-box .result-value { color: #0A1628 !important; font-weight: 700; }
+</style>
+</head>
 <body class="page-terminal">
                                                     <nav class="navbar">
         <div class="container nav-container">
@@ -164,17 +170,17 @@
                         <h2 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">Analytics Report</h2>
                         
                         <div class="grid-2" style="gap: 1rem; margin-bottom: 1.5rem;">
-                            <div class="calc-result" style="background: rgba(255,255,255,0.05); border: none;">
+                            <div class="calc-result cream-box" style="background: rgba(255,255,255,0.05); border: none;">
                                 <div style="color:var(--mist); font-size:0.8rem; text-transform:uppercase;">Accrued Interest</div>
                                 <div id="out-ai" style="color:var(--white); font-size:1.4rem; font-weight:700;">0.0000</div>
                             </div>
-                            <div class="calc-result" style="background: rgba(255,255,255,0.05); border: none;">
+                            <div class="calc-result cream-box" style="background: rgba(255,255,255,0.05); border: none;">
                                 <div style="color:var(--mist); font-size:0.8rem; text-transform:uppercase;">Total Dirty Price</div>
                                 <div id="out-dp" style="color:var(--white); font-size:1.4rem; font-weight:700;">100.0000</div>
                             </div>
                         </div>
 
-                        <div class="calc-result" style="background: var(--gold); border: none; margin-bottom: 1.5rem;">
+                        <div class="calc-result cream-box" style="background: var(--gold); border: none; margin-bottom: 1.5rem;">
                             <div style="color:var(--navy); font-size:0.9rem; text-transform:uppercase; font-weight: 700;">Yield to Worst (YTW)</div>
                             <div id="out-ytw" style="color:var(--navy); font-size:2rem; font-weight:700;">12.2500%</div>
                         </div>
@@ -194,7 +200,7 @@
                             </div>
                         </div>
 
-                        <div class="calc-result" style="background: rgba(255,255,255,0.05); border: none; margin-bottom: 2rem;">
+                        <div class="calc-result cream-box" style="background: rgba(255,255,255,0.05); border: none; margin-bottom: 2rem;">
                             <div style="color:var(--mist); font-size:0.8rem; text-transform:uppercase;">Real Yield (Inflation-Adjusted)</div>
                             <div id="out-real-yield" style="color:var(--gold); font-size:1.6rem; font-weight:700;">0.0000%</div>
                         </div>
@@ -218,15 +224,15 @@
                         <h3 style="color: var(--white); font-size:1rem; margin-bottom:0.75rem;">Investment Progression (Cash Taken)</h3>
                         
                         <div class="progression-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-                            <div class="calc-result" style="background: rgba(255,255,255,0.05); border: none; padding: 1rem;">
+                            <div class="calc-result cream-box" style="background: rgba(255,255,255,0.05); border: none; padding: 1rem;">
                                 <div style="color:var(--mist); font-size:0.75rem; text-transform:uppercase;">Starting Capital</div>
                                 <div id="out-start-cap" style="color:var(--white); font-size:1.2rem; font-weight:700;">0</div>
                             </div>
-                            <div class="calc-result" style="background: rgba(255,255,255,0.05); border: none; padding: 1rem;">
+                            <div class="calc-result cream-box" style="background: rgba(255,255,255,0.05); border: none; padding: 1rem;">
                                 <div style="color:var(--mist); font-size:0.75rem; text-transform:uppercase;">Total Cash Returned</div>
                                 <div id="out-total-cash" style="color:var(--white); font-size:1.2rem; font-weight:700;">0</div>
                             </div>
-                            <div class="calc-result" style="background: rgba(255,255,255,0.05); border: none; padding: 1rem;">
+                            <div class="calc-result cream-box" style="background: rgba(255,255,255,0.05); border: none; padding: 1rem;">
                                 <div style="color:var(--mist); font-size:0.75rem; text-transform:uppercase;">Total Profit</div>
                                 <div id="out-total-profit" style="color:var(--gain); font-size:1.2rem; font-weight:700;">0</div>
                             </div>
