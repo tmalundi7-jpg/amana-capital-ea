@@ -3606,3 +3606,15 @@ footer .f-base span { opacity: 1 !important; }
 
 /* Fix Oct 2026: Bottom notes readability */
 .page-terminal .term-note { color: rgba(200,210,220,.85) !important; }
+
+/* Fix Oct 2026: Soften sidebar button gold (was too bright) */
+.page-terminal .term-side-card a.btn-gold-solid {
+  background: #a8842c !important; /* deeper bronze, less harsh than #c9a227 */
+  border-color: #a8842c !important;
+  color: #0a1830 !important;
+}
+.page-terminal .term-side-card a.btn-gold-solid:hover {
+  background: #c9a227 !important;
+  border-color: #c9a227 !important;
+  color: #0a1830 !important;
+}
