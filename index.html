@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=20260914_revert_07sep" rel="stylesheet"/>
+<link href="style.css?v=20261007_refined" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -102,7 +102,7 @@
     /* Hero */
     .home-hero {
         background: var(--navy);
-        padding:4rem 0; 6rem;
+        padding: 4rem 0 6rem;
         position: relative;
         overflow: hidden;
     }
@@ -792,6 +792,33 @@
 </section>
 <div class="hairline-divider-dark"></div>
 
+<!-- ─── MARKET TICKER (refined look, Oct 2026) ─── -->
+<!-- NOTE to automation: values below are static. The live template version in
+     templates/homepage_snapshot_snippet.html carries the Jinja-driven ticker;
+     keep both in sync when daily figures change. -->
+<div class="mk-ticker" aria-hidden="true">
+  <div class="mk-ticker-track">
+    <span class="mk-tick-item"><b>DSEI</b>4,623.56 <span class="mk-tick-down">−23.29</span></span>
+    <span class="mk-tick-item"><b>TSI</b>10,234.40 <span class="mk-tick-up">+45.98</span></span>
+    <span class="mk-tick-item"><b>TOL</b><span class="mk-tick-up">+7.5%</span></span>
+    <span class="mk-tick-item"><b>MCB</b><span class="mk-tick-up">+4.2%</span></span>
+    <span class="mk-tick-item"><b>TCCL</b><span class="mk-tick-up">+3.5%</span></span>
+    <span class="mk-tick-item"><b>VODA</b><span class="mk-tick-down">−1.6%</span></span>
+    <span class="mk-tick-item"><b>PAL</b><span class="mk-tick-down">−1.6%</span></span>
+    <span class="mk-tick-item"><b>TTP</b><span class="mk-tick-down">−1.3%</span></span>
+    <span class="mk-tick-item"><b>Turnover</b>TZS 2.23bn <span class="mk-tick-up">+30%</span></span>
+    <span class="mk-tick-item"><b>DSEI</b>4,623.56 <span class="mk-tick-down">−23.29</span></span>
+    <span class="mk-tick-item"><b>TSI</b>10,234.40 <span class="mk-tick-up">+45.98</span></span>
+    <span class="mk-tick-item"><b>TOL</b><span class="mk-tick-up">+7.5%</span></span>
+    <span class="mk-tick-item"><b>MCB</b><span class="mk-tick-up">+4.2%</span></span>
+    <span class="mk-tick-item"><b>TCCL</b><span class="mk-tick-up">+3.5%</span></span>
+    <span class="mk-tick-item"><b>VODA</b><span class="mk-tick-down">−1.6%</span></span>
+    <span class="mk-tick-item"><b>PAL</b><span class="mk-tick-down">−1.6%</span></span>
+    <span class="mk-tick-item"><b>TTP</b><span class="mk-tick-down">−1.3%</span></span>
+    <span class="mk-tick-item"><b>Turnover</b>TZS 2.23bn <span class="mk-tick-up">+30%</span></span>
+  </div>
+</div>
+
 <!-- ─── LIVE DSE SNAPSHOT ─── -->
 <section style="padding: 5rem 0; background: var(--cream);">
 <div class="container">
@@ -993,14 +1020,15 @@
 </footer>
 <script defer="" src="script.min.js?v=20260925c"></script>
 
-<div id="authModal" class="auth-modal" role="dialog" aria-hidden="true"><div class="auth-modal-content"><button class="auth-modal-close" id="authModalClose">✕</button><h2 class="auth-title">Welcome Back</h2><form id="loginForm" class="auth-form"><div class="form-group"><label>Email</label><input type="email" required></div><button type="submit" class="btn btn-primary btn-block">Sign In</button></form></div></div>
+<!-- Refined look, Oct 2026: removed the placeholder "Sign In" modal (it accepted
+     any email with no credential check and no backend). Reintroduce only with a
+     real authentication system. See website autopsy 2026-10-07, finding #1. -->
 
-<div id="consentBanner" class="consent-banner" hidden><div class="consent-content"><p class="consent-text">We use cookies.</p><div class="consent-actions"><button id="consentAccept" class="btn btn-primary btn-sm">Accept</button></div></div></div>
+<div id="consentBanner" class="consent-banner" hidden><div class="consent-content"><p class="consent-text">We use cookies to improve your experience and analyse site traffic. You can accept or reject non-essential cookies.</p><div class="consent-actions"><button id="consentAccept" class="btn btn-primary btn-sm">Accept</button><button id="consentReject" class="btn btn-outline btn-sm">Reject</button></div></div></div>
 <script src="/config/analytics.js"></script>
 <script src="/assets/js/analytics.js"></script>
 <script src="/assets/js/personalisation.js"></script>
 <script src="/assets/js/engagement.js"></script>
-<script src="/assets/js/auth.js"></script>
 <script src="/assets/js/newsletter.js"></script>
 <script src="/assets/js/consent.js"></script>
 

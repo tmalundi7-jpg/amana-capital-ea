@@ -1,33 +1,31 @@
 <!-- SNAPSHOT_CARD_START -->
+<!-- Refined look, Oct 2026. IDs and classes below are load-bearing: the daily
+     automation regexes target #home-dsei / #home-tsi / #home-turnover /
+     #home-gainers / #home-losers / #home-snapshot-date, and script.min.js draws
+     #dseiChart / #tsiChart. Do not rename without updating generate_daily_update.py. -->
 <div class="snapshot-grid">
-    <div>
+    <div class="snapshot-item">
         <div class="snapshot-label">DSEI</div>
         <div class="snapshot-value" id="home-dsei">{{ data.market_snapshot.dsei }}</div>
+        <canvas height="40" id="dseiChart" style="margin-top:0.5rem;" width="100" role="img" aria-label="DSEI recent trend chart"></canvas>
     </div>
-    <div>
+    <div class="snapshot-item">
         <div class="snapshot-label">TSI</div>
         <div class="snapshot-value" id="home-tsi">{{ data.market_snapshot.tsi }}</div>
+        <canvas height="40" id="tsiChart" style="margin-top:0.5rem;" width="100" role="img" aria-label="TSI recent trend chart"></canvas>
     </div>
-    <div>
+    <div class="snapshot-item">
         <div class="snapshot-label">Turnover</div>
         <div class="snapshot-value" id="home-turnover">{{ data.market_snapshot.equity_turnover }}</div>
     </div>
-    <div>
+    <div class="snapshot-item">
         <div class="snapshot-label">Top Gainers</div>
-        <div class="snapshot-mover" id="home-gainers">{% for g in gainers %}{{ g.ticker }} <span style="color:var(--gain)">+{{ g.change_pct }}%</span>{% if not loop.last %}<br>{% endif %}{% endfor %}</div>
+        <div class="snapshot-mover" id="home-gainers" style="display: flex; flex-direction: column; gap: 0.25rem;">{% for g in gainers %}<span>{{ g.ticker }} <span style="color:var(--gain)">+{{ g.change_pct }}%</span></span>{% endfor %}</div>
     </div>
-    <div>
+    <div class="snapshot-item">
         <div class="snapshot-label">Top Losers</div>
-        <div class="snapshot-mover" id="home-losers">{% for l in losers %}{{ l.ticker }} <span style="color:var(--loss)">{{ l.change_pct }}%</span>{% if not loop.last %}<br>{% endif %}{% endfor %}</div>
+        <div class="snapshot-mover" id="home-losers" style="display: flex; flex-direction: column; gap: 0.25rem;">{% for l in losers %}<span>{{ l.ticker }} <span style="color:var(--loss)">{{ l.change_pct }}%</span></span>{% endfor %}</div>
     </div>
 </div>
-<div class="snapshot-note" id="home-snapshot-date">End&#8209;of&#8209;day, {{ data.publication_date }}. For educational purposes only.</div>
+<div class="snapshot-note" id="home-snapshot-date">Terminal Feed | End-of-day &middot; {{ data.publication_date }}</div>
 <!-- SNAPSHOT_CARD_END -->
-
-
-
-
-    <script src="https://unpkg.com/swup@4"></script>
-    <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
-    <script src="https://unpkg.com/@swup/preload-plugin@3"></script>
-    <script src="script.min.js?v=20260923a" defer></script>

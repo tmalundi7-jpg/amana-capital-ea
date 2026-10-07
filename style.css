@@ -10,6 +10,9 @@
   --gold: #E5B13B;
   --gold-hover: #F1C453;
   --gold-light: rgba(229, 177, 59, 0.15);
+  /* Two-gold rule (refined look, Oct 2026): --gold for fills/borders and text
+     on DARK surfaces; --gold-ink for text on LIGHT surfaces (4.59:1 on cream). */
+  --gold-ink: #8a6d1c;
   --gain: #16A34A;
   --loss: #DC2626;
   --white: #FFFFFF;
@@ -50,6 +53,9 @@
   --gold: #c2a36b;
   --gold-hover: #e0ca9e;
   --gold-light: rgba(194, 163, 107, 0.15);
+  /* Two-gold rule: on dark surfaces --gold already passes (8.56:1), so
+     --gold-ink matches it here. */
+  --gold-ink: #c2a36b;
   --gain: #22C55E;
   --loss: #EF4444;
   --white: #0F172A;
@@ -2363,7 +2369,11 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     white-space: nowrap;
 }
 
-/* Added by script */
+/* Refined look, Oct 2026: the flex override below previously forced the snapshot
+   strip into a non-wrapping row on ALL screens (with !important), which broke
+   the mobile grid rules and caused the squashed 5-across strip on phones.
+   It is now scoped to desktop only; below 769px the responsive grid rules apply. */
+@media (min-width: 769px) {
 .snapshot-grid {
   display: flex !important;
   flex-wrap: nowrap !important;
@@ -2383,6 +2393,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
   flex-direction: column !important;
   gap: 0.25rem !important;
   white-space: nowrap !important;
+}
 }
 
 .premium-upgrade::before {
@@ -3032,3 +3043,68 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 .change-positive { color: #16a34a; font-weight: 700; }
 .change-negative { color: #dc2626; font-weight: 700; }
 .change-neutral  { color: #64748b; font-weight: 600; }
+
+/* ============================================================ */
+/* REFINED LOOK — Oct 2026 (design autopsy v3)                  */
+/* Same brand system (navy/gold/cream, Cormorant + Inter).      */
+/* Logo untouched. Works in both light and dark themes.         */
+/* ============================================================ */
+
+/* Keyboard focus: visible gold outline for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- Market ticker (refined look) ---- */
+.mk-ticker {
+  border-top: 1px solid var(--gold-light);
+  border-bottom: 1px solid var(--gold-light);
+  background: rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.8rem 0;
+}
+[data-theme="dark"] .mk-ticker { background: rgba(0, 0, 0, 0.35); }
+.mk-ticker-track {
+  display: inline-block;
+  animation: mk-tick 36s linear infinite;
+  will-change: transform;
+}
+.mk-ticker:hover .mk-ticker-track { animation-play-state: paused; }
+@keyframes mk-tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.mk-tick-item {
+  display: inline-block;
+  margin: 0 2rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: var(--text-body);
+}
+.mk-tick-item b {
+  font-family: var(--heading-font);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  color: var(--text-heading);
+}
+.mk-tick-up { color: var(--gain); font-weight: 600; }
+.mk-tick-down { color: var(--loss); font-weight: 600; }
+@media (prefers-reduced-motion: reduce) {
+  .mk-ticker-track { animation: none; }
+}
+
+/* ---- Refined snapshot card: hairline gold accent ---- */
+.snapshot-card { position: relative; }
+.snapshot-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 2rem; right: 2rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* ---- Consent banner: reject button matches accept weight ---- */
+.consent-actions { display: flex; gap: 0.6rem; align-items: center; }
