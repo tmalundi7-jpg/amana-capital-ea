@@ -3509,3 +3509,100 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 .page-reader .framework-box p,
 .page-reader .concept-box p{color:rgba(232,228,216,.78) !important;}
 .page-reader .text-success{color:#22C55E !important;}
+
+/* Fix Oct 2026: Define homepage CTA button classes (were undefined → invisible) */
+.btn-gold {
+  display: inline-block;
+  background: #c9a227;
+  color: #0a1830 !important;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform .25s, box-shadow .25s;
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(201,162,39,.35);
+  color: #0a1830 !important;
+}
+.btn-ghost {
+  display: inline-block;
+  background: transparent;
+  color: #faf6ee !important;
+  border: 1px solid rgba(250,246,238,.3);
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color .25s, color .25s;
+}
+.btn-ghost:hover {
+  border-color: #c9a227;
+  color: #c9a227 !important;
+}
+
+/* Fix Oct 2026: Light headings on dark surfaces (global h1/h2/h3 rule leaks navy) */
+.hero h1, .hero h2,
+.s-card h3,
+.wt-body h3,
+.page-terminal h1, .page-terminal h2, .page-terminal h3,
+.ab-hero h1, .ab-hero h2,
+.ct-form-card:not(.cream-card) h2,
+.term-head h1, .term-head h2 {
+  color: #faf6ee !important;
+}
+
+/* Fix Oct 2026: Cream board cells need light backgrounds too (was navy-on-dark) */
+.cream-board .term-cell,
+.cream-board .term-stat,
+.cream-board .sb-cell {
+  background: #FEF9F0 !important;
+}
+.cream-board .term-cell *,
+.cream-board .term-stat * {
+  color: #0A1628 !important;
+}
+
+/* Fix Oct 2026: About page dark-on-dark text */
+.page-terminal .ab-hero p,
+.page-terminal .ab-pill h3, .page-terminal .ab-pill p,
+.page-terminal .ab-philosophy h3, .page-terminal .ab-philosophy p {
+  color: rgba(250,246,238,.85) !important;
+}
+.page-terminal .ab-pill h3 { color: #faf6ee !important; }
+
+/* Fix Oct 2026: Contact page dark-on-dark text */
+.page-terminal .ct-team-role,
+.page-terminal .ct-map-footer,
+.page-terminal .ct-map-footer * {
+  color: rgba(250,246,238,.75) !important;
+}
+
+/* Fix Oct 2026: MI cream sidebar card labels (were cream-on-cream invisible) */
+.page-terminal .term-side-card.cream-side .rc-label,
+.page-terminal .term-side-card.cream-side p:not(.gold) {
+  color: #0A1628 !important;
+}
+
+/* Fix Oct 2026: Newsletter subscribe button */
+.news-form button, .news button[type="submit"] {
+  background: #c9a227 !important;
+  color: #0a1830 !important;
+  font-weight: 600;
+  padding: 0.95rem 2rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Fix Oct 2026: Footer readability */
+footer .f-col a { color: rgba(250,246,238,.75) !important; }
+footer .f-base { color: rgba(250,246,238,.65) !important; }
+footer .f-base span { opacity: 1 !important; }
+
+/* Fix Oct 2026: Bottom notes readability */
+.page-terminal .term-note { color: rgba(200,210,220,.85) !important; }
