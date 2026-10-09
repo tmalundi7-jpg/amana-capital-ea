@@ -3787,3 +3787,120 @@ footer a, .f-col a {
   background: linear-gradient(135deg, rgba(255,255,255,.04), rgba(255,255,255,.01)) !important;
   border: 1px solid rgba(201,162,39,.18) !important;
 }
+
+/* ============================================================
+   CREAM EDITORIAL THEME — 09 Oct 2026
+   Converts dark terminal aesthetic to light editorial (Rathbones-style).
+   Navy: nav, footer, headings. Cream: body/cards. Gold: accents only.
+   ============================================================ */
+
+/* ── 1. PAGE BACKGROUNDS: dark → cream ── */
+body.page-terminal,
+body[class*="terminal"],
+.term-page, .mi-page {
+  background: #FEF9F0 !important;
+  color: #0A1628 !important;
+}
+
+/* ── 2. TERMINAL SECTIONS: dark cards → cream cards ── */
+.term-sec, .terminal-section,
+.page-terminal .term-sec {
+  background: #FEF9F0 !important;
+  color: #0A1628 !important;
+}
+.term-card, .terminal-card,
+.page-terminal .term-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(201,162,39,.22) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(10,24,48,.06) !important;
+  color: #0A1628 !important;
+}
+
+/* ── 3. SESSION BOARD: dark → cream ── */
+.session-board, .term-session,
+.page-terminal .session-board {
+  background: #ffffff !important;
+  border: 1px solid rgba(201,162,39,.25) !important;
+  border-radius: 14px !important;
+  color: #0A1628 !important;
+}
+.session-board .sb-label, .term-session .sb-label,
+.session-board [class*="label"], .term-session [class*="label"] {
+  color: rgba(10,22,40,.6) !important;
+}
+.session-board .sb-value, .term-session .sb-value,
+.session-board [class*="value"], .term-session [class*="value"] {
+  color: #0A1628 !important;
+}
+.session-board .sb-change.up, .term-session .up {
+  color: #16a34a !important;
+}
+.session-board .sb-change.down, .term-session .down {
+  color: #dc2626 !important;
+}
+
+/* ── 4. ALL HEADINGS on former dark sections → navy ── */
+.page-terminal h1, .page-terminal h2, .page-terminal h3, .page-terminal h4,
+.term-sec h1, .term-sec h2, .term-sec h3, .term-sec h4,
+.session-board h1, .session-board h2, .session-board h3 {
+  color: #0A1628 !important;
+}
+
+/* ── 5. ALL BODY TEXT on former dark sections → dark ── */
+.page-terminal p, .term-sec p,
+.page-terminal li, .term-sec li,
+.page-terminal span:not([class*="up"]):not([class*="down"]):not(.term-badge):not(.term-arc-go),
+.term-sec span:not([class*="up"]):not([class*="down"]) {
+  color: rgba(10,22,40,.78) !important;
+}
+/* Preserve up/down colors */
+.page-terminal .up, .term-sec .up { color: #16a34a !important; }
+.page-terminal .down, .term-sec .down { color: #dc2626 !important; }
+
+/* ── 6. HEATMAP: keep functional, lighten container ── */
+.heatmap-wrap, .term-heatmap,
+#dseHeatmapContainer {
+  background: #ffffff !important;
+  border: 1px solid rgba(201,162,39,.2) !important;
+  border-radius: 12px !important;
+  padding: 1rem !important;
+}
+.term-note {
+  color: rgba(10,22,40,.6) !important;
+}
+
+/* ── 7. SIDEBAR CARDS: unify to cream ── */
+.term-side-card {
+  background: #FEF9F0 !important;
+  border: 1px solid rgba(201,162,39,.22) !important;
+  border-radius: 12px !important;
+  color: #0A1628 !important;
+}
+.term-side-card h4 {
+  color: #0A1628 !important;
+}
+.term-side-card p {
+  color: rgba(10,22,40,.7) !important;
+}
+
+/* ── 8. SECTION LABELS: gold-ink for light bg ── */
+.page-terminal .term-sec-label,
+.page-terminal .sec-label {
+  color: #8a6d1c !important;
+}
+
+/* ── 9. DIVIDERS: subtle on cream ── */
+.page-terminal hr, .term-sec hr {
+  border-color: rgba(201,162,39,.2) !important;
+}
+
+/* ── 10. BUTTONS: keep gold solid (already good) ── */
+/* No change — .btn-gold-solid already works on cream */
+
+/* ── 11. NAV & FOOTER: stay navy (anchor the design) ── */
+/* No change — nav/footer already navy */
+
+/* ── 12. HERO SECTIONS: keep navy hero (brand anchor) ── */
+/* Homepage hero, page heroes stay dark navy — this is the brand signature */
+/* Only content sections go cream */
