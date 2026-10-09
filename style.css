@@ -3905,3 +3905,37 @@ body[class*="terminal"],
 /* ── 12. HERO SECTIONS: keep navy hero (brand anchor) ── */
 /* Homepage hero, page heroes stay dark navy — this is the brand signature */
 /* Only content sections go cream */
+
+/* ===== Inner Page Visibility Fixes — 09 Oct 2026 ===== */
+
+/* Article H1: force dark navy (was inheriting light) */
+.page-reader .article-content h1 {
+  color: #0A1628 !important;
+}
+
+/* Wrap title panel: light text on dark panel */
+.dse-header-box h1,
+.wrap-header h1,
+[class*="header-box"] h1 {
+  color: #faf6ee !important;
+}
+.dse-header-box p,
+.wrap-header p,
+[class*="header-box"] p {
+  color: rgba(250,246,238,.8) !important;
+}
+.dse-header-box .subtitle,
+.wrap-header .subtitle {
+  color: #c9a227 !important;
+}
+
+/* Wrap section headings: ensure navy on cream */
+.page-reader h2[style*="var(--navy)"],
+.page-reader h3[style*="var(--navy)"] {
+  color: #0A1628 !important;
+}
+
+/* Force var(--navy) to resolve: define fallback */
+.page-reader {
+  --navy: #0A1628 !important;
+}
