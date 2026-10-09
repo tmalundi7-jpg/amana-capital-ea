@@ -3906,69 +3906,67 @@ body[class*="terminal"],
 /* Homepage hero, page heroes stay dark navy — this is the brand signature */
 /* Only content sections go cream */
 
-/* ===== Surgical Visibility Fixes — 09 Oct 2026 ===== */
-/* Targeted fixes only — no broad selectors */
+
+/* ===== Surgical Visibility Fixes v2 — 09 Oct 2026 ===== */
+/* Corrected selectors using actual body classes */
 
 /* 1. MI Quick Links: dark text on cream */
-.term-side-card .quick-links a,
+body.page-terminal .term-side-card .quick-links a,
+body.page-terminal .quick-links a,
 .quick-links a {
   color: #0A1628 !important;
 }
-.term-side-card .quick-links a:hover {
-  color: #8a6d1c !important;
+
+/* 2. Bond Calculator headings (body.page-terminal) */
+body.page-terminal h2[style*="var(--gold)"] {
+  color: #c9a227 !important;
 }
 
-/* 2. Newsletter "No spam" text: visible on cream */
-.newsletter-note, .news-note,
-.newsletter-box .note {
-  color: rgba(10,22,40,.6) !important;
-}
-
-/* 3. Bond Calculator headings: light on dark */
-.bond-calc h2, .bond-calculator h2,
-.calc-section h2, .bond-params h2, .analytics-report h2 {
+/* 3. Risk Profiler headings */
+body.page-terminal .rp-section-h2 {
   color: #faf6ee !important;
 }
-
-/* 4. Risk Profiler: headings and card titles light on dark */
-.risk-profiler h2, .risk-profiler h3,
-.rp-section-h2, .rp-card h3, .profile-card h3,
-.instrument-card h3 {
-  color: #faf6ee !important;
-}
-.risk-profiler .section-desc,
-.rp-section-sub, .rp-intro p {
+body.page-terminal .rp-section-sub {
   color: rgba(250,246,238,.7) !important;
 }
-.instrument-card p {
+body.page-terminal .rp-card h3,
+body.page-terminal .profile-card h3 {
+  color: #faf6ee !important;
+}
+body.page-terminal .rp-card p,
+body.page-terminal .profile-card p,
+body.page-terminal .rp-card li {
+  color: rgba(250,246,238,.7) !important;
+}
+body.page-terminal .instrument-card h3 {
+  color: #faf6ee !important;
+}
+body.page-terminal .instrument-card p {
   color: rgba(250,246,238,.65) !important;
 }
 
-/* 5. About "Our Core Purpose" text: dark on cream */
-.about-purpose p, .core-purpose p,
-.about-intro p {
+/* 4. Contact page fixes */
+body.page-terminal .ct-form-header h2,
+.ct-form-card .ct-form-header h2 {
+  color: #faf6ee !important;
+}
+body.page-terminal .help-card h3,
+body.page-terminal .service-card h3 {
+  color: #faf6ee !important;
+}
+body.page-terminal .help-card p,
+body.page-terminal .service-card p {
+  color: rgba(250,246,238,.7) !important;
+}
+
+/* 5. About page: core purpose text */
+body.page-terminal .about-purpose p,
+body.page-terminal .core-purpose p {
   color: rgba(10,22,40,.8) !important;
 }
-
-/* 6. Contact "How We Can Help" cards: light text on dark */
-.help-card h3, .service-card h3 {
-  color: #faf6ee !important;
-}
-.help-card p, .service-card p {
-  color: rgba(250,246,238,.7) !important;
-}
-
-/* 7. Navbar brand: ensure visible */
-.brand-text, .navbar .brand-text {
-  color: #faf6ee !important;
-}
-
-/* 8. Contact office card headings */
-.ct-office h3, .office-card h3 {
-  color: #faf6ee !important;
-}
-.ct-office p, .office-card p {
-  color: rgba(250,246,238,.7) !important;
+body.page-terminal .about-purpose h2,
+body.page-terminal .core-purpose h2 {
+  color: #0A1628 !important;
 }
 
 /* ===== Homepage: Cream Middle — 09 Oct 2026 ===== */
@@ -4039,37 +4037,4 @@ section.news {
 }
 section.news h2 {
   color: #0A1628 !important;
-}
-
-/* ===== Inner Page Visibility Fixes — 09 Oct 2026 ===== */
-/* Covers ALL articles (40+) and ALL daily wraps (including archive) */
-
-/* Article H1: force dark navy */
-body.page-reader .article-content h1,
-body.page-reader main h1 {
-  color: #0A1628 !important;
-}
-
-/* Wrap title panel: light text on dark panel */
-body.page-reader div[style*="12294f"] h1,
-body.page-reader div[style*="0a1830"] h1,
-body.page-reader .dse-header-box h1,
-body.page-reader .wrap-header h1 {
-  color: #faf6ee !important;
-}
-body.page-reader div[style*="12294f"] p,
-body.page-reader div[style*="0a1830"] p {
-  color: rgba(250,246,238,.85) !important;
-}
-
-/* All section headings on reader pages → navy */
-body.page-reader .article-content h2,
-body.page-reader .article-content h3,
-body.page-reader main h2, body.page-reader main h3 {
-  color: #0A1628 !important;
-}
-
-/* Force var(--navy) to resolve */
-body.page-reader {
-  --navy: #0A1628 !important;
 }
