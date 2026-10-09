@@ -3666,6 +3666,7 @@ footer .f-base span { opacity: 1 !important; }
 }
 
 /* Fix E: Contact form header — light heading on dark navy */
+.ct-form-card.cream-card .ct-form-header h2,
 .ct-form-header h2 {
   color: #faf6ee !important;
 }
