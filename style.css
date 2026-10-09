@@ -3906,59 +3906,67 @@ body[class*="terminal"],
 /* Homepage hero, page heroes stay dark navy — this is the brand signature */
 /* Only content sections go cream */
 
-/* ===== Inner Page Visibility Fixes — 09 Oct 2026 ===== */
+/* ===== Surgical Visibility Fixes — 09 Oct 2026 ===== */
+/* Targeted fixes only — no broad selectors */
 
-/* Article H1: force dark navy (was inheriting light) */
-.page-reader .article-content h1 {
+/* 1. MI Quick Links: dark text on cream */
+.term-side-card .quick-links a,
+.quick-links a {
   color: #0A1628 !important;
 }
+.term-side-card .quick-links a:hover {
+  color: #8a6d1c !important;
+}
 
-/* Wrap title panel: light text on dark panel */
-.dse-header-box h1,
-.wrap-header h1,
-[class*="header-box"] h1 {
+/* 2. Newsletter "No spam" text: visible on cream */
+.newsletter-note, .news-note,
+.newsletter-box .note {
+  color: rgba(10,22,40,.6) !important;
+}
+
+/* 3. Bond Calculator headings: light on dark */
+.bond-calc h2, .bond-calculator h2,
+.calc-section h2, .bond-params h2, .analytics-report h2 {
   color: #faf6ee !important;
 }
-.dse-header-box p,
-.wrap-header p,
-[class*="header-box"] p {
-  color: rgba(250,246,238,.8) !important;
-}
-.dse-header-box .subtitle,
-.wrap-header .subtitle {
-  color: #c9a227 !important;
-}
 
-/* Wrap section headings: ensure navy on cream */
-.page-reader h2[style*="var(--navy)"],
-.page-reader h3[style*="var(--navy)"] {
-  color: #0A1628 !important;
-}
-
-/* Force var(--navy) to resolve: define fallback */
-.page-reader {
-  --navy: #0A1628 !important;
-}
-
-/* ===== Broad coverage: ALL articles & wraps ===== */
-/* Any H1 on a reader page → navy (unless inside a dark header box) */
-body.page-reader .article-content h1,
-body.page-reader main h1:not([class*="header"]):not(.dse-header-box h1) {
-  color: #0A1628 !important;
-}
-/* Any dark header box H1 → cream */
-body.page-reader div[style*="12294f"] h1,
-body.page-reader div[style*="0a1830"] h1,
-body.page-reader .dse-header-box h1 {
+/* 4. Risk Profiler: headings and card titles light on dark */
+.risk-profiler h2, .risk-profiler h3,
+.rp-section-h2, .rp-card h3, .profile-card h3,
+.instrument-card h3 {
   color: #faf6ee !important;
 }
-body.page-reader div[style*="12294f"] p,
-body.page-reader div[style*="0a1830"] p {
-  color: rgba(250,246,238,.85) !important;
+.risk-profiler .section-desc,
+.rp-section-sub, .rp-intro p {
+  color: rgba(250,246,238,.7) !important;
 }
-/* All section headings on reader pages → navy */
-body.page-reader .article-content h2,
-body.page-reader .article-content h3,
-body.page-reader main h2, body.page-reader main h3 {
-  color: #0A1628 !important;
+.instrument-card p {
+  color: rgba(250,246,238,.65) !important;
+}
+
+/* 5. About "Our Core Purpose" text: dark on cream */
+.about-purpose p, .core-purpose p,
+.about-intro p {
+  color: rgba(10,22,40,.8) !important;
+}
+
+/* 6. Contact "How We Can Help" cards: light text on dark */
+.help-card h3, .service-card h3 {
+  color: #faf6ee !important;
+}
+.help-card p, .service-card p {
+  color: rgba(250,246,238,.7) !important;
+}
+
+/* 7. Navbar brand: ensure visible */
+.brand-text, .navbar .brand-text {
+  color: #faf6ee !important;
+}
+
+/* 8. Contact office card headings */
+.ct-office h3, .office-card h3 {
+  color: #faf6ee !important;
+}
+.ct-office p, .office-card p {
+  color: rgba(250,246,238,.7) !important;
 }
