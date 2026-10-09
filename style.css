@@ -3970,3 +3970,73 @@ body[class*="terminal"],
 .ct-office p, .office-card p {
   color: rgba(250,246,238,.7) !important;
 }
+
+/* ===== Homepage: Cream Middle — 09 Oct 2026 ===== */
+/* Navy hero (top) + navy footer (bottom) stay. Middle goes cream. */
+
+/* Services ("What We Do") section → cream */
+section.services {
+  background: #FEF9F0 !important;
+}
+section.services .sec-label {
+  color: #8a6d1c !important;
+}
+section.services h2 {
+  color: #0A1628 !important;
+}
+section.services p {
+  color: rgba(10,22,40,.75) !important;
+}
+section.services .service-card,
+section.services .svc-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(201,162,39,.22) !important;
+  box-shadow: 0 4px 16px rgba(10,24,48,.06) !important;
+}
+section.services .service-card h3,
+section.services .svc-card h3 {
+  color: #0A1628 !important;
+}
+section.services .service-card p,
+section.services .svc-card p {
+  color: rgba(10,22,40,.7) !important;
+}
+
+/* Snapshot stat cards → white on cream */
+section.snapshot {
+  background: #FEF9F0 !important;
+}
+.snapshot-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(201,162,39,.25) !important;
+  box-shadow: 0 4px 16px rgba(10,24,48,.06) !important;
+}
+.snapshot-card .stat-value,
+.snapshot-card .idx-value {
+  color: #0A1628 !important;
+}
+.snapshot-card .stat-label,
+.snapshot-card .idx-label {
+  color: rgba(10,22,40,.6) !important;
+}
+.snapshot-card .up { color: #16a34a !important; }
+.snapshot-card .down { color: #dc2626 !important; }
+
+/* Wrap teaser → cream (if dark) */
+section.wrap-teaser {
+  background: #FEF9F0 !important;
+}
+section.wrap-teaser h2, section.wrap-teaser h3 {
+  color: #0A1628 !important;
+}
+section.wrap-teaser p {
+  color: rgba(10,22,40,.75) !important;
+}
+
+/* News/newsletter section → cream */
+section.news {
+  background: #FEF9F0 !important;
+}
+section.news h2 {
+  color: #0A1628 !important;
+}
