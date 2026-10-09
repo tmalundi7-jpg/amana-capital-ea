@@ -1,73 +1,76 @@
-import os
-import re
-import glob
+import os, glob, re
 
-# 3. Cache buster update across all HTML files
-print("Updating cache buster...")
-html_files = glob.glob('*.html')
-for f in html_files:
-    with open(f, 'r', encoding='utf-8') as file:
-        content = file.read()
-    # Update cache buster
-    content = re.sub(r'v=[0-9a-zA-Z_]+', 'v=20260830_final_polish_2', content)
+repo = r"C:\Users\tmalu\.gemini\antigravity\scratch\Amana-capital-ea"
+
+# 1. index.html replacements
+index_path = os.path.join(repo, "index.html")
+with open(index_path, "r", encoding="utf-8") as f:
+    idx = f.read()
+
+# Copy replacements
+idx = idx.replace("Tanzania's Premier Investment Advisory", "Tanzania's Premier Market Intelligence")
+idx = idx.replace("Institutional-grade market intelligence, daily DSE analysis, and bespoke investment advisory for East Africa's discerning investors.", "Institutional-grade market intelligence and daily DSE analysis for East Africa's discerning investors.")
+idx = idx.replace("03 &mdash; Advisory", "03 &mdash; Research")
+idx = idx.replace("Investment Advisory", "Custom Research")
+idx = idx.replace("Bespoke portfolio construction for sophisticated investors and institutions.", "Tailored market reports and data analysis for sophisticated investors and institutions.")
+# Note: handle both mdash and em-dash
+idx = re.sub(r'We hold ourselves to the fiduciary standard (.*?|\n)*? your interests before ours, without exception\.', 'We hold ourselves to the highest editorial standard &mdash; accuracy and independence in every report, without exception.', idx)
+
+# Checkbox
+idx = idx.replace('<input type="checkbox" checked', '<input type="checkbox"')
+
+# Risk Notice - index.html
+risk_notice_html = """
+<div class="risk-notice" style="background:rgba(201,162,39,.08);border:1px solid rgba(201,162,39,.25);border-radius:8px;padding:1rem 1.5rem;margin:2rem auto;max-width:800px;text-align:center;font-size:.85rem;color:rgba(250,246,238,.7);">
+  <strong style="color:#c9a227;">Risk Warning:</strong> Investing in securities involves risk. Capital is at risk and past performance does not guarantee future results. Our content is for informational and educational purposes only and does not constitute financial advice. CMSA registration is currently pending &mdash; we operate as an independent research publisher.
+</div>
+"""
+# insert after hero section
+if 'class="risk-notice"' not in idx:
+    idx = re.sub(r'(<section class="hero".*?</section>)', r'\1\n' + risk_notice_html, idx, count=1, flags=re.DOTALL)
+
+with open(index_path, "w", encoding="utf-8") as f:
+    f.write(idx)
+
+# 2. Risk Notice - market-intelligence.html
+mi_path = os.path.join(repo, "market-intelligence.html")
+with open(mi_path, "r", encoding="utf-8") as f:
+    mi = f.read()
+
+# insert at top of page content
+if 'class="risk-notice"' not in mi:
+    mi = re.sub(r'(<div class="container page-terminal">)', r'\1\n' + risk_notice_html, mi, count=1)
+
+with open(mi_path, "w", encoding="utf-8") as f:
+    f.write(mi)
+
+# 3. Footer Legal Links (All pages)
+footer_links_html = """
+<div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin: 0.5rem 0;">
+<a href="/privacy-policy" style="color: var(--mist); opacity: 0.6; text-decoration: none; font-size:0.75rem; transition: color 0.2s;">Privacy Policy</a>
+<a href="/terms-of-service" style="color: var(--mist); opacity: 0.6; text-decoration: none; font-size:0.75rem; transition: color 0.2s;">Terms of Service</a>
+<a href="/cookie-policy" style="color: var(--mist); opacity: 0.6; text-decoration: none; font-size:0.75rem; transition: color 0.2s;">Cookie Policy</a>
+<a href="/complaints-procedure" style="color: var(--mist); opacity: 0.6; text-decoration: none; font-size:0.75rem; transition: color 0.2s;">Complaints Procedure</a>
+</div>
+"""
+wrap_disclaimer = """
+<p style="font-size:.8rem;color:rgba(250,246,238,.5);margin-top:2rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1);">
+  <strong>Disclaimer:</strong> This report is for informational and educational purposes only and does not constitute financial, legal, or tax advice. Capital is at risk. Past performance does not guarantee future results. All investment decisions are solely your responsibility.
+</p>
+"""
+
+all_html = glob.glob(os.path.join(repo, "*.html"))
+for path in all_html:
+    with open(path, "r", encoding="utf-8") as f:
+        html = f.read()
     
-    # Also fix background for wrap pages and current-prices
-    if f.startswith('dse-wrap-') or f == 'current-prices.html' or f == 'market-intelligence-archive.html' or f == 'market-intelligence.html':
-        # Remove any inline background style in body or main
-        content = re.sub(r'<body[^>]*style="[^"]*background[^"]*"[^>]*>', '<body>', content)
-        content = re.sub(r'<main[^>]*style="[^"]*background[^"]*"[^>]*>', '<main>', content)
-        content = re.sub(r'<body class="[^"]*bg-dark[^"]*">', '<body>', content)
-
-    # For current-prices.html, fix title color and replace weird chars
-    if f == 'current-prices.html':
-        content = content.replace('color: white;', 'color: var(--navy);')
-        content = content.replace('color: #ffffff;', 'color: var(--navy);')
-        # Replace broken unicode
-        content = content.replace('â†‘', '&uarr;').replace('â†“', '&darr;').replace('â€”', '-')
-        content = content.replace('?', '-') # Generic question marks inside the change column might be from corrupted unicode
-        # Specifically target the spans:
-        content = re.sub(r'<span class="gain">\?\s*(\d+\.\d+%)', r'<span class="gain">&uarr; +\1', content)
-        content = re.sub(r'<span class="loss">\?\s*(\d+\.\d+%)', r'<span class="loss">&darr; -\1', content)
-
-    # For bond-calculator.html, make outer background cream
-    if f == 'bond-calculator.html':
-        # Set body background
-        content = content.replace('<body>', '<body style="background: var(--cream);">')
-        content = content.replace('<main>', '<main style="background: var(--cream);">')
-        content = content.replace('bg-dark', '')
+    if "Privacy Policy" not in html:
+        html = re.sub(r'(<div[^>]*>&copy;\s*2026\s*Amana Capital East Africa Limited.*?</div>)', footer_links_html + r'\n\1', html, flags=re.DOTALL)
+    
+    if "dse-wrap" in path and "archive" not in path:
+        old_disclaimer_pattern = r'<p style="font-size:\s*0\.85rem[^>]*>.*?For general informational and educational purposes only.*?<\/p>'
+        html = re.sub(old_disclaimer_pattern, wrap_disclaimer, html, flags=re.DOTALL)
         
-    with open(f, 'w', encoding='utf-8') as file:
-        file.write(content)
-
-# 4. About Page Spacing
-print("Fixing about page spacing...")
-with open('about.html', 'r', encoding='utf-8') as file:
-    about_content = file.read()
-about_content = re.sub(r'padding:\s*6rem\s+0', 'padding: 3rem 0', about_content)
-about_content = re.sub(r'margin-bottom:\s*3rem', 'margin-bottom: 1.5rem', about_content)
-with open('about.html', 'w', encoding='utf-8') as file:
-    file.write(about_content)
-    
-# Check style.css for core-purpose
-with open('style.css', 'r', encoding='utf-8') as file:
-    css = file.read()
-    
-# Fix core-purpose padding in css if any
-css = re.sub(r'(\.core-purpose[^}]*padding:\s*)6rem(\s+0;)', r'\g<1>3rem\g<2>', css)
-css = re.sub(r'(\.core-purpose[^}]*margin-bottom:\s*)3rem(;)', r'\g<1>1.5rem\g<2>', css)
-
-# 5. Bond Calculator background in style.css
-css = re.sub(r'(\.bc-hero\s*\{[^}]*background:\s*)[^;]+(;)', r'\g<1>var(--cream)\g<2>', css)
-css = re.sub(r'(\.bc-layout-wrapper\s*\{[^}]*background:\s*)[^;]+(;)', r'\g<1>var(--cream)\g<2>', css)
-
-with open('style.css', 'w', encoding='utf-8') as file:
-    file.write(css)
-
-# Git commit and push
-import subprocess
-print("Committing and pushing...")
-subprocess.run(['git', 'add', '.'])
-subprocess.run(['git', 'commit', '-m', 'Final polish: UI tweaks and cache buster update'])
-subprocess.run(['git', 'push', 'origin', 'main', '--force'])
-
-print("Done!")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(html)
+print("Replacements done.")
