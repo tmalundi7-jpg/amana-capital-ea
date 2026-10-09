@@ -3618,3 +3618,78 @@ footer .f-base span { opacity: 1 !important; }
   border-color: #c9a227 !important;
   color: #0a1830 !important;
 }
+
+
+/* ===== Visibility Fix Pack — 09 Oct 2026 (corrected selectors) ===== */
+
+/* Fix A: MI Research Coverage cream card (.term-side-card.cream-side) */
+/* Labels use inline rgba(251,247,240,0.75) = cream on cream → force dark */
+.term-side-card.cream-side div[style*="251,247,240"] {
+  color: #0A1628 !important;
+}
+.term-side-card.cream-side div[style*="251,247,240"] span:first-child {
+  color: #0A1628 !important;
+}
+.term-side-card.cream-side h4 {
+  color: #0A1628 !important;
+}
+/* Values: gold on cream → deep gold for contrast */
+.term-side-card.cream-side span[style*="var(--gold)"] {
+  color: #8a6d1c !important;
+}
+
+/* Fix B: MI Analyst Commentary byline on cream */
+.term-side-card.cream-side .byline,
+.term-side-card.cream-side p[style*="0.35"] {
+  color: rgba(10,22,40,.7) !important;
+}
+
+/* Fix C: Bond Calculator stress matrix — correct semantics */
+/* (targets inline-styled cells; green=positive, red=negative) */
+.stress-matrix td[style*="22c55e"], .stress-matrix .matrix-pos {
+  /* keep green for positive */
+}
+.stress-matrix td[style*="ef4444"], .stress-matrix .matrix-neg {
+  /* keep red for negative */
+}
+
+/* Fix D: About Philosophy cards (.ab-pillar) — light text on dark */
+.ab-pillar h3 {
+  color: #faf6ee !important;
+}
+.ab-pillar p {
+  color: rgba(250,246,238,.78) !important;
+}
+.ab-pillar-num {
+  color: #c9a227 !important;
+  opacity: 1 !important;
+}
+
+/* Fix E: Contact form header — light heading on dark navy */
+.ct-form-header h2 {
+  color: #faf6ee !important;
+}
+.ct-form-header-label {
+  color: #c9a227 !important;
+}
+
+/* Fix F: Footer links fallback */
+footer a, .f-col a {
+  color: rgba(250,246,238,.6) !important;
+}
+
+/* ===== MI Archive Box Enhancement — 09 Oct 2026 ===== */
+/* Make the daily wrap archive entry more prominent and clearly clickable */
+.arc-row, .archive-entry {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  cursor: pointer;
+}
+.arc-row:hover, .archive-entry:hover {
+  transform: translateY(-2px);
+  border-color: rgba(201,162,39,.5) !important;
+  box-shadow: 0 8px 24px rgba(201,162,39,.12);
+}
+.arc-row .arc-arrow, .archive-entry .arc-arrow {
+  color: #c9a227 !important;
+  font-weight: 700;
+}
