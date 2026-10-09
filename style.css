@@ -3666,7 +3666,6 @@ footer .f-base span { opacity: 1 !important; }
 }
 
 /* Fix E: Contact form header — light heading on dark navy */
-.ct-form-card.cream-card .ct-form-header h2,
 .ct-form-header h2 {
   color: #faf6ee !important;
 }
@@ -3693,4 +3692,98 @@ footer a, .f-col a {
 .arc-row .arc-arrow, .archive-entry .arc-arrow {
   color: #c9a227 !important;
   font-weight: 700;
+}
+
+/* ===== Color Sync Fix Pack — 09 Oct 2026 ===== */
+
+/* 1. MI ARCHIVE BOX → cream (was dark, out of sync) */
+.term-arc-row {
+  background: #FEF9F0 !important;
+  border: 1px solid rgba(201,162,39,.25) !important;
+  border-radius: 12px !important;
+  margin-bottom: 1rem !important;
+  padding: 1.4rem 1.5rem !important;
+}
+.term-arc-row:hover {
+  border-color: rgba(201,162,39,.6) !important;
+  box-shadow: 0 8px 24px rgba(201,162,39,.15) !important;
+  transform: translateY(-2px);
+}
+.term-arc-row .term-arc-date {
+  color: #8a6d1c !important;
+  font-weight: 700 !important;
+}
+.term-arc-row h3 {
+  color: #0A1628 !important;
+}
+.term-arc-row p {
+  color: rgba(10,22,40,.7) !important;
+}
+.term-arc-row .term-badge {
+  background: rgba(201,162,39,.15) !important;
+  color: #8a6d1c !important;
+}
+.term-arc-row .term-arc-go {
+  color: #c9a227 !important;
+}
+
+/* 2. ALL DAILY WRAP ARCHIVE BOXES → same cream design */
+.arc-row, .archive-entry, .wrap-archive-item {
+  background: #FEF9F0 !important;
+  border: 1px solid rgba(201,162,39,.25) !important;
+  border-radius: 12px !important;
+  margin-bottom: 1rem !important;
+}
+.arc-row h3, .archive-entry h3, .wrap-archive-item h3,
+.arc-row .arc-title, .archive-entry .arc-title {
+  color: #0A1628 !important;
+}
+.arc-row p, .archive-entry p, .wrap-archive-item p,
+.arc-row .arc-desc, .archive-entry .arc-desc {
+  color: rgba(10,22,40,.7) !important;
+}
+.arc-row .arc-date, .archive-entry .arc-date {
+  color: #8a6d1c !important;
+}
+
+/* 3. IE ARTICLE HEADINGS → dark on cream (was white-on-cream invisible) */
+.page-reader .article-content h1,
+.page-reader .article-content h2,
+.page-reader .article-content h3,
+.page-reader .article-content h4 {
+  color: #0A1628 !important;
+}
+.page-reader .article-content p,
+.page-reader .article-content li {
+  color: rgba(10,22,40,.85) !important;
+}
+.page-reader .breadcrumb a {
+  color: #8a6d1c !important;
+}
+
+/* 4. ABOUT PHILOSOPHY CARDS → cream cards (grey was hindering) */
+.ab-pillar {
+  background: #FEF9F0 !important;
+  border: 1px solid rgba(201,162,39,.2) !important;
+  border-radius: 12px !important;
+}
+.ab-pillar h3 {
+  color: #0A1628 !important;
+}
+.ab-pillar p {
+  color: rgba(10,22,40,.7) !important;
+}
+.ab-pillar-num {
+  color: #8a6d1c !important;
+  opacity: 1 !important;
+}
+
+/* 5. ENRICH DARK SECTIONS — add depth without losing identity */
+/* Subtle gradient + texture for terminal/dark sections */
+.page-terminal, .term-sec-wrap, .dark-section {
+  background: linear-gradient(180deg, #0a1830 0%, #0d1f3c 50%, #0a1830 100%) !important;
+}
+.term-side-card:not(.cream-side) {
+  background: linear-gradient(135deg, rgba(255,255,255,.04), rgba(255,255,255,.01)) !important;
+  border: 1px solid rgba(201,162,39,.18) !important;
 }
