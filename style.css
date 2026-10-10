@@ -3973,29 +3973,40 @@ section.wrap-teaser .teaser-card p {
 
 
 
-/* ===== SITE-WIDE CREAM v2 — 10 Oct 2026 ===== */
-/* Works: targets body directly, no class dependency */
 
-/* All page backgrounds → cream */
-body {
+/* ===== FINAL CREAM THEME — 10 Oct 2026 ===== */
+/* Precise selectors matching actual HTML classes */
+
+html body {
+  background: #FEF9F0 !important;
+}
+
+/* Homepage: hero, snapshot, services, wrap-teaser → cream */
+html body header.hero,
+html body section.snapshot,
+html body section.services,
+html body section.wrap-teaser {
+  background: #FEF9F0 !important;
   background-color: #FEF9F0 !important;
 }
 
-/* Homepage sections → cream */
-body > main > section,
-body > section {
-  background-color: #FEF9F0 !important;
+/* Text on cream → dark */
+html body header.hero h1,
+html body section.snapshot h2.sec-title,
+html body section.services h2.sec-title,
+html body section.wrap-teaser h2 {
+  color: #0A1628 !important;
+}
+html body header.hero p,
+html body section.snapshot p,
+html body section.services p {
+  color: rgba(10,22,40,.78) !important;
 }
 
-/* Keep nav and footer dark */
-nav, header nav, footer,
-.navbar, .footer {
-  background-color: #0a1830 !important;
-}
-
-/* Dark cards stay dark */
-.dark-card, .stat-card, .service-card,
-.snap-card, .index-card, .wrap-card,
-.teaser-card, .term-side-card {
+/* Cards stay dark */
+html body .stat-card,
+html body .service-card,
+html body .wrap-card {
+  background: #0a1830 !important;
   background-color: #0a1830 !important;
 }
