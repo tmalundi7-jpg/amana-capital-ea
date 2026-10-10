@@ -4073,3 +4073,45 @@ header.hero .btn-ghost:hover {
   background: #0A1628 !important;
   color: #faf6ee !important;
 }
+
+/* ===== Consolidated Final Fixes — 10 Oct 2026 ===== */
+
+/* 1. Hero dark bleed: remove smoky shadow */
+header.hero::before,
+header.hero::after,
+header.hero .hero-shadow {
+  display: none !important;
+}
+header.hero {
+  box-shadow: none !important;
+}
+
+/* 2. Start Learning button: force visible (all possible classes) */
+header.hero .btn-ghost,
+header.hero a.btn-ghost,
+header.hero .btn-secondary,
+header.hero a[href*="education"] {
+  color: #0A1628 !important;
+  border: 2px solid #0A1628 !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* 3. Wrap title: force cream box + dark text (nuclear) */
+body.page-reader .dse-header-box,
+body.page-reader div.dse-header-box,
+body.page-reader .dse-article-card.dse-header-box {
+  background: #FEF9F0 !important;
+  background-color: #FEF9F0 !important;
+  background-image: none !important;
+}
+body.page-reader .dse-header-box h1,
+body.page-reader div.dse-header-box h1,
+body.page-reader .dse-header-box h1[style] {
+  color: #0A1628 !important;
+}
+body.page-reader .dse-header-box p,
+body.page-reader div.dse-header-box p {
+  color: rgba(10,22,40,.75) !important;
+}
