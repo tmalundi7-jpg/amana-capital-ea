@@ -4146,3 +4146,28 @@ body.page-terminal .card p,
 body.page-terminal .term-card p {
   color: rgba(250,246,238,.75) !important;
 }
+
+/* ===== Navigation Fix — 10 Oct 2026 ===== */
+/* Nav must be dark navy with white text (was broken by 80/20 theme) */
+
+nav, header nav, .navbar,
+body.page-terminal nav,
+body.page-terminal header nav {
+  background: #0a1830 !important;
+  background-color: #0a1830 !important;
+}
+
+nav a, header nav a, .navbar a,
+body.page-terminal nav a {
+  color: #faf6ee !important;
+}
+
+nav a:hover, header nav a:hover {
+  color: #c9a227 !important;
+}
+
+/* Logo text */
+nav .brand, nav .logo-text,
+header nav .brand {
+  color: #faf6ee !important;
+}
