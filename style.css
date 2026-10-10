@@ -3396,8 +3396,8 @@ body { background: var(--bg-primary); color: var(--text-primary); }
   border-left:3px solid var(--gold) !important;
   box-shadow:none !important;
 }
-.page-reader .dse-header-box h1{color:#0A1628 !important;}
-.page-reader .dse-header-box p{color:rgba(10,22,40,.65) !important;}
+.page-reader .dse-header-box h1{color:#faf6ee !important;}
+.page-reader .dse-header-box p{color:rgba(250,246,238,.85) !important;}
 /* headings */
 .page-reader h1{
   font-family:'Cormorant Garamond',Georgia,serif !important;
@@ -3822,10 +3822,10 @@ body.page-reader div[style*="background:#12294f"] h1 {
 /* ===== Wrap Title Fix — 10 Oct 2026 ===== */
 /* Override inline color: var(--navy) that fails to resolve */
 body.page-reader .dse-header-box h1[style*="var(--navy)"] {
-  color: #0A1628 !important;
+  color: #faf6ee !important;
 }
 body.page-reader .dse-header-box p[style*="var(--navy)"] {
-  color: rgba(10,22,40,.8) !important;
+  color: rgba(250,246,238,.85) !important;
 }
 /* Ensure the header box stays cream */
 body.page-reader .dse-header-box {
