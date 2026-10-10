@@ -4293,3 +4293,22 @@ body.page-terminal .profile-card h3,
 body.page-terminal .risk-card h3 {
   color: #faf6ee !important;
 }
+
+/* ===== Targeted Contrast Fixes — 10 Oct 2026 ===== */
+
+/* About: mission paragraph white-on-white → navy text */
+.ab-hero .mission-text,
+.about-hero p.mission,
+body.page-terminal .ab-hero-inner p:first-of-type {
+  color: #0A1628 !important;
+}
+
+/* Contact: Get in Touch card dark-on-dark → light text */
+.ct-info-card p,
+.ct-info-card .ct-contact-val,
+.ct-info-card .ct-contact-label {
+  color: rgba(250,246,238,.85) !important;
+}
+.ct-info-card h3 {
+  color: #faf6ee !important;
+}
