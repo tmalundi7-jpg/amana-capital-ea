@@ -191,6 +191,21 @@
     .news-form{flex-direction:column}
   }
 </style>
+
+<style>
+/* Inline HTML fix: cream sections, dark text */
+header.hero h1 { color: #0A1628 !important; }
+header.hero p { color: rgba(10,22,40,.78) !important; }
+header.hero .hero-eyebrow { color: #8a6d1c !important; }
+section.snapshot h2.sec-title { color: #0A1628 !important; }
+section.snapshot p { color: rgba(10,22,40,.7) !important; }
+section.services h2.sec-title { color: #0A1628 !important; }
+section.services p { color: rgba(10,22,40,.7) !important; }
+/* Cards stay dark */
+section.snapshot .stat-card,
+section.services .service-card,
+section.wrap-teaser .wrap-card { background: #0a1830 !important; }
+</style>
 </head>
 <body>
 <nav class="navbar">
@@ -217,7 +232,7 @@
 </nav>
 
 
-<header class="hero">
+<header class="hero" style="background:#FEF9F0!important;">
   <svg class="chart-bg" viewBox="0 0 1200 400" preserveAspectRatio="none">
     <path d="M0,320 L120,300 L240,310 L360,260 L480,280 L600,220 L720,240 L840,180 L960,200 L1080,140 L1200,160" fill="none" stroke="#c9a227" stroke-width="2"/>
     <path d="M0,320 L120,300 L240,310 L360,260 L480,280 L600,220 L720,240 L840,180 L960,200 L1080,140 L1200,160 L1200,400 L0,400 Z" fill="#c9a227" opacity=".12"/>
@@ -238,7 +253,7 @@
   <div class="ticker-track" id="tickerTrack"></div>
 </div>
 
-<section class="snapshot">
+<section class="snapshot" style="background:#FEF9F0!important;">
   <div class="wrap">
     <div class="sec-label rv">Live Market Snapshot</div>
     <h2 class="sec-title rv">Dar es Salaam Stock Exchange</h2>
@@ -297,7 +312,7 @@
   </div>
 </section>
 
-<section class="services">
+<section class="services" style="background:#FEF9F0!important;">
   <div class="wrap">
     <div class="sec-label rv">What We Do</div>
     <h2 class="sec-title rv">Our Core Services</h2>
@@ -310,7 +325,7 @@
   </div>
 </section>
 
-<section class="wrap-teaser">
+<section class="wrap-teaser" style="background:#FEF9F0!important;">
   <div class="wrap">
     <div class="wt-card rv">
       <div class="wt-body">
