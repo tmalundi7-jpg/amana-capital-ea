@@ -3972,20 +3972,30 @@ section.wrap-teaser .teaser-card p {
 }
 
 
-/* ===== SITE-WIDE CREAM THEME (Safe) — 10 Oct 2026 ===== */
-/* Cream as primary page background. Dark elements preserved. */
 
-/* Page-level backgrounds → cream */
-body.page-terminal,
-body.page-reader,
-body.page-home {
+/* ===== SITE-WIDE CREAM v2 — 10 Oct 2026 ===== */
+/* Works: targets body directly, no class dependency */
+
+/* All page backgrounds → cream */
+body {
   background-color: #FEF9F0 !important;
 }
 
-/* Content wrappers → cream */
-.page-terminal > main,
-.page-reader > main,
-.page-terminal .page-wrap,
-.page-reader .page-wrap {
+/* Homepage sections → cream */
+body > main > section,
+body > section {
   background-color: #FEF9F0 !important;
+}
+
+/* Keep nav and footer dark */
+nav, header nav, footer,
+.navbar, .footer {
+  background-color: #0a1830 !important;
+}
+
+/* Dark cards stay dark */
+.dark-card, .stat-card, .service-card,
+.snap-card, .index-card, .wrap-card,
+.teaser-card, .term-side-card {
+  background-color: #0a1830 !important;
 }
