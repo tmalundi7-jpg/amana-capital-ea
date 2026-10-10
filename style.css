@@ -4055,45 +4055,21 @@ header.hero .btn-secondary:hover {
   color: #faf6ee !important;
 }
 
-/* ===== Hero Dark Bleed Fix — 10 Oct 2026 ===== */
-/* Remove dark areas from hero, ensure text visible on cream */
-
-/* Hide the dark SVG chart background on cream hero */
-header.hero .chart-bg {
-  opacity: 0.15 !important;
-}
-
-/* Ensure hero text is dark and visible */
-header.hero h1 {
+/* ===== Audit Fixes — 10 Oct 2026 ===== */
+/* Fix 1: Wrap title - beat the line-3822 rule with higher specificity */
+html body.page-reader div.dse-header-box h1[style*="navy"],
+html body.page-reader .dse-article-card div.dse-header-box h1 {
   color: #0A1628 !important;
-  text-shadow: none !important;
-}
-header.hero .hero-eyebrow {
-  color: #8a6d1c !important;
-}
-header.hero p {
-  color: rgba(10,22,40,.8) !important;
-  text-shadow: none !important;
 }
 
-/* Fix Start Learning button - make it solid and visible */
-header.hero .btn-secondary,
-header.hero a.btn-secondary {
+/* Fix 3: Homepage Start Learning button (uses .btn-ghost, not .btn-secondary) */
+header.hero .btn-ghost,
+header.hero a.btn-ghost {
+  color: #0A1628 !important;
+  border-color: rgba(10,22,40,.35) !important;
+  background: transparent !important;
+}
+header.hero .btn-ghost:hover {
   background: #0A1628 !important;
-  color: #faf6ee !important;
-  border: 2px solid #0A1628 !important;
-  opacity: 1 !important;
-}
-header.hero .btn-secondary:hover {
-  background: #c9a227 !important;
-  border-color: #c9a227 !important;
-  color: #0A1628 !important;
-}
-
-/* Ticker - ensure visible */
-.ticker, .mk-ticker {
-  background: #0a1830 !important;
-}
-.ticker span, .mk-ticker span {
   color: #faf6ee !important;
 }
