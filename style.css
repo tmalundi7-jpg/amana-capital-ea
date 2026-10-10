@@ -4233,3 +4233,63 @@ body.page-terminal footer nav a {
 body.page-terminal footer .footer-links a:hover {
   color: #8a6d1c !important;
 }
+
+/* ===== AUTOPSY FIX — 10 Oct 2026 ===== */
+/* Fixes 11 invisible-text issues from visual autopsy */
+
+/* 1. MI heatmap legend — dark on dark → light */
+body.page-terminal .heatmap-legend,
+body.page-terminal .heatmap-caption {
+  color: rgba(250,246,238,.7) !important;
+}
+
+/* 2. Inner page logo — white on cream → navy on cream */
+body.page-terminal .site-logo,
+body.page-terminal .logo-wordmark,
+body.page-terminal header .brand-text {
+  color: #0A1628 !important;
+}
+
+/* 3-7. About page — dark text on dark cards → light text */
+body.page-terminal .ab-card p,
+body.page-terminal .about-card p,
+body.page-terminal .team-card p,
+body.page-terminal .gov-card p,
+body.page-terminal .reg-card p {
+  color: rgba(250,246,238,.8) !important;
+}
+body.page-terminal .ab-card h2,
+body.page-terminal .ab-card h3,
+body.page-terminal .team-card h3,
+body.page-terminal .gov-card h3 {
+  color: #faf6ee !important;
+}
+
+/* 8. About CTA button — cream on cream → navy button */
+body.page-terminal .btn-cream-outline {
+  color: #0A1628 !important;
+  border-color: #0A1628 !important;
+}
+
+/* 9. Bond calculator headings — dark on dark → light */
+body.page-terminal .calc-card h2,
+body.page-terminal .calc-card h3,
+body.page-terminal .bond-card h2 {
+  color: #faf6ee !important;
+}
+
+/* 10. Footer links on inner pages — light on cream → dark */
+body.page-terminal footer a,
+body.page-terminal .footer-links a {
+  color: #0A1628 !important;
+}
+
+/* 11. Risk profiler cards — dark on dark → light */
+body.page-terminal .profile-card p,
+body.page-terminal .risk-card p {
+  color: rgba(250,246,238,.8) !important;
+}
+body.page-terminal .profile-card h3,
+body.page-terminal .risk-card h3 {
+  color: #faf6ee !important;
+}
