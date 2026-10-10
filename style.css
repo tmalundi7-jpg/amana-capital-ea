@@ -3887,3 +3887,16 @@ section.wrap-teaser .sec-title {
 section.wrap-teaser .sec-title {
   color: #0A1628 !important;
 }
+
+/* ===== NUCLEAR sec-title visibility — 10 Oct 2026 ===== */
+.sec-title,
+h2.sec-title,
+.sec-title.rv {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  transform: none !important;
+  font-size: 2.2rem !important;
+  line-height: 1.2 !important;
+  margin-bottom: 1rem !important;
+}
