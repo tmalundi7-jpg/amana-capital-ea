@@ -4085,3 +4085,64 @@ html body.page-reader div.dse-article-card div.dse-header-box h1 {
 html body.page-reader div.dse-article-card div.dse-header-box p {
   color: rgba(10,22,40,.75) !important;
 }
+
+/* ===== 80/20 CREAM THEME — 10 Oct 2026 ===== */
+/* 80% cream backgrounds, 20% dark navy (nav, footer, cards) */
+
+/* Override the dark .page-terminal backgrounds */
+body.page-terminal {
+  background: #FEF9F0 !important;
+  background-color: #FEF9F0 !important;
+  background-image: none !important;
+}
+
+body.page-terminal > main,
+body.page-terminal main,
+body.page-terminal .page-wrap,
+body.page-terminal .container {
+  background: #FEF9F0 !important;
+  background-color: #FEF9F0 !important;
+}
+
+/* Page sections → cream */
+body.page-terminal section:not(.keep-dark) {
+  background: #FEF9F0 !important;
+  background-color: #FEF9F0 !important;
+}
+
+/* Text on cream → dark */
+body.page-terminal h1:not(.dark-card h1):not(nav h1),
+body.page-terminal h2:not(.dark-card h2),
+body.page-terminal h3:not(.dark-card h3) {
+  color: #0A1628 !important;
+}
+body.page-terminal p:not(.dark-card p):not(nav p) {
+  color: rgba(10,22,40,.78) !important;
+}
+
+/* Keep nav, footer dark (the 20%) */
+body.page-terminal nav,
+body.page-terminal header nav,
+body.page-terminal footer,
+body.page-terminal .footer,
+body.page-terminal .navbar {
+  background: #0a1830 !important;
+  background-color: #0a1830 !important;
+}
+
+/* Cards → dark navy (part of the 20%) */
+body.page-terminal .card,
+body.page-terminal .term-card,
+body.page-terminal .data-card,
+body.page-terminal .stat-card {
+  background: #0a1830 !important;
+  background-color: #0a1830 !important;
+}
+body.page-terminal .card h3,
+body.page-terminal .term-card h3 {
+  color: #faf6ee !important;
+}
+body.page-terminal .card p,
+body.page-terminal .term-card p {
+  color: rgba(250,246,238,.75) !important;
+}
