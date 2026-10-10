@@ -3970,3 +3970,22 @@ section.wrap-teaser .wrap-card p,
 section.wrap-teaser .teaser-card p {
   color: rgba(250,246,238,.75) !important;
 }
+
+
+/* ===== SITE-WIDE CREAM THEME (Safe) — 10 Oct 2026 ===== */
+/* Cream as primary page background. Dark elements preserved. */
+
+/* Page-level backgrounds → cream */
+body.page-terminal,
+body.page-reader,
+body.page-home {
+  background-color: #FEF9F0 !important;
+}
+
+/* Content wrappers → cream */
+.page-terminal > main,
+.page-reader > main,
+.page-terminal .page-wrap,
+.page-reader .page-wrap {
+  background-color: #FEF9F0 !important;
+}
