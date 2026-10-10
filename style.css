@@ -3831,3 +3831,21 @@ body.page-reader .dse-header-box p[style*="var(--navy)"] {
 body.page-reader .dse-header-box {
   background-color: #FEF9F0 !important;
 }
+
+/* ===== ULTIMATE Wrap Header Override — 10 Oct 2026 ===== */
+/* Placed at end of file for maximum cascade priority */
+/* Matches the inline HTML intent: cream box + dark text */
+html body.page-reader .dse-article-card .dse-header-box,
+html body.page-reader div.dse-header-box[style*="FEF9F0"] {
+  background: #FEF9F0 !important;
+  background-color: #FEF9F0 !important;
+  background-image: none !important;
+}
+html body.page-reader .dse-article-card .dse-header-box h1,
+html body.page-reader div.dse-header-box h1 {
+  color: #0A1628 !important;
+}
+html body.page-reader .dse-article-card .dse-header-box p,
+html body.page-reader div.dse-header-box p {
+  color: rgba(10,22,40,.8) !important;
+}
