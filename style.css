@@ -3850,20 +3850,25 @@ html body.page-reader div.dse-header-box p {
   color: rgba(10,22,40,.8) !important;
 }
 
-/* ===== Homepage sec-title Fix — 10 Oct 2026 ===== */
-/* .sec-title had no CSS rule, causing invisible headings on dark sections */
+/* ===== Homepage Cream Balance — 10 Oct 2026 ===== */
+/* Keep hero, snapshot, services dark. Convert wrap teaser to cream. */
 
-/* Default: dark navy text (for cream backgrounds) */
-.sec-title {
-  color: #0A1628 !important;
-  font-family: 'Cormorant Garamond', Georgia, serif !important;
+section.wrap-teaser {
+  background: #FEF9F0 !important;
 }
-
-/* On dark navy sections: cream text */
-section.snapshot .sec-title,
-section.services .sec-title,
-section.wrap-teaser .sec-title,
-.dark-section .sec-title,
-[style*="navy"] .sec-title {
-  color: #faf6ee !important;
+section.wrap-teaser .sec-title {
+  color: #0A1628 !important;
+}
+section.wrap-teaser p {
+  color: rgba(10,22,40,.75) !important;
+}
+section.wrap-teaser .wrap-card,
+section.wrap-teaser .teaser-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(201,162,39,.22) !important;
+  box-shadow: 0 4px 16px rgba(10,24,48,.06) !important;
+}
+section.wrap-teaser .wrap-card h3,
+section.wrap-teaser .teaser-card h3 {
+  color: #0A1628 !important;
 }
