@@ -4207,3 +4207,29 @@ body.page-terminal .content-wrap {
   background: #FEF9F0 !important;
   background-color: #FEF9F0 !important;
 }
+
+/* ===== Inner Page Nav/Footer Fix — 10 Oct 2026 ===== */
+
+/* Sticky header pill on inner pages → dark navy */
+body.page-terminal .sticky-header,
+body.page-terminal header.sticky,
+body.page-terminal .header-pill,
+body.page-terminal .nav-pill {
+  background: #0a1830 !important;
+  background-color: #0a1830 !important;
+}
+body.page-terminal .sticky-header a,
+body.page-terminal header.sticky a,
+body.page-terminal .header-pill a {
+  color: #faf6ee !important;
+}
+
+/* Footer link row → dark text on cream */
+body.page-terminal footer .footer-links a,
+body.page-terminal .footer .footer-links a,
+body.page-terminal footer nav a {
+  color: #0A1628 !important;
+}
+body.page-terminal footer .footer-links a:hover {
+  color: #8a6d1c !important;
+}
