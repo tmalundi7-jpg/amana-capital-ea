@@ -4171,3 +4171,39 @@ nav .brand, nav .logo-text,
 header nav .brand {
   color: #faf6ee !important;
 }
+
+/* ===== Page Headers Dark Fix — 10 Oct 2026 ===== */
+/* Page headers/heroes should be DARK navy, cream only inside content */
+
+/* Page hero/header sections → dark navy */
+body.page-terminal .page-hero,
+body.page-terminal .hero,
+body.page-terminal .page-header,
+body.page-terminal header.page-head,
+body.page-terminal .term-hero {
+  background: #0a1830 !important;
+  background-color: #0a1830 !important;
+  background-image: none !important;
+}
+
+/* Header text on dark → light */
+body.page-terminal .page-hero h1,
+body.page-terminal .hero h1,
+body.page-terminal .page-header h1,
+body.page-terminal .term-hero h1 {
+  color: #faf6ee !important;
+}
+body.page-terminal .page-hero p,
+body.page-terminal .hero p,
+body.page-terminal .page-header p,
+body.page-terminal .term-hero p {
+  color: rgba(250,246,238,.75) !important;
+}
+
+/* Content sections below header → cream */
+body.page-terminal main > section:not(.page-hero):not(.hero):not(.keep-dark),
+body.page-terminal .page-content,
+body.page-terminal .content-wrap {
+  background: #FEF9F0 !important;
+  background-color: #FEF9F0 !important;
+}
