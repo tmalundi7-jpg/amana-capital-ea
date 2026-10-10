@@ -3819,37 +3819,6 @@ body.page-reader div[style*="background:#12294f"] h1 {
   color: #faf6ee !important;
 }
 
-/* ===== Wrap Title Fix — 10 Oct 2026 ===== */
-/* Override inline color: var(--navy) that fails to resolve */
-body.page-reader .dse-header-box h1[style*="var(--navy)"] {
-  color: #faf6ee !important;
-}
-body.page-reader .dse-header-box p[style*="var(--navy)"] {
-  color: rgba(250,246,238,.85) !important;
-}
-/* Ensure the header box stays cream */
-body.page-reader .dse-header-box {
-  background-color: #FEF9F0 !important;
-}
-
-/* ===== ULTIMATE Wrap Header Override — 10 Oct 2026 ===== */
-/* Placed at end of file for maximum cascade priority */
-/* Matches the inline HTML intent: cream box + dark text */
-html body.page-reader .dse-article-card .dse-header-box,
-html body.page-reader div.dse-header-box[style*="FEF9F0"] {
-  background: #FEF9F0 !important;
-  background-color: #FEF9F0 !important;
-  background-image: none !important;
-}
-html body.page-reader .dse-article-card .dse-header-box h1,
-html body.page-reader div.dse-header-box h1 {
-  color: #0A1628 !important;
-}
-html body.page-reader .dse-article-card .dse-header-box p,
-html body.page-reader div.dse-header-box p {
-  color: rgba(10,22,40,.8) !important;
-}
-
 /* ===== Homepage Cream Balance — 10 Oct 2026 ===== */
 /* Keep hero, snapshot, services dark. Convert wrap teaser to cream. */
 
@@ -4098,20 +4067,6 @@ header.hero a[href*="education"] {
   visibility: visible !important;
 }
 
-/* 3. Wrap title: force cream box + dark text (nuclear) */
-body.page-reader .dse-header-box,
-body.page-reader div.dse-header-box,
-body.page-reader .dse-article-card.dse-header-box {
-  background: #FEF9F0 !important;
-  background-color: #FEF9F0 !important;
-  background-image: none !important;
-}
-body.page-reader .dse-header-box h1,
-body.page-reader div.dse-header-box h1,
-body.page-reader .dse-header-box h1[style] {
-  color: #0A1628 !important;
-}
-body.page-reader .dse-header-box p,
-body.page-reader div.dse-header-box p {
-  color: rgba(10,22,40,.75) !important;
-}
+
+/* ===== Wrap Title: Respect HTML inline styles — 10 Oct 2026 ===== */
+/* HTML already has correct cream box + navy text. Do not override. */
