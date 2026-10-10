@@ -4312,3 +4312,19 @@ body.page-terminal .ab-hero-inner p:first-of-type {
 .ct-info-card h3 {
   color: #faf6ee !important;
 }
+
+/* ===== Sticky Header Fix — 10 Oct 2026 ===== */
+/* Header must stay dark navy on scroll, never switch to cream */
+
+.navbar.scrolled, header nav.scrolled,
+.navbar.sticky, header.sticky,
+.site-header.scrolled {
+  background: #0a1830 !important;
+  background-color: #0a1830 !important;
+}
+
+.navbar.scrolled a, header nav.scrolled a,
+.navbar.scrolled .brand-text,
+header nav.scrolled .brand-text {
+  color: #faf6ee !important;
+}
