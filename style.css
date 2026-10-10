@@ -3888,15 +3888,85 @@ section.wrap-teaser .sec-title {
   color: #0A1628 !important;
 }
 
-/* ===== NUCLEAR sec-title visibility — 10 Oct 2026 ===== */
-.sec-title,
-h2.sec-title,
-.sec-title.rv {
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: block !important;
-  transform: none !important;
-  font-size: 2.2rem !important;
-  line-height: 1.2 !important;
-  margin-bottom: 1rem !important;
+/* ===== Homepage Flip: Cream Sections, Dark Cards — 10 Oct 2026 ===== */
+
+/* Hero section → cream background */
+.hero, .mk-hero, section.hero {
+  background: #FEF9F0 !important;
+}
+.hero h1, .mk-hero h1 {
+  color: #0A1628 !important;
+}
+.hero .hero-eyebrow, .mk-hero .eyebrow {
+  color: #8a6d1c !important;
+}
+.hero p, .mk-hero p {
+  color: rgba(10,22,40,.75) !important;
+}
+.hero .cmsa-note {
+  color: rgba(10,22,40,.6) !important;
+}
+
+/* Live Market Snapshot section → cream */
+section.snapshot {
+  background: #FEF9F0 !important;
+}
+section.snapshot .sec-title {
+  color: #0A1628 !important;
+}
+section.snapshot .sec-desc {
+  color: rgba(10,22,40,.7) !important;
+}
+/* Stat cards stay DARK navy */
+section.snapshot .stat-card,
+section.snapshot .snap-card,
+section.snapshot .index-card {
+  background: #0a1830 !important;
+  border: 1px solid rgba(201,162,39,.25) !important;
+}
+section.snapshot .stat-card .stat-value,
+section.snapshot .stat-card .idx-value {
+  color: #c9a227 !important;
+}
+section.snapshot .stat-card .stat-label {
+  color: rgba(250,246,238,.6) !important;
+}
+
+/* What We Do section → cream */
+section.services {
+  background: #FEF9F0 !important;
+}
+section.services .sec-title {
+  color: #0A1628 !important;
+}
+section.services .sec-desc {
+  color: rgba(10,22,40,.7) !important;
+}
+/* Service cards stay DARK navy */
+section.services .service-card,
+section.services .svc-card {
+  background: #0a1830 !important;
+  border: 1px solid rgba(201,162,39,.2) !important;
+}
+section.services .service-card h3,
+section.services .svc-card h3 {
+  color: #faf6ee !important;
+}
+section.services .service-card p,
+section.services .svc-card p {
+  color: rgba(250,246,238,.7) !important;
+}
+
+/* Wrap teaser section → cream, card stays dark */
+section.wrap-teaser {
+  background: #FEF9F0 !important;
+}
+section.wrap-teaser .wrap-card,
+section.wrap-teaser .teaser-card {
+  background: #0a1830 !important;
+}
+/* Fix faint description text in wrap card */
+section.wrap-teaser .wrap-card p,
+section.wrap-teaser .teaser-card p {
+  color: rgba(250,246,238,.75) !important;
 }
