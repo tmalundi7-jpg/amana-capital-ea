@@ -3818,3 +3818,16 @@ body.page-reader div[style*="background: #12294f"] h1,
 body.page-reader div[style*="background:#12294f"] h1 {
   color: #faf6ee !important;
 }
+
+/* ===== Wrap Title Fix — 10 Oct 2026 ===== */
+/* Override inline color: var(--navy) that fails to resolve */
+body.page-reader .dse-header-box h1[style*="var(--navy)"] {
+  color: #0A1628 !important;
+}
+body.page-reader .dse-header-box p[style*="var(--navy)"] {
+  color: rgba(10,22,40,.8) !important;
+}
+/* Ensure the header box stays cream */
+body.page-reader .dse-header-box {
+  background-color: #FEF9F0 !important;
+}
