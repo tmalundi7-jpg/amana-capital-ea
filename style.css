@@ -4290,11 +4290,11 @@ body.page-terminal .btn-cream-outline {
   border-color: #0A1628 !important;
 }
 
-/* 9. Bond calculator headings — dark on dark → light */
+/* 9. Bond calculator headings — Institutional light gold + cream cards */
 body.page-terminal .calc-card h2,
 body.page-terminal .calc-card h3,
 body.page-terminal .bond-card h2 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 
 /* 10. Footer links on inner pages — light on cream → dark */
@@ -4501,18 +4501,18 @@ body.page-terminal .ab-team-name {
 /* 4. CONTACT PAGE — "What to Expect When You Reach Out" Cards */
 .ct-why .ct-eyebrow,
 .ct-why .ct-eyebrow-light {
-  color: #8a6d1c !important;
+  color: #c9a227 !important;
 }
 
 .ct-why h2,
 .ct-why .ct-h2,
 .ct-why .ct-h2-light {
-  color: #0A1628 !important;
+  color: #faf6ee !important;
 }
 
 .ct-why p.ct-sub,
 .ct-why .ct-sub-light {
-  color: rgba(10,22,40,.75) !important;
+  color: rgba(250,246,238,.85) !important;
 }
 
 .ct-why-item,
@@ -4566,12 +4566,12 @@ body.page-terminal .ct-info-card .ct-contact-label,
   color: rgba(250,246,238,.85) !important;
 }
 
-/* 7. BOND CALCULATOR — Panel Headings */
+/* 7. BOND CALCULATOR — Panel Headings (Institutional Light Gold + Cream Cards) */
 body.page-terminal .calc-card h2,
 body.page-terminal .calc-card h3,
 .calc-card h2,
 .calc-card h3 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 
 /* 8. RISK PROFILER — Profile Cards */
@@ -5276,12 +5276,19 @@ input[placeholder="you@example.com"]:not(.ct-input)::placeholder,
 /* Eliminate any white-on-cream or dark-on-dark bugs site-wide */
 body.page-terminal .ab-section:not(.dark) p,
 body.page-terminal .rp-hero p,
-body.page-terminal .rp-info-section p {
-  color: rgba(10, 22, 40, 0.8) !important;
+body.page-terminal .rp-info-section p,
+body.page-terminal .calc-card p {
+  color: rgba(10, 22, 40, 0.82) !important;
+}
+
+body.page-terminal .calc-card h1,
+body.page-terminal .calc-card h2,
+body.page-terminal .calc-card h3,
+body.page-terminal .calc-card h4 {
+  color: #0A1628 !important;
 }
 
 body.page-terminal .card p,
-body.page-terminal .calc-card p,
 body.page-terminal .term-card p,
 body.page-terminal .rp-card p,
 body.page-terminal .dark-card p,
@@ -5294,8 +5301,6 @@ body.page-terminal .card h1,
 body.page-terminal .card h2,
 body.page-terminal .card h3,
 body.page-terminal .card h4,
-body.page-terminal .calc-card h2,
-body.page-terminal .calc-card h3,
 body.page-terminal .rp-card h2,
 body.page-terminal .rp-card h3,
 body.page-terminal .ab-team-card h3,
