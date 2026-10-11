@@ -5472,3 +5472,292 @@ body.page-terminal .term-head,
 
 
 
+
+
+/* ==========================================================================
+   SITE-WIDE LIGHT GOLD + CREAM CARD SYSTEM
+   Replaces ALL dark navy card backgrounds site-wide with light gold + cream mixture.
+   Benchmark: UK & US Institutional Wealth & Advisory Standards.
+   ========================================================================== */
+
+/* 1. Universal Card Background & Border Override */
+.card,
+.stat-card,
+.snap-card,
+.mover-card,
+.p-card,
+.s-card,
+.service-card,
+.svc-card,
+.why-card,
+.wrap-card,
+.teaser-card,
+.wt-card,
+.wt-body,
+.wt-side,
+.term-card,
+.term-side-card,
+.term-side-card.cream-side,
+.term-board .term-cell,
+.term-tbl-wrap,
+.ab-story,
+.ab-info-card,
+.ab-reg-card,
+.ab-team-card,
+.ab-pillar,
+.ct-form-card,
+.ct-form-header,
+.ct-info-card,
+.ct-team-card,
+.ct-why-item,
+.ct-map-card,
+.ct-response-strip,
+.calc-card,
+.calc-result,
+.cream-box,
+.rp-card,
+.rp-profile-card,
+.rp-inst-item,
+.rp-detail-card,
+.module-accordion,
+details.module-accordion,
+.dse-article-card .dse-header-box,
+.dse-header-box,
+.key-takeaways,
+.apply-it,
+.further-reading,
+.why-section-header,
+section.snapshot .stat-card,
+section.snapshot .snap-card,
+section.services .service-card,
+section.services .s-card,
+section.wrap-teaser .wrap-card,
+section.wrap-teaser .teaser-card,
+html body .stat-card,
+html body .service-card,
+html body .wrap-card,
+body.page-terminal .card,
+body.page-terminal .stat-card,
+body.page-terminal .snap-card,
+body.page-terminal .mover-card,
+body.page-terminal .s-card,
+body.page-terminal .service-card,
+body.page-terminal .wrap-card,
+body.page-terminal .wt-card,
+body.page-terminal .term-side-card,
+body.page-terminal .term-tbl-wrap,
+body.page-terminal .ab-story,
+body.page-terminal .ab-info-card,
+body.page-terminal .ab-reg-card,
+body.page-terminal .ab-team-card,
+body.page-terminal .ab-pillar,
+body.page-terminal .ct-form-card,
+body.page-terminal .ct-info-card,
+body.page-terminal .ct-team-card,
+body.page-terminal .ct-why-item,
+body.page-terminal .ct-response-strip,
+body.page-terminal .calc-card,
+body.page-terminal .rp-card,
+body.page-terminal .rp-profile-card,
+body.page-terminal .rp-inst-item,
+body.page-reader .dse-header-box {
+  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background-color: transparent !important;
+  background-image: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  border: 1px solid rgba(200, 150, 46, 0.25) !important;
+  box-shadow: 0 8px 24px rgba(10, 22, 40, 0.05) !important;
+}
+
+/* 2. Table Headers & Tables on Converted Cards */
+.dse-article-card table th,
+.dse-article-card table tr:first-child th,
+.term-table thead th,
+table.term-table thead th,
+.page-terminal table.term-table thead th {
+  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background-color: #FAF4E5 !important;
+  color: #0A1628 !important;
+  border-bottom: 2px solid rgba(200, 150, 46, 0.35) !important;
+}
+
+.dse-article-card table td,
+.term-table tbody td,
+table.term-table tbody td {
+  color: #0A1628 !important;
+  border-bottom: 1px solid rgba(200, 150, 46, 0.15) !important;
+}
+
+/* 3. Headings on Light Cards (Deep Navy #0A1628) */
+.snap-card h1, .snap-card h2, .snap-card h3, .snap-card h4,
+.mover-card h1, .mover-card h2, .mover-card h3, .mover-card h4,
+.s-card h1, .s-card h2, .s-card h3, .s-card h4,
+.p-card h1, .p-card h2, .p-card h3, .p-card h4,
+.wt-card h1, .wt-card h2, .wt-card h3, .wt-card h4,
+.wt-body h1, .wt-body h2, .wt-body h3, .wt-body h4,
+.term-side-card h1, .term-side-card h2, .term-side-card h3, .term-side-card h4,
+.ab-story h1, .ab-story h2, .ab-story h3, .ab-story h4,
+.ab-info-card h1, .ab-info-card h2, .ab-info-card h3, .ab-info-card h4,
+.ab-reg-card h1, .ab-reg-card h2, .ab-reg-card h3, .ab-reg-card h4,
+.ab-reg-title,
+.ab-team-card h1, .ab-team-card h2, .ab-team-card h3, .ab-team-card h4,
+.ab-team-name,
+.ab-pillar h1, .ab-pillar h2, .ab-pillar h3, .ab-pillar h4,
+.ct-form-card h1, .ct-form-card h2, .ct-form-card h3, .ct-form-card h4,
+.ct-info-card h1, .ct-info-card h2, .ct-info-card h3, .ct-info-card h4,
+.ct-team-card h1, .ct-team-card h2, .ct-team-card h3, .ct-team-card h4,
+.ct-team-name,
+.ct-why-item h1, .ct-why-item h2, .ct-why-item h3, .ct-why-item h4,
+.calc-card h1, .calc-card h2, .calc-card h3, .calc-card h4,
+.rp-card h1, .rp-card h2, .rp-card h3, .rp-card h4,
+.rp-profile-card h1, .rp-profile-card h2, .rp-profile-card h3, .rp-profile-card h4,
+.rp-inst-item h1, .rp-inst-item h2, .rp-inst-item h3, .rp-inst-item h4,
+.dse-header-box h1, .dse-header-box h2, .dse-header-box h3,
+.key-takeaways h1, .key-takeaways h2, .key-takeaways h3,
+details.module-accordion summary,
+.card h1, .card h2, .card h3, .card h4 {
+  color: #0A1628 !important;
+}
+
+/* 4. Body Text on Light Cards (rgba(10, 22, 40, 0.80)) */
+.snap-card p, .mover-card p, .s-card p, .p-card p, .wt-card p, .wt-body p,
+.term-side-card p, .term-side-card li,
+.ab-story p, .ab-info-card p, .ab-info-card li, .ab-reg-card p, .ab-reg-text, .ab-team-card p, .ab-team-bio, .ab-pillar p,
+.ct-form-card p, .ct-info-card p, .ct-team-card p, .ct-why-item p, .ct-response-strip p,
+.calc-card p, .rp-card p, .rp-profile-card p, .rp-inst-item p,
+details.module-accordion p, details.module-accordion li,
+.dse-header-box p, .key-takeaways p, .key-takeaways li,
+.apply-it p, .further-reading p,
+.card p {
+  color: rgba(10, 22, 40, 0.80) !important;
+}
+
+/* 5. Accents, Labels & Indicators on Light Cards (#8A6D1C) */
+.snap-name,
+.snap-foot,
+.s-card .idx,
+.p-num,
+.wt-body .date,
+.wt-body h3 em,
+.wt-stats div span,
+.wt-side .cap,
+.ab-story-lead,
+.ab-info-card li strong,
+.ab-reg-badge,
+.ab-reg-status,
+.ab-pillar-num,
+.ab-team-role,
+.ct-eyebrow,
+.ct-form-header-label,
+.ct-info-eyebrow,
+.ct-team-card-eyebrow,
+.ct-team-role,
+.ct-response-strip strong,
+.ct-response-strip a,
+.rp-inst-item-yield,
+.rp-profile-card-alloc strong,
+.stat-label,
+.term-quote,
+.term-arc-date,
+details.module-accordion .caret {
+  color: #8A6D1C !important;
+}
+
+.snap-val,
+.wt-stats div strong,
+.wt-side .big {
+  color: #0A1628 !important;
+}
+
+.mover-row {
+  color: #0A1628 !important;
+  border-bottom: 1px solid rgba(200, 150, 46, 0.15) !important;
+}
+.mover-row .sym {
+  color: #0A1628 !important;
+}
+
+/* 6. Form Inputs & Interactive Elements on Light Cards */
+.ct-form-card .ct-input,
+.ct-form-card .ct-textarea,
+.ct-form-card .ct-select,
+.calc-input {
+  background: #ffffff !important;
+  color: #0A1628 !important;
+  border: 1.5px solid rgba(200, 150, 46, 0.3) !important;
+}
+.ct-form-card .ct-label {
+  color: #0A1628 !important;
+}
+.ct-form-card .ct-tab {
+  color: #0A1628 !important;
+  border-color: rgba(200, 150, 46, 0.3) !important;
+}
+.ct-form-card .ct-tab.active {
+  background: #8A6D1C !important;
+  color: #FAF4E5 !important;
+  border-color: #8A6D1C !important;
+}
+
+/* 7. Links on Light Cards */
+.term-side-card a:not(.btn):not(.btn-gold-solid) {
+  color: #0A1628 !important;
+}
+.term-side-card a:not(.btn):not(.btn-gold-solid):hover {
+  color: #8A6D1C !important;
+}
+.term-arc-row h3 {
+  color: #0A1628 !important;
+}
+.term-arc-row p {
+  color: rgba(10, 22, 40, 0.80) !important;
+}
+details.module-accordion .article-link {
+  color: rgba(10, 22, 40, 0.85) !important;
+}
+details.module-accordion .article-link:hover {
+  color: #8A6D1C !important;
+}
+
+/* 8. STRICT PRESERVATION OF NAVBAR & FOOTER (Dark Navy #0a1830) */
+nav.navbar,
+header.navbar,
+.navbar,
+.navbar.scrolled,
+.navbar.sticky,
+body.page-terminal nav.navbar,
+body.page-reader nav.navbar,
+body.page-home nav.navbar {
+  background: #0a1830 !important;
+  background-color: #0a1830 !important;
+  background-image: none !important;
+}
+nav.navbar .nav-container,
+nav.navbar .container,
+.navbar .nav-container,
+.navbar .container {
+  background: #0a1830 !important;
+  background-color: #0a1830 !important;
+  background-image: none !important;
+}
+nav.navbar .nav-links a,
+.navbar .nav-links a {
+  color: #faf6ee !important;
+}
+
+footer.footer,
+footer,
+.footer,
+body.page-terminal footer.footer,
+body.page-reader footer.footer,
+body.page-home footer.footer {
+  background: #0a1830 !important;
+  background-color: #0a1830 !important;
+  background-image: none !important;
+}
+footer.footer .container,
+footer .container,
+.footer .container {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
