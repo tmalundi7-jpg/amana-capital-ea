@@ -4328,3 +4328,29 @@ body.page-terminal .ab-hero-inner p:first-of-type {
 header nav.scrolled .brand-text {
   color: #faf6ee !important;
 }
+
+/* ===== Sticky Header Fix v2 — 10 Oct 2026 ===== */
+/* Aggressive: ALL header/nav elements stay dark, all states */
+
+header, header nav, .navbar, .site-header,
+header .nav-container, .navbar .container,
+body.page-terminal header, body.page-terminal .navbar {
+  background: #0a1830 !important;
+  background-color: #0a1830 !important;
+}
+
+header a, header nav a, .navbar a,
+header .brand-text, .navbar .brand-text,
+header .nav-links a, .navbar .nav-links a {
+  color: #faf6ee !important;
+}
+
+header .nav-links a:hover, .navbar .nav-links a:hover,
+header .nav-links a.active, .navbar .nav-links a.active {
+  color: #c9a227 !important;
+}
+
+/* About regulatory card body text */
+.reg-card p, .reg-card .reg-body {
+  color: rgba(250,246,238,.85) !important;
+}
