@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=20261011_institutional" rel="stylesheet"/>
+<link href="style.css?v=20261011_goldcream" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -72,14 +72,14 @@
   .hero-note{margin-top:2.2rem;font-size:.8rem;color:rgba(250,246,238,.6);letter-spacing:.06em}
   .hero-note strong{color:var(--gold);font-weight:600}
 
-  /* ---------- ticker ---------- */
-  .ticker{border-top:1px solid rgba(201,162,39,.18);border-bottom:1px solid rgba(201,162,39,.18);background:rgba(0,0,0,.25);overflow:hidden;white-space:nowrap;padding:.85rem 0}
+  /* ---------- ticker (brightened light-gold/cream with high contrast) ---------- */
+  .ticker{border-top:1px solid rgba(200,150,46,.35);border-bottom:1px solid rgba(200,150,46,.35);background:linear-gradient(90deg, #F9F1DC 0%, #FFFDF8 50%, #F9F1DC 100%);overflow:hidden;white-space:nowrap;padding:.9rem 0;box-shadow:inset 0 1px 2px rgba(200,150,46,.08)}
   .ticker-track{display:inline-block;animation:tick 32s linear infinite}
   .ticker:hover .ticker-track{animation-play-state:paused}
   @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-  .tick-item{display:inline-block;margin:0 2.2rem;font-size:.85rem;letter-spacing:.08em;color:rgba(250,246,238,.75)}
-  .tick-item b{font-family:var(--serif);font-size:1.05rem;color:var(--cream);font-weight:600;margin-right:.5rem}
-  .up{color:var(--green)} .down{color:var(--red-bright)}
+  .tick-item{display:inline-block;margin:0 2.2rem;font-size:.88rem;letter-spacing:.05em;color:#0A1628;font-weight:500}
+  .tick-item b{font-family:var(--serif);font-size:1.12rem;color:#8A6D1C;font-weight:700;margin-right:.5rem}
+  .up{color:#15803D;font-weight:600} .down{color:#DC2626;font-weight:600}
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
   @media (prefers-reduced-motion: reduce){
     .ticker-track{animation:none}
