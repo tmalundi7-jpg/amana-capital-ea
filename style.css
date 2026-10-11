@@ -4354,3 +4354,12 @@ header .nav-links a.active, .navbar .nav-links a.active {
 .reg-card p, .reg-card .reg-body {
   color: rgba(250,246,238,.85) !important;
 }
+
+/* ===== Final Header Fix — 11 Oct 2026 ===== */
+/* Targets: body.page-terminal > nav.navbar > div.container.nav-container */
+html body.page-terminal > nav.navbar > div.container.nav-container,
+html body.page-terminal nav.navbar div.nav-container {
+  background: #0a1830 !important;
+  background-color: #0a1830 !important;
+  background-image: none !important;
+}
