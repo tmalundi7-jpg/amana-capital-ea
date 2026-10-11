@@ -5070,16 +5070,19 @@ body.page-terminal .ab-section:not(.dark) .ab-eyebrow,
   color: #8a6d1c !important;
 }
 
-body.page-terminal .ab-section.dark {
-  background: #0a1830 !important;
+body.page-terminal .ab-section.dark,
+.ab-section.dark {
+  background: #FEF9F0 !important;
 }
 
-body.page-terminal .ab-section.dark .ab-title {
-  color: #faf6ee !important;
+body.page-terminal .ab-section.dark .ab-title,
+.ab-section.dark .ab-title {
+  color: #0A1628 !important;
 }
 
-body.page-terminal .ab-section.dark .ab-eyebrow {
-  color: #c9a227 !important;
+body.page-terminal .ab-section.dark .ab-eyebrow,
+.ab-section.dark .ab-eyebrow {
+  color: #8a6d1c !important;
 }
 
 body.page-terminal .ab-hero-inner p {
@@ -5272,11 +5275,11 @@ input[placeholder="you@example.com"]:not(.ct-input)::placeholder,
 }
 
 
-/* --- 8. GLOBAL CONTRAST & ACCESSIBILITY GUARD --- */
+/* --- 8. GLOBAL CONTRAST & ACCESSIBILITY GUARD (Targeted Calibration) --- */
 /* Eliminate any white-on-cream or dark-on-dark bugs site-wide */
-body.page-terminal .ab-section:not(.dark) p,
+body.page-terminal .ab-section:not(.dark) p:not(.ab-story p):not(.ab-reg-card p),
 body.page-terminal .rp-hero p,
-body.page-terminal .rp-info-section p,
+body.page-terminal .rp-info-section p:not(.rp-profile-card p),
 body.page-terminal .calc-card p {
   color: rgba(10, 22, 40, 0.82) !important;
 }
@@ -5293,7 +5296,12 @@ body.page-terminal .term-card p,
 body.page-terminal .rp-card p,
 body.page-terminal .dark-card p,
 body.page-terminal .ab-team-card p,
-body.page-terminal .ab-info-card p {
+body.page-terminal .ab-info-card p,
+body.page-terminal .ab-info-card li,
+body.page-terminal .ab-story p,
+body.page-terminal .ab-reg-card p,
+body.page-terminal .ab-reg-card .ab-reg-text,
+body.page-terminal .rp-profile-card p {
   color: rgba(250, 246, 238, 0.85) !important;
 }
 
@@ -5304,8 +5312,153 @@ body.page-terminal .card h4,
 body.page-terminal .rp-card h2,
 body.page-terminal .rp-card h3,
 body.page-terminal .ab-team-card h3,
+body.page-terminal .ab-team-name,
+body.page-terminal .ab-info-card h3,
+body.page-terminal .ab-reg-card .ab-reg-title,
+body.page-terminal .rp-profile-card h3,
+body.page-terminal .ct-info-card h3 {
+  color: #faf6ee !important;
+}
+
+/* --- 9. ISSUE-SPECIFIC TARGETED RESOLUTIONS --- */
+
+/* 1. About Page Fixes */
+body.page-terminal .ab-story {
+  background: #070d18 !important;
+  border: 1px solid rgba(200, 150, 46, 0.25) !important;
+}
+body.page-terminal .ab-story p {
+  color: rgba(250, 246, 238, 0.85) !important;
+}
+body.page-terminal .ab-story .ab-story-lead {
+  color: #c9a227 !important;
+}
+
+body.page-terminal .ab-info-card {
+  background: #070d18 !important;
+  border: 1px solid rgba(200, 150, 46, 0.2) !important;
+}
 body.page-terminal .ab-info-card h3 {
   color: #faf6ee !important;
+}
+body.page-terminal .ab-info-card p,
+body.page-terminal .ab-info-card li {
+  color: rgba(250, 246, 238, 0.85) !important;
+}
+body.page-terminal .ab-info-card li strong {
+  color: #c9a227 !important;
+}
+
+body.page-terminal .ab-reg-card {
+  background: #070d18 !important;
+  border: 1px solid rgba(201, 162, 39, 0.25) !important;
+}
+body.page-terminal .ab-reg-card .ab-reg-title {
+  color: #faf6ee !important;
+}
+body.page-terminal .ab-reg-card .ab-reg-text,
+body.page-terminal .ab-reg-card p {
+  color: rgba(250, 246, 238, 0.85) !important;
+}
+body.page-terminal .ab-reg-card .ab-reg-status,
+body.page-terminal .ab-reg-card .ab-reg-badge {
+  color: #c9a227 !important;
+}
+
+body.page-terminal .ab-section.dark .ab-title,
+.ab-section.dark .ab-title {
+  color: #0A1628 !important;
+}
+body.page-terminal .ab-section.dark .ab-eyebrow,
+.ab-section.dark .ab-eyebrow {
+  color: #8a6d1c !important;
+}
+
+/* 2. Contact Page Fixes */
+body.page-terminal .ct-response-strip,
+.ct-response-strip {
+  background: #0a1830 !important;
+  border: 1px solid rgba(200, 150, 46, 0.3) !important;
+}
+body.page-terminal .ct-response-strip p,
+.ct-response-strip p {
+  color: #faf6ee !important;
+}
+body.page-terminal .ct-response-strip strong,
+.ct-response-strip strong,
+body.page-terminal .ct-response-strip a,
+.ct-response-strip a {
+  color: #c9a227 !important;
+}
+body.page-terminal .ct-info-card h3,
+.ct-info-card h3 {
+  color: #faf6ee !important;
+}
+
+/* 3. Risk Profiler Fixes */
+body.page-terminal .rp-profile-card,
+.rp-profile-card {
+  background: #070d18 !important;
+}
+body.page-terminal .rp-profile-card h3,
+.rp-profile-card h3 {
+  color: #faf6ee !important;
+}
+body.page-terminal .rp-profile-card p,
+.rp-profile-card p {
+  color: rgba(250, 246, 238, 0.78) !important;
+}
+body.page-terminal .rp-profile-card .rp-profile-card-alloc,
+.rp-profile-card .rp-profile-card-alloc {
+  color: rgba(250, 246, 238, 0.65) !important;
+}
+body.page-terminal .rp-profile-card-alloc strong,
+.rp-profile-card-alloc strong {
+  color: #c9a227 !important;
+}
+
+body.page-terminal .rp-instruments-table,
+.rp-instruments-table {
+  background: #FEF9F0 !important;
+}
+body.page-terminal .rp-instruments-table .rp-section-h2,
+.rp-instruments-table .rp-section-h2 {
+  color: #0A1628 !important;
+}
+body.page-terminal .rp-instruments-table .rp-section-sub,
+.rp-instruments-table .rp-section-sub {
+  color: rgba(10, 22, 40, 0.8) !important;
+}
+body.page-terminal .rp-inst-item,
+.rp-inst-item {
+  background: #ffffff !important;
+  border: 1px solid rgba(200, 150, 46, 0.25) !important;
+}
+body.page-terminal .rp-inst-item h4,
+.rp-inst-item h4 {
+  color: #0A1628 !important;
+}
+body.page-terminal .rp-inst-item p,
+.rp-inst-item p {
+  color: rgba(10, 22, 40, 0.8) !important;
+}
+body.page-terminal .rp-inst-item-yield,
+.rp-inst-item-yield {
+  color: #8A6D1C !important;
+}
+
+/* 4. Nav Overlap Fixes (Home Hero + Investor Education) */
+body.page-home header.hero,
+header.hero,
+.hero {
+  padding-top: max(8rem, calc(70px + 2.5rem)) !important;
+  scroll-margin-top: 90px !important;
+}
+
+body.page-terminal .term-head,
+.term-head {
+  padding-top: max(6.5rem, calc(70px + 2.5rem)) !important;
+  scroll-margin-top: 90px !important;
 }
 
 
