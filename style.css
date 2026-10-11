@@ -4351,16 +4351,16 @@ header nav.scrolled .brand-text {
 /* ===== Sticky Header Fix v2 — 10 Oct 2026 ===== */
 /* Aggressive: ALL header/nav elements stay dark, all states */
 
-header, header nav, .navbar, .site-header,
-header .nav-container, .navbar .container,
-body.page-terminal header, body.page-terminal .navbar {
+header:not(.hero):not(.term-head):not(.page-hero), header nav, .navbar, .site-header,
+header:not(.hero):not(.term-head):not(.page-hero) .nav-container, .navbar .container,
+body.page-terminal header:not(.hero):not(.term-head):not(.page-hero), body.page-terminal .navbar {
   background: #0a1830 !important;
   background-color: #0a1830 !important;
 }
 
-header a, header nav a, .navbar a,
-header .brand-text, .navbar .brand-text,
-header .nav-links a, .navbar .nav-links a {
+header:not(.hero):not(.term-head):not(.page-hero) a, header nav a, .navbar a,
+header:not(.hero):not(.term-head):not(.page-hero) .brand-text, .navbar .brand-text,
+header:not(.hero):not(.term-head):not(.page-hero) .nav-links a, .navbar .nav-links a {
   color: #faf6ee !important;
 }
 
@@ -4615,10 +4615,8 @@ body.page-reader h3,
    Unified Navbar, Full-Bleed Footer, Cream Hero Calibration, Zero Hidden Text
    ========================================================================== */
 
-/* --- 1. GLOBAL TOP NAVBAR (Pic 1 Benchmark) --- */
-header,
 /* --- 1. GLOBAL TOP NAVBAR (Home Page Benchmark Across ALL Pages) --- */
-header,
+header:not(.hero):not(.term-head):not(.page-hero),
 header nav,
 nav.navbar,
 header.navbar,
@@ -4654,8 +4652,8 @@ nav.navbar .container,
 nav.navbar .nav-container,
 .navbar .container,
 .navbar .nav-container,
-header .container,
-header .nav-container,
+header:not(.hero):not(.term-head):not(.page-hero) .container,
+header:not(.hero):not(.term-head):not(.page-hero) .nav-container,
 body.page-terminal nav.navbar .container,
 body.page-terminal nav.navbar .nav-container,
 body.page-terminal .navbar .container,
@@ -5449,15 +5447,26 @@ body.page-terminal .rp-inst-item-yield,
 
 /* 4. Nav Overlap Fixes (Home Hero + Investor Education) */
 body.page-home header.hero,
+body header.hero,
 header.hero,
 .hero {
-  padding-top: max(8rem, calc(70px + 2.5rem)) !important;
+  position: relative !important;
+  display: block !important;
+  height: auto !important;
+  min-height: auto !important;
+  padding-top: calc(70px + 3.5rem) !important;
+  padding-bottom: 5rem !important;
   scroll-margin-top: 90px !important;
 }
 
 body.page-terminal .term-head,
 .term-head {
-  padding-top: max(6.5rem, calc(70px + 2.5rem)) !important;
+  position: relative !important;
+  display: block !important;
+  height: auto !important;
+  min-height: auto !important;
+  padding-top: calc(70px + 3rem) !important;
+  padding-bottom: 3.2rem !important;
   scroll-margin-top: 90px !important;
 }
 

@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=20261011_institutional_v4" rel="stylesheet"/>
+<link href="style.css?v=20261011_institutional_v5" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -61,8 +61,7 @@
   body{font-family:var(--sans);background:var(--navy);color:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1180px;margin:0 auto;padding:0 2rem}
 
-  /* ---------- hero ---------- */
-  .hero{position:relative;overflow:hidden;padding:7.5rem 0 5rem;text-align:center}
+  .hero{position:relative;display:block;height:auto;min-height:auto;overflow:hidden;padding:calc(70px + 3.5rem) 0 5rem;text-align:center}
   .hero svg.chart-bg{position:absolute;inset:0;width:100%;height:100%;opacity:.16;pointer-events:none}
   .kicker{font-size:.75rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1.6rem}
   h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.08;letter-spacing:.01em;max-width:16ch;margin:0 auto 1.4rem}
@@ -194,6 +193,14 @@
 
 <style>
 /* Inline HTML fix: cream sections, dark text */
+header.hero, .hero {
+  padding-top: calc(70px + 3.5rem) !important;
+  display: block !important;
+  height: auto !important;
+  min-height: auto !important;
+  position: relative !important;
+  scroll-margin-top: 90px !important;
+}
 header.hero h1 { color: #0A1628 !important; }
 header.hero p { color: rgba(10,22,40,.78) !important; }
 header.hero .hero-eyebrow { color: #8a6d1c !important; }
@@ -232,7 +239,7 @@ section.wrap-teaser .wrap-card { background: #0a1830 !important; }
 </nav>
 
 
-<header class="hero" style="background:#FEF9F0!important; padding-top: max(8rem, calc(70px + 2.5rem)) !important; scroll-margin-top: 90px !important;">
+<header class="hero" style="background:#FEF9F0!important; padding-top: calc(70px + 3.5rem) !important; padding-bottom: 5rem !important; height: auto !important; min-height: auto !important; display: block !important; position: relative !important; scroll-margin-top: 90px !important;">
   <svg class="chart-bg" viewBox="0 0 1200 400" preserveAspectRatio="none" style="opacity:0.08;"><path d="M0,320 L1200,160" fill="none" stroke="#c9a227" stroke-width="2"/></svg>
   <div class="wrap">
     <div class="kicker">Tanzania's Premier Market Intelligence</div>
