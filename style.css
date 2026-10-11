@@ -3416,7 +3416,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 }
 .page-reader h3{
   font-family:'Cormorant Garamond',Georgia,serif !important;
-  color:#faf6ee !important;
+  color:#0A1628 !important;
   font-size:1.35rem !important;
 }
 /* body text */
@@ -4099,7 +4099,9 @@ body.page-terminal {
 body.page-terminal > main,
 body.page-terminal main,
 body.page-terminal .page-wrap,
-body.page-terminal .container {
+body.page-terminal main .container,
+body.page-terminal .page-content .container,
+body.page-terminal .content-wrap .container {
   background: #FEF9F0 !important;
   background-color: #FEF9F0 !important;
 }
@@ -4125,7 +4127,11 @@ body.page-terminal nav,
 body.page-terminal header nav,
 body.page-terminal footer,
 body.page-terminal .footer,
-body.page-terminal .navbar {
+body.page-terminal .navbar,
+body.page-terminal nav .nav-container,
+body.page-terminal nav .container,
+body.page-terminal .navbar .nav-container,
+body.page-terminal .navbar .container {
   background: #0a1830 !important;
   background-color: #0a1830 !important;
 }
@@ -4363,3 +4369,231 @@ html body.page-terminal nav.navbar div.nav-container {
   background-color: #0a1830 !important;
   background-image: none !important;
 }
+
+/* ==========================================================================
+   INVISIBLE TEXT BATCH FIXES — 11 Oct 2026
+   Fixes all 9 reported contrast and visibility issues across inner pages
+   ========================================================================== */
+
+/* 1. STICKY HEADER (All states: top, scrolled, sticky) */
+nav.navbar,
+header.navbar,
+.navbar,
+.navbar.scrolled,
+.navbar.sticky,
+body.page-terminal nav.navbar,
+body.page-terminal nav.navbar.scrolled,
+body.page-terminal nav.navbar.sticky,
+body.page-terminal .navbar,
+body.page-terminal .navbar .nav-container,
+body.page-terminal .navbar .container,
+body.page-terminal nav .nav-container,
+body.page-terminal nav .container,
+.navbar .nav-container,
+.navbar .container {
+  background: #0a1830 !important;
+  background-color: #0a1830 !important;
+  background-image: none !important;
+}
+
+nav.navbar .nav-links a,
+.navbar .nav-links a,
+body.page-terminal nav.navbar .nav-links a,
+body.page-terminal .navbar .nav-links a {
+  color: #faf6ee !important;
+}
+
+nav.navbar .nav-links a:hover,
+.navbar .nav-links a:hover,
+body.page-terminal nav.navbar .nav-links a:hover,
+body.page-terminal .navbar .nav-links a:hover,
+nav.navbar .nav-links a.active,
+.navbar .nav-links a.active,
+body.page-terminal nav.navbar .nav-links a.active,
+body.page-terminal .navbar .nav-links a.active {
+  color: #c9a227 !important;
+}
+
+/* 2. ABOUT PAGE — Regulatory Status Card */
+.ab-reg-card,
+body.page-terminal .ab-reg-card {
+  background: #070d18 !important;
+  border: 1px solid rgba(201,162,39,0.25) !important;
+}
+
+.ab-reg-card .ab-reg-title,
+.ab-reg-card .ab-reg-status,
+body.page-terminal .ab-reg-card .ab-reg-title,
+body.page-terminal .ab-reg-card .ab-reg-status {
+  color: #faf6ee !important;
+}
+
+.ab-reg-card p,
+.ab-reg-card .ab-reg-text,
+body.page-terminal .ab-reg-card p,
+body.page-terminal .ab-reg-card .ab-reg-text {
+  color: rgba(250,246,238,.85) !important;
+}
+
+/* 3. ABOUT PAGE — "OUR CORE PURPOSE", Governance & ESG Cards */
+.ab-hero-inner div[style*="var(--navy)"] h1,
+body.page-terminal .ab-hero-inner div[style*="var(--navy)"] h1,
+body.page-terminal .ab-hero-inner h1 {
+  color: #faf6ee !important;
+}
+
+.ab-info-card,
+body.page-terminal .ab-info-card {
+  background: #070d18 !important;
+  border: 1px solid rgba(200,150,46,0.2) !important;
+}
+
+.ab-info-card h3,
+body.page-terminal .ab-info-card h3 {
+  color: #faf6ee !important;
+}
+
+.ab-info-card p,
+body.page-terminal .ab-info-card p {
+  color: rgba(250,246,238,.85) !important;
+}
+
+.ab-esg-list li,
+body.page-terminal .ab-esg-list li {
+  color: rgba(250,246,238,.75) !important;
+}
+
+.ab-esg-list li strong,
+body.page-terminal .ab-esg-list li strong {
+  color: #c9a227 !important;
+}
+
+.ab-story p,
+body.page-terminal .ab-story p {
+  color: rgba(250,246,238,.85) !important;
+}
+
+.ab-team-card p,
+body.page-terminal .ab-team-card p {
+  color: rgba(250,246,238,.85) !important;
+}
+
+.ab-team-card h3,
+.ab-team-name,
+body.page-terminal .ab-team-card h3,
+body.page-terminal .ab-team-name {
+  color: #faf6ee !important;
+}
+
+/* 4. CONTACT PAGE — "What to Expect When You Reach Out" Cards */
+.ct-why .ct-eyebrow,
+.ct-why .ct-eyebrow-light {
+  color: #8a6d1c !important;
+}
+
+.ct-why h2,
+.ct-why .ct-h2,
+.ct-why .ct-h2-light {
+  color: #0A1628 !important;
+}
+
+.ct-why p.ct-sub,
+.ct-why .ct-sub-light {
+  color: rgba(10,22,40,.75) !important;
+}
+
+.ct-why-item,
+body.page-terminal .ct-why-item {
+  background: #070d18 !important;
+  border: 1px solid rgba(201,162,39,0.25) !important;
+}
+
+.ct-why-item h4,
+body.page-terminal .ct-why-item h4 {
+  color: #faf6ee !important;
+}
+
+.ct-why-item p,
+body.page-terminal .ct-why-item p {
+  color: rgba(250,246,238,.78) !important;
+}
+
+/* 5. CONTACT PAGE — Response-Time Banner */
+.ct-response-strip,
+body.page-terminal .ct-response-strip {
+  background: #0a1830 !important;
+  background-color: #0a1830 !important;
+  border: 1px solid rgba(200,150,46,0.3) !important;
+}
+
+.ct-response-strip p,
+body.page-terminal .ct-response-strip p {
+  color: #faf6ee !important;
+}
+
+.ct-response-strip strong,
+body.page-terminal .ct-response-strip strong,
+.ct-response-strip a,
+body.page-terminal .ct-response-strip a {
+  color: #c9a227 !important;
+}
+
+/* 6. CONTACT PAGE — "Amana Capital East Africa" Heading in Get in Touch Card */
+body.page-terminal .ct-info-card h3,
+.ct-info-card h3 {
+  color: #faf6ee !important;
+}
+
+body.page-terminal .ct-info-card p,
+body.page-terminal .ct-info-card .ct-contact-val,
+body.page-terminal .ct-info-card .ct-contact-label,
+.ct-info-card p,
+.ct-info-card .ct-contact-val,
+.ct-info-card .ct-contact-label {
+  color: rgba(250,246,238,.85) !important;
+}
+
+/* 7. BOND CALCULATOR — Panel Headings */
+body.page-terminal .calc-card h2,
+body.page-terminal .calc-card h3,
+.calc-card h2,
+.calc-card h3 {
+  color: #faf6ee !important;
+}
+
+/* 8. RISK PROFILER — Profile Cards */
+body.page-terminal .rp-profile-card p,
+.rp-profile-card p {
+  color: rgba(250,246,238,.78) !important;
+}
+
+body.page-terminal .rp-profile-card h3,
+.rp-profile-card h3 {
+  color: #faf6ee !important;
+}
+
+body.page-terminal .rp-profile-card .rp-profile-card-alloc,
+.rp-profile-card .rp-profile-card-alloc {
+  color: rgba(250,246,238,.75) !important;
+}
+
+body.page-terminal .rp-inst-item p,
+.rp-inst-item p {
+  color: rgba(250,246,238,.78) !important;
+}
+
+body.page-terminal .rp-inst-item h4,
+.rp-inst-item h4 {
+  color: #faf6ee !important;
+}
+
+/* 9. ALL WRAP PAGES — "Considerations for a Multi-Year Framework" Sub-Heading */
+body.page-reader h3,
+.page-reader h3,
+.page-reader .dse-article-card h3,
+.page-reader div[style*="#FEF9F0"] h3,
+.page-reader div[style*="background: #FEF9F0"] h3,
+.page-reader div[style*="background:#FEF9F0"] h3 {
+  color: #0A1628 !important;
+}
+
