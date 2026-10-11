@@ -6,7 +6,7 @@
     <title>Investment Risk Profiler | Amana Capital East Africa</title>
     <meta name="description" content="Discover your optimal DSE investment strategy. Answer 7 institutional-grade questions to receive a personalised portfolio allocation across Tanzanian equities, bonds, and money markets.">
     <link rel="canonical" href="https://www.amana-capital-ea.co.tz/risk-profiler" />
-    <link rel="stylesheet" href="style.css?v=20261010_restored">
+    <link rel="stylesheet" href="style.css?v=20261011_institutional">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
@@ -67,13 +67,14 @@
         /* ── Page Base ── */
         .page-terminal { background: #04070d; }
 
-        /* ── Hero ── */
+        /* ── Hero (Institutional Cream Upgrade) ── */
         .rp-hero {
-            background: var(--navy);
+            background: #FEF9F0 !important;
             padding: 5rem 0 4rem;
             position: relative;
             overflow: hidden;
             text-align: center;
+            border-bottom: 1px solid rgba(200,150,46,0.2);
         }
         .rp-hero::before {
             content: '';
@@ -81,7 +82,7 @@
             top: -80px; right: -80px;
             width: 380px; height: 380px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(200,150,46,0.12) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(200,150,46,0.08) 0%, transparent 70%);
             pointer-events: none;
         }
         .rp-hero::after {
@@ -90,17 +91,17 @@
             bottom: -60px; left: -60px;
             width: 280px; height: 280px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(200,150,46,0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(200,150,46,0.05) 0%, transparent 70%);
             pointer-events: none;
         }
         .rp-hero-label {
             display: inline-block;
-            padding: 0.3rem 1rem;
-            background: rgba(200,150,46,0.15);
+            padding: 0.35rem 1.1rem;
+            background: rgba(200,150,46,0.12);
             border: 1px solid rgba(200,150,46,0.4);
             border-radius: 20px;
-            color: var(--gold);
-            font-size: 0.7rem;
+            color: #8a6d1c;
+            font-size: 0.72rem;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -108,42 +109,43 @@
         }
         .rp-hero h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 3.2rem;
+            font-size: 3.4rem;
             font-weight: 700;
-            color: var(--cream);
+            color: #0A1628 !important;
             line-height: 1.1;
             letter-spacing: -1px;
             margin-bottom: 1rem;
         }
         .rp-hero h1 span { color: var(--gold); }
         .rp-hero p {
-            color: rgba(251,247,240,0.8);
+            color: rgba(10,22,40,0.78) !important;
             font-size: 1.1rem;
-            max-width: 600px;
+            max-width: 620px;
             margin: 0 auto 2rem;
             line-height: 1.7;
         }
         .rp-hero-stats {
             display: flex;
             justify-content: center;
-            gap: 3rem;
+            gap: 3.5rem;
             flex-wrap: wrap;
             margin-top: 2.5rem;
             padding-top: 2.5rem;
-            border-top: 1px solid rgba(255,255,255,0.08);
+            border-top: 1px solid rgba(200,150,46,0.25) !important;
         }
         .rp-hero-stat { text-align: center; }
         .rp-hero-stat-num {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 700;
             color: var(--gold);
             display: block;
         }
         .rp-hero-stat-label {
             font-size: 0.75rem;
-            color: rgba(251,247,240,0.55);
-            letter-spacing: 1px;
+            color: rgba(10,22,40,0.65) !important;
+            font-weight: 600;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
         }
 
@@ -481,11 +483,11 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
             font-weight: 700;
-            color: #f2f5f9;
+            color: #0A1628 !important;
             margin-bottom: 1rem;
         }
         .rp-section-sub {
-            color: #8b95a5;
+            color: rgba(10,22,40,0.75) !important;
             font-size: 1rem;
             line-height: 1.7;
             max-width: 600px;

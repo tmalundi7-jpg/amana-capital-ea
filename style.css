@@ -4098,12 +4098,19 @@ body.page-terminal {
 
 body.page-terminal > main,
 body.page-terminal main,
-body.page-terminal .page-wrap,
-body.page-terminal main .container,
-body.page-terminal .page-content .container,
-body.page-terminal .content-wrap .container {
+body.page-terminal .page-wrap {
   background: #FEF9F0 !important;
   background-color: #FEF9F0 !important;
+}
+
+/* Containers should always be transparent width limiters */
+.container,
+.nav-container,
+body.page-terminal .container,
+body.page-terminal .nav-container,
+body.page-terminal main .container {
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 /* Page sections → cream */
@@ -4230,14 +4237,20 @@ body.page-terminal .header-pill a {
   color: #faf6ee !important;
 }
 
-/* Footer link row → dark text on cream */
+/* Footer link row → light mist text on dark navy footer (Pic 2 standard) */
 body.page-terminal footer .footer-links a,
 body.page-terminal .footer .footer-links a,
-body.page-terminal footer nav a {
-  color: #0A1628 !important;
+body.page-terminal footer nav a,
+body.page-terminal footer a,
+body.page-terminal .footer a {
+  color: #b0c4de !important;
 }
-body.page-terminal footer .footer-links a:hover {
-  color: #8a6d1c !important;
+body.page-terminal footer .footer-links a:hover,
+body.page-terminal .footer .footer-links a:hover,
+body.page-terminal footer nav a:hover,
+body.page-terminal footer a:hover,
+body.page-terminal .footer a:hover {
+  color: #c9a227 !important;
 }
 
 /* ===== AUTOPSY FIX — 10 Oct 2026 ===== */
@@ -4596,4 +4609,495 @@ body.page-reader h3,
 .page-reader div[style*="background:#FEF9F0"] h3 {
   color: #0A1628 !important;
 }
+
+/* ==========================================================================
+   INSTITUTIONAL BENCHMARK SYSTEM (UK/US Wealth & Advisory Standard)
+   Unified Navbar, Full-Bleed Footer, Cream Hero Calibration, Zero Hidden Text
+   ========================================================================== */
+
+/* --- 1. GLOBAL TOP NAVBAR (Pic 1 Benchmark) --- */
+header,
+header nav,
+nav.navbar,
+header.navbar,
+.navbar,
+.navbar.scrolled,
+.navbar.sticky,
+.site-header,
+body.page-terminal nav.navbar,
+body.page-terminal nav.navbar.scrolled,
+body.page-terminal nav.navbar.sticky,
+body.page-terminal .navbar,
+body.page-reader nav.navbar,
+body.page-reader .navbar,
+body.page-home nav.navbar {
+  background: #0a1830 !important;
+  background-color: #0a1830 !important;
+  background-image: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Ensure inner navbar containers NEVER inherit cream backgrounds */
+nav.navbar .container,
+nav.navbar .nav-container,
+.navbar .container,
+.navbar .nav-container,
+header .container,
+header .nav-container,
+body.page-terminal nav.navbar .container,
+body.page-terminal nav.navbar .nav-container,
+body.page-terminal .navbar .container,
+body.page-terminal .navbar .nav-container,
+body.page-terminal nav .container,
+body.page-terminal nav .nav-container,
+body.page-reader nav.navbar .container,
+body.page-reader nav.navbar .nav-container,
+body.page-reader .navbar .container,
+body.page-reader .navbar .nav-container {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Brand & Typography */
+.brand-link {
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+}
+
+.brand-icon {
+  color: #faf6ee !important;
+}
+
+.brand-text .logo-word-primary,
+nav.navbar .brand-text .logo-word-primary,
+.navbar .brand-text .logo-word-primary,
+body.page-terminal nav.navbar .brand-text .logo-word-primary {
+  color: #ffffff !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+}
+
+.brand-text .logo-word-secondary,
+nav.navbar .brand-text .logo-word-secondary,
+.navbar .brand-text .logo-word-secondary,
+body.page-terminal nav.navbar .brand-text .logo-word-secondary {
+  color: #c9a227 !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Nav Links: pristine white/cream with gold accents */
+nav.navbar .nav-links a,
+.navbar .nav-links a,
+header .nav-links a,
+body.page-terminal nav.navbar .nav-links a,
+body.page-terminal .navbar .nav-links a,
+body.page-reader nav.navbar .nav-links a {
+  color: #faf6ee !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.06em !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease, border-color 0.2s ease !important;
+}
+
+nav.navbar .nav-links a:hover,
+.navbar .nav-links a:hover,
+header .nav-links a:hover,
+body.page-terminal nav.navbar .nav-links a:hover,
+body.page-terminal .navbar .nav-links a:hover,
+body.page-reader nav.navbar .nav-links a:hover,
+nav.navbar .nav-links a.active,
+.navbar .nav-links a.active,
+header .nav-links a.active,
+body.page-terminal nav.navbar .nav-links a.active,
+body.page-terminal .navbar .nav-links a.active,
+body.page-reader nav.navbar .nav-links a.active {
+  color: #c9a227 !important;
+}
+
+nav.navbar .mobile-toggle,
+.navbar .mobile-toggle,
+header .mobile-toggle,
+body.page-terminal nav.navbar .mobile-toggle {
+  color: #faf6ee !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+
+/* --- 2. GLOBAL BOTTOM FOOTER (Pic 2 Benchmark) --- */
+footer.footer,
+footer,
+.footer,
+.site-footer,
+body.page-terminal footer.footer,
+body.page-terminal footer,
+body.page-terminal .footer,
+body.page-reader footer.footer,
+body.page-reader footer,
+body.page-home footer.footer,
+body.page-home footer {
+  background: #0a1830 !important;
+  background-color: #0a1830 !important;
+  background-image: none !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  position: relative !important;
+}
+
+/* Ensure inner footer containers NEVER inherit cream backgrounds */
+footer.footer .container,
+footer .container,
+.footer .container,
+.site-footer .container,
+body.page-terminal footer.footer .container,
+body.page-terminal footer .container,
+body.page-terminal .footer .container,
+body.page-reader footer.footer .container,
+body.page-reader footer .container {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Footer Brand Header */
+footer.footer div[style*="Cormorant Garamond"],
+footer div[style*="Cormorant Garamond"],
+.footer div[style*="Cormorant Garamond"],
+.footer-brand {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  color: #c9a227 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+}
+
+/* Footer Subtitle */
+footer.footer div[style*="Registration Pending"],
+footer div[style*="Registration Pending"],
+.footer div[style*="Registration Pending"] {
+  color: rgba(251, 247, 240, 0.65) !important;
+}
+
+/* All Footer Links across all pages */
+footer.footer a,
+footer a,
+.footer a,
+.site-footer a,
+body.page-terminal footer.footer a,
+body.page-terminal footer a,
+body.page-terminal .footer a,
+body.page-terminal .footer-links a,
+body.page-terminal footer .footer-links a,
+body.page-terminal footer nav a,
+body.page-reader footer a {
+  color: #b0c4de !important;
+  text-decoration: none !important;
+  font-size: 0.85rem !important;
+  transition: color 0.2s ease !important;
+}
+
+footer.footer a:hover,
+footer a:hover,
+.footer a:hover,
+.site-footer a:hover,
+body.page-terminal footer.footer a:hover,
+body.page-terminal footer a:hover,
+body.page-terminal .footer a:hover,
+body.page-terminal .footer-links a:hover,
+body.page-terminal footer .footer-links a:hover,
+body.page-terminal footer nav a:hover,
+body.page-reader footer a:hover {
+  color: #c9a227 !important;
+}
+
+/* Footer Legal/Copyright Text */
+footer.footer div[style*="©"],
+footer div[style*="©"],
+.footer div[style*="©"],
+footer.footer div[style*="&copy;"],
+footer div[style*="&copy;"],
+.footer div[style*="&copy;"] {
+  color: rgba(176, 196, 222, 0.5) !important;
+}
+
+
+/* --- 3. RISK PROFILER HERO & PAGE (Pic 5 Benchmark) --- */
+/* Full-bleed cream background across entire width */
+body.page-terminal .rp-hero,
+.rp-hero {
+  background: #FEF9F0 !important;
+  background-color: #FEF9F0 !important;
+  border-bottom: 1px solid rgba(200, 150, 46, 0.2) !important;
+  padding: 5rem 0 4rem !important;
+  text-align: center !important;
+}
+
+body.page-terminal .rp-hero .container,
+.rp-hero .container {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Institutional Risk Framework Pill Badge */
+body.page-terminal .rp-hero-label,
+.rp-hero-label {
+  background: rgba(200, 150, 46, 0.12) !important;
+  border: 1px solid rgba(200, 150, 46, 0.4) !important;
+  color: #8a6d1c !important;
+  font-weight: 700 !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  border-radius: 20px !important;
+  padding: 0.4rem 1.2rem !important;
+}
+
+/* Hero H1 Title */
+body.page-terminal .rp-hero h1,
+.rp-hero h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 3.4rem !important;
+  font-weight: 700 !important;
+  color: #0A1628 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -1px !important;
+  margin-bottom: 1rem !important;
+}
+
+body.page-terminal .rp-hero h1 span,
+.rp-hero h1 span {
+  color: #c9a227 !important;
+}
+
+/* Hero Lead Paragraph */
+body.page-terminal .rp-hero p,
+.rp-hero p {
+  color: rgba(10, 22, 40, 0.8) !important;
+  font-size: 1.1rem !important;
+  max-width: 620px !important;
+  margin: 0 auto 2rem !important;
+  line-height: 1.7 !important;
+}
+
+/* Stats Strip */
+body.page-terminal .rp-hero-stats,
+.rp-hero-stats {
+  border-top: 1px solid rgba(200, 150, 46, 0.25) !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 3.5rem !important;
+  flex-wrap: wrap !important;
+  margin-top: 2.5rem !important;
+  padding-top: 2.5rem !important;
+}
+
+body.page-terminal .rp-hero-stat-num,
+.rp-hero-stat-num {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 2.2rem !important;
+  font-weight: 700 !important;
+  color: #c9a227 !important;
+  display: block !important;
+}
+
+body.page-terminal .rp-hero-stat-label,
+.rp-hero-stat-label {
+  font-size: 0.75rem !important;
+  color: rgba(10, 22, 40, 0.65) !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.2px !important;
+  text-transform: uppercase !important;
+}
+
+/* Risk Profiler Framework Section */
+body.page-terminal .rp-info-section,
+.rp-info-section {
+  background: #FEF9F0 !important;
+  padding: 5rem 0 !important;
+}
+
+body.page-terminal .rp-info-section .rp-section-eyebrow,
+.rp-info-section .rp-section-eyebrow {
+  color: #8a6d1c !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+}
+
+body.page-terminal .rp-info-section .rp-section-h2,
+.rp-info-section .rp-section-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 2.4rem !important;
+  font-weight: 700 !important;
+  color: #0A1628 !important;
+  margin-bottom: 1rem !important;
+}
+
+body.page-terminal .rp-info-section .rp-section-sub,
+.rp-info-section .rp-section-sub {
+  color: rgba(10, 22, 40, 0.75) !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+  max-width: 620px !important;
+}
+
+
+/* --- 4. ABOUT PAGE TYPOGRAPHY & VISIBILITY --- */
+body.page-terminal .ab-hero {
+  background: #FEF9F0 !important;
+  border-bottom: 1px solid rgba(200, 150, 46, 0.2) !important;
+}
+
+body.page-terminal .ab-section:not(.dark) {
+  background: #FEF9F0 !important;
+}
+
+body.page-terminal .ab-section:not(.dark) .ab-title,
+.ab-section:not(.dark) .ab-title {
+  color: #0A1628 !important;
+}
+
+body.page-terminal .ab-section:not(.dark) .ab-eyebrow,
+.ab-section:not(.dark) .ab-eyebrow {
+  color: #8a6d1c !important;
+}
+
+body.page-terminal .ab-section.dark {
+  background: #0a1830 !important;
+}
+
+body.page-terminal .ab-section.dark .ab-title {
+  color: #faf6ee !important;
+}
+
+body.page-terminal .ab-section.dark .ab-eyebrow {
+  color: #c9a227 !important;
+}
+
+body.page-terminal .ab-hero-inner p {
+  color: #0A1628 !important;
+}
+
+body.page-terminal .ab-story {
+  background: #070d18 !important;
+  border: 1px solid rgba(200, 150, 46, 0.25) !important;
+}
+
+body.page-terminal .ab-story p {
+  color: rgba(250, 246, 238, 0.85) !important;
+}
+
+body.page-terminal .ab-story-lead {
+  color: #c9a227 !important;
+}
+
+
+/* --- 5. TERMINAL HEAD & DATA TERMINAL ENGINE --- */
+body.page-terminal .term-head,
+.page-terminal .term-head {
+  background: #04070d !important;
+  border-bottom: 1px solid rgba(201, 162, 39, 0.18) !important;
+  padding: 4.5rem 0 2.5rem !important;
+}
+
+body.page-terminal .term-head .container,
+.page-terminal .term-head .container {
+  background: transparent !important;
+}
+
+body.page-terminal .term-head h1,
+.page-terminal .term-head h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem) !important;
+  line-height: 1.08 !important;
+  color: #f2f5f9 !important;
+  margin-bottom: 0.8rem !important;
+}
+
+body.page-terminal .term-head h1 em,
+.page-terminal .term-head h1 em {
+  font-style: italic !important;
+  color: #c9a227 !important;
+  font-weight: 400 !important;
+}
+
+body.page-terminal .term-head .term-kicker,
+.page-terminal .term-head .term-kicker {
+  font-size: 0.72rem !important;
+  letter-spacing: 0.32em !important;
+  text-transform: uppercase !important;
+  color: #c9a227 !important;
+  margin-bottom: 1rem !important;
+  font-weight: 600 !important;
+}
+
+body.page-terminal .term-head p,
+body.page-terminal .term-head .term-sub,
+.page-terminal .term-head p,
+.page-terminal .term-head .term-sub {
+  color: #8b95a5 !important;
+  max-width: 640px !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+}
+
+body.page-terminal .term-head .term-meta,
+.page-terminal .term-head .term-meta {
+  color: #5b6572 !important;
+  font-size: 0.76rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}
+
+body.page-terminal .term-head .term-meta strong,
+.page-terminal .term-head .term-meta strong {
+  color: #c9a227 !important;
+  font-weight: 600 !important;
+}
+
+
+/* --- 6. GLOBAL CONTRAST & ACCESSIBILITY GUARD --- */
+/* Eliminate any white-on-cream or dark-on-dark bugs site-wide */
+body.page-terminal .ab-section:not(.dark) p,
+body.page-terminal .rp-hero p,
+body.page-terminal .rp-info-section p {
+  color: rgba(10, 22, 40, 0.8) !important;
+}
+
+body.page-terminal .card p,
+body.page-terminal .calc-card p,
+body.page-terminal .term-card p,
+body.page-terminal .rp-card p,
+body.page-terminal .dark-card p,
+body.page-terminal .ab-team-card p,
+body.page-terminal .ab-info-card p {
+  color: rgba(250, 246, 238, 0.85) !important;
+}
+
+body.page-terminal .card h1,
+body.page-terminal .card h2,
+body.page-terminal .card h3,
+body.page-terminal .card h4,
+body.page-terminal .calc-card h2,
+body.page-terminal .calc-card h3,
+body.page-terminal .rp-card h2,
+body.page-terminal .rp-card h3,
+body.page-terminal .ab-team-card h3,
+body.page-terminal .ab-info-card h3 {
+  color: #faf6ee !important;
+}
+
+
 
