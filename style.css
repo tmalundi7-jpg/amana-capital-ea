@@ -767,7 +767,7 @@ a:hover {
   background: #0f2547;
 }
 .service-card h3 {
-  color: #FFFFFF;
+  color: #0A1628;
   font-size: 1.4rem;
   margin-bottom: 0.75rem;
 }
@@ -2463,7 +2463,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     color: var(--gold) !important;
 }
 .why-card p {
-    color: var(--cream) !important;
+    color: rgba(10, 22, 40, 0.80) !important;
 }
 .why-icon {
     background: rgba(255, 255, 255, 0.05) !important;
@@ -2681,7 +2681,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     color: var(--gold) !important;
 }
 .why-section-header .section-title {
-    color: #ffffff !important;
+    color: #0A1628 !important;
 }
 
 /* 2. Gold line around the entire Daily DSE Wrap (both left and right sides) */
@@ -2724,7 +2724,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     border: none !important;
 }
 .dse-article-card .dse-header-box h1 {
-    color: var(--cream) !important;
+    color: #0A1628 !important;
     font-family: 'Cormorant Garamond', serif !important;
 }
 .dse-article-card .dse-header-box p {
@@ -2754,7 +2754,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 }
 .dse-article-card table th {
     background-color: var(--navy) !important;
-    color: var(--cream) !important;
+    color: #0A1628 !important;
 }
 .dse-article-card table td {
     color: var(--navy) !important;
@@ -3396,8 +3396,8 @@ body { background: var(--bg-primary); color: var(--text-primary); }
   border-left:3px solid var(--gold) !important;
   box-shadow:none !important;
 }
-.page-reader .dse-header-box h1{color:#faf6ee !important;}
-.page-reader .dse-header-box p{color:rgba(250,246,238,.85) !important;}
+.page-reader .dse-header-box h1{color:#0A1628 !important;}
+.page-reader .dse-header-box p{color:rgba(10, 22, 40, 0.80) !important;}
 /* headings */
 .page-reader h1{
   font-family:'Cormorant Garamond',Georgia,serif !important;
@@ -3496,7 +3496,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 }
 .page-reader .card-content-block p,
 .page-reader .card-content-block li{color:rgba(232,228,216,.82) !important;line-height:1.8;}
-.page-reader .card-content-block strong{color:#faf6ee !important;}
+.page-reader .card-content-block strong{color:#0A1628 !important;}
 .page-reader .framework-box,
 .page-reader .concept-box{
   background:#0e1a30 !important;
@@ -3547,11 +3547,8 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 
 /* Fix Oct 2026: Light headings on dark surfaces (global h1/h2/h3 rule leaks navy) */
 .hero h1, .hero h2,
-.s-card h3,
-.wt-body h3,
 .page-terminal h1, .page-terminal h2, .page-terminal h3,
 .ab-hero h1, .ab-hero h2,
-.ct-form-card:not(.cream-card) h2,
 .term-head h1, .term-head h2 {
   color: #faf6ee !important;
 }
@@ -3655,10 +3652,10 @@ footer .f-base span { opacity: 1 !important; }
 
 /* Fix D: About Philosophy cards (.ab-pillar) — light text on dark */
 .ab-pillar h3 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 .ab-pillar p {
-  color: rgba(250,246,238,.78) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 .ab-pillar-num {
   color: #c9a227 !important;
@@ -3668,7 +3665,7 @@ footer .f-base span { opacity: 1 !important; }
 /* Fix E: Contact form header — light heading on dark navy */
 .ct-form-card.cream-card .ct-form-header h2,
 .ct-form-header h2 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 .ct-form-header-label {
   color: #c9a227 !important;
@@ -3898,7 +3895,7 @@ section.snapshot .stat-card .idx-value {
   color: #c9a227 !important;
 }
 section.snapshot .stat-card .stat-label {
-  color: rgba(250,246,238,.6) !important;
+  color: #8A6D1C !important;
 }
 
 /* What We Do section → cream */
@@ -3919,11 +3916,11 @@ section.services .svc-card {
 }
 section.services .service-card h3,
 section.services .svc-card h3 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 section.services .service-card p,
 section.services .svc-card p {
-  color: rgba(250,246,238,.7) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 /* Wrap teaser section → cream, card stays dark */
@@ -3937,7 +3934,7 @@ section.wrap-teaser .teaser-card {
 /* Fix faint description text in wrap card */
 section.wrap-teaser .wrap-card p,
 section.wrap-teaser .teaser-card p {
-  color: rgba(250,246,238,.75) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 
@@ -3990,10 +3987,10 @@ html body .wrap-card {
   border: 1px solid rgba(201,162,39,.2) !important;
 }
 .s-card h3 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 .s-card p {
-  color: rgba(250,246,238,.75) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 .s-card a {
   color: #c9a227 !important;
@@ -4007,7 +4004,7 @@ html body .wrap-card {
 }
 .mover-card .mover-symbol,
 .mover-card span {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 .mover-card .mover-change {
   color: #c9a227 !important;
@@ -4153,11 +4150,11 @@ body.page-terminal .stat-card {
 }
 body.page-terminal .card h3,
 body.page-terminal .term-card h3 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 body.page-terminal .card p,
 body.page-terminal .term-card p {
-  color: rgba(250,246,238,.75) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 /* ===== Navigation Fix — 10 Oct 2026 ===== */
@@ -4275,13 +4272,13 @@ body.page-terminal .about-card p,
 body.page-terminal .team-card p,
 body.page-terminal .gov-card p,
 body.page-terminal .reg-card p {
-  color: rgba(250,246,238,.8) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 body.page-terminal .ab-card h2,
 body.page-terminal .ab-card h3,
 body.page-terminal .team-card h3,
 body.page-terminal .gov-card h3 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 
 /* 8. About CTA button — cream on cream → navy button */
@@ -4306,11 +4303,11 @@ body.page-terminal .footer-links a {
 /* 11. Risk profiler cards — dark on dark → light */
 body.page-terminal .profile-card p,
 body.page-terminal .risk-card p {
-  color: rgba(250,246,238,.8) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 body.page-terminal .profile-card h3,
 body.page-terminal .risk-card h3 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 
 /* ===== Targeted Contrast Fixes — 10 Oct 2026 ===== */
@@ -4324,12 +4321,14 @@ body.page-terminal .ab-hero-inner p:first-of-type {
 
 /* Contact: Get in Touch card dark-on-dark → light text */
 .ct-info-card p,
-.ct-info-card .ct-contact-val,
+.ct-info-card .ct-contact-val {
+  color: rgba(10, 22, 40, 0.80) !important;
+}
 .ct-info-card .ct-contact-label {
-  color: rgba(250,246,238,.85) !important;
+  color: #8A6D1C !important;
 }
 .ct-info-card h3 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 
 /* ===== Sticky Header Fix — 10 Oct 2026 ===== */
@@ -4371,7 +4370,7 @@ header .nav-links a.active, .navbar .nav-links a.active {
 
 /* About regulatory card body text */
 .reg-card p, .reg-card .reg-body {
-  color: rgba(250,246,238,.85) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 /* ===== Final Header Fix — 11 Oct 2026 ===== */
@@ -4430,140 +4429,145 @@ body.page-terminal .navbar .nav-links a.active {
 /* 2. ABOUT PAGE — Regulatory Status Card */
 .ab-reg-card,
 body.page-terminal .ab-reg-card {
-  background: #070d18 !important;
-  border: 1px solid rgba(201,162,39,0.25) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 
 .ab-reg-card .ab-reg-title,
+body.page-terminal .ab-reg-card .ab-reg-title {
+  color: #0A1628 !important;
+}
 .ab-reg-card .ab-reg-status,
-body.page-terminal .ab-reg-card .ab-reg-title,
 body.page-terminal .ab-reg-card .ab-reg-status {
-  color: #faf6ee !important;
+  color: #8A6D1C !important;
 }
 
 .ab-reg-card p,
 .ab-reg-card .ab-reg-text,
 body.page-terminal .ab-reg-card p,
 body.page-terminal .ab-reg-card .ab-reg-text {
-  color: rgba(250,246,238,.85) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 /* 3. ABOUT PAGE — "OUR CORE PURPOSE", Governance & ESG Cards */
 .ab-hero-inner div[style*="var(--navy)"] h1,
 body.page-terminal .ab-hero-inner div[style*="var(--navy)"] h1,
 body.page-terminal .ab-hero-inner h1 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 
 .ab-info-card,
 body.page-terminal .ab-info-card {
-  background: #070d18 !important;
-  border: 1px solid rgba(200,150,46,0.2) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 
 .ab-info-card h3,
 body.page-terminal .ab-info-card h3 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 
 .ab-info-card p,
 body.page-terminal .ab-info-card p {
-  color: rgba(250,246,238,.85) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 .ab-esg-list li,
 body.page-terminal .ab-esg-list li {
-  color: rgba(250,246,238,.75) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 .ab-esg-list li strong,
 body.page-terminal .ab-esg-list li strong {
-  color: #c9a227 !important;
+  color: #8A6D1C !important;
 }
 
 .ab-story p,
 body.page-terminal .ab-story p {
-  color: rgba(250,246,238,.85) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 .ab-team-card p,
 body.page-terminal .ab-team-card p {
-  color: rgba(250,246,238,.85) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 .ab-team-card h3,
 .ab-team-name,
 body.page-terminal .ab-team-card h3,
 body.page-terminal .ab-team-name {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 
 /* 4. CONTACT PAGE — "What to Expect When You Reach Out" Cards */
 .ct-why .ct-eyebrow,
 .ct-why .ct-eyebrow-light {
-  color: #c9a227 !important;
+  color: #8A6D1C !important;
 }
 
 .ct-why h2,
 .ct-why .ct-h2,
 .ct-why .ct-h2-light {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 
 .ct-why p.ct-sub,
 .ct-why .ct-sub-light {
-  color: rgba(250,246,238,.85) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 .ct-why-item,
 body.page-terminal .ct-why-item {
-  background: #070d18 !important;
-  border: 1px solid rgba(201,162,39,0.25) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 
 .ct-why-item h4,
 body.page-terminal .ct-why-item h4 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 
 .ct-why-item p,
 body.page-terminal .ct-why-item p {
-  color: rgba(250,246,238,.78) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 /* 5. CONTACT PAGE — Response-Time Banner */
 .ct-response-strip,
 body.page-terminal .ct-response-strip {
-  background: #0a1830 !important;
-  background-color: #0a1830 !important;
-  border: 1px solid rgba(200,150,46,0.3) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background-color: transparent !important;
+  border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 
 .ct-response-strip p,
 body.page-terminal .ct-response-strip p {
-  color: #faf6ee !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 .ct-response-strip strong,
 body.page-terminal .ct-response-strip strong,
 .ct-response-strip a,
 body.page-terminal .ct-response-strip a {
-  color: #c9a227 !important;
+  color: #8A6D1C !important;
 }
 
 /* 6. CONTACT PAGE — "Amana Capital East Africa" Heading in Get in Touch Card */
 body.page-terminal .ct-info-card h3,
 .ct-info-card h3 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 
 body.page-terminal .ct-info-card p,
-body.page-terminal .ct-info-card .ct-contact-val,
-body.page-terminal .ct-info-card .ct-contact-label,
 .ct-info-card p,
-.ct-info-card .ct-contact-val,
+body.page-terminal .ct-info-card .ct-contact-val,
+.ct-info-card .ct-contact-val {
+  color: rgba(10, 22, 40, 0.80) !important;
+}
+
+body.page-terminal .ct-info-card .ct-contact-label,
 .ct-info-card .ct-contact-label {
-  color: rgba(250,246,238,.85) !important;
+  color: #8A6D1C !important;
 }
 
 /* 7. BOND CALCULATOR — Panel Headings (Institutional Light Gold + Cream Cards) */
@@ -4577,27 +4581,27 @@ body.page-terminal .calc-card h3,
 /* 8. RISK PROFILER — Profile Cards */
 body.page-terminal .rp-profile-card p,
 .rp-profile-card p {
-  color: rgba(250,246,238,.78) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 body.page-terminal .rp-profile-card h3,
 .rp-profile-card h3 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 
 body.page-terminal .rp-profile-card .rp-profile-card-alloc,
 .rp-profile-card .rp-profile-card-alloc {
-  color: rgba(250,246,238,.75) !important;
+  color: rgba(10, 22, 40, 0.75) !important;
 }
 
 body.page-terminal .rp-inst-item p,
 .rp-inst-item p {
-  color: rgba(250,246,238,.78) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 body.page-terminal .rp-inst-item h4,
 .rp-inst-item h4 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 
 /* 9. ALL WRAP PAGES — "Considerations for a Multi-Year Framework" Sub-Heading */
@@ -5093,7 +5097,7 @@ body.page-terminal .ab-story {
 }
 
 body.page-terminal .ab-story p {
-  color: rgba(250, 246, 238, 0.85) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 body.page-terminal .ab-story-lead {
@@ -5300,7 +5304,7 @@ body.page-terminal .ab-story p,
 body.page-terminal .ab-reg-card p,
 body.page-terminal .ab-reg-card .ab-reg-text,
 body.page-terminal .rp-profile-card p {
-  color: rgba(250, 246, 238, 0.85) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 
 body.page-terminal .card h1,
@@ -5315,52 +5319,52 @@ body.page-terminal .ab-info-card h3,
 body.page-terminal .ab-reg-card .ab-reg-title,
 body.page-terminal .rp-profile-card h3,
 body.page-terminal .ct-info-card h3 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 
 /* --- 9. ISSUE-SPECIFIC TARGETED RESOLUTIONS --- */
 
 /* 1. About Page Fixes */
 body.page-terminal .ab-story {
-  background: #070d18 !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
   border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 body.page-terminal .ab-story p {
-  color: rgba(250, 246, 238, 0.85) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 body.page-terminal .ab-story .ab-story-lead {
-  color: #c9a227 !important;
+  color: #8A6D1C !important;
 }
 
 body.page-terminal .ab-info-card {
-  background: #070d18 !important;
-  border: 1px solid rgba(200, 150, 46, 0.2) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 body.page-terminal .ab-info-card h3 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 body.page-terminal .ab-info-card p,
 body.page-terminal .ab-info-card li {
-  color: rgba(250, 246, 238, 0.85) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 body.page-terminal .ab-info-card li strong {
-  color: #c9a227 !important;
+  color: #8A6D1C !important;
 }
 
 body.page-terminal .ab-reg-card {
-  background: #070d18 !important;
-  border: 1px solid rgba(201, 162, 39, 0.25) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 body.page-terminal .ab-reg-card .ab-reg-title {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 body.page-terminal .ab-reg-card .ab-reg-text,
 body.page-terminal .ab-reg-card p {
-  color: rgba(250, 246, 238, 0.85) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 body.page-terminal .ab-reg-card .ab-reg-status,
 body.page-terminal .ab-reg-card .ab-reg-badge {
-  color: #c9a227 !important;
+  color: #8A6D1C !important;
 }
 
 body.page-terminal .ab-section.dark .ab-title,
@@ -5369,50 +5373,52 @@ body.page-terminal .ab-section.dark .ab-title,
 }
 body.page-terminal .ab-section.dark .ab-eyebrow,
 .ab-section.dark .ab-eyebrow {
-  color: #8a6d1c !important;
+  color: #8A6D1C !important;
 }
 
 /* 2. Contact Page Fixes */
 body.page-terminal .ct-response-strip,
 .ct-response-strip {
-  background: #0a1830 !important;
-  border: 1px solid rgba(200, 150, 46, 0.3) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background-color: transparent !important;
+  border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 body.page-terminal .ct-response-strip p,
 .ct-response-strip p {
-  color: #faf6ee !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 body.page-terminal .ct-response-strip strong,
 .ct-response-strip strong,
 body.page-terminal .ct-response-strip a,
 .ct-response-strip a {
-  color: #c9a227 !important;
+  color: #8A6D1C !important;
 }
 body.page-terminal .ct-info-card h3,
 .ct-info-card h3 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 
 /* 3. Risk Profiler Fixes */
 body.page-terminal .rp-profile-card,
 .rp-profile-card {
-  background: #070d18 !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 body.page-terminal .rp-profile-card h3,
 .rp-profile-card h3 {
-  color: #faf6ee !important;
+  color: #0A1628 !important;
 }
 body.page-terminal .rp-profile-card p,
 .rp-profile-card p {
-  color: rgba(250, 246, 238, 0.78) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 body.page-terminal .rp-profile-card .rp-profile-card-alloc,
 .rp-profile-card .rp-profile-card-alloc {
-  color: rgba(250, 246, 238, 0.65) !important;
+  color: rgba(10, 22, 40, 0.75) !important;
 }
 body.page-terminal .rp-profile-card-alloc strong,
 .rp-profile-card-alloc strong {
-  color: #c9a227 !important;
+  color: #8A6D1C !important;
 }
 
 body.page-terminal .rp-instruments-table,
@@ -5425,11 +5431,11 @@ body.page-terminal .rp-instruments-table .rp-section-h2,
 }
 body.page-terminal .rp-instruments-table .rp-section-sub,
 .rp-instruments-table .rp-section-sub {
-  color: rgba(10, 22, 40, 0.8) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 body.page-terminal .rp-inst-item,
 .rp-inst-item {
-  background: #ffffff !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
   border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 body.page-terminal .rp-inst-item h4,
@@ -5438,7 +5444,7 @@ body.page-terminal .rp-inst-item h4,
 }
 body.page-terminal .rp-inst-item p,
 .rp-inst-item p {
-  color: rgba(10, 22, 40, 0.8) !important;
+  color: rgba(10, 22, 40, 0.80) !important;
 }
 body.page-terminal .rp-inst-item-yield,
 .rp-inst-item-yield {
@@ -5519,6 +5525,9 @@ body.page-terminal .term-head,
 .rp-profile-card,
 .rp-inst-item,
 .rp-detail-card,
+.rp-opt,
+.rp-metric,
+.rp-instruments,
 .module-accordion,
 details.module-accordion,
 .dse-article-card .dse-header-box,
@@ -5558,8 +5567,12 @@ body.page-terminal .ct-why-item,
 body.page-terminal .ct-response-strip,
 body.page-terminal .calc-card,
 body.page-terminal .rp-card,
+body.page-terminal .rp-opt,
 body.page-terminal .rp-profile-card,
 body.page-terminal .rp-inst-item,
+body.page-terminal .rp-detail-card,
+body.page-terminal .rp-metric,
+body.page-terminal .rp-instruments,
 body.page-reader .dse-header-box {
   background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
   background-color: transparent !important;
@@ -5607,12 +5620,27 @@ table.term-table tbody td {
 .ct-team-card h1, .ct-team-card h2, .ct-team-card h3, .ct-team-card h4,
 .ct-team-name,
 .ct-why-item h1, .ct-why-item h2, .ct-why-item h3, .ct-why-item h4,
+body.page-terminal .ct-why-item h1, body.page-terminal .ct-why-item h2, body.page-terminal .ct-why-item h3, body.page-terminal .ct-why-item h4,
+.ct-why-title, body.page-terminal .ct-why-title,
+.ct-contact-val, body.page-terminal .ct-contact-val,
 .calc-card h1, .calc-card h2, .calc-card h3, .calc-card h4,
+body.page-terminal .calc-card h1, body.page-terminal .calc-card h2, body.page-terminal .calc-card h3, body.page-terminal .calc-card h4,
 .rp-card h1, .rp-card h2, .rp-card h3, .rp-card h4,
+body.page-terminal .rp-card h1, body.page-terminal .rp-card h2, body.page-terminal .rp-card h3, body.page-terminal .rp-card h4,
+.rp-q-text, body.page-terminal .rp-q-text,
+.rp-opt-text, body.page-terminal .rp-opt-text,
+.rp-result-title, body.page-terminal .rp-result-title,
+.rp-metric-val, body.page-terminal .rp-metric-val,
+.rp-detail-card-val, body.page-terminal .rp-detail-card-val,
+.rp-instrument-name, body.page-terminal .rp-instrument-name,
 .rp-profile-card h1, .rp-profile-card h2, .rp-profile-card h3, .rp-profile-card h4,
+body.page-terminal .rp-profile-card h1, body.page-terminal .rp-profile-card h2, body.page-terminal .rp-profile-card h3, body.page-terminal .rp-profile-card h4,
 .rp-inst-item h1, .rp-inst-item h2, .rp-inst-item h3, .rp-inst-item h4,
+body.page-terminal .rp-inst-item h1, body.page-terminal .rp-inst-item h2, body.page-terminal .rp-inst-item h3, body.page-terminal .rp-inst-item h4,
 .dse-header-box h1, .dse-header-box h2, .dse-header-box h3,
+body.page-reader .dse-header-box h1, body.page-reader .dse-header-box h2, body.page-reader .dse-header-box h3,
 .key-takeaways h1, .key-takeaways h2, .key-takeaways h3,
+body.page-terminal details.module-accordion summary,
 details.module-accordion summary,
 .card h1, .card h2, .card h3, .card h4 {
   color: #0A1628 !important;
@@ -5624,8 +5652,15 @@ details.module-accordion summary,
 .ab-story p, .ab-info-card p, .ab-info-card li, .ab-reg-card p, .ab-reg-text, .ab-team-card p, .ab-team-bio, .ab-pillar p,
 .ct-form-card p, .ct-info-card p, .ct-team-card p, .ct-why-item p, .ct-response-strip p,
 .calc-card p, .rp-card p, .rp-profile-card p, .rp-inst-item p,
+body.page-terminal .calc-card p, body.page-terminal .rp-card p, body.page-terminal .rp-profile-card p, body.page-terminal .rp-inst-item p,
+.rp-q-sub, body.page-terminal .rp-q-sub,
+.rp-opt-sub, body.page-terminal .rp-opt-sub,
+.rp-result-subtitle, body.page-terminal .rp-result-subtitle,
+.rp-metric-label, body.page-terminal .rp-metric-label,
 details.module-accordion p, details.module-accordion li,
-.dse-header-box p, .key-takeaways p, .key-takeaways li,
+body.page-terminal details.module-accordion p, body.page-terminal details.module-accordion li,
+.dse-header-box p, body.page-reader .dse-header-box p,
+.key-takeaways p, .key-takeaways li,
 .apply-it p, .further-reading p,
 .card p {
   color: rgba(10, 22, 40, 0.80) !important;
@@ -5654,7 +5689,16 @@ details.module-accordion p, details.module-accordion li,
 .ct-response-strip strong,
 .ct-response-strip a,
 .rp-inst-item-yield,
+body.page-terminal .rp-inst-item-yield,
 .rp-profile-card-alloc strong,
+body.page-terminal .rp-profile-card-alloc strong,
+.rp-q-num, body.page-terminal .rp-q-num,
+.rp-opt-letter, body.page-terminal .rp-opt-letter,
+.rp-alloc-title, body.page-terminal .rp-alloc-title,
+.rp-detail-card-label, body.page-terminal .rp-detail-card-label,
+.rp-instruments-title, body.page-terminal .rp-instruments-title,
+.ct-contact-label, body.page-terminal .ct-contact-label,
+.ct-info-eyebrow, body.page-terminal .ct-info-eyebrow,
 .stat-label,
 .term-quote,
 .term-arc-date,
@@ -5716,6 +5760,82 @@ details.module-accordion .article-link {
 }
 details.module-accordion .article-link:hover {
   color: #8A6D1C !important;
+}
+
+
+/* Quiz Answer Options (Light Gold + Cream System) */
+.rp-opt,
+body.page-terminal .rp-opt {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 1rem !important;
+  padding: 1.1rem 1.4rem !important;
+  border: 1px solid rgba(200, 150, 46, 0.25) !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background-color: transparent !important;
+  background-image: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  box-shadow: 0 4px 12px rgba(10, 22, 40, 0.04) !important;
+  text-align: left !important;
+  width: 100% !important;
+}
+.rp-opt:hover,
+body.page-terminal .rp-opt:hover {
+  border-color: rgba(200, 150, 46, 0.6) !important;
+  background: linear-gradient(135deg, #FFFDF7 0%, #FAF4E5 100%) !important;
+  transform: translateX(4px) !important;
+  box-shadow: 0 6px 18px rgba(10, 22, 40, 0.08) !important;
+}
+.rp-opt-letter,
+body.page-terminal .rp-opt-letter {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  background: rgba(200, 150, 46, 0.15) !important;
+  border: 1px solid rgba(200, 150, 46, 0.35) !important;
+  color: #8A6D1C !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  transition: all 0.2s !important;
+}
+.rp-opt:hover .rp-opt-letter,
+body.page-terminal .rp-opt:hover .rp-opt-letter {
+  background: #c9a227 !important;
+  color: #0A1628 !important;
+  border-color: #c9a227 !important;
+}
+.rp-opt-text,
+body.page-terminal .rp-opt-text {
+  font-size: 0.97rem !important;
+  color: #0A1628 !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  padding-top: 3px !important;
+}
+.rp-opt-sub,
+body.page-terminal .rp-opt-sub {
+  font-size: 0.8rem !important;
+  color: rgba(10, 22, 40, 0.75) !important;
+  margin-top: 2px !important;
+}
+.rp-card-header,
+body.page-terminal .rp-card-header {
+  background: rgba(200, 150, 46, 0.08) !important;
+  border-bottom: 1px solid rgba(200, 150, 46, 0.2) !important;
+}
+.rp-step-indicator,
+body.page-terminal .rp-step-indicator {
+  color: rgba(10, 22, 40, 0.70) !important;
+}
+.rp-progress-track,
+body.page-terminal .rp-progress-track {
+  background: rgba(10, 22, 40, 0.08) !important;
 }
 
 /* 8. STRICT PRESERVATION OF NAVBAR & FOOTER (Dark Navy #0a1830) */

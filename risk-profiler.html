@@ -6,7 +6,7 @@
     <title>Investment Risk Profiler | Amana Capital East Africa</title>
     <meta name="description" content="Discover your optimal DSE investment strategy. Answer 7 institutional-grade questions to receive a personalised portfolio allocation across Tanzanian equities, bonds, and money markets.">
     <link rel="canonical" href="https://www.amana-capital-ea.co.tz/risk-profiler" />
-    <link rel="stylesheet" href="style.css?v=20261012_lightcards">
+    <link rel="stylesheet" href="style.css?v=20261012_visaudit">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
@@ -165,14 +165,14 @@
             overflow: hidden;
         }
         .rp-card-header {
-            background: var(--navy);
+            background: rgba(200, 150, 46, 0.08); border-bottom: 1px solid rgba(200, 150, 46, 0.2);
             padding: 1.5rem 2.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         .rp-step-indicator {
-            color: rgba(251,247,240,0.55);
+            color: rgba(10, 22, 40, 0.70);
             font-size: 0.8rem;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -181,7 +181,7 @@
         .rp-progress-track {
             flex: 1;
             height: 4px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(10, 22, 40, 0.08);
             border-radius: 2px;
             margin: 0 1.5rem;
             overflow: hidden;
@@ -214,13 +214,13 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.65rem;
             font-weight: 700;
-            color: #f2f5f9;
+            color: #0A1628;
             line-height: 1.3;
             margin-bottom: 0.75rem;
         }
         .rp-q-sub {
             font-size: 0.88rem;
-            color: #8b95a5;
+            color: rgba(10, 22, 40, 0.75);
             margin-bottom: 2rem;
             line-height: 1.5;
         }
@@ -230,25 +230,28 @@
             align-items: flex-start;
             gap: 1rem;
             padding: 1.1rem 1.4rem;
-            border: 1.5px solid rgba(201,162,39,.15);
+            border: 1px solid rgba(200, 150, 46, 0.25);
             border-radius: 10px;
             cursor: pointer;
             transition: all 0.2s ease;
-            background: #0a1120;
+            background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%);
+            box-shadow: 0 4px 12px rgba(10, 22, 40, 0.04);
             text-align: left;
             width: 100%;
         }
         .rp-opt:hover {
-            border-color: var(--gold);
-            background: rgba(201,162,39,0.08);
+            border-color: rgba(200, 150, 46, 0.6);
+            background: linear-gradient(135deg, #FFFDF7 0%, #FAF4E5 100%);
             transform: translateX(4px);
+            box-shadow: 0 6px 18px rgba(10, 22, 40, 0.08);
         }
         .rp-opt-letter {
             width: 28px;
             height: 28px;
             border-radius: 50%;
-            background: rgba(201,162,39,.14);
-            color: #f2f5f9;
+            background: rgba(200, 150, 46, 0.15);
+            border: 1px solid rgba(200, 150, 46, 0.35);
+            color: #8A6D1C;
             font-size: 0.8rem;
             font-weight: 700;
             display: flex;
@@ -258,11 +261,12 @@
             transition: all 0.2s;
         }
         .rp-opt:hover .rp-opt-letter {
-            background: var(--gold);
-            color: #fff;
+            background: #c9a227;
+            color: #0A1628;
+            border-color: #c9a227;
         }
-        .rp-opt-text { font-size: 0.97rem; color: #d7dee8; line-height: 1.4; padding-top: 3px; }
-        .rp-opt-sub { font-size: 0.8rem; color: #8b95a5; margin-top: 2px; }
+        .rp-opt-text { font-size: 0.97rem; color: #0A1628; font-weight: 600; line-height: 1.4; padding-top: 3px; }
+        .rp-opt-sub { font-size: 0.8rem; color: rgba(10, 22, 40, 0.75); margin-top: 2px; }
 
         /* ── Results ── */
         .rp-results { display: none; }
@@ -280,11 +284,11 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
             font-weight: 700;
-            color: #f2f5f9;
+            color: #0A1628;
             margin-bottom: 0.5rem;
         }
         .rp-result-subtitle {
-            color: #8b95a5;
+            color: rgba(10, 22, 40, 0.80);
             font-size: 1rem;
             margin-bottom: 2rem;
             line-height: 1.6;
@@ -297,7 +301,7 @@
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: #8b95a5;
+            color: #8A6D1C;
             margin-bottom: 1rem;
         }
         .rp-alloc-row { margin-bottom: 1rem; }
@@ -306,13 +310,13 @@
             justify-content: space-between;
             font-size: 0.88rem;
             font-weight: 600;
-            color: #d7dee8;
+            color: #0A1628;
             margin-bottom: 0.35rem;
         }
-        .rp-alloc-pct { color: var(--gold); }
+        .rp-alloc-pct { color: #8A6D1C; }
         .rp-alloc-track {
             height: 8px;
-            background: rgba(255,255,255,.08);
+            background: rgba(10, 22, 40, 0.08);
             border-radius: 4px;
             overflow: hidden;
         }
@@ -331,8 +335,8 @@
         }
         @media (max-width: 580px) { .rp-detail-grid { grid-template-columns: 1fr; } }
         .rp-detail-card {
-            background: rgba(255,255,255,.03);
-            border: 1px solid rgba(201,162,39,.15);
+            background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%);
+            border: 1px solid rgba(200, 150, 46, 0.25);
             border-radius: 10px;
             padding: 1.25rem;
         }
@@ -341,18 +345,19 @@
             font-weight: 700;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            color: #8b95a5;
+            color: #8A6D1C;
             margin-bottom: 0.4rem;
         }
         .rp-detail-card-val {
             font-size: 1.05rem;
             font-weight: 600;
-            color: #f2f5f9;
+            color: #0A1628;
         }
 
         /* Instruments */
         .rp-instruments {
-            background: var(--navy);
+            background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%);
+            border: 1px solid rgba(200, 150, 46, 0.25);
             border-radius: 12px;
             padding: 1.75rem;
             margin-bottom: 2rem;
@@ -362,7 +367,7 @@
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--gold);
+            color: #8A6D1C;
             margin-bottom: 1.25rem;
         }
         .rp-instrument {
@@ -370,7 +375,7 @@
             align-items: center;
             gap: 0.75rem;
             padding: 0.7rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.07);
+            border-bottom: 1px solid rgba(200, 150, 46, 0.15);
         }
         .rp-instrument:last-child { border-bottom: none; padding-bottom: 0; }
         .rp-instrument-dot {
@@ -380,13 +385,13 @@
         }
         .rp-instrument-name {
             font-size: 0.9rem;
-            color: var(--cream);
+            color: #0A1628;
             flex: 1;
         }
         .rp-instrument-pct {
             font-size: 0.85rem;
             font-weight: 700;
-            color: var(--gold);
+            color: #8A6D1C;
         }
 
         /* Risk Metrics */
@@ -398,8 +403,8 @@
         }
         @media (max-width: 580px) { .rp-metrics { grid-template-columns: 1fr 1fr; } }
         .rp-metric {
-            background: #0a1120;
-            border: 1.5px solid rgba(201,162,39,.15);
+            background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%);
+            border: 1px solid rgba(200, 150, 46, 0.25);
             border-radius: 10px;
             padding: 1.1rem;
             text-align: center;
@@ -408,12 +413,12 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: #f2f5f9;
+            color: #0A1628;
             display: block;
         }
         .rp-metric-label {
             font-size: 0.72rem;
-            color: #8b95a5;
+            color: rgba(10, 22, 40, 0.70);
             letter-spacing: 1px;
             text-transform: uppercase;
             margin-top: 0.2rem;
@@ -421,20 +426,20 @@
 
         /* CTA */
         .rp-cta {
-            background: linear-gradient(135deg, var(--navy) 0%, #162947 100%);
+            background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%);
             border-radius: 12px;
             padding: 2rem;
             text-align: center;
-            border: 1px solid rgba(200,150,46,0.3);
+            border: 1px solid rgba(200, 150, 46, 0.25);
         }
         .rp-cta h3 {
             font-family: 'Cormorant Garamond', serif;
-            color: var(--cream);
+            color: #0A1628;
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
         }
         .rp-cta p {
-            color: rgba(251,247,240,0.7);
+            color: rgba(10, 22, 40, 0.80);
             font-size: 0.9rem;
             margin-bottom: 1.5rem;
         }
@@ -454,7 +459,7 @@
         .rp-btn-outline {
             background: transparent;
             border: 1.5px solid rgba(251,247,240,0.3);
-            color: var(--cream);
+            color: #0A1628; border-color: rgba(200,150,46,0.4);
             padding: 0.75rem 2rem;
             border-radius: 6px;
             font-weight: 700;
@@ -496,11 +501,11 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
             font-weight: 700;
-            color: #FAF6EE !important;
+            color: #0A1628 !important;
             margin-bottom: 1rem;
         }
         .rp-instruments-table .rp-section-sub {
-            color: rgba(250,246,238,0.8) !important;
+            color: rgba(10, 22, 40, 0.80) !important;
             font-size: 1rem;
             line-height: 1.7;
             max-width: 600px;
@@ -512,7 +517,7 @@
             margin-top: 3rem;
         }
         .rp-profile-card {
-            background: var(--navy);
+            background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%);
             border: 1.5px solid rgba(200,150,46,0.25);
             border-radius: 12px;
             padding: 2rem 1.5rem;
@@ -532,7 +537,7 @@
         .rp-profile-card h3 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.25rem;
-            color: var(--cream);
+            color: #0A1628;
             margin-bottom: 0.5rem;
         }
         .rp-profile-card-type {
@@ -544,13 +549,13 @@
         }
         .rp-profile-card p {
             font-size: 0.85rem;
-            color: rgba(251,247,240,0.7);
+            color: rgba(10, 22, 40, 0.80);
             line-height: 1.6;
             margin-bottom: 1rem;
         }
         .rp-profile-card-alloc {
             font-size: 0.8rem;
-            color: rgba(251,247,240,0.5);
+            color: rgba(10, 22, 40, 0.75);
         }
         .rp-profile-card-alloc strong { color: var(--gold); }
 
@@ -584,7 +589,7 @@
         .rp-inst-item h4 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.15rem;
-            color: var(--cream);
+            color: #0A1628;
             margin-bottom: 0.4rem;
         }
         .rp-inst-item-yield {
@@ -597,7 +602,7 @@
         }
         .rp-inst-item p {
             font-size: 0.85rem;
-            color: rgba(251,247,240,0.6);
+            color: rgba(10, 22, 40, 0.80);
             line-height: 1.6;
         }
 
@@ -888,27 +893,27 @@
                 <p class="rp-section-sub">Every investor sits on a risk spectrum. Our four profiles are calibrated against real DSE market data, Tanzanian government bond yields, and long-term frontier market return series.</p>
                 <div class="rp-profile-cards">
                     <div class="rp-profile-card rp-pc-conservative" style="background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important; border: 1px solid rgba(200,150,46,0.25) !important;">
-                        <h3 style="color:#faf6ee !important;">Capital Preservation</h3>
+                        <h3 style="color:#0A1628 !important;">Capital Preservation</h3>
                         <div class="rp-profile-card-type" style="color:#4e9af1;">Conservative</div>
-                        <p style="color:rgba(250,246,238,0.78) !important;">Safety and liquidity are the primary objectives. Suitable for investors with short time horizons or those who cannot tolerate any meaningful capital loss.</p>
+                        <p style="color:rgba(10,22,40,0.80) !important;">Safety and liquidity are the primary objectives. Suitable for investors with short time horizons or those who cannot tolerate any meaningful capital loss.</p>
                         <div class="rp-profile-card-alloc" style="color:rgba(10,22,40,0.65) !important;">Allocation: <strong style="color:#c9a227 !important;">80% Fixed Income</strong> · <strong style="color:#c9a227 !important;">20% Equities</strong></div>
                     </div>
                     <div class="rp-profile-card rp-pc-income" style="background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important; border: 1px solid rgba(200,150,46,0.25) !important;">
-                        <h3 style="color:#faf6ee !important;">Income Portfolio</h3>
+                        <h3 style="color:#0A1628 !important;">Income Portfolio</h3>
                         <div class="rp-profile-card-type" style="color:#22c55e;">Moderate-Conservative</div>
-                        <p style="color:rgba(250,246,238,0.78) !important;">Steady income with modest capital growth. Favours high-dividend DSE stocks and mid-duration government bonds to deliver predictable cash flows.</p>
+                        <p style="color:rgba(10,22,40,0.80) !important;">Steady income with modest capital growth. Favours high-dividend DSE stocks and mid-duration government bonds to deliver predictable cash flows.</p>
                         <div class="rp-profile-card-alloc" style="color:rgba(10,22,40,0.65) !important;">Allocation: <strong style="color:#c9a227 !important;">55% Fixed Income</strong> · <strong style="color:#c9a227 !important;">45% Equities</strong></div>
                     </div>
                     <div class="rp-profile-card rp-pc-balanced" style="background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important; border: 1px solid rgba(200,150,46,0.25) !important;">
-                        <h3 style="color:#faf6ee !important;">Balanced Growth</h3>
+                        <h3 style="color:#0A1628 !important;">Balanced Growth</h3>
                         <div class="rp-profile-card-type" style="color:#f59e0b;">Moderate</div>
-                        <p style="color:rgba(250,246,238,0.78) !important;">Diversified exposure to both equity upside and fixed-income stability. Appropriate for investors with a 5–10 year horizon seeking long-run wealth accumulation.</p>
+                        <p style="color:rgba(10,22,40,0.80) !important;">Diversified exposure to both equity upside and fixed-income stability. Appropriate for investors with a 5–10 year horizon seeking long-run wealth accumulation.</p>
                         <div class="rp-profile-card-alloc" style="color:rgba(10,22,40,0.65) !important;">Allocation: <strong style="color:#c9a227 !important;">35% Fixed Income</strong> · <strong style="color:#c9a227 !important;">65% Equities</strong></div>
                     </div>
                     <div class="rp-profile-card rp-pc-growth" style="background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important; border: 1px solid rgba(200,150,46,0.25) !important;">
-                        <h3 style="color:#faf6ee !important;">Aggressive Growth</h3>
+                        <h3 style="color:#0A1628 !important;">Aggressive Growth</h3>
                         <div class="rp-profile-card-type" style="color:#ef4444;">High Risk</div>
-                        <p style="color:rgba(250,246,238,0.78) !important;">Maximum long-term capital appreciation through concentrated DSE equity exposure. For investors with 10+ year horizons and genuine tolerance for significant short-term drawdowns.</p>
+                        <p style="color:rgba(10,22,40,0.80) !important;">Maximum long-term capital appreciation through concentrated DSE equity exposure. For investors with 10+ year horizons and genuine tolerance for significant short-term drawdowns.</p>
                         <div class="rp-profile-card-alloc" style="color:rgba(10,22,40,0.65) !important;">Allocation: <strong style="color:#c9a227 !important;">15% Fixed Income</strong> · <strong style="color:#c9a227 !important;">85% Equities</strong></div>
                     </div>
                 </div>
@@ -1060,7 +1065,7 @@
                 btn.style.borderColor = 'var(--gold)';
                 btn.style.background = 'rgba(200,150,46,0.07)';
                 var letter = btn.querySelector('.rp-opt-letter');
-                if (letter) { letter.style.background = 'var(--gold)'; letter.style.color = '#fff'; }
+                if (letter) { letter.style.background = '#c9a227'; letter.style.color = '#0A1628'; }
 
                 setTimeout(function() {
                     document.getElementById('rp-step-' + q).style.display = 'none';
