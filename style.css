@@ -2455,12 +2455,12 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 
 /* Governing Principles */
 .why-card {
-    background-color: var(--navy) !important;
-    border: none !important;
-    box-shadow: 0 10px 30px rgba(11,29,58,0.1) !important;
+    background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+    border: 1px solid rgba(200, 150, 46, 0.25) !important;
+    box-shadow: 0 10px 30px rgba(11,29,58,0.06) !important;
 }
 .why-card h3 {
-    color: var(--gold) !important;
+    color: #0A1628 !important;
 }
 .why-card p {
     color: rgba(10, 22, 40, 0.80) !important;
@@ -2632,16 +2632,16 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 .home-teaser { text-align: center; }
 .services-section { text-align: center; }
 
-/* Dark Navy Box inside Daily DSE Wrap left square */
+/* Light Box inside Daily DSE Wrap left square */
 .home-teaser .teaser-prem-left {
-    background-color: var(--navy) !important;
+    background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
     border-right: none !important;
 }
 .home-teaser .teaser-prem-left .teaser-prem-eyebrow .teaser-prem-label {
-    color: var(--gold) !important;
+    color: #8A6D1C !important;
 }
 .home-teaser .teaser-prem-left .teaser-prem-date {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: rgba(10, 22, 40, 0.65) !important;
 }
 .home-teaser .teaser-prem-left .teaser-prem-title {
     color: #ffffff !important;
@@ -2670,15 +2670,15 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 .service-card { text-align: left !important; }
 .teaser-premium { text-align: left !important; }
 
-/* 1. Solid Dark Navy Blue inside the Header Squares */
+/* 1. Light Gold + Cream inside the Header Squares */
 .why-section-header {
-    background-color: var(--navy) !important;
-    border: 1px solid var(--gold) !important;
+    background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+    border: 1px solid rgba(200, 150, 46, 0.35) !important;
     padding: 2.5rem 3.5rem !important;
     border-radius: 4px !important;
 }
 .why-section-header .section-eyebrow {
-    color: var(--gold) !important;
+    color: #8A6D1C !important;
 }
 .why-section-header .section-title {
     color: #0A1628 !important;
@@ -2719,16 +2719,16 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     line-height: 1.8;
 }
 .dse-article-card .dse-header-box {
-    background-color: var(--navy) !important;
-    border-bottom: 4px solid var(--gold) !important;
-    border: none !important;
+    background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+    border: 1px solid rgba(200, 150, 46, 0.25) !important;
+    border-left: 3px solid #8A6D1C !important;
 }
 .dse-article-card .dse-header-box h1 {
     color: #0A1628 !important;
     font-family: 'Cormorant Garamond', serif !important;
 }
 .dse-article-card .dse-header-box p {
-    color: var(--gold) !important;
+    color: rgba(10, 22, 40, 0.80) !important;
 }
 .dse-article-card h2 {
     font-family: 'Cormorant Garamond', serif !important;
@@ -2753,8 +2753,10 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     border: 1px solid rgba(11,29,58,0.1) !important;
 }
 .dse-article-card table th {
-    background-color: var(--navy) !important;
+    background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+    background-color: #FAF4E5 !important;
     color: #0A1628 !important;
+    border-bottom: 2px solid rgba(200, 150, 46, 0.35) !important;
 }
 .dse-article-card table td {
     color: var(--navy) !important;
@@ -3315,7 +3317,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 /* terminal table */
 .page-terminal .term-tbl-wrap{overflow-x:auto;border:1px solid rgba(201,162,39,.18);border-radius:10px;background:#070d18;}
 .page-terminal table.term-table{width:100%;border-collapse:collapse;font-size:.86rem;min-width:680px;}
-.page-terminal table.term-table thead th{font-family:'Inter',sans-serif;text-align:left;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:#8b95a5;font-weight:500;padding:.85rem 1rem;border-bottom:1px solid rgba(201,162,39,.25);white-space:nowrap;background:#04070d;}
+.page-terminal table.term-table thead th{font-family:'Inter',sans-serif;text-align:left;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:#0A1628;font-weight:700;padding:.85rem 1rem;border-bottom:2px solid rgba(200,150,46,.35);white-space:nowrap;background:linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%);}
 .page-terminal table.term-table thead th.r,.page-terminal table.term-table tbody td.r{text-align:right;}
 .page-terminal table.term-table tbody td{padding:.8rem 1rem;border-bottom:1px solid rgba(255,255,255,.05);color:#c6cfda;font-family:'IBM Plex Mono',ui-monospace,monospace;font-variant-numeric:tabular-nums;white-space:nowrap;}
 .page-terminal table.term-table tbody tr:last-child td{border-bottom:none;}
@@ -3443,14 +3445,15 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 /* tables */
 .page-reader .table-responsive{overflow-x:auto;border:1px solid rgba(201,162,39,.2);border-radius:10px;}
 .page-reader table{width:100%;border-collapse:collapse;font-size:.9rem;}
-.page-reader table thead tr{background:#0a1830 !important;}
+.page-reader table thead tr{background:linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;}
 .page-reader table thead th{
-  color:var(--gold) !important;
-  font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  color:#0A1628 !important;
+  font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
   padding:.9rem 1.1rem !important;
-  border-bottom:1px solid rgba(201,162,39,.3) !important;
+  border-bottom:2px solid rgba(200,150,46,.35) !important;
   text-align:left;
   white-space:nowrap;
+  background:linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
 }
 .page-reader table tbody td{
   padding:.85rem 1.1rem !important;
@@ -3572,11 +3575,35 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 }
 .page-terminal .ab-pill h3 { color: #faf6ee !important; }
 
-/* Fix Oct 2026: Contact page dark-on-dark text */
+/* Fix Oct 2026: Contact page light card text */
+.page-terminal .ct-team-name,
+.ct-team-name {
+  color: #0A1628 !important;
+}
 .page-terminal .ct-team-role,
+.ct-team-role {
+  color: rgba(10, 22, 40, 0.75) !important;
+}
+.page-terminal .ct-team-email,
+.ct-team-email {
+  color: #8A6D1C !important;
+  font-weight: 600 !important;
+}
+.page-terminal .ct-team-email:hover,
+.ct-team-email:hover {
+  color: #0A1628 !important;
+}
 .page-terminal .ct-map-footer,
-.page-terminal .ct-map-footer * {
-  color: rgba(250,246,238,.75) !important;
+.page-terminal .ct-map-footer *,
+.ct-map-footer,
+.ct-map-footer * {
+  color: rgba(10, 22, 40, 0.75) !important;
+}
+.page-terminal .ct-map-footer strong,
+.ct-map-footer strong,
+.page-terminal .ct-map-footer-text strong,
+.ct-map-footer-text strong {
+  color: #0A1628 !important;
 }
 
 /* Fix Oct 2026: MI cream sidebar card labels (were cream-on-cream invisible) */
@@ -5586,7 +5613,20 @@ body.page-reader .dse-header-box {
 .dse-article-card table tr:first-child th,
 .term-table thead th,
 table.term-table thead th,
-.page-terminal table.term-table thead th {
+.page-terminal table.term-table thead th,
+.data-table th,
+table.data-table th,
+table.data-table thead tr,
+table.data-table thead th,
+.matrix-table-container th,
+.matrix-table-container thead th,
+.table-responsive th,
+.table-responsive thead th,
+.page-reader table thead tr,
+.page-reader table thead th,
+.page-reader table th,
+table th,
+thead th {
   background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
   background-color: #FAF4E5 !important;
   color: #0A1628 !important;
@@ -5881,3 +5921,63 @@ footer .container,
   background-color: transparent !important;
   background-image: none !important;
 }
+
+/* ==========================================================================
+   HOMEPAGE HERO INSTITUTIONAL DESIGN & TABLE HEADERS REFINEMENT
+   ========================================================================== */
+.hero-atmosphere {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.hero-atmosphere svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.hero .wrap {
+  position: relative;
+  z-index: 1;
+}
+.hero-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  max-width: 180px;
+  margin: 0.25rem auto 1.75rem;
+}
+.hero-divider-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(138, 109, 28, 0.45));
+}
+.hero-divider-rule:last-child {
+  background: linear-gradient(90deg, rgba(138, 109, 28, 0.45), transparent);
+}
+.hero-divider-diamond {
+  width: 6px;
+  height: 6px;
+  background: #8A6D1C;
+  transform: rotate(45deg);
+  border-radius: 1px;
+  box-shadow: 0 0 6px rgba(200, 150, 46, 0.35);
+}
+
+/* Stress matrix & progression table headers */
+#stress-matrix tr td,
+#progression-table tr td {
+  border-bottom: 1px solid rgba(200, 150, 46, 0.15) !important;
+}
+.matrix-table-container table thead th,
+.table-responsive table thead th {
+  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  color: #0A1628 !important;
+  border-bottom: 2px solid rgba(200, 150, 46, 0.35) !important;
+  font-weight: 700 !important;
+}
+

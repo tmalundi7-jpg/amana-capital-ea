@@ -6,7 +6,7 @@
     <title>Daily DSE Wrap | {{ report_date }} | Amana Capital East Africa</title>
     <meta content="Read our daily Dar es Salaam Stock Exchange (DSE) wrap for {{ report_date }}. Get institutional-grade market intelligence, top movers, and equity research from Amana Capital East Africa." name="description"/>
     <link href="https://www.amana-capital-ea.co.tz/dse-wrap-{{ url_date }}.html" rel="canonical"/>
-    <link href="style.css?v=20261012_visaudit" rel="stylesheet"/>
+    <link href="style.css?v=20261012_herorefine" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
@@ -90,9 +90,9 @@
 <div class="table-wrapper" id="tableWrapper">
 <table class="data-table" style="width: 100%; border-collapse: collapse;">
 <thead>
-<tr style="background-color: var(--navy); color: var(--white); text-align: left;">
+<tr style="background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%); color: #0A1628; border-bottom: 2px solid rgba(200, 150, 46, 0.35); text-align: left;">
 {% for header in section.table.headers %}
-<th style="padding: 1rem;">{{ header }}</th>
+<th style="padding: 1rem; color: #0A1628; font-weight: 700;">{{ header }}</th>
 {% endfor %}
 </tr>
 </thead>
