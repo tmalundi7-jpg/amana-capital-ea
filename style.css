@@ -1366,25 +1366,6 @@ html.is-animating #swup {
   h2 { font-size: 1.65rem; }
   h3 { font-size: 1.35rem; }
 
-  /* Navbar */
-  .navbar { height: 64px; }
-  .nav-links.active { top: 64px; } /* fix: menu aligns with 64px navbar on mobile */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    width: 100%;
-    background-color: var(--navy);
-    padding: 2rem 1.5rem;
-    gap: 1.5rem;
-    z-index: 999;
-    border-bottom: 1px solid var(--border-navbar);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  }
-  .nav-links.active { display: flex; }
-  .mobile-toggle { display: block; }
   .theme-toggle { margin-left: auto; margin-right: 1rem; }
 
   /* Hero */
@@ -2330,29 +2311,6 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 }
 
 
-/* Ensure Navbar doesn\'t collide with Logo on tablets/laptops */
-@media (max-width: 1150px) {
-  .nav-links {
-    display: none !important;
-  }
-  .nav-links.active { 
-    display: flex !important;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background-color: var(--navy);
-    padding: 2rem 1.5rem;
-    gap: 1.5rem;
-    z-index: 999;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  }
-  .mobile-toggle { 
-    display: block !important; 
-  }
-}
 
 @media (max-width: 768px) {
     .services-grid, .why-grid, .snapshot-grid, .pillars-grid {
@@ -3129,15 +3087,6 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 .page-home .container{max-width:1180px;}
 
 /* ---------- nav (restyled; logo + links + hamburger untouched) ---------- */
-/* navbar unified site-wide: base .navbar style applies everywhere (fix Oct 2026) */
-.page-home .nav-links{gap:2.2rem;}
-.page-home .nav-links a{color:rgba(250,246,238,.72);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;}
-.page-home .nav-links a::after{display:none;}
-.page-home .nav-links a:hover,.page-home .nav-links a.active{color:var(--mkgold);text-shadow:none;}
-.page-home .mobile-toggle{color:var(--mkcream);}
-@media (max-width:1150px){
-  .page-home .nav-links.active{top:72px;background:#0a1830;}
-}
 
 /* ---------- buttons ---------- */
 .page-home .mk-btn{display:inline-block;font-weight:600;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:.9rem 2rem;border-radius:999px;transition:transform .25s,box-shadow .25s,background .25s,border-color .25s;cursor:pointer;border:none;font-family:'Inter',sans-serif;}
@@ -4749,114 +4698,318 @@ body.page-terminal nav.navbar .brand-text .logo-word-secondary {
   text-transform: uppercase !important;
 }
 
-/* Nav Links: pristine Home page geometry and spacing across all pages */
-nav.navbar .nav-links,
-.navbar .nav-links,
-body.page-terminal nav.navbar .nav-links,
-body.page-terminal .navbar .nav-links,
-body.page-reader nav.navbar .nav-links,
-body.page-reader .navbar .nav-links,
-.page-home .nav-links {
-  list-style: none !important;
-  display: flex !important;
-  gap: 1rem !important;
-  align-items: center !important;
-  margin: 0 !important;
-  padding: 0 !important;
+/* --- 1A. DESKTOP NAVIGATION (>1150px): pristine horizontal layout & sliding gold indicator --- */
+@media (min-width: 1151px) {
+  nav.navbar .mobile-toggle,
+  .navbar .mobile-toggle,
+  header .mobile-toggle,
+  body.page-terminal nav.navbar .mobile-toggle,
+  .mobile-toggle {
+    display: none !important;
+  }
+
+  nav.navbar .nav-links,
+  .navbar .nav-links,
+  body.page-terminal nav.navbar .nav-links,
+  body.page-terminal .navbar .nav-links,
+  body.page-reader nav.navbar .nav-links,
+  body.page-reader .navbar .nav-links,
+  .page-home .nav-links {
+    list-style: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    position: static !important;
+    max-height: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    overflow: visible !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    gap: 1rem !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    pointer-events: auto !important;
+  }
+
+  nav.navbar .nav-links li,
+  .navbar .nav-links li {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    width: auto !important;
+  }
+
+  nav.navbar .nav-links a,
+  .navbar .nav-links a,
+  header .nav-links a,
+  body.page-terminal nav.navbar .nav-links a,
+  body.page-terminal .navbar .nav-links a,
+  body.page-reader nav.navbar .nav-links a,
+  .page-home .nav-links a {
+    color: #FFFFFF !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 0.92rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.01em !important;
+    text-transform: none !important;
+    text-decoration: none !important;
+    padding: 0.25rem 0 !important;
+    display: inline-block !important;
+    line-height: 1.4 !important;
+    position: relative !important;
+    transition: all 0.25s ease !important;
+    background: transparent !important;
+  }
+
+  /* Gold sliding underline indicator on active and hover (desktop only) */
+  nav.navbar .nav-links a::after,
+  .navbar .nav-links a::after,
+  body.page-terminal nav.navbar .nav-links a::after,
+  body.page-terminal .navbar .nav-links a::after,
+  body.page-reader nav.navbar .nav-links a::after,
+  body.page-reader .navbar .nav-links a::after,
+  .page-home .nav-links a::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -4px !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 2px !important;
+    background-color: #c9a227 !important;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    display: block !important;
+  }
+
+  nav.navbar .nav-links a.active::after,
+  nav.navbar .nav-links a:hover::after,
+  .navbar .nav-links a.active::after,
+  .navbar .nav-links a:hover::after,
+  body.page-terminal nav.navbar .nav-links a.active::after,
+  body.page-terminal nav.navbar .nav-links a:hover::after,
+  body.page-terminal .navbar .nav-links a.active::after,
+  body.page-terminal .navbar .nav-links a:hover::after,
+  body.page-reader nav.navbar .nav-links a.active::after,
+  body.page-reader nav.navbar .nav-links a:hover::after,
+  body.page-reader .navbar .nav-links a.active::after,
+  body.page-reader .navbar .nav-links a:hover::after,
+  .page-home .nav-links a.active::after,
+  .page-home .nav-links a:hover::after {
+    width: 100% !important;
+  }
+
+  nav.navbar .nav-links a.active,
+  .navbar .nav-links a.active,
+  header .nav-links a.active,
+  body.page-terminal nav.navbar .nav-links a.active,
+  body.page-terminal .navbar .nav-links a.active,
+  body.page-reader nav.navbar .nav-links a.active,
+  .page-home .nav-links a.active {
+    color: #c9a227 !important;
+    text-shadow: none !important;
+  }
+
+  nav.navbar .nav-links a:hover,
+  .navbar .nav-links a:hover,
+  header .nav-links a:hover,
+  body.page-terminal nav.navbar .nav-links a:hover,
+  body.page-terminal .navbar .nav-links a:hover,
+  body.page-reader nav.navbar .nav-links a:hover,
+  .page-home .nav-links a:hover {
+    color: #c9a227 !important;
+    text-shadow: none !important;
+  }
 }
 
-nav.navbar .nav-links li,
-.navbar .nav-links li {
-  margin: 0 !important;
-  padding: 0 !important;
-}
+/* --- 1B. MOBILE & TABLET NAVIGATION (<=1150px): collapsed by default, animated toggle --- */
+@media (max-width: 1150px) {
+  /* 1. Hamburger button: visible, aligned, touch-friendly 44x44px */
+  nav.navbar .mobile-toggle,
+  .navbar .mobile-toggle,
+  header .mobile-toggle,
+  body.page-terminal nav.navbar .mobile-toggle,
+  .mobile-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    width: 44px !important;
+    height: 44px !important;
+    padding: 8px !important;
+    background: transparent !important;
+    border: none !important;
+    color: #FAF6EE !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 10001 !important;
+    margin-left: auto !important;
+    font-size: 1.5rem;
+    line-height: 1;
+    -webkit-tap-highlight-color: transparent !important;
+  }
 
-nav.navbar .nav-links a,
-.navbar .nav-links a,
-header .nav-links a,
-body.page-terminal nav.navbar .nav-links a,
-body.page-terminal .navbar .nav-links a,
-body.page-reader nav.navbar .nav-links a,
-.page-home .nav-links a {
-  color: #FFFFFF !important;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 0.92rem !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.01em !important;
-  text-transform: none !important;
-  text-decoration: none !important;
-  padding: 0.25rem 0 !important;
-  display: inline-block !important;
-  line-height: 1.4 !important;
-  position: relative !important;
-  transition: all 0.25s ease !important;
-}
+  /* Hamburger bars (3 bars) */
+  .mobile-toggle-bar {
+    display: block !important;
+    width: 22px !important;
+    height: 2px !important;
+    background-color: #FAF6EE !important;
+    border-radius: 2px !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.2s ease,
+                background-color 0.25s ease !important;
+    transform-origin: center !important;
+    pointer-events: none !important;
+  }
 
-/* Gold sliding underline indicator on active and hover */
-nav.navbar .nav-links a::after,
-.navbar .nav-links a::after,
-body.page-terminal nav.navbar .nav-links a::after,
-body.page-terminal .navbar .nav-links a::after,
-body.page-reader nav.navbar .nav-links a::after,
-body.page-reader .navbar .nav-links a::after,
-.page-home .nav-links a::after {
-  content: '' !important;
-  position: absolute !important;
-  bottom: -4px !important;
-  left: 0 !important;
-  width: 0 !important;
-  height: 2px !important;
-  background-color: #c9a227 !important;
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  display: block !important;
-}
+  /* Animated transition to X when menu is open */
+  .navbar.nav-open .mobile-toggle-bar:nth-child(1),
+  .mobile-toggle.active .mobile-toggle-bar:nth-child(1),
+  body.nav-open .mobile-toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg) !important;
+    background-color: #C8962E !important;
+  }
 
-nav.navbar .nav-links a.active::after,
-nav.navbar .nav-links a:hover::after,
-.navbar .nav-links a.active::after,
-.navbar .nav-links a:hover::after,
-body.page-terminal nav.navbar .nav-links a.active::after,
-body.page-terminal nav.navbar .nav-links a:hover::after,
-body.page-terminal .navbar .nav-links a.active::after,
-body.page-terminal .navbar .nav-links a:hover::after,
-body.page-reader nav.navbar .nav-links a.active::after,
-body.page-reader nav.navbar .nav-links a:hover::after,
-body.page-reader .navbar .nav-links a.active::after,
-body.page-reader .navbar .nav-links a:hover::after,
-.page-home .nav-links a.active::after,
-.page-home .nav-links a:hover::after {
-  width: 100% !important;
-}
+  .navbar.nav-open .mobile-toggle-bar:nth-child(2),
+  .mobile-toggle.active .mobile-toggle-bar:nth-child(2),
+  body.nav-open .mobile-toggle-bar:nth-child(2) {
+    opacity: 0 !important;
+    transform: scaleX(0) !important;
+  }
 
-nav.navbar .nav-links a.active,
-.navbar .nav-links a.active,
-header .nav-links a.active,
-body.page-terminal nav.navbar .nav-links a.active,
-body.page-terminal .navbar .nav-links a.active,
-body.page-reader nav.navbar .nav-links a.active,
-.page-home .nav-links a.active {
-  color: #c9a227 !important;
-  text-shadow: none !important;
-}
+  .navbar.nav-open .mobile-toggle-bar:nth-child(3),
+  .mobile-toggle.active .mobile-toggle-bar:nth-child(3),
+  body.nav-open .mobile-toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg) !important;
+    background-color: #C8962E !important;
+  }
 
-nav.navbar .nav-links a:hover,
-.navbar .nav-links a:hover,
-header .nav-links a:hover,
-body.page-terminal nav.navbar .nav-links a:hover,
-body.page-terminal .navbar .nav-links a:hover,
-body.page-reader nav.navbar .nav-links a:hover,
-.page-home .nav-links a:hover {
-  color: #c9a227 !important;
-  text-shadow: none !important;
-}
+  /* 2. Menu Links Container: COLLAPSED BY DEFAULT */
+  nav.navbar .nav-links,
+  .navbar .nav-links,
+  body.page-terminal nav.navbar .nav-links,
+  body.page-terminal .navbar .nav-links,
+  body.page-reader nav.navbar .nav-links,
+  body.page-reader .navbar .nav-links,
+  .page-home .nav-links,
+  .nav-links {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    position: absolute !important;
+    top: 70px !important; /* perfectly aligned under 70px navbar */
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    background: #0a1830 !important; /* solid deep navy */
+    border-bottom: 1px solid rgba(200, 150, 46, 0.35) !important;
+    box-shadow: 0 16px 36px rgba(4, 7, 13, 0.75) !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 1.5rem !important;
+    gap: 0 !important;
+    z-index: 9999 !important;
+    
+    /* Default collapsed state */
+    max-height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
 
-nav.navbar .mobile-toggle,
-.navbar .mobile-toggle,
-header .mobile-toggle,
-body.page-terminal nav.navbar .mobile-toggle {
-  color: #faf6ee !important;
-  background: transparent !important;
-  border: none !important;
+    /* Smooth slide-down and fade animation */
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s ease,
+                visibility 0.35s ease,
+                padding 0.35s ease !important;
+  }
+
+  /* 3. Expanded State when Open */
+  nav.navbar.nav-open .nav-links,
+  .navbar.nav-open .nav-links,
+  header.nav-open .nav-links,
+  body.nav-open nav.navbar .nav-links,
+  body.page-terminal nav.navbar.nav-open .nav-links,
+  body.page-terminal .navbar.nav-open .nav-links,
+  body.page-reader nav.navbar.nav-open .nav-links,
+  body.page-reader .navbar.nav-open .nav-links,
+  .page-home.nav-open .nav-links,
+  nav.navbar .nav-links.active,
+  .navbar .nav-links.active,
+  body.page-terminal nav.navbar .nav-links.active,
+  body.page-terminal .navbar .nav-links.active,
+  body.page-reader nav.navbar .nav-links.active,
+  body.page-reader .navbar .nav-links.active,
+  .page-home .nav-links.active,
+  .nav-links.active {
+    max-height: 560px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    overflow-y: auto !important;
+    pointer-events: auto !important;
+    padding: 1rem 1.5rem 1.75rem !important;
+  }
+
+  /* 4. Individual Link Rows */
+  nav.navbar .nav-links li,
+  .navbar .nav-links li,
+  .nav-links li {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  nav.navbar .nav-links li:last-child,
+  .navbar .nav-links li:last-child,
+  .nav-links li:last-child {
+    border-bottom: none !important;
+  }
+
+  nav.navbar .nav-links a,
+  .navbar .nav-links a,
+  header .nav-links a,
+  body.page-terminal nav.navbar .nav-links a,
+  body.page-terminal .navbar .nav-links a,
+  body.page-reader nav.navbar .nav-links a,
+  .page-home .nav-links a,
+  .nav-links a {
+    display: block !important;
+    width: 100% !important;
+    padding: 0.85rem 0.5rem !important;
+    color: #FAF6EE !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em !important;
+    text-decoration: none !important;
+    line-height: 1.4 !important;
+    border-radius: 4px !important;
+    transition: color 0.2s ease, padding-left 0.2s ease, background 0.2s ease !important;
+  }
+
+  nav.navbar .nav-links a:hover,
+  nav.navbar .nav-links a:focus,
+  nav.navbar .nav-links a.active,
+  .navbar .nav-links a:hover,
+  .navbar .nav-links a:focus,
+  .navbar .nav-links a.active,
+  .nav-links a:hover,
+  .nav-links a:focus,
+  .nav-links a.active {
+    color: #C8962E !important;
+    padding-left: 0.85rem !important;
+    background: rgba(200, 150, 46, 0.08) !important;
+  }
+
+  /* Disable horizontal sliding underline on mobile */
+  nav.navbar .nav-links a::after,
+  .navbar .nav-links a::after,
+  .nav-links a::after {
+    display: none !important;
+  }
 }
 
 
