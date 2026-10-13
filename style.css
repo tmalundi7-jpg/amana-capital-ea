@@ -6255,23 +6255,23 @@ footer .container,
   right: 28px;
   width: 58px;
   height: 58px;
-  border: 1px solid #C8962E;
+  border: 1px solid #8A6D1C;
   border-radius: 50%;
   display: grid;
   place-items: center;
   padding-left: .12em;
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%);
+  background: linear-gradient(135deg, #EAD7A8 0%, #DFBF7A 50%, #C99E3D 100%);
   color: #0A1628;
   font: 700 .64rem/1 'Inter', sans-serif;
   letter-spacing: .12em;
-  box-shadow: 0 7px 20px rgba(138, 109, 28, .2);
+  box-shadow: 0 1px 3px rgba(10, 22, 40, .16);
   animation: badgeFloat 6s ease-in-out infinite;
 }
 .hero .locator::before,
 .hero .locator::after {
   content: "";
   position: absolute;
-  background: #C8962E;
+  background: #8A6D1C;
 }
 .hero .locator::before {
   width: 1px;
@@ -6454,26 +6454,26 @@ footer .container,
 .hero .motion-toggle {
   position: absolute;
   z-index: 6;
-  right: 28px;
+  right: 38px;
   top: 104px;
   width: 38px;
   height: 38px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(138, 109, 28, .55);
+  border: 1px solid #8A6D1C;
   border-radius: 50%;
-  background: rgba(250, 244, 229, .82);
+  background: #EAD7A8;
   color: #8A6D1C;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
   cursor: pointer;
   pointer-events: auto;
   font: 700 .75rem/1 'Inter', sans-serif;
-  transition: background .2s ease, border-color .2s ease;
+  box-shadow: 0 1px 3px rgba(10, 22, 40, .16);
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
 }
 .hero .motion-toggle:hover {
-  background: #F5E8C8;
-  border-color: #8A6D1C;
+  background: #DFBF7A;
+  border-color: #6A4F0F;
+  color: #6A4F0F;
 }
 .hero .motion-toggle:focus-visible {
   outline: 2px solid #8A6D1C;
@@ -6600,7 +6600,7 @@ body.motion-ready .hero .registration { animation-delay: .62s; }
     bottom: auto;
   }
   .hero .locator { top: 20px; right: 20px; }
-  .hero .motion-toggle { top: 92px; right: 20px; }
+  .hero .motion-toggle { top: 92px; right: 30px; }
   .hero .sun-glow { right: -54%; top: 5%; width: 430px; }
   .hero .bird svg { width: 18px; }
   .hero .eyebrow { font-size: .62rem; letter-spacing: .16em; margin-bottom: 20px; }
