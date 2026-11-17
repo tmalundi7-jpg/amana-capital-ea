@@ -2422,7 +2422,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 
 /* Governing Principles */
 .why-card {
-    background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+    background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
     border: 1px solid rgba(200, 150, 46, 0.25) !important;
     box-shadow: 0 10px 30px rgba(11,29,58,0.06) !important;
 }
@@ -2601,7 +2601,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 
 /* Light Box inside Daily DSE Wrap left square */
 .home-teaser .teaser-prem-left {
-    background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+    background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
     border-right: none !important;
 }
 .home-teaser .teaser-prem-left .teaser-prem-eyebrow .teaser-prem-label {
@@ -2639,7 +2639,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 
 /* 1. Light Gold + Cream inside the Header Squares */
 .why-section-header {
-    background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+    background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
     border: 1px solid rgba(200, 150, 46, 0.35) !important;
     padding: 2.5rem 3.5rem !important;
     border-radius: 4px !important;
@@ -2686,7 +2686,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     line-height: 1.8;
 }
 .dse-article-card .dse-header-box {
-    background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+    background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
     border: 1px solid rgba(200, 150, 46, 0.25) !important;
     border-left: 3px solid #8A6D1C !important;
 }
@@ -2720,7 +2720,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
     border: 1px solid rgba(11,29,58,0.1) !important;
 }
 .dse-article-card table th {
-    background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+    background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
     background-color: #FAF4E5 !important;
     color: #0A1628 !important;
     border-bottom: 2px solid rgba(200, 150, 46, 0.35) !important;
@@ -3275,7 +3275,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 /* terminal table */
 .page-terminal .term-tbl-wrap{overflow-x:auto;border:1px solid rgba(201,162,39,.18);border-radius:10px;background:#070d18;}
 .page-terminal table.term-table{width:100%;border-collapse:collapse;font-size:.86rem;min-width:680px;}
-.page-terminal table.term-table thead th{font-family:'Inter',sans-serif;text-align:left;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:#0A1628;font-weight:700;padding:.85rem 1rem;border-bottom:2px solid rgba(200,150,46,.35);white-space:nowrap;background:linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%);}
+.page-terminal table.term-table thead th{font-family:'Inter',sans-serif;text-align:left;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:#0A1628;font-weight:700;padding:.85rem 1rem;border-bottom:2px solid rgba(200,150,46,.35);white-space:nowrap;background:linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%);}
 .page-terminal table.term-table thead th.r,.page-terminal table.term-table tbody td.r{text-align:right;}
 .page-terminal table.term-table tbody td{padding:.8rem 1rem;border-bottom:1px solid rgba(255,255,255,.05);color:#c6cfda;font-family:'IBM Plex Mono',ui-monospace,monospace;font-variant-numeric:tabular-nums;white-space:nowrap;}
 .page-terminal table.term-table tbody tr:last-child td{border-bottom:none;}
@@ -3341,7 +3341,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 /* reading column */
 .page-reader .dse-article-card,
 .page-reader .article-container{
-  background:#FEF9F0 !important;
+  background:#E0D8C4 !important;
   border:1px solid rgba(201,162,39,.18) !important;
   border-radius:12px !important;
   box-shadow:0 20px 60px rgba(0,0,0,.35) !important;
@@ -3403,7 +3403,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 /* tables */
 .page-reader .table-responsive{overflow-x:auto;border:1px solid rgba(201,162,39,.2);border-radius:10px;}
 .page-reader table{width:100%;border-collapse:collapse;font-size:.9rem;}
-.page-reader table thead tr{background:linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;}
+.page-reader table thead tr{background:linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;}
 .page-reader table thead th{
   color:#0A1628 !important;
   font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
@@ -3411,7 +3411,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
   border-bottom:2px solid rgba(200,150,46,.35) !important;
   text-align:left;
   white-space:nowrap;
-  background:linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background:linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
 }
 .page-reader table tbody td{
   padding:.85rem 1.1rem !important;
@@ -3518,7 +3518,7 @@ body { background: var(--bg-primary); color: var(--text-primary); }
 .cream-board .term-cell,
 .cream-board .term-stat,
 .cream-board .sb-cell {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
 }
 .cream-board .term-cell *,
 .cream-board .term-stat * {
@@ -3681,7 +3681,7 @@ footer a, .f-col a {
 
 /* 1. MI ARCHIVE BOX → cream (was dark, out of sync) */
 .term-arc-row {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
   border: 1px solid rgba(201,162,39,.25) !important;
   border-radius: 12px !important;
   margin-bottom: 1rem !important;
@@ -3712,7 +3712,7 @@ footer a, .f-col a {
 
 /* 2. ALL DAILY WRAP ARCHIVE BOXES → same cream design */
 .arc-row, .archive-entry, .wrap-archive-item {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
   border: 1px solid rgba(201,162,39,.25) !important;
   border-radius: 12px !important;
   margin-bottom: 1rem !important;
@@ -3746,7 +3746,7 @@ footer a, .f-col a {
 
 /* 4. ABOUT PHILOSOPHY CARDS → cream cards (grey was hindering) */
 .ab-pillar {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
   border: 1px solid rgba(201,162,39,.2) !important;
   border-radius: 12px !important;
 }
@@ -3805,7 +3805,7 @@ body.page-reader div[style*="background:#12294f"] h1 {
 /* Keep hero, snapshot, services dark. Convert wrap teaser to cream. */
 
 section.wrap-teaser {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
 }
 section.wrap-teaser .sec-title {
   color: #0A1628 !important;
@@ -3843,10 +3843,10 @@ section.wrap-teaser .sec-title {
 
 /* Hero section → cream background */
 .mk-hero {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
 }
 section.hero, .hero {
-  background: #FEF9F0 url('images/dar-harbour-hero.png') center/cover no-repeat !important;
+  background: #E0D8C4 url('images/dar-harbour-hero.png') center/cover no-repeat !important;
 }
 .hero h1, .mk-hero h1 {
   color: #0A1628 !important;
@@ -3863,7 +3863,7 @@ section.hero, .hero {
 
 /* Live Market Snapshot section → cream */
 section.snapshot {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
 }
 section.snapshot .sec-title {
   color: #0A1628 !important;
@@ -3888,7 +3888,7 @@ section.snapshot .stat-card .stat-label {
 
 /* What We Do section → cream */
 section.services {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
 }
 section.services .sec-title {
   color: #0A1628 !important;
@@ -3913,7 +3913,7 @@ section.services .svc-card p {
 
 /* Wrap teaser section → cream, card stays dark */
 section.wrap-teaser {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
 }
 section.wrap-teaser .wrap-card,
 section.wrap-teaser .teaser-card {
@@ -3932,7 +3932,7 @@ section.wrap-teaser .teaser-card p {
 /* Precise selectors matching actual HTML classes */
 
 html body {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
 }
 
 /* Homepage: hero, snapshot, services, wrap-teaser → cream */
@@ -3940,8 +3940,8 @@ html body header.hero,
 html body section.snapshot,
 html body section.services,
 html body section.wrap-teaser {
-  background: #FEF9F0 !important;
-  background-color: #FEF9F0 !important;
+  background: #E0D8C4 !important;
+  background-color: #E0D8C4 !important;
 }
 
 /* Text on cream → dark */
@@ -4059,8 +4059,8 @@ header.hero a[href*="education"] {
 /* ===== FINAL Wrap Box Override — 10 Oct 2026 ===== */
 /* Beats .dse-article-card (0,2,0) and .page-reader (0,2,0) with (0,3,3) */
 html body.page-reader div.dse-article-card div.dse-header-box {
-  background: #FEF9F0 !important;
-  background-color: #FEF9F0 !important;
+  background: #E0D8C4 !important;
+  background-color: #E0D8C4 !important;
   background-image: none !important;
   border: 1px solid rgba(200,150,46,.3) !important;
 }
@@ -4076,16 +4076,16 @@ html body.page-reader div.dse-article-card div.dse-header-box p {
 
 /* Override the dark .page-terminal backgrounds */
 body.page-terminal {
-  background: #FEF9F0 !important;
-  background-color: #FEF9F0 !important;
+  background: #E0D8C4 !important;
+  background-color: #E0D8C4 !important;
   background-image: none !important;
 }
 
 body.page-terminal > main,
 body.page-terminal main,
 body.page-terminal .page-wrap {
-  background: #FEF9F0 !important;
-  background-color: #FEF9F0 !important;
+  background: #E0D8C4 !important;
+  background-color: #E0D8C4 !important;
 }
 
 /* Containers should always be transparent width limiters */
@@ -4100,8 +4100,8 @@ body.page-terminal main .container {
 
 /* Page sections → cream */
 body.page-terminal section:not(.keep-dark) {
-  background: #FEF9F0 !important;
-  background-color: #FEF9F0 !important;
+  background: #E0D8C4 !important;
+  background-color: #E0D8C4 !important;
 }
 
 /* Text on cream → dark */
@@ -4202,8 +4202,8 @@ body.page-terminal .term-hero p {
 body.page-terminal main > section:not(.page-hero):not(.hero):not(.keep-dark),
 body.page-terminal .page-content,
 body.page-terminal .content-wrap {
-  background: #FEF9F0 !important;
-  background-color: #FEF9F0 !important;
+  background: #E0D8C4 !important;
+  background-color: #E0D8C4 !important;
 }
 
 /* ===== Inner Page Nav/Footer Fix — 10 Oct 2026 ===== */
@@ -4417,7 +4417,7 @@ body.page-terminal .navbar .nav-links a.active {
 /* 2. ABOUT PAGE — Regulatory Status Card */
 .ab-reg-card,
 body.page-terminal .ab-reg-card {
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 
@@ -4446,7 +4446,7 @@ body.page-terminal .ab-hero-inner h1 {
 
 .ab-info-card,
 body.page-terminal .ab-info-card {
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 
@@ -4506,7 +4506,7 @@ body.page-terminal .ab-team-name {
 
 .ct-why-item,
 body.page-terminal .ct-why-item {
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 
@@ -4523,7 +4523,7 @@ body.page-terminal .ct-why-item p {
 /* 5. CONTACT PAGE — Response-Time Banner */
 .ct-response-strip,
 body.page-terminal .ct-response-strip {
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   background-color: transparent !important;
   border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
@@ -4597,8 +4597,8 @@ body.page-reader h3,
 .page-reader h3,
 .page-reader .dse-article-card h3,
 .page-reader div[style*="#FEF9F0"] h3,
-.page-reader div[style*="background: #FEF9F0"] h3,
-.page-reader div[style*="background:#FEF9F0"] h3 {
+.page-reader div[style*="background: #E0D8C4"] h3,
+.page-reader div[style*="background:#E0D8C4"] h3 {
   color: #0A1628 !important;
 }
 
@@ -5126,8 +5126,8 @@ footer div[style*="&copy;"],
 /* Full-bleed cream background across entire width */
 body.page-terminal .rp-hero,
 .rp-hero {
-  background: #FEF9F0 !important;
-  background-color: #FEF9F0 !important;
+  background: #E0D8C4 !important;
+  background-color: #E0D8C4 !important;
   border-bottom: 1px solid rgba(200, 150, 46, 0.2) !important;
   padding: 5rem 0 4rem !important;
   text-align: center !important;
@@ -5213,7 +5213,7 @@ body.page-terminal .rp-hero-stat-label,
 /* Risk Profiler Framework Section */
 body.page-terminal .rp-info-section,
 .rp-info-section {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
   padding: 5rem 0 !important;
 }
 
@@ -5246,12 +5246,12 @@ body.page-terminal .rp-info-section .rp-section-sub,
 
 /* --- 4. ABOUT PAGE TYPOGRAPHY & VISIBILITY --- */
 body.page-terminal .ab-hero {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
   border-bottom: 1px solid rgba(200, 150, 46, 0.2) !important;
 }
 
 body.page-terminal .ab-section:not(.dark) {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
 }
 
 body.page-terminal .ab-section:not(.dark) .ab-title,
@@ -5266,7 +5266,7 @@ body.page-terminal .ab-section:not(.dark) .ab-eyebrow,
 
 body.page-terminal .ab-section.dark,
 .ab-section.dark {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
 }
 
 body.page-terminal .ab-section.dark .ab-title,
@@ -5301,8 +5301,8 @@ body.page-terminal .ab-story-lead {
 body.page-terminal .term-head,
 .page-terminal .term-head,
 header.term-head {
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
-  background-color: #FEF9F0 !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
+  background-color: #E0D8C4 !important;
   border-bottom: 1px solid rgba(200, 150, 46, 0.25) !important;
   padding: 4.5rem 0 3.2rem !important;
   box-shadow: inset 0 -1px 3px rgba(200, 150, 46, 0.06) !important;
@@ -5385,7 +5385,7 @@ header.term-head .term-live {
 input[placeholder="you@example.com"]:not(.ct-input),
 .news-form input[type="email"],
 .term-side-card input[type="email"] {
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   background-color: #FAF4E5 !important;
   color: #0A1628 !important;
   border: 1.5px solid rgba(200, 150, 46, 0.45) !important;
@@ -5404,7 +5404,7 @@ input[placeholder="you@example.com"]:not(.ct-input)::placeholder,
 }
 
 .term-side-card {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
   border: 1px solid rgba(200, 150, 46, 0.25) !important;
   border-radius: 14px !important;
 }
@@ -5518,7 +5518,7 @@ body.page-terminal .ct-info-card h3 {
 
 /* 1. About Page Fixes */
 body.page-terminal .ab-story {
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 body.page-terminal .ab-story p {
@@ -5529,7 +5529,7 @@ body.page-terminal .ab-story .ab-story-lead {
 }
 
 body.page-terminal .ab-info-card {
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 body.page-terminal .ab-info-card h3 {
@@ -5544,7 +5544,7 @@ body.page-terminal .ab-info-card li strong {
 }
 
 body.page-terminal .ab-reg-card {
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 body.page-terminal .ab-reg-card .ab-reg-title {
@@ -5571,7 +5571,7 @@ body.page-terminal .ab-section.dark .ab-eyebrow,
 /* 2. Contact Page Fixes */
 body.page-terminal .ct-response-strip,
 .ct-response-strip {
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   background-color: transparent !important;
   border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
@@ -5593,7 +5593,7 @@ body.page-terminal .ct-info-card h3,
 /* 3. Risk Profiler Fixes */
 body.page-terminal .rp-profile-card,
 .rp-profile-card {
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 body.page-terminal .rp-profile-card h3,
@@ -5615,7 +5615,7 @@ body.page-terminal .rp-profile-card-alloc strong,
 
 body.page-terminal .rp-instruments-table,
 .rp-instruments-table {
-  background: #FEF9F0 !important;
+  background: #E0D8C4 !important;
 }
 body.page-terminal .rp-instruments-table .rp-section-h2,
 .rp-instruments-table .rp-section-h2 {
@@ -5627,7 +5627,7 @@ body.page-terminal .rp-instruments-table .rp-section-sub,
 }
 body.page-terminal .rp-inst-item,
 .rp-inst-item {
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   border: 1px solid rgba(200, 150, 46, 0.25) !important;
 }
 body.page-terminal .rp-inst-item h4,
@@ -5754,9 +5754,9 @@ body.page-terminal .rp-detail-card,
 body.page-terminal .rp-metric,
 body.page-terminal .rp-instruments,
 body.page-reader .dse-header-box {
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   background-color: transparent !important;
-  background-image: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background-image: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   border: 1px solid rgba(200, 150, 46, 0.25) !important;
   box-shadow: 0 8px 24px rgba(10, 22, 40, 0.05) !important;
 }
@@ -5780,7 +5780,7 @@ table.data-table thead th,
 .page-reader table th,
 table th,
 thead th {
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   background-color: #FAF4E5 !important;
   color: #0A1628 !important;
   border-bottom: 2px solid rgba(200, 150, 46, 0.35) !important;
@@ -5967,9 +5967,9 @@ body.page-terminal .rp-opt {
   border-radius: 10px !important;
   cursor: pointer !important;
   transition: all 0.2s ease !important;
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   background-color: transparent !important;
-  background-image: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background-image: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   box-shadow: 0 4px 12px rgba(10, 22, 40, 0.04) !important;
   text-align: left !important;
   width: 100% !important;
@@ -6084,7 +6084,7 @@ footer .container,
   display: grid !important;
   grid-template-columns: minmax(0, 1.04fr) minmax(420px, .96fr);
   overflow: hidden;
-  background: #FEF9F0 url('images/dar-harbour-hero.png') center/cover no-repeat !important;
+  background: #E0D8C4 url('images/dar-harbour-hero.png') center/cover no-repeat !important;
   isolation: isolate;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -6095,7 +6095,7 @@ footer .container,
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(90deg, #FAF4E5 0%, rgba(254, 249, 240, .98) 35%, rgba(254, 249, 240, .8) 54%, rgba(254, 249, 240, .08) 74%, transparent 100%), linear-gradient(180deg, transparent 68%, rgba(200, 150, 46, .12));
+  background: linear-gradient(90deg, #FAF4E5 0%, rgba(224, 216, 196, .98) 35%, rgba(224, 216, 196, .8) 54%, rgba(224, 216, 196, .08) 74%, transparent 100%), linear-gradient(180deg, transparent 68%, rgba(200, 150, 46, .12));
   pointer-events: none;
 }
 .hero .copy {
@@ -6159,7 +6159,7 @@ footer .container,
   height: 9px;
   border: 1px solid #8A6D1C;
   transform: rotate(45deg);
-  background: #FEF9F0;
+  background: #E0D8C4;
 }
 .hero .lead {
   max-width: 590px;
@@ -6568,7 +6568,7 @@ body.motion-ready .hero .registration { animation-delay: .62s; }
     background-position: 58% center !important;
   }
   .hero::before {
-    background: linear-gradient(180deg, rgba(254, 249, 240, .06) 0 20%, rgba(254, 249, 240, .9) 43%, #FEF9F0 64% 100%) !important;
+    background: linear-gradient(180deg, rgba(224, 216, 196, .06) 0 20%, rgba(224, 216, 196, .9) 43%, #E0D8C4 64% 100%) !important;
   }
   .hero .scene { inset: 0; }
   .hero .sun-glow { right: -22%; top: 7%; width: 470px; }
@@ -6634,7 +6634,7 @@ body.motion-ready .hero .registration { animation-delay: .62s; }
 }
 .matrix-table-container table thead th,
 .table-responsive table thead th {
-  background: linear-gradient(135deg, #FAF4E5 0%, #FEF9F0 50%, #F5E8C8 100%) !important;
+  background: linear-gradient(135deg, #FAF4E5 0%, #E0D8C4 50%, #F5E8C8 100%) !important;
   color: #0A1628 !important;
   border-bottom: 2px solid rgba(200, 150, 46, 0.35) !important;
   font-weight: 700 !important;
